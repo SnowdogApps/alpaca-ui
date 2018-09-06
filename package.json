@@ -4,12 +4,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "moment": "^2.22.2",
+    "normalize.css": "^8.0.0",
     "vue": "^2.5.17",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "@storybook/addon-actions": "4.0.0-alpha.20",
     "@storybook/addon-backgrounds": "4.0.0-alpha.20",
     "@storybook/addon-centered": "4.0.0-alpha.20",
@@ -22,8 +23,12 @@
     "@storybook/addon-viewport": "4.0.0-alpha.20",
     "@storybook/addons": "4.0.0-alpha.20",
     "@storybook/vue": "4.0.0-alpha.20",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.0.2",
+    "babel-preset-vue": "^2.0.2",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "styles-loader": "^1.0.0",
     "vue-loader": "^15.4.1",
     "vue-template-compiler": "^2.5.17"
   }
