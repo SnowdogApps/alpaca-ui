@@ -77,6 +77,11 @@
   /* Layout */
   --max-content-width           : 1328px;
 
+  /* Icon */
+
+  --icon__size                  : 24px;
+  --icon__padding               : 2px;
+
   /* Layout - breakpoints */
   --screen-xs                   : 320px;
   --screen-s                    : 480px;
