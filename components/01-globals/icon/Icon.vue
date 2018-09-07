@@ -1,12 +1,17 @@
 <template>
-  <svg class="icon" role="img">
+  <svg
+    :class="[
+      'icon',
+      customClass
+    ]"
+  >
     <use :xlink:href="url"></use>
   </svg>
 </template>
 
 <script>
   export default {
-    props: ['icon'],
+    props: ['icon', 'customClass'],
     computed: {
       url() {
         return `/icons-sprite.svg#${this.icon}`
