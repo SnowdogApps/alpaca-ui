@@ -14,7 +14,7 @@
     props: ['icon', 'customClass'],
     computed: {
       url() {
-        return `/icons-sprite.svg#${this.icon}`
+        return `/icons/sprite.svg#${this.icon}`
       }
     }
   }

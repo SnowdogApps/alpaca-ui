@@ -6,7 +6,7 @@
 
 <script>
   import 'normalize.css'
-  import '../../../assets/styles/variables.css'
+  import '../../../public/styles/variables.css'
 
   export default {}
 </script>
