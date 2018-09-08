@@ -14,7 +14,7 @@ storiesOf('Views|Catalog', module)
       <catalog
         :products="products.items"
         :store-config="storeConfig"
-        :filters="filters"
+        :filters="products.filters"
       />
     `,
   }))

@@ -5,7 +5,12 @@
     <container>
       <div class="catalog">
         <div class="catalog__sidebar">
-          <catalog-filters :filters="filters"/>
+          <catalog-filter
+            v-for="filter in filters"
+            :key="filter.name"
+            :name="filter.name"
+            :items="filter.filter_items"
+          />
         </div>
         <div class="catalog__products">
           <ul class="catalog-grid">
@@ -28,7 +33,7 @@
   import App from '../../01-globals/app/App.vue'
   import Container from '../../01-globals/container/Container.vue'
   import AlpacaHeader from '../../03-modules/header/Header.vue'
-  import CatalogFilters from '../../03-modules/catalog-filters/CatalogFilters.vue'
+  import CatalogFilter from '../../03-modules/filter/Filter.vue'
   import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
   export default {
@@ -37,7 +42,7 @@
       App,
       Container,
       AlpacaHeader,
-      CatalogFilters,
+      CatalogFilter,
       CatalogGridItem
     },
     methods: {
@@ -50,10 +55,53 @@
 
 <style>
   :root {
+    --catalog__margin : var(--spacer--medium) 0 0 0;
+    --catalog__border: 1px solid var(--gray-light);
+    --catalog__sidebar-width\@medium: calc(290px + var(--spacer--medium));
+    --catalog__sidebar-margin\@medium: 0 var(--spacer--medium) 0 0;
+    --catalog__sidebar-border: 1px solid var(--gray-lighter);
+
     --catalog-grid__gap: var(--spacer--medium);
     --catalog-gird__margin: 0;
     --catalog-grid__padding: var(--spacer--medium) 0 var(--spacer--large) 0;
     --catalog-grid__border: 1px solid var(--gray-light);
+  }
+
+  .catalog {
+    margin: var(--spacer--medium) 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media all and (min-width: 992px) {
+    .catalog {
+      flex-direction: row;
+    }
+  }
+
+  .catalog__sidebar {
+    border-bottom: var(--catalog__sidebar-border);
+  }
+
+  @media all and (min-width: 992px) {
+    .catalog__sidebar {
+      flex: 1 var(--catalog__sidebar-width\@medium);
+      justify-content: space-between;
+      margin: var(--catalog__sidebar-margin\@medium);
+      border-bottom: none;
+    }
+  }
+
+  .catalog__products {
+    padding: var(--catalog__products-padding);
+  }
+
+  @media all and (min-width: 992px) {
+    .catalog__products {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: calc(100% - var(--catalog__sidebar-width\@medium));
+    }
   }
 
   .catalog-grid {

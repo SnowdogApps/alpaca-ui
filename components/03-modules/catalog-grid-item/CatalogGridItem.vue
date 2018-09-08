@@ -28,7 +28,10 @@
           action="#"
           class="catalog-grid-item__primary-form"
         >
-          <alpaca-button>
+          <alpaca-button
+            :secondary="true"
+            custom-class="catalog-grid-item__primary-action"
+          >
             Add to cart
           </alpaca-button>
         </form>
@@ -84,8 +87,8 @@
     --catalog-grid-item__content-width: 100%;
     --catalog-grid-item__content-height: 67px;
     --catalog-grid-item__content-height\@large: 73px;
-    --catalog-grid-item__content-translateY: translateY(-var(--catalog-grid-item__content-height));
-    --catalog-grid-item__content-translateY\@large: translateY(-var(--catalog-grid-item__content-height\@large));
+    --catalog-grid-item__content-translateY: translateY(calc(-1 * var(--catalog-grid-item__content-height)));
+    --catalog-grid-item__content-translateY\@large: translateY(calc(-1 * var(--catalog-grid-item__content-height\@large)));
     --catalog-grid-item__content-translateY--active: translateY(-100%);
     --catalog-grid-item__name-color: var(--font-color-base);
     --catalog-grid-item__name-font-weight: var(--font-weight-normal);
@@ -148,6 +151,18 @@
     max-width: 100%;
   }
 
+  @media all and (min-width: 768px) {
+    .catalog-grid-item__image {
+      padding-bottom: var(--catalog-grid-item__content-height);
+    }
+  }
+
+  @media all and (min-width: 768px) and (min-width: 1600px) {
+    .catalog-grid-item__image {
+      padding-bottom: var(--catalog-grid-item__content-height\@large);
+    }
+  }
+
   .catalog-grid-item__link--name {
     color: var(--catalog-grid-item__name-color);
     overflow: var(--catalog-grid-item__link-overflow);
@@ -155,19 +170,6 @@
     text-overflow: var(--catalog-grid-item__link-text-overflow);
   }
 
-  @media all and (min-width: 768px) {
-    .catalog-grid-item__image-wrapper:after {
-      content: "";
-      display: block;
-      height: var(--catalog-grid-item__content-height);
-    }
-  }
-
-  @media all and (min-width: 768px) and (min-width: 1600px) {
-    .catalog-grid-item__image-wrapper:after {
-      height: var(--catalog-grid-item__content-height\@large);
-    }
-  }
 
   .catalog-grid-item__image-wrapper .image {
     margin: var(--catalog-grid-item__image-margin);
