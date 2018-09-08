@@ -1,67 +1,73 @@
 <template>
-  <header class="header">
-    <container>
-      <div class="header__wrapper">
-        <!-- <side-menu /> -->
+  <div>
+    <header class="header">
+      <container>
+        <div class="header__wrapper">
+          <div class="header__buttons">
+            <header-button icon="heart">
+              Wishlist
+            </header-button>
 
-        <div class="header__buttons">
-          <header-button icon="heart">
-            Wishlist
-          </header-button>
+            <header-button icon="phone">
+              Contact
+            </header-button>
 
-          <header-button icon="phone">
-            Contact
-          </header-button>
+            <header-button icon="account">
+              Account
+            </header-button>
 
-          <header-button icon="account">
-            Account
-          </header-button>
+            <div class="header__minicart">
+              <button
+                type="button"
+                class="header-button popup-trigger"
+                data-popuptrigger="popup-minicart"
+              >
+                <alpaca-icon icon="shopping-cart" />
 
-          <div class="header__minicart">
-            <button
-              type="button"
-              class="header-button popup-trigger"
-              data-popuptrigger="popup-minicart"
-            >
-              <alpaca-icon icon="shopping-cart" />
+                <span class="header-button__text">
+                  Cart
+                </span>
 
-              <span class="header-button__text">
-                Cart
-              </span>
+                <span class="header-button__counter">
+                  <span class="header-button__counter-dot"></span>
+                </span>
+              </button>
+            </div>
 
-              <span class="header-button__counter">
-                <span class="header-button__counter-dot"></span>
-              </span>
-            </button>
+            <!-- <minicart /> -->
           </div>
 
-          <!-- <minicart /> -->
+          <logo />
+
+          <div class="header__search-wrapper">
+            <header-search />
+          </div>
         </div>
+      </container>
+    </header>
 
-        <!-- <logo /> -->
-
-        <div class="header__search-wrapper">
-          <form class="search-form">
-            <!-- <alpaca-input /> -->
-            <!-- <alpaca-button icon="" /> -->
-          </form>
-        </div>
-
-      </div>
-    </container>
-  </header>
+    <mega-menu :menu="menu" />
+  </div>
 </template>
 
 <script>
   import Container from '../../01-globals/container/Container.vue'
   import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+  import Logo from '../../02-elements/logo/Logo.vue'
+  import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
+
   import HeaderButton from './HeaderButton.vue'
+  import HeaderSearch from './HeaderSearch.vue'
 
   export default {
+    props: ['menu'],
     components: {
       Container,
       AlpacaIcon,
-      HeaderButton
+      Logo,
+      MegaMenu,
+      HeaderButton,
+      HeaderSearch
     }
   }
 </script>
