@@ -60,7 +60,6 @@
   import HeaderSearch from './HeaderSearch.vue'
 
   export default {
-    props: ['menu'],
     components: {
       Container,
       AlpacaIcon,
@@ -68,7 +67,23 @@
       MegaMenu,
       HeaderButton,
       HeaderSearch
-    }
+    },
+    data() {
+      return {
+        menu: [
+          {
+            href: '#',
+            label: 'Furniture'
+          }, {
+            href: '#',
+            label: 'Accessories'
+          }, {
+            href: '#',
+            label: 'World of Goo'
+          }
+        ]
+      }
+    },
   }
 </script>
 
