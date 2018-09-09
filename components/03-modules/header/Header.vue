@@ -51,6 +51,8 @@
 </template>
 
 <script>
+  import menu from '../../../data/menu.json'
+
   import Container from '../../01-globals/container/Container.vue'
   import AlpacaIcon from '../../01-globals/icon/Icon.vue'
   import Logo from '../../02-elements/logo/Logo.vue'
@@ -70,18 +72,7 @@
     },
     data() {
       return {
-        menu: [
-          {
-            href: '#',
-            label: 'Furniture'
-          }, {
-            href: '#',
-            label: 'Accessories'
-          }, {
-            href: '#',
-            label: 'World of Goo'
-          }
-        ]
+        menu: menu
       }
     },
   }

@@ -1,13 +1,13 @@
 <template>
-  <a
+  <router-link
     class="logo"
-    href="/"
+    to="/"
   >
     <img
       class="logo__image"
-      src="/images/logo/alpaca.svg"
+      src="/icons/alpaca.svg"
     />
-  </a>
+  </router-link>
 </template>
 
 <script>

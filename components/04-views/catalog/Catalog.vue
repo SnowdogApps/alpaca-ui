@@ -1,47 +1,39 @@
 <template>
-  <app>
-    <alpaca-header />
-
-    <container>
-      <div class="catalog">
-        <div class="catalog__sidebar">
-          <catalog-filter
-            v-for="filter in filters"
-            :key="filter.name"
-            :name="filter.name"
-            :items="filter.filter_items"
-          />
-        </div>
-        <div class="catalog__products">
-          <ul class="catalog-grid">
-            <catalog-grid-item
-              v-for="product in products"
-              :key="product.name"
-              :name="product.name"
-              :image="productImageUrl(product.image)"
-              :price="product.price.regularPrice.amount.value"
-              :special-price="product.special_price"
-            />
-          </ul>
-        </div>
+  <container>
+    <div class="catalog">
+      <div class="catalog__sidebar">
+        <catalog-filter
+          v-for="filter in filters"
+          :key="filter.name"
+          :name="filter.name"
+          :items="filter.filter_items"
+        />
       </div>
-    </container>
-  </app>
+      <div class="catalog__products">
+        <ul class="catalog-grid">
+          <catalog-grid-item
+            v-for="product in products"
+            :key="product.name"
+            :name="product.name"
+            :image="productImageUrl(product.image)"
+            :price="product.price.regularPrice.amount.value"
+            :special-price="product.special_price"
+          />
+        </ul>
+      </div>
+    </div>
+  </container>
 </template>
 
 <script>
-  import App from '../../01-globals/app/App.vue'
   import Container from '../../01-globals/container/Container.vue'
-  import AlpacaHeader from '../../03-modules/header/Header.vue'
   import CatalogFilter from '../../03-modules/filter/Filter.vue'
   import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
   export default {
     props: ['products', 'storeConfig', 'filters'],
     components: {
-      App,
       Container,
-      AlpacaHeader,
       CatalogFilter,
       CatalogGridItem
     },

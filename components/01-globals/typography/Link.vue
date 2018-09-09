@@ -2,9 +2,10 @@
   <a
     :class="[
       'link', {
-        'link--invert': this.invert,
-        'link--secondary': this.secondary
-      }
+        'link--invert': invert,
+        'link--secondary': secondary
+      },
+      customClass
     ]"
     :href="href"
   >
@@ -14,7 +15,7 @@
 
 <script>
   export default {
-    props: ['href', 'invert', 'secondary']
+    props: ['href', 'invert', 'secondary', 'customClass']
   }
 </script>
 

@@ -5,12 +5,12 @@
         v-for="item in menu"
         :key="'mega-menu-' + item.label"
       >
-        <a
-          :href="item.href"
+        <router-link
+          :to="item.href"
           class="mega-menu__link"
         >
           {{ item.label }}
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>

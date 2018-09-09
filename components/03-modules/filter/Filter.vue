@@ -11,15 +11,16 @@
         v-for="item in items"
         :key="item.label"
       >
-        <a
+        <alpaca-link
           href="#"
-          class="filter__item"
+          :invert="true"
+          custom-class="filter__item"
         >
           <span
             class="filter__label"
             v-html="`${item.label} (${item.items_count})`"
           />
-        </a>
+        </alpaca-link>
       </li>
     </ul>
   </div>
@@ -28,12 +29,14 @@
 <script>
   import Heading from '../../01-globals/typography/Heading.vue'
   import Divider from '../../02-elements/divider/Divider.vue'
+  import AlpacaLink from '../../01-globals/typography/Link.vue'
 
   export default {
     props: ['name', 'items'],
     components: {
       Divider,
-      Heading
+      Heading,
+      AlpacaLink
     }
   }
 </script>
