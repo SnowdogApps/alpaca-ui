@@ -3,13 +3,13 @@
     "href": "/catalog",
     "label": "Default"
   }, {
-    "href": "/catalog/2",
-    "label": "Furniture"
+    "href": "/catalog/3",
+    "label": "Gear"
   }, {
     "href": "/catalog/5",
-    "label": "Accessories"
+    "label": "Fitness Equipment"
   }, {
-    "href": "/catalog/25",
-    "label": "World of Goo"
+    "href": "/catalog/8",
+    "label": "New Luma Yoga Collection"
   }
 ]

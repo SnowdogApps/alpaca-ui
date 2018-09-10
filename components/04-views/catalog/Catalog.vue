@@ -4,7 +4,7 @@
       <div class="catalog__sidebar">
         <catalog-filter
           v-for="filter in filters"
-          :key="filter.name"
+          :key="filter.request_var"
           :name="filter.name"
           :items="filter.filter_items"
         />
@@ -13,7 +13,7 @@
         <ul class="catalog-grid">
           <catalog-grid-item
             v-for="product in products"
-            :key="product.name"
+            :key="product.sku"
             :name="product.name"
             :image="productImageUrl(product.image)"
             :price="product.price.regularPrice.amount.value"

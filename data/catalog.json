@@ -11,6 +11,7 @@
     "items": [
       {
         "name": "Joust Duffle Bag",
+        "sku": "24-MB01",
         "image": "/m/b/mb01-blue-0.jpg",
         "small_image": "/m/b/mb01-blue-0.jpg",
         "thumbnail": "/m/b/mb01-blue-0.jpg",
@@ -28,6 +29,7 @@
       },
       {
         "name": "Strive Shoulder Pack",
+        "sku": "24-MB04",
         "image": "/m/b/mb04-black-0.jpg",
         "small_image": "/m/b/mb04-black-0.jpg",
         "thumbnail": "/m/b/mb04-black-0.jpg",
@@ -45,6 +47,7 @@
       },
       {
         "name": "Crown Summit Backpack",
+        "sku": "24-MB03",
         "image": "/m/b/mb03-black-0.jpg",
         "small_image": "/m/b/mb03-black-0.jpg",
         "thumbnail": "/m/b/mb03-black-0.jpg",
@@ -62,6 +65,7 @@
       },
       {
         "name": "Wayfarer Messenger Bag",
+        "sku": "24-MB05",
         "image": "/m/b/mb05-black-0.jpg",
         "small_image": "/m/b/mb05-black-0.jpg",
         "thumbnail": "/m/b/mb05-black-0.jpg",
@@ -79,6 +83,7 @@
       },
       {
         "name": "Rival Field Messenger",
+        "sku": "24-MB06",
         "image": "/m/b/mb06-gray-0.jpg",
         "small_image": "/m/b/mb06-gray-0.jpg",
         "thumbnail": "/m/b/mb06-gray-0.jpg",
@@ -96,6 +101,7 @@
       },
       {
         "name": "Fusion Backpack",
+        "sku": "24-MB02",
         "image": "/m/b/mb02-gray-0.jpg",
         "small_image": "/m/b/mb02-gray-0.jpg",
         "thumbnail": "/m/b/mb02-gray-0.jpg",
@@ -113,6 +119,7 @@
       },
       {
         "name": "Impulse Duffle",
+        "sku": "24-UB02",
         "image": "/u/b/ub02-black-0.jpg",
         "small_image": "/u/b/ub02-black-0.jpg",
         "thumbnail": "/u/b/ub02-black-0.jpg",
@@ -130,6 +137,7 @@
       },
       {
         "name": "Voyage Yoga Bag",
+        "sku": "24-WB01",
         "image": "/w/b/wb01-black-0.jpg",
         "small_image": "/w/b/wb01-black-0.jpg",
         "thumbnail": "/w/b/wb01-black-0.jpg",
@@ -147,6 +155,7 @@
       },
       {
         "name": "Compete Track Tote",
+        "sku": "24-WB02",
         "image": "/w/b/wb02-green-0.jpg",
         "small_image": "/w/b/wb02-green-0.jpg",
         "thumbnail": "/w/b/wb02-green-0.jpg",
@@ -164,6 +173,7 @@
       },
       {
         "name": "Savvy Shoulder Tote",
+        "sku": "24-WB05",
         "image": "/w/b/wb05-red-0.jpg",
         "small_image": "/w/b/wb05-red-0.jpg",
         "thumbnail": "/w/b/wb05-red-0.jpg",
@@ -181,6 +191,7 @@
       },
       {
         "name": "Endeavor Daytrip Backpack",
+        "sku": "24-WB06",
         "image": "/w/b/wb06-red-0.jpg",
         "small_image": "/w/b/wb06-red-0.jpg",
         "thumbnail": "/w/b/wb06-red-0.jpg",
@@ -198,6 +209,7 @@
       },
       {
         "name": "Driven Backpack",
+        "sku": "24-WB03",
         "image": "/w/b/wb03-purple-0.jpg",
         "small_image": "/w/b/wb03-purple-0.jpg",
         "thumbnail": "/w/b/wb03-purple-0.jpg",
@@ -215,6 +227,7 @@
       },
       {
         "name": "Overnight Duffle",
+        "sku": "24-WB07",
         "image": "/w/b/wb07-brown-0.jpg",
         "small_image": "/w/b/wb07-brown-0.jpg",
         "thumbnail": "/w/b/wb07-brown-0.jpg",
@@ -232,6 +245,7 @@
       },
       {
         "name": "Push It Messenger Bag",
+        "sku": "24-WB04",
         "image": "/w/b/wb04-blue-0.jpg",
         "small_image": "/w/b/wb04-blue-0.jpg",
         "thumbnail": "/w/b/wb04-blue-0.jpg",
@@ -249,6 +263,7 @@
       },
       {
         "name": "Affirm Water Bottle ",
+        "sku": "24-UG06",
         "image": "/u/g/ug06-lb-0.jpg",
         "small_image": "/u/g/ug06-lb-0.jpg",
         "thumbnail": "/u/g/ug06-lb-0.jpg",
@@ -266,6 +281,7 @@
       },
       {
         "name": "Dual Handle Cardio Ball",
+        "sku": "24-UG07",
         "image": "/u/g/ug07-bk-0.jpg",
         "small_image": "/u/g/ug07-bk-0.jpg",
         "thumbnail": "/u/g/ug07-bk-0.jpg",
@@ -283,6 +299,7 @@
       },
       {
         "name": "Zing Jump Rope",
+        "sku": "24-UG04",
         "image": "/u/g/ug04-bk-0.jpg",
         "small_image": "/u/g/ug04-bk-0.jpg",
         "thumbnail": "/u/g/ug04-bk-0.jpg",
@@ -300,6 +317,7 @@
       },
       {
         "name": "Pursuit Lumaflex&trade; Tone Band",
+        "sku": "24-UG02",
         "image": "/u/g/ug02-bk-0.jpg",
         "small_image": "/u/g/ug02-bk-0.jpg",
         "thumbnail": "/u/g/ug02-bk-0.jpg",
@@ -317,6 +335,7 @@
       },
       {
         "name": "Go-Get'r Pushup Grips",
+        "sku": "24-UG05",
         "image": "/u/g/ug05-gr-0.jpg",
         "small_image": "/u/g/ug05-gr-0.jpg",
         "thumbnail": "/u/g/ug05-gr-0.jpg",
@@ -334,6 +353,7 @@
       },
       {
         "name": "Quest Lumaflex&trade; Band",
+        "sku": "24-UG01",
         "image": "/u/g/ug01-bk-0.jpg",
         "small_image": "/u/g/ug01-bk-0.jpg",
         "thumbnail": "/u/g/ug01-bk-0.jpg",
