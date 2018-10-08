@@ -4,7 +4,7 @@ import App from '../components/01-globals/app/App.vue'
 import GridContainer from '../components/01-globals/grid/GridContainer.vue'
 import GridCollumn from '../components/01-globals/grid/GridCollumn.vue'
 
-storiesOf('Global|Grid', module)
+storiesOf('Global/Grid', module)
   .add('Default', () => ({
     components: { App, GridContainer, GridCollumn },
     template: `

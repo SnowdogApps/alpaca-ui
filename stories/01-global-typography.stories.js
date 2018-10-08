@@ -6,7 +6,7 @@ import AlpacaLabel from '../components/01-globals/typography/Label.vue'
 import AlpacaLink from '../components/01-globals/typography/Link.vue'
 import AlpacaParagraph from '../components/01-globals/typography/Paragraph.vue'
 
-storiesOf('Global|Typography', module)
+storiesOf('Global/Typography', module)
   .add('Heading', () => ({
     components: { App, AlpacaHeading },
     template: `
