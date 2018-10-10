@@ -28,7 +28,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --button__height: 48px;
     --button__width: 48px;

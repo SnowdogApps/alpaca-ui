@@ -11,7 +11,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --divider__color--left: var(--color-primary);
     --divider__color--right: var(--gray-lighter);

@@ -16,7 +16,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .logo {
     display: flex;
     align-items: center;

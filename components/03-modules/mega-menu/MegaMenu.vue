@@ -22,7 +22,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --mega-menu__margin: 0;
     --mega-menu__border-bottom: 1px solid var(--gray-light);

@@ -15,7 +15,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --label-margin         : 0 0 var(--spacer);
     --label-margin--inline : 0 var(--spacer) 0 0;

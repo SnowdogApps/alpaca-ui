@@ -45,7 +45,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --catalog__margin : var(--spacer--medium) 0 0 0;
     --catalog__border: 1px solid var(--gray-light);

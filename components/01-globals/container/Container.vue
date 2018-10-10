@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .container {
     max-width: var(--container__max-width);
     margin: 0 var(--container__margin);

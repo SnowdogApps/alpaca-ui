@@ -19,7 +19,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --link__color               : var(--blue);
     --link__decoration          : underline;
