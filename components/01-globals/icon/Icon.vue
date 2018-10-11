@@ -10,21 +10,21 @@
 </template>
 
 <script>
-  export default {
+export default {
     props: ['icon', 'customClass'],
     computed: {
-      url() {
-        return `/icons/sprite.svg#${this.icon}`
-      }
+        url() {
+            return `/icons/sprite.svg#${this.icon}`
+        }
     }
-  }
+}
 </script>
 
 <style lang="scss">
-  .icon {
+.icon {
     display: block;
     width: var(--icon__size);
     height: var(--icon__size);
     padding: var(--icon__padding);
-  }
+}
 </style>

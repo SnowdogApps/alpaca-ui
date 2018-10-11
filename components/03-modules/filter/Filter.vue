@@ -27,49 +27,49 @@
 </template>
 
 <script>
-  import Heading from '../../01-globals/typography/Heading.vue'
-  import Divider from '../../02-elements/divider/Divider.vue'
-  import AlpacaLink from '../../01-globals/typography/Link.vue'
+import Heading from '../../01-globals/typography/Heading.vue'
+import Divider from '../../02-elements/divider/Divider.vue'
+import AlpacaLink from '../../01-globals/typography/Link.vue'
 
-  export default {
+export default {
     props: ['name', 'items'],
     components: {
-      Divider,
-      Heading,
-      AlpacaLink
+        Divider,
+        Heading,
+        AlpacaLink
     }
-  }
+}
 </script>
 
 <style lang="scss">
-  :root {
+:root {
     --filter__spacer: var(--spacer--medium);
     --filter__name-margin: var(--spacer--large);
     --filter__label-padding: var(--spacer--large);
     --filter__icon-border: 2px solid var(--gray);
     --filter__icon-border-radius: 2px;
-  }
+}
 
-  .filter__content {
+.filter__content {
     list-style: none;
     padding: 0;
     margin: var(--spacer) 0 0 0;
-  }
+}
 
-  .filter__item {
+.filter__item {
     display: block;
     color: var(--black);
     padding: var(--spacer) 0;
-  }
+}
 
-  .filter__label {
+.filter__label {
     position: relative;
     display: block;
     padding-left: var(--filter__label-padding);
     cursor: pointer;
-  }
+}
 
-  .filter__label:before {
+.filter__label:before {
     content: '';
     position: absolute;
     top: 0;
@@ -78,5 +78,5 @@
     height: var(--filter__spacer);
     border: var(--filter__icon-border);
     border-radius: var(--filter__icon-border-radius);
-  }
+}
 </style>
