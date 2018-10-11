@@ -91,7 +91,7 @@ export default {
         calc(-1 * var(--catalog-grid-item__content-height))
     );
     --catalog-grid-item__content-translateY\@large: translateY(
-        calc(-1 * var(--catalog-grid-item__content-height\ @large))
+        calc(-1 * var(--catalog-grid-item__content-height\@large))
     );
     --catalog-grid-item__content-translateY--active: translateY(-100%);
     --catalog-grid-item__name-color: var(--font-color-base);
@@ -163,7 +163,7 @@ export default {
 
 @media all and (min-width: 768px) and (min-width: 1600px) {
     .catalog-grid-item__image {
-        padding-bottom: var(--catalog-grid-item__content-height\ @large);
+        padding-bottom: var(--catalog-grid-item__content-height\@large);
     }
 }
 
@@ -198,7 +198,7 @@ export default {
 
 @media all and (min-width: 1600px) {
     .catalog-grid-item__name {
-        font-size: var(--catalog-grid-item__font-size\ @large);
+        font-size: var(--catalog-grid-item__font-size\@large);
     }
 }
 
@@ -221,7 +221,7 @@ export default {
 
 @media all and (min-width: 1600px) {
     .catalog-grid-item__price {
-        font-size: var(--catalog-grid-item__font-size\ @large);
+        font-size: var(--catalog-grid-item__font-size\@large);
     }
 }
 
@@ -242,7 +242,7 @@ export default {
 
 @media all and (min-width: 1600px) {
     .catalog-grid-item__details {
-        transform: var(--catalog-grid-item__content-translateY\ @large);
+        transform: var(--catalog-grid-item__content-translateY\@large);
     }
 }
 

@@ -77,9 +77,9 @@ export default {
 
 @media all and (min-width: 992px) {
     .catalog__sidebar {
-        flex: 1 var(--catalog__sidebar-width\ @medium);
+        flex: 1 var(--catalog__sidebar-width\@medium);
         justify-content: space-between;
-        margin: var(--catalog__sidebar-margin\ @medium);
+        margin: var(--catalog__sidebar-margin\@medium);
         border-bottom: none;
     }
 }
@@ -92,7 +92,7 @@ export default {
     .catalog__products {
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: calc(100% - var(--catalog__sidebar-width\ @medium));
+        flex-basis: calc(100% - var(--catalog__sidebar-width\@medium));
     }
 }
 

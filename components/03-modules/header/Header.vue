@@ -116,7 +116,7 @@ export default {
 
 @media all and (min-width: 768px) {
     .header__wrapper {
-        padding: var(--header__wrapper-padding\ @medium);
+        padding: var(--header__wrapper-padding\@medium);
     }
 }
 
@@ -134,7 +134,7 @@ export default {
 
 @media all and (min-width: 768px) {
     .header__logo {
-        padding: var(--header__logo-padding\ @medium);
+        padding: var(--header__logo-padding\@medium);
         border-top: none;
     }
 }
@@ -154,7 +154,7 @@ export default {
         order: 3;
         flex-direction: column;
         justify-content: center;
-        padding: var(--header__search-wrapper-padding\ @medium);
+        padding: var(--header__search-wrapper-padding\@medium);
         border-top: none;
     }
 }
@@ -185,15 +185,15 @@ export default {
 @media all and (min-width: 768px) {
     .header__buttons {
         order: 4;
-        flex: 1 var(--header__buttons-width\ @medium);
-        max-width: var(--header__buttons-width\ @medium);
+        flex: 1 var(--header__buttons-width\@medium);
+        max-width: var(--header__buttons-width\@medium);
     }
 }
 
 @media all and (min-width: 1200px) {
     .header__buttons {
-        flex: 1 var(--header__buttons-width\ @extra-large);
-        max-width: var(--header__buttons-width\ @extra-large);
+        flex: 1 var(--header__buttons-width\@extra-large);
+        max-width: var(--header__buttons-width\@extra-large);
     }
 }
 </style>
