@@ -1,35 +1,39 @@
 <script>
-  import Icon from '../../01-globals/icon/Icon.vue'
+import Icon from '../../01-globals/icon/Icon.vue'
 
-  export default {
+export default {
     props: ['tag', 'customClass', 'icon', 'secondary', 'link', 'fluid'],
     render: function(h) {
-      return h(
-        this.tag ? this.tag : 'button', {
-          class: [
-            'button',
-            this.customClass ? this.customClass : '',
-            this.icon ? 'button--icon' : '',
-            this.secondary ? 'button--secondary' : '',
-            this.link ? 'button--link' : '',
-            this.fluid ? 'button--fluid' : '',
-          ]
-        }, [
-          this.$slots.default,
-          this.icon ? h(Icon, {
-            props: {
-              icon: this.icon,
-              customClass: 'button__icon'
-            }
-          }) : ''
-        ]
-      )
+        return h(
+            this.tag ? this.tag : 'button',
+            {
+                class: [
+                    'button',
+                    this.customClass ? this.customClass : '',
+                    this.icon ? 'button--icon' : '',
+                    this.secondary ? 'button--secondary' : '',
+                    this.link ? 'button--link' : '',
+                    this.fluid ? 'button--fluid' : ''
+                ]
+            },
+            [
+                this.$slots.default,
+                this.icon
+                    ? h(Icon, {
+                          props: {
+                              icon: this.icon,
+                              customClass: 'button__icon'
+                          }
+                      })
+                    : ''
+            ]
+        )
     }
-  }
+}
 </script>
 
 <style lang="scss">
-  :root {
+:root {
     --button__height: 48px;
     --button__width: 48px;
     --button__padding: 0 var(--spacer--medium);
@@ -54,16 +58,17 @@
     --button__padding--icon: 0;
     --button__size--icon: 20px;
     --button__border-width--icon: 3px;
-    --button__border--icon: var(--button__border-width--icon) solid var(--color-primary);
+    --button__border--icon: var(--button__border-width--icon) solid
+        var(--color-primary);
     --button__border-hover--icon: var(--gray-dark);
     --button__fill--icon: var(--white);
     --button__fill-hover--icon: var(--color-primary);
     --button__background--icon: var(--color-primary);
     --button__background-hover--icon: var(--gray-dark);
     --button__width--fluid: 100%;
-  }
+}
 
-  .button {
+.button {
     display: inline-flex;
     justify-content: center;
     cursor: pointer;
@@ -79,52 +84,57 @@
     color: var(--button__font-color);
     transition: var(--button__transition);
     font-weight: var(--button__font-weight);
-  }
-  .button:hover, .button:focus {
+}
+.button:hover,
+.button:focus {
     background: var(--button__background-hover);
     border-color: var(--button__border-hover);
     color: var(--button__font-color-hover);
-  }
-  .button--link {
+}
+.button--link {
     align-items: center;
     text-decoration: none;
-  }
-  .button--link:hover, .button--link:focus {
+}
+.button--link:hover,
+.button--link:focus {
     text-decoration: none;
     color: var(--button__font-color-hover);
-  }
-  .button--secondary {
+}
+.button--secondary {
     border: var(--button__border--secondary);
     color: var(--button__font-color--secondary);
     background: var(--button__background--secondary);
-  }
-  .button--secondary:hover, .button--secondary:focus {
+}
+.button--secondary:hover,
+.button--secondary:focus {
     border-color: var(--button__border-hover--secondary);
     color: var(--button__font-color-hover--secondary);
     background: var(--button__background-hover--secondary);
-  }
-  .button--icon {
+}
+.button--icon {
     align-items: center;
     padding: var(--button__padding--icon);
     border: var(--button__border--icon);
     background: var(--button__background--icon);
-  }
-  .button--icon:hover, .button--icon:focus {
+}
+.button--icon:hover,
+.button--icon:focus {
     border-color: var(--button__border-hover--icon);
     background: var(--button__background-hover--icon);
-  }
-  .button--icon:hover .button__icon,
-  .button--icon:hover .icon, .button--icon:focus .button__icon,
-  .button--icon:focus .icon {
+}
+.button--icon:hover .button__icon,
+.button--icon:hover .icon,
+.button--icon:focus .button__icon,
+.button--icon:focus .icon {
     fill: var(--button__fill-hover--icon);
-  }
-  .button--fluid {
+}
+.button--fluid {
     width: var(--button__width--fluid);
-  }
-  .button__icon {
+}
+.button__icon {
     width: var(--button__size--icon);
     height: var(--button__size--icon);
     fill: var(--button__fill--icon);
     transition: var(--button__transition);
-  }
+}
 </style>

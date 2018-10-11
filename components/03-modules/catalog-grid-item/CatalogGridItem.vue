@@ -46,18 +46,18 @@
 </template>
 
 <script>
-  import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaButton from '../../02-elements/button/Button.vue'
 
-  export default {
+export default {
     props: ['image', 'price', 'name', 'specialPrice'],
     components: {
-      AlpacaButton
+        AlpacaButton
     }
-  }
+}
 </script>
 
 <style lang="scss">
-  :root {
+:root {
     --catalog-grid-item__base-spacing: var(--spacer);
     --catalog-grid-item__padding: 0;
     --catalog-grid-item__border: 1px solid var(--gray-lightest);
@@ -87,8 +87,12 @@
     --catalog-grid-item__content-width: 100%;
     --catalog-grid-item__content-height: 67px;
     --catalog-grid-item__content-height\@large: 73px;
-    --catalog-grid-item__content-translateY: translateY(calc(-1 * var(--catalog-grid-item__content-height)));
-    --catalog-grid-item__content-translateY\@large: translateY(calc(-1 * var(--catalog-grid-item__content-height\@large)));
+    --catalog-grid-item__content-translateY: translateY(
+        calc(-1 * var(--catalog-grid-item__content-height))
+    );
+    --catalog-grid-item__content-translateY\@large: translateY(
+        calc(-1 * var(--catalog-grid-item__content-height\ @large))
+    );
     --catalog-grid-item__content-translateY--active: translateY(-100%);
     --catalog-grid-item__name-color: var(--font-color-base);
     --catalog-grid-item__name-font-weight: var(--font-weight-normal);
@@ -107,30 +111,30 @@
     --catalog-grid-item__action-icon-transition: var(--transition-base);
     --catalog-grid-item__action-icon-fill: var(--gray-darker);
     --catalog-grid-item__action-icon-fill-hover: var(--green);
-  }
+}
 
-  .catalog-grid-item {
+.catalog-grid-item {
     position: relative;
     display: block;
     border: var(--catalog-grid-item__border);
     padding: var(--catalog-grid-item__padding);
     overflow: hidden;
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .catalog-grid-item:focus-within .catalog-grid-item__details,
     .catalog-grid-item:hover .catalog-grid-item__details {
-      transform: var(--catalog-grid-item__content-translateY--active);
+        transform: var(--catalog-grid-item__content-translateY--active);
     }
 
     .catalog-grid-item:focus-within .catalog-grid-item__link--name,
     .catalog-grid-item:hover .catalog-grid-item__link--name {
-      overflow: var(--catalog-grid-item__link-overflow--visible);
-      white-space: var(--catalog-grid-item__link-white-space--visible);
+        overflow: var(--catalog-grid-item__link-overflow--visible);
+        white-space: var(--catalog-grid-item__link-white-space--visible);
     }
-  }
+}
 
-  .catalog-grid-item__badge {
+.catalog-grid-item__badge {
     position: absolute;
     top: var(--catalog-grid-item__badge-top-position);
     left: var(--catalog-grid-item__badge-left-position);
@@ -139,178 +143,177 @@
     padding: var(--catalog-grid-item__badge-padding);
     font-size: var(--catalog-grid-item__badge-font-size);
     background-color: var(--catalog-grid-item__badge-bg-color);
-  }
+}
 
-  .catalog-grid-item__link {
+.catalog-grid-item__link {
     display: block;
-  }
+}
 
-  .catalog-grid-item__image {
+.catalog-grid-item__image {
     display: block;
     width: 100%;
     max-width: 100%;
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .catalog-grid-item__image {
-      padding-bottom: var(--catalog-grid-item__content-height);
+        padding-bottom: var(--catalog-grid-item__content-height);
     }
-  }
+}
 
-  @media all and (min-width: 768px) and (min-width: 1600px) {
+@media all and (min-width: 768px) and (min-width: 1600px) {
     .catalog-grid-item__image {
-      padding-bottom: var(--catalog-grid-item__content-height\@large);
+        padding-bottom: var(--catalog-grid-item__content-height\ @large);
     }
-  }
+}
 
-  .catalog-grid-item__link--name {
+.catalog-grid-item__link--name {
     color: var(--catalog-grid-item__name-color);
     overflow: var(--catalog-grid-item__link-overflow);
     white-space: var(--catalog-grid-item__link-white-space);
     text-overflow: var(--catalog-grid-item__link-text-overflow);
-  }
+}
 
-
-  .catalog-grid-item__image-wrapper .image {
+.catalog-grid-item__image-wrapper .image {
     margin: var(--catalog-grid-item__image-margin);
     width: var(--catalog-grid-item__image-width);
     height: var(--catalog-grid-item__image-height);
-  }
+}
 
-  .catalog-grid-item__image-wrapper .lazyload,
-  .catalog-grid-item__image-wrapper .lazyloading {
+.catalog-grid-item__image-wrapper .lazyload,
+.catalog-grid-item__image-wrapper .lazyloading {
     width: var(--catalog-grid-item__image-width--lazyload);
-  }
+}
 
-  .catalog-grid-item__image-wrapper .loader__circle {
+.catalog-grid-item__image-wrapper .loader__circle {
     margin-top: var(--catalog-grid-item__loader-margin-top);
-  }
+}
 
-  .catalog-grid-item__name {
+.catalog-grid-item__name {
     font-weight: var(--catalog-grid-item__name-font-weight);
     font-size: var(--catalog-grid-item__font-size);
     line-height: var(--catalog-grid-item__line-height);
     margin-bottom: var(--catalog-grid-item__name-margin-botttom);
-  }
+}
 
-  @media all and (min-width: 1600px) {
+@media all and (min-width: 1600px) {
     .catalog-grid-item__name {
-      font-size: var(--catalog-grid-item__font-size\@large);
+        font-size: var(--catalog-grid-item__font-size\ @large);
     }
-  }
+}
 
-  .catalog-grid-item__name--bigger {
+.catalog-grid-item__name--bigger {
     padding: var(--catalog-grid-item__name-padding--bigger);
-  }
+}
 
-  .catalog-grid-item__rating {
+.catalog-grid-item__rating {
     margin-bottom: var(--catalog-grid-item__rating-margin-bottom);
-  }
+}
 
-  .catalog-grid-item__price {
+.catalog-grid-item__price {
     margin-bottom: var(--catalog-grid-item__price-margin-bottom);
     padding: var(--catalog-grid-item__padding);
     font-size: var(--catalog-grid-item__font-size);
     line-height: var(--catalog-grid-item__line-height);
     font-weight: var(--catalog-grid-item__font-weight);
     white-space: nowrap;
-  }
+}
 
-  @media all and (min-width: 1600px) {
+@media all and (min-width: 1600px) {
     .catalog-grid-item__price {
-      font-size: var(--catalog-grid-item__font-size\@large);
+        font-size: var(--catalog-grid-item__font-size\ @large);
     }
-  }
+}
 
-  .catalog-grid-item__details {
+.catalog-grid-item__details {
     padding: var(--catalog-grid-item__content-padding);
     background: var(--catalog-grid-item__content-bg-color);
     transition: var(--transition-base);
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .catalog-grid-item__details {
-      position: absolute;
-      transform: var(--catalog-grid-item__content-translateY);
-      width: var(--catalog-grid-item__content-width);
-      border-top: var(--catalog-grid-item__border);
+        position: absolute;
+        transform: var(--catalog-grid-item__content-translateY);
+        width: var(--catalog-grid-item__content-width);
+        border-top: var(--catalog-grid-item__border);
     }
-  }
+}
 
-  @media all and (min-width: 1600px) {
+@media all and (min-width: 1600px) {
     .catalog-grid-item__details {
-      transform: var(--catalog-grid-item__content-translateY\@large);
+        transform: var(--catalog-grid-item__content-translateY\ @large);
     }
-  }
+}
 
-  .catalog-grid-item__options .swatch {
+.catalog-grid-item__options .swatch {
     margin: var(--catalog-grid-item__base-spacing) 0;
-  }
+}
 
-  .catalog-grid-item__actions {
+.catalog-grid-item__actions {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-  }
+}
 
-  .catalog-grid-item__primary-form {
+.catalog-grid-item__primary-form {
     margin: var(--catalog-gird-item__primary-form-margin);
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .catalog-grid-item__primary-form {
-      flex: 1;
+        flex: 1;
     }
-  }
+}
 
-  .catalog-grid-item__primary-action {
+.catalog-grid-item__primary-action {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: var(--catalog-grid-item__primary-padding);
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .catalog-grid-item__cart-icon {
-      display: none;
+        display: none;
     }
-  }
+}
 
-  .catalog-grid-item__cart-text {
+.catalog-grid-item__cart-text {
     display: none;
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .catalog-grid-item__cart-text {
-      display: block;
+        display: block;
     }
-  }
+}
 
-  .catalog-grid-item__secondary-action {
+.catalog-grid-item__secondary-action {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .catalog-grid-item__secondary-action .button {
+.catalog-grid-item__secondary-action .button {
     height: var(--catalog-grid-item__action-size);
     width: var(--catalog-grid-item__action-size);
     padding: var(--catalog-grid-item__action-padding);
     background: var(--catalog-grid-item__action-background);
     border: var(--catalog-grid-item__action-border);
     cursor: var(--catalog-grid-item__action-cursor);
-  }
+}
 
-  .catalog-grid-item__secondary-action .button:hover .button__icon,
-  .catalog-grid-item__secondary-action .button:focus .button__icon {
+.catalog-grid-item__secondary-action .button:hover .button__icon,
+.catalog-grid-item__secondary-action .button:focus .button__icon {
     fill: var(--catalog-grid-item__action-icon-fill-hover);
-  }
+}
 
-  .catalog-grid-item__secondary-action .button .button__icon {
+.catalog-grid-item__secondary-action .button .button__icon {
     width: var(--catalog-grid-item__action-icon-size);
     height: var(--catalog-grid-item__action-icon-size);
     transition: var(--catalog-grid-item__action-icon-transition);
     fill: var(--catalog-grid-item__action-icon-fill);
-  }
+}
 </style>

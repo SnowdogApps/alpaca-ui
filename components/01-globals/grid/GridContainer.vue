@@ -5,16 +5,14 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss">
-  .grid {
+.grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
-  }
+}
 </style>

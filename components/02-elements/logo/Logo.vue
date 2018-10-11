@@ -11,31 +11,29 @@
 </template>
 
 <script>
-  export default {
-
-  }
+export default {}
 </script>
 
 <style lang="scss">
-  .logo {
+.logo {
     display: flex;
     align-items: center;
     flex: 1 84px;
     justify-content: center;
     max-width: 84px;
-  }
-  @media all and (min-width: 768px) {
+}
+@media all and (min-width: 768px) {
     .logo {
-      flex: 1 112px;
-      max-width: 112px;
+        flex: 1 112px;
+        max-width: 112px;
     }
-  }
-  .logo__image {
+}
+.logo__image {
     height: 25px;
-  }
-  @media all and (min-width: 768px) {
+}
+@media all and (min-width: 768px) {
     .logo__image {
-      height: 34px;
+        height: 34px;
     }
-  }
+}
 </style>
