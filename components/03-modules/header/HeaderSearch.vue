@@ -24,7 +24,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --search-form__height: 34px;
     --search-form__width: 100%;

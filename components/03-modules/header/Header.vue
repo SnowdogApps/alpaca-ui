@@ -78,7 +78,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --header__border-color: var(--gray-light);
     --header__wrapper-padding: 0;

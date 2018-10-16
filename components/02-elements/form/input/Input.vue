@@ -40,7 +40,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --input__field-padding: 0 var(--spacer--medium);
     --input__field-padding--textarea: var(--spacer--medium);

@@ -41,7 +41,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --filter__spacer: var(--spacer--medium);
     --filter__name-margin: var(--spacer--large);

@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .grid {
     display: flex;
     flex-wrap: wrap;

@@ -26,7 +26,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --headings-margin                 : 0 0 0.5em 0;
     --headings-margin--page           : var(--spacer--medium) 0;

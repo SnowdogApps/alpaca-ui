@@ -11,7 +11,7 @@
   export default {}
 </script>
 
-<style>
+<style lang="scss">
   /* Not the prettiest way, but I need it to work now */
   @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext");
 

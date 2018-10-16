@@ -13,7 +13,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --paragraph-color       : var(--color-secondary);
     --paragraph-font-family : var(--font-family-base);
