@@ -49,8 +49,8 @@ export default {
 :root {
     --catalog__margin : var(--spacer--medium) 0 0 0;
     --catalog__border: 1px solid var(--gray-light);
-    --catalog__sidebar-width\@medium: calc(290px + var(--spacer--medium));
-    --catalog__sidebar-margin\@medium: 0 var(--spacer--medium) 0 0;
+    --catalog__sidebar-width--mq-medium: calc(290px + var(--spacer--medium));
+    --catalog__sidebar-margin--mq-medium: 0 var(--spacer--medium) 0 0;
     --catalog__sidebar-border: 1px solid var(--gray-lighter);
 
     --catalog-grid__gap: var(--spacer--medium);
@@ -77,9 +77,9 @@ export default {
 
 @media all and (min-width: 992px) {
     .catalog__sidebar {
-        flex: 1 var(--catalog__sidebar-width\@medium);
+        flex: 1 var(--catalog__sidebar-width--mq-medium);
         justify-content: space-between;
-        margin: var(--catalog__sidebar-margin\@medium);
+        margin: var(--catalog__sidebar-margin--mq-medium);
         border-bottom: none;
     }
 }
@@ -92,7 +92,7 @@ export default {
     .catalog__products {
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: calc(100% - var(--catalog__sidebar-width\@medium));
+        flex-basis: calc(100% - var(--catalog__sidebar-width--mq-medium));
     }
 }
 

@@ -82,17 +82,17 @@ export default {
 :root {
     --header__border-color: var(--gray-light);
     --header__wrapper-padding: 0;
-    --header__wrapper-padding\@medium: 12px 0;
+    --header__wrapper-padding--mq-medium: 12px 0;
     --header__logo-padding: 12px 0 12px var(--spacer);
-    --header__logo-padding\@medium: 0 0 0 var(--spacer);
+    --header__logo-padding--mq-medium: 0 0 0 var(--spacer);
     --header__menu-trigger-size: 48px;
     --header__buttons-width: calc(100% - 48px);
-    --header__buttons-width\@medium: calc(4 * 48px + 3 * var(--spacer));
-    --header__buttons-width\@extra-large: calc(
+    --header__buttons-width--mq-medium: calc(4 * 48px + 3 * var(--spacer));
+    --header__buttons-width--mq-extra-large: calc(
         4 * 48px + 3 * var(--spacer--medium)
     );
     --header__search-wrapper-padding: 0 0 0 24px;
-    --header__search-wrapper-padding\@medium: 0 24px;
+    --header__search-wrapper-padding--mq-medium: 0 24px;
 }
 
 .header {
@@ -116,7 +116,7 @@ export default {
 
 @media all and (min-width: 768px) {
     .header__wrapper {
-        padding: var(--header__wrapper-padding\@medium);
+        padding: var(--header__wrapper-padding--mq-medium);
     }
 }
 
@@ -134,7 +134,7 @@ export default {
 
 @media all and (min-width: 768px) {
     .header__logo {
-        padding: var(--header__logo-padding\@medium);
+        padding: var(--header__logo-padding--mq-medium);
         border-top: none;
     }
 }
@@ -154,7 +154,7 @@ export default {
         order: 3;
         flex-direction: column;
         justify-content: center;
-        padding: var(--header__search-wrapper-padding\@medium);
+        padding: var(--header__search-wrapper-padding--mq-medium);
         border-top: none;
     }
 }
@@ -185,15 +185,15 @@ export default {
 @media all and (min-width: 768px) {
     .header__buttons {
         order: 4;
-        flex: 1 var(--header__buttons-width\@medium);
-        max-width: var(--header__buttons-width\@medium);
+        flex: 1 var(--header__buttons-width--mq-medium);
+        max-width: var(--header__buttons-width--mq-medium);
     }
 }
 
 @media all and (min-width: 1200px) {
     .header__buttons {
-        flex: 1 var(--header__buttons-width\@extra-large);
-        max-width: var(--header__buttons-width\@extra-large);
+        flex: 1 var(--header__buttons-width--mq-extra-large);
+        max-width: var(--header__buttons-width--mq-extra-large);
     }
 }
 </style>
