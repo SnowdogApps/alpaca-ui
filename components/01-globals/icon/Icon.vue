@@ -20,7 +20,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .icon {
     display: block;
     width: var(--icon__size);

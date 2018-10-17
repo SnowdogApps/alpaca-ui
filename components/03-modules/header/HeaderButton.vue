@@ -20,7 +20,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --header-button__size: 48px;
     --header-button__margin: 0 0 0 var(--spacer);

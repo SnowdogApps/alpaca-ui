@@ -56,7 +56,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   :root {
     --catalog-grid-item__base-spacing: var(--spacer);
     --catalog-grid-item__padding: 0;

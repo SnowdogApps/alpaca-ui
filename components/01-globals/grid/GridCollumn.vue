@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .grid__column {
     --width: 1;
     --count: 1;
