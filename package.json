@@ -4,9 +4,7 @@
   "version": "0.1.2",
   "scripts": {
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook",
-    "prettier": "prettier --list-different \"**/*.vue\"",
-    "prettier-fix": "prettier --write \"**/*.vue\""
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
@@ -22,7 +20,8 @@
     "babel-preset-vue": "^2.0.2",
     "css-loader": "^1.0.0",
     "node-sass": "^4.9.3",
-    "prettier": "1.14.3",
+    "prettier": "^1.14.3",
+    "prettier-loader": "^2.1.1",
     "sass-loader": "^7.1.0",
     "vue-loader": "^15.4.1",
     "vue-style-loader": "^4.1.2",
