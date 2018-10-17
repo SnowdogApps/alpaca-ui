@@ -62,7 +62,7 @@ export default {
     --catalog-grid-item__padding: 0;
     --catalog-grid-item__border: 1px solid var(--gray-lightest);
     --catalog-grid-item__font-size: var(--font-size-base);
-    --catalog-grid-item__font-size\@large: 16px;
+    --catalog-grid-item__font-size--mq-large: 16px;
     --catalog-grid-item__line-height: 1.5;
     --catalog-grid-item__font-weight: var(--font-weight-bold);
     --catalog-grid-item__badge-top-position: var(--spacer--medium);
@@ -86,12 +86,12 @@ export default {
     --catalog-grid-item__content-padding: var(--spacer);
     --catalog-grid-item__content-width: 100%;
     --catalog-grid-item__content-height: 67px;
-    --catalog-grid-item__content-height\@large: 73px;
+    --catalog-grid-item__content-height--mq-large: 73px;
     --catalog-grid-item__content-translateY: translateY(
         calc(-1 * var(--catalog-grid-item__content-height))
     );
-    --catalog-grid-item__content-translateY\@large: translateY(
-        calc(-1 * var(--catalog-grid-item__content-height\@large))
+    --catalog-grid-item__content-translateY--mq-large: translateY(
+        calc(-1 * var(--catalog-grid-item__content-height--mq-large))
     );
     --catalog-grid-item__content-translateY--active: translateY(-100%);
     --catalog-grid-item__name-color: var(--font-color-base);
@@ -163,7 +163,7 @@ export default {
 
 @media all and (min-width: 768px) and (min-width: 1600px) {
     .catalog-grid-item__image {
-        padding-bottom: var(--catalog-grid-item__content-height\@large);
+        padding-bottom: var(--catalog-grid-item__content-height--mq-large);
     }
 }
 
@@ -198,7 +198,7 @@ export default {
 
 @media all and (min-width: 1600px) {
     .catalog-grid-item__name {
-        font-size: var(--catalog-grid-item__font-size\@large);
+        font-size: var(--catalog-grid-item__font-size--mq-large);
     }
 }
 
@@ -221,7 +221,7 @@ export default {
 
 @media all and (min-width: 1600px) {
     .catalog-grid-item__price {
-        font-size: var(--catalog-grid-item__font-size\@large);
+        font-size: var(--catalog-grid-item__font-size--mq-large);
     }
 }
 
@@ -242,7 +242,7 @@ export default {
 
 @media all and (min-width: 1600px) {
     .catalog-grid-item__details {
-        transform: var(--catalog-grid-item__content-translateY\@large);
+        transform: var(--catalog-grid-item__content-translateY--mq-large);
     }
 }
 
