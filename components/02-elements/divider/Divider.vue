@@ -11,34 +11,34 @@ export default {}
 
 <style lang="scss">
 :root {
-    --divider__color--left: var(--color-primary);
-    --divider__color--right: var(--gray-lighter);
-    --divider__size: 8px;
+  --divider__color--left: var(--color-primary);
+  --divider__color--right: var(--gray-lighter);
+  --divider__size: 8px;
 }
 
 .divider {
-    display: none;
+  display: none;
 }
 
 @media all and (min-width: 768px) {
-    .divider {
-        display: flex;
-    }
+  .divider {
+    display: flex;
+  }
 }
 
 .divider__left,
 .divider__right {
-    border-top: var(--divider__size) solid;
-    flex: 1;
+  border-top: var(--divider__size) solid;
+  flex: 1;
 }
 
 .divider__left {
-    border-color: var(--divider__color--left);
-    flex-grow: 1;
+  border-color: var(--divider__color--left);
+  flex-grow: 1;
 }
 
 .divider__right {
-    border-color: var(--divider__color--right);
-    flex-grow: 2;
+  border-color: var(--divider__color--right);
+  flex-grow: 2;
 }
 </style>
