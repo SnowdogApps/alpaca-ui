@@ -17,13 +17,13 @@
 </template>
 
 <script>
-  export default {
+export default {
     props: ['menu']
-  }
+}
 </script>
 
 <style lang="scss">
-  :root {
+:root {
     --mega-menu__margin: 0;
     --mega-menu__border-bottom: 1px solid var(--gray-light);
     --mega-menu__font-color: var(--gray-darker);
@@ -39,24 +39,24 @@
     --mega-menu__link-color: var(--gray-darker);
     --mega-menu__link-color--active: var(--color-primary);
     --mega-menu__link-text-decoration: none;
-  }
+}
 
-  .mega-menu {
+.mega-menu {
     display: none;
     background: var(--mega-menu__background-color);
     color: var(--mega-menu__font-color);
     position: relative;
     margin: var(--mega-menu__margin);
     border-bottom: var(--mega-menu__border-bottom);
-  }
+}
 
-  @media all and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
     .mega-menu {
-      display: block;
+        display: block;
     }
-  }
+}
 
-  .mega-menu__list {
+.mega-menu__list {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
@@ -64,9 +64,9 @@
     padding: var(--mega-menu__list-padding);
     list-style: none;
     background-color: var(--mega-menu__list-background-color);
-  }
+}
 
-  .mega-menu__link {
+.mega-menu__link {
     display: block;
     margin: var(--mega-menu__link-margin);
     padding: var(--mega-menu__link-padding);
@@ -74,11 +74,11 @@
     font-weight: var(--mega-menu__font-weight);
     color: var(--mega-menu__link-color);
     text-decoration: var(--mega-menu__link-text-decoration);
-  }
+}
 
-  .mega-menu__link:focus,
-  .mega-menu__link:hover {
+.mega-menu__link:focus,
+.mega-menu__link:hover {
     text-decoration: var(--mega-menu__link-text-decoration);
     color: var(--mega-menu__link-color--active);
-  }
+}
 </style>

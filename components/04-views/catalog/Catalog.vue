@@ -26,27 +26,27 @@
 </template>
 
 <script>
-  import Container from '../../01-globals/container/Container.vue'
-  import CatalogFilter from '../../03-modules/filter/Filter.vue'
-  import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import Container from '../../01-globals/container/Container.vue'
+import CatalogFilter from '../../03-modules/filter/Filter.vue'
+import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
-  export default {
+export default {
     props: ['products', 'storeConfig', 'filters'],
     components: {
-      Container,
-      CatalogFilter,
-      CatalogGridItem
+        Container,
+        CatalogFilter,
+        CatalogGridItem
     },
     methods: {
-      productImageUrl(image) {
-        return this.storeConfig.base_media_url + 'catalog/product' + image
-      }
+        productImageUrl(image) {
+            return this.storeConfig.base_media_url + 'catalog/product' + image
+        }
     }
-  }
+}
 </script>
 
 <style lang="scss">
-  :root {
+:root {
     --catalog__margin : var(--spacer--medium) 0 0 0;
     --catalog__border: 1px solid var(--gray-light);
     --catalog__sidebar-width\@medium: calc(290px + var(--spacer--medium));
@@ -57,46 +57,46 @@
     --catalog-gird__margin: 0;
     --catalog-grid__padding: var(--spacer--medium) 0 var(--spacer--large) 0;
     --catalog-grid__border: 1px solid var(--gray-light);
-  }
+}
 
-  .catalog {
+.catalog {
     margin: var(--spacer--medium) 0 0 0;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  @media all and (min-width: 992px) {
+@media all and (min-width: 992px) {
     .catalog {
-      flex-direction: row;
+        flex-direction: row;
     }
-  }
+}
 
-  .catalog__sidebar {
+.catalog__sidebar {
     border-bottom: var(--catalog__sidebar-border);
-  }
+}
 
-  @media all and (min-width: 992px) {
+@media all and (min-width: 992px) {
     .catalog__sidebar {
-      flex: 1 var(--catalog__sidebar-width\@medium);
-      justify-content: space-between;
-      margin: var(--catalog__sidebar-margin\@medium);
-      border-bottom: none;
+        flex: 1 var(--catalog__sidebar-width\@medium);
+        justify-content: space-between;
+        margin: var(--catalog__sidebar-margin\@medium);
+        border-bottom: none;
     }
-  }
+}
 
-  .catalog__products {
+.catalog__products {
     padding: var(--catalog__products-padding);
-  }
+}
 
-  @media all and (min-width: 992px) {
+@media all and (min-width: 992px) {
     .catalog__products {
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: calc(100% - var(--catalog__sidebar-width\@medium));
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: calc(100% - var(--catalog__sidebar-width\@medium));
     }
-  }
+}
 
-  .catalog-grid {
+.catalog-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: var(--catalog-grid__gap);
@@ -104,10 +104,10 @@
     padding: var(--catalog-grid__padding);
     border-bottom: var(--catalog-grid__border);
     list-style: none;
-  }
-  @media all and (min-width: 768px) {
+}
+@media all and (min-width: 768px) {
     .catalog-grid {
-      grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
-  }
+}
 </style>

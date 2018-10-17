@@ -51,35 +51,35 @@
 </template>
 
 <script>
-  import menu from '../../../data/menu.json'
+import menu from '../../../data/menu.json'
 
-  import Container from '../../01-globals/container/Container.vue'
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-  import Logo from '../../02-elements/logo/Logo.vue'
-  import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
+import Container from '../../01-globals/container/Container.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import Logo from '../../02-elements/logo/Logo.vue'
+import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
 
-  import HeaderButton from './HeaderButton.vue'
-  import HeaderSearch from './HeaderSearch.vue'
+import HeaderButton from './HeaderButton.vue'
+import HeaderSearch from './HeaderSearch.vue'
 
-  export default {
+export default {
     components: {
-      Container,
-      AlpacaIcon,
-      Logo,
-      MegaMenu,
-      HeaderButton,
-      HeaderSearch
+        Container,
+        AlpacaIcon,
+        Logo,
+        MegaMenu,
+        HeaderButton,
+        HeaderSearch
     },
     data() {
-      return {
-        menu: menu
-      }
-    },
-  }
+        return {
+            menu: menu
+        }
+    }
+}
 </script>
 
 <style lang="scss">
-  :root {
+:root {
     --header__border-color: var(--gray-light);
     --header__wrapper-padding: 0;
     --header__wrapper-padding\@medium: 12px 0;
@@ -88,56 +88,58 @@
     --header__menu-trigger-size: 48px;
     --header__buttons-width: calc(100% - 48px);
     --header__buttons-width\@medium: calc(4 * 48px + 3 * var(--spacer));
-    --header__buttons-width\@extra-large: calc(4 * 48px + 3 * var(--spacer--medium));
+    --header__buttons-width\@extra-large: calc(
+        4 * 48px + 3 * var(--spacer--medium)
+    );
     --header__search-wrapper-padding: 0 0 0 24px;
     --header__search-wrapper-padding\@medium: 0 24px;
-  }
+}
 
-  .header {
+.header {
     position: relative;
     border-bottom: 1px solid var(--header__border-color);
-  }
+}
 
-  @media all and (min-width: 992px) {
+@media all and (min-width: 992px) {
     .header {
-      border-bottom: none;
+        border-bottom: none;
     }
-  }
+}
 
-  .header__wrapper {
+.header__wrapper {
     position: relative;
     justify-content: space-between;
     display: flex;
     flex-flow: row wrap;
     padding: var(--header__wrapper-padding);
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .header__wrapper {
-      padding: var(--header__wrapper-padding\@medium);
+        padding: var(--header__wrapper-padding\@medium);
     }
-  }
+}
 
-  @media all and (min-width: 992px) {
+@media all and (min-width: 992px) {
     .header__wrapper {
-      border-bottom: 1px solid var(--header__border-color);
+        border-bottom: 1px solid var(--header__border-color);
     }
-  }
+}
 
-  .header__logo {
+.header__logo {
     order: 3;
     padding: var(--header__logo-padding);
     border-top: 1px solid var(--header__border-color);
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .header__logo {
-      padding: var(--header__logo-padding\@medium);
-      border-top: none;
+        padding: var(--header__logo-padding\@medium);
+        border-top: none;
     }
-  }
+}
 
-  .header__search-wrapper {
+.header__search-wrapper {
     display: flex;
     flex-flow: column nowrap;
     flex: 1 50%;
@@ -145,32 +147,32 @@
     justify-content: center;
     padding: var(--header__search-wrapper-padding);
     border-top: 1px solid var(--header__border-color);
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .header__search-wrapper {
-      order: 3;
-      flex-direction: column;
-      justify-content: center;
-      padding: var(--header__search-wrapper-padding\@medium);
-      border-top: none;
+        order: 3;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--header__search-wrapper-padding\@medium);
+        border-top: none;
     }
-  }
+}
 
-  .header__minicart {
+.header__minicart {
     position: relative;
-  }
+}
 
-  .header__minicart-content {
+.header__minicart-content {
     top: calc(100% - 1px);
-  }
+}
 
-  .header__minicart-content.popup {
+.header__minicart-content.popup {
     position: absolute;
     right: 0;
-  }
+}
 
-  .header__buttons {
+.header__buttons {
     display: flex;
     order: 2;
     flex: 1 var(--header__buttons-width);
@@ -178,20 +180,20 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-  }
+}
 
-  @media all and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .header__buttons {
-      order: 4;
-      flex: 1 var(--header__buttons-width\@medium);
-      max-width: var(--header__buttons-width\@medium);
+        order: 4;
+        flex: 1 var(--header__buttons-width\@medium);
+        max-width: var(--header__buttons-width\@medium);
     }
-  }
+}
 
-  @media all and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
     .header__buttons {
-      flex: 1 var(--header__buttons-width\@extra-large);
-      max-width: var(--header__buttons-width\@extra-large);
+        flex: 1 var(--header__buttons-width\@extra-large);
+        max-width: var(--header__buttons-width\@extra-large);
     }
-  }
+}
 </style>
