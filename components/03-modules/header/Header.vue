@@ -62,138 +62,138 @@ import HeaderButton from './HeaderButton.vue'
 import HeaderSearch from './HeaderSearch.vue'
 
 export default {
-    components: {
-        Container,
-        AlpacaIcon,
-        Logo,
-        MegaMenu,
-        HeaderButton,
-        HeaderSearch
-    },
-    data() {
-        return {
-            menu: menu
-        }
+  components: {
+    Container,
+    AlpacaIcon,
+    Logo,
+    MegaMenu,
+    HeaderButton,
+    HeaderSearch
+  },
+  data() {
+    return {
+      menu: menu
     }
+  }
 }
 </script>
 
 <style lang="scss">
 :root {
-    --header__border-color: var(--gray-light);
-    --header__wrapper-padding: 0;
-    --header__wrapper-padding--mq-medium: 12px 0;
-    --header__logo-padding: 12px 0 12px var(--spacer);
-    --header__logo-padding--mq-medium: 0 0 0 var(--spacer);
-    --header__menu-trigger-size: 48px;
-    --header__buttons-width: calc(100% - 48px);
-    --header__buttons-width--mq-medium: calc(4 * 48px + 3 * var(--spacer));
-    --header__buttons-width--mq-extra-large: calc(
-        4 * 48px + 3 * var(--spacer--medium)
-    );
-    --header__search-wrapper-padding: 0 0 0 24px;
-    --header__search-wrapper-padding--mq-medium: 0 24px;
+  --header__border-color: var(--gray-light);
+  --header__wrapper-padding: 0;
+  --header__wrapper-padding--mq-medium: 12px 0;
+  --header__logo-padding: 12px 0 12px var(--spacer);
+  --header__logo-padding--mq-medium: 0 0 0 var(--spacer);
+  --header__menu-trigger-size: 48px;
+  --header__buttons-width: calc(100% - 48px);
+  --header__buttons-width--mq-medium: calc(4 * 48px + 3 * var(--spacer));
+  --header__buttons-width--mq-extra-large: calc(
+    4 * 48px + 3 * var(--spacer--medium)
+  );
+  --header__search-wrapper-padding: 0 0 0 24px;
+  --header__search-wrapper-padding--mq-medium: 0 24px;
 }
 
 .header {
-    position: relative;
-    border-bottom: 1px solid var(--header__border-color);
+  position: relative;
+  border-bottom: 1px solid var(--header__border-color);
 }
 
 @media all and (min-width: 992px) {
-    .header {
-        border-bottom: none;
-    }
+  .header {
+    border-bottom: none;
+  }
 }
 
 .header__wrapper {
-    position: relative;
-    justify-content: space-between;
-    display: flex;
-    flex-flow: row wrap;
-    padding: var(--header__wrapper-padding);
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  padding: var(--header__wrapper-padding);
 }
 
 @media all and (min-width: 768px) {
-    .header__wrapper {
-        padding: var(--header__wrapper-padding--mq-medium);
-    }
+  .header__wrapper {
+    padding: var(--header__wrapper-padding--mq-medium);
+  }
 }
 
 @media all and (min-width: 992px) {
-    .header__wrapper {
-        border-bottom: 1px solid var(--header__border-color);
-    }
+  .header__wrapper {
+    border-bottom: 1px solid var(--header__border-color);
+  }
 }
 
 .header__logo {
-    order: 3;
-    padding: var(--header__logo-padding);
-    border-top: 1px solid var(--header__border-color);
+  order: 3;
+  padding: var(--header__logo-padding);
+  border-top: 1px solid var(--header__border-color);
 }
 
 @media all and (min-width: 768px) {
-    .header__logo {
-        padding: var(--header__logo-padding--mq-medium);
-        border-top: none;
-    }
+  .header__logo {
+    padding: var(--header__logo-padding--mq-medium);
+    border-top: none;
+  }
 }
 
 .header__search-wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 50%;
-    order: 5;
-    justify-content: center;
-    padding: var(--header__search-wrapper-padding);
-    border-top: 1px solid var(--header__border-color);
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 50%;
+  order: 5;
+  justify-content: center;
+  padding: var(--header__search-wrapper-padding);
+  border-top: 1px solid var(--header__border-color);
 }
 
 @media all and (min-width: 768px) {
-    .header__search-wrapper {
-        order: 3;
-        flex-direction: column;
-        justify-content: center;
-        padding: var(--header__search-wrapper-padding--mq-medium);
-        border-top: none;
-    }
+  .header__search-wrapper {
+    order: 3;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--header__search-wrapper-padding--mq-medium);
+    border-top: none;
+  }
 }
 
 .header__minicart {
-    position: relative;
+  position: relative;
 }
 
 .header__minicart-content {
-    top: calc(100% - 1px);
+  top: calc(100% - 1px);
 }
 
 .header__minicart-content.popup {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
 
 .header__buttons {
-    display: flex;
-    order: 2;
-    flex: 1 var(--header__buttons-width);
-    max-width: var(--header__buttons-width);
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  order: 2;
+  flex: 1 var(--header__buttons-width);
+  max-width: var(--header__buttons-width);
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @media all and (min-width: 768px) {
-    .header__buttons {
-        order: 4;
-        flex: 1 var(--header__buttons-width--mq-medium);
-        max-width: var(--header__buttons-width--mq-medium);
-    }
+  .header__buttons {
+    order: 4;
+    flex: 1 var(--header__buttons-width--mq-medium);
+    max-width: var(--header__buttons-width--mq-medium);
+  }
 }
 
 @media all and (min-width: 1200px) {
-    .header__buttons {
-        flex: 1 var(--header__buttons-width--mq-extra-large);
-        max-width: var(--header__buttons-width--mq-extra-large);
-    }
+  .header__buttons {
+    flex: 1 var(--header__buttons-width--mq-extra-large);
+    max-width: var(--header__buttons-width--mq-extra-large);
+  }
 }
 </style>

@@ -16,24 +16,24 @@ export default {}
 
 <style lang="scss">
 .logo {
-    display: flex;
-    align-items: center;
-    flex: 1 84px;
-    justify-content: center;
-    max-width: 84px;
+  display: flex;
+  align-items: center;
+  flex: 1 84px;
+  justify-content: center;
+  max-width: 84px;
 }
 @media all and (min-width: 768px) {
-    .logo {
-        flex: 1 112px;
-        max-width: 112px;
-    }
+  .logo {
+    flex: 1 112px;
+    max-width: 112px;
+  }
 }
 .logo__image {
-    height: 25px;
+  height: 25px;
 }
 @media all and (min-width: 768px) {
-    .logo__image {
-        height: 34px;
-    }
+  .logo__image {
+    height: 34px;
+  }
 }
 </style>
