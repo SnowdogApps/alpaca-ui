@@ -21,10 +21,13 @@
 </script>
 
 <style lang="scss">
+  $icon__size: 24px !default;
+  $icon__padding: 2px !default;
+
   .icon {
     display: block;
-    width: var(--icon__size);
-    height: var(--icon__size);
-    padding: var(--icon__padding);
+    width: $icon__size;
+    height: $icon__size;
+    padding: $icon__padding;
   }
 </style>

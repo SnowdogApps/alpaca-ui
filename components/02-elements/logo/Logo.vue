@@ -23,19 +23,15 @@
     flex: 1 84px;
     justify-content: center;
     max-width: 84px;
-  }
-  @media all and (min-width: 768px) {
-    .logo {
+    @include mq($screen-m) {
       flex: 1 112px;
       max-width: 112px;
     }
-  }
-  .logo__image {
-    height: 25px;
-  }
-  @media all and (min-width: 768px) {
-    .logo__image {
-      height: 34px;
+    &__image {
+      height: 25px;
+      @include mq($screen-m) {
+        height: 34px;
+      }
     }
   }
 </style>

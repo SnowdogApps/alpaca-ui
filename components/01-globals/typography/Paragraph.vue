@@ -14,24 +14,26 @@
 </script>
 
 <style lang="scss">
-  :root {
-    --paragraph-color       : var(--color-secondary);
-    --paragraph-font-family : var(--font-family-base);
-    --paragraph-font-weight : var(--font-weight-normal);
-    --paragraph-line-height : var(--font-line-height);
-    --paragraph-font-size   : var(--font-size-base);
-    --paragraph-margin      : 0 0 var(--spacer--medium) 0;
-    --paragraph-transition  : none;
+  $paragraph-color: $color-secondary !default;
+  $paragraph-font-family: $font-family-base !default;
+  $paragraph-font-weight: $font-weight-normal !default;
+  $paragraph-line-height: $font-line-height !default;
+  $paragraph-font-size: $font-size-base !default;
+  $paragraph-margin: 0 0 $spacer--medium 0 !default;
+  $paragraph-transition: none !default;
+
+  .paragraph {
+    color: $paragraph-color;
+    font-family: $paragraph-font-family;
+    font-weight: $paragraph-font-weight;
+    line-height: $paragraph-line-height;
+    font-size: $paragraph-font-size;
+    margin: $paragraph-margin;
+    transition: $paragraph-transition;
   }
 
-  p,
-  .paragraph {
-    color: var(--paragraph-color);
-    font-family: var(--paragraph-font-family);
-    font-weight: var(--paragraph-font-weight);
-    line-height: var(--paragraph-line-height);
-    font-size: var(--paragraph-font-size);
-    margin: var(--paragraph-margin);
-    transition: var(--paragraph-transition);
+  p {
+    @extend .paragraph;
   }
+
 </style>

@@ -4,7 +4,13 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     use: [
       'vue-style-loader',
       'css-loader',
-      'sass-loader'
+      'sass-loader',
+      { loader: 'sass-resources-loader',
+        options: {
+          sourceMap: true,
+          resources: './public/styles/styles.scss'
+        }
+      }
     ]
   });
   return defaultConfig;
