@@ -43,7 +43,6 @@
   $heading-font-size--fifth-level: 12px !default;
   $heading-font-size--sixth-level: 12px !default;
 
-
   .heading {
     margin: $headings-margin;
     font-family: $headings-font-family;

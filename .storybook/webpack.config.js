@@ -8,7 +8,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
       { loader: 'sass-resources-loader',
         options: {
           sourceMap: true,
-          resources: './public/styles/styles.scss'
+          resources: './styles/styles.scss'
         }
       }
     ]
