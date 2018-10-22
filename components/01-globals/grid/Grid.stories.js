@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../components/01-globals/app/App.vue'
-import GridContainer from '../components/01-globals/grid/GridContainer.vue'
-import GridCollumn from '../components/01-globals/grid/GridCollumn.vue'
+import App from '../app/App.vue'
+import GridContainer from './GridContainer.vue'
+import GridCollumn from './GridCollumn.vue'
 
 storiesOf('Global/Grid', module)
   .add('Default', () => ({

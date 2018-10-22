@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../components/01-globals/app/App.vue'
-import AlpacaHeading from '../components/01-globals/typography/Heading.vue'
-import AlpacaLabel from '../components/01-globals/typography/Label.vue'
-import AlpacaLink from '../components/01-globals/typography/Link.vue'
-import AlpacaParagraph from '../components/01-globals/typography/Paragraph.vue'
+import App from '../app/App.vue'
+import AlpacaHeading from './Heading.vue'
+import AlpacaLabel from './Label.vue'
+import AlpacaLink from './Link.vue'
+import AlpacaParagraph from './Paragraph.vue'
 
 storiesOf('Global/Typography', module)
   .add('Heading', () => ({
