@@ -4,7 +4,10 @@
   "version": "0.1.2",
   "scripts": {
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "eslint": "eslint --ext .js,.vue components stories",
+    "eslint-fix": "eslint --ext .js,.vue components stories --fix",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
@@ -16,9 +19,15 @@
     "@storybook/addon-viewport": "4.0.0-alpha.20",
     "@storybook/addons": "4.0.0-alpha.20",
     "@storybook/vue": "4.0.0-alpha.20",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.2",
     "babel-preset-vue": "^2.0.2",
     "css-loader": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-vue": "^4.7.1",
     "node-sass": "^4.9.3",
     "prettier": "^1.14.3",
     "prettier-loader": "^2.1.1",
