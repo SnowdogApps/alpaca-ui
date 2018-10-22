@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
-    "plugin:vue/essential",
-    "plugin:prettier/recommended"
+    "plugin:vue/recommended"
   ],
   rules: {
     "no-multi-spaces": 0,
