@@ -5,9 +5,9 @@
       class="catalog-grid-item__link"
     >
       <img
-        class="catalog-grid-item__image"
         :src="image"
-      />
+        class="catalog-grid-item__image"
+      >
     </a>
 
     <section class="catalog-grid-item__details">
@@ -49,10 +49,10 @@
 import AlpacaButton from '../../02-elements/button/Button.vue'
 
 export default {
-  props: ['image', 'price', 'name', 'specialPrice'],
   components: {
     AlpacaButton
-  }
+  },
+  props: ['image', 'price', 'name', 'specialPrice']
 }
 </script>
 

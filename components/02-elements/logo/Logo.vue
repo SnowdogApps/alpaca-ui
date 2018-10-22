@@ -6,7 +6,7 @@
     <img
       class="logo__image"
       src="/icons/alpaca.svg"
-    />
+    >
   </router-link>
 </template>
 

@@ -29,7 +29,7 @@
                 </span>
 
                 <span class="header-button__counter">
-                  <span class="header-button__counter-dot"></span>
+                  <span class="header-button__counter-dot"/>
                 </span>
               </button>
             </div>

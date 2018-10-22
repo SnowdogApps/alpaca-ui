@@ -31,12 +31,12 @@ import CatalogFilter from '../../03-modules/filter/Filter.vue'
 import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
 export default {
-  props: ['products', 'storeConfig', 'filters'],
   components: {
     Container,
     CatalogFilter,
     CatalogGridItem
   },
+  props: ['products', 'storeConfig', 'filters'],
   methods: {
     productImageUrl(image) {
       return this.storeConfig.base_media_url + 'catalog/product' + image

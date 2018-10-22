@@ -12,8 +12,8 @@
         :key="item.label"
       >
         <alpaca-link
-          href="#"
           :invert="true"
+          href="#"
           custom-class="filter__item"
         >
           <span
@@ -32,12 +32,12 @@ import Divider from '../../02-elements/divider/Divider.vue'
 import AlpacaLink from '../../01-globals/typography/Link.vue'
 
 export default {
-  props: ['name', 'items'],
   components: {
     Divider,
     Heading,
     AlpacaLink
-  }
+  },
+  props: ['name', 'items']
 }
 </script>
 

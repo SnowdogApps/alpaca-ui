@@ -15,8 +15,8 @@
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
 export default {
-  props: ['icon'],
-  components: {AlpacaIcon}
+  components: {AlpacaIcon},
+  props: ['icon']
 }
 </script>
 
