@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/vue'
 
-import App from '../components/01-globals/app/App.vue'
-import Icon from '../components/01-globals/icon/Icon.vue'
+import App from '../app/App.vue'
+import Icon from './Icon.vue'
 
 storiesOf('Global/Icon', module).add('Default', () => ({
   components: {App, Icon},
