@@ -20,5 +20,10 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     }
   })
 
+  defaultConfig.module.rules.push({
+    test: /\.vue$/,
+    loader: "eslint-loader"
+  })
+
   return defaultConfig
 };
