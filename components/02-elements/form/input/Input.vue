@@ -4,7 +4,7 @@
       :for="id"
       :hidden="hiddenLabel"
       :inline="inlineLabel"
-      :customClass="labelClass"
+      :custom-class="labelClass"
     >
       {{ label }}
     </alpaca-label>
@@ -23,6 +23,9 @@
 import AlpacaLabel from '../../../01-globals/typography/Label.vue'
 
 export default {
+  components: {
+    AlpacaLabel
+  },
   props: [
     'label',
     'hiddenLabel',
@@ -33,10 +36,7 @@ export default {
     'placeholder',
     'labelClass',
     'inputClass'
-  ],
-  components: {
-    AlpacaLabel
-  }
+  ]
 }
 </script>
 

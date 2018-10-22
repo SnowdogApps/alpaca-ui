@@ -5,8 +5,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook",
-    "eslint": "eslint --ext .js,.vue components stories",
-    "eslint-fix": "eslint --ext .js,.vue components stories --fix"
+    "eslint": "eslint --ext .js,.vue components",
+    "eslint-fix": "eslint --ext .js,.vue components --fix"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
