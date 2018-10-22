@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../components/01-globals/app/App.vue'
-import AlpacaButton from '../components/02-elements/button/Button.vue'
+import App from '../../01-globals/app/App.vue'
+import AlpacaButton from './Button.vue'
 
 storiesOf('Elements/Button', module)
   .add('Default', () => ({

@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 
-import data from '../data/catalog.json'
+import data from '../../../data/catalog.json'
 
-import App from '../components/01-globals/app/App.vue'
-import AlpacaHeader from '../components/03-modules/header/Header.vue'
-import Catalog from '../components/04-views/catalog/Catalog.vue'
+import App from '../../01-globals/app/App.vue'
+import AlpacaHeader from '../../03-modules/header/Header.vue'
+import Catalog from './Catalog.vue'
 
 storiesOf('Views/Catalog', module)
   .add('Default', () => ({
