@@ -51,7 +51,7 @@
 </template>
 
 <script>
-  import menu from '../../../data/menu.json'
+  import menu from './data.json'
 
   import Container from '../../01-globals/container/Container.vue'
   import AlpacaIcon from '../../01-globals/icon/Icon.vue'
