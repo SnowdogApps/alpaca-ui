@@ -17,4 +17,3 @@ storiesOf('Modules/Header', module)
       </app>
     `,
   }))
-
