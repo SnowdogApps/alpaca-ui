@@ -11,7 +11,16 @@
 
 <script>
 export default {
-  props: ['icon', 'customClass'],
+  props: {
+    icon: {
+      type: String,
+      required: true
+    },
+    customClass: {
+      type: String | Boolean,
+      default: false
+    }
+  },
   computed: {
     url() {
       return `/icons/sprite.svg#${this.icon}`

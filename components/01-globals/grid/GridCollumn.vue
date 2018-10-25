@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  props: ['width']
+  props: {
+    width: {
+      type: Number | Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
