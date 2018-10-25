@@ -14,7 +14,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     loader: 'prettier-loader',
     options: {
       parser: 'vue',
-      resolveConfig: {
+      resolveConfigOptions: {
         editorconfig: true
       }
     }
