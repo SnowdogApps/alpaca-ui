@@ -3,10 +3,9 @@
   "repository": "github:SnowdogApps/alpaca-storybook",
   "version": "0.1.2",
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook",
-    "eslint": "eslint --ext .js,.vue components",
-    "eslint-fix": "eslint --ext .js,.vue components --fix"
+    "dev": "start-storybook -p 6006 -s ./public",
+    "build": "build-storybook",
+    "eslint": "eslint --ext .js,.vue components"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
