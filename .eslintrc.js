@@ -1,15 +1,20 @@
 module.exports = {
   extends: [
+    "eslint:recommended",
     "plugin:vue/recommended"
   ],
+  parserOptions: {
+    ecmaVersion: 8,
+    sourceType: 'module',
+    ecmaFeatures: {
+      modules: true
+    }
+  },
+  env: {
+    node: true
+  },
   rules: {
-    "no-multi-spaces": 0,
-    "space-in-parens": 0,
-    "array-bracket-spacing": 0,
-    "computed-property-spacing": 0,
-    "key-spacing": 0,
-    "no-var": 2,
-    "vue/require-default-prop": false,
-    "vue/require-prop-types": false
+    "vue/require-default-prop": 1,
+    "vue/require-prop-types": 1
   }
 }

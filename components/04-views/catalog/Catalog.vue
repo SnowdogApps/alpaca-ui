@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss">
 :root {
-  --catalog__margin : var(--spacer--medium) 0 0 0;
+  --catalog__margin: var(--spacer--medium) 0 0 0;
   --catalog__border: 1px solid var(--gray-light);
   --catalog__sidebar-width--mq-medium: calc(290px + var(--spacer--medium));
   --catalog__sidebar-margin--mq-medium: 0 var(--spacer--medium) 0 0;
