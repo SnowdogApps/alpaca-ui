@@ -1,0 +1,8 @@
+jobs:
+  build:
+    docker:
+      - image: circleci/node:carbon-browsers
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn eslint
