@@ -60,7 +60,12 @@
   import HeaderSearch from './HeaderSearch.vue'
 
   export default {
-    props: ['menu'],
+    props: {
+      menu: {
+        type: Array,
+        required: true
+      }
+    },
     components: {
       Container,
       AlpacaIcon,
