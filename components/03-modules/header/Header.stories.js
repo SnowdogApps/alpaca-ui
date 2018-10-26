@@ -9,7 +9,7 @@ storiesOf('Modules/Header', module)
   .add('Default', () => ({
     components: { App, AlpacaHeader },
     data: () => ({
-      menu: menu
+      menu
     }),
     template: `
       <app>
