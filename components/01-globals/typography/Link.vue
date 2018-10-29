@@ -21,49 +21,49 @@ export default {
 
 <style lang="scss">
 $link__color: $blue !default;
-  $link__decoration: underline !default;
-  $link__font-family: $font-family-base !default;
-  $link__font-weight: $font-weight-normal !default;
-  $link__color-hover: $color-secondary !default;
-  $link__line-height: $font-line-height !default;
-  $link__transition: $transition-base !default;
-  $link__color--invert: $gray-darker !default;
-  $link__color-hover--invert: $blue !default;
+$link__decoration: underline !default;
+$link__font-family: $font-family-base !default;
+$link__font-weight: $font-weight-normal !default;
+$link__color-hover: $color-secondary !default;
+$link__line-height: $font-line-height !default;
+$link__transition: $transition-base !default;
+$link__color--invert: $gray-darker !default;
+$link__color-hover--invert: $blue !default;
 
 .link {
-    color: $link__color;
+  color: $link__color;
   text-decoration: $link__decoration;
   transition: $link__transition;
   font-family: $link__font-family;
   font-weight: $link__font-weight;
   line-height: $link__line-height;
-    text-decoration: none;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link__color-hover;
+  }
+
+  &--invert {
+    color: $link__color--invert;
 
     &:hover,
     &:focus {
-      color: $link__color-hover;
+      color: $link__color-hover--invert;
     }
+  }
 
-    &--invert {
-      color: $link__color--invert;
+  &--secondary {
+    color: $gray-lighter;
 
-      &:hover,
-      &:focus {
-        color: $link__color-hover--invert;
-      }
+    &:hover,
+    &:focus {
+      color: $color-primary;
     }
+  }
 
-    &--secondary {
-      color: $gray-lighter;
-
-      &:hover,
-      &:focus {
-        color: $color-primary;
-      }
-    }
-
-    &--visually-hidden {
-      @include visually-hidden($usePseudo: true);
+  &--visually-hidden {
+    @include visually-hidden($usePseudo: true);
   }
 }
 

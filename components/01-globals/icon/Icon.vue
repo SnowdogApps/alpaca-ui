@@ -31,12 +31,12 @@ export default {
 
 <style lang="scss">
 $icon__size: 24px !default;
-  $icon__padding: 2px !default;
+$icon__padding: 2px !default;
 
-  .icon {
-    display: block;
-    width: $icon__size;
-    height: $icon__size;
-    padding: $icon__padding;
+.icon {
+  display: block;
+  width: $icon__size;
+  height: $icon__size;
+  padding: $icon__padding;
 }
 </style>

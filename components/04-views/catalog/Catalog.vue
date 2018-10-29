@@ -46,55 +46,55 @@ export default {
 </script>
 
 <style lang="scss">
-  $catalog__margin: $spacer--medium 0 0 0 !default;
-  $catalog__sidebar-width\@medium: 306px !default;
-  $catalog__sidebar-margin\@medium: 0 $spacer--medium 0 0 !default;
-  $catalog__sidebar-border: 1px solid $gray-lighter !default;
-  $catalog__products-padding: 0 0 $spacer--large 0 !default;
-  $catalog-grid__gap: $spacer--medium !default;
-  $catalog-gird__margin: 0 !default;
-  $catalog-grid__padding: $spacer--medium 0 $spacer--large 0 !default;
-  $catalog-grid__border: 1px solid $gray-light !default;
+$catalog__margin: $spacer--medium 0 0 0 !default;
+$catalog__sidebar-width--mq-medium: 306px !default;
+$catalog__sidebar-margin--mq-medium: 0 $spacer--medium 0 0 !default;
+$catalog__sidebar-border: 1px solid $gray-lighter !default;
+$catalog__products-padding: 0 0 $spacer--large 0 !default;
+$catalog-grid__gap: $spacer--medium !default;
+$catalog-gird__margin: 0 !default;
+$catalog-grid__padding: $spacer--medium 0 $spacer--large 0 !default;
+$catalog-grid__border: 1px solid $gray-light !default;
 
-  .catalog {
-    display: flex;
-    flex-direction: column;
-    margin: $catalog__margin;
+.catalog {
+  display: flex;
+  flex-direction: column;
+  margin: $catalog__margin;
   @include mq($screen-l) {
-      flex-direction: row;
+    flex-direction: row;
+  }
+
+  &__sidebar {
+    border-bottom: $catalog__sidebar-border;
+    @include mq($screen-l) {
+      flex: 1 $catalog__sidebar-width--mq-medium;
+      justify-content: space-between;
+      margin: $catalog__sidebar-margin--mq-medium;
+      border-bottom: none;
+    }
+  }
+
+  &__products {
+    padding: $catalog__products-padding;
+    @include mq($screen-l) {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: calc(100% - #{$catalog__sidebar-width--mq-medium});
     }
 
-    &__sidebar {
-      border-bottom: $catalog__sidebar-border;
-      @include mq($screen-l){
-        flex: 1 $catalog__sidebar-width--mq-medium;
-        justify-content: space-between;
-        margin:  $catalog__sidebar-margin--mq-medium;
-        border-bottom: none;
-      }
-    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $catalog-grid__gap;
+      margin: $catalog-gird__margin;
+      padding: $catalog-grid__padding;
+      border-bottom: $catalog-grid__border;
+      list-style: none;
 
-    &__products {
-      padding: $catalog__products-padding;
-      @include mq($screen-l){
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: calc(100% - #{$catalog__sidebar-width--mq-medium});
-      }
-
-      .catalog-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: $catalog-grid__gap;
-        margin: $catalog-gird__margin;
-        padding: $catalog-grid__padding;
-        border-bottom: $catalog-grid__border;
-        list-style: none;
-
-        @include mq($screen-m) {
-          grid-template-columns: 1fr 1fr 1fr;
-        }
+      @include mq($screen-m) {
+        grid-template-columns: 1fr 1fr 1fr;
       }
     }
   }
+}
 </style>

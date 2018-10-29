@@ -7,10 +7,10 @@
 </template>
 
 <script>
-  export default {
-    props: {
+export default {
+  props: {
     width: {
-  type: Number | Boolean,
+      type: Number | Boolean,
       default: false
     }
   }
@@ -20,111 +20,111 @@
 <style lang="scss">
 $grid__gutter: 16px !default;
 
-  .grid__column {
-    flex: 1 0 100%;
-    @if ($grid__gutter > 0) {
-      padding-left: ($grid__gutter / 2);
-      padding-right: ($grid__gutter / 2);
-    }
+.grid__column {
+  flex: 1 0 100%;
+  @if ($grid__gutter > 0) {
+    padding-left: ($grid__gutter / 2);
+    padding-right: ($grid__gutter / 2);
+  }
 
-    // 2 cols
-    &--1-2 {
+  // 2 cols
+  &--1-2 {
     @include mq($screen-s) {
-        @include grid-column-width(1, 2);
-      }
+      @include grid-column-width(1, 2);
     }
+  }
 
-    // 3 cols
-    &--1-3 {
+  // 3 cols
+  &--1-3 {
     @include mq($screen-s) {
-        @include grid-column-width(1, 2);
-      }
-      @include mq($screen-m) {
-        @include grid-column-width(1, 3);
-      }
+      @include grid-column-width(1, 2);
     }
-
-    &--2-3 {
     @include mq($screen-m) {
-        @include grid-column-width(2, 3);
-      }
+      @include grid-column-width(1, 3);
     }
+  }
 
-    // 4 cols
+  &--2-3 {
+    @include mq($screen-m) {
+      @include grid-column-width(2, 3);
+    }
+  }
+
+  // 4 cols
   &--1-4 {
     @include mq($screen-m) {
-        @include grid-column-width(1, 4);
-      }
+      @include grid-column-width(1, 4);
     }
+  }
 
-    &--2-4 {
-      @include mq($screen-m) {
-        @include grid-column-width(2, 4);
-      }
-    }
-
-    &--3-4 {
+  &--2-4 {
     @include mq($screen-m) {
-        @include grid-column-width(3, 4);
-      }
+      @include grid-column-width(2, 4);
     }
+  }
 
-    // 5 cols
+  &--3-4 {
+    @include mq($screen-m) {
+      @include grid-column-width(3, 4);
+    }
+  }
+
+  // 5 cols
   &--1-5 {
     @include mq($screen-m) {
-        @include grid-column-width(1, 5);
-      }
+      @include grid-column-width(1, 5);
     }
+  }
 
-    &--2-5 {
-      @include mq($screen-m) {
-        @include grid-column-width(2, 5);
-      }
-    }
-
-    &--3-5 {
+  &--2-5 {
     @include mq($screen-m) {
-        @include grid-column-width(3, 5);
-      }
+      @include grid-column-width(2, 5);
     }
+  }
 
-    &--4-5 {
+  &--3-5 {
     @include mq($screen-m) {
-        @include grid-column-width(4, 5);
-      }
+      @include grid-column-width(3, 5);
     }
+  }
 
-    // 6 cols
-    &--1-6 {
+  &--4-5 {
+    @include mq($screen-m) {
+      @include grid-column-width(4, 5);
+    }
+  }
+
+  // 6 cols
+  &--1-6 {
     @include mq($screen-s) {
-        @include grid-column-width(2, 6);
-      }
-      @include mq($screen-m) {
-        @include grid-column-width(1, 6);
-      }
+      @include grid-column-width(2, 6);
     }
+    @include mq($screen-m) {
+      @include grid-column-width(1, 6);
+    }
+  }
 
-    &--2-6 {
+  &--2-6 {
     @include mq($screen-s) {
-        @include grid-column-width(2, 6);
-      }
+      @include grid-column-width(2, 6);
     }
+  }
 
-    &--3-6 {
+  &--3-6 {
     @include mq($screen-s) {
-        @include grid-column-width(3, 6);
-      }
+      @include grid-column-width(3, 6);
     }
+  }
 
-    &--4-6 {
+  &--4-6 {
     @include mq($screen-s) {
-        @include grid-column-width(4, 6);
-      }
+      @include grid-column-width(4, 6);
     }
+  }
 
-    &--5-6 {
-      @include mq($screen-m) {
-        @include grid-column-width(5, 6);
+  &--5-6 {
+    @include mq($screen-m) {
+      @include grid-column-width(5, 6);
     }
   }
 }

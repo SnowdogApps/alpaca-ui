@@ -11,30 +11,30 @@ export default {}
 
 <style lang="scss">
 $divider__color--left: $color-primary !default;
-  $divider__color--right: $gray-lighter !default;
-  $divider__size: 8px !default;
+$divider__color--right: $gray-lighter !default;
+$divider__size: 8px !default;
 
-  .divider {
-    display: none;
+.divider {
+  display: none;
 
-    @include mq($screen-m) {
-      display: flex;
-    }
-
-    &__left,
-    &__right {
-      border-top: $divider__size solid;
-      flex: 1;
-    }
-
-    &__left {
-      border-color: $divider__color--left;
-      flex-grow: 1;
-    }
-
-    &__right {
-      border-color: $divider__color--right;
-      flex-grow: 2;
-    }
+  @include mq($screen-m) {
+    display: flex;
   }
+
+  &__left,
+  &__right {
+    border-top: $divider__size solid;
+    flex: 1;
+  }
+
+  &__left {
+    border-color: $divider__color--left;
+    flex-grow: 1;
+  }
+
+  &__right {
+    border-color: $divider__color--right;
+    flex-grow: 2;
+  }
+}
 </style>

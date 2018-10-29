@@ -43,40 +43,40 @@ export default {
 
 <style lang="scss">
 $filter__spacer: $spacer--medium !default;
-  $filter__name-margin: $spacer--large !default;
-  $filter__label-padding: $spacer--large !default;
-  $filter__icon-border: 2px solid $gray !default;
-  $filter__icon-border-radius: 2px !default;
+$filter__name-margin: $spacer--large !default;
+$filter__label-padding: $spacer--large !default;
+$filter__icon-border: 2px solid $gray !default;
+$filter__icon-border-radius: 2px !default;
 
 .filter {
-    &__content {
-      list-style: none;
-      padding: 0;
-      margin: $spacer 0 0 0;
-    }
+  &__content {
+    list-style: none;
+    padding: 0;
+    margin: $spacer 0 0 0;
+  }
 
-    &__item {
-      display: block;
-      color: var(--black);
-      padding: $spacer 0;
-    }
+  &__item {
+    display: block;
+    color: var(--black);
+    padding: $spacer 0;
+  }
 
-    &__label {
-      position: relative;
-      display: block;
-      padding-left: $filter__label-padding;
-      cursor: pointer;
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: $filter__label-padding;
+    cursor: pointer;
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: $filter__spacer;
-        height: $filter__spacer;
-        border: $filter__icon-border;
-        border-radius: $filter__icon-border-radius;
-      }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $filter__spacer;
+      height: $filter__spacer;
+      border: $filter__icon-border;
+      border-radius: $filter__icon-border-radius;
     }
   }
+}
 </style>

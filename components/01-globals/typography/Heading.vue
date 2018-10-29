@@ -36,67 +36,67 @@ export default {
 
 <style lang="scss">
 $headings-margin: 0 0 0.5em 0 !default;
-  $headings-margin--page: $spacer--medium 0 !default;
-  $headings-font-family: $font-family-base !default;
-  $headings-font-weight: 700 !default;
-  $headings-line-height: $font-line-height !default;
-  $headings-color: $color-secondary !default;
-  $headings-text-transform: none !default;
-  $headings-text-transform--page: uppercase !default;
-  $heading-font-size--page: 24px !default;
-  $heading-font-size--first-level: 18px !default;
-  $heading-font-size--second-level: 18px !default;
-  $heading-font-size--third-level: 14px !default;
-  $heading-font-size--fourth-level: 14px !default;
-  $heading-font-size--fifth-level: 12px !default;
-  $heading-font-size--sixth-level: 12px !default;
+$headings-margin--page: $spacer--medium 0 !default;
+$headings-font-family: $font-family-base !default;
+$headings-font-weight: 700 !default;
+$headings-line-height: $font-line-height !default;
+$headings-color: $color-secondary !default;
+$headings-text-transform: none !default;
+$headings-text-transform--page: uppercase !default;
+$heading-font-size--page: 24px !default;
+$heading-font-size--first-level: 18px !default;
+$heading-font-size--second-level: 18px !default;
+$heading-font-size--third-level: 14px !default;
+$heading-font-size--fourth-level: 14px !default;
+$heading-font-size--fifth-level: 12px !default;
+$heading-font-size--sixth-level: 12px !default;
 
-  .heading {
-    margin: $headings-margin;
-    font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
-    line-height: $headings-line-height;
-    color: $headings-color;
-    text-transform: $headings-text-transform;
+.heading {
+  margin: $headings-margin;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  text-transform: $headings-text-transform;
 
   &--first-level {
-      font-size: $heading-font-size--first-level;
+    font-size: $heading-font-size--first-level;
   }
 
-    &--second-level{
-      font-size: $heading-font-size--second-level;
-    }
+  &--second-level {
+    font-size: $heading-font-size--second-level;
+  }
 
-    &--third-level {
-      font-size: $heading-font-size--third-level;
-    }
+  &--third-level {
+    font-size: $heading-font-size--third-level;
+  }
 
-    &--fourth-level{
-      font-size: $heading-font-size--fourth-level;
-    }
+  &--fourth-level {
+    font-size: $heading-font-size--fourth-level;
+  }
 
-    &--fifth-level {
-      font-size: $heading-font-size--fifth-level;
-    }
+  &--fifth-level {
+    font-size: $heading-font-size--fifth-level;
+  }
 
-    &--sixth-level {
-      font-size: $heading-font-size--sixth-level;
-    }
+  &--sixth-level {
+    font-size: $heading-font-size--sixth-level;
+  }
 
-    &--page {
-      margin: $headings-margin--page;
-      font-size: $heading-font-size--page;
-      text-transform: $headings-text-transform--page;
-    }
+  &--page {
+    margin: $headings-margin--page;
+    font-size: $heading-font-size--page;
+    text-transform: $headings-text-transform--page;
+  }
 }
 
 h1,
 h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @extend .heading;
+h3,
+h4,
+h5,
+h6 {
+  @extend .heading;
 }
 
 h1 {
@@ -121,5 +121,5 @@ h5 {
 
 h6 {
   @extend .heading--sixth-level;
-  }
+}
 </style>
