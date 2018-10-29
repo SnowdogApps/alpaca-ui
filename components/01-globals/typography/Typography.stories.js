@@ -5,6 +5,8 @@ import AlpacaHeading from './Heading.vue'
 import AlpacaLabel from './Label.vue'
 import AlpacaLink from './Link.vue'
 import AlpacaParagraph from './Paragraph.vue'
+import AlpacaBlockquote from './Blockquote.vue'
+import AlpacaPreformatted from './Preformatted.vue'
 
 storiesOf('Global/Typography', module)
   .add('Heading', () => ({
@@ -35,7 +37,6 @@ storiesOf('Global/Typography', module)
         <alpaca-link href="http://google.com/">Test</alpaca-link>
         <alpaca-link href="http://google.com/" :invert="true">Test</alpaca-link>
         <alpaca-link href="http://google.com/" :secondary="true">Test</alpaca-link>
-        <alpaca-link tag="span">Test</alpaca-link>
       </app>
     `,
   }))
@@ -45,6 +46,24 @@ storiesOf('Global/Typography', module)
       <app>
         <alpaca-paragraph>Test</alpaca-paragraph>
         <alpaca-paragraph tag="div">Test</alpaca-paragraph>
+      </app>
+    `,
+  }))
+  .add('Blockquote', () => ({
+    components: { App, AlpacaBlockquote },
+    template: `
+      <app>
+        <alpaca-blockquote>Test</alpaca-blockquote>
+        <alpaca-blockquote href="http://google.com/" name="Test" >Test</alpaca-blockquote>
+      </app>
+    `,
+  }))
+  .add('Preformatted', () => ({
+    components: { App, AlpacaPreformatted },
+    template: `
+      <app>
+        <alpaca-preformatted>Test</alpaca-preformatted>
+        <alpaca-preformatted tag="div">Test</alpaca-preformatted>
       </app>
     `,
   }))
