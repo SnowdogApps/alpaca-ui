@@ -1,16 +1,16 @@
 <template>
   <div class="divider">
-    <span class="divider__left"></span>
-    <span class="divider__right"></span>
+    <span class="divider__left"/>
+    <span class="divider__right"/>
   </div>
 </template>
 
 <script>
-  export default {}
+export default {}
 </script>
 
 <style lang="scss">
-  $divider__color--left: $color-primary !default;
+$divider__color--left: $color-primary !default;
   $divider__color--right: $gray-lighter !default;
   $divider__size: 8px !default;
 

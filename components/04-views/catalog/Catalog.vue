@@ -26,23 +26,23 @@
 </template>
 
 <script>
-  import Container from '../../01-globals/container/Container.vue'
-  import CatalogFilter from '../../03-modules/filter/Filter.vue'
-  import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import Container from '../../01-globals/container/Container.vue'
+import CatalogFilter from '../../03-modules/filter/Filter.vue'
+import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
-  export default {
-    props: ['products', 'storeConfig', 'filters'],
-    components: {
-      Container,
-      CatalogFilter,
-      CatalogGridItem
-    },
-    methods: {
-      productImageUrl(image) {
-        return this.storeConfig.base_media_url + 'catalog/product' + image
-      }
+export default {
+  components: {
+    Container,
+    CatalogFilter,
+    CatalogGridItem
+  },
+  props: ['products', 'storeConfig', 'filters'],
+  methods: {
+    productImageUrl(image) {
+      return this.storeConfig.base_media_url + 'catalog/product' + image
     }
   }
+}
 </script>
 
 <style lang="scss">
@@ -60,16 +60,16 @@
     display: flex;
     flex-direction: column;
     margin: $catalog__margin;
-    @include mq($screen-l) {
+  @include mq($screen-l) {
       flex-direction: row;
     }
 
     &__sidebar {
       border-bottom: $catalog__sidebar-border;
       @include mq($screen-l){
-        flex: 1 $catalog__sidebar-width\@medium;
+        flex: 1 $catalog__sidebar-width--mq-medium;
         justify-content: space-between;
-        margin:  $catalog__sidebar-margin\@medium;
+        margin:  $catalog__sidebar-margin--mq-medium;
         border-bottom: none;
       }
     }
@@ -79,7 +79,7 @@
       @include mq($screen-l){
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: calc(100% - #{$catalog__sidebar-width\@medium});
+        flex-basis: calc(100% - #{$catalog__sidebar-width--mq-medium});
       }
 
       .catalog-grid {

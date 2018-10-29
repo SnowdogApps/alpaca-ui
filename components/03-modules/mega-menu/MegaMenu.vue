@@ -17,13 +17,13 @@
 </template>
 
 <script>
-  export default {
-    props: ['menu']
-  }
+export default {
+  props: ['menu']
+}
 </script>
 
 <style lang="scss">
-  $mega-menu__margin: 0 !default;
+$mega-menu__margin: 0 !default;
   $mega-menu__border-bottom: 1px solid $gray-light !default;
   $mega-menu__font-color: $gray-darker !default;
   $mega-menu__font-weight: $font-weight-bold !default;
@@ -39,13 +39,13 @@
   $mega-menu__link-color--active: $color-primary !default;
   $mega-menu__link-text-decoration: none !default;
 
-  .mega-menu {
-    display: none;
-    background: $mega-menu__background-color;
-    color: $mega-menu__font-color;
-    position: relative;
-    margin: $mega-menu__margin;
-    border-bottom: $mega-menu__border-bottom;
+.mega-menu {
+  display: none;
+  background: $mega-menu__background-color;
+  color: $mega-menu__font-color;
+  position: relative;
+  margin: $mega-menu__margin;
+  border-bottom: $mega-menu__border-bottom;
     @include mq($screen-xl) {
       display: block;
     }

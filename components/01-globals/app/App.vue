@@ -7,12 +7,12 @@
 <script>
   import 'normalize.css'
 
-  export default {}
+export default {}
 </script>
 
 <style lang="scss">
-  /* Not the prettiest way, but I need it to work now */
-  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext");
+/* Not the prettiest way, but I need it to work now */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext');
 
   *:focus {
     outline: 0;
@@ -32,7 +32,7 @@
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     color: $font-color-base;
-  }
+}
 
   body {
     display: flex;

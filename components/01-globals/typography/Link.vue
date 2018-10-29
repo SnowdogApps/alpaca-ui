@@ -14,13 +14,13 @@
 </template>
 
 <script>
-  export default {
-    props: ['href', 'invert', 'secondary', 'customClass']
-  }
+export default {
+  props: ['href', 'invert', 'secondary', 'customClass']
+}
 </script>
 
 <style lang="scss">
-  $link__color: $blue !default;
+$link__color: $blue !default;
   $link__decoration: underline !default;
   $link__font-family: $font-family-base !default;
   $link__font-weight: $font-weight-normal !default;
@@ -30,13 +30,13 @@
   $link__color--invert: $gray-darker !default;
   $link__color-hover--invert: $blue !default;
 
-  .link {
+.link {
     color: $link__color;
-    text-decoration: $link__decoration;
-    transition: $link__transition;
-    font-family: $link__font-family;
-    font-weight: $link__font-weight;
-    line-height: $link__line-height;
+  text-decoration: $link__decoration;
+  transition: $link__transition;
+  font-family: $link__font-family;
+  font-weight: $link__font-weight;
+  line-height: $link__line-height;
     text-decoration: none;
 
     &:hover,
@@ -64,11 +64,10 @@
 
     &--visually-hidden {
       @include visually-hidden($usePseudo: true);
-    }
   }
+}
 
-  a {
-    @extend .link;
-  }
-
+a {
+  @extend .link;
+}
 </style>

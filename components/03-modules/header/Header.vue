@@ -29,7 +29,7 @@
                 </span>
 
                 <span class="header-button__counter">
-                  <span class="header-button__counter-dot"></span>
+                  <span class="header-button__counter-dot"/>
                 </span>
               </button>
             </div>
@@ -51,31 +51,31 @@
 </template>
 
 <script>
-  import menu from '../../../data/menu.json'
+import menu from '../../../data/menu.json'
 
-  import Container from '../../01-globals/container/Container.vue'
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-  import Logo from '../../02-elements/logo/Logo.vue'
-  import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
+import Container from '../../01-globals/container/Container.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import Logo from '../../02-elements/logo/Logo.vue'
+import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
 
-  import HeaderButton from './HeaderButton.vue'
-  import HeaderSearch from './HeaderSearch.vue'
+import HeaderButton from './HeaderButton.vue'
+import HeaderSearch from './HeaderSearch.vue'
 
-  export default {
-    components: {
-      Container,
-      AlpacaIcon,
-      Logo,
-      MegaMenu,
-      HeaderButton,
-      HeaderSearch
-    },
-    data() {
-      return {
-        menu: menu
-      }
-    },
+export default {
+  components: {
+    Container,
+    AlpacaIcon,
+    Logo,
+    MegaMenu,
+    HeaderButton,
+    HeaderSearch
+  },
+  data() {
+    return {
+      menu: menu
+    }
   }
+}
 </script>
 
 <style lang="scss">
@@ -91,9 +91,9 @@
   $header__search-wrapper-padding: 0 0 0 24px !default;
   $header__search-wrapper-padding\@medium : 0 24px !default;
 
-  .header {
-    position: relative;
-    border-bottom: 1px solid $header__border-color;
+.header {
+  position: relative;
+  border-bottom: 1px solid $header__border-color;
     @include mq($screen-l) {
       border-bottom: none;
     }
@@ -118,7 +118,7 @@
       padding: $header__logo-padding;
       border-top: 1px solid $header__border-color;
       @include mq($screen-m) {
-        padding: $header__logo-padding\@medium;
+        padding: $header__logo-padding--mq-medium;
         border-top: none;
       }
     }
@@ -135,7 +135,7 @@
         order: 3;
         flex-direction: column;
         justify-content: center;
-        padding: $header__search-wrapper-padding\@medium;
+        padding: $header__search-wrapper-padding--mq-medium;
         border-top: none;
       }
     }
@@ -162,13 +162,13 @@
       justify-content: flex-end;
       @include mq($screen-m) {
         order: 4;
-        flex: 1 $header__buttons-width\@medium;
-        max-width: $header__buttons-width\@medium;
+        flex: 1 $header__buttons-width--mq-medium;
+        max-width: $header__buttons-width--mq-medium;
       }
 
       @include mq($screen-xl) {
-        flex: 1 $header__buttons-width\@extra-large;
-        max-width: $header__buttons-width\@extra-large;
+        flex: 1 $header__buttons-width--mq-extra-large;
+        max-width: $header__buttons-width--mq-extra-large;
       }
     }
   }

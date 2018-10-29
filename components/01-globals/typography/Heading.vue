@@ -1,33 +1,41 @@
 <script>
-  export default {
-    props: ['level', 'tag', 'page'],
-    computed: {
-      levelClassName() {
-        switch(this.level) {
-          case '1': return 'first'
-          case '2': return 'second'
-          case '3': return 'third'
-          case '4': return 'fourth'
-          case '5': return 'fifth'
-          case '6': return 'sixth'
-        }
+export default {
+  props: ['level', 'tag', 'page'],
+  computed: {
+    levelClassName() {
+      switch (this.level) {
+        case '1':
+          return 'first'
+        case '2':
+          return 'second'
+        case '3':
+          return 'third'
+        case '4':
+          return 'fourth'
+        case '5':
+          return 'fifth'
+        case '6':
+          return 'sixth'
       }
-    },
-    render: function (createElement) {
-      return createElement(
-        this.tag ? this.tag : 'h' + this.level, {
-          class: [
-            this.tag ? `heading heading--${this.levelClassName}-level` : '',
-            this.page ? 'heading--page' : ''
-          ]
-        }, this.$slots.default
-      )
     }
+  },
+  render: function(createElement) {
+    return createElement(
+      this.tag ? this.tag : 'h' + this.level,
+      {
+        class: [
+          this.tag ? `heading heading--${this.levelClassName}-level` : '',
+          this.page ? 'heading--page' : ''
+        ]
+      },
+      this.$slots.default
+    )
   }
+}
 </script>
 
 <style lang="scss">
-  $headings-margin: 0 0 0.5em 0 !default;
+$headings-margin: 0 0 0.5em 0 !default;
   $headings-margin--page: $spacer--medium 0 !default;
   $headings-font-family: $font-family-base !default;
   $headings-font-weight: 700 !default;
@@ -51,11 +59,11 @@
     color: $headings-color;
     text-transform: $headings-text-transform;
 
-    &--first-level {
+  &--first-level {
       font-size: $heading-font-size--first-level;
-    }
+  }
 
-    &--second-level {
+    &--second-level{
       font-size: $heading-font-size--second-level;
     }
 
@@ -63,7 +71,7 @@
       font-size: $heading-font-size--third-level;
     }
 
-    &--fourth-level {
+    &--fourth-level{
       font-size: $heading-font-size--fourth-level;
     }
 
@@ -80,39 +88,38 @@
       font-size: $heading-font-size--page;
       text-transform: $headings-text-transform--page;
     }
-  }
+}
 
-  h1,
-  h2,
+h1,
+h2,
   h3,
   h4,
   h5,
   h6 {
     @extend .heading;
-  }
+}
 
-  h1 {
-    @extend .heading--first-level;
-  }
+h1 {
+  @extend .heading--first-level;
+}
 
-  h2 {
-    @extend .heading--second-level;
-  }
+h2 {
+  @extend .heading--second-level;
+}
 
-  h3 {
-    @extend .heading--third-level;
-  }
+h3 {
+  @extend .heading--third-level;
+}
 
-  h4 {
-    @extend .heading--fourth-level;
-  }
+h4 {
+  @extend .heading--fourth-level;
+}
 
-  h5 {
-    @extend .heading--fifth-level;
-  }
+h5 {
+  @extend .heading--fifth-level;
+}
 
-  h6 {
-    @extend .heading--sixth-level;
+h6 {
+  @extend .heading--sixth-level;
   }
-
 </style>

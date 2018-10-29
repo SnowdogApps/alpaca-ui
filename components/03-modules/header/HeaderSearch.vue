@@ -2,30 +2,32 @@
   <form class="search-form">
     <alpaca-input
       id="header-search"
-      type="search"
       :hidden-label="true"
+      type="search"
       label="Search entire store here..."
       placeholder="Search entire store here..."
-      inputClass="search-form__input"
+      input-class="search-form__input"
     />
-    <alpaca-button icon="search" custom-class="search-form__button" />
+    <alpaca-button
+      icon="search"
+      custom-class="search-form__button" />
   </form>
 </template>
 
 <script>
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
+import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaInput from '../../02-elements/form/input/Input.vue'
 
-  export default {
-    components: {
-      AlpacaButton,
-      AlpacaInput
-    }
+export default {
+  components: {
+    AlpacaButton,
+    AlpacaInput
   }
+}
 </script>
 
 <style lang="scss">
-  $search-form__height: 34px !default;
+$search-form__height: 34px !default;
   $search-form__width: 100% !default;
   $search-form__width--extra-large: 70% !default;
   $search-form__alignment: flex-end !default;
@@ -40,13 +42,13 @@
   $search-form__button-icon-color: $gray-dark !default;
   $search-form__placeholder-color: $gray !default;
 
-  .search-form {
-    width: $search-form__width;
-    height: $search-form__height;
-    align-self: $search-form__alignment;
-    margin: $search-form__margin;
-    border: 1px solid $search-form__border-color;
-    border-radius: $search-form__height;
+.search-form {
+  width: $search-form__width;
+  height: $search-form__height;
+  align-self: $search-form__alignment;
+  margin: $search-form__margin;
+  border: 1px solid $search-form__border-color;
+  border-radius: $search-form__height;
     z-index: 1;
     @include mq($screen-m) {
       position: relative;
@@ -91,6 +93,6 @@
       width: $search-form__button-size;
       height: $search-form__button-size;
       fill: $search-form__button-icon-color;
-    }
   }
+}
 </style>

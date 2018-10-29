@@ -1,35 +1,39 @@
 <script>
-  import Icon from '../../01-globals/icon/Icon.vue'
+import Icon from '../../01-globals/icon/Icon.vue'
 
-  export default {
-    props: ['tag', 'customClass', 'icon', 'secondary', 'link', 'fluid'],
-    render: function(h) {
-      return h(
-        this.tag ? this.tag : 'button', {
-          class: [
-            'button',
-            this.customClass ? this.customClass : '',
-            this.icon ? 'button--icon' : '',
-            this.secondary ? 'button--secondary' : '',
-            this.link ? 'button--link' : '',
-            this.fluid ? 'button--fluid' : '',
-          ]
-        }, [
-          this.$slots.default,
-          this.icon ? h(Icon, {
-            props: {
-              icon: this.icon,
-              customClass: 'button__icon'
-            }
-          }) : ''
+export default {
+  props: ['tag', 'customClass', 'icon', 'secondary', 'link', 'fluid'],
+  render: function(h) {
+    return h(
+      this.tag ? this.tag : 'button',
+      {
+        class: [
+          'button',
+          this.customClass ? this.customClass : '',
+          this.icon ? 'button--icon' : '',
+          this.secondary ? 'button--secondary' : '',
+          this.link ? 'button--link' : '',
+          this.fluid ? 'button--fluid' : ''
         ]
-      )
-    }
+      },
+      [
+        this.$slots.default,
+        this.icon
+          ? h(Icon, {
+              props: {
+                icon: this.icon,
+                customClass: 'button__icon'
+              }
+            })
+          : ''
+      ]
+    )
   }
+}
 </script>
 
 <style lang="scss">
-  $button__height: 48px !default;
+$button__height: 48px !default;
   $button__width: 48px !default;
   $button__padding: 0 $spacer--medium !default;
   $button__border: none !default;
@@ -57,7 +61,8 @@
   $button__padding--icon: 0 !default;
   $button__size--icon: 20px !default;
   $button__border-width--icon: 3px !default;
-  $button__border--icon: $button__border-width--icon solid $color-primary !default;
+  $button__border--icon: $button__border-width--icon solid
+    $color-primary !default;
   $button__border-hover--icon: $gray-dark !default;
   $button__fill--icon: $white !default;
   $button__fill-hover--icon: $color-primary !default;
@@ -67,22 +72,22 @@
   //fluid
   $button__width--fluid: 100% !default;
 
-  .button {
-    display: inline-flex;
-    justify-content: center;
-    cursor: pointer;
-    height: $button__height;
-    min-width: $button__width;
-    padding: $button__padding;
-    border: $button__border;
-    border-radius: $button__border-radius;
-    outline: $button__outline;
-    background: $button__background;
-    font-family: $button__font-family;
-    font-size: $button__font-size;
-    color: $button__font-color;
-    transition: $button__transition;
-    font-weight: $button__font-weight;
+.button {
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  height: $button__height;
+  min-width: $button__width;
+  padding: $button__padding;
+  border: $button__border;
+  border-radius: $button__border-radius;
+  outline: $button__outline;
+  background: $button__background;
+  font-family: $button__font-family;
+  font-size: $button__font-size;
+  color: $button__font-color;
+  transition: $button__transition;
+  font-weight: $button__font-weight;
 
     &:hover,
     &:focus {

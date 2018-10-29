@@ -4,7 +4,7 @@
       :for="id"
       :hidden="hiddenLabel"
       :inline="inlineLabel"
-      :customClass="labelClass"
+      :custom-class="labelClass"
     >
       {{ label }}
     </alpaca-label>
@@ -20,28 +20,28 @@
 </template>
 
 <script>
-  import AlpacaLabel from '../../../01-globals/typography/Label.vue'
+import AlpacaLabel from '../../../01-globals/typography/Label.vue'
 
-  export default {
-    props: [
-      'label',
-      'hiddenLabel',
-      'inlineLabel',
-      'id',
-      'name',
-      'type',
-      'placeholder',
-      'labelClass',
-      'inputClass'
-    ],
-    components: {
-      AlpacaLabel
-    }
-  }
+export default {
+  components: {
+    AlpacaLabel
+  },
+  props: [
+    'label',
+    'hiddenLabel',
+    'inlineLabel',
+    'id',
+    'name',
+    'type',
+    'placeholder',
+    'labelClass',
+    'inputClass'
+  ]
+}
 </script>
 
 <style lang="scss">
-  $input__field-padding: 0 $spacer--medium !default;
+$input__field-padding: 0 $spacer--medium !default;
   $input__field-padding--textarea: $spacer--medium !default;
   $input__field-spacing: 40px !default;
   $input__field-border: 1px solid $form-elements-border-color !default;
@@ -53,8 +53,8 @@
   $input__label-margin-right: $spacer--medium !default;
   $input__min-height--textarea: 100px !default;
 
-  .input {
-    margin-bottom: $input__margin-bottom;
+.input {
+  margin-bottom: $input__margin-bottom;
 
     &--inline {
       display: flex;
@@ -73,7 +73,7 @@
       border: $input__field-border;
       border-radius: $input__field-border-radius;
 
-      &[type="search"] {
+      &[type='search'] {
         -webkit-appearance: textfield;
 
         &::-webkit-search-decoration,

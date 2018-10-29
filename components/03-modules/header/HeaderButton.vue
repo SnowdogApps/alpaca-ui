@@ -12,16 +12,16 @@
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
-  export default {
-    props: ['icon'],
-    components: { AlpacaIcon }
-  }
+export default {
+  components: {AlpacaIcon},
+  props: ['icon']
+}
 </script>
 
 <style lang="scss">
-  $header-button__size: 48px !default;
+$header-button__size: 48px !default;
   $header-button__margin: 0 0 0 $spacer !default;
   $header-button__margin--extra-large : 0 0 0 $spacer--medium !default;
   $header-button__padding: 0 !default;
@@ -46,21 +46,21 @@
   $header-button__counter-dot-size: 2px !default;
   $header-button__counter-dot-bg-color: $white !default;
 
-  .header-button {
-    position: relative;
-    height: $header-button__size;
-    min-width: $header-button__size;
-    display: flex;
-    margin: $header-button__margin;
-    padding: $header-button__padding;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #fff;
-    font-family: $header-button__text-font-family;
+.header-button {
+  position: relative;
+  height: $header-button__size;
+  min-width: $header-button__size;
+  display: flex;
+  margin: $header-button__margin;
+  padding: $header-button__padding;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fff;
+  font-family: $header-button__text-font-family;
     @include mq($screen-xl) {
       margin: $header-button__margin--extra-large;
     }

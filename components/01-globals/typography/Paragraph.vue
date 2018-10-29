@@ -1,20 +1,22 @@
 <script>
-  export default {
-    props: ['tag'],
-    render: function (createElement) {
-      return createElement(
-        this.tag || 'p', {
-          class: {
-            'paragraph': this.tag
-          }
-        }, this.$slots.default
-      )
-    }
+export default {
+  props: ['tag'],
+  render: function(createElement) {
+    return createElement(
+      this.tag || 'p',
+      {
+        class: {
+          paragraph: this.tag
+        }
+      },
+      this.$slots.default
+    )
   }
+}
 </script>
 
 <style lang="scss">
-  $paragraph-color: $color-secondary !default;
+$paragraph-color: $color-secondary !default;
   $paragraph-font-family: $font-family-base !default;
   $paragraph-font-weight: $font-weight-normal !default;
   $paragraph-line-height: $font-line-height !default;
@@ -22,18 +24,17 @@
   $paragraph-margin: 0 0 $spacer--medium 0 !default;
   $paragraph-transition: none !default;
 
-  .paragraph {
+.paragraph {
     color: $paragraph-color;
-    font-family: $paragraph-font-family;
-    font-weight: $paragraph-font-weight;
-    line-height: $paragraph-line-height;
-    font-size: $paragraph-font-size;
-    margin: $paragraph-margin;
-    transition: $paragraph-transition;
+  font-family: $paragraph-font-family;
+  font-weight: $paragraph-font-weight;
+  line-height: $paragraph-line-height;
+  font-size: $paragraph-font-size;
+  margin: $paragraph-margin;
+  transition: $paragraph-transition;
   }
 
   p {
     @extend .paragraph;
   }
-
 </style>

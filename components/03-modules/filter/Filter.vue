@@ -12,8 +12,8 @@
         :key="item.label"
       >
         <alpaca-link
-          href="#"
           :invert="true"
+          href="#"
           custom-class="filter__item"
         >
           <span
@@ -27,28 +27,28 @@
 </template>
 
 <script>
-  import Heading from '../../01-globals/typography/Heading.vue'
-  import Divider from '../../02-elements/divider/Divider.vue'
-  import AlpacaLink from '../../01-globals/typography/Link.vue'
+import Heading from '../../01-globals/typography/Heading.vue'
+import Divider from '../../02-elements/divider/Divider.vue'
+import AlpacaLink from '../../01-globals/typography/Link.vue'
 
-  export default {
-    props: ['name', 'items'],
-    components: {
-      Divider,
-      Heading,
-      AlpacaLink
-    }
-  }
+export default {
+  components: {
+    Divider,
+    Heading,
+    AlpacaLink
+  },
+  props: ['name', 'items']
+}
 </script>
 
 <style lang="scss">
-  $filter__spacer: $spacer--medium !default;
+$filter__spacer: $spacer--medium !default;
   $filter__name-margin: $spacer--large !default;
   $filter__label-padding: $spacer--large !default;
   $filter__icon-border: 2px solid $gray !default;
   $filter__icon-border-radius: 2px !default;
 
-  .filter {
+.filter {
     &__content {
       list-style: none;
       padding: 0;

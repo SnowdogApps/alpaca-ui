@@ -5,9 +5,9 @@
       class="catalog-grid-item__link"
     >
       <img
-        class="catalog-grid-item__image"
         :src="image"
-      />
+        class="catalog-grid-item__image"
+      >
     </a>
 
     <section class="catalog-grid-item__details">
@@ -46,22 +46,22 @@
 </template>
 
 <script>
-  import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaButton from '../../02-elements/button/Button.vue'
 
-  export default {
-    props: ['image', 'price', 'name', 'specialPrice'],
-    components: {
-      AlpacaButton
-    }
-  }
+export default {
+  components: {
+    AlpacaButton
+  },
+  props: ['image', 'price', 'name', 'specialPrice']
+}
 </script>
 
 <style lang="scss">
-  $catalog-grid-item__base-spacing: $spacer !default;
+$catalog-grid-item__base-spacing: $spacer !default;
   $catalog-grid-item__padding: 0 !default;
   $catalog-grid-item__border: 1px solid $gray-lightest !default;
   $catalog-grid-item__font-size: $font-size-base !default;
-  $catalog-grid-item__font-size\@large: 16px !default;
+  $catalog-grid-item__font-size--mq-large: 16px !default;
   $catalog-grid-item__line-height: 1.5 !default;
   $catalog-grid-item__font-weight: $font-weight-bold !default;
   $catalog-grid-item__badge-top-position: $spacer--medium !default;
@@ -85,9 +85,11 @@
   $catalog-grid-item__content-padding: $spacer !default;
   $catalog-grid-item__content-width: 100% !default;
   $catalog-grid-item__content-height: 67px !default;
-  $catalog-grid-item__content-height\@large: 73px !default;
-  $catalog-grid-item__content-translateY: translateY(-$catalog-grid-item__content-height) !default;
-  $catalog-grid-item__content-translateY\@large: translateY(-$catalog-grid-item__content-height\@large) !default;
+  $catalog-grid-item__content-height--mq-large: 73px !default;
+  $catalog-grid-item__content-translateY: translateY(
+    -$catalog-grid-item__content-height) !default;
+  $catalog-grid-item__content-translateY--mq-large: translateY(
+    -$catalog-grid-item__content-height--mq-large) !default;
   $catalog-grid-item__content-translateY--active: translateY(-100%) !default;
   $catalog-grid-item__name-color: $font-color-base !default;
   $catalog-grid-item__name-font-weight: $font-weight-normal !default;
@@ -107,11 +109,11 @@
   $catalog-grid-item__action-icon-fill: $gray-darker !default;
   $catalog-grid-item__action-icon-fill-hover: $green !default;
 
-  .catalog-grid-item {
-    position: relative;
-    display: block;
-    border: $catalog-grid-item__border;
-    padding: $catalog-grid-item__padding;
+.catalog-grid-item {
+  position: relative;
+  display: block;
+  border: $catalog-grid-item__border;
+  padding: $catalog-grid-item__padding;
     overflow: hidden;
 
     @include mq($screen-m) {
@@ -160,7 +162,7 @@
       }
 
       @media all and (min-width: 768px) and (min-width: 1600px) {
-        padding-bottom: $catalog-grid-item__content-height\@large;
+        padding-bottom: $catalog-grid-item__content-height--mq-large;
       }
     }
 
@@ -209,7 +211,7 @@
       white-space: nowrap;
 
       @include mq($screen-xxl) {
-        font-size: $catalog-grid-item__font-size\@large;
+        font-size: $catalog-grid-item__font-size--mq-large;
       }
     }
 
@@ -226,7 +228,7 @@
       }
 
       @include mq($screen-xxl) {
-        transform: $catalog-grid-item__content-translateY\@large;
+        transform: $catalog-grid-item__content-translateY--mq-large;
       }
     }
 
