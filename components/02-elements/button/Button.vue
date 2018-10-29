@@ -2,7 +2,32 @@
 import Icon from '../../01-globals/icon/Icon.vue'
 
 export default {
-  props: ['tag', 'customClass', 'icon', 'secondary', 'link', 'fluid'],
+  props: {
+    tag: {
+      type: String,
+      default: null
+    },
+    customClass: {
+      type: String | Boolean,
+      default: false
+    },
+    icon: {
+      type: String | Boolean,
+      default: false
+    },
+    secondary: {
+      type: Boolean,
+      default: false
+    },
+    link: {
+      type: Boolean,
+      default: false
+    },
+    fluid: {
+      type: Boolean,
+      default: false
+    }
+  },
   render: function(h) {
     return h(
       this.tag ? this.tag : 'button',

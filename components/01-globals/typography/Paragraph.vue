@@ -1,6 +1,11 @@
 <script>
 export default {
-  props: ['tag'],
+  props: {
+    tag: {
+      type: String,
+      default: null
+    }
+  },
   render: function(createElement) {
     return createElement(
       this.tag || 'p',

@@ -1,6 +1,19 @@
 <script>
 export default {
-  props: ['level', 'tag', 'page'],
+  props: {
+    level: {
+      type: String,
+      required: true
+    },
+    tag: {
+      type: String,
+      default: null
+    },
+    page: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     levelClassName() {
       switch (this.level) {

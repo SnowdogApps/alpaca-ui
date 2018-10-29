@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  props: ['menu']
+  props: {
+    menu: {
+      type: Array,
+      default: () => []
+    }
+  }
 }
 </script>
 

@@ -12,9 +12,5 @@ module.exports = {
   },
   env: {
     node: true
-  },
-  rules: {
-    "vue/require-default-prop": 1,
-    "vue/require-prop-types": 1
   }
 }

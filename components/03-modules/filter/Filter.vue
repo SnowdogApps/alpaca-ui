@@ -37,7 +37,16 @@ export default {
     Heading,
     AlpacaLink
   },
-  props: ['name', 'items']
+  props: {
+    name: {
+      type: String,
+      default: null
+    },
+    items: {
+      type: Array,
+      default: () => []
+    }
+  }
 }
 </script>
 

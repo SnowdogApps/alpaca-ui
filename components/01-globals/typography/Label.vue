@@ -1,6 +1,19 @@
 <script>
 export default {
-  props: ['inline', 'hidden', 'tag'],
+  props: {
+    inline: {
+      type: Boolean,
+      default: false
+    },
+    hidden: {
+      type: Boolean,
+      default: false
+    },
+    tag: {
+      type: String,
+      default: null
+    }
+  },
   render: function(createElement) {
     return createElement(
       this.tag || 'label',
