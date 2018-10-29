@@ -8,7 +8,12 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
       { loader: 'sass-resources-loader',
         options: {
           sourceMap: true,
-          resources: './styles/styles.scss'
+          resources: [
+            './components/01-globals/variables/_variables.scss',
+            './components/01-globals/mixins/_grid-column-width.scss',
+            './components/01-globals/mixins/_mq.scss',
+            './components/01-globals/mixins/_visually-hidden.scss'
+          ]
         }
       }
     ]
