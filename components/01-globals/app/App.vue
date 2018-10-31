@@ -6,7 +6,6 @@
 
 <script>
 import 'normalize.css'
-import '../../../public/styles/variables.css'
 
 export default {}
 </script>
@@ -29,10 +28,10 @@ html,
 body {
   height: 100%;
   min-width: 320px;
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-base);
-  font-size: var(--font-size-base);
-  color: var(--font-color-base);
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  color: $font-color-base;
 }
 
 body {

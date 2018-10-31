@@ -78,121 +78,99 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --header__border-color: var(--gray-light);
-  --header__wrapper-padding: 0;
-  --header__wrapper-padding--mq-medium: 12px 0;
-  --header__logo-padding: 12px 0 12px var(--spacer);
-  --header__logo-padding--mq-medium: 0 0 0 var(--spacer);
-  --header__menu-trigger-size: 48px;
-  --header__buttons-width: calc(100% - 48px);
-  --header__buttons-width--mq-medium: calc(4 * 48px + 3 * var(--spacer));
-  --header__buttons-width--mq-extra-large: calc(
-    4 * 48px + 3 * var(--spacer--medium)
-  );
-  --header__search-wrapper-padding: 0 0 0 24px;
-  --header__search-wrapper-padding--mq-medium: 0 24px;
-}
+$header__border-color: $gray-light !default;
+$header__wrapper-padding: 0 !default;
+$header__wrapper-padding--mq-medium: 12px 0 !default;
+$header__logo-padding: 12px 0 12px $spacer !default;
+$header__logo-padding--mq-medium: 0 0 0 $spacer !default;
+$header__menu-trigger-size: 48px !default;
+$header__buttons-width: calc(100% - 48px) !default;
+$header__buttons-width--mq-medium: calc(4 * 48px + 3 * #{$spacer}) !default;
+$header__buttons-width--mq-extra-large: calc(
+  4 * 48px + 3 * #{$spacer--medium}
+) !default;
+$header__search-wrapper-padding: 0 0 0 24px !default;
+$header__search-wrapper-padding--mq-medium: 0 24px !default;
 
 .header {
   position: relative;
-  border-bottom: 1px solid var(--header__border-color);
-}
-
-@media all and (min-width: 992px) {
-  .header {
+  border-bottom: 1px solid $header__border-color;
+  @include mq($screen-l) {
     border-bottom: none;
   }
-}
 
-.header__wrapper {
-  position: relative;
-  justify-content: space-between;
-  display: flex;
-  flex-flow: row wrap;
-  padding: var(--header__wrapper-padding);
-}
+  &__wrapper {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+    padding: $header__wrapper-padding;
+    @include mq($screen-m) {
+      padding: $header__wrapper-padding--mq-medium;
+    }
 
-@media all and (min-width: 768px) {
-  .header__wrapper {
-    padding: var(--header__wrapper-padding--mq-medium);
+    @include mq($screen-l) {
+      border-bottom: 1px solid $header__border-color;
+    }
   }
-}
 
-@media all and (min-width: 992px) {
-  .header__wrapper {
-    border-bottom: 1px solid var(--header__border-color);
-  }
-}
-
-.header__logo {
-  order: 3;
-  padding: var(--header__logo-padding);
-  border-top: 1px solid var(--header__border-color);
-}
-
-@media all and (min-width: 768px) {
-  .header__logo {
-    padding: var(--header__logo-padding--mq-medium);
-    border-top: none;
-  }
-}
-
-.header__search-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  flex: 1 50%;
-  order: 5;
-  justify-content: center;
-  padding: var(--header__search-wrapper-padding);
-  border-top: 1px solid var(--header__border-color);
-}
-
-@media all and (min-width: 768px) {
-  .header__search-wrapper {
+  &__logo {
     order: 3;
-    flex-direction: column;
+    padding: $header__logo-padding;
+    border-top: 1px solid $header__border-color;
+    @include mq($screen-m) {
+      padding: $header__logo-padding--mq-medium;
+      border-top: none;
+    }
+  }
+
+  &__search-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 50%;
+    order: 5;
     justify-content: center;
-    padding: var(--header__search-wrapper-padding--mq-medium);
-    border-top: none;
+    padding: $header__search-wrapper-padding;
+    border-top: 1px solid $header__border-color;
+    @include mq($screen-m) {
+      order: 3;
+      flex-direction: column;
+      justify-content: center;
+      padding: $header__search-wrapper-padding--mq-medium;
+      border-top: none;
+    }
   }
-}
 
-.header__minicart {
-  position: relative;
-}
-
-.header__minicart-content {
-  top: calc(100% - 1px);
-}
-
-.header__minicart-content.popup {
-  position: absolute;
-  right: 0;
-}
-
-.header__buttons {
-  display: flex;
-  order: 2;
-  flex: 1 var(--header__buttons-width);
-  max-width: var(--header__buttons-width);
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-@media all and (min-width: 768px) {
-  .header__buttons {
-    order: 4;
-    flex: 1 var(--header__buttons-width--mq-medium);
-    max-width: var(--header__buttons-width--mq-medium);
+  &__minicart {
+    position: relative;
   }
-}
 
-@media all and (min-width: 1200px) {
-  .header__buttons {
-    flex: 1 var(--header__buttons-width--mq-extra-large);
-    max-width: var(--header__buttons-width--mq-extra-large);
+  &__minicart-content {
+    top: calc(100% - 1px);
+    &.popup {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    order: 2;
+    flex: 1 $header__buttons-width;
+    max-width: $header__buttons-width;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    @include mq($screen-m) {
+      order: 4;
+      flex: 1 $header__buttons-width--mq-medium;
+      max-width: $header__buttons-width--mq-medium;
+    }
+
+    @include mq($screen-xl) {
+      flex: 1 $header__buttons-width--mq-extra-large;
+      max-width: $header__buttons-width--mq-extra-large;
+    }
   }
 }
 </style>

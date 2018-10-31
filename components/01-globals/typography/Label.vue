@@ -18,34 +18,34 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --label-margin: 0 0 var(--spacer);
-  --label-margin--inline: 0 var(--spacer) 0 0;
-  --label-font-size: var(--font-size-base);
-  --label-color: var(--color-secondary);
-  --label-font-family: var(--font-family-base);
-  --label-font-weight: var(--font-weight-normal);
-  --label-line-height: var(--font-line-height);
-  --label-transition: none;
-}
+$label-margin: 0 0 $spacer !default;
+$label-margin--inline: 0 $spacer 0 0 !default;
+$label-font-size: $font-size-base !default;
+$label-color: $color-secondary !default;
+$label-font-family: $font-family-base !default;
+$label-font-weight: $font-weight-normal !default;
+$label-line-height: $font-line-height !default;
+$label-transition: none !default;
 
-label,
 .label {
   display: block;
-  margin: var(--label-margin);
-  font-size: var(--label-font-size);
-  color: var(--label-color);
-  font-family: var(--label-font-family);
-  font-weight: var(--label-font-weight);
-  line-height: var(--label-line-height);
-  transition: var(--label-transition);
+  margin: $label-margin;
+  font-size: $label-font-size;
+  color: $label-color;
+  font-family: $label-font-family;
+  font-weight: $label-font-weight;
+  line-height: $label-line-height;
+  transition: $label-transition;
+  &--inline {
+    margin: $label-margin--inline;
+  }
+
+  &--hidden {
+    @include visually-hidden();
+  }
 }
 
-.label--inline {
-  margin: var(--label-margin--inline);
-}
-
-.label--hidden {
-  display: none;
+label {
+  @extend .label;
 }
 </style>
