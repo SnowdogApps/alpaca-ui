@@ -9,10 +9,10 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
         options: {
           sourceMap: true,
           resources: [
-            './components/01-globals/variables/_variables.scss',
-            './components/01-globals/mixins/_grid-column-width.scss',
-            './components/01-globals/mixins/_mq.scss',
-            './components/01-globals/mixins/_visually-hidden.scss'
+            './assets/styles/_variables.scss',
+            './assets/styles/mixins/_grid-column-width.scss',
+            './assets/styles/mixins/_mq.scss',
+            './assets/styles/mixins/_visually-hidden.scss'
           ]
         }
       }
@@ -37,4 +37,4 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
   })
 
   return defaultConfig
-};
+}
