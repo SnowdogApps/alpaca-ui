@@ -6,36 +6,34 @@
     <img
       class="logo__image"
       src="/icons/alpaca.svg"
-    />
+    >
   </router-link>
 </template>
 
 <script>
-  export default {
-
-  }
+export default {}
 </script>
 
 <style lang="scss">
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 1 84px;
+  justify-content: center;
+  max-width: 84px;
+}
+@media all and (min-width: 768px) {
   .logo {
-    display: flex;
-    align-items: center;
-    flex: 1 84px;
-    justify-content: center;
-    max-width: 84px;
+    flex: 1 112px;
+    max-width: 112px;
   }
-  @media all and (min-width: 768px) {
-    .logo {
-      flex: 1 112px;
-      max-width: 112px;
-    }
-  }
+}
+.logo__image {
+  height: 25px;
+}
+@media all and (min-width: 768px) {
   .logo__image {
-    height: 25px;
+    height: 34px;
   }
-  @media all and (min-width: 768px) {
-    .logo__image {
-      height: 34px;
-    }
-  }
+}
 </style>

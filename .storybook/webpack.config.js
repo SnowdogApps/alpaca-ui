@@ -6,6 +6,24 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
       'css-loader',
       'sass-loader'
     ]
-  });
-  return defaultConfig;
+  })
+
+  defaultConfig.module.rules.push({
+    test: /\.vue$/,
+    enforce: 'pre',
+    loader: 'prettier-loader',
+    options: {
+      parser: 'vue',
+      resolveConfigOptions: {
+        editorconfig: true
+      }
+    }
+  })
+
+  defaultConfig.module.rules.push({
+    test: /\.vue$/,
+    loader: "eslint-loader"
+  })
+
+  return defaultConfig
 };
