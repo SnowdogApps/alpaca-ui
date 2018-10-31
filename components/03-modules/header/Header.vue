@@ -52,30 +52,29 @@
 
 <script>
 import Container from '../../01-globals/container/Container.vue'
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-  import Logo from '../../02-elements/logo/Logo.vue'
-  import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import Logo from '../../02-elements/logo/Logo.vue'
+import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
 
 import HeaderButton from './HeaderButton.vue'
 import HeaderSearch from './HeaderSearch.vue'
 
-  export default {
-    props: {
-      menu: {
-        type: Array,
-        required: true
-      }
-    },
-    components: {
-      Container,
-      AlpacaIcon,
-      Logo,
-      MegaMenu,
-      HeaderButton,
-      HeaderSearch
+export default {
+  components: {
+    Container,
+    AlpacaIcon,
+    Logo,
+    MegaMenu,
+    HeaderButton,
+    HeaderSearch
+  },
+  props: {
+    menu: {
+      type: Array,
+      required: true
     }
   }
-
+}
 </script>
 
 <style lang="scss">
