@@ -46,68 +46,55 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --catalog__margin: var(--spacer--medium) 0 0 0;
-  --catalog__border: 1px solid var(--gray-light);
-  --catalog__sidebar-width--mq-medium: calc(290px + var(--spacer--medium));
-  --catalog__sidebar-margin--mq-medium: 0 var(--spacer--medium) 0 0;
-  --catalog__sidebar-border: 1px solid var(--gray-lighter);
-
-  --catalog-grid__gap: var(--spacer--medium);
-  --catalog-gird__margin: 0;
-  --catalog-grid__padding: var(--spacer--medium) 0 var(--spacer--large) 0;
-  --catalog-grid__border: 1px solid var(--gray-light);
-}
+$catalog__margin: $spacer--medium 0 0 0 !default;
+$catalog__sidebar-width--mq-medium: 306px !default;
+$catalog__sidebar-margin--mq-medium: 0 $spacer--medium 0 0 !default;
+$catalog__sidebar-border: 1px solid $gray-lighter !default;
+$catalog__products-padding: 0 0 $spacer--large 0 !default;
+$catalog-grid__gap: $spacer--medium !default;
+$catalog-gird__margin: 0 !default;
+$catalog-grid__padding: $spacer--medium 0 $spacer--large 0 !default;
+$catalog-grid__border: 1px solid $gray-light !default;
 
 .catalog {
-  margin: var(--spacer--medium) 0 0 0;
   display: flex;
   flex-direction: column;
-}
-
-@media all and (min-width: 992px) {
-  .catalog {
+  margin: $catalog__margin;
+  @include mq($screen-l) {
     flex-direction: row;
   }
-}
 
-.catalog__sidebar {
-  border-bottom: var(--catalog__sidebar-border);
-}
-
-@media all and (min-width: 992px) {
-  .catalog__sidebar {
-    flex: 1 var(--catalog__sidebar-width--mq-medium);
-    justify-content: space-between;
-    margin: var(--catalog__sidebar-margin--mq-medium);
-    border-bottom: none;
+  &__sidebar {
+    border-bottom: $catalog__sidebar-border;
+    @include mq($screen-l) {
+      flex: 1 $catalog__sidebar-width--mq-medium;
+      justify-content: space-between;
+      margin: $catalog__sidebar-margin--mq-medium;
+      border-bottom: none;
+    }
   }
-}
 
-.catalog__products {
-  padding: var(--catalog__products-padding);
-}
+  &__products {
+    padding: $catalog__products-padding;
+    @include mq($screen-l) {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: calc(100% - #{$catalog__sidebar-width--mq-medium});
+    }
 
-@media all and (min-width: 992px) {
-  .catalog__products {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: calc(100% - var(--catalog__sidebar-width--mq-medium));
-  }
-}
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $catalog-grid__gap;
+      margin: $catalog-gird__margin;
+      padding: $catalog-grid__padding;
+      border-bottom: $catalog-grid__border;
+      list-style: none;
 
-.catalog-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: var(--catalog-grid__gap);
-  margin: var(--catalog-gird__margin);
-  padding: var(--catalog-grid__padding);
-  border-bottom: var(--catalog-grid__border);
-  list-style: none;
-}
-@media all and (min-width: 768px) {
-  .catalog-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+      @include mq($screen-m) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
   }
 }
 </style>

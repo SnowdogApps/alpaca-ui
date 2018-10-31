@@ -8,8 +8,8 @@
       placeholder="Search entire store here..."
       input-class="search-form__input"
     />
-    <alpaca-button 
-      icon="search" 
+    <alpaca-button
+      icon="search"
       custom-class="search-form__button" />
   </form>
 </template>
@@ -27,82 +27,72 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --search-form__height: 34px;
-  --search-form__width: 100%;
-  --search-form__width--extra-large: 70%;
-  --search-form__alignment: flex-end;
-  --search-form__margin: 0;
-  --search-form__border-color: var(--gray-light);
-  --search-form__font-size: var(--font-size-small);
-  --search-form__input-height: 32px;
-  --search-form__button-size: 18px;
-  --search-form__button-margin: 0;
-  --search-form__button-border: none;
-  --search-form__button-background: transparent;
-  --search-form__button-icon-color: var(--gray-dark);
-  --search-form__placeholder-color: var(--gray);
-}
+$search-form__height: 34px !default;
+$search-form__width: 100% !default;
+$search-form__width--extra-large: 70% !default;
+$search-form__alignment: flex-end !default;
+$search-form__margin: 0 !default;
+$search-form__border-color: $gray-light !default;
+$search-form__font-size: $font-size-small !default;
+$search-form__input-height: 32px !default;
+$search-form__button-size: 18px !default;
+$search-form__button-margin: 0 !default;
+$search-form__button-border: none !default;
+$search-form__button-background: transparent !default;
+$search-form__button-icon-color: $gray-dark !default;
+$search-form__placeholder-color: $gray !default;
 
 .search-form {
-  width: var(--search-form__width);
-  height: var(--search-form__height);
-  align-self: var(--search-form__alignment);
-  margin: var(--search-form__margin);
-  border: 1px solid var(--search-form__border-color);
-  border-radius: var(--search-form__height);
+  width: $search-form__width;
+  height: $search-form__height;
+  align-self: $search-form__alignment;
+  margin: $search-form__margin;
+  border: 1px solid $search-form__border-color;
+  border-radius: $search-form__height;
   z-index: 1;
-}
-
-@media all and (min-width: 768px) {
-  .search-form {
+  @include mq($screen-m) {
     position: relative;
   }
-}
-
-@media all and (min-width: 1200px) {
-  .search-form {
-    width: var(--search-form__width--extra-large);
+  @include mq($screen-xl) {
+    width: $search-form__width--extra-large;
   }
-}
 
-.search-form__input-wrapper {
-  position: relative;
-}
+  &__input-wrapper {
+    position: relative;
+  }
 
-.search-form__input {
-  width: 100%;
-  height: var(--search-form__input-height);
-  border: none;
-  border-radius: var(--search-form__height);
-  font-size: var(--search-form__font-size);
-}
+  &__input {
+    width: 100%;
+    height: $search-form__input-height;
+    border: none;
+    border-radius: $search-form__height;
+    font-size: $search-form__font-size;
 
-.search-form__input::placeholder {
-  color: var(--search-form__placeholder-color);
-  font-size: var(--search-form__font-size);
-}
+    &::placeholder {
+      color: $search-form__placeholder-color;
+      font-size: $search-form__font-size;
+    }
+  }
 
-.search-form__button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: var(--search-form__input-height);
-  margin: var(--search-form__button-margin);
-  border: var(--search-form__button-border);
-  border-radius: var(--search-form__height);
-  background-color: var(--search-form__button-background);
-}
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $search-form__input-height;
+    margin: $search-form__button-margin;
+    border: $search-form__button-border;
+    border-radius: $search-form__height;
+    background-color: $search-form__button-background;
+    &:focus,
+    &:hover {
+      background-color: $search-form__button-background;
+    }
+  }
 
-.search-form__button:focus,
-.search-form__button:hover {
-  background-color: var(--search-form__button-background);
-}
-
-.search-form .button__icon {
-  width: var(--search-form__button-size);
-  height: var(--search-form__button-size);
-  fill: var(--search-form__button-icon-color);
-  padding: 0;
+  .button__icon {
+    width: $search-form__button-size;
+    height: $search-form__button-size;
+    fill: $search-form__button-icon-color;
+  }
 }
 </style>

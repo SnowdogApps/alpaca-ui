@@ -41,63 +41,60 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --input__field-padding: 0 var(--spacer--medium);
-  --input__field-padding--textarea: var(--spacer--medium);
-  --input__field-spacing: 40px;
-  --input__field-border: 1px solid var(--form-elements-border-color);
-  --input__field-border-radius: var(--form-elements-radius);
-  --input__field-border-radius--textarea: var(--form-elements-radius--small);
-  --input__field-line-height--textarea: var(--font-line-height);
-  --input__margin-bottom: var(--spacer);
-  --input__placeholder-color: var(--gray);
-  --input__label-margin-right: var(--spacer--medium);
-  --input__min-height--textarea: 100px;
-}
+$input__field-padding: 0 $spacer--medium !default;
+$input__field-padding--textarea: $spacer--medium !default;
+$input__field-spacing: 40px !default;
+$input__field-border: 1px solid $form-elements-border-color !default;
+$input__field-border-radius: $form-elements-radius !default;
+$input__field-border-radius--textarea: $form-elements-radius--small !default;
+$input__field-line-height--textarea: $font-line-height !default;
+$input__margin-bottom: $spacer--medium !default;
+$input__placeholder-color: $gray !default;
+$input__label-margin-right: $spacer--medium !default;
+$input__min-height--textarea: 100px !default;
 
 .input {
-  margin-bottom: var(--input__margin-bottom);
-}
+  margin-bottom: $input__margin-bottom;
 
-.input--inline {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
+  &--inline {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    .input__label {
+      margin-right: $input__label-margin-right;
+    }
+  }
 
-.input--inline .input__label {
-  margin-right: var(--input__label-margin-right);
-}
+  &__field {
+    width: 100%;
+    height: $input__field-spacing;
+    line-height: $input__field-spacing;
+    padding: $input__field-padding;
+    border: $input__field-border;
+    border-radius: $input__field-border-radius;
 
-.input__field {
-  width: 100%;
-  height: var(--input__field-spacing);
-  line-height: var(--input__field-spacing);
-  padding: var(--input__field-padding);
-  border: var(--input__field-border);
-  border-radius: var(--input__field-border-radius);
-}
+    &[type='search'] {
+      -webkit-appearance: textfield;
 
-.input__field[type='search'] {
-  -webkit-appearance: textfield;
-}
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+      }
+    }
 
-.input__field[type='search']::-webkit-search-decoration,
-.input__field[type='search']::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
+    &::placeholder {
+      color: $input__placeholder-color;
+    }
 
-.input__field::placeholder {
-  color: var(--input__placeholder-color);
-}
-
-.input__field--textarea {
-  display: block;
-  border-radius: var(--input__field-border-radius--textarea);
-  min-width: 100%;
-  max-width: 100%;
-  min-height: var(--input__min-height--textarea);
-  padding: var(--input__field-padding--textarea);
-  line-height: var(--input__field-line-height--textarea);
+    &--textarea {
+      display: block;
+      border-radius: $input__field-border-radius--textarea;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: $input__min-height--textarea;
+      padding: $input__field-padding--textarea;
+      line-height: $input__field-line-height--textarea;
+    }
+  }
 }
 </style>
