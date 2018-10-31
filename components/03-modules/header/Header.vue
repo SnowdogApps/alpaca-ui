@@ -46,13 +46,11 @@
       </container>
     </header>
 
-    <mega-menu :menu="menu" />
+    <mega-menu :menu="menu"/>
   </div>
 </template>
 
 <script>
-import menu from '../../../data/menu.json'
-
 import Container from '../../01-globals/container/Container.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 import Logo from '../../02-elements/logo/Logo.vue'
@@ -70,9 +68,10 @@ export default {
     HeaderButton,
     HeaderSearch
   },
-  data() {
-    return {
-      menu: menu
+  props: {
+    menu: {
+      type: Array,
+      required: true
     }
   }
 }
