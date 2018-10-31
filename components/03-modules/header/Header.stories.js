@@ -7,12 +7,12 @@ import menu from '../../../data/menu.json'
 
 storiesOf('Modules/Header', module).add('Default', () => ({
   components: {App, AlpacaHeader},
-    data: () => ({
-      menu
-    }),
+  data: () => ({
+    menu
+  }),
   template: `
-      <app>
-        <alpaca-header :menu="menu"/>
-      </app>
-    `
+    <app>
+      <alpaca-header :menu="menu"/>
+    </app>
+  `
 }))
