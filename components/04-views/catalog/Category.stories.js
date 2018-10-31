@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/vue'
 
-import data from './data.json'
-import menu from '../../../data/menu.json'
+import data from './mocks/catalog.json'
+import menu from '../../03-modules/header/mocks/header.json'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from '../../03-modules/header/Header.vue'
