@@ -17,68 +17,62 @@
 </template>
 
 <script>
-  export default {
-    props: ['menu']
-  }
+export default {
+  props: ['menu']
+}
 </script>
 
 <style lang="scss">
-  :root {
-    --mega-menu__margin: 0;
-    --mega-menu__border-bottom: 1px solid var(--gray-light);
-    --mega-menu__font-color: var(--gray-darker);
-    --mega-menu__font-weight: var(--font-weight-bold);
-    --mega-menu__font-size: var(--font-size-base);
-    --mega-menu__font-size--large: 16px;
-    --mega-menu__background-color: var(--white);
-    --mega-menu__list-padding: 0;
-    --mega-menu__list-justify-content: flex-start;
-    --mega-menu__list-background-color: var(--white);
-    --mega-menu__link-padding: 12px var(--spacer--medium);
-    --mega-menu__link-margin: 0 var(--spacer--medium);
-    --mega-menu__link-color: var(--gray-darker);
-    --mega-menu__link-color--active: var(--color-primary);
-    --mega-menu__link-text-decoration: none;
+$mega-menu__margin: 0 !default;
+$mega-menu__border-bottom: 1px solid $gray-light !default;
+$mega-menu__font-color: $gray-darker !default;
+$mega-menu__font-weight: $font-weight-bold !default;
+$mega-menu__font-size: $font-size-base !default;
+$mega-menu__font-size--large: 16px !default;
+$mega-menu__background-color: $white !default;
+$mega-menu__list-padding: 0 !default;
+$mega-menu__list-justify-content: flex-start !default;
+$mega-menu__list-background-color: $white !default;
+$mega-menu__link-padding: 12px $spacer--medium !default;
+$mega-menu__link-margin: 0 $spacer--medium !default;
+$mega-menu__link-color: $gray-darker !default;
+$mega-menu__link-color--active: $color-primary !default;
+$mega-menu__link-text-decoration: none !default;
+
+.mega-menu {
+  display: none;
+  background: $mega-menu__background-color;
+  color: $mega-menu__font-color;
+  position: relative;
+  margin: $mega-menu__margin;
+  border-bottom: $mega-menu__border-bottom;
+  @include mq($screen-xl) {
+    display: block;
   }
 
-  .mega-menu {
-    display: none;
-    background: var(--mega-menu__background-color);
-    color: var(--mega-menu__font-color);
-    position: relative;
-    margin: var(--mega-menu__margin);
-    border-bottom: var(--mega-menu__border-bottom);
-  }
-
-  @media all and (min-width: 1200px) {
-    .mega-menu {
-      display: block;
-    }
-  }
-
-  .mega-menu__list {
+  &__list {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: var(--mega-menu__list-justify-content);
-    padding: var(--mega-menu__list-padding);
+    justify-content: $mega-menu__list-justify-content;
+    padding: $mega-menu__list-padding;
     list-style: none;
-    background-color: var(--mega-menu__list-background-color);
+    background-color: $mega-menu__list-background-color;
   }
 
-  .mega-menu__link {
+  &__link {
     display: block;
-    margin: var(--mega-menu__link-margin);
-    padding: var(--mega-menu__link-padding);
-    font-size: var(--mega-menu__font-size--large);
-    font-weight: var(--mega-menu__font-weight);
-    color: var(--mega-menu__link-color);
-    text-decoration: var(--mega-menu__link-text-decoration);
+    margin: $mega-menu__link-margin;
+    padding: $mega-menu__link-padding;
+    font-size: $mega-menu__font-size--large;
+    font-weight: $mega-menu__font-weight;
+    color: $mega-menu__link-color;
+    text-decoration: $mega-menu__link-text-decoration;
+    &:focus,
+    &:hover {
+      text-decoration: $mega-menu__link-text-decoration;
+      color: $mega-menu__link-color--active;
+    }
   }
-
-  .mega-menu__link:focus,
-  .mega-menu__link:hover {
-    text-decoration: var(--mega-menu__link-text-decoration);
-    color: var(--mega-menu__link-color--active);
-  }
+}
 </style>

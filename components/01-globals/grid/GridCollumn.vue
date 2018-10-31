@@ -8,145 +8,124 @@
 
 <script>
 export default {
-  props: ['width']
+  props: {
+    width: {
+      type: Number | Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
 <style lang="scss">
-  .grid__column {
-    --width: 1;
-    --count: 1;
+$grid__gutter: 16px !default;
 
-    flex: 1 0 100%;
-
-    padding-left: calc(var(--grid__gutter) / 2);
-    padding-right: calc(var(--grid__gutter) / 2);
-
-    flex-basis: calc((100% / var(--count) * var(--width)) - (var(--count) - var(--width)) * var(--grid__gutter) / var(--count));
-    max-width: calc((100% / var(--count) * var(--width)) - (var(--count) - var(--width)) * var(--grid__gutter) / var(--count));
+.grid__column {
+  flex: 1 0 100%;
+  @if ($grid__gutter > 0) {
+    padding-left: ($grid__gutter / 2);
+    padding-right: ($grid__gutter / 2);
   }
 
-  /* 2 cols */
-  @media all and (min-width: 480px) {
-    .grid__column--1-2 {
-      --width: 1;
-      --count: 2;
+  // 2 cols
+  &--1-2 {
+    @include mq($screen-s) {
+      @include grid-column-width(1, 2);
     }
   }
 
-  /* 3 cols */
-  @media all and (min-width: 480px) {
-    .grid__column--1-3 {
-      --width: 1;
-      --count: 2;
+  // 3 cols
+  &--1-3 {
+    @include mq($screen-s) {
+      @include grid-column-width(1, 2);
+    }
+    @include mq($screen-m) {
+      @include grid-column-width(1, 3);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--1-3 {
-      --width: 1;
-      --count: 3;
+  &--2-3 {
+    @include mq($screen-m) {
+      @include grid-column-width(2, 3);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--2-3 {
-      --width: 2;
-      --count: 3;
+  // 4 cols
+  &--1-4 {
+    @include mq($screen-m) {
+      @include grid-column-width(1, 4);
     }
   }
 
-  /* 4 cols */
-  @media all and (min-width: 768px) {
-    .grid__column--1-4 {
-      --width: 1;
-      --count: 4;
+  &--2-4 {
+    @include mq($screen-m) {
+      @include grid-column-width(2, 4);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--2-4 {
-      --width: 2;
-      --count: 4;
+  &--3-4 {
+    @include mq($screen-m) {
+      @include grid-column-width(3, 4);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--3-4 {
-      --width: 3;
-      --count: 4;
+  // 5 cols
+  &--1-5 {
+    @include mq($screen-m) {
+      @include grid-column-width(1, 5);
     }
   }
 
-  /* 5 cols */
-  @media all and (min-width: 768px) {
-    .grid__column--1-5 {
-      --width: 1;
-      --count: 5;
+  &--2-5 {
+    @include mq($screen-m) {
+      @include grid-column-width(2, 5);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--2-5 {
-      --width: 2;
-      --count: 5;
+  &--3-5 {
+    @include mq($screen-m) {
+      @include grid-column-width(3, 5);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--3-5 {
-      --width: 3;
-      --count: 5;
+  &--4-5 {
+    @include mq($screen-m) {
+      @include grid-column-width(4, 5);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--4-5 {
-      --width: 4;
-      --count: 5;
+  // 6 cols
+  &--1-6 {
+    @include mq($screen-s) {
+      @include grid-column-width(2, 6);
+    }
+    @include mq($screen-m) {
+      @include grid-column-width(1, 6);
     }
   }
 
-  /* 6 cols */
-  @media all and (min-width: 480px) {
-    .grid__column--1-6 {
-      --width: 2;
-      --count: 6;
+  &--2-6 {
+    @include mq($screen-s) {
+      @include grid-column-width(2, 6);
     }
   }
 
-  @media all and (min-width: 768px) {
-    .grid__column--1-6 {
-      --width: 1;
-      --count: 6;
+  &--3-6 {
+    @include mq($screen-s) {
+      @include grid-column-width(3, 6);
     }
   }
 
-  @media all and (min-width: 480px) {
-    .grid__column--2-6 {
-      --width: 2;
-      --count: 6;
+  &--4-6 {
+    @include mq($screen-s) {
+      @include grid-column-width(4, 6);
     }
   }
 
-  @media all and (min-width: 480px) {
-    .grid__column--3-6 {
-      --width: 3;
-      --count: 6;
+  &--5-6 {
+    @include mq($screen-m) {
+      @include grid-column-width(5, 6);
     }
   }
-
-  @media all and (min-width: 480px) {
-    .grid__column--4-6 {
-      --width: 4;
-      --count: 6;
-    }
-  }
-
-  @media all and (min-width: 768px) {
-    .grid__column--5-6 {
-      --width: 5;
-      --count: 6;
-    }
-  }
+}
 </style>

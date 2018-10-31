@@ -5,22 +5,18 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss">
-  .container {
-    max-width: var(--container__max-width);
-    margin: 0 var(--container__margin);
-  }
+$container__max-width: $max-content-width !default;
+$container__margin: 8px !default;
 
-  /* This MQ is hardcoded result of */
-  /* calc(var(--container__max-width) + 2 * var(--container__margin)) */
-  @media all and (min-width: 1344px) {
-    .container {
-      margin: 0 auto;
-    }
+.container {
+  max-width: $container__max-width;
+  margin: 0 $container__margin;
+  @include mq($container__max-width + 2 * $container__margin) {
+    margin: 0 auto;
   }
+}
 </style>

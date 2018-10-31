@@ -29,7 +29,7 @@
                 </span>
 
                 <span class="header-button__counter">
-                  <span class="header-button__counter-dot"></span>
+                  <span class="header-button__counter-dot"/>
                 </span>
               </button>
             </div>
@@ -46,152 +46,131 @@
       </container>
     </header>
 
-    <mega-menu :menu="menu" />
+    <mega-menu :menu="menu"/>
   </div>
 </template>
 
 <script>
-  import menu from './data.json'
+import Container from '../../01-globals/container/Container.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import Logo from '../../02-elements/logo/Logo.vue'
+import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
 
-  import Container from '../../01-globals/container/Container.vue'
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-  import Logo from '../../02-elements/logo/Logo.vue'
-  import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
+import HeaderButton from './HeaderButton.vue'
+import HeaderSearch from './HeaderSearch.vue'
 
-  import HeaderButton from './HeaderButton.vue'
-  import HeaderSearch from './HeaderSearch.vue'
-
-  export default {
-    components: {
-      Container,
-      AlpacaIcon,
-      Logo,
-      MegaMenu,
-      HeaderButton,
-      HeaderSearch
-    },
-    data() {
-      return {
-        menu: menu
-      }
-    },
+export default {
+  components: {
+    Container,
+    AlpacaIcon,
+    Logo,
+    MegaMenu,
+    HeaderButton,
+    HeaderSearch
+  },
+  props: {
+    menu: {
+      type: Array,
+      required: true
+    }
   }
+}
 </script>
 
 <style lang="scss">
-  :root {
-    --header__border-color: var(--gray-light);
-    --header__wrapper-padding: 0;
-    --header__wrapper-padding\@medium: 12px 0;
-    --header__logo-padding: 12px 0 12px var(--spacer);
-    --header__logo-padding\@medium: 0 0 0 var(--spacer);
-    --header__menu-trigger-size: 48px;
-    --header__buttons-width: calc(100% - 48px);
-    --header__buttons-width\@medium: calc(4 * 48px + 3 * var(--spacer));
-    --header__buttons-width\@extra-large: calc(4 * 48px + 3 * var(--spacer--medium));
-    --header__search-wrapper-padding: 0 0 0 24px;
-    --header__search-wrapper-padding\@medium: 0 24px;
+$header__border-color: $gray-light !default;
+$header__wrapper-padding: 0 !default;
+$header__wrapper-padding--mq-medium: 12px 0 !default;
+$header__logo-padding: 12px 0 12px $spacer !default;
+$header__logo-padding--mq-medium: 0 0 0 $spacer !default;
+$header__menu-trigger-size: 48px !default;
+$header__buttons-width: calc(100% - 48px) !default;
+$header__buttons-width--mq-medium: calc(4 * 48px + 3 * #{$spacer}) !default;
+$header__buttons-width--mq-extra-large: calc(
+  4 * 48px + 3 * #{$spacer--medium}
+) !default;
+$header__search-wrapper-padding: 0 0 0 24px !default;
+$header__search-wrapper-padding--mq-medium: 0 24px !default;
+
+.header {
+  position: relative;
+  border-bottom: 1px solid $header__border-color;
+  @include mq($screen-l) {
+    border-bottom: none;
   }
 
-  .header {
-    position: relative;
-    border-bottom: 1px solid var(--header__border-color);
-  }
-
-  @media all and (min-width: 992px) {
-    .header {
-      border-bottom: none;
-    }
-  }
-
-  .header__wrapper {
+  &__wrapper {
     position: relative;
     justify-content: space-between;
     display: flex;
     flex-flow: row wrap;
-    padding: var(--header__wrapper-padding);
-  }
+    padding: $header__wrapper-padding;
+    @include mq($screen-m) {
+      padding: $header__wrapper-padding--mq-medium;
+    }
 
-  @media all and (min-width: 768px) {
-    .header__wrapper {
-      padding: var(--header__wrapper-padding\@medium);
+    @include mq($screen-l) {
+      border-bottom: 1px solid $header__border-color;
     }
   }
 
-  @media all and (min-width: 992px) {
-    .header__wrapper {
-      border-bottom: 1px solid var(--header__border-color);
-    }
-  }
-
-  .header__logo {
+  &__logo {
     order: 3;
-    padding: var(--header__logo-padding);
-    border-top: 1px solid var(--header__border-color);
-  }
-
-  @media all and (min-width: 768px) {
-    .header__logo {
-      padding: var(--header__logo-padding\@medium);
+    padding: $header__logo-padding;
+    border-top: 1px solid $header__border-color;
+    @include mq($screen-m) {
+      padding: $header__logo-padding--mq-medium;
       border-top: none;
     }
   }
 
-  .header__search-wrapper {
+  &__search-wrapper {
     display: flex;
     flex-flow: column nowrap;
     flex: 1 50%;
     order: 5;
     justify-content: center;
-    padding: var(--header__search-wrapper-padding);
-    border-top: 1px solid var(--header__border-color);
-  }
-
-  @media all and (min-width: 768px) {
-    .header__search-wrapper {
+    padding: $header__search-wrapper-padding;
+    border-top: 1px solid $header__border-color;
+    @include mq($screen-m) {
       order: 3;
       flex-direction: column;
       justify-content: center;
-      padding: var(--header__search-wrapper-padding\@medium);
+      padding: $header__search-wrapper-padding--mq-medium;
       border-top: none;
     }
   }
 
-  .header__minicart {
+  &__minicart {
     position: relative;
   }
 
-  .header__minicart-content {
+  &__minicart-content {
     top: calc(100% - 1px);
+    &.popup {
+      position: absolute;
+      right: 0;
+    }
   }
 
-  .header__minicart-content.popup {
-    position: absolute;
-    right: 0;
-  }
-
-  .header__buttons {
+  &__buttons {
     display: flex;
     order: 2;
-    flex: 1 var(--header__buttons-width);
-    max-width: var(--header__buttons-width);
+    flex: 1 $header__buttons-width;
+    max-width: $header__buttons-width;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-  }
-
-  @media all and (min-width: 768px) {
-    .header__buttons {
+    @include mq($screen-m) {
       order: 4;
-      flex: 1 var(--header__buttons-width\@medium);
-      max-width: var(--header__buttons-width\@medium);
+      flex: 1 $header__buttons-width--mq-medium;
+      max-width: $header__buttons-width--mq-medium;
     }
-  }
 
-  @media all and (min-width: 1200px) {
-    .header__buttons {
-      flex: 1 var(--header__buttons-width\@extra-large);
-      max-width: var(--header__buttons-width\@extra-large);
+    @include mq($screen-xl) {
+      flex: 1 $header__buttons-width--mq-extra-large;
+      max-width: $header__buttons-width--mq-extra-large;
     }
   }
+}
 </style>
