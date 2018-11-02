@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/vue'
 
 import App from '../app/App.vue'
-import AlpacaParagraph from '../paragraph/Paragraph.vue'
+import AlpacaParagraph from './Paragraph.vue'
 
 storiesOf('Global/Typography', module).add('Paragraph', () => ({
   components: {App, AlpacaParagraph},

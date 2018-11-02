@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/vue'
 
 import App from '../app/App.vue'
-import AlpacaHeading from '../heading/Heading.vue'
+import AlpacaHeading from './Heading.vue'
 
 storiesOf('Global/Typography', module).add('Heading', () => ({
   components: {App, AlpacaHeading},

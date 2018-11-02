@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/vue'
 
 import App from '../app/App.vue'
-import AlpacaLink from '../link/Link.vue'
+import AlpacaLink from './Link.vue'
 
 storiesOf('Global/Typography', module).add('Link', () => ({
   components: {App, AlpacaLink},

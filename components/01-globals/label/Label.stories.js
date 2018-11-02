@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/vue'
 
 import App from '../app/App.vue'
-import AlpacaLabel from '../label/Label.vue'
+import AlpacaLabel from './Label.vue'
 
 storiesOf('Global/Typography', module).add('Label', () => ({
   components: {App, AlpacaLabel},
