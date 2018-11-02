@@ -37,51 +37,54 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --link__color: var(--blue);
-  --link__decoration: underline;
-  --link__font-family: var(--font-family-base);
-  --link__font-weight: var(--font-weight-normal);
-  --link__color-hover: var(--color-secondary);
-  --link__line-height: var(--font-line-height);
-  --link__transition: var(--transition-base);
-  --link__color--invert: var(--gray-darker);
-  --link__color-hover--invert: var(--blue);
-}
+$link__color: $blue !default;
+$link__decoration: underline !default;
+$link__font-family: $font-family-base !default;
+$link__font-weight: $font-weight-normal !default;
+$link__color-hover: $color-secondary !default;
+$link__line-height: $font-line-height !default;
+$link__transition: $transition-base !default;
+$link__color--invert: $gray-darker !default;
+$link__color-hover--invert: $blue !default;
 
-a,
 .link {
-  color: var(--link__color);
-  text-decoration: var(--link__decoration);
-  transition: var(--link__transition);
-  font-family: var(--link__font-family);
-  font-weight: var(--link__font-weight);
-  line-height: var(--link__line-height);
+  color: $link__color;
+  text-decoration: $link__decoration;
+  transition: $link__transition;
+  font-family: $link__font-family;
+  font-weight: $link__font-weight;
+  line-height: $link__line-height;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link__color-hover;
+  }
+
+  &--invert {
+    color: $link__color--invert;
+
+    &:hover,
+    &:focus {
+      color: $link__color-hover--invert;
+    }
+  }
+
+  &--secondary {
+    color: $gray-lighter;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+
+  &--visually-hidden {
+    @include visually-hidden($usePseudo: true);
+  }
 }
 
-a:hover,
-a:focus,
-.link:hover,
-.link:focus {
-  color: var(--link__color-hover);
-}
-
-.link--invert {
-  color: var(--link__color--invert);
-}
-
-.link--invert:hover,
-.link--invert:focus {
-  color: var(--link__color-hover--invert);
-}
-
-.link--secondary {
-  color: var(--gray-lighter);
-}
-
-.link--secondary:hover,
-.link--secondary:focus {
-  color: var(--color-primary);
+a {
+  @extend .link;
 }
 </style>
