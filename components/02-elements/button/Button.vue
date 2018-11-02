@@ -12,7 +12,7 @@ export default {
       default: false
     },
     icon: {
-      type: String | Boolean,
+      type: String,
       default: false
     },
     secondary: {

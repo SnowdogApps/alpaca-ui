@@ -59,7 +59,7 @@ export default {
     },
     price: {
       type: Number,
-      default: 0
+      default: null
     },
     name: {
       type: String,
@@ -67,7 +67,7 @@ export default {
     },
     specialPrice: {
       type: Number,
-      default: 0
+      default: null
     }
   }
 }
