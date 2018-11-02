@@ -13,7 +13,7 @@ export default {
     },
     icon: {
       type: String,
-      default: false
+      default: null
     },
     secondary: {
       type: Boolean,
