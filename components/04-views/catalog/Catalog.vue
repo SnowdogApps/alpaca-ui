@@ -26,88 +26,75 @@
 </template>
 
 <script>
-  import Container from '../../01-globals/container/Container.vue'
-  import CatalogFilter from '../../03-modules/filter/Filter.vue'
-  import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import Container from '../../01-globals/container/Container.vue'
+import CatalogFilter from '../../03-modules/filter/Filter.vue'
+import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
-  export default {
-    props: ['products', 'storeConfig', 'filters'],
-    components: {
-      Container,
-      CatalogFilter,
-      CatalogGridItem
-    },
-    methods: {
-      productImageUrl(image) {
-        return this.storeConfig.base_media_url + 'catalog/product' + image
-      }
+export default {
+  components: {
+    Container,
+    CatalogFilter,
+    CatalogGridItem
+  },
+  props: ['products', 'storeConfig', 'filters'],
+  methods: {
+    productImageUrl(image) {
+      return this.storeConfig.base_media_url + 'catalog/product' + image
     }
   }
+}
 </script>
 
 <style lang="scss">
-  :root {
-    --catalog__margin : var(--spacer--medium) 0 0 0;
-    --catalog__border: 1px solid var(--gray-light);
-    --catalog__sidebar-width\@medium: calc(290px + var(--spacer--medium));
-    --catalog__sidebar-margin\@medium: 0 var(--spacer--medium) 0 0;
-    --catalog__sidebar-border: 1px solid var(--gray-lighter);
+$catalog__margin: $spacer--medium 0 0 0 !default;
+$catalog__sidebar-width--mq-medium: 306px !default;
+$catalog__sidebar-margin--mq-medium: 0 $spacer--medium 0 0 !default;
+$catalog__sidebar-border: 1px solid $gray-lighter !default;
+$catalog__products-padding: 0 0 $spacer--large 0 !default;
+$catalog-grid__gap: $spacer--medium !default;
+$catalog-gird__margin: 0 !default;
+$catalog-grid__padding: $spacer--medium 0 $spacer--large 0 !default;
+$catalog-grid__border: 1px solid $gray-light !default;
 
-    --catalog-grid__gap: var(--spacer--medium);
-    --catalog-gird__margin: 0;
-    --catalog-grid__padding: var(--spacer--medium) 0 var(--spacer--large) 0;
-    --catalog-grid__border: 1px solid var(--gray-light);
+.catalog {
+  display: flex;
+  flex-direction: column;
+  margin: $catalog__margin;
+  @include mq($screen-l) {
+    flex-direction: row;
   }
 
-  .catalog {
-    margin: var(--spacer--medium) 0 0 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media all and (min-width: 992px) {
-    .catalog {
-      flex-direction: row;
-    }
-  }
-
-  .catalog__sidebar {
-    border-bottom: var(--catalog__sidebar-border);
-  }
-
-  @media all and (min-width: 992px) {
-    .catalog__sidebar {
-      flex: 1 var(--catalog__sidebar-width\@medium);
+  &__sidebar {
+    border-bottom: $catalog__sidebar-border;
+    @include mq($screen-l) {
+      flex: 1 $catalog__sidebar-width--mq-medium;
       justify-content: space-between;
-      margin: var(--catalog__sidebar-margin\@medium);
+      margin: $catalog__sidebar-margin--mq-medium;
       border-bottom: none;
     }
   }
 
-  .catalog__products {
-    padding: var(--catalog__products-padding);
-  }
-
-  @media all and (min-width: 992px) {
-    .catalog__products {
+  &__products {
+    padding: $catalog__products-padding;
+    @include mq($screen-l) {
       flex-grow: 1;
       flex-shrink: 1;
-      flex-basis: calc(100% - var(--catalog__sidebar-width\@medium));
+      flex-basis: calc(100% - #{$catalog__sidebar-width--mq-medium});
     }
-  }
 
-  .catalog-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: var(--catalog-grid__gap);
-    margin: var(--catalog-gird__margin);
-    padding: var(--catalog-grid__padding);
-    border-bottom: var(--catalog-grid__border);
-    list-style: none;
-  }
-  @media all and (min-width: 768px) {
     .catalog-grid {
-      grid-template-columns: 1fr 1fr 1fr;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $catalog-grid__gap;
+      margin: $catalog-gird__margin;
+      padding: $catalog-grid__padding;
+      border-bottom: $catalog-grid__border;
+      list-style: none;
+
+      @include mq($screen-m) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
   }
+}
 </style>

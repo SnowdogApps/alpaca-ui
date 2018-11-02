@@ -1,101 +1,125 @@
 <script>
-  export default {
-    props: ['level', 'tag', 'page'],
-    computed: {
-      levelClassName() {
-        switch(this.level) {
-          case '1': return 'first'
-          case '2': return 'second'
-          case '3': return 'third'
-          case '4': return 'fourth'
-          case '5': return 'fifth'
-          case '6': return 'sixth'
-        }
+export default {
+  props: ['level', 'tag', 'page'],
+  computed: {
+    levelClassName() {
+      switch (this.level) {
+        case '1':
+          return 'first'
+        case '2':
+          return 'second'
+        case '3':
+          return 'third'
+        case '4':
+          return 'fourth'
+        case '5':
+          return 'fifth'
+        case '6':
+          return 'sixth'
       }
-    },
-    render: function (createElement) {
-      return createElement(
-        this.tag ? this.tag : 'h' + this.level, {
-          class: [
-            this.tag ? `heading heading--${this.levelClassName}-level` : '',
-            this.page ? 'heading--page' : ''
-          ]
-        }, this.$slots.default
-      )
     }
+  },
+  render: function(createElement) {
+    return createElement(
+      this.tag ? this.tag : 'h' + this.level,
+      {
+        class: [
+          this.tag ? `heading heading--${this.levelClassName}-level` : '',
+          this.page ? 'heading--page' : ''
+        ]
+      },
+      this.$slots.default
+    )
   }
+}
 </script>
 
 <style lang="scss">
-  :root {
-    --headings-margin                 : 0 0 0.5em 0;
-    --headings-margin--page           : var(--spacer--medium) 0;
+$headings-margin: 0 0 0.5em 0 !default;
+$headings-margin--page: $spacer--medium 0 !default;
+$headings-font-family: $font-family-base !default;
+$headings-font-weight: 700 !default;
+$headings-line-height: $font-line-height !default;
+$headings-color: $color-secondary !default;
+$headings-text-transform: none !default;
+$headings-text-transform--page: uppercase !default;
+$heading-font-size--page: 24px !default;
+$heading-font-size--first-level: 18px !default;
+$heading-font-size--second-level: 18px !default;
+$heading-font-size--third-level: 14px !default;
+$heading-font-size--fourth-level: 14px !default;
+$heading-font-size--fifth-level: 12px !default;
+$heading-font-size--sixth-level: 12px !default;
 
-    --headings-font-family            : var(--font-family-base);
-    --headings-font-weight            : 700;
-    --headings-line-height            : var(--font-line-height);
-    --headings-color                  : var(--color-secondary);
+.heading {
+  margin: $headings-margin;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  text-transform: $headings-text-transform;
 
-    --headings-text-transform         : none;
-    --headings-text-transform--page   : uppercase;
-
-    --heading-font-size--page         : 24px;
-    --heading-font-size--first-level  : 18px;
-    --heading-font-size--second-level : 18px;
-    --heading-font-size--third-level  : 14px;
-    --heading-font-size--fourth-level : 14px;
-    --heading-font-size--fifth-level  : 12px;
-    --heading-font-size--sixth-level  : 12px;
+  &--first-level {
+    font-size: $heading-font-size--first-level;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .heading {
-    margin: var(--headings-margin);
-    font-family: var(--headings-font-family);
-    font-weight: var(--headings-font-weight);
-    line-height: var(--headings-line-height);
-    color: var(--headings-color);
-    text-transform: var(--headings-text-transform);
+  &--second-level {
+    font-size: $heading-font-size--second-level;
   }
 
-  h1,
-  .heading--first-level {
-    font-size: var(--heading-font-size--first-level);
+  &--third-level {
+    font-size: $heading-font-size--third-level;
   }
 
-  h2,
-  .heading--second-level {
-    font-size: var(--heading-font-size--second-level);
+  &--fourth-level {
+    font-size: $heading-font-size--fourth-level;
   }
 
-  h3,
-  .heading--third-level {
-    font-size: var(--heading-font-size--third-level);
+  &--fifth-level {
+    font-size: $heading-font-size--fifth-level;
   }
 
-  h4,
-  .heading--fourth-level {
-    font-size: var(--heading-font-size--fourth-level);
+  &--sixth-level {
+    font-size: $heading-font-size--sixth-level;
   }
 
-  h5,
-  .heading--fifth-level {
-    font-size: var(--heading-font-size--fifth-level);
+  &--page {
+    margin: $headings-margin--page;
+    font-size: $heading-font-size--page;
+    text-transform: $headings-text-transform--page;
   }
+}
 
-  h6,
-  .heading--sixth-level {
-    font-size: var(--heading-font-size--sixth-level);
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .heading;
+}
 
-  .heading--page {
-    margin: var(--headings-margin--page);
-    font-size: var(--heading-font-size--page);
-    text-transform: var(--headings-text-transform--page);
-  }
+h1 {
+  @extend .heading--first-level;
+}
+
+h2 {
+  @extend .heading--second-level;
+}
+
+h3 {
+  @extend .heading--third-level;
+}
+
+h4 {
+  @extend .heading--fourth-level;
+}
+
+h5 {
+  @extend .heading--fifth-level;
+}
+
+h6 {
+  @extend .heading--sixth-level;
+}
 </style>
