@@ -1,11 +1,12 @@
 <template>
   <blockquote>
-    <slot/>
-    <cite>
+    {{ blocquote }}
+    <cite
+      v-if="cite">
       <a
-        :href="href"
+        :href="citeHref"
       >
-        {{ name }}
+        {{ cite }}
       </a>
     </cite>
   </blockquote>
@@ -14,11 +15,17 @@
 <script>
 export default {
   props: {
-    href: {
-      type: String
+    citeHref: {
+      type: String,
+      default: null
     },
-    name: {
-      type: String
+    cite: {
+      type: String,
+      default: null
+    },
+    blocquote: {
+      type: String,
+      require: true
     }
   }
 }

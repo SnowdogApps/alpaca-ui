@@ -7,8 +7,8 @@ storiesOf('Global/Typography', module).add('Preformatted', () => ({
   components: { App, AlpacaPreformatted },
   template: `
       <app>
-        <alpaca-preformatted>Test</alpaca-preformatted>
         <alpaca-preformatted tag="div">Test</alpaca-preformatted>
+        <alpaca-preformatted>Test</alpaca-preformatted>
       </app>
     `,
 }))

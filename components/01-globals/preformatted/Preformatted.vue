@@ -1,16 +1,18 @@
+<template>
+  <component
+    :is="tag ? tag : 'pre'"
+    :class="tag && 'preformatted'">
+    <slot/>
+  </component>
+</template>
+
 <script>
 export default {
-  props: ['tag'],
-  render: function(createElement) {
-    return createElement(
-      this.tag || 'pre',
-      {
-        class: {
-          preformatted: this.tag
-        }
-      },
-      this.$slots.default
-    )
+  props: {
+    tag: {
+      type: String,
+      default: null
+    }
   }
 }
 </script>
