@@ -10,7 +10,6 @@ storiesOf('Elements/Button', module)
       <app>
         <alpaca-button>Test </alpaca-button>
         <alpaca-button link="true">Test</alpaca-button>
-        <alpaca-button tag="div">Test</alpaca-button>
       </app>
     `
   }))

@@ -2,11 +2,11 @@
   <component
     :is="tag ? tag : 'button'"
     :class="[tag && 'button',
-             customClass ? customClass : '',
-             icon ? 'button--icon' : '',
-             secondary ? 'button--secondary' : '',
-             link ? 'button--link' : '',
-             fluid ? 'button--fluid' : '']">
+             customClass && customClass,
+             icon && 'button--icon',
+             secondary && 'button--secondary',
+             link && 'button--link',
+             fluid && 'button--fluid']">
     <slot/>
     <icon
       v-if="icon"
