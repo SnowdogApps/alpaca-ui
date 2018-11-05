@@ -8,7 +8,7 @@ storiesOf('Global/Typography', module).add('Blockquote', () => ({
   template: `
       <app>
         <alpaca-blockquote blocquote="Test">Test</alpaca-blockquote>
-        <alpaca-blockquote citeHref="http://google.com/" cite="Test" blocquote="Test"/>
+        <alpaca-blockquote citeHref="http://google.com/" cite="Test" blockquote="Test"/>
       </app>
     `,
 }))

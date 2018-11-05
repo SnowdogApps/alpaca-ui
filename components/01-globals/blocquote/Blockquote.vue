@@ -1,6 +1,6 @@
 <template>
   <blockquote>
-    {{ blocquote }}
+    {{ blockquote }}
     <cite
       v-if="cite">
       <a
@@ -23,7 +23,7 @@ export default {
       type: String,
       default: null
     },
-    blocquote: {
+    blockquote: {
       type: String,
       require: true
     }
