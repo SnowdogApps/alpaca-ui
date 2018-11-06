@@ -3,7 +3,8 @@ import {storiesOf} from '@storybook/vue'
 import App from '../app/App.vue'
 import AlpacaHeading from './Heading.vue'
 
-storiesOf('Global/Typography', module).add('Heading', () => ({
+storiesOf('Global/Heading', module)
+  .add('Default', () => ({
   components: {App, AlpacaHeading},
   template: `
       <app>

@@ -3,7 +3,8 @@ import {storiesOf} from '@storybook/vue'
 import App from '../app/App.vue'
 import AlpacaLabel from './Label.vue'
 
-storiesOf('Global/Typography', module).add('Label', () => ({
+storiesOf('Global/Label', module)
+  .add('Default', () => ({
   components: {App, AlpacaLabel},
   template: `
       <app>
