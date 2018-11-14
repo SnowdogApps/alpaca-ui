@@ -17,8 +17,8 @@ export default {
       required: true
     },
     customClass: {
-      type: String | Boolean,
-      default: false
+      type: String,
+      default: null
     }
   },
   computed: {

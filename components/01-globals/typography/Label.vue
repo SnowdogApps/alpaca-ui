@@ -11,15 +11,15 @@ export default {
     },
     tag: {
       type: String,
-      default: null
+      default: 'label'
     }
   },
   render: function(createElement) {
     return createElement(
-      this.tag || 'label',
+      this.tag,
       {
         class: {
-          label: this.tag,
+          label: this.tag !== 'label',
           'label--inline': this.inline,
           'label--hidden': this.hidden
         }

@@ -5,11 +5,11 @@ export default {
   props: {
     tag: {
       type: String,
-      default: null
+      default: 'button'
     },
     customClass: {
-      type: String | Boolean,
-      default: false
+      type: String,
+      default: null
     },
     icon: {
       type: String,
@@ -30,7 +30,7 @@ export default {
   },
   render: function(h) {
     return h(
-      this.tag ? this.tag : 'button',
+      this.tag,
       {
         class: [
           'button',

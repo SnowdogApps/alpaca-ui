@@ -39,15 +39,15 @@ export default {
   props: {
     products: {
       type: Array,
-      default: () => []
+      required: true
+    },
+    filters: {
+      type: Array,
+      required: true
     },
     storeConfig: {
       type: Object,
       default: null
-    },
-    filters: {
-      type: Array,
-      default: () => []
     }
   },
   methods: {

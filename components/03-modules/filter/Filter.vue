@@ -38,13 +38,13 @@ export default {
     AlpacaLink
   },
   props: {
+    items: {
+      type: Array,
+      required: true
+    },
     name: {
       type: String,
       default: null
-    },
-    items: {
-      type: Array,
-      default: () => []
     }
   }
 }

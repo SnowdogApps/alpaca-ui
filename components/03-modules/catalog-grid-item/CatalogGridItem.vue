@@ -55,19 +55,19 @@ export default {
   props: {
     image: {
       type: String,
-      default: null
+      required: true
     },
     price: {
       type: Number,
-      default: null
+      required: true
     },
     name: {
       type: String,
-      default: null
+      required: true
     },
     specialPrice: {
       type: Number,
-      default: null
+      required: true
     }
   }
 }

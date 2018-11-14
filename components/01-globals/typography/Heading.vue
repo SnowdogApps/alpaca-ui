@@ -7,7 +7,7 @@ export default {
     },
     tag: {
       type: String,
-      default: null
+      default: 'h'
     },
     page: {
       type: Boolean,
@@ -34,10 +34,12 @@ export default {
   },
   render: function(createElement) {
     return createElement(
-      this.tag ? this.tag : 'h' + this.level,
+      this.tag !== 'h' ? this.tag : this.tag + this.level,
       {
         class: [
-          this.tag ? `heading heading--${this.levelClassName}-level` : '',
+          this.tag !== 'h'
+            ? `heading heading--${this.levelClassName}-level`
+            : '',
           this.page ? 'heading--page' : ''
         ]
       },

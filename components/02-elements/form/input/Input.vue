@@ -35,6 +35,18 @@ export default {
       type: String,
       required: true
     },
+    id: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    placeholder: {
+      type: String,
+      required: true
+    },
     hiddenLabel: {
       type: Boolean,
       default: false
@@ -42,18 +54,6 @@ export default {
     inlineLabel: {
       type: Boolean,
       default: false
-    },
-    id: {
-      type: String,
-      default: null
-    },
-    name: {
-      type: String,
-      default: null
-    },
-    placeholder: {
-      type: String,
-      default: null
     },
     labelClass: {
       type: String,

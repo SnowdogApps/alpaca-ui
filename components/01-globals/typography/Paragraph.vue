@@ -3,15 +3,15 @@ export default {
   props: {
     tag: {
       type: String,
-      default: null
+      default: 'p'
     }
   },
   render: function(createElement) {
     return createElement(
-      this.tag || 'p',
+      this.tag,
       {
         class: {
-          paragraph: this.tag
+          paragraph: this.tag !== 'p'
         }
       },
       this.$slots.default

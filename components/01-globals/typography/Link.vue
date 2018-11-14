@@ -29,8 +29,8 @@ export default {
       default: false
     },
     customClass: {
-      type: String | Boolean,
-      default: false
+      type: String,
+      default: null
     }
   }
 }
