@@ -13,7 +13,8 @@
     <icon
       v-if="icon"
       :icon="icon"
-      class="button__icon"/>
+      class="button__icon"
+    />
   </component>
 </template>
 

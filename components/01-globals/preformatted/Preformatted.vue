@@ -1,7 +1,8 @@
 <template>
   <component
     :is="tag"
-    :class="tag !== 'pre' && 'preformatted'">
+    :class="tag !== 'pre' && 'preformatted'"
+  >
     <slot/>
   </component>
 </template>

@@ -1,7 +1,8 @@
 <template>
   <component
     :is="tag"
-    :class="tag !== 'p' && 'paragraph'">
+    :class="tag !== 'p' && 'paragraph'"
+  >
     <slot/>
   </component>
 </template>
