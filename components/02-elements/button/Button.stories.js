@@ -9,6 +9,7 @@ storiesOf('Elements/Button', module)
     template: `
       <app>
         <alpaca-button>Test </alpaca-button>
+        <alpaca-button customClass="test">Test </alpaca-button>
         <alpaca-button link="true">Test</alpaca-button>
       </app>
     `

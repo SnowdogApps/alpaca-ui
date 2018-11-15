@@ -1,7 +1,7 @@
 <template>
   <component
-    :is="tag ? tag : 'pre'"
-    :class="tag && 'preformatted'">
+    :is="tag"
+    :class="tag !== 'pre' && 'preformatted'">
     <slot/>
   </component>
 </template>
@@ -11,7 +11,7 @@ export default {
   props: {
     tag: {
       type: String,
-      default: null
+      default: 'pre'
     }
   }
 }

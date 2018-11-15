@@ -1,7 +1,7 @@
 <template>
   <component
-    :is="tag ? tag : 'p'"
-    :class="tag && 'paragraph'">
+    :is="tag"
+    :class="tag !== 'p' && 'paragraph'">
     <slot/>
   </component>
 </template>
@@ -10,7 +10,7 @@ export default {
   props: {
     tag: {
       type: String,
-      default: null
+      default: 'p'
     }
   }
 }

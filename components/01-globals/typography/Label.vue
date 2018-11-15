@@ -1,10 +1,11 @@
 <template>
   <component
     :is="tag ? tag : 'label'"
-    :class="[tag && 'label', {
+    :class="{
+      'label': tag,
       'label--inline': inline,
       'label--hidden': hidden
-    }]"
+    }"
   >
     <slot/>
   </component>

@@ -1,8 +1,11 @@
 <template>
   <component
     :is="tag ? tag : 'h' + level"
-    :class="[tag && `heading heading--${levelClassName}-level`,
-             page && 'heading--page']">
+    :class="{
+      [`heading heading--${levelClassName}-level`]: levelClassName && tag,
+      'heading--page': page
+    }"
+  >
     <slot/>
   </component>
 </template>

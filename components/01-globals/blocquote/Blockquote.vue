@@ -1,31 +1,17 @@
 <template>
-  <blockquote>
-    {{ blockquote }}
-    <cite
-      v-if="cite">
-      <a
-        :href="citeHref"
-      >
-        {{ cite }}
-      </a>
-    </cite>
-  </blockquote>
+  <component
+    :is="tag"
+    :class="tag !== 'blockquote' && 'blockquote'">
+    <slot/>
+  </component>
 </template>
 
 <script>
 export default {
   props: {
-    citeHref: {
+    tag: {
       type: String,
-      default: null
-    },
-    cite: {
-      type: String,
-      default: null
-    },
-    blockquote: {
-      type: String,
-      require: true
+      default: 'blockquote'
     }
   }
 }
