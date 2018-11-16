@@ -1,7 +1,7 @@
 <template>
   <div :class="['grid__column', width ? `grid__column--${width}` : '']">
     <div class="grid__content">
-      <slot />
+      <slot/>
     </div>
   </div>
 </template>
