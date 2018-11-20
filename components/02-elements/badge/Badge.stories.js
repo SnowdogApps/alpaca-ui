@@ -5,12 +5,48 @@ import AlpacaBadge from './Badge.vue'
 
 storiesOf('Elements/Badge', module)
   .add('Default', () => ({
-    components: {App, AlpacaBadge},
+    components: { App, AlpacaBadge },
     template: `
       <app>
-        <alpaca-badge>Test</alpaca-badge>
-        <alpaca-badge :newBadge="true">Test</alpaca-badge>
-        <alpaca-badge tag="span" :discountBadge="true">Test</alpaca-badge>
+        <alpaca-badge>
+          Default badge
+        </alpaca-badge>
+      </app>
+    `
+  }))
+  .add('Custom tag', () => ({
+    components: { App, AlpacaBadge },
+    template: `
+      <app>
+        <alpaca-badge 
+          tag="span" 
+        >
+          Custom tag
+        </alpaca-badge>
+      </app>
+    `
+  }))
+  .add('New', () => ({
+    components: { App, AlpacaBadge },
+    template: `
+      <app>
+        <alpaca-badge
+          newBadge
+        >
+          New badge
+        </alpaca-badge>
+      </app>
+    `
+  }))
+  .add('Discount', () => ({
+    components: { App, AlpacaBadge },
+    template: `
+      <app>
+        <alpaca-badge 
+          discountBadge
+         >
+          Discount badge
+        </alpaca-badge>
       </app>
     `
   }))
