@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  props: ['menu']
+  props: {
+    menu: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 

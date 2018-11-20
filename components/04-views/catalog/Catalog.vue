@@ -44,7 +44,20 @@ export default {
     CatalogFilter,
     CatalogGridItem
   },
-  props: ['products', 'storeConfig', 'filters'],
+  props: {
+    products: {
+      type: Array,
+      required: true
+    },
+    filters: {
+      type: Array,
+      required: true
+    },
+    storeConfig: {
+      type: Object,
+      default: null
+    }
+  },
   methods: {
     productImageUrl(image) {
       return this.storeConfig.base_media_url + 'catalog/product' + image

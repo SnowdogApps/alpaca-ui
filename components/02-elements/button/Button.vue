@@ -23,7 +23,32 @@ import Icon from '../../01-globals/icon/Icon.vue'
 
 export default {
   components: {Icon},
-  props: ['tag', 'customClass', 'icon', 'secondary', 'link', 'fluid']
+  props: {
+    tag: {
+      type: String,
+      default: 'button'
+    },
+    customClass: {
+      type: String,
+      default: null
+    },
+    icon: {
+      type: String,
+      default: null
+    },
+    secondary: {
+      type: Boolean,
+      default: false
+    },
+    link: {
+      type: Boolean,
+      default: false
+    },
+    fluid: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 

@@ -68,7 +68,24 @@ export default {
   components: {
     AlpacaButton
   },
-  props: ['image', 'price', 'name', 'specialPrice']
+  props: {
+    image: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: Number,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    specialPrice: {
+      type: Number,
+      required: true
+    }
+  }
 }
 </script>
 
