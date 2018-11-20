@@ -1,7 +1,11 @@
 <template>
   <container>
-    <div class="catalog">
-      <div class="catalog__sidebar">
+    <div 
+      class="catalog"
+    >
+      <div 
+        class="catalog__sidebar"
+      >
         <catalog-filter
           v-for="filter in filters"
           :key="filter.request_var"
@@ -9,8 +13,12 @@
           :items="filter.filter_items"
         />
       </div>
-      <div class="catalog__products">
-        <ul class="catalog-grid">
+      <div 
+        class="catalog__products"
+      >
+        <ul 
+          class="catalog-grid"
+        >
           <catalog-grid-item
             v-for="product in products"
             :key="product.sku"
