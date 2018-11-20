@@ -5,14 +5,15 @@ import AlpacaHeader from './Header.vue'
 
 import menu from './mocks/menu.json'
 
-storiesOf('Modules/Header', module).add('Default', () => ({
-  components: {App, AlpacaHeader},
-  data: () => ({
-    menu
-  }),
-  template: `
-    <app>
-      <alpaca-header :menu="menu"/>
-    </app>
-  `
-}))
+storiesOf('Modules/Header', module)
+  .add('Default', () => ({
+    components: { App, AlpacaHeader },
+    data: () => ({
+      menu
+    }),
+    template: `
+      <app>
+        <alpaca-header :menu="menu"/>
+      </app>
+    `
+  }))
