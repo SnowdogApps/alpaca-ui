@@ -1,5 +1,7 @@
 <template>
-  <div class="input">
+  <div 
+    class="input"
+  >
     <alpaca-label
       :for="id"
       :hidden="hiddenLabel"

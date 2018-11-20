@@ -1,3 +1,15 @@
+<template>
+  <component
+    :is="tag ? tag : 'h' + level"
+    :class="{
+      [`heading heading--${levelClassName}-level`]: levelClassName && tag,
+      'heading--page': page
+    }"
+  >
+    <slot/>
+  </component>
+</template>
+
 <script>
 export default {
   props: ['level', 'tag', 'page'],
@@ -18,18 +30,6 @@ export default {
           return 'sixth'
       }
     }
-  },
-  render: function(createElement) {
-    return createElement(
-      this.tag ? this.tag : 'h' + this.level,
-      {
-        class: [
-          this.tag ? `heading heading--${this.levelClassName}-level` : '',
-          this.page ? 'heading--page' : ''
-        ]
-      },
-      this.$slots.default
-    )
   }
 }
 </script>

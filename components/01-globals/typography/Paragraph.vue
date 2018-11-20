@@ -1,16 +1,18 @@
+<template>
+  <component
+    :is="tag"
+    :class="tag !== 'p' && 'paragraph'"
+  >
+    <slot/>
+  </component>
+</template>
 <script>
 export default {
-  props: ['tag'],
-  render: function(createElement) {
-    return createElement(
-      this.tag || 'p',
-      {
-        class: {
-          paragraph: this.tag
-        }
-      },
-      this.$slots.default
-    )
+  props: {
+    tag: {
+      type: String,
+      default: 'p'
+    }
   }
 }
 </script>
