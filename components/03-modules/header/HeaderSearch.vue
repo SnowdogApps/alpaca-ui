@@ -1,5 +1,7 @@
 <template>
-  <form class="search-form">
+  <form 
+    class="search-form"
+  >
     <alpaca-input
       id="header-search"
       :hidden-label="true"
@@ -10,7 +12,8 @@
     />
     <alpaca-button
       icon="search"
-      custom-class="search-form__button" />
+      custom-class="search-form__button"
+    />
   </form>
 </template>
 

@@ -1,18 +1,31 @@
+<template>
+  <component
+    :is="tag ? tag : 'label'"
+    :class="{
+      'label': tag,
+      'label--inline': inline,
+      'label--hidden': hidden
+    }"
+  >
+    <slot/>
+  </component>
+</template>
+
 <script>
 export default {
-  props: ['inline', 'hidden', 'tag'],
-  render: function(createElement) {
-    return createElement(
-      this.tag || 'label',
-      {
-        class: {
-          label: this.tag,
-          'label--inline': this.inline,
-          'label--hidden': this.hidden
-        }
-      },
-      this.$slots.default
-    )
+  props: {
+    inline: {
+      type: Boolean,
+      default: false
+    },
+    hidden: {
+      type: Boolean,
+      default: false
+    },
+    tag: {
+      type: String,
+      default: 'label'
+    }
   }
 }
 </script>

@@ -6,7 +6,9 @@
     ]"
   >
     <title>{{ title }} </title>
-    <use :xlink:href="url"/>
+    <use
+      :xlink:href="url"
+    />
   </svg>
 </template>
 
@@ -22,8 +24,8 @@ export default {
       default: null
     },
     customClass: {
-      type: String | Boolean,
-      default: false
+      type: String,
+      default: null
     }
   },
   computed: {
