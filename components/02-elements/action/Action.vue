@@ -1,24 +1,26 @@
 <template>
-  <div class="action ">
+  <div class="action">
     <div
       v-if="button"
       class="action__handler"
     >
       <button
-        class="button action__button "
-        type="button">
-        Example button
+        :class="[customClass, 'button action__button']"
+        type="button"
+      >
+        <slot/>
       </button>
     </div>
     <div
-      v-if="link"
+      v-else
       class="action__handler"
     >
       <a
-        href="#"
-        class="link action__link "
-        title="Link this title">
-        Link this title
+        :class="[customClass, 'link action__link']"
+        :href="href"
+        :title="title"
+      >
+        <slot/>
       </a>
     </div>
   </div>
@@ -31,9 +33,17 @@ export default {
       type: Boolean,
       default: false
     },
-    link: {
-      type: Boolean,
-      default: false
+    href: {
+      type: String,
+      default: null
+    },
+    title: {
+      type: String,
+      default: null
+    },
+    customClass: {
+      type: String,
+      default: null
     }
   }
 }

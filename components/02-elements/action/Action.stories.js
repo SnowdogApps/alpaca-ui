@@ -9,14 +9,7 @@ storiesOf('Elements/Action', module)
     template: `
       <app>
         <alpaca-action :button="true">Test</alpaca-action>
-      </app>
-    `
-  }))
-  .add('Link', () => ({
-    components: {App, AlpacaAction},
-    template: `
-      <app>
-        <alpaca-action :link="true">Test</alpaca-action>
+        <alpaca-action title="test" href="#">Test</alpaca-action>
       </app>
     `
   }))
