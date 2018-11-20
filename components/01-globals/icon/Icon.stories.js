@@ -5,10 +5,10 @@ import Icon from './Icon.vue'
 
 storiesOf('Global/Icon', module)
   .add('Default', () => ({
-  components: {App, Icon},
-  template: `
+    components: { App, Icon },
+    template: `
       <app>
         <icon icon="arrow-down" />
       </app>
     `
-}))
+  }))

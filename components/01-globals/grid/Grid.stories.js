@@ -4,9 +4,10 @@ import App from '../app/App.vue'
 import GridContainer from './grid-container/GridContainer.vue'
 import GridColumn from './grid-column/GridColumn.vue'
 
-storiesOf('Global/Grid', module).add('Default', () => ({
-  components: {App, GridContainer, GridColumn},
-  template: `
+storiesOf('Global/Grid', module)
+  .add('Default', () => ({
+    components: { App, GridContainer, GridColumn },
+    template: `
       <app>
         <grid-container>
           <grid-column width="1-2">
@@ -30,4 +31,4 @@ storiesOf('Global/Grid', module).add('Default', () => ({
         </grid-container>
       </app>
     `
-}))
+  }))
