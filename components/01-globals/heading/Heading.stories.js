@@ -13,14 +13,26 @@ storiesOf('Global/Heading', module)
         >
           Heading level 1
         </alpaca-heading>
-
+      </app>
+    `
+  }))
+  .add('Custom tag', () => ({
+    components: { App, AlpacaHeading },
+    template: `
+      <app>
         <alpaca-heading
           level="4"
           tag="span"
         >
           Span level 4
         </alpaca-heading>
-
+      </app>
+    `
+  }))
+  .add('Page heading', () => ({
+    components: { App, AlpacaHeading },
+    template: `
+      <app>
         <alpaca-heading
           level="6"
           :page="true"
