@@ -1,6 +1,10 @@
 <template>
-  <div :class="['grid__column', width ? `grid__column--${width}` : '']">
-    <div class="grid__content">
+  <div
+    :class="['grid__column', width && `grid__column--${width}`]"
+  >
+    <div
+      class="grid__content"
+    >
       <slot/>
     </div>
   </div>
