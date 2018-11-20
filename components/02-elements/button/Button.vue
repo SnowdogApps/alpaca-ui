@@ -1,7 +1,28 @@
+<template>
+  <component
+    :is="tag ? tag : 'button'"
+    :class="[customClass, {
+      'button': tag,
+      'button--icon': icon,
+      'button--secondary': secondary,
+      'button--link': link,
+      'button--fluid': fluid
+    }]"
+  >
+    <slot/>
+    <icon
+      v-if="icon"
+      :icon="icon"
+      class="button__icon"
+    />
+  </component>
+</template>
+
 <script>
 import Icon from '../../01-globals/icon/Icon.vue'
 
 export default {
+  components: { Icon },
   props: {
     tag: {
       type: String,
@@ -27,32 +48,6 @@ export default {
       type: Boolean,
       default: false
     }
-  },
-  render: function(h) {
-    return h(
-      this.tag,
-      {
-        class: [
-          'button',
-          this.customClass ? this.customClass : '',
-          this.icon ? 'button--icon' : '',
-          this.secondary ? 'button--secondary' : '',
-          this.link ? 'button--link' : '',
-          this.fluid ? 'button--fluid' : ''
-        ]
-      },
-      [
-        this.$slots.default,
-        this.icon
-          ? h(Icon, {
-              props: {
-                icon: this.icon,
-                customClass: 'button__icon'
-              }
-            })
-          : ''
-      ]
-    )
   }
 }
 </script>
@@ -171,5 +166,9 @@ $button__width--fluid: 100% !default;
     fill: $button__fill--icon;
     transition: $button__transition;
   }
+}
+
+button {
+  @extend .button;
 }
 </style>

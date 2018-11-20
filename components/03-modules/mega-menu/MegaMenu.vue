@@ -1,6 +1,10 @@
 <template>
-  <div class="mega-menu">
-    <ul class="mega-menu__list container">
+  <div 
+    class="mega-menu"
+  >
+    <ul 
+      class="mega-menu__list container"
+    >
       <li
         v-for="item in menu"
         :key="'mega-menu-' + item.label"

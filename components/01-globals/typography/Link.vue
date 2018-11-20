@@ -9,7 +9,7 @@
     ]"
     :href="href"
   >
-    <slot />
+    <slot/>
   </a>
 </template>
 

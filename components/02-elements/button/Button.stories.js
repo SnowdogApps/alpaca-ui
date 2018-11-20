@@ -8,9 +8,9 @@ storiesOf('Elements/Button', module)
     components: {App, AlpacaButton},
     template: `
       <app>
-        <alpaca-button>
-          test
-        </alpaca-button>
+        <alpaca-button>Test </alpaca-button>
+        <alpaca-button customClass="test">Test </alpaca-button>
+        <alpaca-button link="true">Test</alpaca-button>
       </app>
     `
   }))
@@ -18,7 +18,7 @@ storiesOf('Elements/Button', module)
     components: {App, AlpacaButton},
     template: `
       <app>
-        <alpaca-button icon="search" />
+        <alpaca-button icon="search"/>
       </app>
     `
   }))

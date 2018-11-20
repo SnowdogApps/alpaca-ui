@@ -12,5 +12,11 @@ module.exports = {
   },
   env: {
     node: true
+  },
+  rules: {
+    "vue/html-closing-bracket-newline": [2, {
+      "singleline": "never",
+      "multiline": "always"
+    }]
   }
 }

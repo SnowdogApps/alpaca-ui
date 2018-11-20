@@ -14,6 +14,7 @@ storiesOf('Global/Typography', module)
         <alpaca-heading level="1">H1</alpaca-heading>
         <alpaca-heading level="4" tag="span">Span level 4</alpaca-heading>
         <alpaca-heading level="6" :page="true">Page level 6</alpaca-heading>
+        <alpaca-heading level="6" >Level 6</alpaca-heading>
       </app>
     `
   }))
@@ -35,7 +36,6 @@ storiesOf('Global/Typography', module)
         <alpaca-link href="http://google.com/">Test</alpaca-link>
         <alpaca-link href="http://google.com/" :invert="true">Test</alpaca-link>
         <alpaca-link href="http://google.com/" :secondary="true">Test</alpaca-link>
-        <alpaca-link tag="span">Test</alpaca-link>
       </app>
     `
   }))
@@ -48,3 +48,4 @@ storiesOf('Global/Typography', module)
       </app>
     `
   }))
+

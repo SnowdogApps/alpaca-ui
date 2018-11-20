@@ -5,7 +5,9 @@
       customClass
     ]"
   >
-    <use :xlink:href="url"/>
+    <use 
+      :xlink:href="url"
+    />
   </svg>
 </template>
 
