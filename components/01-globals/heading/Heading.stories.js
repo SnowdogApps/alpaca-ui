@@ -9,7 +9,7 @@ storiesOf('Global/Heading', module)
     template: `
       <app>
         <alpaca-heading
-          level="1"
+          :level="1"
         >
           Heading level 1
         </alpaca-heading>
@@ -21,7 +21,7 @@ storiesOf('Global/Heading', module)
     template: `
       <app>
         <alpaca-heading
-          level="4"
+          :level="4"
           tag="span"
         >
           Span level 4
@@ -34,7 +34,7 @@ storiesOf('Global/Heading', module)
     template: `
       <app>
         <alpaca-heading
-          level="6"
+          :level="6"
           :page="true"
         >
           Page level 6

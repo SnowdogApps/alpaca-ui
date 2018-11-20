@@ -1,10 +1,10 @@
 <template>
   <component
-    :is="tag === 'h' ? 'h' + level : tag"
-    :class="[
-      tag !== 'h' && `heading heading--${levelClassName}-level`,
-      page && 'heading--page'
-    ]"
+    :is="tag ? tag : 'h' + level"
+    :class="{
+      [`heading heading--${levelClassName}-level`]: tag,
+      'heading--page': page
+    }"
   >
     <slot/>
   </component>
@@ -14,12 +14,13 @@
 export default {
   props: {
     level: {
-      type: String,
-      required: true
+      type: Number,
+      required: true,
+      validator: level => level >= 1 && level <= 6
     },
     tag: {
       type: String,
-      default: 'h'
+      default: null
     },
     page: {
       type: Boolean,
