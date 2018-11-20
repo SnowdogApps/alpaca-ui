@@ -30,7 +30,7 @@ export default {
     },
     customClass: {
       type: String,
-      deafult: null
+      default: null
     }
   }
 }
