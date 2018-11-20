@@ -1,10 +1,10 @@
 <template>
   <component
-    :is="tag ? tag : 'h' + level"
-    :class="{
-      [`heading heading--${levelClassName}-level`]: levelClassName && tag,
-      'heading--page': page
-    }"
+    :is="tag === 'h' ? 'h' + level : tag"
+    :class="[
+      tag !== 'h' && `heading heading--${levelClassName}-level`,
+      page && 'heading--page'
+    ]"
   >
     <slot/>
   </component>
