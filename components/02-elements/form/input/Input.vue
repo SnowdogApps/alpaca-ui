@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import AlpacaLabel from '../../../01-globals/typography/Label.vue'
+import AlpacaLabel from '../../../01-globals/label/Label.vue'
 
 export default {
   components: {
