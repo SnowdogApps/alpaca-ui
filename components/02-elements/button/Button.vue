@@ -8,6 +8,7 @@
       'button--link': link,
       'button--fluid': fluid
     }]"
+    :href="link"
   >
     <slot/>
     <icon
@@ -22,7 +23,7 @@
 import Icon from '../../01-globals/icon/Icon.vue'
 
 export default {
-  components: { Icon },
+  components: {Icon},
   props: {
     tag: {
       type: String,
@@ -41,8 +42,8 @@ export default {
       default: false
     },
     link: {
-      type: Boolean,
-      default: false
+      type: String,
+      default: null
     },
     fluid: {
       type: Boolean,

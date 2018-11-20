@@ -80,10 +80,10 @@
 import Container from '../../01-globals/container/Container.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 import Logo from '../../02-elements/logo/Logo.vue'
-import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
+import MegaMenu from '../mega-menu/MegaMenu.vue'
 
-import HeaderButton from './HeaderButton.vue'
-import HeaderSearch from './HeaderSearch.vue'
+import HeaderButton from '../header-button/HeaderButton.vue'
+import HeaderSearch from '../header-search/HeaderSearch.vue'
 
 export default {
   components: {

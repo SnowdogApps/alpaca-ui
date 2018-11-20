@@ -1,33 +1,34 @@
 import {storiesOf} from '@storybook/vue'
 
 import App from '../app/App.vue'
-import GridContainer from './GridContainer.vue'
-import GridCollumn from './GridCollumn.vue'
+import GridContainer from './grid-container/GridContainer.vue'
+import GridColumn from './grid-column/GridColumn.vue'
 
-storiesOf('Global/Grid', module).add('Default', () => ({
-  components: {App, GridContainer, GridCollumn},
-  template: `
+storiesOf('Global/Grid', module)
+  .add('Default', () => ({
+    components: { App, GridContainer, GridColumn },
+    template: `
       <app>
         <grid-container>
-          <grid-collumn width="1-2">
+          <grid-column width="1-2">
             1-2
-          </grid-collumn>
-          <grid-collumn width="1-2">
+          </grid-column>
+          <grid-column width="1-2">
             1-2
-          </grid-collumn>
+          </grid-column>
         </grid-container>
 
         <grid-container>
-          <grid-collumn width="1-3">
+          <grid-column width="1-3">
             1-3
-          </grid-collumn>
-          <grid-collumn width="1-3">
+          </grid-column>
+          <grid-column width="1-3">
             1-3
-          </grid-collumn>
-          <grid-collumn width="1-3">
+          </grid-column>
+          <grid-column width="1-3">
             1-3
-          </grid-collumn>
+          </grid-column>
         </grid-container>
       </app>
     `
-}))
+  }))

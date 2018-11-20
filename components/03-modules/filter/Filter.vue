@@ -33,9 +33,9 @@
 </template>
 
 <script>
-import Heading from '../../01-globals/typography/Heading.vue'
+import Heading from '../../01-globals/heading/Heading.vue'
 import Divider from '../../02-elements/divider/Divider.vue'
-import AlpacaLink from '../../01-globals/typography/Link.vue'
+import AlpacaLink from '../../01-globals/link/Link.vue'
 
 export default {
   components: {
