@@ -5,6 +5,7 @@
       customClass
     ]"
   >
+    <title>{{ title }} </title>
     <use :xlink:href="url"/>
   </svg>
 </template>
@@ -15,6 +16,10 @@ export default {
     icon: {
       type: String,
       required: true
+    },
+    title: {
+      type: String,
+      default: null
     },
     customClass: {
       type: String | Boolean,
