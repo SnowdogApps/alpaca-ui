@@ -5,20 +5,67 @@ import AlpacaButton from './Button.vue'
 
 storiesOf('Elements/Button', module)
   .add('Default', () => ({
-    components: {App, AlpacaButton},
+    components: { App, AlpacaButton },
     template: `
       <app>
-        <alpaca-button>Test </alpaca-button>
-        <alpaca-button customClass="test">Test </alpaca-button>
-        <alpaca-button link="true">Test</alpaca-button>
+        <alpaca-button>
+          Default button
+        </alpaca-button>
+      </app>
+    `
+  }))
+  .add('Secondary', () => ({
+    components: { App, AlpacaButton },
+    template: `
+      <app>
+        <alpaca-button
+          secondary
+        >
+          Secondary button
+        </alpaca-button>
+      </app>
+    `
+  }))
+  .add('Fluid', () => ({
+    components: { App, AlpacaButton },
+    template: `
+      <app>
+        <alpaca-button
+          fluid
+        >
+          Fluid button
+        </alpaca-button>
+      </app>
+    `
+  }))
+  .add('Link', () => ({
+    components: { App, AlpacaButton },
+    template: `
+      <app>
+        <alpaca-button
+          tag="a"
+          link="#"
+        >
+          Link button
+        </alpaca-button>
       </app>
     `
   }))
   .add('Icon', () => ({
-    components: {App, AlpacaButton},
+    components: { App, AlpacaButton },
     template: `
       <app>
-        <alpaca-button icon="search"/>
+        <alpaca-button icon="search" />
+      </app>
+    `
+  }))
+  .add('Icon and text', () => ({
+    components: { App, AlpacaButton },
+    template: `
+      <app>
+        <alpaca-button icon="search">
+          Search
+        </alpaca-button>
       </app>
     `
   }))
