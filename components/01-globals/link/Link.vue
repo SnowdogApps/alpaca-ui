@@ -2,20 +2,37 @@
   <a
     :class="[
       'link', {
-        'link--invert': invert,
+        'link--inverted': inverted,
         'link--secondary': secondary
       },
       customClass
     ]"
     :href="href"
   >
-    <slot />
+    <slot/>
   </a>
 </template>
 
 <script>
 export default {
-  props: ['href', 'invert', 'secondary', 'customClass']
+  props: {
+    href: {
+      type: String,
+      required: true
+    },
+    inverted: {
+      type: Boolean,
+      default: false
+    },
+    secondary: {
+      type: Boolean,
+      default: false
+    },
+    customClass: {
+      type: String,
+      default: null
+    }
+  }
 }
 </script>
 
@@ -27,8 +44,8 @@ $link__font-weight: $font-weight-normal !default;
 $link__color-hover: $color-secondary !default;
 $link__line-height: $font-line-height !default;
 $link__transition: $transition-base !default;
-$link__color--invert: $gray-darker !default;
-$link__color-hover--invert: $blue !default;
+$link__color--inverted: $gray-darker !default;
+$link__color-hover--inverted: $blue !default;
 
 .link {
   color: $link__color;
@@ -44,12 +61,12 @@ $link__color-hover--invert: $blue !default;
     color: $link__color-hover;
   }
 
-  &--invert {
-    color: $link__color--invert;
+  &--inverted {
+    color: $link__color--inverted;
 
     &:hover,
     &:focus {
-      color: $link__color-hover--invert;
+      color: $link__color-hover--inverted;
     }
   }
 

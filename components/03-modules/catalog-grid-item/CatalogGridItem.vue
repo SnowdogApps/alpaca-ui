@@ -1,5 +1,7 @@
 <template>
-  <li class="catalog-grid-item">
+  <li 
+    class="catalog-grid-item"
+  >
     <a
       href="#"
       class="catalog-grid-item__link"
@@ -10,8 +12,12 @@
       >
     </a>
 
-    <section class="catalog-grid-item__details">
-      <h2 class="catalog-grid-item__name">
+    <section 
+      class="catalog-grid-item__details"
+    >
+      <h2 
+        class="catalog-grid-item__name"
+      >
         <a
           href="#"
           class="catalog-grid-item__link catalog-grid-item__link--name"
@@ -19,11 +25,15 @@
         />
       </h2>
 
-      <div class="catalog-grid-item__price">
+      <div 
+        class="catalog-grid-item__price"
+      >
         $ {{ price }}
       </div>
 
-      <div class="catalog-grid-item__actions">
+      <div 
+        class="catalog-grid-item__actions"
+      >
         <form
           action="#"
           class="catalog-grid-item__primary-form"
@@ -36,9 +46,15 @@
           </alpaca-button>
         </form>
 
-        <div class="catalog-grid-item__secondary-action">
-          <alpaca-button icon="heart" />
-          <alpaca-button icon="compare" />
+        <div 
+          class="catalog-grid-item__secondary-action"
+        >
+          <alpaca-button 
+            icon="heart"
+          />
+          <alpaca-button 
+            icon="compare"
+          />
         </div>
       </div>
     </section>
@@ -52,7 +68,24 @@ export default {
   components: {
     AlpacaButton
   },
-  props: ['image', 'price', 'name', 'specialPrice']
+  props: {
+    image: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: Number,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    specialPrice: {
+      type: Number,
+      required: true
+    }
+  }
 }
 </script>
 
