@@ -1,6 +1,8 @@
 <template>
-  <div class="page-wrapper">
-    <slot />
+  <div 
+    class="page-wrapper"
+  >
+    <slot/>
   </div>
 </template>
 

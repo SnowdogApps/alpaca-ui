@@ -9,13 +9,30 @@
     ]"
     :href="href"
   >
-    <slot />
+    <slot/>
   </a>
 </template>
 
 <script>
 export default {
-  props: ['href', 'invert', 'secondary', 'customClass']
+  props: {
+    href: {
+      type: String,
+      required: true
+    },
+    invert: {
+      type: Boolean,
+      default: false
+    },
+    secondary: {
+      type: Boolean,
+      default: false
+    },
+    customClass: {
+      type: String,
+      default: null
+    }
+  }
 }
 </script>
 

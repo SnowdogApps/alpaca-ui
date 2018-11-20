@@ -1,35 +1,57 @@
 <template>
   <div>
-    <header class="header">
+    <header 
+      class="header"
+    >
       <container>
-        <div class="header__wrapper">
-          <div class="header__buttons">
-            <header-button icon="heart">
+        <div 
+          class="header__wrapper"
+        >
+          <div 
+            class="header__buttons"
+          >
+            <header-button 
+              icon="heart"
+            >
               Wishlist
             </header-button>
 
-            <header-button icon="phone">
+            <header-button 
+              icon="phone"
+            >
               Contact
             </header-button>
 
-            <header-button icon="account">
+            <header-button 
+              icon="account"
+            >
               Account
             </header-button>
 
-            <div class="header__minicart">
+            <div 
+              class="header__minicart"
+            >
               <button
                 type="button"
                 class="header-button popup-trigger"
                 data-popuptrigger="popup-minicart"
               >
-                <alpaca-icon icon="shopping-cart" />
+                <alpaca-icon 
+                  icon="shopping-cart"
+                />
 
-                <span class="header-button__text">
+                <span 
+                  class="header-button__text"
+                >
                   Cart
                 </span>
 
-                <span class="header-button__counter">
-                  <span class="header-button__counter-dot"/>
+                <span 
+                  class="header-button__counter"
+                >
+                  <span 
+                    class="header-button__counter-dot"
+                  />
                 </span>
               </button>
             </div>
@@ -37,16 +59,20 @@
             <!-- <minicart /> -->
           </div>
 
-          <logo />
+          <logo/>
 
-          <div class="header__search-wrapper">
-            <header-search />
+          <div 
+            class="header__search-wrapper"
+          >
+            <header-search/>
           </div>
         </div>
       </container>
     </header>
 
-    <mega-menu :menu="menu"/>
+    <mega-menu 
+      :menu="menu"
+    />
   </div>
 </template>
 
