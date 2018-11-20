@@ -28,17 +28,44 @@ export default {
   components: {
     AlpacaLabel
   },
-  props: [
-    'label',
-    'hiddenLabel',
-    'inlineLabel',
-    'id',
-    'name',
-    'type',
-    'placeholder',
-    'labelClass',
-    'inputClass'
-  ]
+  props: {
+    label: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      required: true
+    },
+    id: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    placeholder: {
+      type: String,
+      required: true
+    },
+    hiddenLabel: {
+      type: Boolean,
+      default: false
+    },
+    inlineLabel: {
+      type: Boolean,
+      default: false
+    },
+    labelClass: {
+      type: String,
+      default: null
+    },
+    inputClass: {
+      type: String,
+      default: null
+    }
+  }
 }
 </script>
 
