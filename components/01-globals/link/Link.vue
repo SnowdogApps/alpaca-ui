@@ -1,7 +1,8 @@
 <template>
   <a
     :class="[
-      'link', {
+      'link',
+      {
         'link--inverted': inverted,
         'link--secondary': secondary
       },
@@ -9,7 +10,7 @@
     ]"
     :href="href"
   >
-    <slot/>
+    <slot />
   </a>
 </template>
 

@@ -1,16 +1,12 @@
 <template>
-  <button 
-    class="header-button"
-  >
-    <alpaca-icon
-      :icon="icon"
+  <button class="header-button">
+    <alpaca-icon 
+      :icon="icon" 
       custom-class="header-button__icon"
     />
 
-    <span 
-      class="header-button__text"
-    >
-      <slot/>
+    <span class="header-button__text">
+      <slot />
     </span>
   </button>
 </template>
@@ -19,7 +15,7 @@
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
 export default {
-  components: {AlpacaIcon},
+  components: { AlpacaIcon },
   props: {
     icon: {
       type: String,

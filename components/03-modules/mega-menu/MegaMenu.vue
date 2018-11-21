@@ -1,16 +1,12 @@
 <template>
-  <div 
-    class="mega-menu"
-  >
-    <ul 
-      class="mega-menu__list container"
-    >
-      <li
-        v-for="item in menu"
+  <div class="mega-menu">
+    <ul class="mega-menu__list container">
+      <li 
+        v-for="item in menu" 
         :key="'mega-menu-' + item.label"
       >
-        <router-link
-          :to="item.href"
+        <router-link 
+          :to="item.href" 
           class="mega-menu__link"
         >
           {{ item.label }}

@@ -1,9 +1,9 @@
 <template>
-  <component
+  <component 
     :is="tag"
     :class="tag !== 'blockquote' && 'blockquote'"
   >
-    <slot/>
+    <slot />
   </component>
 </template>
 
