@@ -6,7 +6,7 @@
       'badge--discount': type === 'discount'
     }]"
   >
-    <slot/>
+    <slot />
   </component>
 </template>
 
