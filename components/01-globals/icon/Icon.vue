@@ -5,7 +5,7 @@
       customClass
     ]"
   >
-    <title>{{ title }} </title>
+    <title>{{ title }}</title>
     <use
       :xlink:href="url"
     />

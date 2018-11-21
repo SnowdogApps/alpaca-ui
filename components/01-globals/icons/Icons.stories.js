@@ -1,17 +1,16 @@
 import {storiesOf} from '@storybook/vue'
+import { withDocs } from 'storybook-readme';
 
-import iconsInfo from './iconsInfo.json'
+import IconsReadme from './README.md';
 
 import App from '../app/App.vue'
-import Icon from '../icon/Icon.vue'
+import AlpacaIcons from '../icons/Icons.vue'
 
-console.log(iconsInfo);
-
-storiesOf('Global/Icons', module).add('Default', () => ({
-  components: {App, Icon},
-  template: `
+storiesOf('Global/Icons', module)
+  .add('Readme', withDocs(IconsReadme, () => ({
+    components: { App, AlpacaIcons },
+    template: ` 
       <app>
-        <icon icon="arrow-down" title="test"/>
-      </app>
-    `
-}))
+         <alpaca-icons/>
+     </app>`
+  })))
