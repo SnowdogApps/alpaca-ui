@@ -1,5 +1,11 @@
 module.exports = (storybookBaseConfig, configType, defaultConfig) => {
   defaultConfig.module.rules.push({
+    test: /\.stories\.jsx?$/,
+    loaders: [require.resolve('@storybook/addon-storysource/loader')],
+    enforce: 'pre',
+  })
+
+  defaultConfig.module.rules.push({
     test: /\.scss$/,
     use: [
       'vue-style-loader',
