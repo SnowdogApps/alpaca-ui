@@ -1,19 +1,21 @@
 <template>
   <component
     :is="tag ? tag : 'button'"
-    :class="[customClass, {
-      'button': tag,
-      'button--icon': icon,
-      'button--secondary': secondary,
-      'button--link': link,
-      'button--fluid': fluid
-    }]"
+    :class="[
+      customClass,
+      {
+        button: tag,
+        'button--icon': icon,
+        'button--secondary': secondary,
+        'button--link': link,
+        'button--fluid': fluid
+      }
+    ]"
     :href="link"
   >
-    <slot/>
-    <icon
-      v-if="icon"
-      :icon="icon"
+    <slot /> <icon 
+      v-if="icon" 
+      :icon="icon" 
       class="button__icon"
     />
   </component>
@@ -23,7 +25,7 @@
 import Icon from '../../01-globals/icon/Icon.vue'
 
 export default {
-  components: {Icon},
+  components: { Icon },
   props: {
     tag: {
       type: String,

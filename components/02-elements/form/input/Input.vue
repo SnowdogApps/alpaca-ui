@@ -1,7 +1,5 @@
 <template>
-  <div 
-    class="input"
-  >
+  <div class="input">
     <alpaca-label
       :for="id"
       :hidden="hiddenLabel"
@@ -12,8 +10,8 @@
     </alpaca-label>
 
     <input
-      :class="['input__field', inputClass]"
       :id="id"
+      :class="['input__field', inputClass]"
       :name="name"
       :type="type"
       :placeholder="placeholder"
