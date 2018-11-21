@@ -2,8 +2,8 @@
   <component
     :is="tag"
     :class="['badge', {
-      'badge--new': newBadge,
-      'badge--discount': discountBadge
+      'badge--new': type === 'new' ,
+      'badge--discount': type === 'discount'
     }]"
   >
     <slot/>
@@ -17,13 +17,10 @@ export default {
       type: String,
       default: 'div'
     },
-    newBadge: {
-      type: Boolean,
-      default: false
-    },
-    discountBadge: {
-      type: Boolean,
-      default: false
+    type: {
+      type: String,
+      default: null,
+      validate: type => ['new', 'discount'].indexOf(type)
     }
   }
 }

@@ -31,7 +31,7 @@ storiesOf('Elements/Badge', module)
     template: `
       <app>
         <alpaca-badge
-          newBadge
+          type="new"
         >
           New badge
         </alpaca-badge>
@@ -43,8 +43,8 @@ storiesOf('Elements/Badge', module)
     template: `
       <app>
         <alpaca-badge 
-          discountBadge
-         >
+          type="discount"
+        >
           Discount badge
         </alpaca-badge>
       </app>
