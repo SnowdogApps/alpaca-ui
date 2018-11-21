@@ -8,7 +8,7 @@
         :class="[customClass, 'button action__button']"
         type="button"
       >
-        <slot/>
+        <slot />
       </button>
     </div>
     <div
@@ -20,7 +20,7 @@
         :href="href"
         :title="title"
       >
-        <slot/>
+        <slot />
       </a>
     </div>
   </div>
