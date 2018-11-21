@@ -1,11 +1,7 @@
 <template>
-  <div
-    :class="['grid__column', width && `grid__column--${width}`]"
-  >
-    <div
-      class="grid__content"
-    >
-      <slot/>
+  <div :class="['grid__column', width && `grid__column--${width}`]">
+    <div class="grid__content">
+      <slot />
     </div>
   </div>
 </template>
@@ -14,8 +10,8 @@
 export default {
   props: {
     width: {
-      type: Number | Boolean,
-      default: false
+      type: Number,
+      default: null
     }
   }
 }

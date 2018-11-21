@@ -1,23 +1,17 @@
 <template>
-  <li 
-    class="catalog-grid-item"
-  >
-    <a
-      href="#"
+  <li class="catalog-grid-item">
+    <a 
+      href="#" 
       class="catalog-grid-item__link"
     >
-      <img
-        :src="image"
+      <img 
+        :src="image" 
         class="catalog-grid-item__image"
       >
     </a>
 
-    <section 
-      class="catalog-grid-item__details"
-    >
-      <h2 
-        class="catalog-grid-item__name"
-      >
+    <section class="catalog-grid-item__details">
+      <h2 class="catalog-grid-item__name">
         <a
           href="#"
           class="catalog-grid-item__link catalog-grid-item__link--name"
@@ -25,17 +19,13 @@
         />
       </h2>
 
-      <div 
-        class="catalog-grid-item__price"
-      >
+      <div class="catalog-grid-item__price">
         $ {{ price }}
       </div>
 
-      <div 
-        class="catalog-grid-item__actions"
-      >
-        <form
-          action="#"
+      <div class="catalog-grid-item__actions">
+        <form 
+          action="#" 
           class="catalog-grid-item__primary-form"
         >
           <alpaca-button
@@ -46,15 +36,9 @@
           </alpaca-button>
         </form>
 
-        <div 
-          class="catalog-grid-item__secondary-action"
-        >
-          <alpaca-button 
-            icon="heart"
-          />
-          <alpaca-button 
-            icon="compare"
-          />
+        <div class="catalog-grid-item__secondary-action">
+          <alpaca-button icon="heart" />
+          <alpaca-button icon="compare" />
         </div>
       </div>
     </section>

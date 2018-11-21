@@ -1,4 +1,4 @@
-import {storiesOf} from '@storybook/vue'
+import { storiesOf } from '@storybook/vue'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaButton from './Button.vue'

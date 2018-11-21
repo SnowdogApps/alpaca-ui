@@ -1,9 +1,9 @@
 <template>
-  <component
-    :is="tag"
+  <component 
+    :is="tag" 
     :class="tag !== 'p' && 'paragraph'"
   >
-    <slot/>
+    <slot />
   </component>
 </template>
 
