@@ -6,7 +6,7 @@
       'heading--page': page
     }"
   >
-    <slot/>
+    <slot />
   </component>
 </template>
 

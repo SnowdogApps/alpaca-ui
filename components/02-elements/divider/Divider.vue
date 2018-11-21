@@ -1,13 +1,6 @@
 <template>
-  <div 
-    class="divider"
-  >
-    <span 
-      class="divider__left"
-    />
-    <span 
-      class="divider__right"
-    />
+  <div class="divider">
+    <span class="divider__left" /> <span class="divider__right" />
   </div>
 </template>
 

@@ -2,7 +2,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
   defaultConfig.module.rules.push({
     test: /\.stories\.jsx?$/,
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
-    enforce: 'pre',
+    enforce: 'pre'
   })
 
   defaultConfig.module.rules.push({
@@ -27,19 +27,10 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
 
   defaultConfig.module.rules.push({
     test: /\.vue$/,
-    enforce: 'pre',
-    loader: 'prettier-loader',
+    loader: 'eslint-loader',
     options: {
-      parser: 'vue',
-      resolveConfigOptions: {
-        editorconfig: true
-      }
+      fix: true
     }
-  })
-
-  defaultConfig.module.rules.push({
-    test: /\.vue$/,
-    loader: "eslint-loader"
   })
 
   return defaultConfig

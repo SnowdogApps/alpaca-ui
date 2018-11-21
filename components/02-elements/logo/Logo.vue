@@ -1,10 +1,10 @@
 <template>
-  <router-link
-    class="logo"
+  <router-link 
+    class="logo" 
     to="/"
   >
-    <img
-      class="logo__image"
+    <img 
+      class="logo__image" 
       src="/icons/alpaca.svg"
     >
   </router-link>

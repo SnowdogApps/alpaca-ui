@@ -2,12 +2,12 @@
   <component
     :is="tag ? tag : 'label'"
     :class="{
-      'label': tag,
+      label: tag,
       'label--inline': inline,
       'label--hidden': hidden
     }"
   >
-    <slot/>
+    <slot />
   </component>
 </template>
 
