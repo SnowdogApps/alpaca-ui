@@ -5,14 +5,14 @@
   >
     <picture class="image">
       <source
-        v-for="source in image.sources"
-        :key="source.src"
+        v-for="(source, i) in image.sources"
+        :key="i"
         :srcset="source.src"
         :media="source.mediaQuery"
       >
       <img
-        class="lazyload "
-        :src="image.src"
+        class="lazyload"
+        :src="image.defaultSrc"
         :alt="image.alt"
       >
     </picture>
@@ -56,5 +56,4 @@
       width: 100%;
     }
   }
-
 </style>

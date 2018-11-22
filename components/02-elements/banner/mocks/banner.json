@@ -2,7 +2,7 @@
   "link": "#",
   "attributes": "aria-label='descriptive text about banner action and / or image'",
   "image": {
-    "default-src": "/images/banner/banner-320_176.jpg",
+    "defaultSrc": "/images/banner/banner-320_176.jpg",
     "sources": [
       {
         "src": "/images/banner/banner-320_176.jpg",
