@@ -15,8 +15,7 @@ storiesOf('Elements/Breadcrumbs', module)
     },
     template: `
       <app>
-        <alpaca-breadcrumbs 
-        :breadcrumbs="breadcrumbs"/>
+        <alpaca-breadcrumbs :breadcrumbs="breadcrumbs"/>
       </app>
     `
   }))
