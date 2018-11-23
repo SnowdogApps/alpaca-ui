@@ -1,15 +1,15 @@
 <template>
   <div
-    class="message"
     :class="[
+      'message',
       customClass,
       messageClass
     ]"
     role="alert"
   >
     <slot />
-    <icon 
-      :icon="getIcon" 
+    <icon
+      :icon="getIcon"
       class="message__icon"
     />
   </div>
@@ -48,7 +48,7 @@ export default {
       }
     },
     getIcon() {
-      if(this.icon) return this.icon
+      if (this.icon) return this.icon
 
       switch (this.type) {
         case 'success':
@@ -62,7 +62,7 @@ export default {
       }
     }
   }
-}
+  }
 </script>
 
 <style lang="scss">
@@ -86,7 +86,7 @@ $message__icon-fill          : $blue !default;
 $message__icon-fill--success : $color-primary !default;
 $message__icon-fill--error   : $red !default;
 
-.message {
+  .message {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
@@ -106,34 +106,34 @@ $message__icon-fill--error   : $red !default;
     }
 
     &__icon {
-        position: absolute;
-        left: $message__icon-spacer;
-        top: 0;
-        bottom: 0;
-        height: $message__icon-spacer;
-        width: $message__icon-spacer;
-        margin: auto;
-        fill: $message__icon-fill;
+      position: absolute;
+      left: $message__icon-spacer;
+      top: 0;
+      bottom: 0;
+      height: $message__icon-spacer;
+      width: $message__icon-spacer;
+      margin: auto;
+      fill: $message__icon-fill;
 
-        .message--success & {
-          fill: $message__icon-fill--success;
-        }
+      .message--success & {
+        fill: $message__icon-fill--success;
+      }
 
-        .message--error & {
-          fill: $message__icon-fill--error;
-        }
+      .message--error & {
+        fill: $message__icon-fill--error;
+      }
     }
 
     &--success {
-        background-color: $message__background--success;
-        border: $message__border--success;
-        color: $message__color--success;
+      background-color: $message__background--success;
+      border: $message__border--success;
+      color: $message__color--success;
     }
 
     &--error {
-        background-color: $message__background--error;
-        border: $message__border--error;
-        color: $message__color--error;
+      background-color: $message__background--error;
+      border: $message__border--error;
+      color: $message__color--error;
     }
-}
+  }
 </style>
