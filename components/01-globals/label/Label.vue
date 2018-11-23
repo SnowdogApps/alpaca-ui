@@ -1,11 +1,11 @@
 <template>
   <component
-    :is="tag ? tag : 'label'"
-    :class="{
-      label: tag,
+    :is="tag !== 'label' && tag"
+    :class="[customClass, {
+      label: tag !== 'label',
       'label--inline': inline,
       'label--hidden': hidden
-    }"
+    }]"
   >
     <slot />
   </component>
@@ -25,6 +25,10 @@ export default {
     tag: {
       type: String,
       default: 'label'
+    },
+    customClass: {
+      type: String,
+      default: null
     }
   }
 }

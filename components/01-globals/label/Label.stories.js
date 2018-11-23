@@ -3,14 +3,28 @@ import { storiesOf } from '@storybook/vue'
 import App from '../app/App.vue'
 import AlpacaLabel from './Label.vue'
 
-storiesOf('Global/Label', module).add('Default', () => ({
-  components: { App, AlpacaLabel },
-  template: `
+storiesOf('Global/Label', module)
+  .add('Default', () => ({
+    components: { App, AlpacaLabel },
+    template: `
     <app>
-      <alpaca-label>Test</alpaca-label>
-      <alpaca-label :inline="true">Test</alpaca-label>
-      <alpaca-label :hidden="true">Test</alpaca-label>
-      <alpaca-label tag="span">Test</alpaca-label>
+      <alpaca-label>Label</alpaca-label>
     </app>
   `
-}))
+  }))
+  .add('Custom tag', () => ({
+    components: { App, AlpacaLabel },
+    template: `
+    <app>
+      <alpaca-label tag="span" customClass="custom">Custom tag label</alpaca-label>
+    </app>
+  `
+  }))
+  .add('Inline', () => ({
+    components: { App, AlpacaLabel },
+    template: `
+    <app>
+      <alpaca-label :inline="true">Inline label</alpaca-label>
+    </app>
+  `
+  }))
