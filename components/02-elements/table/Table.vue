@@ -1,0 +1,325 @@
+<template>
+  <table
+    class="table"
+    :class="customClass"
+    tabindex="0"
+    role="table"
+  >
+    <caption
+      v-if="caption"
+      class="table__caption"
+    >
+      {{ caption }}
+    </caption>
+
+    <thead v-if="headCells">
+      <tr>
+        <th
+          v-for="(cell, i) in headCells"
+          :key="i"
+        >
+          {{ cell }}
+        </th>
+      </tr>
+    </thead>
+    
+    <tbody v-if="bodyRows">
+      <tr
+        v-for="(rows, i) in bodyRows"
+        :key="i"
+      >
+        <td
+          v-for="(cell, j) in rows"
+          :key="j"
+        >
+          {{ cell }}
+        </td>
+      </tr>
+    </tbody>
+    
+    <tfoot v-if="footCells">
+      <tr>
+        <td
+          v-for="(cell, i) in footCells"
+          :key="i"
+        >
+          {{ cell }}
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</template>
+
+<script>
+export default {
+  props: {
+    customClass: {
+      type: String,
+      default: null
+    },
+    caption: {
+      type: String,
+      default: null
+    },
+    headCells: {
+      type: Array,
+      default: () => []
+    },
+    bodyRows: {
+      type: Array,
+      default: () => []
+    },
+    footCells: {
+      type: Array,
+      default: () => []
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+$table__padding                  : $spacer--medium !default;
+$table__color                    : $black !default;
+$table__background               : $white !default;
+$table__font-size                : $font-size-small !default;
+$table__border-radius            : $border-radius !default;
+$table__border                   : 1px solid $gray-light !default;
+$table__th-background            : $gray-lightest !default;
+$table__td-background            : $white !default;
+$table__tfoot-background         : $gray-lightest !default;
+$table__background-odd--odd-even : $white !default;
+$table__background-even--odd-even: #f9f9f9 !default;
+$table__th-font-weight--clean    : $font-weight-bold !default;
+$table__th-background--clean     : transparent !default;
+$table__background-odd--clean    : #f9f9f9 !default;
+$table__background-even--clean   : $white !default;
+
+.table {
+  width: 100%;
+  background: $table__background;
+  margin: 1em 0;
+  border: $table__border;
+  border-radius: $table__border-radius;
+  color: $table__color;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: $table__font-size;
+
+  &__caption {
+    @include visually-hidden();
+  }
+
+  thead {
+    tr {
+      padding: 0;
+      border-bottom: 0;
+
+      @include mq($screen-m) {
+        border-top-left-radius: $table__border-radius;
+        border-top-right-radius: $table__border-radius;
+      }
+    }
+
+    th {
+      &:first-child {
+        @include mq($screen-m) {
+          border-top-left-radius: $table__border-radius;
+        }
+      }
+
+      &:last-child {
+        @include mq($screen-m) {
+          border-top-right-radius: $table__border-radius;
+        }
+      }
+    }
+  }
+
+  tr {
+    display: block;
+    padding: $table__padding 0;
+    border-bottom: $table__border;
+
+    @include mq($screen-m) {
+      padding: 0;
+      border-bottom: 0;
+      display: table-row;
+    }
+  }
+
+  th {
+    display: none;
+
+    &:last-child {
+      @include mq($screen-m) {
+        border-right: 0;
+      }
+    }
+
+    @include mq($screen-m) {
+      display: table-cell;
+      padding: $table__padding;
+      background: $table__th-background;
+      border-bottom: $table__border;
+      border-right: $table__border;
+    }
+  }
+
+  td {
+    display: flex;
+    padding: 5px $table__padding;
+    background: $table__td-background;
+
+    &:before {
+      content: attr(data-th);
+      font-weight: bold;
+      margin-right: 10px;
+      max-width: 25%;
+      width: 25%;
+      display: block;
+
+      @include mq($screen-m) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      @include mq($screen-m) {
+        border-right: 0;
+      }
+    }
+
+    @include mq($screen-m) {
+      display: table-cell;
+      padding: $table__padding;
+      background: $table__td-background;
+      border-bottom: $table__border;
+      border-right: $table__border;
+    }
+  }
+
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          &:first-child {
+            @include mq($screen-m) {
+              border-bottom-left-radius: $table__border-radius;
+            }
+          }
+
+          &:last-child {
+            @include mq($screen-m) {
+              border-bottom-right-radius: $table__border-radius;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  tfoot {
+    tr {
+      &:last-child {
+        border-bottom: 0;
+
+        td {
+          border-bottom: 0;
+
+          &:first-child {
+            @include mq($screen-m) {
+              border-bottom-left-radius: $table__border-radius;
+            }
+          }
+
+          &:last-child {
+            @include mq($screen-m) {
+              border-bottom-right-radius: $table__border-radius;
+            }
+          }
+        }
+      }
+    }
+
+    td {
+      display: block;
+      padding: 5px $table__padding;
+      background: $table__background;
+
+      @include mq($screen-m) {
+        display: table-cell;
+        padding: $table__padding;
+        background: $table__tfoot-background;
+        border-right: $table__border;
+      }
+    }
+  }
+
+  &--odd-even {
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background: $table__background-odd--odd-even;
+        }
+
+        &:nth-child(even) {
+          background: $table__background-even--odd-even;
+        }
+
+        &:first-child {
+          border-top-left-radius: $table__border-radius;
+          border-top-right-radius: $table__border-radius;
+
+          @include mq($screen-m) {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+
+      td {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &--clean {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+
+    thead {
+      tr {
+        padding: 0;
+        border-bottom: 0;
+      }
+    }
+
+    th {
+      border-bottom: 0;
+      border-right: 0;
+      background: $table__th-background--clean;
+      text-align: left;
+      font-weight: $table__th-font-weight--clean;
+    }
+
+    td {
+      border-bottom: 0;
+      border-right: 0;
+      background: $table__th-background--clean;
+    }
+
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background: $table__background-odd--clean;
+        }
+
+        &:nth-child(even) {
+          background: $table__background-even--clean;
+        }
+      }
+    }
+  }
+}
+</style>

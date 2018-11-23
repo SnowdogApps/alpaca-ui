@@ -1,0 +1,8 @@
+{
+  "headCells": ["Example heading 1", "Example heading 2", "Example heading 3"],
+  "bodyRows": [
+    ["Example content 1", "Example content 2", "Example content 3"],
+    ["Example content 4", "Example content 5", "Example content 6"]
+  ],
+  "footCells": ["Footer content"]
+}
