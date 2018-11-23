@@ -33,8 +33,7 @@
     },
     data() {
       return {
-        isBarVisible: false,
-        focusable: []
+        isBarVisible: false
       }
     },
     mounted() {
@@ -47,18 +46,6 @@
       onButtonClose() {
         localStorage.setItem(this.dataType, 'closed');
         this.isBarVisible = false;
-        this.focusNextElement();
-      },
-      focusNextElement() {
-        // after closing message box move focus on first visible focusable element on the page
-        this.focusable = this.$el.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]');
-
-        if (this.focusable.length) {
-          let firstFocusable = [ ...this.focusable].find(el => {
-            return el.offsetParent !== null
-          })
-          firstFocusable.focus();
-        }
       }
     }
   }
