@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     onClick(event) {
-      this.$emit('click', event)
+      this.$emit('click', event);
     }
   }
 }
