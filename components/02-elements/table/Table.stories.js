@@ -14,10 +14,10 @@ storiesOf('Elements/Table', module)
     template: `
       <app>
         <alpaca-table
-          caption="Tekst"
-          :headCells="table.headCells"
-          :bodyRows="table.bodyRows"
-          :footCells="table.footCells"
+          :caption="table.caption"
+          :head-cells="table.headCells"
+          :body-rows="table.bodyRows"
+          :foot-cells="table.footCells"
         />
       </app>
     `
@@ -30,11 +30,11 @@ storiesOf('Elements/Table', module)
     template: `
       <app>
         <alpaca-table
-          customClass="table--odd-even"
-          caption="Tekst"
-          :headCells="table.headCells"
-          :bodyRows="table.bodyRows"
-          :footCells="table.footCells"
+          class-name="table--odd-even"
+          :caption="table.caption"
+          :head-cells="table.headCells"
+          :body-rows="table.bodyRows"
+          :foot-cells="table.footCells"
         />
       </app>
     `

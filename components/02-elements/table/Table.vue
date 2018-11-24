@@ -1,7 +1,7 @@
 <template>
   <table
     class="table"
-    :class="customClass"
+    :class="className"
     tabindex="0"
     role="table"
   >
@@ -13,12 +13,16 @@
     </caption>
 
     <thead v-if="headCells">
-      <tr>
+      <tr role="row">
         <th
           v-for="(cell, i) in headCells"
           :key="i"
+          :class="cell.class"
+          :colspan="cell.colspan"
+          :scope="cell.scope"
+          role="columnheader"
         >
-          {{ cell }}
+          {{ cell.text }}
         </th>
       </tr>
     </thead>
@@ -27,23 +31,33 @@
       <tr
         v-for="(rows, i) in bodyRows"
         :key="i"
+        role="row"
       >
         <td
           v-for="(cell, j) in rows"
           :key="j"
+          :class="cell.class"
+          :data-th="cell.mobileHeading"
+          :colspan="cell.colspan"
+          :scope="cell.scope"
+          role="gridcell"
         >
-          {{ cell }}
+          {{ cell.text }}
         </td>
       </tr>
     </tbody>
     
     <tfoot v-if="footCells">
-      <tr>
+      <tr role="row">
         <td
           v-for="(cell, i) in footCells"
           :key="i"
+          :class="cell.class"
+          :colspan="cell.colspan"
+          :scope="cell.scope"
+          role="gridcell"
         >
-          {{ cell }}
+          {{ cell.text }}
         </td>
       </tr>
     </tfoot>
@@ -53,7 +67,7 @@
 <script>
 export default {
   props: {
-    customClass: {
+    className: {
       type: String,
       default: null
     },
@@ -279,45 +293,6 @@ $table__background-even--clean   : $white !default;
 
       td {
         background-color: transparent;
-      }
-    }
-  }
-
-  &--clean {
-    margin: 0;
-    border: 0;
-    border-radius: 0;
-
-    thead {
-      tr {
-        padding: 0;
-        border-bottom: 0;
-      }
-    }
-
-    th {
-      border-bottom: 0;
-      border-right: 0;
-      background: $table__th-background--clean;
-      text-align: left;
-      font-weight: $table__th-font-weight--clean;
-    }
-
-    td {
-      border-bottom: 0;
-      border-right: 0;
-      background: $table__th-background--clean;
-    }
-
-    tbody {
-      tr {
-        &:nth-child(odd) {
-          background: $table__background-odd--clean;
-        }
-
-        &:nth-child(even) {
-          background: $table__background-even--clean;
-        }
       }
     }
   }
