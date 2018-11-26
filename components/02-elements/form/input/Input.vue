@@ -1,25 +1,29 @@
 <template>
-  <div class="input">
+  <div
+    :class="['input',{
+      'input--inline': inline
+    }]"
+  >
     <alpaca-label
       :for="id"
       :hidden="hiddenLabel"
-      :inline="inlineLabel"
-      :custom-class="labelClass"
+      :custom-class="['label', labelClass]"
     >
       {{ label }}
     </alpaca-label>
 
     <component
-      :is="tag !== 'input' && tag"
+      :is="tag"
       :id="id"
       :class="['input__field',
-               inputClass,
-               tag === 'textarea' && 'input__field--textarea'
+        inputClass,
+        tag === 'textarea' && 'input__field--textarea'
       ]"
       :name="name"
       :type="type"
       :placeholder="placeholder"
-    /></div>
+    />
+  </div>
 </template>
 
 <script>
@@ -58,7 +62,7 @@
         type: Boolean,
         default: false
       },
-      inlineLabel: {
+      inline: {
         type: Boolean,
         default: false
       },

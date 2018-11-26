@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag !== 'label' && tag"
+    :is="tag"
     :class="[customClass, {
       label: tag !== 'label',
       'label--inline': inline,

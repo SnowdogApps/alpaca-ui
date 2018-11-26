@@ -9,26 +9,11 @@ storiesOf('Elements/Form/Input', module)
     template: `
       <app>
         <alpaca-input 
-          label="Default input"
+          label="Default label"
           type="text"
           id="field_id"
           name="default"
           placeholder="First and last name"
-        />
-       </app>
-    `
-  }))
-  .add('Inline', () => ({
-    components: { App, AlpacaInput },
-    template: `
-      <app>
-        <alpaca-input 
-          label="Inline"
-          type="text"
-          id="field_id"
-          name="inline"
-          placeholder="First and last name"
-          inlineLabel
         />
        </app>
     `
@@ -44,6 +29,35 @@ storiesOf('Elements/Form/Input', module)
           name="textarea"
           tag="textarea"
           placeholder="First and last name"
+        />
+       </app>
+    `
+  }))
+  .add('Hidden label', () => ({
+    components: { App, AlpacaInput },
+    template: `
+      <app>
+        <alpaca-input 
+          type="text"
+          id="field_id"
+          name="hidden"
+          placeholder="Hidden label"
+          hiddenLabel
+        />
+       </app>
+    `
+  }))
+  .add('Inline label', () => ({
+    components: { App, AlpacaInput },
+    template: `
+      <app>
+        <alpaca-input 
+          label="Inline text"
+          type="text"
+          id="field_id"
+          name="inline"
+          placeholder="First and last name"
+          inline
         />
        </app>
     `

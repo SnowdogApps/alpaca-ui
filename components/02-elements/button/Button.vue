@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag ? tag : 'button'"
+    :is="tag"
     :class="[
       customClass,
       {
@@ -13,9 +13,10 @@
     ]"
     :href="link"
   >
-    <slot /> <icon 
-      v-if="icon" 
-      :icon="icon" 
+    <slot/>
+    <icon
+      v-if="icon"
+      :icon="icon"
       class="button__icon"
     />
   </component>
