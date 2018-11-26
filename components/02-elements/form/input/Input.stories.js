@@ -38,6 +38,7 @@ storiesOf('Elements/Form/Input', module)
     template: `
       <app>
         <alpaca-input 
+          label="Hidden label"
           type="text"
           id="field_id"
           name="hidden"

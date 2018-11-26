@@ -13,7 +13,7 @@
     ]"
     :href="link"
   >
-    <slot/>
+    <slot />
     <icon
       v-if="icon"
       :icon="icon"

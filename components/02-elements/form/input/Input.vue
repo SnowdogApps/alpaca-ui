@@ -7,7 +7,7 @@
     <alpaca-label
       :for="id"
       :hidden="hiddenLabel"
-      :custom-class="['label', labelClass]"
+      :custom-class="labelClass"
     >
       {{ label }}
     </alpaca-label>
@@ -16,8 +16,8 @@
       :is="tag"
       :id="id"
       :class="['input__field',
-        inputClass,
-        tag === 'textarea' && 'input__field--textarea'
+               inputClass,
+               tag === 'textarea' && 'input__field--textarea'
       ]"
       :name="name"
       :type="type"
