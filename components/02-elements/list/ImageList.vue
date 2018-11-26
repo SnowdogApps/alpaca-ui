@@ -45,12 +45,7 @@
 </template>
 
 <script>
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-
 export default {
-  components: {
-    AlpacaIcon
-  },
   props: {
     listTag: {
       type: String,
