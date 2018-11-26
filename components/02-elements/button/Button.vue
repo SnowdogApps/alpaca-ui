@@ -9,6 +9,7 @@
       'button--fluid': fluid
     }]"
     :href="link"
+    @click="onClick"
   >
     <slot/>
     <icon
@@ -48,6 +49,11 @@ export default {
     fluid: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    onClick(event) {
+      this.$emit('click', event)
     }
   }
 }

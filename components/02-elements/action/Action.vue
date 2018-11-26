@@ -1,40 +1,47 @@
 <template>
   <div class="action">
     <div
-      v-if="button"
       class="action__handler"
     >
-      <button
-        :class="[customClass, 'button action__button']"
-        type="button"
+      <alpaca-button
+        v-if="button"
+        :class="[customClass, 'action__button']"
+        @click="click"
       >
         <slot/>
-      </button>
-    </div>
-    <div
-      v-else
-      class="action__handler"
-    >
-      <a
-        :class="[customClass, 'link action__link']"
-        :href="href"
+      </alpaca-button>
+      <alpaca-link
+        v-else
+        :class="[customClass, 'action__link']"
+        :href="link"
         :title="title"
       >
         <slot/>
-      </a>
+      </alpaca-link>
     </div>
   </div>
 </template>
 
 <script>
+import AlpacaButton from '../button/Button.vue'
+import AlpacaLink from '../../01-globals/link/Link.vue'
+
 export default {
+  components: {
+    AlpacaButton,
+    AlpacaLink
+  },
   props: {
     button: {
       type: Boolean,
       default: false
     },
-    href: {
+    link: {
       type: String,
+      default: null
+    },
+    click: {
+      type: Function,
       default: null
     },
     title: {
