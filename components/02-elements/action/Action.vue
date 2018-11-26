@@ -8,7 +8,7 @@
         :class="[customClass, 'action__button']"
         @click="click"
       >
-        <slot/>
+        <slot />
       </alpaca-button>
       <alpaca-link
         v-else
@@ -16,7 +16,7 @@
         :href="link"
         :title="title"
       >
-        <slot/>
+        <slot />
       </alpaca-link>
     </div>
   </div>

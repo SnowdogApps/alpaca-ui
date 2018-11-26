@@ -1,13 +1,6 @@
 <template>
-  <svg
-    :class="[
-      'icon',
-      customClass
-    ]"
-  >
-    <use 
-      :xlink:href="url"
-    />
+  <svg :class="['icon', customClass]">
+    <use :xlink:href="url" />
   </svg>
 </template>
 

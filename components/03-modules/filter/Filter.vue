@@ -1,18 +1,12 @@
 <template>
-  <div 
-    class="filter"
-  >
-    <heading 
-      level="2"
-    >
+  <div class="filter">
+    <heading level="2">
       {{ name }}
     </heading>
 
-    <divider/>
+    <divider />
 
-    <ul 
-      class="filter__content"
-    >
+    <ul class="filter__content">
       <li
         v-for="item in items"
         :key="item.label"
