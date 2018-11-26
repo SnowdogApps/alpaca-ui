@@ -1,0 +1,32 @@
+{
+  "variants": {
+    "default": {
+      "price": {
+        "regularPrice": {
+          "amount": {
+            "value": 34,
+            "currency": "USD"
+          }
+        }
+      },
+      "specialPrice": null
+    },
+    "special": {
+      "price": {
+        "regularPrice": {
+          "amount": {
+            "value": 34,
+            "currency": "USD"
+          }
+        },
+        "specialPrice": {
+          "amount": {
+            "value": 34,
+            "currency": "USD"
+          }
+        }
+      },
+      "specialPrice": true
+    }
+  }
+}

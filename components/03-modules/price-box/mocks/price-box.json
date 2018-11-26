@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "default": {
+      "price": {
+        "regularPrice": {
+          "amount": {
+            "value": 3451.21,
+            "currency": "USD",
+            "currencySymbol": "$"
+          }
+        }
+      },
+      "specialPrice": null
+    },
+    "special": {
+      "price": {
+        "regularPrice": {
+          "amount": {
+            "value": 2114.24,
+            "currency": "USD",
+            "currencySymbol": "$"
+          }
+        },
+        "specialPrice": {
+          "amount": {
+            "value": 1999.99,
+            "currency": "USD",
+            "currencySymbol": "$"
+          }
+        }
+      },
+      "specialPrice": true
+    }
+  }
+}
+
