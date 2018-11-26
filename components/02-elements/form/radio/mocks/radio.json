@@ -1,0 +1,19 @@
+{
+  "name": "radio1",
+  "legend": "Choose option",
+  "legendId": "legend-id",
+  "options": [
+    {
+      "id": "id-1",
+      "label": "Option one"
+    },
+    {
+      "id": "id-2",
+      "label": "Option two"
+    },
+    {
+      "id": "id-3",
+      "label": "Options three"
+    }
+  ]
+}
