@@ -3,10 +3,10 @@
     <ul class="pager__list">
       <li class="pager__item">
         <alpaca-button 
-          v-show="currentPage > 1"
           icon="arrow-left" 
           custom-class="pager__link pager__link--prev"
           aria-label="Go to previous page"
+          :disabled="currentPage < 2"
           @click="currentPage--"
         />
       </li>
@@ -57,10 +57,10 @@
 
       <li class="pager__item">
         <alpaca-button
-          v-show="currentPage < numberOfPages"
           icon="arrow-right"
           custom-class="pager__link pager__link--next"
           aria-label="Go to next page"
+          :disabled="currentPage > numberOfPages -1"
           @click="currentPage++"
         />
       </li>
@@ -164,8 +164,8 @@ $pager__item-after-height--current          : $spacer !default;
 $pager__item-after-background-color--current: $color-primary !default;
 $pager__item-after-transition--current      : $transition-base  !default;
 $pager__item-size                           : 48px !default;
-$pager__icon-width                          : $spacer--medium !default;
-$pager__icon-height                         : $spacer--medium !default;
+$pager__icon-width                          : 24px !default;
+$pager__icon-height                         : 24px !default;
 $pager__link-fill-disabled                  : $gray !default;
 $pager__link-fill                           : $green !default;
 
@@ -222,23 +222,39 @@ $pager__link-fill                           : $green !default;
     justify-content: center;
     width: 100%;
     height: $pager__item-size;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
     text-decoration: none;
 
     &[disabled] {
-      fill: $pager__link-fill-disabled;
       pointer-events: none;
       cursor: default;
+      
+      .icon {
+        fill: $pager__link-fill-disabled;
+      }
+    }
+
+    &:focus,
+    &:hover{
+      background-color: transparent;
+      color: $color-primary;
     }
 
     &--prev,
     &--next {
-      fill: $pager__link-fill;
-    }
-  }
+      .icon {
+        fill: $pager__link-fill;
+        width: $pager__icon-width;
+        height: $pager__icon-height;
+      }
 
-  &__icon {
-    width: $pager__icon-width;
-    height: $pager__icon-height;
+      &:focus:not([disabled]),
+      &:hover:not([disabled]) {
+        background-color: $color-secondary;
+      }
+    }
   }
 }
 </style>

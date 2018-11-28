@@ -10,14 +10,24 @@ storiesOf('Modules/Pager', module).add('Default', () => ({
   data: () => ({
     pagination
   }),
+  computed: {
+    currentPage () {
+      return this.pagination.page
+    }
+  },
   template: `
     <app>
       <pager 
-        @update:page="pagination.page"
-        :page="pagination.page"
+        @update:page="(page) => {this.setCurrentPage(page)}"
+        :page="currentPage"
         :limit="pagination.limit" 
         :totalSize="pagination.totalSize" 
       />
     </app>
-  `
+  `,
+  methods: {
+    setCurrentPage(page) {
+      this.pagination.page = page
+    }
+  }
 }))
