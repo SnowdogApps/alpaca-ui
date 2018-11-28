@@ -60,7 +60,7 @@ export default {
   props: {
     customClass: {
       type: String,
-      default: ''
+      default: null
     },
     labelText: {
       type: String,
@@ -84,11 +84,11 @@ export default {
     },
     fileUploadLabelClass: {
       type: String,
-      default: ''
+      default: null
     },
     fileUploadInputClass: {
       type: String,
-      default: ''
+      default: null
     }
   },
   data () {
