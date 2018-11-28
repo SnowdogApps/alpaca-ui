@@ -20,17 +20,17 @@
 <script>
 export default {
   props: {
-    fieldsetClass: {
-      type: String,
-      default: ''
-    },
-    legendClass: {
-      type: String,
-      default: ''
-    },
     legendText: {
       type: String,
       required: true
+    },
+    fieldsetClass: {
+      type: String,
+      default: null
+    },
+    legendClass: {
+      type: String,
+      default: null
     }
   }
 }
