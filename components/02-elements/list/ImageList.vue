@@ -47,6 +47,10 @@
 <script>
 export default {
   props: {
+    elements: {
+      type: Array,
+      required: true
+    },
     listTag: {
       type: String,
       default: 'ul'
@@ -57,15 +61,11 @@ export default {
     },
     listClass: {
       type: String,
-      default: ''
+      default: null
     },
     elementClass: {
       type: String,
-      default: ''
-    },
-    elements: {
-      type: Array,
-      required: true
+      default: null
     }
   }
 }
