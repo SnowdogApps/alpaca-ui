@@ -1,5 +1,5 @@
 import {storiesOf} from '@storybook/vue'
-import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaAction from './Action.vue'
