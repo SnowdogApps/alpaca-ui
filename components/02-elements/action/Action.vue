@@ -57,9 +57,6 @@ export default {
 </script>
 
 <style lang="scss">
-$action-margin: 15px !default;
-$action-padding: 15px !default;
-
 .action {
   display: flex;
   flex-flow: row wrap;
@@ -69,7 +66,7 @@ $action-padding: 15px !default;
 
   &__handler {
     flex-basis: 100%;
-    margin-bottom: $action-margin;
+    margin-bottom: $spacer--medium;
 
     @include mq($screen-m) {
       flex-basis: auto;
@@ -78,12 +75,12 @@ $action-padding: 15px !default;
   }
 
   &__button {
-    margin-right: $action-margin;
+    margin-right: $spacer--medium;
     height: 30px;
     padding: 0 20px;
     font-size: 14px;
     width: 100%;
-    margin-bottom: $action-margin;
+    margin-bottom: $spacer--medium;
 
     @include mq($screen-m) {
       width: auto;
@@ -96,7 +93,7 @@ $action-padding: 15px !default;
   }
 
   &__link {
-    padding: $action-padding 0;
+    padding: $spacer--medium 0;
     margin-right: 15px;
 
     &:last-child {
