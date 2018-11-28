@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 
 import App from '../../01-globals/app/App.vue';
-import SanpolPicture from './Picture.vue';
+import AlpacaPicture from './Picture.vue';
 import images from './mocks/images.json'
 
 storiesOf('Modules/Picture', module)
@@ -9,10 +9,10 @@ storiesOf('Modules/Picture', module)
     data: () => ({
       images
     }),
-    components: { App, SanpolPicture },
+    components: { App, AlpacaPicture },
     template: `
       <app>
-        <sanpol-picture
+        <alpaca-picture
           :images="images"
           alt="example alt text"
         />

@@ -7,7 +7,7 @@
       :srcset="image.src"
     >
 
-    <sanpol-image
+    <alpaca-image
       :src="images[0].src"
       :alt="alt"
     />
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-  import SanpolImage from '../../02-elements/image/Image.vue';
+  import AlpacaImage from '../../02-elements/image/Image.vue';
 
   export default {
     components: {
-      SanpolImage
+      AlpacaImage
     },
     props: {
       images: {
