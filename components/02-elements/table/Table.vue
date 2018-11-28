@@ -1,7 +1,6 @@
 <template>
   <table
-    class="table"
-    :class="className"
+    :class="['table', className]"
     tabindex="0"
     role="table"
   >
@@ -12,7 +11,7 @@
       {{ caption }}
     </caption>
 
-    <thead v-if="headCells">
+    <thead>
       <tr role="row">
         <th
           v-for="(cell, i) in headCells"
@@ -27,7 +26,7 @@
       </tr>
     </thead>
     
-    <tbody v-if="bodyRows">
+    <tbody>
       <tr
         v-for="(rows, i) in bodyRows"
         :key="i"
@@ -77,11 +76,11 @@ export default {
     },
     headCells: {
       type: Array,
-      default: () => []
+      required: true
     },
     bodyRows: {
       type: Array,
-      default: () => []
+      required: true
     },
     footCells: {
       type: Array,
