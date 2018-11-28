@@ -1,0 +1,23 @@
+[
+  {
+    "icon": {
+      "iconId": "facebook"
+    },
+    "linkHref": "#",
+    "wrapperClass": "list__icon-link"
+  },
+  {
+    "icon": {
+      "iconId": "twitter"
+    },
+    "linkHref": "#",
+    "wrapperClass": "list__icon-link"
+  },
+  {
+    "icon": {
+      "iconId": "linkedin"
+    },
+    "linkHref": "#",
+    "wrapperClass": "list__icon-link"
+  }
+]
