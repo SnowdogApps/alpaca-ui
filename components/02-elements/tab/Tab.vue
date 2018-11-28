@@ -1,10 +1,76 @@
 <template>
-  <div>xx</div>
+  <div
+    :class="['tab', modifier && 'tab--' + modifier]"
+    role="widget"
+  >
+    <template
+      v-for="tab in tabs"
+    >
+      <button
+        :id="tab.tabId"
+        :key="'tab' + tab.tabId"
+        :icon="icon"
+        :class="['tab__title',
+                 isActive && 'tab__title--active'
+        ]"
+        :aria-controls="tab.tabId"
+        :aria-selected="isActive && true"
+        :aria-expanded="isActive && true"
+        @click="setActiveTab(tab.tabId)"
+      >
+        {{ tab.title }}
+      </button>
+
+      <div
+        v-if="tab.tabId === test"
+        :id="tab.tabId"
+        :key="'tab__content' + tab.tabId"
+        :class="['tab__content',
+                 isActive && 'tab__content--active']"
+        :aria-labelledny="tab.titleId"
+        :aria-hidden="isActive && true"
+      >
+        {{ tab.content }}}
+      </div>
+    </template>
+  </div>
+
+
 </template>
 
 <script>
-  export default {
+  // import AlpacaButton from '../button/Button.vue'
 
+  export default {
+    // components: {
+    //   AlpacaButton
+    // },
+    props: {
+      tabs: {
+        type: Array,
+        required: true
+      },
+      icon: {
+        type: String,
+        default: null
+      },
+      modifier: {
+        type: String,
+        default: null
+      }
+    },
+    data() {
+      return {
+        isActive: false,
+        test: ''
+      }
+    },
+    methods: {
+      setActiveTab(tab) {
+        const activeTab = this.tabs.filter(el => el.tabId === tab).map(el => el.tabId);
+        console.log(this.test, activeTab);
+      }
+    }
   }
 </script>
 
@@ -159,5 +225,4 @@
       }
     }
   }
-
 </style>

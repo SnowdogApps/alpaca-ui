@@ -16,7 +16,7 @@
   >
     <slot />
 
-    <icon 
+    <icon
       v-if="icon"
       :icon="icon"
       :class="[
@@ -184,9 +184,5 @@ $button__width--fluid: 100% !default;
     fill: $button__fill--icon;
     transition: $button__transition;
   }
-}
-
-button {
-  @extend .button;
 }
 </style>
