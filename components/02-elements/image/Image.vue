@@ -10,12 +10,12 @@
   export default {
     props: {
       src: {
-        required: true,
-        type: String
+        type: String,
+        required: true
       },
       alt: {
-        required: true,
-        type: String
+        type: String,
+        required: true
       }
     }
   }

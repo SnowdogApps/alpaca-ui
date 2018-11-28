@@ -1,9 +1,9 @@
 <template>
-  <picture class="image ">
+  <picture class="image">
     <source
       v-for="(image, index) in images"
       :key="'image_' + index"
-      :media="maxWidth(image['max-width'])"
+      :media="image['max-width'] && `(max-width: ${image['max-width']})`"
       :srcset="image.src"
     >
 
@@ -23,19 +23,12 @@
     },
     props: {
       images: {
-        required: true,
-        type: Array
+        type: Array,
+        required: true
       },
       alt: {
-        required: true,
-        type: String
-      }
-    },
-    methods: {
-      maxWidth(width) {
-        if (width) {
-          return `(max-width: ${width})`
-        }
+        type: String,
+        required: true
       }
     }
   }
