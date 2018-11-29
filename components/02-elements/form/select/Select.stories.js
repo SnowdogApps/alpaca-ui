@@ -4,27 +4,19 @@ import countries from './mocks/countries.json'
 
 import App from '../../../01-globals/app/App.vue'
 import AlpacaSelect from './Select.vue'
-import AlpacaLabel from '../../../01-globals/label/Label.vue'
 
 storiesOf('Elements/Form/Select', module)
   .add('Default', () => ({
-    components: { App, AlpacaSelect, AlpacaLabel },
+    components: { App, AlpacaSelect },
     template: `
       <app>
         <alpaca-select
           :id="field.id"  
           :name="field.name"
           :options="countryOptions"
-        >
-          <alpaca-label
-            :for="field.id"
-            :hidden="false"
-            :inline="false"
-            class="select__label"
-          >
-            Label text
-          </alpaca-label>
-        </alpaca-select>
+          label="Label text"
+          selected="PL"
+        />
       </app>
     `,
     data() {

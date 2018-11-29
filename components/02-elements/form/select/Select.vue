@@ -1,10 +1,19 @@
 <template>
   <div class="select">
-    <slot />
+    <alpaca-label
+      :for="id"
+      :hidden="hiddenLabel"
+      :inline="inlineLabel"
+      :custom-class="labelClass"
+      class="select__label"
+    >
+      {{ label }}
+    </alpaca-label>
     <div class="select__field">
       <select
+        :id:="id"
         :name="name"
-        class="select__input"
+        :class="['select__input', selectClass]"
         @focus="$emit('focus')"
         @blur="$emit('blur')"
         @change="$emit('input', $event.target.value)"
@@ -14,7 +23,7 @@
           v-for="(option, key) in options"
           :key="key"
           :value="option.value"
-          v-bind="{selected: option.value === selected}"
+          :selected="option.value === selected"
         >
           {{ option.text }}
         </option>
@@ -23,9 +32,8 @@
 
     <template if="validations">
       <span
-        v-for="(validation, index) in showValidations"
+        v-for="(validation, index) in currentValidations"
         :key="index"
-        class="block cl-error h6"
       >
         {{ validation.text }}
       </span>
@@ -34,38 +42,67 @@
 </template>
 
 <script>
+import AlpacaLabel from '../../../01-globals/label/Label.vue'
 
 export default {
+  components: {
+    AlpacaLabel
+  },
   props: {
     id: {
       type: String,
-      required: false,
-      default: ''
+      required: true,
+      default: null
     },
     name: {
       type: String,
-      required: false,
-      default: ''
+      required: true,
+      default: null
     },
     options: {
       type: Array,
       required: true,
       default: () => []
     },
+    label: {
+      type: String,
+      required: true,
+      default: null
+    },
     selected: {
       type: String,
       required: false,
-      default: ''
+      default: null
     },
     validations: {
       type: Array,
       required: false,
       default: () => []
+    },
+    selectClass: {
+      type: String,
+      required: false,
+      default: null
+    },
+    hiddenLabel: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    inlineLabel: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    labelClass: {
+      type: String,
+      required: false,
+      default: null
     }
   },
   computed: {
-    showValidations() {
-      return this.validations.filter((validation) => validation.condition)
+    currentValidations() {
+      return this.validations.filter(validation => validation.condition)
     }
   }
 }
