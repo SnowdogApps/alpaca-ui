@@ -14,10 +14,15 @@
     :href="link"
     @click="onClick"
   >
-    <slot /> <icon 
-      v-if="icon" 
-      :icon="icon" 
-      class="button__icon"
+    <slot />
+
+    <icon
+      v-if="icon"
+      :icon="icon"
+      :class="[
+        iconClass,
+        'button__icon'
+      ]"
     />
   </component>
 </template>
@@ -37,6 +42,10 @@ export default {
       default: null
     },
     icon: {
+      type: String,
+      default: null
+    },
+    iconClass: {
       type: String,
       default: null
     },
