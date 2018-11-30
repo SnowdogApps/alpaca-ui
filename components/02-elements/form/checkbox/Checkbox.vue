@@ -6,6 +6,13 @@
       type="checkbox"
       class="checkbox__field"
     >
+    <icon 
+      icon="checked"
+      :class="[
+        iconClass,
+        'checkbox__icon'
+      ]"
+    />
     <label
       :for="id"
       class="checkbox__label"
@@ -16,7 +23,10 @@
 </template>
 
 <script>
+  import Icon from '../../../01-globals/icon/Icon.vue'
+
   export default {
+    components: { Icon },
     props: {
       id: {
         type: String,
@@ -29,6 +39,11 @@
       label: {
         type: String,
         required: true
+      },
+      iconClass: {
+        type: String,
+        required: false,
+        default: ''
       }
     }
   }
