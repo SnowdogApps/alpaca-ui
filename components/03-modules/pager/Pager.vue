@@ -60,7 +60,7 @@
           icon="arrow-right"
           custom-class="pager__link pager__link--next"
           aria-label="Go to next page"
-          :disabled="currentPage > numberOfPages -1"
+          :disabled="currentPage > numberOfPages - 1"
           @click="currentPage++"
         />
       </li>
@@ -80,13 +80,13 @@ export default {
       type: Number,
       required: true
     },
-    limit: {
-      type: Number,
-      default: 5
-    },
     totalSize: {
       type: Number,
       required: true
+    },
+    limit: {
+      type: Number,
+      default: 5
     }
   },
   data () {
@@ -109,7 +109,7 @@ export default {
       return Math.ceil(this.totalSize / this.limitPerPage)
     },
     listOfPageNumbers () {
-      return Array.apply(null, { length: this.numberOfPages + 1 })
+      return Array.from(Array(this.numberOfPages), (_, i) => i + 1)
         .map((val, index) => index)
         .slice(1);
     },
