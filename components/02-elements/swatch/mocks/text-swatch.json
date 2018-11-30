@@ -1,0 +1,34 @@
+{
+  "heading": {
+    "id": "option-label-size-1",
+    "tag": "span",
+    "tet": "Label"
+  },
+  "options": [
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-size-xs",
+      "text": "XS"
+    },
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-size-s",
+      "text": "S"
+    },
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-size-m",
+      "text": "M"
+    },
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-size-l",
+      "text": "L"
+    },
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-size-xl",
+      "text": "XL"
+    }
+  ]
+}
