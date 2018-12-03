@@ -33,6 +33,10 @@
   export default {
     components: { Icon },
     props: {
+      label: {
+        type: String,
+        required: true
+      },
       id: {
         type: String,
         required: false,
@@ -42,10 +46,6 @@
         type: String,
         required: false,
         default: null
-      },
-      label: {
-        type: String,
-        required: true
       },
       iconClass: {
         type: String,
