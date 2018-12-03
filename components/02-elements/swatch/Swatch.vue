@@ -17,9 +17,10 @@
         class="swatch__option-container"
       >
         <div
-          class="swatch__option"
+          :class="['swatch__option', image && 'swatch__option--image']"
+          :style="isBackgroundImage(option.url)"
         >
-          {{ option.text }}
+          {{ image ? '' : option.text }}
         </div>
       </div>
     </div>
@@ -36,6 +37,17 @@
       heading: {
         type: String,
         default: null
+      },
+      image: {
+        type: Boolean,
+        default: false
+      }
+    },
+    methods: {
+      isBackgroundImage(url){
+        if(this.image) {
+          return `background-image: url('${url}')`
+        }
       }
     }
   }

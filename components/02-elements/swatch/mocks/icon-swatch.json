@@ -1,0 +1,34 @@
+{
+  "heading": {
+    "id": "option-label-size-1",
+    "tag": "span",
+    "text": "Label"
+  },
+  "options": [
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-color-orange-1",
+      "url": "../../images/swatch/swatch-orange.jpg",
+      "text": "S"
+    },
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-color-green-2",
+      "url": "../../images/swatch/swatch-green.jpg",
+      "text": "M"
+    },
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-color-green-2",
+      "url": "../../images/swatch/swatch-green.jpg",
+      "text": "L"
+    },
+    {
+      "headingId": "option-label-size-1",
+      "id": "opt-color-white-4",
+      "url": "../../images/swatch/swatch-white.jpg",
+      "text": "XL"
+    }
+  ]
+}
+
