@@ -1,6 +1,10 @@
 <template>
-  <div class="checkbox">
+  <component 
+    :is="link ? 'a' : 'div'"
+    :class="['checkbox', { 'checkbox--link': link }]"
+  >
     <input
+      v-if="!link"
       :id="id"
       :name="name"
       type="checkbox"
@@ -13,13 +17,14 @@
         'checkbox__icon'
       ]"
     />
-    <label
+    <component
+      :is="link ? 'span' : 'label'"
       :for="id"
       class="checkbox__label"
     >
       {{ label }}
-    </label>
-  </div>
+    </component>
+  </component>
 </template>
 
 <script>
@@ -30,11 +35,13 @@
     props: {
       id: {
         type: String,
-        required: true
+        required: false,
+        default: null
       },
       name: {
         type: String,
-        required: true
+        required: false,
+        default: null
       },
       label: {
         type: String,
@@ -44,6 +51,11 @@
         type: String,
         required: false,
         default: ''
+      },
+      link: {
+        type: Boolean,
+        required: false,
+        default: false
       }
     }
   }
@@ -72,7 +84,8 @@
       text-decoration: none;
       color: $checkbox__color--fake;
 
-      &:hover {
+      &:hover,
+      &:focus {
         text-decoration: underline;
       }
     }
@@ -95,7 +108,7 @@
       left: 0;
       opacity: 0;
 
-      &:checked+.checkbox__icon {
+      &:checked + .checkbox__icon {
         opacity: 1;
       }
 

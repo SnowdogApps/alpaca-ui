@@ -27,3 +27,15 @@ storiesOf('Elements/Form/Checkbox', module)
       </app>
     `
   }))
+  .add('Link', () => ({
+    components: { App, AlpacaCheckbox },
+    template: `
+      <app>
+        <alpaca-checkbox
+          label="Checkbox link label"
+          link
+          href="#"
+        />
+      </app>
+    `
+  }))
