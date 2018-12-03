@@ -50,7 +50,7 @@
       iconClass: {
         type: String,
         required: false,
-        default: ''
+        default: null
       },
       link: {
         type: Boolean,
