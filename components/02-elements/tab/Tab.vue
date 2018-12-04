@@ -1,7 +1,6 @@
 <template>
   <div
     :class="['tab', modifier && 'tab--' + modifier]"
-    role="widget"
   >
     <template
       v-for="tab in tabs"
@@ -9,28 +8,31 @@
       <button
         :id="tab.tabId"
         :key="'tab' + tab.tabId"
-        :icon="icon"
         :class="['tab__title',
-                 isActive && 'tab__title--active'
+                 tab.tabId === activeTab && 'tab__title--active'
         ]"
-        :aria-controls="tab.tabId"
-        :aria-selected="isActive && true"
-        :aria-expanded="isActive && true"
         @click="setActiveTab(tab.tabId)"
       >
         {{ tab.title }}
+
+        <icon
+          v-if="icon"
+          :icon="icon"
+          :class="[
+            iconClass,
+            'button__icon'
+          ]"
+        />
       </button>
 
       <div
-        v-if="tab.tabId === test"
+        v-if="tab.tabId === activeTab"
         :id="tab.tabId"
         :key="'tab__content' + tab.tabId"
         :class="['tab__content',
-                 isActive && 'tab__content--active']"
-        :aria-labelledny="tab.titleId"
-        :aria-hidden="isActive && true"
+                 tab.tabId === activeTab && 'tab__content--active']"
       >
-        {{ tab.content }}}
+        {{ tab.content }}
       </div>
     </template>
   </div>
@@ -39,12 +41,10 @@
 </template>
 
 <script>
-  // import AlpacaButton from '../button/Button.vue'
+  import Icon from '../../01-globals/icon/Icon.vue'
 
   export default {
-    // components: {
-    //   AlpacaButton
-    // },
+    components: { Icon },
     props: {
       tabs: {
         type: Array,
@@ -61,14 +61,12 @@
     },
     data() {
       return {
-        isActive: false,
-        test: ''
+        activeTab: null
       }
     },
     methods: {
       setActiveTab(tab) {
-        const activeTab = this.tabs.filter(el => el.tabId === tab).map(el => el.tabId);
-        console.log(this.test, activeTab);
+        this.activeTab = this.tabs.filter(el => el.tabId === tab).map(el => el.tabId)[0];
       }
     }
   }
