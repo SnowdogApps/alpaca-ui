@@ -1,26 +1,31 @@
 <template>
   <div class="swatch">
-
-    <alpaca-heading
-      v-if="heading"
+    <alpaca-label
+      v-if="label"
       custom-class="swatch__title"
     >
-      {{ heading }}
-    </alpaca-heading>
+      {{ label }}
+    </alpaca-label>
 
     <div
       class="swatch__wrapper"
+      tabindex="0"
     >
       <div
-        v-for="option in options"
+        v-for="(option, i) in options"
         :key="option.id"
-        class="swatch__option-container"
+        :class="['swatch__option-container',
+                 activeIndex === i && 'selected']"
+        :aria-label="option.aria-label"
+        tabindex="0"
+        @click="setActiveElement(i)"
       >
         <div
-          :class="['swatch__option', image && 'swatch__option--image']"
-          :style="isBackgroundImage(option.url)"
+          :class="['swatch__option',
+                   image && 'swatch__option--image']"
+          :style="option.style"
         >
-          {{ image ? '' : option.text }}
+          {{ image || color ? '' : option.text }}
         </div>
       </div>
     </div>
@@ -28,26 +33,38 @@
 </template>
 
 <script>
+  import AlpacaLabel from '../../01-globals/label/Label.vue'
+
   export default {
+    components: {
+      AlpacaLabel
+    },
     props: {
       options: {
         type: Array,
         required: true
       },
-      heading: {
+      label: {
         type: String,
         default: null
       },
       image: {
         type: Boolean,
         default: false
+      },
+      color: {
+        type: Boolean,
+        default: false
+      }
+    },
+    data() {
+      return {
+        activeIndex: null
       }
     },
     methods: {
-      isBackgroundImage(url){
-        if(this.image) {
-          return `background-image: url('${url}')`
-        }
+      setActiveElement(i){
+        this.activeIndex = i;
       }
     }
   }

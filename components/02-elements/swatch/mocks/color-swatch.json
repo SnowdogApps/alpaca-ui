@@ -6,26 +6,30 @@
   },
   "options": [
     {
+      "headingId": "option-label-color-1",
       "id": "opt-color-orange-1",
-      "style": "background-image: url('../../images/swatch/swatch-orange.jpg')",
+      "style": "background-color: #ffa500",
       "aria-label": "Orange",
       "text": "S"
     },
     {
+      "headingId": "option-label-color-1",
       "id": "opt-color-green-2",
-      "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+      "style": "background-color: #00ff00",
       "aria-label" : "Green",
       "text": "M"
     },
     {
+      "headingId": "option-label-color-1",
       "id": "opt-color-green-3",
-      "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+      "style": "background-color: #ff0000",
       "aria-label" : "Red",
       "text": "L"
     },
     {
+      "headingId": "option-label-color-1",
       "id": "opt-color-white-4",
-      "style": "background-image: url('../../images/swatch/swatch-white.jpg')",
+      "style": "background-color: #000000",
       "aria-label": "White",
       "text": "XL"
     }
