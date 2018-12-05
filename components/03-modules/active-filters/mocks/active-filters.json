@@ -1,0 +1,39 @@
+{
+  "clear": {
+    "href": "#",
+    "text": "Clear all",
+    "title": "Clear all filters"
+  },
+  "filters": [
+    {
+      "label": "Label",
+      "value": "Value",
+      "ariaLabel": "Disable filter",
+      "icon": {
+        "iconId": "close",
+        "iconTitle": "Close",
+        "class": "active-filters__remove-icon"
+      }
+    },
+    {
+      "label": "Label2",
+      "value": "Value2",
+      "ariaLabel": "Disable filter",
+      "icon": {
+        "iconId": "close",
+        "iconTitle": "Close",
+        "class": "active-filters__remove-icon"
+      }
+    },
+    {
+      "label": "Label3",
+      "value": "Value3",
+      "ariaLabel": "Disable filter",
+      "icon": {
+        "iconId": "close",
+        "iconTitle": "Close",
+        "class": "active-filters__remove-icon"
+      }
+    }
+  ]
+}
