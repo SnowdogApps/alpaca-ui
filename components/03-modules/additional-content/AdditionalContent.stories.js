@@ -14,10 +14,10 @@ storiesOf('Modules/AdditionalContent', module)
     template: `
       <app>
         <alpaca-additional-content 
-        :images="additionalContent.images"
-        :alt="additionalContent.images[0].alt"
-        :firstSection="additionalContent.firstSection.text"
-        :secondSection="additionalContent.secondSection.text">
+          :images="additionalContent.images"
+          :alt="additionalContent.images[0].alt"
+          :firstSection="additionalContent.firstSection.text"
+          :secondSection="additionalContent.secondSection.text">
         </alpaca-additional-content>
       </app>
     `
