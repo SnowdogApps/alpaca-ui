@@ -35,215 +35,215 @@
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
-  export default {
-    components: {
-      AlpacaIcon
+export default {
+  components: {
+    AlpacaIcon
+  },
+  props: {
+    elements: {
+      type: Array,
+      required: true
     },
-    props: {
-      elements: {
-        type: Array,
-        required: true
-      },
-      listTag: {
-        type: String,
-        default: 'ul'
-      },
-      elementTag: {
-        type: String,
-        default: 'li'
-      },
-      listClass: {
-        type: String,
-        default: null
-      },
-      elementClass: {
-        type: String,
-        default: null
-      }
+    listTag: {
+      type: String,
+      default: 'ul'
+    },
+    elementTag: {
+      type: String,
+      default: 'li'
+    },
+    listClass: {
+      type: String,
+      default: null
+    },
+    elementClass: {
+      type: String,
+      default: null
     }
   }
+}
 </script>
 
 <style lang="scss">
-  $list__style:           none !default;
-  $list__margin:          0 !default;
-  $list__padding:         0 !default;
-  $list__item-padding:    5px 0 !default;
-  $list__content-padding: 10px !default;
-  $list__label-padding:   0 5px 5px 0 !default;
-  $list__icon-color:      $white !default;
+$list__style:           none !default;
+$list__margin:          0 !default;
+$list__padding:         0 !default;
+$list__item-padding:    5px 0 !default;
+$list__content-padding: 10px !default;
+$list__label-padding:   0 5px 5px 0 !default;
+$list__icon-color:      $white !default;
 
-  // Horizontal
-  $list__padding--horizontal:         10px !default;
+// Horizontal
+$list__padding--horizontal:         10px !default;
 
-  // Horizontal\@medium
-  $list__padding--horizontal\@medium: 10px !default;
+// Horizontal\@medium
+$list__padding--horizontal\@medium: 10px !default;
 
-  // With icon
-  $list__padding--with-icon:          12px !default;
+// With icon
+$list__padding--with-icon:          12px !default;
 
-  // Divided
-  $list__border--divider:             1px solid $gray-dark !default;
+// Divided
+$list__border--divider:             1px solid $gray-dark !default;
 
-  $list__item-padding--native:        0 0 $spacer--medium $spacer--large !default;
+$list__item-padding--native:        0 0 $spacer--medium $spacer--large !default;
 
-  // Nested
-  $list__margin-nested:               0 0 0 $spacer--large !default;
-  $list__margin-nested-second-level:  0 0 0 #{$spacer--large * 2} !default;
+// Nested
+$list__margin-nested:               0 0 0 $spacer--large !default;
+$list__margin-nested-second-level:  0 0 0 #{$spacer--large * 2} !default;
 
-  .list {
-    margin: $list__margin;
-    padding: $list__padding;
-    list-style: $list__style;
+.list {
+  margin: $list__margin;
+  padding: $list__padding;
+  list-style: $list__style;
 
-    &--center {
-      justify-content: center;
-      text-align: center;
+  &--center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--horizontal {
+    display: flex;
+    flex-flow: row wrap;
+    .list__item {
+      padding: $list__padding--horizontal;
+
+      &:first-child {
+        padding-top: $list__padding--horizontal;
+      }
+      &:last-child {
+        padding-bottom: $list__padding--horizontal;
+      }
     }
+  }
 
-    &--horizontal {
+  &--horizontal\@medium {
+    @include mq($screen-m) {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
+
       .list__item {
-        padding: $list__padding--horizontal;
+        padding: $list__padding--horizontal\@medium;
 
         &:first-child {
-          padding-top: $list__padding--horizontal;
+          padding-top: $list__padding--horizontal\@medium;
         }
         &:last-child {
-          padding-bottom: $list__padding--horizontal;
+          padding-bottom: $list__padding--horizontal\@medium;
         }
       }
     }
+  }
 
-    &--horizontal\@medium {
-      @include mq($screen-m) {
-        display: flex;
-        flex-flow: row nowrap;
+  &--with-icon {
+    justify-content: center;
 
-        .list__item {
-          padding: $list__padding--horizontal\@medium;
-
-          &:first-child {
-            padding-top: $list__padding--horizontal\@medium;
-          }
-          &:last-child {
-            padding-bottom: $list__padding--horizontal\@medium;
-          }
-        }
-      }
-    }
-
-    &--with-icon {
-      justify-content: center;
-
-      .list__item {
-        display: flex;
-        align-items: center;
-        padding: 0;
-
-        &:first-child {
-          padding-top: 0;
-        }
-        &:last-child {
-          padding-bottom: 0;
-        }
-      }
-      .list__icon-link {
-        padding: $list__padding--with-icon;
-      }
-    }
-
-    &--divided {
-      .list__item {
-        border-bottom: $list__border--divider;
-        &:last-child {
-          border-bottom: none;
-        }
-      }
-
-      &.list--horizontal {
-        .list__item {
-          border-bottom: none;
-          border-right: $list__border--divider;
-          &:last-child {
-            border-right: none;
-          }
-        }
-      }
-
-      &.list--horizontal\@medium {
-        .list__item {
-          @include mq($screen-m) {
-            border-bottom: none;
-            border-right: $list__border--divider;
-          }
-          &:last-child {
-            @include mq($screen-m) {
-              border-right: none;
-            }
-          }
-        }
-      }
-    }
-
-    &--native {
-      .list__item {
-        position: relative;
-        padding: $list__item-padding--native;
-
-        &:before {
-          content: "";
-          position: absolute;
-          top: 5px;
-          left: 12px;
-          width: $spacer;
-          height: $spacer;
-          background-color: $color-primary;
-          border-radius: 4px;
-        }
-      }
-    }
-
-    &--nested {
-      margin: $list__margin-nested;
-    }
-
-    &--nested-second-level {
-      margin: $list__margin-nested-second-level;
-    }
-
-    &__item {
-      display: list-item;
-      padding: $list__item-padding;
+    .list__item {
+      display: flex;
+      align-items: center;
+      padding: 0;
 
       &:first-child {
         padding-top: 0;
       }
-
       &:last-child {
         padding-bottom: 0;
       }
     }
+    .list__icon-link {
+      padding: $list__padding--with-icon;
+    }
+  }
 
-    &__label {
-      clear: left;
-      float: left;
-      padding: $list__label-padding;
-      &:after {
-        content: ": ";
+  &--divided {
+    .list__item {
+      border-bottom: $list__border--divider;
+      &:last-child {
+        border-bottom: none;
       }
     }
 
-    &__value {
-      float: left;
-      padding: $list__label-padding;
+    &.list--horizontal {
+      .list__item {
+        border-bottom: none;
+        border-right: $list__border--divider;
+        &:last-child {
+          border-right: none;
+        }
+      }
     }
 
-    &__content {
-      padding-left: $list__content-padding;
+    &.list--horizontal\@medium {
+      .list__item {
+        @include mq($screen-m) {
+          border-bottom: none;
+          border-right: $list__border--divider;
+        }
+        &:last-child {
+          @include mq($screen-m) {
+            border-right: none;
+          }
+        }
+      }
     }
   }
+
+  &--native {
+    .list__item {
+      position: relative;
+      padding: $list__item-padding--native;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 12px;
+        width: $spacer;
+        height: $spacer;
+        background-color: $color-primary;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &--nested {
+    margin: $list__margin-nested;
+  }
+
+  &--nested-second-level {
+    margin: $list__margin-nested-second-level;
+  }
+
+  &__item {
+    display: list-item;
+    padding: $list__item-padding;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__label {
+    clear: left;
+    float: left;
+    padding: $list__label-padding;
+    &:after {
+      content: ": ";
+    }
+  }
+
+  &__value {
+    float: left;
+    padding: $list__label-padding;
+  }
+
+  &__content {
+    padding-left: $list__content-padding;
+  }
+}
 </style>
