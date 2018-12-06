@@ -11,7 +11,7 @@
     <ul class="list brief-info__items-container">
       <li
         v-for="(item, i) in items"
-        :key="i"
+        :key="'brief-info-' + i"
         class="brief-info__item"
       >
         <span
@@ -51,7 +51,7 @@
         required: true
       },
       level: {
-        type: String,
+        type: Number,
         default: null
       },
       heading: {
