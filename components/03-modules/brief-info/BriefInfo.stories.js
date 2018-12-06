@@ -13,7 +13,7 @@ storiesOf('Modules/Brief Info', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-brief-info 
-        items="briefInfo.items"
+        :items="briefInfo.items"
         level="3"
         :heading="briefInfo.heading.text">
     </app>
