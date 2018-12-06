@@ -16,8 +16,8 @@
       ]"
     >
       <component
-        :is="item.linkHref || hrefLink ? 'a' : 'div'"
-        :href="item.linkHref || hrefLink"
+        :is="item.linkHref ? 'a' : 'div'"
+        :href="item.linkHref"
         :class="[
           {
             'link': item.linkHref
@@ -30,16 +30,7 @@
         <template v-if="item.icon">
           <alpaca-icon :icon="item.icon.iconId" />
         </template>
-
-        <!--<span class="active-filters__label">-->
-        <!--{{ item.label }} :-->
-        <!--</span>-->
-        <!--<span class="active-filters__value">-->
-        <!--{{ item.value }}-->
-        <!--</span>-->
-
       </component>
-
     </component>
   </component>
 </template>
@@ -55,10 +46,6 @@ export default {
     elements: {
       type: Array,
       required: true
-    },
-    hrefLink: {
-      type: String,
-      default: null
     },
     listTag: {
       type: String,

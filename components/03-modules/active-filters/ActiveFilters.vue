@@ -1,29 +1,54 @@
 <template>
   <div>
-    <alpaca-list
-      :elements="elements"
-      :list-class="'active-filters list'"
-      :element-class="'active-filters__item list__item'"
-      link-href="#"
-    />
+    <ul class="active-filters list">
+      <li
+        v-for="item in items"
+        :key="item.value"
+        class="active-filters__item list__item"
+      >
+        <alpaca-link
+          href="#"
+          custom-class="active-filters__remove"
+          :aria-label="item.ariaLabel"
+          :title="item.icon.iconTitle"
+        >
+          <alpaca-icon
+            v-if="item.icon"
+            :custom-class="item.icon.class"
+            :icon="item.icon.iconId"
+          />
+        </alpaca-link>
+
+        <span class="active-filters__label">
+          {{ item.label }} :&nbsp;
+        </span>
+        <span class="active-filters__value">
+          {{ item.value }}
+        </span>
+      </li>
+    </ul>
 
     <alpaca-link
+      class="active-filters__clear-all"
       :href="href"
-      :custom-class="'active-filters__clear-all'"
+      :title="title"
     >
-      {{ title }}
+      {{ text }}
     </alpaca-link>
   </div>
 </template>
 
 <script>
-  import AlpacaList from '../../02-elements/list/List';
   import AlpacaLink from '../../01-globals/link/Link';
+  import AlpacaIcon from '../../01-globals/icon/Icon';
 
   export default {
-    components: { AlpacaList, AlpacaLink },
+    components: {
+      AlpacaLink,
+      AlpacaIcon
+    },
     props: {
-      elements: {
+      items: {
         type: Array,
         required: true
       },
@@ -31,17 +56,13 @@
         type: String,
         required: true
       },
-      label: {
-        type: String,
-        default: null
-      },
-      value: {
-        type: String,
-        default: null
-      },
       href: {
         type: String,
         required: true
+      },
+      text: {
+        type: String,
+        default: null
       }
     }
   }
@@ -85,15 +106,15 @@
       background: $active-filters__remove-background;
       cursor: pointer;
       word-break: break-all;
-    }
 
-    &__remove-icon {
-      display: block;
-      padding: $active-filters__remove-icon-padding;
-      margin: $active-filters__remove-icon-margin;
-      width: $active-filters__icon-size;
-      height: $active-filters__icon-size;
-      fill: $active-filters__icon-fill;
+      &-icon {
+        display: block;
+        padding: $active-filters__remove-icon-padding;
+        margin: $active-filters__remove-icon-margin;
+        width: $active-filters__icon-size;
+        height: $active-filters__icon-size;
+        fill: $active-filters__icon-fill;
+      }
     }
 
     &__label {
@@ -142,7 +163,6 @@
           text-decoration: underline;
         }
       }
-
     }
   }
 </style>
