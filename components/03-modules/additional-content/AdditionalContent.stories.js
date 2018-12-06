@@ -5,7 +5,7 @@ import AlpacaAdditionalContent from './AdditionalContent.vue'
 
 import additionalContent from './mocks/additional-content.json'
 
-storiesOf('Modules/AdditionalContent', module)
+storiesOf('Modules/Additional Content', module)
   .add('Default', () => ({
     components: { App, AlpacaAdditionalContent },
     data: () => ({
