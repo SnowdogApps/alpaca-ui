@@ -120,14 +120,7 @@
       align-items: center;
       flex-direction: column;
       padding: $brief-info__icon-padding;
-      // It's related to IE10/11 bug, which is solved by adding unit to flex-basis
-      // Detailed description:
-      // https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
-      // sass-lint:disable no-css-comments
-      /* stylelint-disable length-zero-no-unit */
       flex: 1 0 0;
-      /* stylelint-enable length-zero-no-unit */
-      // sass-lint:enable no-css-comments
       @include mq($screen-m) {
         align-items: flex-start;
       }
