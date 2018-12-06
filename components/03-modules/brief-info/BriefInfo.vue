@@ -1,0 +1,201 @@
+<template>
+  <div class="brief-info">
+    <alpaca-heading
+      v-if="level"
+      :level="level"
+      class="brief-info__heading"
+    >
+      {{ heading }}
+    </alpaca-heading>
+
+    <ul class="list brief-info__items-container">
+      <li
+        v-for="(item, i) in items"
+        :key="i"
+        class="brief-info__item"
+      >
+        <span
+          :class="['brief-info__icon-wrapper', item.iconWrapperClass]"
+          :aria-label="item.iconLabel"
+        >
+          <icon
+            :icon="item.icon.iconId"
+            :custom-class="item.icon.class"
+          />
+        </span>
+        <div class="brief-info__content">
+          <component
+            :is="item.title.tag"
+            class="brief-info__title"
+          >
+            {{ item.title.text }}
+          </component>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+  import Icon from '../../01-globals/icon/Icon.vue'
+
+  export default {
+    components: {
+      AlpacaHeading,
+      Icon
+    },
+    props: {
+      items: {
+        type: Array,
+        required: true
+      },
+      level: {
+        type: String,
+        default: null
+      },
+      heading: {
+        type: String,
+        default: null
+      }
+    }
+  }
+</script>
+
+<style lang="scss">
+  $brief-info__padding\@medium                 : $spacer--large 0 $spacer--large !default;
+  $brief-info__border                          : 1px $gray-light solid !default;
+  $brief-info__content-text-align              : center !default;
+  $brief-info__content-text-align\@medium      : left !default;
+  $brief-info__heading-margin                  : 0 0 $spacer--medium !default;
+  $brief-info__icon-bg-color                   : $gray-lightest !default;
+  $brief-info__icon-border-radius              : 32px !default;
+  $brief-info__icon-delivery-truck-padding     : 13px $spacer 13px 6px !default;
+  $brief-info__icon-delivery-truck-svg-height  : 100% !default;
+  $brief-info__icon-delivery-truck-svg-padding : 0 !default;
+  $brief-info__icon-delivery-truck-svg-width   : 100% !default;
+  $brief-info__icon-shield-padding             : 12px 14px 12px 15px !default;
+  $brief-info__icon-shield-svg-height          : 100% !default;
+  $brief-info__icon-shield-svg-width           : 100% !default;
+  $brief-info__icon-size                       : 48px !default;
+  $brief-info__icon-padding                    : 0 $spacer--medium !default;
+  $brief-info__icon-padding\@medium            : 0 !default;
+  $brief-info__icon-margin-bottom              : $spacer !default;
+  $brief-info__icon-margin-bottom\@large       : 0 !default;
+  $brief-info__link-font-size                  : $font-size-small !default;
+  $brief-info__link-font-weight                : $font-weight-bold !default;
+  $brief-info__link-text-decoration            : none !default;
+  $brief-info__title-font-size                 : $font-size-small !default;
+  $brief-info__title-font-size\@large          : $font-size-base !default;
+  $brief-info__title-font-weight               : $font-weight-normal !default;
+  $brief-info__title-line-height               : 1em !default;
+  $brief-info__title-text-transform            : uppercase !default;
+  $brief-info__title-margin-bottom             : 0 !default;
+
+  .brief-info {
+    @include mq($screen-m) {
+      border-top: $brief-info__border;
+      padding: $brief-info__padding\@medium;
+      border-bottom: $brief-info__border;
+    }
+
+    &__heading {
+      width: 100%;
+      margin: $brief-info__heading-margin;
+      text-align: center;
+
+      @include mq($screen-m) {
+        text-align: left;
+      }
+    }
+
+    &__items-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      padding: $brief-info__icon-padding;
+      // It's related to IE10/11 bug, which is solved by adding unit to flex-basis
+      // Detailed description:
+      // https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
+      // sass-lint:disable no-css-comments
+      /* stylelint-disable length-zero-no-unit */
+      flex: 1 0 0;
+      /* stylelint-enable length-zero-no-unit */
+      // sass-lint:enable no-css-comments
+      @include mq($screen-m) {
+        align-items: flex-start;
+      }
+      @include mq($screen-l) {
+        align-items: center;
+        flex-flow: row nowrap;
+      }
+      &:first-child,
+      &:last-child {
+        @include mq($screen-m) {
+          padding: $brief-info__icon-padding\@medium;
+        }
+      }
+    }
+
+    &__icon-wrapper {
+      margin-bottom: $brief-info__icon-margin-bottom;
+      background-color: $brief-info__icon-bg-color;
+      border-radius: $brief-info__icon-border-radius;
+      width: $brief-info__icon-size;
+      height: $brief-info__icon-size;
+      flex-shrink: 0;
+      @include mq($screen-l) {
+        margin-bottom: $brief-info__icon-margin-bottom\@large;
+      }
+      &--delivery-truck {
+        padding: $brief-info__icon-delivery-truck-padding;
+      }
+    }
+
+    &__icon {
+      width: 100%;
+      height: 100%;
+      padding: 14px;
+      &--delivery-truck {
+        padding: $brief-info__icon-delivery-truck-svg-padding;
+        width: $brief-info__icon-delivery-truck-svg-width;
+        height: $brief-info__icon-delivery-truck-svg-height;
+      }
+      &--shield {
+        padding: $brief-info__icon-shield-padding;
+        width: $brief-info__icon-shield-svg-width;
+        height: $brief-info__icon-shield-svg-height;
+      }
+    }
+
+    &__title {
+      margin-bottom: $brief-info__title-margin-bottom;
+      font-size: $brief-info__title-font-size;
+      text-transform: $brief-info__title-text-transform;
+      line-height: $brief-info__title-line-height;
+      font-weight: $brief-info__title-font-weight;
+      @include mq($screen-l) {
+        font-size: $brief-info__title-font-size\@large;
+        margin: 0 0 0 10px;
+      }
+    }
+
+    &__link {
+      font-size: $brief-info__link-font-size;
+      font-weight: $brief-info__link-font-weight;
+      text-decoration: $brief-info__link-text-decoration;
+    }
+    &__content {
+      text-align: $brief-info__content-text-align;
+      @include mq($screen-m) {
+        text-align: $brief-info__content-text-align\@medium;
+      }
+    }
+  }
+</style>
