@@ -13,7 +13,8 @@ storiesOf('Modules/ActiveFilters', module)
     }),
     template: `
       <app>
-        <alpaca-active-filters :items="listElements.filters"
+        <alpaca-active-filters 
+          :items="listElements.filters"
           :title="listElements.clear.title"
           :text="listElements.clear.text"
           :href="listElements.clear.href"
