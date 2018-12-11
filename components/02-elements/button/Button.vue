@@ -1,10 +1,10 @@
 <template>
   <component
-    :is="tag ? tag : 'button'"
+    :is="tag"
     :class="[
       customClass,
       {
-        button: tag,
+        button: tag !== 'button',
         'button--icon': icon,
         'button--secondary': secondary,
         'button--link': link,
@@ -16,7 +16,7 @@
   >
     <slot />
 
-    <icon 
+    <icon
       v-if="icon"
       :icon="icon"
       :class="[
