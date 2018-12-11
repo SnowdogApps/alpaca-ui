@@ -8,7 +8,9 @@ storiesOf('Global/Label', module)
     components: { App, AlpacaLabel },
     template: `
     <app>
-      <alpaca-label>Label</alpaca-label>
+      <alpaca-label>
+        Label
+      </alpaca-label>
     </app>
   `
   }))
@@ -16,7 +18,12 @@ storiesOf('Global/Label', module)
     components: { App, AlpacaLabel },
     template: `
     <app>
-      <alpaca-label tag="span" customClass="custom">Custom tag label</alpaca-label>
+      <alpaca-label
+        tag="span"
+        customClass="custom"
+      >
+        Custom tag label
+      </alpaca-label>
     </app>
   `
   }))
@@ -24,7 +31,9 @@ storiesOf('Global/Label', module)
     components: { App, AlpacaLabel },
     template: `
     <app>
-      <alpaca-label :inline="true">Inline label</alpaca-label>
+      <alpaca-label inline>
+        Inline label
+      </alpaca-label>
     </app>
   `
   }))
