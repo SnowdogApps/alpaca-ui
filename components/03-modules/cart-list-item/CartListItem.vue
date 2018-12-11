@@ -6,7 +6,6 @@
         :alt="productImage.alt"
       />
     </div>
-
     <div class="cart-list-item__info">
       <div class="cart-list-item__data">
         <alpaca-link
@@ -15,7 +14,6 @@
         >
           {{ productName }}
         </alpaca-link>
-
         <div class="cart-list-item__details">
           <div class="cart-list-item__qty">
             <alpaca-input
