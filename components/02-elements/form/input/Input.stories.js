@@ -27,7 +27,7 @@ storiesOf('Elements/Form/Input', module)
           type="text"
           id="field_id"
           name="textarea"
-          tag="textarea"
+          textarea
           placeholder="First and last name"
         />
        </app>

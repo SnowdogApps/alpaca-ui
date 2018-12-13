@@ -20,7 +20,6 @@ storiesOf('Global/Label', module)
       <app>
         <alpaca-label
           tag="span"
-          customClass="custom"
         >
           Custom tag label
         </alpaca-label>
