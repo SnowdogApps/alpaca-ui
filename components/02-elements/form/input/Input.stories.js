@@ -15,7 +15,7 @@ storiesOf('Elements/Form/Input', module)
           name="default"
           placeholder="First and last name"
         />
-       </app>
+      </app>
     `
   }))
   .add('Textarea', () => ({
@@ -30,7 +30,7 @@ storiesOf('Elements/Form/Input', module)
           textarea
           placeholder="First and last name"
         />
-       </app>
+      </app>
     `
   }))
   .add('Hidden label', () => ({
@@ -45,7 +45,7 @@ storiesOf('Elements/Form/Input', module)
           placeholder="Hidden label"
           hidden-label
         />
-       </app>
+      </app>
     `
   }))
   .add('Inline label', () => ({
@@ -60,6 +60,6 @@ storiesOf('Elements/Form/Input', module)
           placeholder="First and last name"
           inline
         />
-       </app>
+      </app>
     `
   }))
