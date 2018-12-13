@@ -43,7 +43,7 @@ storiesOf('Elements/Form/Input', module)
           id="field_id"
           name="hidden"
           placeholder="Hidden label"
-          hiddenLabel
+          hidden-label
         />
        </app>
     `
