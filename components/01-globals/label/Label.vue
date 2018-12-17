@@ -1,8 +1,8 @@
 <template>
   <component
-    :is="tag ? tag : 'label'"
+    :is="tag"
     :class="{
-      label: tag,
+      label: tag !== 'label',
       'label--inline': inline,
       'label--hidden': hidden
     }"
