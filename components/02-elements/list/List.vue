@@ -12,7 +12,8 @@
       :key="`list-item-${idx}`"
       :class="[
         'list__item',
-        elementClass
+        elementClass,
+        item.class
       ]"
     >
       <component
@@ -22,7 +23,8 @@
           {
             'link': item.linkHref
           },
-          item.wrapperClass
+          item.wrapperClass,
+          item.linkClass
         ]"
       >
         {{ item.text }}
