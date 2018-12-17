@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rating "
+    class="rating"
     :aria-label="ariaLabel"
     :title="title"
     tabindex="0"
@@ -9,7 +9,7 @@
       class="rating__star"
       aria-hidden="true"
     >
-      <span class="rating__indicator"></span>
+      <span class="rating__indicator" />
     </div>
   </div>
 
