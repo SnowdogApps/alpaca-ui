@@ -1,0 +1,230 @@
+<template>
+  <div
+    class="rating "
+    :aria-label="ariaLabel"
+    :title="title"
+    tabindex="0"
+  >
+    <div
+      class="rating__star"
+      aria-hidden="true"
+    >
+      <span class="rating__indicator"></span>
+    </div>
+  </div>
+
+</template>
+
+<script>
+  export default {
+    props: {
+      ariaLabel: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String,
+        required: true
+      }
+    }
+  }
+</script>
+
+<style lang="scss">
+  $rating__size                   : 95px !default;
+  $rating__item-size              : $rating__size / 5 !default;
+  $rating__size--rate             : 250px !default;
+  $rating__margin--rate           : $spacer--medium !default;
+  $rating__item-size--rate        : $rating__size--rate / 5 !default;
+  $icon__active-color             : '#fab216' !default;
+  $icon__active-color--with-border: '#fab216' !default;
+  $icon__inactive-color           : '#c2c1df' !default;
+  $rating__error-margin-bottom    : $spacer !default;
+  $rating__error-color            : $red !default;
+
+  .rating {
+    width: $rating__size;
+
+
+    &:hover,
+    &:focus {
+      .rating__rate-item span:before {
+        display: block;
+      }
+    }
+
+    &__rate-item {
+      position: relative;
+      flex: 1 0 $rating__item-size;
+      overflow: hidden;
+
+      &:hover,
+      &:focus {
+        ~ .rating__rate-item span:before {
+          display: none;
+        }
+      }
+    }
+    &__star {
+      position: relative;
+      height: $rating__item-size;
+      width: $rating__size;
+
+      &:before { // inactive
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        display: block;
+        width: $rating__size;
+        content: "";
+        height: $rating__item-size;
+        background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='#{$icon__inactive-color}'/></svg>");
+        background-repeat: repeat-x;
+        background-position: left center;
+        background-size: $rating__item-size;
+
+        @include isIE() {
+          height: 100%;
+          background-size: $rating__item-size 100%;
+        }
+      }
+      &--single {
+        width: $rating__item-size;
+      }
+    }
+    &__indicator {
+      left: 0;
+      top: 0;
+      display: block;
+      height: $rating__item-size;
+      width: $rating__size;
+      overflow: hidden;
+      text-indent: -10000px;
+      &:before { // active
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 3;
+        bottom: 0;
+        display: block;
+        content: "";
+        height: $rating__item-size;
+        background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg' ><path fill='none' d='M-2-2h24v24H-2z'/><path d='M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27z' fill='#{$icon__active-color}'/></svg>");
+        background-repeat: repeat-x;
+        background-position: left center;
+        background-size: $rating__item-size;
+        text-indent: 10000px;
+
+        @include isIE() {
+          width: 100%;
+          height: 100%;
+          background-size: $rating__item-size 100%;
+        }
+
+        .rating__star--rate & {
+          display: none;
+        }
+        .rating__star--rate:hover &,
+        .rating__star--rate:focus &,
+        .rating__rate-item--active & {
+          display: block;
+        }
+      }
+      &:after { //active star with border
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        content: "";
+        display: block;
+        height: $rating__item-size;
+        background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='#{$icon__active-color--with-border}'/></svg>");
+        background-repeat: repeat-x;
+        background-size: $rating__item-size;
+        background-position: left center;
+
+        @include isIE() {
+          width: 100%;
+          height: 100%;
+          background-size: $rating__item-size 100%;
+        }
+
+        .rating__star--rate & {
+          display: none;
+          text-indent: 10000px;
+        }
+      }
+    }
+
+    &__error {
+      display: none;
+      color: $rating__error-color;
+      margin-bottom: $rating__error-margin-bottom;
+
+      &--visible {
+        display: block;
+      }
+    }
+
+    .mage-error {
+      display: none !important; // sass-lint:disable-line no-important
+    }
+    &--rate {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $rating__size--rate;
+      margin-bottom: $rating__margin--rate;
+
+      .rating__rate-item {
+        flex: 1 0 $rating__item-size--rate;
+      }
+
+      .rating__star {
+        height: $rating__item-size--rate;
+        width: $rating__item-size--rate;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:before {
+          width: $rating__item-size--rate;
+          height: $rating__item-size--rate;
+          background-size: $rating__item-size--rate;
+
+          @include isIE() {
+            background-size: $rating__item-size--rate 100%;
+          }
+        }
+
+        &--single {
+          width: $rating__item-size--rate;
+        }
+      }
+      .radio__field {
+        width: 1px;
+        height: 1px;
+      }
+
+      .rating__indicator {
+        height: $rating__item-size--rate;
+        width: $rating__item-size--rate;
+
+        &:before {
+          height: $rating__item-size--rate;
+          background-size: $rating__item-size--rate;
+        }
+
+        &:after {
+          height: $rating__item-size--rate;
+          background-size: $rating__item-size--rate;
+        }
+      }
+    }
+  }
+</style>
