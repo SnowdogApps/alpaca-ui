@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag ? tag : 'button'"
+    :is="tag"
     :class="[
       customClass,
       {
@@ -15,7 +15,6 @@
     @click="onClick"
   >
     <slot />
-
     <icon
       v-if="icon"
       :icon="icon"
