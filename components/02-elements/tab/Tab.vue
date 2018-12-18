@@ -8,9 +8,14 @@
       <button
         :id="tab.tabId"
         :key="'tab' + tab.tabId"
-        :class="['tab__title',
-                 tab.tabId === activeTab && 'tab__title--active'
+        :class="[
+          'tab__title',
+          tab.tabId === activeTab && 'tab__title--active'
         ]"
+        :data-tab="tab.tabId"
+        :aria-controls="tab.tabId"
+        :aria-selected="tab.tabId === activeTab ? 'true' : 'false'"
+        :aria-expanded="tab.tabId === activeTab ? 'true' : 'false'"
         @click="setActiveTab(tab.tabId)"
       >
         {{ tab.title }}
@@ -29,15 +34,18 @@
         v-if="tab.tabId === activeTab"
         :id="tab.tabId"
         :key="'tab__content' + tab.tabId"
-        :class="['tab__content',
-                 tab.tabId === activeTab && 'tab__content--active']"
+        :data-content="tab.tabId"
+        :aria-labelledby="tab.titleId"
+        :aria-hidden="tab.tabId === activeTab ? 'true' : 'false'"
+        :class="[
+          'tab__content',
+          tab.tabId === activeTab && 'tab__content--active'
+        ]"
       >
         {{ tab.content }}
       </div>
     </template>
   </div>
-
-
 </template>
 
 <script>
@@ -61,12 +69,14 @@
     },
     data() {
       return {
-        activeTab: null
+        activeTab: this.tabs[0].tabId
       }
     },
     methods: {
       setActiveTab(tab) {
-        this.activeTab = this.tabs.filter(el => el.tabId === tab).map(el => el.tabId)[0];
+        this.activeTab = this.tabs
+          .filter(el => el.tabId === tab)
+          .map(el => el.tabId)[0];
       }
     }
   }
