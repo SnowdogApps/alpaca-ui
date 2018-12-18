@@ -25,7 +25,7 @@
         </th>
       </tr>
     </thead>
-    
+
     <tbody>
       <tr
         v-for="(rows, i) in bodyRows"
@@ -45,7 +45,7 @@
         </td>
       </tr>
     </tbody>
-    
+
     <tfoot v-if="footCells">
       <tr role="row">
         <td
@@ -84,7 +84,7 @@ export default {
     },
     footCells: {
       type: Array,
-      default: () => []
+      default: null
     }
   }
 }

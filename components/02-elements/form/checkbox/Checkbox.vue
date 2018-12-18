@@ -1,5 +1,5 @@
 <template>
-  <component 
+  <component
     :is="link ? 'a' : 'div'"
     :class="['checkbox', { 'checkbox--link': link }]"
   >
@@ -9,8 +9,9 @@
       :name="name"
       type="checkbox"
       class="checkbox__field"
+      @change="handleChange($event)"
     >
-    <icon 
+    <icon
       icon="checked"
       :class="[
         iconClass,

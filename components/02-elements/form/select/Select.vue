@@ -30,7 +30,7 @@
       </select>
     </div>
 
-    <template if="validations">
+    <template v-if="validations">
       <span
         v-for="(validation, index) in currentValidations"
         :key="index"

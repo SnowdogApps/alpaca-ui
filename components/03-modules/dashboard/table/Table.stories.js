@@ -14,12 +14,15 @@ storiesOf('Modules/Dashboard/Table', module)
     computed: {
       headCells() {
         const headCells = table.table.mainTags
-          .filter(el => el.mainTag === 'thead');
+          .find(el => el.mainTag === 'thead');
+
+        return headCells.rowTags[0].childTags;
       },
       bodyRows() {
         const bodyRows = table.table.mainTags
           .filter(el => el.mainTag === 'tbody');
 
+        return bodyRows[0].rowTags.map(el => el.childTags);
       }
     },
     template: `

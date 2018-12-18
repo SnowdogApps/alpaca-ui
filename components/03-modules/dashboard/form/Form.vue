@@ -1,6 +1,8 @@
 <template>
   <div class="dashboard-form">
-    <alpaca-heading :level="level">
+    <alpaca-heading
+      :level="level"
+    >
       {{ title }}
     </alpaca-heading>
 
@@ -36,7 +38,6 @@
           v-for="option in options"
           :id="option.id"
           :key="option.id"
-          :ref="selected"
           :name="option.name"
           :options="option.options"
           :label="option.label"
@@ -52,9 +53,9 @@
         />
       </template>
 
-      <div class="dashboard-form__divider dashboard-form__fields dashboard-form--hidden">
+      <div class="dashboard-form__divider dashboard-form__fields">
         <h5 class="heading heading--five-level dashboard-form__title-form dashboard-form__divider">
-          {{ formTitle }}
+          {{ 'Change password' }}
         </h5>
 
         <template v-if="hiddenFields">
@@ -68,8 +69,6 @@
             :placeholder="field.hiddenField.label.text"
           />
         </template>
-
-
       </div>
     </div>
   </div>
@@ -109,24 +108,13 @@
         type: Array,
         default: null
       },
-      formTitle: {
-        type: String,
-        default: null
-      },
       hiddenFields: {
         type: Array,
         default: null
       }
-    },
-    computed: {
-
-    },
-    methods: {
-      test () {
-        console.log(this.$refs.selected);
-      }
     }
   }
+
 </script>
 
 <style lang="scss">

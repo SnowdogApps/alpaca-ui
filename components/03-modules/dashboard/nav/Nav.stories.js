@@ -17,6 +17,7 @@ storiesOf('Modules/Dashboard/Nav', module)
           :title="items.title"
           :list="items.list.elements"
           :listClass="items.list.class"
+          :actualPage="items.actualPage"
        />
       </app>
     `

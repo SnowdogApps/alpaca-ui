@@ -1,10 +1,13 @@
 <template>
   <div class="dashboard-nav">
-    <div class="dashboard-nav__mobile">
+    <div
+      :class="['dashboard-nav__mobile', isActive && 'dashboard-nav__mobile--active']"
+      @click="isActive = !isActive"
+    >
       {{ actualPage }}
     </div>
 
-    <div class="dashboard-nav__content">
+    <div :class="['dashboard-nav__content', isActive && 'dashboard-nav__content--visible']">
       <alpaca-heading
         :level="5"
         class="dashboard-nav__title"
@@ -46,6 +49,11 @@
       listClass: {
         type: String,
         default: null
+      }
+    },
+    data() {
+      return {
+        isActive: false
       }
     }
   }
@@ -145,6 +153,5 @@
         padding: 0;
       }
     }
-
   }
 </style>

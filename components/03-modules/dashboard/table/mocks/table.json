@@ -12,31 +12,31 @@
             "childTags": [
               {
                 "childTag": "th",
-                "content": "Order #"
+                "text": "Order #"
               },
               {
                 "childTag": "th",
-                "content": "Date"
+                "text": "Date"
               },
               {
                 "childTag": "th",
-                "content": "Ship To"
+                "text": "Ship To"
               },
               {
                 "childTag": "th",
-                "content": "Order"
+                "text": "Order"
               },
               {
                 "childTag": "th",
-                "content": "Total"
+                "text": "Total"
               },
               {
                 "childTag": "th",
-                "content": "Status"
+                "text": "Status"
               },
               {
                 "childTag": "th",
-                "content": "Action"
+                "text": "Action"
               }
             ]
           }
@@ -50,38 +50,38 @@
             "childTags": [
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Order #:'",
-                "content": "000000000123"
+                "mobileHeading": "Order #:",
+                "text": "000000000123"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Date:'",
-                "content": "6/23/12"
+                "mobileHeading": "Date:",
+                "text": "6/23/12"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Ship To:'",
-                "content": "Store Alpaca"
+                "mobileHeading": "Ship To:",
+                "text": "Store Alpaca"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Order:'",
-                "content": "Production Facility"
+                "mobileHeading": "Order:",
+                "text": "Production Facility"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Total:'",
-                "content": "$ 123,12"
+                "mobileHeading": "Total:",
+                "text": "$ 123,12"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Status:'",
-                "content": "Pending"
+                "mobileHeading": "Status:",
+                "text": "Pending"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Action:'",
-                "content": "View Order"
+                "mobileHeading": "Action:",
+                "text": "View Order"
               }
             ]
           },
@@ -90,38 +90,38 @@
             "childTags": [
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Order #:'",
-                "content": "000000000124"
+                "mobileHeading": "Order #:",
+                "text": "000000000124"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Date:'",
-                "content": "8/23/12"
+                "mobileHeading": "Date:",
+                "text": "8/23/12"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Ship To:'",
-                "content": "Store Alpaca2"
+                "mobileHeading": "Ship To:",
+                "text": "Store Alpaca2"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Order:'",
-                "content": "Production Facility"
+                "mobileHeading": "Order:",
+                "text": "Production Facility"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Total:'",
-                "content": "$ 1232,12"
+                "mobileHeading": "Total:",
+                "text": "$ 1232,12"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Status:'",
-                "content": "Pending"
+                "mobileHeading": "Status:",
+                "text": "Pending"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Action:'",
-                "content": "View Order"
+                "mobileHeading": "Action:",
+                "text": "View Order"
               }
             ]
           },
@@ -130,38 +130,38 @@
             "childTags": [
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Order #:'",
-                "content": "000000000125"
+                "mobileHeading": "Order #:",
+                "text": "000000000125"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Date:'",
-                "content": "2/23/12"
+                "mobileHeading": "Date:",
+                "text": "2/23/12"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Ship To:'",
-                "content": "Store Alpaca3"
+                "mobileHeading": "Ship To:",
+                "text": "Store Alpaca3"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Order:'",
-                "content": "Production Facility"
+                "mobileHeading": "Order:",
+                "text": "Production Facility"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Total:'",
-                "content": "$ 1123,12"
+                "mobileHeading": "Total:",
+                "text": "$ 1123,12"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Status:'",
-                "content": "Done"
+                "mobileHeading": "Status:",
+                "text": "Done"
               },
               {
                 "childTag": "td",
-                "childTagAttributes": "data-th='Action:'",
-                "content": "View Order"
+                "mobileHeading": "Action:",
+                "text": "View Order"
               }
             ]
           }

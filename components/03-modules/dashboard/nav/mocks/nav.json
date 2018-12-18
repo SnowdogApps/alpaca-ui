@@ -9,86 +9,86 @@
       {
         "text": "Account Dashboard",
         "class": "dashboard-nav__item current",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Account Information",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Address Book",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "My Orders",
         "class": "dashboard-nav__item ",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "My Downloadable Products",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Order by SKU",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "My Wishlist",
         "class": "dashboard-nav__item ",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Store Credit",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Gift Card",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Gift Registry",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Newsletter Subscriptions",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "My Product Reviews",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "Reward Points",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       },
       {
         "text": "My Invations",
         "class": "dashboard-nav__item",
-        "linkClass": "dashboard-nav__link link--invert",
-        "link": "#"
+        "linkClass": "dashboard-nav__link link--inverted",
+        "linkHref": "#"
       }
     ]
   }
