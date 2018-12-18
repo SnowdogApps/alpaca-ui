@@ -18,13 +18,25 @@
         />
       </template>
 
-      <!--TODO textarea fields-->
+      <!--TODO textarea-->
+
+      <!--<template v-if="textarea">-->
+      <!--<alpaca-input-->
+      <!--id="field_id"-->
+      <!--label="Textarea"-->
+      <!--type="text"-->
+      <!--name="textarea"-->
+      <!--textarea-->
+      <!--placeholder="First and last name"-->
+      <!--/>-->
+      <!--</template>-->
 
       <template v-if="options">
         <alpaca-select
           v-for="option in options"
           :id="option.id"
           :key="option.id"
+          :ref="selected"
           :name="option.name"
           :options="option.options"
           :label="option.label"
@@ -56,6 +68,8 @@
             :placeholder="field.hiddenField.label.text"
           />
         </template>
+
+
       </div>
     </div>
   </div>
@@ -66,7 +80,6 @@
   import AlpacaInput from '../../../02-elements/form/input/Input.vue'
   import AlpacaSelect from '../../../02-elements/form/select/Select.vue'
   import AlpacaCheckbox from '../../../02-elements/form/checkbox/Checkbox.vue'
-
 
   export default {
     components: {
@@ -103,6 +116,14 @@
       hiddenFields: {
         type: Array,
         default: null
+      }
+    },
+    computed: {
+
+    },
+    methods: {
+      test () {
+        console.log(this.$refs.selected);
       }
     }
   }
