@@ -1,5 +1,5 @@
 <template>
-  <component 
+  <component
     :is="link ? 'a' : 'div'"
     :class="['checkbox', { 'checkbox--link': link }]"
   >
@@ -10,7 +10,7 @@
       type="checkbox"
       class="checkbox__field"
     >
-    <icon 
+    <icon
       icon="checked"
       :class="[
         iconClass,
@@ -21,9 +21,8 @@
       :is="link ? 'span' : 'label'"
       :for="id"
       class="checkbox__label"
-    >
-      {{ label }}
-    </component>
+      v-html="label"
+    />
   </component>
 </template>
 
