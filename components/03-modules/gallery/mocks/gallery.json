@@ -1,0 +1,52 @@
+{
+  "class": "",
+  "typeHorizontal": "false",
+  "imageMain": {
+    "dataSrc": "/images/gallery/product-img-496-496.jpg",
+    "alt": "Sample alt"
+  },
+  "thumbs": [
+    {
+      "imageThumb": {
+        "dataSrc": "/images/gallery/product-img-80-80.jpg",
+        "active": "true",
+        "alt": ""
+      }
+    },
+    {
+      "imageThumb": {
+        "dataSrc": "/images/gallery/product-img-80-80.jpg",
+        "alt": ""
+      }
+    },
+    {
+      "imageThumb": {
+        "dataSrc": "/images/gallery/product-img-80-80.jpg",
+        "alt": ""
+      }
+    },
+    {
+      "imageThumb": {
+        "dataSrc": "/images/gallery/product-img-80-80.jpg",
+        "alt": ""
+      }
+    }
+  ],
+  "variants": [
+    {
+      "name": "horizontal",
+      "context": {
+        "typeHorizontal": "true"
+      }
+    },
+    {
+      "name": "with-label",
+      "context": {
+        "productLabel": {
+          "class": "badge--new gallery__product-label",
+          "text": "new"
+        }
+      }
+    }
+  ]
+}
