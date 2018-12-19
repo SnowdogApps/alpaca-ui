@@ -8,7 +8,6 @@
         >
           {{ productLabel.text }}
         </alpaca-badge>
-
         <alpaca-image
           :src="imageMain.dataSrc"
           :alt="imageMain.alt"
