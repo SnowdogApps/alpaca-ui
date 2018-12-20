@@ -1,0 +1,384 @@
+<template>
+  <div class="dropdown-list">
+    <ul class="dropdown-list__list">
+      <li
+        v-for="(element, i) in elements"
+        :key="i"
+        :class="['dropdown-list__item', element.collapse && 'dropdown-list__item--collapse']"
+      >
+        <component
+          :is="element.itemTag"
+          class="dropdown-list__label"
+          :data-dropdown="element.id ? element.id : ''"
+        >
+          {{ element.title }}
+          <alpaca-icon
+            v-if="element.collapse"
+            :icon="element.collapse.iconId"
+            :custom-class="element.collapse.class"
+          />
+        </component>
+        <div
+          v-if="element.contentElement"
+          :id="element.id"
+          :class="['dropdown-list__content', element.class]"
+          :data-content="element.id"
+          aria-hidden="true"
+        >
+          <slot />
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+
+  export default {
+    components: {
+      AlpacaIcon
+    },
+    props: {
+      elements: {
+        type: Array,
+        required: true
+      }
+    }
+  }
+</script>
+
+<style lang="scss">
+  $dropdown-list__width                     : 100% !default;
+  $dropdown-list__bg-color                  : $white !default;
+  $dropdown-list__border-radius             : 0 !default;
+  $dropdown-list__outline                   : none !default;
+  $dropdown-list__font-size                 : $font-size-base !default;
+  $dropdown-list__transition-height         : height 0.3s !default;
+  $dropdown-list__transition                : $transition-base !default;
+  $dropdown-list__content-margin            : $spacer $spacer--medium !default;
+
+  // List item
+  $dropdown-list__item-padding              : $spacer--medium !default;
+  $dropdown-list__item-color                : $font-color-base !default;
+  $dropdown-list__item-color--open          : $color-primary !default;
+  $dropdown-list__item-bg-color             : $white !default;
+  $dropdown-list__item-bg-color--open       : $gray-darker !default;
+  $dropdown-list__item-bg-color-hover       : $gray-darker !default;
+  $dropdown-list__item-bg-color--level2     : $gray-dark !default;
+
+  // List icon
+  $dropdown-list__icon-width                : 16px !default;
+  $dropdown-list__icon-height               : 16px !default;
+  $dropdown-list__icon-fill                 : $black !default;
+  $dropdown-list__icon-fill-hover           : $color-primary !default;
+  $dropdown-list__icon-fill--open           : $color-primary !default;
+
+  // Secondary list variant
+  $dropdown-list__fill--secondary           : $gray !default;
+  $dropdown-list__font-weight--secondary    : $font-weight-bold !default;
+  $dropdown-list__bg-color--secondary       : $dropdown-list__bg-color !default;
+  $dropdown-list__item-color--secondary     : $dropdown-list__item-color !default;
+  $dropdown-list__icon-size---secondary     : 24px !default;
+  $dropdown-list__icon-padding--secondary   : 0 5px !default;
+  $dropdown-list__icon-margin--secondary    : 0 0 0 5px !default;
+  $dropdown-list__icon-fill---secondary-open: $color-primary !default;
+  $dropdown-list__content-margin--secondary : 0 !default;
+
+
+  // Dark list variant
+  $dropdown-list__bg-color--dark            : $gray-darker !default;
+  $dropdown-list__list-padding--dark        : $spacer--medium !default;
+  $dropdown-list__item-border-color--dark   : $gray-darkest !default;
+  $dropdown-list__icon-fill--dark           : $white !default;
+  $dropdown-list__item-color--dark          : $white !default;
+  $dropdown-list__item-color-hover--dark    : $white !default;
+  $dropdown-list__item-bg-color-hover--dark : $gray-darker !default;
+
+  // Nested list variables
+  $dropdown-list__inner-item-bg-color       : $gray-dark !default;
+  $dropdown-list__inner-item-color          : $white !default;
+  $dropdown-list__icon-fill--inner          : $white !default;
+  $dropdown-list__inner-item-border         : 1px solid $white !default;
+  $dropdown-list__inner-item-border--level2 : 1px solid $gray-dark !default;
+
+  .dropdown-list {
+    width: $dropdown-list__width;
+    position: relative;
+    background-color: $dropdown-list__bg-color;
+
+    &--secondary {
+
+      .dropdown-list__item,
+      .dropdown-list__item--open {
+
+        .dropdown-list__label {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+          text-transform: uppercase;
+          font-size: $dropdown-list__font-size;
+          font-weight: $dropdown-list__font-weight--secondary;
+          background-color: $dropdown-list__bg-color--secondary;
+          color: $dropdown-list__item-color--secondary;
+
+          .dropdown-list__icon {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: $dropdown-list__icon-size---secondary;
+            height: $dropdown-list__icon-size---secondary;
+            padding: $dropdown-list__icon-padding--secondary;
+            margin: $dropdown-list__icon-margin--secondary;
+            backface-visibility: hidden;
+          }
+        }
+      }
+
+      .dropdown-list__item {
+        fill: $dropdown-list__fill--secondary;
+        &:hover,
+        &:focus {
+          fill: $dropdown-list__fill--secondary;
+          .dropdown-list__icon {
+            fill: $dropdown-list__fill--secondary;
+          }
+        }
+
+      }
+
+      .dropdown-list__item--open {
+        fill: $dropdown-list__icon-fill---secondary-open;
+
+        &:hover,
+        &:focus {
+          .dropdown-list__icon {
+            fill: $dropdown-list__icon-fill---secondary-open;
+          }
+        }
+      }
+
+      .dropdown-list__content {
+        margin: $dropdown-list__content-margin--secondary;
+      }
+    }
+
+    &--dark {
+      background-color: $dropdown-list__bg-color--dark;
+      padding: 0 $dropdown-list__list-padding--dark;
+
+      .dropdown-list__item {
+        border-bottom: 2px solid $dropdown-list__item-border-color--dark;
+      }
+
+      .dropdown-list__item,
+      .dropdown-list__item--open {
+        .dropdown-list__label {
+          background-color: $dropdown-list__bg-color--dark;
+          color: $dropdown-list__item-color--dark;
+          font-weight: $font-weight-bold;
+
+          &:hover,
+          &:focus {
+            color: $dropdown-list__item-color-hover--dark;
+            background-color: $dropdown-list__item-bg-color-hover--dark;
+
+            & .dropdown-list__icon {
+              fill: $dropdown-list__icon-fill--dark;
+            }
+          }
+
+          & .dropdown-list__icon {
+            fill: $dropdown-list__icon-fill--dark;
+          }
+        }
+      }
+
+      .dropdown-list__content {
+        background-color: $dropdown-list__bg-color--dark;
+      }
+    }
+
+    &__list {
+      display: block;
+      width: $dropdown-list__width;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__icon {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      bottom: 0;
+      width: $dropdown-list__icon-width;
+      height: $dropdown-list__icon-height;
+      margin: auto;
+      fill: $dropdown-list__icon-fill;
+      transition: $dropdown-list__transition;
+
+      &--inner {
+        width: $dropdown-list__icon-width;
+        height: $dropdown-list__icon-width;
+        top: 0;
+        bottom: 0;
+        fill: $dropdown-list__icon-fill--inner;
+        margin: auto 0;
+      }
+    }
+
+    &__item {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      font-size: $dropdown-list__font-size;
+      cursor: pointer;
+
+      &--open,
+      &.open {
+        & .dropdown-list__label {
+          color: $dropdown-list__item-color--open;
+          background-color: $dropdown-list__item-bg-color--open;
+
+          & .dropdown-list__icon {
+            fill: $dropdown-list__icon-fill--open;
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &--collapse {
+        .dropdown-list__label {
+          padding-right: 30px;
+        }
+      }
+    }
+
+    &__label {
+      display: block;
+      position: relative;
+      width: 100%;
+      background-color: $dropdown-list__item-bg-color;
+      padding: $dropdown-list__item-padding;
+      margin: 0;
+      border: 0;
+      border-radius: $dropdown-list__border-radius;
+      text-decoration: none;
+      text-align: left;
+      cursor: pointer;
+      transition: $dropdown-list__transition;
+
+      &:hover,
+      &:focus {
+        background-color: $dropdown-list__item-bg-color-hover;
+        text-decoration: none;
+        outline: $dropdown-list__outline;
+
+        .dropdown-list__icon {
+          fill: $dropdown-list__icon-fill-hover;
+        }
+      }
+    }
+
+    &__content {
+      height: 0;
+      overflow: hidden;
+      margin: $dropdown-list__content-margin;
+      transition: $dropdown-list__transition-height;
+    }
+
+    // Nested lists styles
+    &__inner-list {
+      list-style-type: none;
+      display: block;
+      height: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      transition: $dropdown-list__transition;
+      font-size: $dropdown-list__font-size;
+    }
+
+    &__inner-item {
+      position: relative;
+      display: block;
+      padding: 0;
+      background-color: $dropdown-list__inner-item-bg-color;
+      border-bottom: $dropdown-list__inner-item-border;
+
+      &.open {
+        .dropdown-list__icon--inner {
+          transform: rotate(180deg);
+        }
+      }
+
+      &--level2 {
+        background-color: $dropdown-list__item-bg-color--level2;
+        border-bottom: $dropdown-list__inner-item-border--level2;
+        .dropdown-list__inner-label {
+          color: $dropdown-list__inner-item-color;
+          padding-left: $dropdown-list__item-padding * 2;
+        }
+      }
+    }
+
+    &__inner-label {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      padding: $dropdown-list__item-padding;
+      color: $dropdown-list__inner-item-color;
+
+      &:hover,
+      &:focus {
+        color: $dropdown-list__inner-item-color;
+        text-decoration: none;
+      }
+    }
+
+    @include mq($screen-m) {
+      // from $screen-m drpdown list displays inline and with opened list
+      &\@screen-m {
+        .dropdown-list__list {
+          display: flex;
+          flex-flow: row nowrap;
+        }
+
+        .dropdown-list__item {
+          width: 25%;
+          cursor: default;
+        }
+
+        .dropdown-list__label {
+          cursor: default;
+          &:hover,
+          &:focus {
+            color: $dropdown-list__item-color;
+            background-color: $dropdown-list__item-bg-color;
+          }
+        }
+        .dropdown-list__icon {
+          display: none;
+        }
+        .dropdown-list__content {
+          height: auto;
+        }
+
+        &.dropdown-list--dark {
+          .dropdown-list__label {
+            &:hover,
+            &:focus {
+              color: $dropdown-list__item-color-hover--dark;
+              background-color: $dropdown-list__item-bg-color-hover--dark;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
