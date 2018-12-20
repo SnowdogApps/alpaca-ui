@@ -9,7 +9,7 @@
       :name="name"
       type="checkbox"
       class="checkbox__field"
-      @change="handleChange($event)"
+      @change="onChange"
     >
     <icon
       icon="checked"
@@ -57,6 +57,11 @@
         type: Boolean,
         required: false,
         default: false
+      }
+    },
+    methods: {
+      onChange (event) {
+        this.$emit('input', event.target.value)
       }
     }
   }
