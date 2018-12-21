@@ -7,7 +7,7 @@
           custom-class="pager__link pager__link--prev"
           aria-label="Go to previous page"
           :disabled="currentPage < 2"
-          @click="currentPage--"
+          @click="setCurrentPage(currentPage - 1)"
         />
       </li>
 
@@ -15,7 +15,7 @@
         <li class="pager__item">
           <alpaca-button
             custom-class="pager__link"
-            @click="cyrrentPage = 1"
+            @click="setCurrentPage(1)"
           >
             1
           </alpaca-button>
@@ -35,7 +35,7 @@
       >
         <alpaca-button
           custom-class="pager__link"
-          @click="currentPage = number"
+          @click="setCurrentPage(number)"
         >
           {{ number }}
         </alpaca-button>
@@ -48,7 +48,7 @@
         <li class="pager__item">
           <alpaca-button
             custom-class="pager__link"
-            @click="currentPage = numberOfPages"
+            @click="setCurrentPage(numberOfPages)"
           >
             {{ numberOfPages }}
           </alpaca-button>
@@ -61,7 +61,7 @@
           custom-class="pager__link pager__link--next"
           aria-label="Go to next page"
           :disabled="currentPage > numberOfPages - 1"
-          @click="currentPage++"
+          @click="setCurrentPage(currentPage + 1)"
         />
       </li>
     </ul>
@@ -110,8 +110,6 @@ export default {
     },
     listOfPageNumbers () {
       return Array.from(Array(this.numberOfPages), (_, i) => i + 1)
-        .map((val, index) => index)
-        .slice(1);
     },
     limitedPageNumbers () {
       return this.setLimitedPageNumber()
@@ -152,6 +150,9 @@ export default {
         this.currentPage - Math.floor(this.limitPerPage / 2) - 1,
         this.currentPage + Math.floor(this.limitPerPage / 2)
       ) 
+    },
+    setCurrentPage (value) {
+      this.currentPage = value
     }
   }
 }
