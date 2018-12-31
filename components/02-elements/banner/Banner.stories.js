@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/vue'
 
-import banner from './mocks/banner.json'
-
 import App from '../../01-globals/app/App.vue'
 import AlpacaBanner from './Banner.vue'
+
+import banner from './mocks/banner.json'
 
 storiesOf('Elements/Banner', module)
   .add('Default', () => ({
@@ -18,7 +18,7 @@ storiesOf('Elements/Banner', module)
         <alpaca-banner 
           :link="banner.link"
           :image="banner.image"
-          />
+        />
       </app>
     `
   }))
