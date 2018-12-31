@@ -43,8 +43,8 @@
 
 <script>
   import AlpacaBadge from '../../02-elements/badge/Badge.vue'
-  import AlpacaImage from '../../02-elements/image/Image.vue';
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue';
+  import AlpacaImage from '../../02-elements/image/Image.vue'
+  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
   export default {
     components: {
