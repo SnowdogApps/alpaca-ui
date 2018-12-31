@@ -14,18 +14,16 @@
       <div
         v-for="(option, i) in options"
         :key="option.id"
-        :class="['swatch__option-container',
-                 activeIndex === i && 'selected']"
+        :class="['swatch__option-container', activeIndex === i && 'selected']"
         :aria-label="option.aria-label"
         tabindex="0"
         @click="setActiveElement(i)"
       >
         <div
-          :class="['swatch__option',
-                   image && 'swatch__option--image']"
+          :class="['swatch__option', image && 'swatch__option--image']"
           :style="option.style"
         >
-          {{ image || color ? '' : option.text }}
+          {{ image || !color && option.text }}
         </div>
       </div>
     </div>
