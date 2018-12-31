@@ -12,6 +12,6 @@ storiesOf('Elements/Logo', module)
           src="/icons/alpaca.svg"
           to="/"
         />
-       </app>
+      </app>
     `
   }))
