@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag ? tag : 'button'"
+    :is="tag"
     :class="[
       customClass,
       {
@@ -12,11 +12,16 @@
       }
     ]"
     :href="link"
+    @click="onClick"
   >
-    <slot /> <icon 
-      v-if="icon" 
-      :icon="icon" 
-      class="button__icon"
+    <slot />
+    <icon
+      v-if="icon"
+      :icon="icon"
+      :class="[
+        iconClass,
+        'button__icon'
+      ]"
     />
   </component>
 </template>
@@ -39,6 +44,10 @@ export default {
       type: String,
       default: null
     },
+    iconClass: {
+      type: String,
+      default: null
+    },
     secondary: {
       type: Boolean,
       default: false
@@ -50,6 +59,11 @@ export default {
     fluid: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    onClick(event) {
+      this.$emit('click', event);
     }
   }
 }
