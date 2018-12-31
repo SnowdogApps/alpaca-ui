@@ -19,7 +19,8 @@ storiesOf('Elements/Form/Radio', module)
           :legendId="options.legendId"
           :legend="options.legend" 
           :options="options.options" 
-          :name="options.name"/>
+          :name="options.name"
+        />
       </app>
     `
   }))
