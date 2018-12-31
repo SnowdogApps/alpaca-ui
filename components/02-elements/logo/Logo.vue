@@ -1,17 +1,28 @@
 <template>
-  <router-link 
-    class="logo" 
-    to="/"
+  <router-link
+    class="logo"
+    :to="to"
   >
-    <img 
-      class="logo__image" 
-      src="/icons/alpaca.svg"
+    <img
+      class="logo__image"
+      :src="src"
     >
   </router-link>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    src: {
+      type: String,
+      required: true
+    },
+    to: {
+      type: String,
+      required: true
+    }
+  }
+}
 </script>
 
 <style lang="scss">
