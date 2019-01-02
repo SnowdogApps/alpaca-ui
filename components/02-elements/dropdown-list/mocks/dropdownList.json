@@ -4,14 +4,14 @@
       {
         "itemTag": "a",
         "title": "All",
-        "class": "link--invert",
+        "class": "link--inverted",
         "itemAttributes": "href='#'"
       },
       {
         "itemTag": "button",
         "itemAttributes": "aria-expanded='false' aria-controls='dropdown-1'",
         "title": "dropdown title",
-        "class": "link--invert",
+        "class": "link--inverted",
         "id": "dropdown-1",
         "collapse": {
           "class": "dropdown-list__icon",
@@ -24,7 +24,7 @@
       {
         "itemTag": "button",
         "itemAttributes": "aria-expanded='false' aria-controls='dropdown-2'",
-        "class": "link--invert",
+        "class": "link--inverted",
         "title": "some longer longer and longer dropdown title",
         "id": "dropdown-2",
         "collapse": {
@@ -39,7 +39,7 @@
         "itemTag": "button",
         "itemAttributes": "aria-expanded='false' aria-controls='dropdown-3'",
         "title": "dropdown title",
-        "class": "link--invert",
+        "class": "link--inverted",
         "id": "dropdown-3",
         "collapse": {
           "class": "dropdown-list__icon",
@@ -53,7 +53,7 @@
         "itemTag": "button",
         "itemAttributes": "aria-expanded='false' aria-controls='dropdown-4'",
         "title": "dropdown title",
-        "class": "link--invert",
+        "class": "link--inverted",
         "id": "dropdown-4",
         "collapse": {
           "class": "dropdown-list__icon",
@@ -91,14 +91,14 @@
           {
             "itemTag": "a",
             "title": "All",
-            "class": "link--invert",
+            "class": "link--inverted",
             "itemAttributes": "href='#'"
           },
           {
             "itemTag": "button",
             "title": "dropdown title",
             "id": "dropdown-1",
-            "class": "link--invert",
+            "class": "link--inverted",
             "itemAttributes": "aria-expanded='false' aria-controls='dropdown-1'",
             "collapse": {
               "class": "dropdown-list__icon",
@@ -188,7 +188,7 @@
             "itemTag": "a",
             "itemAttributes": "href='#' aria-expanded='false' aria-controls='dropdown-2'",
             "title": "dropdown title",
-            "class": "link--invert",
+            "class": "link--inverted",
             "id": "dropdown-2",
             "collapse": {
               "class": "dropdown-list__icon",
@@ -215,7 +215,7 @@
             "itemTag": "a",
             "itemAttributes": "href='#' aria-expanded='false' aria-controls='dropdown-3'",
             "title": "dropdown title",
-            "class": "link--invert",
+            "class": "link--inverted",
             "id": "dropdown-3",
             "collapse": {
               "class": "dropdown-list__icon",

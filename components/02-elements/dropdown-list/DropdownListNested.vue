@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown-list">
+  <div class="dropdown-list dropdown-list--with-nested">
     <ul
       v-for="(element, i) in elements"
       :key="i"
@@ -10,7 +10,7 @@
       >
         <alpaca-link
           href="#"
-          :custom-class="element.class"
+          custom-class="dropdown-list__label"
           :data-dropdown="element.id"
           :aria-controls="element.id"
         >
@@ -38,7 +38,7 @@
           >
             <alpaca-link
               href="#"
-              :class="['dropdown-list__inner-label', el.class]"
+              custom-class="dropdown-list__inner-label"
               :data-dropdown="el.id"
             >
               {{ el.itemName }}
@@ -62,7 +62,7 @@
               >
                 <alpaca-link
                   href="#"
-                  :class="['dropdown-list__inner-label', sub.class]"
+                  custom-class="dropdown-list__inner-label"
                 >
                   {{ sub.itemName }}
                 </alpaca-link>
@@ -89,6 +89,9 @@
         type: Array,
         required: true
       }
+    },
+    methods: {
+
     }
   }
 </script>
