@@ -1,12 +1,12 @@
 <template>
   <a
     :href="link"
-    :class="['banner', customClass]"
+    class="banner"
   >
     <picture class="image">
       <source
-        v-for="(source, i) in image.sources"
-        :key="i"
+        v-for="source in image.sources"
+        :key="source.src"
         :srcset="source.src"
         :media="source.mediaQuery"
       >
@@ -29,10 +29,6 @@
       image: {
         type: Object,
         required: true
-      },
-      customClass: {
-        type: String,
-        default: null
       }
     }
   }
