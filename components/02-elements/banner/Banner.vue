@@ -5,8 +5,8 @@
   >
     <picture class="image">
       <source
-        v-for="source in image.sources"
-        :key="source.src"
+        v-for="{ key, source } in getImageWithKey"
+        :key="key"
         :srcset="source.src"
         :media="source.mediaQuery"
       >
@@ -20,6 +20,8 @@
 </template>
 
 <script>
+  import uniqueId from 'lodash.uniqueid';
+
   export default {
     props: {
       link: {
@@ -30,7 +32,12 @@
         type: Object,
         required: true
       }
-    }
+    },
+    computed: {
+      getImageWithKey() {
+        return this.image.sources.map(source => ({ key: uniqueId("image"), source }));
+      }
+    },
   }
 </script>
 
