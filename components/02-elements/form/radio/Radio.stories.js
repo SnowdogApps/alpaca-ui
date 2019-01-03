@@ -10,7 +10,8 @@ storiesOf('Elements/Form/Radio', module)
     components: { App, AlpacaRadio },
     data() {
       return {
-        options
+        options,
+        selected: null
       }
     },
     template: `
@@ -20,7 +21,9 @@ storiesOf('Elements/Form/Radio', module)
           :legend="options.legend" 
           :options="options.options" 
           :name="options.name"
+          v-model="selected"
         />
+        Selected option: {{ selected }}
       </app>
     `
   }))

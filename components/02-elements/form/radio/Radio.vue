@@ -18,8 +18,11 @@
         <input
           :id="option.id"
           :name="name"
+          :value="option.value"
+          :checked="checked === option.value"
           type="radio"
           class="radio__field"
+          @change="$emit('change', $event.target.value)"
         >
         <label
           :for="option.id"
@@ -35,7 +38,15 @@
 
 <script>
   export default {
+    model: {
+      prop: 'checked',
+      event: 'change'
+    },
     props: {
+      checked: {
+        type: [String, Object, Number, Boolean],
+        default: null,
+      },
       legendId: {
         type: String,
         required: true
