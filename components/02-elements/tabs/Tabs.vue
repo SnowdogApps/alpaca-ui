@@ -19,14 +19,12 @@
         @click="setActiveTab(tab.tabId)"
       >
         {{ tab.title }}
-
         <icon
           v-if="icon"
           :icon="icon"
           :custom-class="tab__icon"
         />
       </button>
-
       <div
         v-if="tab.tabId === activeTab"
         :id="tab.tabId"
