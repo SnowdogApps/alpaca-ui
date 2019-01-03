@@ -1,21 +1,21 @@
 <template>
   <div
-    :class="['tab', modifier && 'tab--' + modifier]"
+    class="tab"
   >
     <template
-      v-for="tab in tabs"
+      v-for="{ id, tab } in getTabsWithId"
     >
       <button
-        :id="tab.tabId"
+        :id="id"
         :key="'tab' + tab.tabId"
         :class="[
           'tab__title',
-          tab.tabId === activeTab && 'tab__title--active'
+          { 'tab__title--active': tab.tabId === activeTab }
         ]"
         :data-tab="tab.tabId"
         :aria-controls="tab.tabId"
-        :aria-selected="tab.tabId === activeTab ? 'true' : 'false'"
-        :aria-expanded="tab.tabId === activeTab ? 'true' : 'false'"
+        :aria-selected="tab.tabId === activeTab"
+        :aria-expanded="tab.tabId === activeTab"
         @click="setActiveTab(tab.tabId)"
       >
         {{ tab.title }}
@@ -23,10 +23,7 @@
         <icon
           v-if="icon"
           :icon="icon"
-          :class="[
-            iconClass,
-            'button__icon'
-          ]"
+          :custom-class="tab__icon"
         />
       </button>
 
@@ -36,10 +33,10 @@
         :key="'tab__content' + tab.tabId"
         :data-content="tab.tabId"
         :aria-labelledby="tab.titleId"
-        :aria-hidden="tab.tabId === activeTab ? 'true' : 'false'"
+        :aria-hidden="tab.tabId === activeTab"
         :class="[
           'tab__content',
-          tab.tabId === activeTab && 'tab__content--active'
+          { 'tab__content--active': tab.tabId === activeTab }
         ]"
       >
         {{ tab.content }}
@@ -49,6 +46,7 @@
 </template>
 
 <script>
+  import uniqueId from 'lodash.uniqueid';
   import Icon from '../../01-globals/icon/Icon.vue'
 
   export default {
@@ -61,15 +59,16 @@
       icon: {
         type: String,
         default: null
-      },
-      modifier: {
-        type: String,
-        default: null
       }
     },
     data() {
       return {
         activeTab: this.tabs[0].tabId
+      }
+    },
+    computed: {
+      getTabsWithId() {
+        return this.tabs.map(tab => ({ id: uniqueId("tab"), tab }));
       }
     },
     methods: {
