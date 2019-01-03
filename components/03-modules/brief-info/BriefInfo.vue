@@ -10,8 +10,8 @@
 
     <ul class="list brief-info__items-container">
       <li
-        v-for="(item, i) in items"
-        :key="'brief-info-' + i"
+        v-for="{ key, item } in getItemsWithKey"
+        :key="key"
         class="brief-info__item"
       >
         <span
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+  import uniqueId from 'lodash.uniqueid';
   import AlpacaHeading from '../../01-globals/heading/Heading.vue'
   import Icon from '../../01-globals/icon/Icon.vue'
 
@@ -58,7 +59,12 @@
         type: String,
         default: null
       }
-    }
+    },
+    computed: {
+      getItemsWithKey() {
+        return this.items.map(item => ({ key: uniqueId("item"), item }));
+      }
+    },
   }
 </script>
 

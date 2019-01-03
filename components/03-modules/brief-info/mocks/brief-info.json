@@ -5,37 +5,37 @@
   },
   "items": [
     {
-     "iconLabel": "Delivery truck",
-     "iconWrapperClass": "brief-info__icon-wrapper--delivery-truck",
-     "icon": {
+      "iconLabel": "Delivery truck",
+      "iconWrapperClass": "brief-info__icon-wrapper--delivery-truck",
+      "icon": {
         "class": "brief-info__icon brief-info__icon--delivery-truck",
         "iconId": "shipping-time-truck",
         "iconTitle": "Delivery truck with clock"
       },
-     "link": {
+      "link": {
         "class": "",
-       "href": "#",
+        "href": "#",
         "text": "see details"
       },
-     "title": {
+      "title": {
         "class": "",
         "tag": "h3",
         "text": "Shipping in 24h"
       }
     },
     {
-     "iconLabel": "Curved arrows",
-     "icon": {
+      "iconLabel": "Curved arrows",
+      "icon": {
         "class": "brief-info__icon",
         "iconId": "curved-arrows",
         "iconTitle": "Curved 2 arrows in form of circle"
       },
-     "link": {
+      "link": {
         "class": "",
-       "href": "#",
+        "href": "#",
         "text": "see details"
       },
-     "title": {
+      "title": {
         "class": "",
         "tag": "h3",
         "text": "Free returns"
@@ -43,18 +43,18 @@
     },
     {
       "class": "brief-info__icon brief-info__icon--shield",
-     "iconLabel": "Shield",
-     "icon": {
+      "iconLabel": "Shield",
+      "icon": {
         "class": "brief-info__icon",
         "iconId": "shield",
         "iconTitle": "Shield"
       },
-     "link": {
+      "link": {
         "class": "",
-       "href": "#",
+        "href": "#",
         "text": "see details"
       },
-     "title": {
+      "title": {
         "class": "",
         "tag": "h3",
         "text": "Secure payment"
