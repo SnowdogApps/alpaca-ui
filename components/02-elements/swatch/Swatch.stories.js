@@ -11,11 +11,13 @@ storiesOf('Elements/Swatch', module)
   .add('Default', () => ({
     components: { App, AlpacaSwatch },
     data: () => ({
-      textSwatch
+      textSwatch,
+      selected: null
     }),
     template: `
       <app>
-        <alpaca-swatch :options="textSwatch.options"/>
+        <alpaca-swatch :options="textSwatch.options" v-model="selected"/>
+        Selected option {{ selected }}
       </app>
     `
   }))

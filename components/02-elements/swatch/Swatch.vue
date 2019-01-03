@@ -12,18 +12,18 @@
       tabindex="0"
     >
       <div
-        v-for="(option, i) in options"
+        v-for="(option) in options"
         :key="option.id"
-        :class="['swatch__option-container', activeIndex === i && 'selected']"
+        :class="['swatch__option-container', selected === option.value && 'selected']"
         :aria-label="option.aria-label"
         tabindex="0"
-        @click="setActiveElement(i)"
+        @click="setActiveValue(option.value)"
       >
         <div
           :class="['swatch__option', image && 'swatch__option--image']"
           :style="option.style"
         >
-          {{ image || !color && option.text }}
+          {{ image || color ? '' : option.text }}
         </div>
       </div>
     </div>
@@ -36,6 +36,10 @@
   export default {
     components: {
       AlpacaLabel
+    },
+    model: {
+      prop: 'selected',
+      event: 'change'
     },
     props: {
       options: {
@@ -53,16 +57,15 @@
       color: {
         type: Boolean,
         default: false
-      }
-    },
-    data() {
-      return {
-        activeIndex: null
-      }
+      },
+      selected: {
+        type: String,
+        default: null
+      },
     },
     methods: {
-      setActiveElement(i){
-        this.activeIndex = i;
+      setActiveValue(value){
+        this.$emit('change', value)
       }
     }
   }

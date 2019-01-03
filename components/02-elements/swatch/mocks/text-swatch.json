@@ -8,27 +8,32 @@
     {
       "headingId": "option-label-size-1",
       "id": "opt-size-xs",
-      "text": "XS"
+      "text": "XS",
+      "value": "xs"
     },
     {
       "headingId": "option-label-size-1",
       "id": "opt-size-s",
-      "text": "S"
+      "text": "S",
+      "value": "s"
     },
     {
       "headingId": "option-label-size-1",
       "id": "opt-size-m",
-      "text": "M"
+      "text": "M",
+      "value": "m"
     },
     {
       "headingId": "option-label-size-1",
       "id": "opt-size-l",
-      "text": "L"
+      "text": "L",
+      "value": "l"
     },
     {
       "headingId": "option-label-size-1",
       "id": "opt-size-xl",
-      "text": "XL"
+      "text": "XL",
+      "value": "xl"
     }
   ]
 }
