@@ -7,14 +7,14 @@
         class="active-filters__item list__item"
       >
         <alpaca-link
-          href="#"
+          :href="item.href"
           custom-class="active-filters__remove"
           :aria-label="item.ariaLabel"
           :title="item.icon.iconTitle"
         >
           <alpaca-icon
             v-if="item.icon"
-            :custom-class="item.icon.class"
+            custom-class="active-filters__remove-icon"
             :icon="item.icon.iconId"
           />
         </alpaca-link>
@@ -30,10 +30,10 @@
 
     <alpaca-link
       class="active-filters__clear-all"
-      :href="href"
-      :title="title"
+      :href="clearAction.href"
+      :title="clearAction.title"
     >
-      {{ text }}
+      {{ clearAction.text }}
     </alpaca-link>
   </div>
 </template>
@@ -52,18 +52,10 @@
         type: Array,
         required: true
       },
-      title: {
-        type: String,
+      clearAction: {
+        type: Object,
         required: true
       },
-      href: {
-        type: String,
-        required: true
-      },
-      text: {
-        type: String,
-        default: null
-      }
     }
   }
 </script>

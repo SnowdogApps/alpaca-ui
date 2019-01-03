@@ -15,9 +15,7 @@ storiesOf('Modules/ActiveFilters', module)
       <app>
         <alpaca-active-filters 
           :items="listElements.filters"
-          :title="listElements.clear.title"
-          :text="listElements.clear.text"
-          :href="listElements.clear.href"
+          :clear-action="listElements.clear"
         />
       </app>
     `
