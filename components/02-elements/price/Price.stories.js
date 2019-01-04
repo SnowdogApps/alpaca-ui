@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaPrice from './Price.vue'
-import data from './mocks/price.json';
+import data from './mocks/price.json'
 
 storiesOf('Elements/Price', module)
   .add('Default', () => ({
