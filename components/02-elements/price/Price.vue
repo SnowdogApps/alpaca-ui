@@ -17,11 +17,11 @@
     props: {
       special: {
         type: Boolean,
-        default: null
+        default: false
       },
       old: {
         type: Boolean,
-        default: null
+        default: false
       }
     }
   }
