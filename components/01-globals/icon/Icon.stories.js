@@ -11,11 +11,7 @@ storiesOf('Global/Icon', module)
   .addDecorator(withReadme(iconsReadme))
   .add('Default', () => ({
     components: { App, Icon },
-    data() {
-      return  {
-        icons
-      }
-    },
+    data: () => ({ icons }),
     template: `
       <app>
         <div style="display: flex; flex-wrap: wrap; padding: 10px;">
