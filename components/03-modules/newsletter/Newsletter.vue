@@ -6,16 +6,18 @@
     <div class="newsletter__controls">
       <alpaca-input
         :id="input.field.id"
+        v-model="value"
         :label="input.label.text"
         :placeholder="input.field.placeholder"
         :name="input.field.name"
-        :class="input.class"
-        :label-class="input.label.class"
-        :input-class="input.field.class"
+        class="newsletter__input"
+        label-class="newsletter__label"
+        input-class="newsletter__field"
         type="text"
       />
       <alpaca-button
-        :custom-class="button.class"
+        custom-class="newsletter__button"
+        @click.stop.prevent="onSubmit"
       >
         {{ button.text }}
       </alpaca-button>
@@ -23,6 +25,8 @@
     <div class="newsletter__agreements">
       <alpaca-checkbox
         :id="checkbox.id"
+        v-model="selected"
+        :value="true"
       >
         <slot name="checkboxLabel" />
       </alpaca-checkbox>
@@ -61,6 +65,17 @@
       headingClass: {
         type: String,
         default: null
+      }
+    },
+    data() {
+      return {
+        selected: null,
+        value: null
+      }
+    },
+    methods: {
+      onSubmit() {
+        this.$emit('submit', { email: this.value, checkbox: this.selected });
       }
     }
   }
