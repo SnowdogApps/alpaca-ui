@@ -9,25 +9,29 @@
       "id": "opt-color-orange-1",
       "style": "background-image: url('../../images/swatch/swatch-orange.jpg')",
       "aria-label": "Orange",
-      "text": "S"
+      "text": "S",
+      "value": "S"
     },
     {
       "id": "opt-color-green-2",
       "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
       "aria-label" : "Green",
-      "text": "M"
+      "text": "M",
+      "value": "M"
     },
     {
       "id": "opt-color-green-3",
       "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
       "aria-label" : "Red",
-      "text": "L"
+      "text": "L",
+      "value": "L"
     },
     {
       "id": "opt-color-white-4",
       "style": "background-image: url('../../images/swatch/swatch-white.jpg')",
       "aria-label": "White",
-      "text": "XL"
+      "text": "XL",
+      "value": "XL"
     }
   ]
 }

@@ -10,28 +10,32 @@
       "id": "opt-color-orange-1",
       "style": "background-color: #ffa500",
       "aria-label": "Orange",
-      "text": "S"
+      "text": "orange",
+      "value": "orange"
     },
     {
       "headingId": "option-label-color-1",
       "id": "opt-color-green-2",
       "style": "background-color: #00ff00",
       "aria-label" : "Green",
-      "text": "M"
+      "text": "green",
+      "value": "green"
     },
     {
       "headingId": "option-label-color-1",
       "id": "opt-color-green-3",
       "style": "background-color: #ff0000",
       "aria-label" : "Red",
-      "text": "L"
+      "text": "red",
+      "value": "red"
     },
     {
       "headingId": "option-label-color-1",
       "id": "opt-color-white-4",
       "style": "background-color: #000000",
       "aria-label": "White",
-      "text": "XL"
+      "text": "white",
+      "value": "white"
     }
   ]
 }

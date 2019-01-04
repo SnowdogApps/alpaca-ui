@@ -16,80 +16,98 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-        <alpaca-swatch :options="textSwatch.options" v-model="selected"/>
-        Selected option {{ selected }}
+        <alpaca-swatch 
+          :options="textSwatch.options" 
+          v-model="selected"
+        />
+          Selected option: {{ selected }}
       </app>
     `
   }))
   .add('With label', () => ({
     components: { App, AlpacaSwatch },
     data: () => ({
-      textSwatch
+      textSwatch,
+      selected: null
     }),
     template: `
       <app>
         <alpaca-swatch 
           :options="textSwatch.options" 
+          v-model="selected"
           label="Label"
         />
+          Selected option: {{ selected }}
       </app>
     `
   }))
   .add('Image', () => ({
     components: { App, AlpacaSwatch },
     data: () => ({
-      imageSwatch
+      imageSwatch,
+      selected: null
     }),
     template: `
       <app>
         <alpaca-swatch 
           :options="imageSwatch.options" 
+          v-model="selected"
           image
-          />
+        />
+          Selected option: {{ selected }}
       </app>
     `
   }))
   .add('Image with label', () => ({
     components: { App, AlpacaSwatch },
     data: () => ({
-      imageSwatch
+      imageSwatch,
+      selected: null
     }),
     template: `
       <app>
        <alpaca-swatch 
          :options="imageSwatch.options" 
+         v-model="selected"
          image
          label="Label"
        />
+         Selected option: {{ selected }}
       </app>
     `
   }))
   .add('Color', () => ({
     components: { App, AlpacaSwatch },
     data: () => ({
-      colorSwatch
+      colorSwatch,
+      selected: null
     }),
     template: `
       <app>
        <alpaca-swatch 
          :options="colorSwatch.options" 
+         v-model="selected"
          color
        />
+         Selected option: {{ selected }}
       </app>
     `
   }))
   .add('Color with label', () => ({
     components: { App, AlpacaSwatch },
     data: () => ({
-      colorSwatch
+      colorSwatch,
+      selected: null
     }),
     template: `
       <app>
        <alpaca-swatch 
          :options="colorSwatch.options" 
+         v-model="selected"
          color
          label="Label" 
        />
+         Selected option: {{ selected }}
       </app>
     `
   }))
