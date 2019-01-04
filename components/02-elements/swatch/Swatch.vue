@@ -14,7 +14,7 @@
       <div
         v-for="(option) in options"
         :key="option.id"
-        :class="['swatch__option-container', selected === option.value && 'selected']"
+        :class="['swatch__option-container', selected === option.value && 'swatch__option-container--selected']"
         :aria-label="option.aria-label"
         tabindex="0"
         @click="setActiveValue(option.value)"
@@ -105,7 +105,7 @@
 
       &:hover,
       &:focus,
-      &.selected {
+      &--selected {
         border-color: $swatch__option-border-color--active;
         .swatch__option--white {
           border: 0;
