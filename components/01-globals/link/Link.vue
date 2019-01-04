@@ -9,6 +9,7 @@
       customClass
     ]"
     :href="href"
+    :aria-label="ariaLabel"
   >
     <slot />
   </a>
@@ -30,6 +31,10 @@ export default {
       default: false
     },
     customClass: {
+      type: String,
+      default: null
+    },
+    ariaLabel: {
       type: String,
       default: null
     }
