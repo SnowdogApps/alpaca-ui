@@ -23,8 +23,9 @@
     <div class="newsletter__agreements">
       <alpaca-checkbox
         :id="checkbox.id"
-        :label="checkbox.label.text"
-      />
+      >
+        <slot name="checkboxLabel" />
+      </alpaca-checkbox>
     </div>
   </form>
 </template>

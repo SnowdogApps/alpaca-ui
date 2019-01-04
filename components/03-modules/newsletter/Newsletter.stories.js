@@ -17,7 +17,11 @@ storiesOf('Modules/Newsletter', module).add('Default', () => ({
         :input="newsletter.input"
         :button="newsletter.button"
         :checkbox="newsletter.checkbox"
-      />
+      >
+        <template slot="checkboxLabel">
+          fdsffds
+        </template>
+      </alpaca-newsletter>
     </app>
   `
 }))
