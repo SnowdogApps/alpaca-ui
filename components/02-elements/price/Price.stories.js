@@ -7,9 +7,7 @@ import data from './mocks/price.json';
 storiesOf('Elements/Price', module)
   .add('Default', () => ({
     data() {
-      const priceData = {
-          ...data.variants.special.price
-      };
+      const priceData = data.variants.special.price;
       return {
         price: priceData,
         ariaLabel: {
@@ -21,7 +19,7 @@ storiesOf('Elements/Price', module)
     components: { App, AlpacaPrice },
     template: `
       <app>
-        <alpaca-price type="default">
+        <alpaca-price>
           {{ price.regularPrice.amount.currencySymbol }} {{ price.regularPrice.amount.value }}
         </alpaca-price>
       </app>
@@ -30,9 +28,7 @@ storiesOf('Elements/Price', module)
   .add('Special Price', () => ({
     components: { App, AlpacaPrice },
     data() {
-      const priceData = {
-          ...data.variants.special.price
-      };
+      const priceData = data.variants.special.price;
       return {
         price: priceData,
         ariaLabel: {
@@ -43,7 +39,7 @@ storiesOf('Elements/Price', module)
     template: `
       <app>
         <alpaca-price
-          type="special"
+          special
         >
           <ins :aria-label="ariaLabel.special">
             {{ price.specialPrice.amount.currencySymbol }} {{ price.specialPrice.amount.value }}
@@ -55,9 +51,7 @@ storiesOf('Elements/Price', module)
   .add('Old price', () => ({
     components: { App, AlpacaPrice },
     data() {
-      const priceData = {
-          ...data.variants.special.price
-      };
+      const priceData = data.variants.special.price;
       return {
         price: priceData,
         ariaLabel: {
@@ -68,7 +62,7 @@ storiesOf('Elements/Price', module)
     template: `
       <app>
         <alpaca-price
-          type="old"
+          old
         >
           <del :aria-label="ariaLabel.old">
             {{ price.regularPrice.amount.currencySymbol }} {{ price.regularPrice.amount.value }}

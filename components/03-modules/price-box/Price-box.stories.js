@@ -7,29 +7,21 @@ import data from './mocks/price-box.json'
 
 storiesOf('Modules/PriceBox', module)
   .add('Default', () => ({
-    data() {
-      return {
-        price: {
-            ...data.variants.default.price
-        }
-      }
-    },
+    data: () => ({ price: data.variants.default.price }),
     components: { App, AlpacaPrice, AlpacaPriceBox },
     template: `
       <app>
         <alpaca-price-box>
-            <alpacaPrice type="default">
+            <alpaca-price>
               {{ price.regularPrice.amount.currencySymbol }} {{ price.regularPrice.amount.value }}
-            </alpacaPrice>
+            </alpaca-price>
         </alpaca-price-box>
       </app>
     `
   }))
   .add('With Special Price', () => ({
     data() {
-      const priceData = {
-          ...data.variants.special.price
-      };
+      const priceData = data.variants.special.price;
       return {
         price: priceData,
         ariaLabel: {
@@ -43,7 +35,7 @@ storiesOf('Modules/PriceBox', module)
       <app>
         <alpaca-price-box>
             <alpaca-price
-              type="old"
+              old
             >
               <del :aria-label="ariaLabel.old">
                 {{ price.regularPrice.amount.currencySymbol }} {{ price.regularPrice.amount.value }}
@@ -51,7 +43,7 @@ storiesOf('Modules/PriceBox', module)
             </alpaca-price>
             
             <alpaca-price
-              type="special"
+              special
             >
               <ins :aria-label="ariaLabel.special">
                 {{ price.specialPrice.amount.currencySymbol }} {{ price.specialPrice.amount.value }}
