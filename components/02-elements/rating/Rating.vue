@@ -7,7 +7,6 @@
   >
     <div
       class="rating__star"
-      aria-hidden="true"
     >
       <span class="rating__indicator" />
     </div>

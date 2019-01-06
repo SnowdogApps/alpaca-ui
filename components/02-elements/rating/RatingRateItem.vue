@@ -1,23 +1,17 @@
 <template>
   <div
-    class="rating__rate-item"
+    :class="['rating__rate-item', { 'rating__rate-item--active': active }]"
     role="option"
-    aria-selected="false"
+    :aria-selected="selected"
   >
     <label
       :for="id"
+      :aria-label="ariaLabel"
       class="rating__star rating__star--rate"
-      :aria-label="`Rate option, ${option} of 5. Click to vote`"
+      @click="onClick"
     >
       <span class="rating__indicator" />
     </label>
-    <input
-      :id="id"
-      type="radio"
-      name="ratings[4]"
-      value="16"
-      class="radio__field"
-    >
   </div>
 </template>
 
@@ -28,9 +22,26 @@
         type: String,
         required: true
       },
-      option: {
+      ariaLabel: {
         type: String,
         required: true
+      },
+      name: {
+        type: String,
+        required: true
+      },
+      active: {
+        type: Boolean,
+        required: true
+      },
+      selected: {
+        type: Boolean,
+        required: true
+      }
+    },
+    methods: {
+      onClick() {
+        this.$emit('select');
       }
     }
   }

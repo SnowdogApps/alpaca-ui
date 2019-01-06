@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "Rating_1",
+      "option": "1",
+      "name": "ratings[1]",
+      "labelText": "Rate option, 1 of 5. Click to vote"
+    },
+    {
+      "id": "Rating_2",
+      "option": "2",
+      "name": "ratings[2]",
+      "labelText": "Rate option, 2 of 5. Click to vote"
+    },
+    {
+      "id": "Rating_3",
+      "option": "3",
+      "name": "ratings[3]",
+      "labelText": "Rate option, 3 of 5. Click to vote"
+    },
+    {
+      "id": "Rating_4",
+      "option": "4",
+      "name": "ratings[4]",
+      "labelText": "Rate option, 4 of 5. Click to vote"
+    },
+    {
+      "id": "Rating_5",
+      "option": "5",
+      "name": "ratings[5]",
+      "labelText": "Rate option, 5 of 5. Click to vote"
+    }
+  ]
+}

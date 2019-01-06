@@ -1,7 +1,7 @@
 <template>
   <fieldset class="fieldset">
     <legend id="rating-field-label">
-      Your rating
+      {{ legend }}
     </legend>
     <div
       class="rating rating--rate"
@@ -10,28 +10,14 @@
       aria-labelledby="rating-field-label"
     >
       <rating-rate-item
-        id="Rating_1"
-        option="1"
-      />
-
-      <rating-rate-item
-        id="Rating_2"
-        option="2"
-      />
-
-      <rating-rate-item
-        id="Rating_3"
-        option="3"
-      />
-
-      <rating-rate-item
-        id="Rating_4"
-        option="4"
-      />
-
-      <rating-rate-item
-        id="Rating_5"
-        option="5"
+        v-for="(item, idx) in ratingItems"
+        :id="item.id"
+        :key="item.id"
+        :aria-label="item.labelText"
+        :name="item.name"
+        :active="rating >= idx + 1"
+        :selected="rating === idx + 1"
+        @select="onSelect(idx + 1)"
       />
     </div>
   </fieldset>
@@ -44,8 +30,28 @@
     components: {
       RatingRateItem
     },
+    model: {
+      prop: 'rating',
+      event: 'change'
+    },
     props: {
-
+      rating: {
+        type: Number,
+        default: 0
+      },
+      ratingItems: {
+        type: Array,
+        required: true
+      },
+      legend: {
+        type: String,
+        required: true
+      }
+    },
+    methods: {
+      onSelect(selectedIndex) {
+        this.$emit('change', selectedIndex);
+      }
     }
   }
 </script>
@@ -100,7 +106,8 @@
         width: $rating__size;
         content: "";
         height: $rating__item-size;
-        background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='#{$icon__inactive-color}'/></svg>");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M-2-2h24v24H-2z'/%3E%3Cpath d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='%23c2c1df'/%3E%3C/svg%3E");
+        //background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='#{$icon__inactive-color}'/></svg>");
         background-repeat: repeat-x;
         background-position: left center;
         background-size: $rating__item-size;
@@ -150,6 +157,7 @@
         .rating__star--rate:hover &,
         .rating__star--rate:focus &,
         .rating__rate-item--active & {
+          background: red;
           display: block;
         }
       }
