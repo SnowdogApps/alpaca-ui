@@ -1,50 +1,15 @@
 <template>
   <div class="dropdown-list">
     <ul class="dropdown-list__list">
-      <li
-        v-for="(element, i) in elements"
-        :key="i"
-        :class="['dropdown-list__item', element.collapse && 'dropdown-list__item--collapse']"
-      >
-        <component
-          :is="element.itemTag"
-          class="dropdown-list__label"
-          :data-dropdown="element.id ? element.id : ''"
-        >
-          {{ element.title }}
-          <alpaca-icon
-            v-if="element.collapse"
-            :icon="element.collapse.iconId"
-            :custom-class="element.collapse.class"
-          />
-        </component>
-        <div
-          v-if="element.contentElement"
-          :id="element.id"
-          :class="['dropdown-list__content', element.class]"
-          :data-content="element.id"
-          aria-hidden="true"
-        >
-          <slot />
-        </div>
-      </li>
+      <slot />
     </ul>
   </div>
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-
   export default {
-    components: {
-      AlpacaIcon
-    },
     props: {
-      elements: {
-        type: Array,
-        required: true
-      }
-    }
+    },
   }
 </script>
 
@@ -239,8 +204,7 @@
       font-size: $dropdown-list__font-size;
       cursor: pointer;
 
-      &--open,
-      &.open {
+      &--open {
         & .dropdown-list__label {
           color: $dropdown-list__item-color--open;
           background-color: $dropdown-list__item-bg-color--open;
@@ -249,6 +213,10 @@
             fill: $dropdown-list__icon-fill--open;
             transform: rotate(180deg);
           }
+        }
+
+        & >  .dropdown-list__content {
+          height: auto;
         }
       }
 
