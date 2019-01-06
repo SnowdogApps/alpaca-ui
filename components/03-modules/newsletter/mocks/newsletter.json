@@ -1,25 +1,28 @@
 {
-  "heading": {
-    "text": "Sing up to our twisted newsletter"
-  },
+  "heading":  "Sing up to our twisted newsletter",
   "input": {
     "field": {
       "placeholder": "Enter your email address",
       "id": "newsletterEmail",
-      "name": "newsletterEamil"
+      "name": "newsletterEmail"
     },
     "label": {
       "hidden": true,
       "text": "Email for newsletter subscription"
     }
   },
-  "button": {
-    "tag": "button",
-    "text": "Submit"
-  },
-  "checkbox": {
-    "id": "newsletter"
-  },
-  "checkboxLabel": "I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a> and I am happy to receive your newsletter with all your promotions."
+  "checkboxes":[
+    {
+      "name": "newsletter1",
+      "label": "I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a> and I am happy to receive your newsletter with all your promotions."
+    },
+    {
+      "name": "newsletter2",
+      "label": "I am happy to receive your newsletter with all your promotions."
+    },
+    {
+      "name": "newsletter3",
+      "label": "I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a>"
+    }
+  ]
 }
-

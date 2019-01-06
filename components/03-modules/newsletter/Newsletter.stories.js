@@ -12,16 +12,12 @@ storiesOf('Modules/Newsletter', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-newsletter 
-        :headingText="newsletter.heading.text"
+        :heading="newsletter.heading"
         :input="newsletter.input"
-        :button="newsletter.button"
-        :checkbox="newsletter.checkbox"
+        button="Submit"
+        :checkboxes="newsletter.checkboxes"
         @submit="exampleMethod"
-      >
-        <template slot="checkboxLabel">
-          <span v-html="newsletter.checkboxLabel" />
-        </template>
-      </alpaca-newsletter>
+      />
     </app>
   `,
   methods: {

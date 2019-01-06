@@ -1,7 +1,7 @@
 <template>
   <form class="newsletter">
     <div :class="['newsletter__heading', headingClass]">
-      {{ headingText }}
+      {{ heading }}
     </div>
     <div class="newsletter__controls">
       <alpaca-input
@@ -19,16 +19,22 @@
         custom-class="newsletter__button"
         @click.stop.prevent="onSubmit"
       >
-        {{ button.text }}
+        {{ button }}
       </alpaca-button>
     </div>
-    <div class="newsletter__agreements">
+    <div
+      v-if="checkboxes"
+      class="newsletter__agreements"
+    >
       <alpaca-checkbox
-        :id="checkbox.id"
-        v-model="selected"
+        v-for="checkbox in checkboxes"
+        :id="checkbox.name"
+        :key="checkbox.name"
+        v-model="selected[checkbox.name]"
         :value="true"
+        :unchecked-value="false"
       >
-        <slot name="checkboxLabel" />
+        <span v-html="checkbox.label" />
       </alpaca-checkbox>
     </div>
   </form>
@@ -46,7 +52,7 @@
       AlpacaButton
     },
     props: {
-      headingText: {
+      heading: {
         type: String,
         required: true
       },
@@ -55,12 +61,12 @@
         required: true
       },
       button: {
-        type: Object,
+        type: String,
         required: true
       },
-      checkbox: {
-        type: Object,
-        required: true
+      checkboxes: {
+        type: Array,
+        default: null
       },
       headingClass: {
         type: String,
@@ -69,13 +75,13 @@
     },
     data() {
       return {
-        selected: null,
+        selected: {},
         value: null
       }
     },
     methods: {
       onSubmit() {
-        this.$emit('submit', { email: this.value, checkbox: this.selected });
+        this.$emit('submit', { email: this.value, checkboxes: this.selected });
       }
     }
   }
