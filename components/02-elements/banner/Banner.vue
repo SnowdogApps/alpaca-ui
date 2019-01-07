@@ -2,6 +2,7 @@
   <a
     :href="link"
     class="banner"
+    :aria-label="ariaLabel"
   >
     <picture class="image">
       <source
@@ -31,6 +32,10 @@
       image: {
         type: Object,
         required: true
+      },
+      ariaLabel: {
+        type: String,
+        default: null
       }
     },
     computed: {
