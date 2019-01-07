@@ -1,14 +1,7 @@
 <template>
-  <svg
-    :class="[
-      'icon',
-      customClass
-    ]"
-  >
+  <svg class="icon">
     <title>{{ title }}</title>
-    <use
-      :xlink:href="url"
-    />
+    <use :xlink:href="url" />
   </svg>
 </template>
 
@@ -22,18 +15,14 @@ export default {
     title: {
       type: String,
       default: null
-    },
-    customClass: {
-      type: String,
-      default: null
     }
   },
   computed: {
     url() {
-      return `/icons/sprite.svg#${this.icon}`
+      return `/icons/sprite.svg#${this.icon}`;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

@@ -16,3 +16,17 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
     </app>
   `
 }))
+.add('With icon', () => ({
+  components: { App, AlpacaTabs },
+  data: () => ({
+    tabs
+  }),
+  template: `
+    <app>
+      <alpaca-tabs 
+        :tabs="tabs.tabs"
+        :icon="tabs.icon.iconId"
+      />
+    </app>
+  `
+}))

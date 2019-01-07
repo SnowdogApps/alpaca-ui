@@ -22,7 +22,7 @@
         <icon
           v-if="icon"
           :icon="icon"
-          :custom-class="tab__icon"
+          class="tab__icon"
         />
       </button>
       <div
