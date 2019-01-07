@@ -19,10 +19,10 @@ export default {
   },
   computed: {
     url() {
-      return `/icons/sprite.svg#${this.icon}`;
+      return `/icons/sprite.svg#${this.icon}`
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
