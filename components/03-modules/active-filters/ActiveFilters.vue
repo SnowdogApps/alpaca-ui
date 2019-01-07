@@ -28,13 +28,15 @@
       </li>
     </ul>
 
-    <alpaca-link
+    <component
+      :is="tag"
       class="active-filters__clear-all"
-      :href="clearAction.href"
+      :href="tag === 'a' && clearAction.href"
       :title="clearAction.title"
+      @click="onClick"
     >
       {{ clearAction.text }}
-    </alpaca-link>
+    </component>
   </div>
 </template>
 
@@ -55,6 +57,15 @@
       clearAction: {
         type: Object,
         required: true
+      },
+      tag: {
+        type: String,
+        default: 'button'
+      }
+    },
+    methods: {
+      onClick() {
+        this.$emit('clear');
       },
     }
   }

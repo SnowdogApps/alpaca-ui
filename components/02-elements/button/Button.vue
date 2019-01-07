@@ -69,7 +69,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $button__height: 48px !default;
 $button__width: 48px !default;
 $button__padding: 0 $spacer--medium !default;
