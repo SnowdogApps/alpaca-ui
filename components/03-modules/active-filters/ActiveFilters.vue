@@ -66,7 +66,7 @@
     methods: {
       onClick() {
         this.$emit('clear');
-      },
+      }
     }
   }
 </script>
