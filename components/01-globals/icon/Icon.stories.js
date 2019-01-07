@@ -5,12 +5,12 @@ import iconsReadme from './README.md';
 import icons from './mocks/icons.json'
 
 import App from '../app/App.vue'
-import Icon from './Icon.vue'
+import AlpacaIcon from './Icon.vue'
 
 storiesOf('Global/Icon', module)
   .addDecorator(withReadme(iconsReadme))
   .add('Default', () => ({
-    components: { App, Icon },
+    components: { App, AlpacaIcon },
     data: () => ({ icons }),
     template: `
       <app>
@@ -20,7 +20,7 @@ storiesOf('Global/Icon', module)
             :key="icon.iconId"
             style="margin: 20px; width: 100px;"
           >
-            <icon
+            <alpaca-icon
               :icon="icon.iconId"
               :title="icon.iconTitle"
               style="margin: 0 auto;"

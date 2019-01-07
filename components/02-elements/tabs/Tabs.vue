@@ -19,7 +19,7 @@
         @click="setActiveTab(tab.tabId)"
       >
         {{ tab.title }}
-        <icon
+        <alpaca-icon
           v-if="icon"
           :icon="icon"
           class="tab__icon"
@@ -45,10 +45,10 @@
 
 <script>
   import uniqueId from 'lodash.uniqueid';
-  import Icon from '../../01-globals/icon/Icon.vue'
+  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
   export default {
-    components: { Icon },
+    components: { AlpacaIcon },
     props: {
       tabs: {
         type: Array,

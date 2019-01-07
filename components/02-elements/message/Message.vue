@@ -8,7 +8,7 @@
     role="alert"
   >
     <slot />
-    <icon
+    <alpaca-icon
       :icon="getIcon"
       class="message__icon"
     />
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import Icon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
 export default {
-  components: { Icon },
+  components: { AlpacaIcon },
   props: {
     customClass: {
       type: String,
