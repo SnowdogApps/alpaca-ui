@@ -1,0 +1,178 @@
+[
+  {
+    "iconId": "account-mini",
+    "iconTitle": "User's account in circle"
+  },
+  {
+    "iconId": "account",
+    "iconTitle": "User's account"
+  },
+  {
+    "iconId": "angle-down",
+    "iconTitle": "Arrow down"
+  },
+  {
+    "iconId": "angle-up",
+    "iconTitle": "Arrow up"
+  },
+  {
+    "iconId": "angle-right",
+    "iconTitle": "Arrow right"
+  },
+  {
+    "iconId": "angle-left",
+    "iconTitle": "Arrow left"
+  },
+  {
+    "iconId": "arrow-down",
+    "iconTitle": "Arrow down"
+  },
+  {
+    "iconId": "arrow-left",
+    "iconTitle": "Arrow left"
+  },
+  {
+    "iconId": "arrow-right",
+    "iconTitle": "Arrow right"
+  },
+  {
+    "iconId": "arrow-up",
+    "iconTitle": "Arrow up"
+  },
+  {
+    "iconId": "check",
+    "iconTitle": "Checked"
+  },
+  {
+    "iconId": "checked",
+    "iconTitle": "Checked"
+  },
+  {
+    "iconId": "close",
+    "iconTitle": "Close"
+  },
+  {
+    "iconId": "compare",
+    "iconTitle": "Compare"
+  },
+  {
+    "iconId": "curved-arrows",
+    "iconTitle": "Curved 2 arrows in form of circle"
+  },
+  {
+    "iconId": "delivery-truck",
+    "iconTitle": "Delivery truck"
+  },
+  {
+    "iconId": "edit",
+    "iconTitle": "Edit pencil"
+  },
+  {
+    "iconId": "envelope",
+    "iconTitle": "Envelope"
+  },
+  {
+    "iconId": "error",
+    "iconTitle": "Error exclamation mark"
+  },
+  {
+    "iconId": "facebook",
+    "iconTitle": "Facebook logo"
+  },
+  {
+    "iconId": "google-plus",
+    "iconTitle": "Google plus logo"
+  },
+  {
+    "iconId": "grid",
+    "iconTitle": "Grid"
+  },
+  {
+    "iconId": "heart",
+    "iconTitle": "Heart"
+  },
+  {
+    "iconId": "instagram",
+    "iconTitle": "Instagram logo"
+  },
+  {
+    "iconId": "linkedin",
+    "iconTitle": "Linked logo"
+  },
+  {
+    "iconId": "list",
+    "iconTitle": "List"
+  },
+  {
+    "iconId": "loader",
+    "iconTitle": "Loader"
+  },
+  {
+    "iconId": "minus",
+    "iconTitle": "Minus mark"
+  },
+  {
+    "iconId": "mobile-menu",
+    "iconTitle": "Mobile menu"
+  },
+  {
+    "iconId": "phone",
+    "iconTitle": "Phone"
+  },
+  {
+    "iconId": "plus",
+    "iconTitle": "Plus mark"
+  },
+  {
+    "iconId": "remove",
+    "iconTitle": "Trash bin"
+  },
+  {
+    "iconId": "search",
+    "iconTitle": "Search"
+  },
+  {
+    "iconId": "settings",
+    "iconTitle": "Settings"
+  },
+  {
+    "iconId": "shield",
+    "iconTitle": "Shield"
+  },
+  {
+    "iconId": "shipping-time-truck",
+    "iconTitle": "Delivery truck with clock"
+  },
+  {
+    "iconId": "shopping-cart",
+    "iconTitle": "Shopping cart"
+  },
+  {
+    "iconId": "signin",
+    "iconTitle": "Signin"
+  },
+  {
+    "iconId": "star",
+    "iconTitle": "Star"
+  },
+  {
+    "iconId": "star-border",
+    "iconTitle": "Star border"
+  },
+  {
+    "iconId": "twitter",
+    "iconTitle": "Twitter logo"
+  },
+  {
+    "iconId": "user",
+    "iconTitle": "User"
+  },
+  {
+    "iconId": "warning",
+    "iconTitle": "Warning exclamation mark"
+  },
+  {
+    "iconId": "youtube",
+    "iconTitle": "Youtube logo"
+  }
+]
