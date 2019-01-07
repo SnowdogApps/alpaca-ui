@@ -7,54 +7,34 @@
   "productName": "Some product long name",
   "productPrice": "$85.00",
   "qtyInput": {
-    "class": "cart-list-item__qty-wrapper",
+    "id": "qty1",
     "label": {
-      "attribute": "",
-      "text": "Qty:",
-      "class": "label--hidden"
+      "text": "Qty:"
     },
     "field": {
-      "attribute": "type='number'' value='1'",
-      "class": "cart-list-item__qty-input",
       "placeholder": "Qty"
     }
   },
   "editIcon": {
-    "tag": "a",
-    "attributes": {
-      "href": "#",
-      "ariaLabel": "edit product in your shopping cart"
-    },
-    "text": "",
-    "class": "cart-list-item__actions-item",
-    "iconClass": "button__icon",
+    "href": "#",
+    "ariaLabel": "edit product in your shopping cart",
     "iconId": "edit",
     "iconTitle": "Edit pencil"
   },
   "removeIcon": {
-    "tag": "button",
-    "attributes": {
-      "href": "#",
-      "ariaLabel":"remove this product from your shopping cart"
-    },
-    "text": "",
-    "class": "cart-list-item__actions-item",
-    "iconClass": "button__icon",
+    "href": "#",
+    "ariaLabel":"remove this product from your shopping cart",
     "iconId": "remove",
     "iconTitle": "Trash bin"
   },
-  "attributes": {
-    "class": "cart-list-item__attributes",
-    "elements": [
-      {
-        "label": "Size",
-        "value": "XXL"
-      },
-      {
-        "label": "Color",
-        "value": "Red"
-      }
-    ]
-  },
-  "configurable": "true"
+  "productDetails":[
+    {
+      "label": "Size",
+      "value": "XXL"
+    },
+    {
+      "label": "Color",
+      "value": "Red"
+    }
+  ]
 }

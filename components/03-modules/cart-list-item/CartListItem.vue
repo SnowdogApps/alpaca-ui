@@ -10,42 +10,53 @@
       <div class="cart-list-item__data">
         <alpaca-link
           :href="href"
-          custom-class="link--inverted cart-list-item__name"
+          inverted
+          custom-class="cart-list-item__name"
         >
           {{ productName }}
         </alpaca-link>
         <div class="cart-list-item__details">
           <div class="cart-list-item__qty">
-            <alpaca-input
-              :id="id"
-              :label="qtyInput.label.text"
-              :placeholder="qtyInput.field.placeholder"
-              :name="name"
-              type="text"
-            />
+            <div class="cart-list-item__qty-wrapper">
+              <alpaca-input
+                :id="qtyInput.id"
+                :label="qtyInput.label.text"
+                :placeholder="qtyInput.field.placeholder"
+                :name="name"
+                type="number"
+                min="0"
+                input-class="cart-list-item__qty-input"
+                :value="quantity"
+                :hidden-label="hiddenLabel"
+                @input="onChange($event)"
+              />
+            </div>
           </div>
           <div class="cart-list-item__price">
             {{ productPrice }}
           </div>
         </div>
         <alpaca-description-list
-          :elements="elements"
+          :elements="productDetails"
+          list-class="cart-list-item__attributes"
         />
       </div>
       <div class="cart-list-item__actions">
         <alpaca-button
-          tag="a"
-          :icon="editIcon.iconId"
-          :link="editIcon.attributes.href"
-          :aria-label="editIcon.attributes.ariaLabel"
-          :custom-class="editIcon.class"
+          :tag="link ? 'a' : 'button'"
+          :icon="edit.iconId"
+          :link="edit.href"
+          :aria-label="edit.ariaLabel"
+          custom-class="cart-list-item__actions-item"
+          @click="onEdit"
         />
         <alpaca-button
-          tag="a"
-          :icon="removeIcon.iconId"
-          :link="removeIcon.attributes.href"
-          :aria-label="removeIcon.attributes.ariaLabel"
-          :custom-class="removeIcon.class"
+          :tag="link ? 'a' : 'button'"
+          :icon="remove.iconId"
+          :link="remove.href"
+          :aria-label="remove.ariaLabel"
+          custom-class="cart-list-item__actions-item"
+          @click="onRemove"
         />
       </div>
     </div>
@@ -67,10 +78,18 @@
       AlpacaDescriptionList,
       AlpacaButton
     },
+    model: {
+      prop: 'quantity',
+      event: 'change'
+    },
     props: {
       productImage: {
         type: Object,
         required: true
+      },
+      quantity: {
+        type: Number,
+        default: null
       },
       href: {
         type: String,
@@ -88,25 +107,40 @@
         type: Object,
         required: true
       },
-      id: {
-        type: String,
-        required: true
-      },
       name: {
         type: String,
         required: true
       },
-      elements: {
+      productDetails: {
         type: Array,
         required: true
       },
-      editIcon: {
+      edit: {
         type: Object,
         required: true
       },
-      removeIcon: {
+      remove: {
         type: Object,
         required: true
+      },
+      link: {
+        type: Boolean,
+        default: false
+      },
+      hiddenLabel: {
+        type: Boolean,
+        default: false
+      }
+    },
+    methods: {
+      onEdit() {
+        this.$emit('edit');
+      },
+      onRemove() {
+        this.$emit('remove');
+      },
+      onChange(val){
+        this.$emit('change', val)
       }
     }
   }
