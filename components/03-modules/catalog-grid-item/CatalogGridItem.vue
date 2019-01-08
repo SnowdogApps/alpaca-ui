@@ -1,11 +1,11 @@
 <template>
   <li class="catalog-grid-item">
-    <a 
-      href="#" 
+    <a
+      href="#"
       class="catalog-grid-item__link"
     >
-      <img 
-        :src="image" 
+      <img
+        :src="image"
         class="catalog-grid-item__image"
       >
     </a>
@@ -18,29 +18,6 @@
           v-html="name"
         />
       </h2>
-
-      <div class="catalog-grid-item__price">
-        <alpaca-price-box>
-          <alpaca-price
-            v-if="specialPrice === null"
-            type="default"
-          >
-            $ {{ price }}
-          </alpaca-price>
-          <alpaca-price
-            v-if="specialPrice && price"
-            type="old"
-          >
-            $ {{ price }}
-          </alpaca-price>
-          <alpaca-price
-            v-if="specialPrice"
-            type="special"
-          >
-            $ {{ specialPrice }}
-          </alpaca-price>
-        </alpaca-price-box>
-      </div>
 
       <div class="catalog-grid-item__actions">
         <form
@@ -66,14 +43,10 @@
 
 <script>
 import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaPrice from '../../02-elements/price/Price.vue'
-import AlpacaPriceBox from '../../03-modules/price-box/Price-box.vue'
 
 export default {
   components: {
-    AlpacaButton,
-    AlpacaPrice,
-    AlpacaPriceBox,
+    AlpacaButton
   },
   props: {
     image: {

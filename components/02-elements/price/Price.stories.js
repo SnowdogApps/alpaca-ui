@@ -1,75 +1,90 @@
 import { storiesOf } from '@storybook/vue'
 
+import data from './mocks/price.json'
+
 import App from '../../01-globals/app/App.vue'
 import AlpacaPrice from './Price.vue'
-import data from './mocks/price.json'
 
 storiesOf('Elements/Price', module)
   .add('Default', () => ({
-    data() {
-      const priceData = data.variants.special.price;
-      return {
-        price: priceData,
-        ariaLabel: {
-            "old": "Price reduced from: " + priceData.regularPrice.amount.value + priceData.regularPrice.amount.currency,
-            "special": "Sale starts at: " + priceData.specialPrice.amount.value + priceData.specialPrice.amount.currency
-        }
-      }
-    },
+    data: () => ({
+      data
+    }),
     components: { App, AlpacaPrice },
     template: `
       <app>
-        <alpaca-price>
-          {{ price.regularPrice.amount.currencySymbol }} {{ price.regularPrice.amount.value }}
-        </alpaca-price>
+        <alpaca-price
+          :value="data[0].value"
+          :currency="data[0].currency"
+        />
+      </app>
+    `
+  }))
+  .add('With prefix', () => ({
+    data: () => ({
+      data
+    }),
+    components: { App, AlpacaPrice },
+    template: `
+      <app>
+        <alpaca-price
+          :value="data[0].value"
+          :prefix="data[0].prefix"
+        />
       </app>
     `
   }))
   .add('Special Price', () => ({
     components: { App, AlpacaPrice },
-    data() {
-      const priceData = data.variants.special.price;
-      return {
-        price: priceData,
-        ariaLabel: {
-            "special": "Sale starts at: " + priceData.specialPrice.amount.value + priceData.specialPrice.amount.currency
-        }
-      }
-    },
+    data: () => ({
+      data
+    }),
     template: `
       <app>
         <alpaca-price
           special
-        >
-          <ins :aria-label="ariaLabel.special">
-            {{ price.specialPrice.amount.currencySymbol }} {{ price.specialPrice.amount.value }}
-          </ins>
-        </alpaca-price>
+          :value="data[0].value"
+          :currency="data[0].currency"
+        />
       </app>
     `
   }))
   .add('Old price', () => ({
     components: { App, AlpacaPrice },
-    data() {
-      const priceData = data.variants.special.price;
-      return {
-        price: priceData,
-        ariaLabel: {
-            "old": "Price reduced from: " + priceData.regularPrice.amount.value + priceData.regularPrice.amount.currency,
-        }
-      }
-    },
+    data: () => ({
+      data
+    }),
     template: `
       <app>
         <alpaca-price
           old
-        >
-          <del :aria-label="ariaLabel.old">
-            {{ price.regularPrice.amount.currencySymbol }} {{ price.regularPrice.amount.value }}
-          </del>
-        </alpaca-price>
+          :value="data[0].value"
+          :currency="data[0].currency"
+        />
       </app>
     `
-  }));
+  }))
+  .add('With special price', () => ({
+    components: { App, AlpacaPrice },
+    data: () => ({
+      data
+    }),
+    template: `
+      <app>
+        <alpaca-price
+          old
+          :value="data[0].value"
+          :currency="data[0].currency"
+        />
+        &nbsp;
+        <alpaca-price
+          special
+          :value="data[1].value"
+          :currency="data[1].currency"
+        />
+      </app>
+    `
+  }))
+
 
 

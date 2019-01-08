@@ -1,32 +1,13 @@
-{
-  "variants": {
-    "default": {
-      "price": {
-        "regularPrice": {
-          "amount": {
-            "value": 34,
-            "currency": "USD"
-          }
-        }
-      },
-      "specialPrice": null
-    },
-    "special": {
-      "price": {
-        "regularPrice": {
-          "amount": {
-            "value": 34,
-            "currency": "USD"
-          }
-        },
-        "specialPrice": {
-          "amount": {
-            "value": 34,
-            "currency": "USD"
-          }
-        }
-      },
-      "specialPrice": true
-    }
+[
+  {
+    "value": "1 400.00",
+    "currency": "USD",
+    "prefix": "$"
+  },
+  {
+    "value": "1 299.00",
+    "currency": "USD",
+    "prefix": "$"
   }
-}
+
+]
