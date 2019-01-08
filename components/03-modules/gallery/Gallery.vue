@@ -4,34 +4,41 @@
       <div class="gallery__frame">
         <alpaca-badge
           v-if="productLabel"
-          :class="productLabel.class"
+          class="badge--new gallery__product-label"
         >
           {{ productLabel.text }}
         </alpaca-badge>
         <alpaca-image
-          :src="imageMain.dataSrc"
-          :alt="imageMain.alt"
+          :src="selectedImage.originalSize"
+          :alt="selectedImage.alt"
         />
       </div>
     </div>
     <div :class="['gallery__nav', horizontal ? 'gallery__nav--horizontal' : 'gallery__nav--vertical']">
-      <div class="gallery__thumb-arr">
+      <div
+        class="gallery__thumb-arr"
+        @click="setCurrentThumb(currentThumb - 1)"
+      >
         <alpaca-icon
           icon="angle-up"
           :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
         />
       </div>
       <div
-        v-for="(thumb, i) in thumbs"
-        :key="i"
-        :class="['gallery__thumb', thumb.imageThumb.active && 'gallery__thumb--active']"
+        v-for="({ key, thumb }, i) in getThumbsWithKey"
+        :key="key"
+        :class="['gallery__thumb', i === currentThumb && 'gallery__thumb--active']"
+        @click="setCurrentThumb(i)"
       >
         <alpaca-image
-          :src="thumb.imageThumb.dataSrc"
-          :alt="thumb.imageThumb.alt"
+          :src="thumb.thumbnail"
+          :alt="thumb.alt"
         />
       </div>
-      <div class="gallery__thumb-arr">
+      <div
+        class="gallery__thumb-arr"
+        @click="setCurrentThumb(currentThumb + 1)"
+      >
         <alpaca-icon
           icon="angle-down"
           :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
@@ -42,6 +49,8 @@
 </template>
 
 <script>
+  import uniqueId from 'lodash.uniqueid';
+
   import AlpacaBadge from '../../02-elements/badge/Badge.vue'
   import AlpacaImage from '../../02-elements/image/Image.vue'
   import AlpacaIcon from '../../01-globals/icon/Icon.vue'
@@ -53,10 +62,6 @@
       AlpacaIcon
     },
     props: {
-      imageMain: {
-        type: Object,
-        required: true
-      },
       thumbs: {
         type: Array,
         required: true
@@ -68,6 +73,30 @@
       productLabel: {
         type: Object,
         default: null
+      },
+      mainThumb: {
+        type: Number,
+        default: 0
+      }
+    },
+    data(){
+      return {
+        currentThumb: this.mainThumb - 1
+      }
+    },
+    computed: {
+      getThumbsWithKey() {
+        return this.thumbs.map(thumb => ({ key: uniqueId("image"), thumb }));
+      },
+      selectedImage() {
+        return this.thumbs[this.currentThumb];
+      }
+    },
+    methods: {
+      setCurrentThumb (val) {
+        if(this.thumbs[val]){
+          this.currentThumb = val;
+        }
       }
     }
   }

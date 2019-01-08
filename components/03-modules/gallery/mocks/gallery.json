@@ -1,52 +1,27 @@
 {
-  "class": "",
-  "typeHorizontal": "false",
-  "imageMain": {
-    "dataSrc": "/images/gallery/product-img-496-496.jpg",
-    "alt": "Sample alt"
+  "productLabel": {
+    "text": "new"
   },
   "thumbs": [
     {
-      "imageThumb": {
-        "dataSrc": "/images/gallery/product-img-80-80.jpg",
-        "active": "true",
-        "alt": ""
-      }
+      "thumbnail": "/images/gallery/product-img-80-80.jpg",
+      "originalSize": "/images/gallery/product-img-496-496.jpg",
+      "alt": ""
     },
     {
-      "imageThumb": {
-        "dataSrc": "/images/gallery/product-img-80-80.jpg",
-        "alt": ""
-      }
+      "thumbnail": "/images/gallery/product-img-80-80.jpg",
+      "originalSize": "/images/image/banner-480_480.png",
+      "alt": ""
     },
     {
-      "imageThumb": {
-        "dataSrc": "/images/gallery/product-img-80-80.jpg",
-        "alt": ""
-      }
+      "thumbnail": "/images/gallery/product-img-80-80.jpg",
+      "originalSize": "/images/gallery/product-img-496-496.jpg",
+      "alt": ""
     },
     {
-      "imageThumb": {
-        "dataSrc": "/images/gallery/product-img-80-80.jpg",
-        "alt": ""
-      }
-    }
-  ],
-  "variants": [
-    {
-      "name": "horizontal",
-      "context": {
-        "typeHorizontal": "true"
-      }
-    },
-    {
-      "name": "with-label",
-      "context": {
-        "productLabel": {
-          "class": "badge--new gallery__product-label",
-          "text": "new"
-        }
-      }
+      "thumbnail": "/images/gallery/product-img-80-80.jpg",
+      "originalSize": "/images/gallery/product-img-496-496.jpg",
+      "alt": ""
     }
   ]
 }

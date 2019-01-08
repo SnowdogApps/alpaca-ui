@@ -13,8 +13,8 @@ storiesOf('Modules/Gallery', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-gallery
-        :imageMain="gallery.imageMain"
         :thumbs="gallery.thumbs"
+        :mainThumb="1"
       />
     </app>
   `
@@ -27,7 +27,6 @@ storiesOf('Modules/Gallery', module).add('Default', () => ({
     template: `
     <app>
       <alpaca-gallery
-        :imageMain="gallery.imageMain"
         :thumbs="gallery.thumbs"
         horizontal
       />
@@ -42,8 +41,7 @@ storiesOf('Modules/Gallery', module).add('Default', () => ({
     template: `
     <app>
       <alpaca-gallery
-        :productLabel="gallery.variants[1].context.productLabel"
-        :imageMain="gallery.imageMain"
+        :productLabel="gallery.productLabel"
         :thumbs="gallery.thumbs"
       />
     </app>
