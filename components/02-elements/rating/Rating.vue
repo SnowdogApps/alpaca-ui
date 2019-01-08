@@ -7,6 +7,7 @@
   >
     <div
       class="rating__star"
+      :style="{'width': width}"
     >
       <span class="rating__indicator" />
     </div>
@@ -24,6 +25,10 @@
       title: {
         type: String,
         required: true
+      },
+      width: {
+        type: String,
+        default: null
       }
     }
   }

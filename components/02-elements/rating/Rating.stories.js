@@ -8,7 +8,7 @@ import AlpacaRatingRate from './RatingRate.vue'
 import AlpacaRating from './Rating.vue'
 
 
-storiesOf('Elements/Rate', module)
+storiesOf('Elements/Rating', module)
   .add('Default', () => ({
     components: { App, AlpacaRating },
     data: () => ({
@@ -19,6 +19,7 @@ storiesOf('Elements/Rate', module)
         <alpaca-rating 
          :title="rating.title"
          :aria-label="rating.ariaLabel"
+         :width="rating.star.width"
         >
         </alpaca-rating>
       </app>
