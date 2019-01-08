@@ -71,7 +71,7 @@ export default {
       return this.value;
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
