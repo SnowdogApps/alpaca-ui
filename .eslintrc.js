@@ -20,6 +20,7 @@ module.exports = {
       'ignoreWhenNoAttributes': true,
       'ignores': ['pre', 'textarea']
     }],
-    'vue/no-v-html': 1
+    'vue/no-v-html': 1,
+    'no-console': 1
   }
 }

@@ -15,17 +15,17 @@
         class="brief-info__item"
       >
         <span
-          :class="['brief-info__icon-wrapper', item.iconWrapperClass]"
+          :class="['brief-info__icon-wrapper', iconWrapperClass]"
           :aria-label="item.iconLabel"
         >
           <icon
             :icon="item.icon.iconId"
-            :custom-class="item.icon.class"
+            :custom-class="['brief-info__icon', iconClass]"
           />
         </span>
         <div class="brief-info__content">
           <component
-            :is="item.title.tag"
+            :is="titleTag"
             class="brief-info__title"
           >
             {{ item.title.text }}
@@ -58,6 +58,18 @@
       heading: {
         type: String,
         default: null
+      },
+      titleTag: {
+        type: String,
+        default: 'h3'
+      },
+      iconClass: {
+        type: String,
+        default: null
+      },
+      iconWrapperClass: {
+        type: String,
+        default: null
       }
     },
     computed: {
@@ -76,13 +88,6 @@
   $brief-info__heading-margin                  : 0 0 $spacer--medium !default;
   $brief-info__icon-bg-color                   : $gray-lightest !default;
   $brief-info__icon-border-radius              : 32px !default;
-  $brief-info__icon-delivery-truck-padding     : 13px $spacer 13px 6px !default;
-  $brief-info__icon-delivery-truck-svg-height  : 100% !default;
-  $brief-info__icon-delivery-truck-svg-padding : 0 !default;
-  $brief-info__icon-delivery-truck-svg-width   : 100% !default;
-  $brief-info__icon-shield-padding             : 12px 14px 12px 15px !default;
-  $brief-info__icon-shield-svg-height          : 100% !default;
-  $brief-info__icon-shield-svg-width           : 100% !default;
   $brief-info__icon-size                       : 48px !default;
   $brief-info__icon-padding                    : 0 $spacer--medium !default;
   $brief-info__icon-padding\@medium            : 0 !default;
@@ -152,25 +157,12 @@
       @include mq($screen-l) {
         margin-bottom: $brief-info__icon-margin-bottom\@large;
       }
-      &--delivery-truck {
-        padding: $brief-info__icon-delivery-truck-padding;
-      }
     }
 
     &__icon {
       width: 100%;
       height: 100%;
       padding: 14px;
-      &--delivery-truck {
-        padding: $brief-info__icon-delivery-truck-svg-padding;
-        width: $brief-info__icon-delivery-truck-svg-width;
-        height: $brief-info__icon-delivery-truck-svg-height;
-      }
-      &--shield {
-        padding: $brief-info__icon-shield-padding;
-        width: $brief-info__icon-shield-svg-width;
-        height: $brief-info__icon-shield-svg-height;
-      }
     }
 
     &__title {
