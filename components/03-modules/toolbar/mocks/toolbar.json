@@ -1,0 +1,58 @@
+{
+  "sortBy": {
+    "id": "sort-by",
+    "name": "sort-by",
+    "text": "Sort By",
+    "options": [
+      {
+        "text": "Product Name",
+        "name": "Product Name",
+        "value": "product-name",
+        "id": "productName"
+      },
+      {
+        "text": "Price",
+        "name": "Price",
+        "value": "price",
+        "id": "price"
+      }
+    ]
+  },
+  "limiter": {
+    "id": "limiter1",
+    "name": "limiter",
+    "text": "Show",
+    "options": [
+      {
+        "text": "12",
+        "value": "12",
+        "name": "12",
+        "id": "1"
+      },
+      {
+        "text": "24",
+        "value": "24",
+        "name": "24",
+        "id": "2"
+      },
+      {
+        "text": "36",
+        "value": "36",
+        "name": "36",
+        "id": "3"
+      }
+    ],
+    "suffix": ""
+  },
+  "pager": {
+    "page": "1",
+    "limit": "4",
+    "totalSize": "15"
+  },
+  "amount": {
+    "prefix": "Items",
+    "currentRange": "1-9",
+    "preposition": "of",
+    "total": "12"
+  }
+}
