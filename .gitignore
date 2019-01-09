@@ -74,3 +74,6 @@ typings/
 
 # IDE's
 .idea
+
+# Alpaca
+dist
