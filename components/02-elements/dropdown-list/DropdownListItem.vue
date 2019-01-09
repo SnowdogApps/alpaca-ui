@@ -3,14 +3,14 @@
     :class="[
       'dropdown-list__item',
       {
-        'dropdown-list__item--collapse': hasContent,
+        'dropdown-list__item--parent': hasContent,
         'dropdown-list__item--open': opened
       }
     ]"
   >
     <component
       :is="tag"
-      class="dropdown-list__label"
+      :class="['dropdown-list__label link--invert', labelClass]"
       @click="toggle"
     >
       {{ title }}
@@ -20,10 +20,11 @@
         custom-class="dropdown-list__icon"
       />
     </component>
+
     <div
       v-if="hasContent"
       :id="id"
-      :class="['dropdown-list__content', customClass]"
+      :class="['dropdown-list__content link--invert', customClass]"
       aria-hidden="true"
     >
       <slot />
@@ -54,6 +55,14 @@ export default {
     tag: {
       type: String,
       default: "button"
+    },
+    labelClass: {
+      type: String,
+      default: null
+    },
+    nest: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -63,14 +72,10 @@ export default {
   },
   computed: {
     hasContent () {
-      console.log(this.$slots.default);
       const defaultSlot = this.$slots.default;
-
       if (defaultSlot) {
         return !!this.$slots.default[0].text ||  !!this.$slots.default[0].tag;
-
       }
-
       return false;
     },
   },
@@ -81,5 +86,3 @@ export default {
   }
 };
 </script>
-
-<style scoped></style>
