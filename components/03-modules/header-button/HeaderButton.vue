@@ -48,7 +48,7 @@ $header-button__counter-background: $color-primary !default;
 $header-button__counter-color: $white !default;
 $header-button__counter-size: 14px !default;
 $header-button__counter-border: 2px solid $white !default;
-$header-button__counter-dot-size: 2px !default;
+$header-button__counter-dot-size: 2px !default;
 $header-button__counter-dot-bg-color: $white !default;
 
 .header-button {

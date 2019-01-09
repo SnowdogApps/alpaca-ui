@@ -131,7 +131,7 @@ export default {
         return this.listOfPageNumbers.slice(
           0,
           this.limitPerPage
-        );
+        );
       }
 
       if (this.numberOfPages - this.page < this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1) {
