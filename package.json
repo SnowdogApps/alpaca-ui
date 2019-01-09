@@ -4,7 +4,8 @@
   "version": "0.1.2",
   "scripts": {
     "dev": "start-storybook -p 6006 -s ./public",
-    "build": "build-storybook",
+    "build": "build-storybook -o dist -s ./public",
+    "now-build": "yarn build",
     "eslint": "eslint --ext .js,.vue components"
   },
   "dependencies": {
