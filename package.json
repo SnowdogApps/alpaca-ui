@@ -8,6 +8,7 @@
     "eslint": "eslint --ext .js,.vue components"
   },
   "dependencies": {
+    "lodash.uniqueid": "^4.0.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.5.17"
   },
