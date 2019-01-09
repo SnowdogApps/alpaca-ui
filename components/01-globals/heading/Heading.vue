@@ -42,6 +42,8 @@ export default {
           return 'fifth'
         case '6':
           return 'sixth'
+        default:
+          return null
       }
     }
   }
