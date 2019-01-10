@@ -18,6 +18,7 @@
       :class="['input__field', inputClass,{
         'input__field--textarea': textarea
       }]"
+      :value="value"
       :name="name"
       :type="type"
       :placeholder="placeholder"
@@ -27,7 +28,6 @@
 
 <script>
   import AlpacaLabel from '../../../01-globals/label/Label.vue'
-
   export default {
     components: {
       AlpacaLabel
@@ -71,6 +71,10 @@
       },
       inputClass: {
         type: String,
+        default: null
+      },
+      value: {
+        type: [String, Number],
         default: null
       }
     }

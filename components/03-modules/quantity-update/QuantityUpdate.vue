@@ -2,16 +2,20 @@
   <div class="quantity-update">
     <alpaca-button
       :icon="minusQtyButton.iconId"
-      class="button--icon quantity-update__button quantity-update__button--minus quantity-update__button--disabled"
+      :class="['button--icon quantity-update__button quantity-update__button--minus',
+               {'quantity-update__button--disabled' : currentValue === 0}
+      ]"
       icon-class="button__icon quantity-update__icon"
+      @click="updateVal(currentValue - 1)"
     />
     <alpaca-input
       :id="input.id"
+      v-model="currentValue"
       :label="input.ariaLabel"
+      :value="currentValue"
       type="number"
       :name="input.name"
-      :value="input.defaultValue"
-      :placeholder="input.defaultValue"
+      :placeholder="input.placeholder"
       input-class="quantity-update__input"
       hidden-label
     />
@@ -19,6 +23,7 @@
       :icon="plusQtyButton.iconId"
       class="button--icon quantity-update__button quantity-update__button--plus"
       icon-class="button__icon quantity-update__icon"
+      @click="updateVal(currentValue + 1)"
     />
   </div>
 </template>
@@ -44,6 +49,17 @@
         plusQtyButton: {
           type: Object,
           required: true
+        }
+      },
+      data() {
+        return {
+          currentValue: 0
+        }
+      },
+      methods: {
+        updateVal(val){
+          this.currentValue = val;
+          this.$emit('update', this.currentValue );
         }
       }
     }

@@ -1,9 +1,10 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import quantity from './mocks/quantity.json'
 
-import App from '../../01-globals/app/App.vue';
-import AlpacaQuantityUpdate from './QuantityUpdate.vue';
+import App from '../../01-globals/app/App.vue'
+import AlpacaQuantityUpdate from './QuantityUpdate.vue'
 
 storiesOf('Modules/Quantity Update', module)
   .add('Default', () => ({
@@ -17,7 +18,11 @@ storiesOf('Modules/Quantity Update', module)
           :input="quantity.input"
           :minusQtyButton="quantity.minusQtyButton"
           :plusQtyButton="quantity.plusQtyButton"
+          @update="updateVal"
         />
       </app>
-    `
+    `,
+    methods: {
+      updateVal: action('Clicked button')
+    }
   }))

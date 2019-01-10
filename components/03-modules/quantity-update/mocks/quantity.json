@@ -4,7 +4,8 @@
       "name": "qty",
       "min": "1",
       "defaultValue": "1",
-      "ariaLabel": "Change the quantity"
+      "ariaLabel": "Change the quantity",
+      "placeholder": "0"
     },
     "minusQtyButton": {
       "tag": "button",
