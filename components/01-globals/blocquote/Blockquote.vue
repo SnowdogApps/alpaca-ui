@@ -1,5 +1,5 @@
 <template>
-  <component 
+  <component
     :is="tag"
     :class="tag !== 'blockquote' && 'blockquote'"
   >
@@ -24,6 +24,7 @@ $blockquote__padding: 10px 10px 10px 20px !default;
 $blockquote__border-left: 5px solid $gray-light !default;
 
 .blockquote {
+  display: block;
   margin: $blockquote__margin;
   padding: $blockquote__padding;
   border-left: $blockquote__border-left;
