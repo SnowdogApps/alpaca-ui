@@ -21,6 +21,7 @@
       :name="name"
       :type="type"
       :min="min"
+      :max="max"
       :placeholder="placeholder"
     />
   </div>
@@ -66,6 +67,10 @@
         default: false
       },
       min: {
+        type: Number,
+        default: null
+      },
+      max: {
         type: Number,
         default: null
       },

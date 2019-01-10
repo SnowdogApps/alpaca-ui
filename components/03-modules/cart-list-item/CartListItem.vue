@@ -24,7 +24,8 @@
                 :placeholder="qtyInput.field.placeholder"
                 :name="name"
                 type="number"
-                min="0"
+                :min="0"
+                :max="maxInputValue"
                 input-class="cart-list-item__qty-input"
                 :value="quantity"
                 :hidden-label="hiddenLabel"
@@ -130,6 +131,10 @@
       hiddenLabel: {
         type: Boolean,
         default: false
+      },
+      maxInputValue: {
+        type: Number,
+        default: null
       }
     },
     methods: {

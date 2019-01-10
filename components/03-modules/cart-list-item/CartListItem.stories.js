@@ -24,6 +24,7 @@ storiesOf('Modules/Cart list item', module)
           :edit="cartListItem.editIcon"
           :remove="cartListItem.removeIcon"
           name="name"
+          :maxInputValue="5"
           href="#"
           :quantity="quantity"
           @edit="editMethod"
