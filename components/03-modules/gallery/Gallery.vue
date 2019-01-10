@@ -17,7 +17,7 @@
     <div :class="['gallery__nav', horizontal ? 'gallery__nav--horizontal' : 'gallery__nav--vertical']">
       <div
         class="gallery__thumb-arr"
-        @click="setCurrentThumb(currentThumb - 1)"
+        @click="setCurrentImage(currentImage - 1)"
       >
         <alpaca-icon
           icon="angle-up"
@@ -25,19 +25,19 @@
         />
       </div>
       <div
-        v-for="({ key, thumb }, i) in getThumbsWithKey"
+        v-for="({ key, image }, i) in getThumbsWithKey"
         :key="key"
-        :class="['gallery__thumb', i === currentThumb && 'gallery__thumb--active']"
-        @click="setCurrentThumb(i)"
+        :class="['gallery__thumb', i === currentImage && 'gallery__thumb--active']"
+        @click="setCurrentImage(i)"
       >
         <alpaca-image
-          :src="thumb.thumbnail"
-          :alt="thumb.alt"
+          :src="image.thumbnail"
+          :alt="image.alt"
         />
       </div>
       <div
         class="gallery__thumb-arr"
-        @click="setCurrentThumb(currentThumb + 1)"
+        @click="setCurrentImage(currentImage + 1)"
       >
         <alpaca-icon
           icon="angle-down"
@@ -62,7 +62,7 @@
       AlpacaIcon
     },
     props: {
-      thumbs: {
+      images: {
         type: Array,
         required: true
       },
@@ -74,28 +74,32 @@
         type: Object,
         default: null
       },
-      mainThumb: {
+      mainImage: {
         type: Number,
-        default: 0
+        default: 1
       }
     },
     data(){
       return {
-        currentThumb: this.mainThumb - 1
+        currentImage: this.mainImage === 0
+          ? this.mainImage
+          : this.mainImage >= this.images.length
+            ? this.images.length - 1
+            : this.mainImage -1
       }
     },
     computed: {
       getThumbsWithKey() {
-        return this.thumbs.map(thumb => ({ key: uniqueId("image"), thumb }));
+        return this.images.map(image => ({ key: uniqueId("image"), image }));
       },
       selectedImage() {
-        return this.thumbs[this.currentThumb];
+        return this.images[this.currentImage];
       }
     },
     methods: {
-      setCurrentThumb (val) {
-        if(this.thumbs[val]){
-          this.currentThumb = val;
+      setCurrentImage (val) {
+        if(this.images[val]){
+          this.currentImage = val;
         }
       }
     }
