@@ -16,8 +16,8 @@ storiesOf('Modules/Quantity Update', module)
       <app>
         <alpaca-quantity-update
           :input="quantity.input"
-          :minusQtyButton="quantity.minusQtyButton"
-          :plusQtyButton="quantity.plusQtyButton"
+          :minus-button="quantity.minusQtyButton"
+          :plus-button="quantity.plusQtyButton"
           @update="updateVal"
         />
       </app>

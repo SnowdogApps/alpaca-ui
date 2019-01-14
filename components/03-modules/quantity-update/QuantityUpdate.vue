@@ -1,7 +1,7 @@
 <template>
   <div class="quantity-update">
     <alpaca-button
-      :icon="minusQtyButton.iconId"
+      :icon="minusButton.iconId"
       :class="['button--icon quantity-update__button quantity-update__button--minus',
                {'quantity-update__button--disabled' : currentValue === 0}
       ]"
@@ -20,7 +20,7 @@
       hidden-label
     />
     <alpaca-button
-      :icon="plusQtyButton.iconId"
+      :icon="plusButton.iconId"
       class="button--icon quantity-update__button quantity-update__button--plus"
       icon-class="button__icon quantity-update__icon"
       @click="updateVal(currentValue + 1)"
@@ -42,11 +42,11 @@
           type: Object,
           required: true
         },
-        minusQtyButton: {
+        minusButton: {
           type: Object,
           required: true
         },
-        plusQtyButton: {
+        plusButton: {
           type: Object,
           required: true
         }
