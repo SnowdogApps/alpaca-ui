@@ -1,21 +1,21 @@
-import { storiesOf } from "@storybook/vue";
+import { storiesOf } from '@storybook/vue';
 
-import App from "../../01-globals/app/App.vue";
-import AlpacaList from "./List.vue";
-import AlpacaListItem from "./ListItem.vue";
-import AlpacaImageList from "./ImageList.vue";
-import AlpacaDescriptionList from "./DescriptionList.vue";
-import AlpacaIcon from "./../../01-globals/icon/Icon.vue";
-import AlpacaLink from "./../../01-globals/link/Link.vue";
+import App from '../../01-globals/app/App.vue';
+import AlpacaList from './List.vue';
+import AlpacaListItem from './ListItem.vue';
+import AlpacaImageList from './ImageList.vue';
+import AlpacaDescriptionList from './DescriptionList.vue';
+import AlpacaIcon from './../../01-globals/icon/Icon.vue';
+import AlpacaLink from './../../01-globals/link/Link.vue';
 
-import listElements from "./mocks/listElements.json";
-import iconListElements from "./mocks/iconListElements.json";
-import imageListElements from "./mocks/imageListElements.json";
-import descListElements from "./mocks/descListElements.json";
-import linkListElements from "./mocks/linkListElements.json";
+import listElements from './mocks/listElements.json';
+import iconListElements from './mocks/iconListElements.json';
+import imageListElements from './mocks/imageListElements.json';
+import descListElements from './mocks/descListElements.json';
+import linkListElements from './mocks/linkListElements.json';
 
-storiesOf("Elements/List", module)
-  .add("Default", () => ({
+storiesOf('Elements/List', module)
+  .add('Default', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -34,7 +34,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Native", () => ({
+  .add('Native', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -53,7 +53,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Horizontal", () => ({
+  .add('Horizontal', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -72,7 +72,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Horizontal Medium", () => ({
+  .add('Horizontal Medium', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -91,7 +91,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Icon", () => ({
+  .add('Icon', () => ({
     components: { App, AlpacaList, AlpacaListItem, AlpacaIcon },
     data: () => ({
       iconListElements
@@ -112,7 +112,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Image", () => ({
+  .add('Image', () => ({
     components: { App, AlpacaImageList },
     data: () => ({
       imageListElements
@@ -126,7 +126,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Divided", () => ({
+  .add('Divided', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -145,7 +145,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Center", () => ({
+  .add('Center', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -164,7 +164,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Center Horizontal", () => ({
+  .add('Center Horizontal', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -183,7 +183,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Divided Horizontal", () => ({
+  .add('Divided Horizontal', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -202,7 +202,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Divided Horizontal Medium", () => ({
+  .add('Divided Horizontal Medium', () => ({
     components: { App, AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
@@ -221,7 +221,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Description", () => ({
+  .add('Description', () => ({
     components: { App, AlpacaDescriptionList },
     data: () => ({
       descListElements
@@ -236,7 +236,7 @@ storiesOf("Elements/List", module)
       </app>
     `
   }))
-  .add("Link", () => ({
+  .add('Link', () => ({
     components: { App, AlpacaList, AlpacaListItem, AlpacaLink },
     data: () => ({
       linkListElements
