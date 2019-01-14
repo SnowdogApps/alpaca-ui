@@ -16,13 +16,15 @@ storiesOf('Modules/ActiveFilters', module)
       <app>
         <alpaca-active-filters 
           :items="listElements.filters"
-          :clear-action="listElements.clear"
+          :clear-all="listElements.clear"
           @clear="clearMethod"
+          @singleFilter="clearSingleMethod"
         />
       </app>
     `,
     methods: {
-      clearMethod: action('Clear')
+      clearMethod: action('Clear all'),
+      clearSingleMethod: action('Clear single element')
     }
   }))
   .add('Link', () => ({
@@ -34,8 +36,9 @@ storiesOf('Modules/ActiveFilters', module)
       <app>
         <alpaca-active-filters 
           :items="listElements.filters"
-          :clear-action="listElements.clear"
-          tag="a"
+          :clear-all="listElements.clear"
+          allFilterTag="a"
+          singleFilterTag="a"
         />
       </app>
     `

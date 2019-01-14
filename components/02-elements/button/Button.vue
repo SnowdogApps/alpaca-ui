@@ -69,7 +69,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $button__height: 48px !default;
 $button__width: 48px !default;
 $button__padding: 0 $spacer--medium !default;
@@ -183,9 +183,5 @@ $button__width--fluid: 100% !default;
     fill: $button__fill--icon;
     transition: $button__transition;
   }
-}
-
-button {
-  @extend .button;
 }
 </style>

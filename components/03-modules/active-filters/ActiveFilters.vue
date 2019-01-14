@@ -1,23 +1,27 @@
 <template>
   <div>
-    <ul class="active-filters list">
-      <li
+    <alpaca-list>
+      <alpaca-list-item
         v-for="item in items"
         :key="item.value"
+        :element="item"
         class="active-filters__item list__item"
+        icon-class="active-filters__remove-icon"
       >
-        <alpaca-link
-          :href="item.href"
-          custom-class="active-filters__remove"
+        <component
+          :is="singleFilterTag"
+          :href="singleFilterTag === 'a' && item.href"
+          class="active-filters__remove"
           :aria-label="item.ariaLabel"
           :title="item.icon.iconTitle"
+          @click="clearSingleFilter"
         >
           <alpaca-icon
             v-if="item.icon"
             custom-class="active-filters__remove-icon"
             :icon="item.icon.iconId"
           />
-        </alpaca-link>
+        </component>
 
         <span class="active-filters__label">
           {{ item.label }} :&nbsp;
@@ -25,40 +29,46 @@
         <span class="active-filters__value">
           {{ item.value }}
         </span>
-      </li>
-    </ul>
+      </alpaca-list-item>
+    </alpaca-list>
 
     <component
-      :is="tag"
+      :is="allFilterTag"
       class="active-filters__clear-all"
-      :href="tag === 'a' && clearAction.href"
-      :title="clearAction.title"
+      :href="allFilterTag === 'a' && clearAll.href"
+      :title="clearAll.title"
       @click="onClick"
     >
-      {{ clearAction.text }}
+      {{ clearAll.text }}
     </component>
   </div>
 </template>
 
 <script>
-  import AlpacaLink from '../../01-globals/link/Link';
   import AlpacaIcon from '../../01-globals/icon/Icon';
+  import AlpacaList from '../../02-elements/list/List';
+  import AlpacaListItem from '../../02-elements/list/ListItem';
 
   export default {
     components: {
-      AlpacaLink,
-      AlpacaIcon
+      AlpacaIcon,
+      AlpacaList,
+      AlpacaListItem
     },
     props: {
       items: {
         type: Array,
         required: true
       },
-      clearAction: {
+      clearAll: {
         type: Object,
         required: true
       },
-      tag: {
+      allFilterTag: {
+        type: String,
+        default: 'button'
+      },
+      singleFilterTag: {
         type: String,
         default: 'button'
       }
@@ -66,6 +76,9 @@
     methods: {
       onClick() {
         this.$emit('clear');
+      },
+      clearSingleFilter() {
+        this.$emit('singleFilter');
       },
     }
   }
