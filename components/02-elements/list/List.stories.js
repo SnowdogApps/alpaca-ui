@@ -1,18 +1,18 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from '@storybook/vue'
 
-import App from '../../01-globals/app/App.vue';
-import AlpacaList from './List.vue';
-import AlpacaListItem from './ListItem.vue';
-import AlpacaImageList from './ImageList.vue';
-import AlpacaDescriptionList from './DescriptionList.vue';
-import AlpacaIcon from './../../01-globals/icon/Icon.vue';
-import AlpacaLink from './../../01-globals/link/Link.vue';
+import App from '../../01-globals/app/App.vue'
+import AlpacaList from './List.vue'
+import AlpacaListItem from './ListItem.vue'
+import AlpacaImageList from './ImageList.vue'
+import AlpacaDescriptionList from './DescriptionList.vue'
+import AlpacaIcon from './../../01-globals/icon/Icon.vue'
+import AlpacaLink from './../../01-globals/link/Link.vue'
 
-import listElements from './mocks/listElements.json';
-import iconListElements from './mocks/iconListElements.json';
-import imageListElements from './mocks/imageListElements.json';
-import descListElements from './mocks/descListElements.json';
-import linkListElements from './mocks/linkListElements.json';
+import listElements from './mocks/listElements.json'
+import iconListElements from './mocks/iconListElements.json'
+import imageListElements from './mocks/imageListElements.json'
+import descListElements from './mocks/descListElements.json'
+import linkListElements from './mocks/linkListElements.json'
 
 storiesOf('Elements/List', module)
   .add('Default', () => ({
