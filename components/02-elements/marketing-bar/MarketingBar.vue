@@ -33,7 +33,7 @@
     },
     data() {
       return {
-        isBarVisible: false
+        isBarVisible: true
       }
     },
     mounted() {
