@@ -13,24 +13,9 @@ storiesOf('Elements/Price', module)
     components: { App, AlpacaPrice },
     template: `
       <app>
-        <alpaca-price
-          :value="data[0].value"
-          :currency="data[0].currency"
-        />
-      </app>
-    `
-  }))
-  .add('With prefix', () => ({
-    data: () => ({
-      data
-    }),
-    components: { App, AlpacaPrice },
-    template: `
-      <app>
-        <alpaca-price
-          :value="data[0].value"
-          :prefix="data[0].prefix"
-        />
+        <alpaca-price>
+          {{ data[0].value }}
+        </alpaca-price>
       </app>
     `
   }))
@@ -42,10 +27,12 @@ storiesOf('Elements/Price', module)
     template: `
       <app>
         <alpaca-price
-          special
-          :value="data[0].value"
-          :currency="data[0].currency"
-        />
+          specialPrice
+        >
+           <template slot="specialPrice">
+             {{ data[0].value }}
+          </template>
+        </alpaca-price>
       </app>
     `
   }))
@@ -57,10 +44,12 @@ storiesOf('Elements/Price', module)
     template: `
       <app>
         <alpaca-price
-          old
-          :value="data[0].value"
-          :currency="data[0].currency"
-        />
+          oldPrice
+        >
+          <template slot="oldPrice">
+             {{ data[0].value }}
+          </template>
+        </alpaca-price>
       </app>
     `
   }))
@@ -72,16 +61,18 @@ storiesOf('Elements/Price', module)
     template: `
       <app>
         <alpaca-price
-          old
-          :value="data[0].value"
-          :currency="data[0].currency"
-        />
-        &nbsp;
-        <alpaca-price
-          special
-          :value="data[1].value"
-          :currency="data[1].currency"
-        />
+          oldPrice
+          specialPrice
+        >
+         <template slot="oldPrice">
+          {{ data[0].value }}
+          </template>
+          
+           <template slot="specialPrice">
+             {{ data[1].value }}
+          </template>
+        </alpaca-price>
+
       </app>
     `
   }))

@@ -1,48 +1,43 @@
 <template>
-  <span
+  <div
     :class="[
       'price',
-      {
-        'price--special': special,
-        'price-old': old
-      }
+
     ]"
   >
-    <ins
-      v-if="special"
-      :aria-label="ariaLabelSpecial"
+    <span
+      :class="[{
+        'price--special': specialPrice,
+        'price-old': oldPrice
+      }]"
     >
-      {{ computedValue }}
-    </ins>
+      <ins
+        v-if="oldPrice"
+        :aria-label="ariaLabelSpecial"
+      >
+        <slot name="oldPrice" />
+      </ins>
 
-    <del
-      v-else-if="old"
-      :aria-label="ariaLabelOld"
-    >
-      {{ computedValue }}
-    </del>
+      <del
+        v-if="specialPrice"
+        :aria-label="ariaLabelOld"
+      >
+        <slot name="specialPrice" />
+      </del>
 
-    <span v-else>
-      {{ computedValue }}
+
+      <slot v-else />
     </span>
-  </span>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    value: {
-      type: String,
-      required: true
-    },
-    currency: {
-      type: String,
-      default: null
-    },
-    prefix: {
-      type: String,
-      default: null
-    },
+    // price: {
+    //   type: String,
+    //   required: true
+    // },
     ariaLabelSpecial: {
       type: String,
       default: null
@@ -51,24 +46,13 @@ export default {
       type: String,
       default: null
     },
-    special: {
+    specialPrice: {
       type: Boolean,
       default: false
     },
-    old: {
+    oldPrice: {
       type: Boolean,
       default: false
-    }
-  },
-  computed: {
-    computedValue() {
-      if(this.prefix) {
-        return this.prefix + this.value
-      }
-      if (this.currency) {
-        return this.value + ' ' + this.currency
-      }
-      return this.value;
     }
   }
 }
