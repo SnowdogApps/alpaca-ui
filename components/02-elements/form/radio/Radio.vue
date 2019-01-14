@@ -19,7 +19,7 @@
           :id="option.id"
           :name="name"
           :value="option.value"
-          :checked="checked === option.value"
+          :checked="checkedValue === option.value"
           type="radio"
           class="radio__field"
           @change="$emit('change', $event.target.value)"
@@ -39,11 +39,11 @@
 <script>
   export default {
     model: {
-      prop: 'checked',
+      prop: 'checkedValue',
       event: 'change'
     },
     props: {
-      checked: {
+      checkedValue: {
         type: [String, Object, Number, Boolean],
         default: null,
       },
