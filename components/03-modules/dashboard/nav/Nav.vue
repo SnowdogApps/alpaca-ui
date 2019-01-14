@@ -19,7 +19,6 @@
         :elements="list"
         :list-class="listClass"
       />
-
     </div>
   </div>
 </template>

@@ -20,19 +20,6 @@
         />
       </template>
 
-      <!--TODO textarea-->
-
-      <!--<template v-if="textarea">-->
-      <!--<alpaca-input-->
-      <!--id="field_id"-->
-      <!--label="Textarea"-->
-      <!--type="text"-->
-      <!--name="textarea"-->
-      <!--textarea-->
-      <!--placeholder="First and last name"-->
-      <!--/>-->
-      <!--</template>-->
-
       <template v-if="options">
         <alpaca-select
           v-for="option in options"
@@ -49,8 +36,12 @@
           v-for="checkbox in checkboxes"
           :id="checkbox.checkbox.id"
           :key="checkbox.checkbox.id"
-          :label="checkbox.checkbox.label.text"
-        />
+          v-model="test"
+          :value="checkbox.checkbox.id"
+          @change="isChecked"
+        >
+          {{ checkbox.checkbox.label.text }}
+        </alpaca-checkbox>
       </template>
 
       <div class="dashboard-form__divider dashboard-form__fields">
@@ -111,6 +102,16 @@
       hiddenFields: {
         type: Array,
         default: null
+      }
+    },
+    data() {
+      return {
+        test: {}
+      }
+    },
+    methods: {
+      isChecked(){
+        console.log(this.test);
       }
     }
   }

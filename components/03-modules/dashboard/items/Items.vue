@@ -20,11 +20,9 @@
         <div class="dashboard-items__address">
           {{ information.information }}
         </div>
-
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
