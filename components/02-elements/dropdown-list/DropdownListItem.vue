@@ -63,6 +63,10 @@ export default {
     nest: {
       type: Boolean,
       default: false
+    },
+    level: {
+      type: Number,
+      default: null
     }
   },
   data() {

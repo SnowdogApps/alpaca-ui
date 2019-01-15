@@ -3,7 +3,6 @@ import { storiesOf } from "@storybook/vue";
 import App from "../../01-globals/app/App.vue";
 import AlpacaDropdownList from "./DropdownList.vue";
 import AlpacaDropdownListItem from "./DropdownListItem";
-import AlpacaDropdownListNested from "./DropdownListNested";
 
 import elements from "./mocks/dropdownList";
 
@@ -18,7 +17,7 @@ storiesOf("Elements/Dropdown list", module)
         <alpaca-dropdown-list>
           <alpaca-dropdown-list-item
             v-for="(element, i) in elements.dropdowns"
-            :id="element.id"
+            :id="element.id" 
             :key="i"
             :custom-class="element.class"
             :title="element.title"
@@ -104,7 +103,7 @@ storiesOf("Elements/Dropdown list", module)
     `
   }))
   .add("Dropdown list with nested", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListNested },
+    components: { App, AlpacaDropdownList, AlpacaDropdownListItem },
     data: () => ({
       elements
     }),
@@ -113,7 +112,6 @@ storiesOf("Elements/Dropdown list", module)
         <alpaca-dropdown-list
           nested
         >
-        <alpaca-dropdown-list-nested>
           <alpaca-dropdown-list-item
             v-for="(element, i) in elements.variants[3].context.dropdowns"
             :id="element.id"
@@ -121,9 +119,9 @@ storiesOf("Elements/Dropdown list", module)
             :custom-class="element.class"
             :title="element.title"
             :tag="element.itemTag"
+            :level="0"
           >
                  
-            <alpaca-dropdown-list-nested>
               <alpaca-dropdown-list-item
                 v-for="(el, i) in element.listNested"
                 :id="el.id"
@@ -131,9 +129,9 @@ storiesOf("Elements/Dropdown list", module)
                 :custom-class="el.class"
                 :title="el.title"
                 :tag="el.itemTag"
+                :level="1"
                >
                                
-            <alpaca-dropdown-list-nested>      
              <alpaca-dropdown-list-item
                 v-for="(e, i) in el.sublist"
                 :id="e.id"
@@ -141,16 +139,12 @@ storiesOf("Elements/Dropdown list", module)
                 :custom-class="e.class"
                 :title="e.title"
                 :tag="e.itemTag"
+                :level="2"
                >
                 {{ element.contentElement }}
-               </alpaca-dropdown-list-item>     
-             </alpaca-dropdown-list-nested>
-                
+               </alpaca-dropdown-list-item>           
                </alpaca-dropdown-list-item>                   
-           </alpaca-dropdown-list-nested> 
-              
             </alpaca-dropdown-list-item>     
-           </alpaca-dropdown-list-nested>
           </alpaca-dropdown-list>
       </app>
     `

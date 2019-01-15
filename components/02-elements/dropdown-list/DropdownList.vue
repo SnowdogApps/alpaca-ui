@@ -10,7 +10,9 @@
       }
     ]"
   >
-    <slot />
+    <ul class="dropdown-list__list">
+      <slot />
+    </ul>
   </div>
 </template>
 
@@ -225,6 +227,7 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
     cursor: pointer;
 
     &--open {
+
       & .dropdown-list__label {
         color: $dropdown-list__item-color--open;
         background-color: $dropdown-list__item-bg-color--open;
@@ -276,7 +279,6 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
   &__content {
     height: 0;
     overflow: hidden;
-    margin: $dropdown-list__content-margin;
     transition: $dropdown-list__transition-height;
   }
 
