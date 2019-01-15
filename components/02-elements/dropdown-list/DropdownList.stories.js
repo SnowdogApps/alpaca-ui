@@ -54,30 +54,6 @@ storiesOf("Elements/Dropdown list", module)
       </app>
     `
   }))
-  .add("Screen M", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem },
-    data: () => ({
-      elements
-    }),
-    template: `
-      <app>
-        <alpaca-dropdown-list
-          screenM
-        >
-          <alpaca-dropdown-list-item
-            v-for="(element, i) in elements.dropdowns"
-            :id="element.id"
-            :key="i"
-            :custom-class="element.class"
-            :title="element.title"
-            :tag="element.itemTag"
-          >
-            {{ element.contentElement }}
-           </alpaca-dropdown-list-item>
-          </alpaca-dropdown-list>
-      </app>
-    `
-  }))
   .add("Dark", () => ({
     components: { App, AlpacaDropdownList, AlpacaDropdownListItem },
     data: () => ({
@@ -109,6 +85,7 @@ storiesOf("Elements/Dropdown list", module)
     }),
     template: `
       <app>
+       <!--TODO Styles for nested-->
         <alpaca-dropdown-list
           nested
         >
