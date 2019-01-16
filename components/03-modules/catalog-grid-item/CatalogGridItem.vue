@@ -1,73 +1,143 @@
 <template>
-  <li class="catalog-grid-item">
-    <a 
-      href="#" 
+  <component
+    :is="tag"
+    class="catalog-grid-item"
+  >
+    <alpaca-badge
+      v-if="badgeText"
+      :type="badgeType"
+    >
+      {{ badgeText }}
+    </alpaca-badge>
+
+    <alpaca-link
+      href="#"
       class="catalog-grid-item__link"
     >
-      <img 
-        :src="image" 
+      <alpaca-image
+        :src="image"
+        :alt="alt"
         class="catalog-grid-item__image"
-      >
-    </a>
+      />
+    </alpaca-link>
 
     <section class="catalog-grid-item__details">
       <h2 class="catalog-grid-item__name">
-        <a
+        <alpaca-link
           href="#"
           class="catalog-grid-item__link catalog-grid-item__link--name"
-          v-html="name"
-        />
+        >
+          {{ name }}
+        </alpaca-link>
       </h2>
 
       <div class="catalog-grid-item__price">
-        $ {{ price }}
+        <!--TODO price is needed-->
       </div>
 
+      <!--TODO rating is needed-->
+
+      <div class="catalog-grid-item__options">
+        <alpaca-swatch
+          v-if="textSwatch"
+          :options="textSwatch"
+        />
+
+        <alpaca-swatch
+          v-if="iconSwatch"
+          :options="iconSwatch"
+          image
+        />
+      </div>
+
+
       <div class="catalog-grid-item__actions">
-        <form 
-          action="#" 
+        <form
+          action="#"
           class="catalog-grid-item__primary-form"
         >
           <alpaca-button
             :secondary="true"
             custom-class="catalog-grid-item__primary-action"
+            @click="addToCart"
           >
             Add to cart
           </alpaca-button>
         </form>
 
         <div class="catalog-grid-item__secondary-action">
-          <alpaca-button icon="heart" />
-          <alpaca-button icon="compare" />
+          <alpaca-button
+            icon="heart"
+            @click="addToWishList"
+          />
+          <alpaca-button
+            icon="compare"
+            @click="compare"
+          />
         </div>
       </div>
     </section>
-  </li>
+  </component>
 </template>
 
 <script>
 import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaBadge from '../../02-elements/badge/Badge.vue'
+import AlpacaImage from '../../02-elements/image/Image.vue'
+import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
 
 export default {
   components: {
-    AlpacaButton
+    AlpacaButton,
+    AlpacaBadge,
+    AlpacaImage,
+    AlpacaLink,
+    AlpacaSwatch
   },
   props: {
+    tag: {
+      type: String,
+      default: 'div'
+    },
     image: {
       type: String,
       required: true
     },
-    price: {
-      type: Number,
+    alt: {
+      type: String,
       required: true
     },
     name: {
       type: String,
       required: true
     },
-    specialPrice: {
-      type: Number,
-      required: true
+    badgeText: {
+      type: String,
+      default: null
+    },
+    badgeType: {
+      type: String,
+      default: null
+    },
+    textSwatch: {
+      type: Array,
+      default: null
+    },
+    iconSwatch: {
+      type: Array,
+      default: null
+    }
+  },
+  methods: {
+    addToCart(event) {
+      this.$emit('addToCart', event);
+    },
+    addToWishList(event) {
+      this.$emit('addToWishList', event);
+    },
+    compare(event) {
+      this.$emit('compare', event);
     }
   }
 }

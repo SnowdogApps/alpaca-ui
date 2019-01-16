@@ -1,0 +1,31 @@
+{
+  "badge": {
+    "name": "badge--new",
+    "text": "NEW"
+  },
+  "image": {
+    "dataSrc": "/images/catalog-grid-item/product-1_320_312.jpg",
+    "alt": "Product"
+  },
+  "name": "Some product name - very long name because that's important",
+  "primaryAction": {
+    "tag": "button",
+    "text": "Add to Cart",
+    "iconId": "shopping-cart",
+    "iconTitle": "Shopping cart"
+  },
+  "secondaryActions": {
+    "wishlist": {
+      "tag": "button",
+      "iconId": "heart",
+      "iconTitle": "Heart",
+      "ariaLabel": "Add to Wish List"
+    },
+    "compare": {
+      "tag": "button",
+      "iconId": "compare",
+      "iconTitle": "Compare",
+      "ariaLabel": "Add to compare"
+    }
+  }
+}
