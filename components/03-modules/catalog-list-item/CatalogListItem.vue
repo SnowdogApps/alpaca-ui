@@ -1,27 +1,75 @@
 <template>
-  <component :is="tag"
-             class="catalog-list-item"
+  <component
+    :is="tag"
+    class="catalog-list-item"
   >
     <alpaca-link :href="href">
-      {{ linkText }}
+      <div class="lazyload-wrapper catalog-list-item__image-wrapper">
+        <alpaca-image
+          :src="imageSrc"
+          :alt="imageAlt"
+        />
+      </div>
     </alpaca-link>
 
     <div class="catalog-list-item__main">
       <alpaca-badge
-        v-if="badge"
-        :class="badge.context.class"
+        v-if="badgeText"
+        type="badge-type"
+        class="catalog-list-item__badge"
       >
-        {{ badge.context.text }}
+        {{ badgeText }}
       </alpaca-badge>
 
       <div class="catalog-list-item__details">
         <h2 class="catalog-list-item__name">
-          <a href="#" class="catalog-list-item__link">
-
-          </a>
+          <alpaca-link
+            href="#"
+            class="catalog-list-item__link"
+          >
+            {{ title }}
+          </alpaca-link>
         </h2>
         <div class="catalog-list-item__reviews">
           <!--TODO rating needed-->
+        </div>
+      </div>
+
+      <div class="catalog-list-item__price">
+        <!--TODO price needed-->
+      </div>
+
+      <div class="catalog-grid-item__options">
+        <alpaca-swatch
+          v-if="textSwatch"
+          :options="textSwatch"
+        />
+
+        <alpaca-swatch
+          v-if="iconSwatch"
+          :options="iconSwatch"
+          image
+        />
+      </div>
+
+      <div class="catalog-list-item__actions">
+        <div class="catalog-list-item__actions-primary">
+          <alpaca-button
+            @click="addToCart"
+          >
+            {{ addToCartButton }}
+          </alpaca-button>
+        </div>
+        <div class="catalog-list-item__actions-secondary">
+          <alpaca-button
+            :icon="buttonWishlist"
+            @click="addToWishList"
+          />
+
+          <alpaca-button
+            :icon="buttonCompare"
+            @click="compare"
+          />
         </div>
       </div>
     </div>
@@ -30,29 +78,86 @@
 
 <script>
   import AlpacaLink from '../../01-globals/link/Link.vue'
+  import AlpacaImage from '../../02-elements/image/Image.vue'
   import AlpacaBadge from '../../02-elements/badge/Badge.vue'
+  import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
     components: {
       AlpacaLink,
-      AlpacaBadge
+      AlpacaImage,
+      AlpacaBadge,
+      AlpacaSwatch,
+      AlpacaButton
     },
     props: {
       tag: {
         type: String,
-        required: true
+        default: 'section'
       },
       href: {
         type: String,
         required: true
       },
-      linkText: {
+      imageSrc: {
         type: String,
         required: true
       },
-      badge: {
-        type: Object,
+      imageAlt: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      badgeText: {
+        type: String,
         default: null
+      },
+      badgeType: {
+        type: String,
+        default: null
+      },
+      textSwatch: {
+        type: Array,
+        default: null
+      },
+      iconSwatch: {
+        type: Array,
+        default: null
+      },
+      addToCartButton: {
+        type: String,
+        default: null
+      },
+      buttonWishlist: {
+        type: String,
+        default: null
+      },
+      ariaLabelCompare: {
+        type: String,
+        reguired: true
+      },
+      ariaLabelWishList: {
+        type: String,
+        reguired: true
+      },
+      buttonCompare: {
+        type: String,
+        default: null
+      }
+    },
+    methods: {
+      addToCart(event) {
+        this.$emit('addToCart', event);
+      },
+      addToWishList(event) {
+        this.$emit('addToWishList', event);
+      },
+      compare(event) {
+        this.$emit('compare', event);
       }
     }
   }
