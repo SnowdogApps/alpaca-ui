@@ -1,9 +1,6 @@
 <template>
   <svg
-    :class="[
-      'icon',
-      customClass
-    ]"
+    class="icon"
   >
     <title>{{ title }}</title>
     <use
@@ -20,10 +17,6 @@ export default {
       required: true
     },
     title: {
-      type: String,
-      default: null
-    },
-    customClass: {
       type: String,
       default: null
     }

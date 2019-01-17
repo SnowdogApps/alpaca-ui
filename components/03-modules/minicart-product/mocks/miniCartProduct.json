@@ -1,0 +1,56 @@
+{
+  "productImage": {
+    "dataSrc": "/images/product/minicart-product-72_72.png",
+    "alt": "product name goes here"
+  },
+  "productName": "Some product name",
+  "productPrice": "$85.00",
+  "productQty": {
+    "label": "Qty:",
+    "ariaLabel": "Change the quantity",
+    "id": "mini-qty",
+    "name": "mini-qty",
+    "placeholder": "32",
+    "type": "text"
+  },
+  "updateQty": {
+    "text": "Update"
+  },
+  "dropdowns": [
+    {
+      "title": "See Details",
+      "id": "see-details",
+      "collapse": {
+        "iconId": "angle-down",
+        "iconTitle": "Arrow down"
+      },
+      "contentElement": "list--description",
+      "contentContext": {
+        "elements": [
+          {
+            "label": "Label",
+            "value": "Value"
+          },
+          {
+            "label": "Label",
+            "value": "Value"
+          }
+        ]
+      }
+    }
+  ],
+  "qtyInput": {
+    "label":"Qty:",
+    "placeholder": "Qty"
+  },
+  "editIcon": {
+    "ariaLabel": "edit product in your shopping cart",
+    "iconId": "edit",
+    "iconTitle": "Edit pencil"
+  },
+  "removeIcon": {
+    "ariaLabel": "remove this product from your shopping cart",
+    "iconId": "remove",
+    "iconTitle": "Trash bin"
+  }
+}

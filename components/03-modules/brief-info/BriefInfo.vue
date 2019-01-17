@@ -20,7 +20,7 @@
         >
           <icon
             :icon="item.icon.iconId"
-            :custom-class="['brief-info__icon', iconClass]"
+            :class="['brief-info__icon', iconClass]"
           />
         </span>
         <div class="brief-info__content">
