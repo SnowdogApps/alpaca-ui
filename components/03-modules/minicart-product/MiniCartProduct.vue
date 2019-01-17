@@ -9,7 +9,7 @@
     <div class="minicart-product__info">
       <h3 class="minicart-product__name">
         <alpaca-link
-          custom-class="link link--invert minicart-product__link"
+          class="link link--invert minicart-product__link"
           :href="productLink"
         >
           {{ productName }}

@@ -4,8 +4,7 @@
       :for="id"
       :hidden="hiddenLabel"
       :inline="inlineLabel"
-      :custom-class="labelClass"
-      class="select__label"
+      class="labelClass, select__label"
     >
       {{ label }}
     </alpaca-label>
@@ -30,7 +29,7 @@
       </select>
     </div>
 
-    <template if="validations">
+    <template v-if="validations">
       <span
         v-for="(validation, index) in currentValidations"
         :key="index"

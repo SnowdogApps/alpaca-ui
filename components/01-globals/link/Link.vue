@@ -5,8 +5,7 @@
       {
         'link--inverted': inverted,
         'link--secondary': secondary
-      },
-      customClass
+      }
     ]"
     :href="href"
     :aria-label="ariaLabel"
@@ -29,10 +28,6 @@ export default {
     secondary: {
       type: Boolean,
       default: false
-    },
-    customClass: {
-      type: String,
-      default: null
     },
     ariaLabel: {
       type: String,

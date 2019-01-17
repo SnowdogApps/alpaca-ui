@@ -2,7 +2,6 @@
   <div
     :class="[
       'message',
-      customClass,
       messageClass
     ]"
     role="alert"
@@ -21,10 +20,6 @@ import Icon from '../../01-globals/icon/Icon.vue'
 export default {
   components: { Icon },
   props: {
-    customClass: {
-      type: String,
-      default: null
-    },
     type: {
       type: String,
       default: null

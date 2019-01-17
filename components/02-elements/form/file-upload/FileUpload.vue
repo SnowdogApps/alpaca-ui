@@ -1,8 +1,7 @@
 <template>
   <div
     :class="[
-      'file-upload',
-      customClass
+      'file-upload'
     ]"
   >
     <input
@@ -58,10 +57,6 @@ export default {
     AlpacaButton
   },
   props: {
-    customClass: {
-      type: String,
-      default: null
-    },
     labelText: {
       type: String,
       default: 'Your file (pdf, doc, max 1 MB)'
@@ -102,7 +97,7 @@ export default {
     },
     updateFileName () {
       this.fileName = this.$refs.fileInput.value.split('\\').pop()
-      
+
       if (this.fileName) {
         this.$refs.fileName.focus()
       }

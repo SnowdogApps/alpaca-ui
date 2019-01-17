@@ -2,7 +2,6 @@
   <component
     :is="tag"
     :class="[
-      customClass,
       {
         button: tag,
         'button--icon': icon,
@@ -35,10 +34,6 @@ export default {
     tag: {
       type: String,
       default: 'button'
-    },
-    customClass: {
-      type: String,
-      default: null
     },
     icon: {
       type: String,
