@@ -28,23 +28,34 @@
           <alpaca-input
             v-if="input"
             :id="input.id"
+            class="input input--inline minicart-product__input"
             :label="input.label"
+            input-class="input__field minicart-product__field"
             :type="input.type"
             :name="input.name"
             :placeholder="input.placeholder"
             :aria-label="input.ariaLabel"
+            label-class="minicart-product__label"
           />
-          <alpaca-button>
+          <alpaca-button
+            @click="update"
+          >
             {{ updateButton }}
           </alpaca-button>
         </div>
 
         <div class="minicart-product__actions">
           <alpaca-button
+            class="minicart-product__button"
             :icon="editIcon"
+            icon-class="minicart-product__button-icon"
+            @click="edit"
           />
           <alpaca-button
+            class="minicart-product__button"
             :icon="removeIcon"
+            icon-class="minicart-product__button-icon"
+            @click="remove"
           />
         </div>
       </div>
@@ -97,6 +108,17 @@ export default {
     input: {
       type: Object,
       default: null
+    }
+  },
+  methods: {
+    remove(){
+      this.$emit('remove', event);
+    },
+    edit(event){
+      this.$emit('edit', event);
+    },
+    update(event){
+      this.$emit('update', event);
     }
   }
 }
