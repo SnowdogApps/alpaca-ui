@@ -23,7 +23,7 @@
         class="price-old"
       >
         <slot name="oldPrice" />
-      </del>
+      </del> &nbsp;
       <ins
         :aria-label="ariaLabelSpecial"
         class="price--special"
