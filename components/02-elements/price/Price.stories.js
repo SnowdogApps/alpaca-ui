@@ -29,9 +29,7 @@ storiesOf('Elements/Price', module)
         <alpaca-price
           specialPrice
         >
-           <template slot="specialPrice">
-             {{ data[0].value }}
-          </template>
+         {{ data[0].value }}
         </alpaca-price>
       </app>
     `
@@ -46,9 +44,7 @@ storiesOf('Elements/Price', module)
         <alpaca-price
           oldPrice
         >
-          <template slot="oldPrice">
-             {{ data[0].value }}
-          </template>
+         {{ data[0].value }}
         </alpaca-price>
       </app>
     `
@@ -64,15 +60,13 @@ storiesOf('Elements/Price', module)
           oldPrice
           specialPrice
         >
-         <template slot="oldPrice">
-          {{ data[0].value }}
+          <template slot="oldPrice">
+            {{ data[0].value }}
           </template>
-          
-           <template slot="specialPrice">
-             {{ data[1].value }}
+          <template slot="specialPrice">
+            {{ data[1].value  }}
           </template>
         </alpaca-price>
-
       </app>
     `
   }))

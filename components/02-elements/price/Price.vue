@@ -1,43 +1,43 @@
 <template>
-  <div
-    :class="[
-      'price',
-
-    ]"
-  >
-    <span
-      :class="[{
-        'price--special': specialPrice,
-        'price-old': oldPrice
-      }]"
+  <div class="price">
+    <ins
+      v-if="specialPrice && !oldPrice"
+      :aria-label="ariaLabelSpecial"
+      class="price--special"
     >
-      <ins
-        v-if="oldPrice"
-        :aria-label="ariaLabelSpecial"
+      <slot />
+    </ins>
+    <del
+      v-else-if="oldPrice && !specialPrice"
+      :aria-label="ariaLabelOld"
+      class="price--old"
+    >
+      <slot />
+    </del>
+
+    <template
+      v-else-if="specialPrice && oldPrice"
+    >
+      <del
+        :aria-label="ariaLabelOld"
+        class="price-old"
       >
         <slot name="oldPrice" />
-      </ins>
-
-      <del
-        v-if="specialPrice"
-        :aria-label="ariaLabelOld"
+      </del>
+      <ins
+        :aria-label="ariaLabelSpecial"
+        class="price--special"
       >
         <slot name="specialPrice" />
-      </del>
-
-
-      <slot v-else />
-    </span>
+      </ins>
+    </template>
+    <slot v-else />
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    // price: {
-    //   type: String,
-    //   required: true
-    // },
     ariaLabelSpecial: {
       type: String,
       default: null
@@ -74,9 +74,7 @@ $price__font-weight--old: $font-weight-normal !default;
   }
   &--special {
     color: $price__color--special;
-    & > ins {
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
 }
 </style>
