@@ -40,11 +40,11 @@ export default {
   props: {
     ariaLabelSpecial: {
       type: String,
-      default: null
+      default: 'Special price'
     },
     ariaLabelOld: {
       type: String,
-      default: null
+      default: 'Old price'
     },
     specialPrice: {
       type: Boolean,
