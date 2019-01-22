@@ -26,10 +26,10 @@ storiesOf('Elements/Price', module)
     }),
     template: `
       <app>
-        <alpaca-price
-          specialPrice
-        >
-         {{ data[0].value }}
+        <alpaca-price>
+          <template slot="special">
+            {{ data[0].value }}
+          </template>
         </alpaca-price>
       </app>
     `
@@ -41,10 +41,10 @@ storiesOf('Elements/Price', module)
     }),
     template: `
       <app>
-        <alpaca-price
-          oldPrice
-        >
-         {{ data[0].value }}
+        <alpaca-price>
+          <template slot="old">
+            {{ data[0].value }}
+          </template>
         </alpaca-price>
       </app>
     `
@@ -56,14 +56,11 @@ storiesOf('Elements/Price', module)
     }),
     template: `
       <app>
-        <alpaca-price
-          oldPrice
-          specialPrice
-        >
-          <template slot="oldPrice">
+        <alpaca-price>
+          <template slot="old">
             {{ data[0].value }}
           </template>
-          <template slot="specialPrice">
+          <template slot="special">
             {{ data[1].value  }}
           </template>
         </alpaca-price>

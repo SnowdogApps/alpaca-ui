@@ -1,34 +1,34 @@
 <template>
   <div class="price">
     <ins
-      v-if="specialPrice && !oldPrice"
+      v-if="hasSpecialPrice && !hasOldPrice"
       :aria-label="ariaLabelSpecial"
       class="price--special"
     >
-      <slot />
+      <slot name="special" />
     </ins>
     <del
-      v-else-if="oldPrice && !specialPrice"
+      v-else-if="hasOldPrice && !hasSpecialPrice"
       :aria-label="ariaLabelOld"
       class="price--old"
     >
-      <slot />
+      <slot name="old" />
     </del>
 
     <template
-      v-else-if="specialPrice && oldPrice"
+      v-else-if="hasSpecialPrice && hasOldPrice"
     >
       <del
         :aria-label="ariaLabelOld"
         class="price-old"
       >
-        <slot name="oldPrice" />
+        <slot name="old" />
       </del> &nbsp;
       <ins
         :aria-label="ariaLabelSpecial"
         class="price--special"
       >
-        <slot name="specialPrice" />
+        <slot name="special" />
       </ins>
     </template>
     <slot v-else />
@@ -45,14 +45,14 @@ export default {
     ariaLabelOld: {
       type: String,
       default: 'Old price'
+    }
+  },
+  computed: {
+    hasSpecialPrice() {
+      return !!this.$slots.special
     },
-    specialPrice: {
-      type: Boolean,
-      default: false
-    },
-    oldPrice: {
-      type: Boolean,
-      default: false
+    hasOldPrice() {
+      return !!this.$slots.old
     }
   }
 }
