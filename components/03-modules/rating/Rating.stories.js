@@ -1,41 +1,34 @@
 import { storiesOf } from '@storybook/vue'
 
-import ratingItems from './mocks/ratingItems'
-import rating from './mocks/rating'
-
 import App from '../../01-globals/app/App.vue'
 import AlpacaRatingRate from './RatingRate.vue'
-import AlpacaRating from './Rating.vue'
 
-
-storiesOf('Elements/Rating', module)
+storiesOf('Modules/Rating', module)
   .add('Default', () => ({
-    components: { App, AlpacaRating },
+    components: { App, AlpacaRatingRate },
     data: () => ({
-      rating
+      rating: 3
     }),
     template: `
       <app>
-        <alpaca-rating 
-         :title="rating.title"
-         :aria-label="rating.ariaLabel"
-         :width="rating.star.width"
+        <alpaca-rating-rate 
+         width="72%"
+         legend="Rating"
         >
-        </alpaca-rating>
+        </alpaca-rating-rate>
       </app>
     `
   }))
   .add('Rate', () => ({
     components: { App, AlpacaRatingRate },
     data: () => ({
-      ratingItems,
       rating: 3
     }),
     template: `
       <app>
         <alpaca-rating-rate 
          v-model="rating"
-         :rating-items="ratingItems.items"
+         :rating-items="5"
          legend="Your rating"
         >
         </alpaca-rating-rate>

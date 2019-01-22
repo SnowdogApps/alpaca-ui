@@ -1,30 +1,45 @@
 <template>
-  <fieldset class="fieldset">
+  <fieldset>
     <legend id="rating-field-label">
       {{ legend }}
     </legend>
     <div
+      v-if="!width"
       class="rating rating--rate"
       role="listbox"
       aria-required="true"
       aria-labelledby="rating-field-label"
     >
       <rating-rate-item
-        v-for="(item, idx) in ratingItems"
-        :id="item.id"
-        :key="item.id"
-        :aria-label="item.labelText"
-        :name="item.name"
-        :active="rating >= idx + 1"
-        :selected="rating === idx + 1"
-        @select="onSelect(idx + 1)"
+        v-for="item in ratingItems"
+        :id="item"
+        :key="item"
+        :aria-label="`Rate option, ${item} of ${ratingItems}. Click to vote`"
+        :active="rating >= item"
+        :selected="rating === item"
+        @select="onSelect(item)"
       />
+    </div>
+
+    <div
+      v-if="width"
+      class="rating"
+      :aria-label="`Average rating: ${width}`"
+      :title="`Average rating: ${width}`"
+      tabindex="0"
+    >
+      <div
+        class="rating__star"
+        :style="{'width': width}"
+      >
+        <span class="rating__indicator" />
+      </div>
     </div>
   </fieldset>
 </template>
 
 <script>
-  import RatingRateItem from './RatingRateItem'
+  import RatingRateItem from '../../02-elements/rating/RatingRateItem'
 
   export default {
     components: {
@@ -40,12 +55,16 @@
         default: 0
       },
       ratingItems: {
-        type: Array,
-        required: true
+        type: Number,
+        default: 0
       },
       legend: {
         type: String,
         required: true
+      },
+      width: {
+        type: String,
+        default: null
       }
     },
     methods: {
@@ -71,26 +90,16 @@
   .rating {
     width: $rating__size;
 
+    &__error {
+      display: none;
+      color: $rating__error-color;
+      margin-bottom: $rating__error-margin-bottom;
 
-    &:hover,
-    &:focus {
-      .rating__rate-item span:before {
+      &--visible {
         display: block;
       }
     }
 
-    &__rate-item {
-      position: relative;
-      flex: 1 0 $rating__item-size;
-      overflow: hidden;
-
-      &:hover,
-      &:focus {
-        ~ .rating__rate-item span:before {
-          display: none;
-        }
-      }
-    }
     &__star {
       position: relative;
       height: $rating__item-size;
@@ -120,6 +129,7 @@
         width: $rating__item-size;
       }
     }
+
     &__indicator {
       left: 0;
       top: 0;
@@ -159,6 +169,7 @@
           display: block;
         }
       }
+
       &:after { //active star with border
         position: absolute;
         top: 0;
@@ -187,16 +198,6 @@
       }
     }
 
-    &__error {
-      display: none;
-      color: $rating__error-color;
-      margin-bottom: $rating__error-margin-bottom;
-
-      &--visible {
-        display: block;
-      }
-    }
-
     .mage-error {
       display: none !important; // sass-lint:disable-line no-important
     }
@@ -207,8 +208,9 @@
       width: $rating__size--rate;
       margin-bottom: $rating__margin--rate;
 
-      .rating__rate-item {
-        flex: 1 0 $rating__item-size--rate;
+      .radio__field {
+        width: 1px;
+        height: 1px;
       }
 
       .rating__star {
@@ -231,10 +233,6 @@
         &--single {
           width: $rating__item-size--rate;
         }
-      }
-      .radio__field {
-        width: 1px;
-        height: 1px;
       }
 
       .rating__indicator {
