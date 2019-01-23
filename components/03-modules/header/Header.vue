@@ -37,7 +37,10 @@
             <!-- <minicart /> -->
           </div>
 
-          <logo />
+          <logo
+            :src="src"
+            :to="link"
+          />
 
           <div class="header__search-wrapper">
             <header-search />
@@ -71,6 +74,14 @@ export default {
   props: {
     menu: {
       type: Array,
+      required: true
+    },
+    src: {
+      type: String,
+      required: true
+    },
+    link: {
+      type: String,
       required: true
     }
   }

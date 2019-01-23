@@ -1,7 +1,7 @@
 <template>
   <button class="header-button">
-    <alpaca-icon 
-      :icon="icon" 
+    <alpaca-icon
+      :icon="icon"
       custom-class="header-button__icon"
     />
 
@@ -73,6 +73,7 @@ $header-button__counter-dot-bg-color: $white !default;
   &:focus,
   &:hover {
     text-decoration: none;
+    background: none;
     .header-button__icon {
       fill: $header-button__icon-color--hover;
     }
