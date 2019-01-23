@@ -9,6 +9,7 @@
     <div class="container">
       <alpaca-heading
         :level="headingLevel"
+        page
       >
         {{ heading }}
       </alpaca-heading>
@@ -19,6 +20,7 @@
 
         <alpaca-input
           id="email"
+          v-model="value"
           :label="label"
           type="email"
           :name="name"
@@ -26,12 +28,13 @@
         />
 
         <alpaca-button
-          @click="submit"
+          @click.stop.prevent="submit"
         >
           {{ button }}
         </alpaca-button>
 
         <alpaca-link
+          class="confirmation-link__link"
           :href="href"
         >
           {{ link }}
@@ -106,9 +109,14 @@
         required: true
       }
     },
+    data() {
+      return {
+        value: null
+      }
+    },
     methods: {
-      submit(event) {
-        this.$emit('submit', event);
+      submit() {
+        this.$emit('submit', { email: this.value });
       }
     }
   }

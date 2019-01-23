@@ -3,13 +3,14 @@
     <alpaca-input
       id="header-search"
       :hidden-label="true"
+      name="Search"
       type="search"
       label="Search entire store here..."
       placeholder="Search entire store here..."
       input-class="search-form__input"
     />
-    <alpaca-button 
-      icon="search" 
+    <alpaca-button
+      icon="search"
       custom-class="search-form__button"
     />
   </form>
