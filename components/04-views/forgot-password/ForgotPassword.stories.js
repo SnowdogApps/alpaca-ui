@@ -6,7 +6,7 @@ import menu from '../../03-modules/header/mocks/menu.json'
 import App from '../../01-globals/app/App.vue'
 import AlpacaForgotPassword from './ForgotPassword.vue'
 
-storiesOf('Modules/Header', module).add('Default', () => ({
+storiesOf('Views/Forgot Password', module).add('Default', () => ({
   components: { App, AlpacaForgotPassword },
   data: () => ({
     menu
