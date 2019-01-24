@@ -18,7 +18,6 @@
       :class="['input__field', inputClass,{
         'input__field--textarea': textarea
       }]"
-      :value="value"
       :name="name"
       :type="type"
       :placeholder="placeholder"
@@ -42,10 +41,6 @@
       label: {
         type: String,
         required: true
-      },
-      value: {
-        type: String,
-        default: null
       },
       type: {
         type: String,
