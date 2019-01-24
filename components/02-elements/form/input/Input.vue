@@ -21,6 +21,8 @@
       :name="name"
       :type="type"
       :placeholder="placeholder"
+      :value="value"
+      @input="input($event.target.value)"
     />
   </div>
 </template>
@@ -32,10 +34,18 @@
     components: {
       AlpacaLabel
     },
+    model: {
+      prop: 'value',
+      event: 'input'
+    },
     props: {
       label: {
         type: String,
         required: true
+      },
+      value: {
+        type: String,
+        default: null
       },
       type: {
         type: String,
@@ -72,6 +82,11 @@
       inputClass: {
         type: String,
         default: null
+      }
+    },
+    methods: {
+      input(value) {
+        this.$emit('input', value)
       }
     }
   }
