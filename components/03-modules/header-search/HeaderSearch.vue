@@ -3,7 +3,7 @@
     <alpaca-input
       id="header-search"
       :hidden-label="true"
-      name="Search"
+      name="search"
       type="search"
       label="Search entire store here..."
       placeholder="Search entire store here..."
