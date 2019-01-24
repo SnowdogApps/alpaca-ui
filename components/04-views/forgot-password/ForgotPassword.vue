@@ -89,6 +89,10 @@
           type: String,
           required: true
         },
+        menu: {
+          type: Array,
+          required: true
+        },
         logoSrc: {
           type: String,
           required: true
