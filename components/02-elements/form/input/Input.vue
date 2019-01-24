@@ -38,7 +38,7 @@
       prop: 'value',
       event: 'input'
     },
-      props: {
+    props: {
       label: {
         type: String,
         required: true
