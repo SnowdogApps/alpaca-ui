@@ -34,15 +34,15 @@ storiesOf('Elements/Table', module)
         </thead>
         <tbody>
           <alpaca-table-row
-            v-for="(rows, i) in bodyRows"
-            :key="i"
+            v-for="row in bodyRows"
+            :key="row.id"
           >
             <alpaca-table-cell
-              v-for="row in rows"
-              :key="row.id"
-              :data-th="row.mobileHeading"
+              v-for="bodyCell in row"
+              :key="bodyCell.id"
+              :data-th="bodyCell.mobileHeading"
             >
-              {{ row.text }}
+              {{ bodyCell.text }}
             </alpaca-table-cell>
           </alpaca-table-row>
         </tbody>
@@ -88,15 +88,15 @@ storiesOf('Elements/Table', module)
         </thead>
         <tbody>
           <alpaca-table-row
-            v-for="rows in bodyRows"
-            :key="rows.id"
+            v-for="row in bodyRows"
+            :key="row.id"
           >
             <alpaca-table-cell
-              v-for="row in rows"
-              :key="row.id"
-              :data-th="row.mobileHeading"
+              v-for="bodyCell in row"
+              :key="bodyCell.id"
+              :data-th="bodyCell.mobileHeading"
             >
-              {{ row.text }}
+              {{ bodyCell.text }}
             </alpaca-table-cell>
           </alpaca-table-row>
         </tbody>
