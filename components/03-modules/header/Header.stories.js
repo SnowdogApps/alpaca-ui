@@ -12,7 +12,11 @@ storiesOf('Modules/Header', module).add('Default', () => ({
   }),
   template: `
     <app>
-      <alpaca-header :menu="menu"/>
+      <alpaca-header 
+        :menu="menu"
+        src="../../images/logo/alpaca.svg"
+        link="#"
+      />
     </app>
   `
 }))
