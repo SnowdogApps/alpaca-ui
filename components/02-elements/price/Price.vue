@@ -1,58 +1,65 @@
 <template>
   <div class="price">
     <ins
-      v-if="hasSpecialPrice && !hasOldPrice"
-      :aria-label="ariaLabelSpecial"
+      v-if="specialPrice"
+      :aria-label="setAriaLabel(specialPrice)"
       class="price--special"
     >
-      <slot name="special" />
+      {{ specialPrice }}
     </ins>
     <del
-      v-else-if="hasOldPrice && !hasSpecialPrice"
-      :aria-label="ariaLabelOld"
+      v-if="oldPrice"
+      :aria-label="setAriaLabel(oldPrice)"
       class="price--old"
     >
-      <slot name="old" />
+      {{ oldPrice }}
     </del>
-
-    <template
-      v-else-if="hasSpecialPrice && hasOldPrice"
+    <span
+      v-if="price"
+      :aria-label="setAriaLabel(price)"
     >
-      <del
-        :aria-label="ariaLabelOld"
-        class="price-old"
-      >
-        <slot name="old" />
-      </del> &nbsp;
-      <ins
-        :aria-label="ariaLabelSpecial"
-        class="price--special"
-      >
-        <slot name="special" />
-      </ins>
-    </template>
-    <slot v-else />
+      {{ price }}
+    </span>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    price: {
+      type: String,
+      default: null
+    },
+    specialPrice: {
+      type: String,
+      default: null
+    },
+    oldPrice: {
+      type: String,
+      default: null
+    },
+    ariaLabelPrice: {
+      type: String,
+      default: 'Price:'
+    },
     ariaLabelSpecial: {
       type: String,
-      default: 'Special price'
+      default: 'Special price:'
     },
     ariaLabelOld: {
       type: String,
-      default: 'Old price'
+      default: 'Old price:'
     }
   },
-  computed: {
-    hasSpecialPrice() {
-      return !!this.$slots.special
-    },
-    hasOldPrice() {
-      return !!this.$slots.old
+  methods: {
+    setAriaLabel(type) {
+      if (type === this.specialPrice) {
+        return `${this.ariaLabelSpecial} ${this.specialPrice}`
+      }
+      if (type === this.oldPrice) {
+        return `${this.ariaLabelOld} ${this.oldPrice}`
+      }
+      return `${this.ariaLabelPrice} ${this.price}`
     }
   }
 }
