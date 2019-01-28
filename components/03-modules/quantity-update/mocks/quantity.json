@@ -8,18 +8,12 @@
       "placeholder": "0"
     },
     "minusQtyButton": {
-      "tag": "button",
-      "class": "button--icon quantity-update__button quantity-update__button--minus quantity-update__button--disabled",
-      "attributes": "type='button' aria-label='Decrease the quantity'",
-      "iconClass": "button__icon quantity-update__icon",
+      "ariaLabel": "Decrease the quantity",
       "iconId": "minus",
       "iconTitle": "Minus mark"
     },
     "plusQtyButton": {
-      "tag": "button",
-      "class": "button--icon quantity-update__button quantity-update__button--plus",
-      "attributes": "type='button'' aria-label='Increase the quantity'",
-      "iconClass": "button__icon quantity-update__icon",
+      "ariaLabel": "Increase the quantity",
       "iconId": "plus",
       "iconTitle": "Plus mark"
     }

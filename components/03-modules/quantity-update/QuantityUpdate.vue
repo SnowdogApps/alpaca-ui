@@ -2,6 +2,7 @@
   <div class="quantity-update">
     <alpaca-button
       :icon="minusButton.iconId"
+      :aria-label="minusButton.ariaLabel"
       :class="['button--icon quantity-update__button quantity-update__button--minus',
                {'quantity-update__button--disabled' : currentValue === 0}
       ]"
@@ -21,6 +22,7 @@
     />
     <alpaca-button
       :icon="plusButton.iconId"
+      :aria-label="plusButton.ariaLabel"
       class="button--icon quantity-update__button quantity-update__button--plus"
       icon-class="button__icon quantity-update__icon"
       @click="updateVal(currentValue + 1)"
