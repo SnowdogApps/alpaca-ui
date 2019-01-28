@@ -27,10 +27,11 @@
             {{ signInInfo }}
           </p>
           <form class="login__form">
-            <fieldset class="fieldset login__fieldset">
-              <legend class="fieldset__legends login__legend">
-                {{ legend }}
-              </legend>
+            <alpaca-fieldset
+              class="login__fieldset"
+              :legend-text="legend"
+              legend-class="login__legend"
+            >
               <alpaca-input
                 id="email"
                 v-model="email"
@@ -48,7 +49,7 @@
                 name="password"
                 placeholder="Password"
               />
-            </fieldset>
+            </alpaca-fieldset>
             <div class="login__actions">
               <alpaca-button
                 class="login__button"
@@ -111,6 +112,7 @@
 <script>
   import AlpacaHeading from '../../01-globals/heading/Heading.vue'
   import AlpacaLink from '../../01-globals/link/Link.vue'
+  import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
   import AlpacaDivider from '../../02-elements/divider/Divider.vue'
   import AlpacaButton from '../../02-elements/button/Button.vue'
   import AlpacaInput from '../../02-elements/form/input/Input.vue'
@@ -120,6 +122,7 @@
     components: {
       AlpacaHeading,
       AlpacaLink,
+      AlpacaFieldset,
       AlpacaDivider,
       AlpacaButton,
       AlpacaInput,
