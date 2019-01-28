@@ -1,10 +1,5 @@
 <template>
-  <fieldset
-    :class="[
-      'fieldset',
-      fieldsetClass
-    ]"
-  >
+  <fieldset class="fieldset">
     <legend
       :class="[
         'fieldset__legend',
@@ -23,10 +18,6 @@ export default {
     legendText: {
       type: String,
       required: true
-    },
-    fieldsetClass: {
-      type: String,
-      default: null
     },
     legendClass: {
       type: String,
