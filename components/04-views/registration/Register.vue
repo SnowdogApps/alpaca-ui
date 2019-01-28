@@ -7,6 +7,7 @@
     />
     <div class="container">
       <alpaca-heading
+        page
         :level="1"
       >
         {{ mainHeading }}
@@ -18,33 +19,44 @@
             :legend-text="personalSectionText"
             legend-class="registration__legend"
           >
-            <alpaca-divider />
+            <alpaca-divider class="registration__divider" />
             <alpaca-input
               id="firstname"
               v-model="firstname"
-              label="Firstname"
+              label="First name"
               type="text"
               name="firstname"
-              placeholder="Firstname"
+              placeholder="First name"
             />
 
             <alpaca-input
               id="lastname"
               v-model="lastname"
-              label="Lastname"
+              label="Last name"
               type="text"
               name="lastname"
-              placeholder="Lastname"
+              placeholder="Last name"
             />
-            {{ render '@checkbox' newsletterCheckbox }}
+
+            <!--TODO Update checkbox after merge #48744-->
+            <alpaca-checkbox
+              id="newsletter"
+              v-model="newsletter"
+              name="newsletter"
+              :label="checkboxLabel"
+              class="registration__newsletter-checkbox"
+              icon-class="registration__newsletter-checkbox-icon"
+              label-class="registration__newsletter-checkbox-label"
+              :value="true"
+            />
           </alpaca-fieldset>
 
           <alpaca-fieldset
             class="registration__fieldset"
-            :legend-text="signInSection.legend.text "
+            :legend-text="signInSectionText"
             legend-class="registration__legend"
           >
-            <alpaca-divider />
+            <alpaca-divider class="registration__divider" />
             <alpaca-input
               id="email"
               v-model="email"
@@ -66,13 +78,12 @@
               <alpaca-password-strength
                 :value="passwordStrength"
               />
-
             </div>
             <alpaca-input
               id="passwordConfirmation"
               v-model="passwordConfirmation"
               label="Confirm password"
-              type="passwordConfirmation"
+              type="password"
               name="passwordConfirmation"
               placeholder="Confirm password"
             />
@@ -80,9 +91,9 @@
 
           <alpaca-button
             class="login__button"
-            @click="registrationButton"
+            @click.stop.prevent="register"
           >
-            Create a Company Account
+            {{ buttonText }}
           </alpaca-button>
         </form>
       </div>
@@ -97,6 +108,7 @@
   import AlpacaDivider from '../../02-elements/divider/Divider.vue'
   import AlpacaButton from '../../02-elements/button/Button.vue'
   import AlpacaInput from '../../02-elements/form/input/Input.vue'
+  import AlpacaCheckbox from '../../02-elements/form/checkbox/Checkbox.vue'
   import AlpacaHeader from '../../03-modules/header/Header.vue'
 
   export default {
@@ -107,6 +119,7 @@
       AlpacaDivider,
       AlpacaButton,
       AlpacaInput,
+      AlpacaCheckbox,
       AlpacaHeader
     },
     props: {
@@ -122,12 +135,28 @@
         type: String,
         required: true
       },
+      mainHeading: {
+        type: String,
+        required: true
+      },
       personalSectionText: {
         type: String,
         required: true
       },
       passwordStrength: {
         type: Number,
+        required: true
+      },
+      signInSectionText: {
+        type: String,
+        required: true
+      },
+      checkboxLabel: {
+        type: String,
+        required: true
+      },
+      buttonText: {
+        type: String,
         required: true
       }
     },
@@ -137,9 +166,21 @@
         lastname: null,
         email: null,
         password: null,
-        passwordConfirmation: null
+        passwordConfirmation: null,
+        newsletter: false
       }
     },
+    methods: {
+      register() {
+        this.$emit('register', {
+          firstname: this.firstname,
+          lastname: this.lastname,
+          email: this.email,
+          password: this.password,
+          newsletter: this.newsletter
+        });
+      }
+    }
   }
 </script>
 
@@ -169,72 +210,74 @@
 
   $registration__password-margin                              : 0 !default;
 
-  .registration {
-    padding-top: $registration__padding-top;
+  .container{
+    .registration {
+      padding-top: $registration__padding-top;
 
-  &__divider {
-     margin-bottom: $spacer--large;
-   }
+      &__divider {
+        margin-bottom: $spacer--large;
+      }
 
-  &__content {
-     margin: $registration__content-margin;
-   }
+      &__content {
+        margin: $registration__content-margin;
+      }
 
-  &__input {
-     margin: $registration__input-margin;
-   }
+      &__input {
+        margin: $registration__input-margin;
+      }
 
-  &__legend {
-     position: relative;
-     margin: $registration__legend-margin;
-     padding: $registration__legend-padding;
-     width: $registration__legend-width;
-     font-size: $registration__legend-font-size;
-     font-weight: $registration__legend-font-weight;
-   }
+      &__legend {
+        position: relative;
+        margin: $registration__legend-margin;
+        padding: $registration__legend-padding;
+        width: $registration__legend-width;
+        font-size: $registration__legend-font-size;
+        font-weight: $registration__legend-font-weight;
+      }
 
-  &__fieldset {
-     margin: $registration__fieldset-margin;
-   }
+      &__fieldset {
+        margin: $registration__fieldset-margin;
+      }
 
-  &__newsletter-checkbox {
-     margin: $registration__newsletter-checkbox-margin;
-   }
+      &__newsletter-checkbox {
+        margin: $registration__newsletter-checkbox-margin;
+      }
 
-  &__newsletter-checkbox-label {
-     padding-left: $registration__newsletter-checkbox-label-padding-left;
-     line-height: $registration__newsletter-checkbox-label-line-height;
-  &:before {
-     top: $registration__newsletter-checkbox-icon-offset;
-     left: $registration__newsletter-checkbox-icon-offset;
-   }
-  &:after {
-     width: $registration__newsletter-checkbox-icon-clickable-area;
-     height: $registration__newsletter-checkbox-icon-clickable-area;
-     content: ' ';
-     position: absolute;
-     top: 0;
-     left: 0;
-   }
-  }
+      &__newsletter-checkbox-label {
+        padding-left: $registration__newsletter-checkbox-label-padding-left;
+        line-height: $registration__newsletter-checkbox-label-line-height;
+        &:before {
+          top: $registration__newsletter-checkbox-icon-offset;
+          left: $registration__newsletter-checkbox-icon-offset;
+        }
+        &:after {
+          width: $registration__newsletter-checkbox-icon-clickable-area;
+          height: $registration__newsletter-checkbox-icon-clickable-area;
+          content: ' ';
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
 
-  &__newsletter-checkbox-field {
-  &:checked ~ .checkbox__label {
-     font-weight: $registration__newsletter-checkbox-checked-label-font-weight;
-   }
-  }
+      &__newsletter-checkbox-field {
+        &:checked ~ .checkbox__label {
+          font-weight: $registration__newsletter-checkbox-checked-label-font-weight;
+        }
+      }
 
-  &__newsletter-checkbox-icon {
-     top: $registration__newsletter-checkbox-icon-offset;
-     left: $registration__newsletter-checkbox-icon-offset;
-   }
+      &__newsletter-checkbox-icon {
+        top: $registration__newsletter-checkbox-icon-offset;
+        left: $registration__newsletter-checkbox-icon-offset;
+      }
 
-  &__password-wrapper {
-     margin: $registration__pasword-wrapper-margin;
-   }
+      &__password-wrapper {
+        margin: $registration__pasword-wrapper-margin;
+      }
 
-  &__password {
-     margin: $registration__password-margin;
-   }
+      &__password {
+        margin: $registration__password-margin;
+      }
+    }
   }
 </style>
