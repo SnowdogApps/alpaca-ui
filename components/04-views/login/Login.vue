@@ -53,7 +53,7 @@
             <div class="login__actions">
               <alpaca-button
                 class="login__button"
-                @click.stop.prevent="login"
+                @click="login"
               >
                 Login
               </alpaca-button>
@@ -81,7 +81,7 @@
           </p>
           <alpaca-button
             class="login__button login__button--create-account"
-            @click.stop.prevent="createAccount"
+            @click="createAccount"
           >
             Create an Account
           </alpaca-button>
@@ -99,7 +99,7 @@
           </p>
           <alpaca-button
             class="login__button"
-            @click.stop.prevent="createCompanyAccount"
+            @click="createCompanyAccount"
           >
             Create a Company Account
           </alpaca-button>

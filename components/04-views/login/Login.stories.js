@@ -22,12 +22,15 @@ storiesOf('Views/Login', module).add('Default', () => ({
         linkHeading="New Customer"
         linkCompanyHeading="New Company Account"
         signInInfo="If you have an account, sign in with your email address."
-        legend="xxx"
+        legend=""
         validationTips="* Required Fields"
         forgetPasswordText="Forgot your password?"
         forgetPasswordLink="#"
         createAccountInfo="Creating an account has many benefits: check out faster, keep more than one address, track orders and more."
         createCompanyAccountInfo="If you represent a company, you will want to use our company account area. Creating a company account provides all company members with access to B2B features like quoting, company users management, quick order, and more."
+        @login="exampleMethod"
+        @createAccount="exampleMethod"
+        @createCompanyAccount="exampleMethod"
       />
     </app>
   `,
