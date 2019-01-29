@@ -90,9 +90,7 @@
   $brief-info__icon-border-radius              : 32px !default;
   $brief-info__icon-size                       : 48px !default;
   $brief-info__icon-padding                    : 0 $spacer--medium !default;
-  $brief-info__icon-padding\@medium            : 0 !default;
   $brief-info__icon-margin-bottom              : $spacer !default;
-  $brief-info__icon-margin-bottom\@large       : 0 !default;
   $brief-info__link-font-size                  : $font-size-small !default;
   $brief-info__link-font-weight                : $font-weight-bold !default;
   $brief-info__link-text-decoration            : none !default;
@@ -101,7 +99,6 @@
   $brief-info__title-font-weight               : $font-weight-normal !default;
   $brief-info__title-line-height               : 1em !default;
   $brief-info__title-text-transform            : uppercase !default;
-  $brief-info__title-margin-bottom             : 0 !default;
 
   .brief-info {
     @include mq($screen-m) {
@@ -142,7 +139,7 @@
       &:first-child,
       &:last-child {
         @include mq($screen-m) {
-          padding: $brief-info__icon-padding\@medium;
+          padding: $reset;
         }
       }
     }
@@ -155,7 +152,7 @@
       height: $brief-info__icon-size;
       flex-shrink: 0;
       @include mq($screen-l) {
-        margin-bottom: $brief-info__icon-margin-bottom\@large;
+        margin-bottom: $reset;
       }
     }
 
@@ -166,7 +163,7 @@
     }
 
     &__title {
-      margin-bottom: $brief-info__title-margin-bottom;
+      margin-bottom: $reset;
       font-size: $brief-info__title-font-size;
       text-transform: $brief-info__title-text-transform;
       line-height: $brief-info__title-line-height;

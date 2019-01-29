@@ -15,7 +15,7 @@ export default {}
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext');
 
 *:focus {
-  outline: 0;
+  outline: $reset;
 }
 
 *,
@@ -44,13 +44,13 @@ body {
 }
 
 p {
-  margin: 0;
-  padding: 0;
+  margin: $reset;
+  padding: $reset;
 }
 
 dl,
 dt,
 dd {
-  margin: 0;
+  margin: $reset;
 }
 </style>

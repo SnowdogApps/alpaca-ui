@@ -20,7 +20,7 @@ storiesOf('Elements/Table', module)
     template: `
       <app>
         <alpaca-table caption="This is a table">
-        <thead>
+          <thead>
             <alpaca-table-row>
               <alpaca-table-cell
                 tag="th"
@@ -31,32 +31,32 @@ storiesOf('Elements/Table', module)
                 {{ headCell.text }}
               </alpaca-table-cell>
             </alpaca-table-row>
-        </thead>
-        <tbody>
-          <alpaca-table-row
-            v-for="row in bodyRows"
-            :key="row.id"
-          >
-            <alpaca-table-cell
-              v-for="bodyCell in row"
-              :key="bodyCell.id"
-              :data-th="bodyCell.mobileHeading"
+          </thead>
+          <tbody>
+            <alpaca-table-row
+              v-for="row in bodyRows"
+              :key="row.id"
             >
-              {{ bodyCell.text }}
-            </alpaca-table-cell>
-          </alpaca-table-row>
-        </tbody>
-        <tfoot>
-          <alpaca-table-row>
-            <alpaca-table-cell
-              v-for="footCell in footCells"
-              :key="footCell.id"
-              :colspan="footCell.colspan"
-            >
-              {{ footCell.text }}
-            </alpaca-table-cell>
-          </alpaca-table-row>        
-        </tfoot>
+              <alpaca-table-cell
+                v-for="bodyCell in row"
+                :key="bodyCell.id"
+                :data-th="bodyCell.mobileHeading"
+              >
+                {{ bodyCell.text }}
+              </alpaca-table-cell>
+            </alpaca-table-row>
+          </tbody>
+          <tfoot>
+            <alpaca-table-row>
+              <alpaca-table-cell
+                v-for="footCell in footCells"
+                :key="footCell.id"
+                :colspan="footCell.colspan"
+              >
+                {{ footCell.text }}
+              </alpaca-table-cell>
+            </alpaca-table-row>        
+          </tfoot>
         </alpaca-table>
       </app>
     `
@@ -70,11 +70,11 @@ storiesOf('Elements/Table', module)
     }),
     template: `
       <app>
-       <alpaca-table 
+        <alpaca-table 
           caption="This is a table"
           class="table--odd-even"
         >
-        <thead>
+          <thead>
             <alpaca-table-row>
               <alpaca-table-cell
                 tag="th"
@@ -85,32 +85,32 @@ storiesOf('Elements/Table', module)
                 {{ headCell.text }}
               </alpaca-table-cell>
             </alpaca-table-row>
-        </thead>
-        <tbody>
-          <alpaca-table-row
-            v-for="row in bodyRows"
-            :key="row.id"
-          >
-            <alpaca-table-cell
-              v-for="bodyCell in row"
-              :key="bodyCell.id"
-              :data-th="bodyCell.mobileHeading"
+          </thead>
+          <tbody>
+            <alpaca-table-row
+              v-for="row in bodyRows"
+              :key="row.id"
             >
-              {{ bodyCell.text }}
-            </alpaca-table-cell>
-          </alpaca-table-row>
-        </tbody>
-        <tfoot>
-          <alpaca-table-row>
-            <alpaca-table-cell
-              v-for="footCell in footCells"
-              :key="footCell.id"
-              :colspan="footCell.colspan"
-            >
-              {{ footCell.text }}
-            </alpaca-table-cell>
-          </alpaca-table-row>        
-        </tfoot>
+              <alpaca-table-cell
+                v-for="bodyCell in row"
+                :key="bodyCell.id"
+                :data-th="bodyCell.mobileHeading"
+              >
+                {{ bodyCell.text }}
+              </alpaca-table-cell>
+            </alpaca-table-row>
+          </tbody>
+          <tfoot>
+            <alpaca-table-row>
+              <alpaca-table-cell
+                v-for="footCell in footCells"
+                :key="footCell.id"
+                :colspan="footCell.colspan"
+              >
+                {{ footCell.text }}
+              </alpaca-table-cell>
+            </alpaca-table-row>        
+          </tfoot>
         </alpaca-table>
       </app>
     `

@@ -108,12 +108,12 @@
       &--selected {
         border-color: $swatch__option-border-color--active;
         .swatch__option--white {
-          border: 0;
+          border: $reset;
         }
       }
 
       &:last-child {
-        margin-right: 0;
+        margin-right: $reset;
       }
     }
 

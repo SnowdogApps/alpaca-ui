@@ -60,7 +60,7 @@ $filter__icon-border-radius: 2px !default;
 .filter {
   &__content {
     list-style: none;
-    padding: 0;
+    padding: $reset;
     margin: $spacer 0 0 0;
   }
 

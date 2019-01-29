@@ -95,7 +95,6 @@ $button__font-color--secondary: $gray-darker !default;
 $button__font-color-hover--secondary: $gray-dark !default;
 
 // Icon
-$button__padding--icon: 0 !default;
 $button__size--icon: 20px !default;
 $button__border-width--icon: 3px !default;
 $button__border--icon: $button__border-width--icon solid $color-primary !default;
@@ -158,7 +157,7 @@ $button__width--fluid: 100% !default;
 
   &--icon {
     align-items: center;
-    padding: $button__padding--icon;
+    padding: $reset;
     border: $button__border--icon;
     background: $button__background--icon;
 

@@ -38,19 +38,17 @@ export default {
 
 <style lang="scss" scoped>
 $fieldset__border            : none !default;
-$fieldset__margin            : 0 !default;
-$fieldset__padding           : 0 !default;
 $fieldset__legend-margin     : 0 0 25px !default;
 $fieldset__legend-font-size  : $font-size-large !default;
 $fieldset__legend-line-height: 1.2 !default;
 
 .fieldset {
   border: $fieldset__border;
-  padding: $fieldset__padding;
-  margin: $fieldset__margin;
+  padding: $reset;
+  margin: $reset;
 
   &__legend {
-    padding: 0;
+    padding: $reset;
     margin: $fieldset__legend-margin;
     font-size: $fieldset__legend-font-size;
     line-height: $fieldset__legend-line-height;

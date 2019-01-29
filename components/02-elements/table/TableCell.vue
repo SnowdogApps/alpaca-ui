@@ -20,6 +20,7 @@
 
 <style lang="scss">
   $table__padding      : $spacer--medium !default;
+  $table__cell__padding: $spacer $table__padding !default;
   $table__background   : $white !default;
   $table__border       : 1px solid $gray-light !default;
   $table__border-radius: $border-radius !default;
@@ -31,31 +32,31 @@
 
       &:last-child {
         @include mq($screen-m) {
-          border-right: 0;
+          border-right: $reset;
         }
       }
 
       @include mq($screen-m) {
         display: table-cell;
         padding: $table__padding;
-        background: $table__th-background;
         border-bottom: $table__border;
         border-right: $table__border;
+        background: $table__th-background;
       }
     }
 
     td {
       display: flex;
-      padding: 5px $table__padding;
+      padding: $table__cell__padding;
       background: $table__background;
 
       &:before {
         content: attr(data-th);
-        font-weight: bold;
-        margin-right: 10px;
+        display: block;
         max-width: 25%;
         width: 25%;
-        display: block;
+        margin-right: 10px;
+        font-weight: bold;
 
         @include mq($screen-m) {
           display: none;
@@ -64,16 +65,16 @@
 
       &:last-child {
         @include mq($screen-m) {
-          border-right: 0;
+          border-right: $reset;
         }
       }
 
       @include mq($screen-m) {
         display: table-cell;
         padding: $table__padding;
-        background: $table__background;
         border-bottom: $table__border;
         border-right: $table__border;
+        background: $table__background;
       }
     }
 
@@ -100,10 +101,10 @@
     tfoot {
       tr {
         &:last-child {
-          border-bottom: 0;
+          border-bottom: $reset;
 
           td {
-            border-bottom: 0;
+            border-bottom: $reset;
 
             &:first-child {
               @include mq($screen-m) {
@@ -122,14 +123,14 @@
 
       td {
         display: block;
-        padding: 5px $table__padding;
+        padding: $table__cell__padding;
         background: $table__background;
 
         @include mq($screen-m) {
           display: table-cell;
           padding: $table__padding;
-          background: $table__th-background;
           border-right: $table__border;
+          background: $table__th-background;
         }
       }
     }
@@ -150,8 +151,8 @@
             border-top-right-radius: $table__border-radius;
 
             @include mq($screen-m) {
-              border-top-left-radius: 0;
-              border-top-right-radius: 0;
+              border-top-left-radius: $reset;
+              border-top-right-radius: $reset;
             }
           }
         }

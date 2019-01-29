@@ -4,20 +4,17 @@
   </tr>
 </template>
 
-<script>
-  export default {}
-</script>
-
 <style lang="scss">
   $table__padding      : $spacer--medium !default;
+  $table__row__padding : $table__padding 0 !default;
   $table__border-radius: $border-radius !default;
   $table__border       : 1px solid $gray-light !default;
 
   .table {
     thead {
       tr {
-        padding: 0;
-        border-bottom: 0;
+        padding: $reset;
+        border-bottom: $reset;
 
         @include mq($screen-m) {
           border-top-left-radius: $table__border-radius;
@@ -42,13 +39,13 @@
 
     tr {
       display: block;
-      padding: $table__padding 0;
+      padding: $table__row__padding;
       border-bottom: $table__border;
 
       @include mq($screen-m) {
-        padding: 0;
-        border-bottom: 0;
         display: table-row;
+        padding: $reset;
+        border-bottom: $reset;
       }
     }
   }
