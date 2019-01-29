@@ -27,11 +27,11 @@ export default {
 </script>
 
 <style lang="scss">
-$table__color                    : $black !default;
-$table__background               : $white !default;
-$table__font-size                : $font-size-small !default;
-$table__border-radius            : $border-radius !default;
-$table__border                   : 1px solid $gray-light !default;
+$table__color        : $black !default;
+$table__background   : $white !default;
+$table__font-size    : $font-size-small !default;
+$table__border-radius: $border-radius !default;
+$table__border       : 1px solid $gray-light !default;
 
 .table {
   width: 100%;

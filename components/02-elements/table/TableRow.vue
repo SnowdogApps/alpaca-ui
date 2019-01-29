@@ -9,9 +9,9 @@
 </script>
 
 <style lang="scss">
-  $table__padding                  : $spacer--medium !default;
-  $table__border-radius            : $border-radius !default;
-  $table__border                   : 1px solid $gray-light !default;
+  $table__padding      : $spacer--medium !default;
+  $table__border-radius: $border-radius !default;
+  $table__border       : 1px solid $gray-light !default;
 
   .table {
     thead {

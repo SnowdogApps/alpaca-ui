@@ -19,15 +19,11 @@
 </script>
 
 <style lang="scss">
-  $table__padding                  : $spacer--medium !default;
-  $table__background               : $white !default;
-  $table__border                   : 1px solid $gray-light !default;
-  $table__border-radius            : $border-radius !default;
-  $table__th-background            : $gray-lightest !default;
-  $table__td-background            : $white !default;
-  $table__tfoot-background         : $gray-lightest !default;
-  $table__background-odd--odd-even : $white !default;
-  $table__background-even--odd-even: #f9f9f9 !default;
+  $table__padding      : $spacer--medium !default;
+  $table__background   : $white !default;
+  $table__border       : 1px solid $gray-light !default;
+  $table__border-radius: $border-radius !default;
+  $table__th-background: $gray-lightest !default;
 
   .table {
     th {
@@ -51,7 +47,7 @@
     td {
       display: flex;
       padding: 5px $table__padding;
-      background: $table__td-background;
+      background: $table__background;
 
       &:before {
         content: attr(data-th);
@@ -75,7 +71,7 @@
       @include mq($screen-m) {
         display: table-cell;
         padding: $table__padding;
-        background: $table__td-background;
+        background: $table__background;
         border-bottom: $table__border;
         border-right: $table__border;
       }
@@ -132,7 +128,7 @@
         @include mq($screen-m) {
           display: table-cell;
           padding: $table__padding;
-          background: $table__tfoot-background;
+          background: $table__th-background;
           border-right: $table__border;
         }
       }
@@ -142,11 +138,11 @@
       tbody {
         tr {
           &:nth-child(odd) {
-            background: $table__background-odd--odd-even;
+            background: $table__background;
           }
 
           &:nth-child(even) {
-            background: $table__background-even--odd-even;
+            background: $table__th-background;
           }
 
           &:first-child {
