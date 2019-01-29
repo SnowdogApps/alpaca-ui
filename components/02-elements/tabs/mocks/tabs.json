@@ -4,7 +4,7 @@
     "iconId": "angle-down",
     "iconTitle": "Arrow Down"
   },
-  "tabs": [
+  "items": [
     {
       "tabId": "tab-1",
       "title": "Tab title",

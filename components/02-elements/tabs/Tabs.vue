@@ -1,10 +1,6 @@
 <template>
-  <div
-    class="tab"
-  >
-    <template
-      v-for="{ id, tab } in getTabsWithId"
-    >
+  <div class="tab">
+    <template v-for="{ id, tab } in getTabsWithId">
       <button
         :id="id"
         :key="'tab' + tab.tabId"

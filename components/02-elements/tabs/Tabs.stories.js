@@ -12,7 +12,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   }),
   template: `
     <app>
-      <alpaca-tabs :tabs="tabs.tabs"/>
+      <alpaca-tabs :tabs="tabs.items">
     </app>
   `
 }))
@@ -24,7 +24,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-tabs 
-        :tabs="tabs.tabs"
+        :tabs="tabs.items"
         :icon="tabs.icon.iconId"
       />
     </app>

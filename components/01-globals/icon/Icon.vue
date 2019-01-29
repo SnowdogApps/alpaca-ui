@@ -1,5 +1,8 @@
 <template>
-  <svg class="icon">
+  <svg
+    class="icon"
+    role="img"
+  >
     <title>{{ title }}</title>
     <use :xlink:href="url" />
   </svg>
