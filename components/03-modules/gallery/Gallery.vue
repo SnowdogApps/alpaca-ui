@@ -49,7 +49,7 @@
 </template>
 
 <script>
-  import uniqueId from 'lodash.uniqueid';
+  import uniqueId from 'lodash.uniqueid'
 
   import AlpacaBadge from '../../02-elements/badge/Badge.vue'
   import AlpacaImage from '../../02-elements/image/Image.vue'
@@ -90,16 +90,16 @@
     },
     computed: {
       getThumbsWithKey() {
-        return this.images.map(image => ({ key: uniqueId("image"), image }));
+        return this.images.map(image => ({ key: uniqueId("image"), image }))
       },
       selectedImage() {
-        return this.images[this.currentImage];
+        return this.images[this.currentImage]
       }
     },
     methods: {
       setCurrentImage (val) {
         if(this.images[val]){
-          this.currentImage = val;
+          this.currentImage = val
         }
       }
     }
