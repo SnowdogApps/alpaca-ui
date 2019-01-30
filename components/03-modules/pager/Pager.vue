@@ -2,8 +2,8 @@
   <nav class="pager">
     <ul class="pager__list">
       <li class="pager__item">
-        <alpaca-button 
-          icon="arrow-left" 
+        <alpaca-button
+          icon="arrow-left"
           custom-class="pager__link pager__link--prev"
           aria-label="Go to previous page"
           :disabled="currentPage < 2"
@@ -149,7 +149,7 @@ export default {
       return this.listOfPageNumbers.slice(
         this.currentPage - Math.floor(this.limitPerPage / 2) - 1,
         this.currentPage + Math.floor(this.limitPerPage / 2)
-      ) 
+      )
     },
     setCurrentPage (value) {
       this.currentPage = value
@@ -180,7 +180,7 @@ $pager__link-fill                           : $green !default;
     justify-content: center;
     list-style-type: none;
     padding: $pager__list-padding;
-    margin: 0;
+    margin: $reset;
   }
 
   &__item {
@@ -190,14 +190,14 @@ $pager__link-fill                           : $green !default;
     flex-basis: $pager__item-size;
     height: $pager__item-size;
     margin: $pager__item-margin;
-    padding: 0;
+    padding: $reset;
 
     &:first-child {
-      margin-left: 0;
+      margin-left: $reset;
     }
 
     &:last-child {
-      margin-right: 0;
+      margin-right: $reset;
     }
 
     &--current {
@@ -224,14 +224,14 @@ $pager__link-fill                           : $green !default;
     width: 100%;
     height: $pager__item-size;
     border-radius: 0;
-    border: 0;
+    border: none;
     background-color: transparent;
     text-decoration: none;
 
     &[disabled] {
       pointer-events: none;
       cursor: default;
-      
+
       .icon {
         fill: $pager__link-fill-disabled;
       }

@@ -1,11 +1,11 @@
 <template>
   <li class="catalog-grid-item">
-    <a 
-      href="#" 
+    <a
+      href="#"
       class="catalog-grid-item__link"
     >
-      <img 
-        :src="image" 
+      <img
+        :src="image"
         class="catalog-grid-item__image"
       >
     </a>
@@ -24,8 +24,8 @@
       </div>
 
       <div class="catalog-grid-item__actions">
-        <form 
-          action="#" 
+        <form
+          action="#"
           class="catalog-grid-item__primary-form"
         >
           <alpaca-button
@@ -75,7 +75,6 @@ export default {
 
 <style lang="scss">
 $catalog-grid-item__base-spacing: $spacer !default;
-$catalog-grid-item__padding: 0 !default;
 $catalog-grid-item__border: 1px solid $gray-lightest !default;
 $catalog-grid-item__font-size: $font-size-base !default;
 $catalog-grid-item__font-size--mq-large: 16px !default;
@@ -88,7 +87,6 @@ $catalog-grid-item__badge-padding: 5px 12px !default;
 $catalog-grid-item__badge-bg-color: $color-primary !default;
 $catalog-grid-item__badge-font-size: $font-size-small !default;
 $catalog-grid-item__badge-border-radius: 0 !default;
-$catalog-grid-item__image-margin: 0 auto !default;
 $catalog-grid-item__image-width: auto !default;
 $catalog-grid-item__image-width--lazyload: 100% !default;
 $catalog-grid-item__image-height: auto !default;
@@ -117,9 +115,7 @@ $catalog-grid-item__name-padding--bigger: $spacer--medium 0 !default;
 $catalog-grid-item__rating-margin-bottom: $spacer !default;
 $catalog-grid-item__price-margin-bottom: $spacer !default;
 $catalog-grid-item__primary-padding: 0 $spacer !default;
-$catalog-gird-item__primary-form-margin: 0 !default;
 $catalog-grid-item__action-size: 48px !default;
-$catalog-grid-item__action-padding: 0 !default;
 $catalog-grid-item__action-background: transparent !default;
 $catalog-grid-item__action-border: none !default;
 $catalog-grid-item__action-cursor: pointer !default;
@@ -132,7 +128,7 @@ $catalog-grid-item__action-icon-fill-hover: $green !default;
   position: relative;
   display: block;
   border: $catalog-grid-item__border;
-  padding: $catalog-grid-item__padding;
+  padding: $reset;
   overflow: hidden;
 
   @include mq($screen-m) {
@@ -187,7 +183,7 @@ $catalog-grid-item__action-icon-fill-hover: $green !default;
 
   &__image-wrapper {
     .image {
-      margin: $catalog-grid-item__image-margin;
+      margin: $reset;
       width: $catalog-grid-item__image-width;
       height: $catalog-grid-item__image-height;
     }
@@ -223,7 +219,7 @@ $catalog-grid-item__action-icon-fill-hover: $green !default;
 
   &__price {
     margin-bottom: $catalog-grid-item__price-margin-bottom;
-    padding: $catalog-grid-item__padding;
+    padding: $reset;
     font-size: $catalog-grid-item__font-size;
     line-height: $catalog-grid-item__line-height;
     font-weight: $catalog-grid-item__font-weight;
@@ -265,7 +261,7 @@ $catalog-grid-item__action-icon-fill-hover: $green !default;
   }
 
   &__primary-form {
-    margin: $catalog-gird-item__primary-form-margin;
+    margin: $reset;
     @include mq($screen-m) {
       flex: 1;
     }
@@ -298,7 +294,7 @@ $catalog-grid-item__action-icon-fill-hover: $green !default;
     .button {
       height: $catalog-grid-item__action-size;
       width: $catalog-grid-item__action-size;
-      padding: $catalog-grid-item__action-padding;
+      padding: $reset;
       background: $catalog-grid-item__action-background;
       border: $catalog-grid-item__action-border;
       cursor: $catalog-grid-item__action-cursor;
