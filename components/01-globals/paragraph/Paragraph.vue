@@ -1,6 +1,6 @@
 <template>
-  <component 
-    :is="tag" 
+  <component
+    :is="tag"
     :class="tag !== 'p' && 'paragraph'"
   >
     <slot />
@@ -8,36 +8,36 @@
 </template>
 
 <script>
-export default {
-  props: {
-    tag: {
-      type: String,
-      default: 'p'
+  export default {
+    props: {
+      tag: {
+        type: String,
+        default: 'p'
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">
-$paragraph-color: $color-secondary !default;
-$paragraph-font-family: $font-family-base !default;
-$paragraph-font-weight: $font-weight-normal !default;
-$paragraph-line-height: $font-line-height !default;
-$paragraph-font-size: $font-size-base !default;
-$paragraph-margin: 0 0 $spacer--medium 0 !default;
-$paragraph-transition: none !default;
+  $paragraph-color: $color-secondary !default;
+  $paragraph-font-family: $font-family-base !default;
+  $paragraph-font-weight: $font-weight-normal !default;
+  $paragraph-line-height: $font-line-height !default;
+  $paragraph-font-size: $font-size-base !default;
+  $paragraph-margin: 0 0 $spacer--medium 0 !default;
+  $paragraph-transition: none !default;
 
-.paragraph {
-  color: $paragraph-color;
-  font-family: $paragraph-font-family;
-  font-weight: $paragraph-font-weight;
-  line-height: $paragraph-line-height;
-  font-size: $paragraph-font-size;
-  margin: $paragraph-margin;
-  transition: $paragraph-transition;
-}
+  .paragraph {
+    color: $paragraph-color;
+    font-family: $paragraph-font-family;
+    font-weight: $paragraph-font-weight;
+    line-height: $paragraph-line-height;
+    font-size: $paragraph-font-size;
+    margin: $paragraph-margin;
+    transition: $paragraph-transition;
+  }
 
-p {
-  @extend .paragraph;
-}
+  p {
+    @extend .paragraph;
+  }
 </style>

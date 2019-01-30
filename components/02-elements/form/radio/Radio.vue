@@ -82,9 +82,9 @@
     margin-bottom: $spacer--medium;
 
     &__fieldset {
-      border: 0;
-      padding: 0;
-      margin: 0;
+      border: $reset;
+      padding: $reset;
+      margin: $reset;
     }
 
     &__legend {
