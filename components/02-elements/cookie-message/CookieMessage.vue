@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['cookie-message', openClass]"
+    :class="['cookie-message', isOpen && 'cookie-message--open']"
     :data-type="dataType"
     :aria-label="ariaLabel"
     tabindex="0"
@@ -11,6 +11,7 @@
         v-html="text"
       />
       <button
+        v-if="closeBar || closeIcon"
         class="cookie-message__close"
         type="button"
         :aria-label="closeAriaLabel"
@@ -46,42 +47,40 @@ export default {
       required: true
     },
     closeIcon: {
-      type: [Boolean, String],
+      type: String,
       required: false,
-      default: false
+      default: null
     },
     closeLabel: {
       type: String,
       required: false,
-      default: ''
+      default: null
     },
     closeAriaLabel: {
       type: String,
       required: false,
-      default: ''
+      default: null
     }
   },
   data: () => {
     return {
-      openClass: ''
+      isOpen: false
     }
   },
   mounted() {
     if (localStorage.getItem(this.dataType) !== 'closed') {
-      this.openClass = 'cookie-message--open'
+      this.isOpen = true
     }
   },
   methods: {
     closeBar() {
       const focusable = document.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]');
 
-      this.openClass = ''
+      this.isOpen = false
       localStorage.setItem(this.dataType, 'closed');
       // after closing message box move focus on first focusable element on the page
       if (focusable.length) {
-        let firstFocusable = [...focusable].find(el => {
-          return el.offsetParent !== null
-        })
+        let firstFocusable = [...focusable].find(el => el.offsetParent !== null)
         firstFocusable.focus();
       }
     }
@@ -90,22 +89,21 @@ export default {
 </script>
 
 <style lang="scss">
-$cookie-message__width: 100% !default;
-$cookie-message__background-color: $gray-lightest !default;
-$cookie-message__font-size: $font-size-small !default;
-$cookie-message__font-family: $font-family-base !default;
-$cookie-message__text-color: $gray !default;
-$cookie-message__text-padding: $spacer--medium $spacer--medium 0 $spacer--medium !default;
-$cookie-message__text-padding--small: $spacer--medium $spacer $spacer--medium $spacer--medium !default;
-$cookie-message__link-color: $blue !default;
-$cookie-message__close-color: $gray !default;
-$cookie-message__close-size: 48px !default;
-$cookie-message__close-font-weight: $font-weight-bold !default;
-$cookie-message__close-padding: 0 $spacer--medium 0 0 !default;
-$cookie-message__close-padding--small: 0 $spacer--medium 0 $spacer !default;
-$cookie-message__close-icon-fill: $gray !default;
-$cookie-message__close-icon-size: 14px !default;
-$cookie-message__close-icon-margin-left: $spacer !default;
+$cookie-message__width                  : 100% !default;
+$cookie-message__background-color       : $gray-lightest !default;
+$cookie-message__font-size              : $font-size-small !default;
+$cookie-message__font-family            : $font-family-base !default;
+$cookie-message__text-color             : $gray !default;
+$cookie-message__text-padding           : $spacer--medium $spacer--medium 0 $spacer--medium !default;
+$cookie-message__text-padding--small    : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
+$cookie-message__link-color             : $blue !default;
+$cookie-message__close-color            : $cookie-message__text-color !default;
+$cookie-message__close-size             : 48px !default;
+$cookie-message__close-font-weight      : $font-weight-bold !default;
+$cookie-message__close-padding          : 0 $spacer--medium 0 0 !default;
+$cookie-message__text-padding--small    : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
+$cookie-message__close-icon-size        : 14px !default;
+$cookie-message__close-icon-margin-left : $spacer !default;
 
 .cookie-message {
   display: none;
@@ -165,13 +163,19 @@ $cookie-message__close-icon-margin-left: $spacer !default;
     font-family: inherit;
     font-size: inherit;
 
+    &:active,
+    &:hover {
+      background: none;
+      color: $cookie-message__close-color;
+    }
+
     @include mq($screen-s) {
       padding: $cookie-message__close-padding--small;
     }
   }
 
   &__close-icon {
-    fill: $cookie-message__close-icon-fill;
+    fill: $cookie-message__close-color;
     width: $cookie-message__close-icon-size;
     height: $cookie-message__close-icon-size;
     margin-left: $cookie-message__close-icon-margin-left;
