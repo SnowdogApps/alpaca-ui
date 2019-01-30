@@ -224,7 +224,7 @@ $pager__link-fill                           : $green !default;
     width: 100%;
     height: $pager__item-size;
     border-radius: 0;
-    border: 0;
+    border: none;
     background-color: transparent;
     text-decoration: none;
 
