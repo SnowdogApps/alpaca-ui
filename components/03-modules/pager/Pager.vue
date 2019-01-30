@@ -223,8 +223,8 @@ $pager__link-fill                           : $green !default;
     justify-content: center;
     width: 100%;
     height: $pager__item-size;
-    border-radius: $reset;
-    border: $reset;
+    border-radius: 0;
+    border: 0;
     background-color: transparent;
     text-decoration: none;
 

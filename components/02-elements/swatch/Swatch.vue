@@ -108,7 +108,7 @@
       &--selected {
         border-color: $swatch__option-border-color--active;
         .swatch__option--white {
-          border: $reset;
+          border: 0;
         }
       }
 
