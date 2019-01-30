@@ -7,7 +7,7 @@
                {'quantity-update__button--disabled' : currentValue === 0}
       ]"
       icon-class="button__icon quantity-update__icon"
-      @click="updateVal(currentValue - 1)"
+      @click="decrement"
     />
     <alpaca-input
       :id="input.id"
@@ -25,7 +25,7 @@
       :aria-label="plusButton.ariaLabel"
       class="button--icon quantity-update__button quantity-update__button--plus"
       icon-class="button__icon quantity-update__icon"
-      @click="updateVal(currentValue + 1)"
+      @click="increment"
     />
   </div>
 </template>
@@ -34,133 +34,129 @@
   import AlpacaInput from '../../02-elements/form/input/Input'
   import AlpacaButton from '../../02-elements/button/Button'
 
-    export default {
-      components: {
-        AlpacaInput,
-        AlpacaButton
+  export default {
+    components: {
+      AlpacaInput,
+      AlpacaButton
+    },
+    props: {
+      input: {
+        type: Object,
+        required: true
       },
-      props: {
-        input: {
-          type: Object,
-          required: true
-        },
-        minusButton: {
-          type: Object,
-          required: true
-        },
-        plusButton: {
-          type: Object,
-          required: true
-        }
+      minusButton: {
+        type: Object,
+        required: true
       },
-      data() {
-        return {
-          currentValue: 0
-        }
+      plusButton: {
+        type: Object,
+        required: true
+      }
+    },
+    data() {
+      return {
+        currentValue: 1
+      }
+    },
+    methods: {
+      increment() {
+        this.$emit('update', ++this.currentValue)
       },
-      methods: {
-        updateVal(val){
-          this.currentValue = val;
-          this.$emit('update', this.currentValue );
-        }
+      decrement() {
+        this.$emit('update', --this.currentValue)
       }
     }
+  }
 </script>
 
 <style lang="scss">
   // Input
-$quantity-update__input-border                       : 1px solid $gray-dark !default;
-  $quantity-update__input-width                        : 48px !default;
-  $quantity-update__input-color                        : $gray-dark !default;
+  $quantity-update__input-border                     : 1px solid $gray-dark !default;
+  $quantity-update__input-width                      : 48px !default;
+  $quantity-update__input-color                      : $gray-dark !default;
 
   // Button
-$quantity-update__button-background                  : $white !default;
-  $quantity-update__button-border                      : 1px solid $gray-dark !default;
-  $quantity-update__button-background-hover--disabled  : $white !default;
-  $quantity-update__button-fill-hover--disabled        : $gray !default;
+  $quantity-update__button-background                : $white !default;
+  $quantity-update__button-border                    : 1px solid $gray-dark !default;
+  $quantity-update__button-background-hover--disabled: $white !default;
+  $quantity-update__button-fill-hover--disabled      : $gray !default;
 
   // Icon
-$quantity-updater__icon-fill                         : $gray-dark !default;
-  $quantity-updater__icon-spacing                      : 12px !default;
+  $quantity-updater__icon-fill                       : $gray-dark !default;
+  $quantity-updater__icon-spacing                    : 12px !default;
 
   // Error
-$quantity-updater__error-margin                      : 0 0 0 $spacer !default;
-  $quantity-updater__error-max-width                   : 120px !default;
+  $quantity-updater__error-margin                    : 0 0 0 $spacer !default;
+  $quantity-updater__error-max-width                 : 120px !default;
 
   .quantity-update {
     display: flex;
 
-  &__input {
-     border-top: $quantity-update__input-border;
-     border-bottom: $quantity-update__input-border;
-     border-left: 0;
-     border-right: 0;
-     border-radius: 0;
-     width: $quantity-update__input-width;
-     height: $quantity-update__input-width;
-     color: $quantity-update__input-color;
-     text-align: center;
-     appearance: none;
+    &__input {
+      border-top: $quantity-update__input-border;
+      border-bottom: $quantity-update__input-border;
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+      width: $quantity-update__input-width;
+      height: $quantity-update__input-width;
+      color: $quantity-update__input-color;
+      text-align: center;
+      appearance: none;
 
-  &:focus {
-     outline: none;
-   }
-  }
+      &:focus {
+        outline: none;
+      }
+    }
 
-  &__button {
-     border: $quantity-update__button-border;
-     background: $quantity-update__button-background;
-     margin: 0;
+    &__button {
+      border: $quantity-update__button-border;
+      background: $quantity-update__button-background;
+      margin: 0;
 
-  &--plus {
-     border-radius: 0 100% 100% 0;
-     border-left: 0;
-   }
+      &--plus {
+        border-radius: 0 100% 100% 0;
+        border-left: 0;
+      }
 
-  &--minus {
-     border-radius: 100% 0 0 100%;
-     border-right: 0;
-   }
+      &--minus {
+        border-radius: 100% 0 0 100%;
+        border-right: 0;
+      }
 
-  &--disabled {
-     pointer-events: none;
+      &--disabled {
+        pointer-events: none;
 
-  &:hover,
-  &:focus {
-     background: $quantity-update__button-background-hover--disabled;
+        &:hover,
+        &:focus {
+          background: $quantity-update__button-background-hover--disabled;
 
-  .quantity-update__icon {
-    fill: $quantity-update__button-fill-hover--disabled;
-  }
-  }
+          .quantity-update__icon {
+            fill: $quantity-update__button-fill-hover--disabled;
+          }
+        }
 
-  .quantity-update__icon {
-    fill: $quantity-update__button-fill-hover--disabled;
-  }
-  }
-  }
+        .quantity-update__icon {
+          fill: $quantity-update__button-fill-hover--disabled;
+        }
+      }
+    }
 
-  &__icon {
-     fill: $quantity-updater__icon-fill;
-     width: $quantity-updater__icon-spacing;
-     height: $quantity-updater__icon-spacing;
-   }
+    &__icon {
+      fill: $quantity-updater__icon-fill;
+      width: $quantity-updater__icon-spacing;
+      height: $quantity-updater__icon-spacing;
+    }
 
-  div.mage-error {
-    order: 1;
-    margin: $quantity-updater__error-margin;
-    max-width: $quantity-updater__error-max-width;
-  }
+    // Disable spin buttons in number input type
+    input[type="number"]::-webkit-outer-spin-button, // sass-lint:disable-line no-vendor-prefixes
+    input[type="number"]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
+      -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+      margin: 0;
+    }
 
-  // Disable spin buttons in number input type
-     input[type="number"]::-webkit-outer-spin-button, // sass-lint:disable-line no-vendor-prefixes
-     input[type="number"]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
-     -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
-     margin: 0;
-     }
-
-  input[type="number"] { // sass-lint:disable-line no-vendor-prefixes
-  -moz-appearance: textfield; // sass-lint:disable-line no-vendor-prefixes
-  }
+    input[type="number"] { // sass-lint:disable-line no-vendor-prefixes
+      -moz-appearance: textfield; // sass-lint:disable-line no-vendor-prefixes
+    }
   }
 </style>

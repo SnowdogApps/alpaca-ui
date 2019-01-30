@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import uniqueId from 'lodash.uniqueid';
+  import uniqueId from 'lodash.uniqueid'
   import AlpacaHeading from '../../01-globals/heading/Heading.vue'
   import Icon from '../../01-globals/icon/Icon.vue'
 
@@ -74,7 +74,7 @@
     },
     computed: {
       getItemsWithKey() {
-        return this.items.map(item => ({ key: uniqueId("item"), item }));
+        return this.items.map(item => ({ key: uniqueId("item"), item }))
       }
     },
   }
