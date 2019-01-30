@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import AlpacaButton from '../button/Button.vue';
+  import AlpacaButton from '../button/Button'
 
   export default {
     components: {
@@ -39,13 +39,13 @@
     mounted() {
       // Display message if it wasn't closed before
       if (localStorage.getItem(this.dataType) !== 'closed') {
-        this.isBarVisible = true;
+        this.isBarVisible = true
       }
     },
     methods: {
       onButtonClose() {
-        localStorage.setItem(this.dataType, 'closed');
-        this.isBarVisible = false;
+        localStorage.setItem(this.dataType, 'closed')
+        this.isBarVisible = false
       }
     }
   }

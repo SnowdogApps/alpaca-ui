@@ -39,26 +39,26 @@
     },
     computed: {
       indicatorClass() {
-        let indicatorClass;
+        let indicatorClass
         switch(this.value) {
           case 0:
           default:
-            indicatorClass = 'password-none';
-            break;
+            indicatorClass = 'password-none'
+            break
           case 1:
-            indicatorClass = 'password-weak';
-            break;
+            indicatorClass = 'password-weak'
+            break
           case 2:
-            indicatorClass = 'password-medium';
-            break;
+            indicatorClass = 'password-medium'
+            break
           case 3:
-            indicatorClass = 'password-strong';
-            break;
+            indicatorClass = 'password-strong'
+            break
           case 4:
-            indicatorClass = 'password-very-strong';
+            indicatorClass = 'password-very-strong'
             break
         }
-        return indicatorClass;
+        return indicatorClass
       }
     }
   }

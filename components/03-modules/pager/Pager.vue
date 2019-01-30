@@ -69,7 +69,7 @@
 </template>
 
 <script>
-  import AlpacaButton from '../../02-elements/button/Button.vue'
+  import AlpacaButton from '../../02-elements/button/Button'
 
   export default {
     components: {
@@ -118,33 +118,33 @@
     methods: {
       setLimitedPageNumber () {
         if (this.numberOfPages <= this.limitPerPage) {
-          this.showFirst = false;
-          this.showLast = false;
+          this.showFirst = false
+          this.showLast = false
 
-          return this.listOfPageNumbers;
+          return this.listOfPageNumbers
         }
 
         if (this.page < this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1) {
-          this.showFirst = false;
-          this.showLast = true;
+          this.showFirst = false
+          this.showLast = true
 
           return this.listOfPageNumbers.slice(
             0,
             this.limitPerPage
-          );
+          )
         }
 
         if (this.numberOfPages - this.page < this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1) {
-          this.showFirst = true;
-          this.showLast = false;
+          this.showFirst = true
+          this.showLast = false
 
           return this.listOfPageNumbers.slice(
             this.numberOfPages - this.limitPerPage
-          );
+          )
         }
 
-        this.showFirst = true;
-        this.showLast = true;
+        this.showFirst = true
+        this.showLast = true
 
         return this.listOfPageNumbers.slice(
           this.currentPage - Math.floor(this.limitPerPage / 2) - 1,
