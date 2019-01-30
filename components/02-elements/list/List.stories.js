@@ -257,4 +257,4 @@ storiesOf('Elements/List', module)
         </alpaca-list>
       </app>
     `
-  }));
+  }))
