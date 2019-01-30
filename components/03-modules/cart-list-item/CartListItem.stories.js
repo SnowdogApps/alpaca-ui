@@ -1,8 +1,8 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '../../01-globals/app/App.vue';
-import AlpacaCartListItem from './CartListItem.vue';
+import App from '../../01-globals/app/App.vue'
+import AlpacaCartListItem from './CartListItem.vue'
 
 import cartListItem from './mocks/cartListItem.json'
 

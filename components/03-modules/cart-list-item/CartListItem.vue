@@ -65,11 +65,11 @@
 </template>
 
 <script>
-  import AlpacaImage from '../../02-elements/image/Image.vue';
-  import AlpacaLink from '../../01-globals/link/Link.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
-  import AlpacaDescriptionList from '../../02-elements/list/DescriptionList.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
+  import AlpacaImage from '../../02-elements/image/Image'
+  import AlpacaLink from '../../01-globals/link/Link'
+  import AlpacaInput from '../../02-elements/form/input/Input'
+  import AlpacaDescriptionList from '../../02-elements/list/DescriptionList'
+  import AlpacaButton from '../../02-elements/button/Button'
 
   export default {
     components: {
@@ -139,10 +139,10 @@
     },
     methods: {
       onEdit() {
-        this.$emit('edit');
+        this.$emit('edit')
       },
       onRemove() {
-        this.$emit('remove');
+        this.$emit('remove')
       },
       onChange(val){
         this.$emit('change', val)
