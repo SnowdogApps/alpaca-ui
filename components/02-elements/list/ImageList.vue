@@ -15,7 +15,7 @@
         elementClass
       ]"
     >
-      <div 
+      <div
         v-if="item.image"
         class="list__image"
       >
@@ -45,44 +45,44 @@
 </template>
 
 <script>
-export default {
-  props: {
-    elements: {
-      type: Array,
-      required: true
-    },
-    listTag: {
-      type: String,
-      default: 'ul'
-    },
-    elementTag: {
-      type: String,
-      default: 'li'
-    },
-    listClass: {
-      type: String,
-      default: null
-    },
-    elementClass: {
-      type: String,
-      default: null
+  export default {
+    props: {
+      elements: {
+        type: Array,
+        required: true
+      },
+      listTag: {
+        type: String,
+        default: 'ul'
+      },
+      elementTag: {
+        type: String,
+        default: 'li'
+      },
+      listClass: {
+        type: String,
+        default: null
+      },
+      elementClass: {
+        type: String,
+        default: null
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">
-$list__width--image: 16px !default;
+  $list__width--image: 16px !default;
 
-.list {
-  &--with-image {
-    .list__item {
-      display: flex;
-    }
-    .list__image {
-      width: $list__width--image;
-      height: auto;
+  .list {
+    &--with-image {
+      .list__item {
+        display: flex;
+      }
+      .list__image {
+        width: $list__width--image;
+        height: auto;
+      }
     }
   }
-}
 </style>
