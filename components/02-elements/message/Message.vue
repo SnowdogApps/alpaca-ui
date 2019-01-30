@@ -16,75 +16,75 @@
 </template>
 
 <script>
-import Icon from '../../01-globals/icon/Icon'
+  import Icon from '../../01-globals/icon/Icon'
 
-export default {
-  components: { Icon },
-  props: {
-    customClass: {
-      type: String,
-      default: null
-    },
-    type: {
-      type: String,
-      default: null
-    },
-    icon: {
-      type: String,
-      default: null
-    }
-  },
-  computed: {
-    messageClass() {
-      switch (this.type) {
-        case 'success':
-          return 'message--success'
-
-        case 'error':
-          return 'message--error'
-
-        default:
-          return 'message--warning'
+  export default {
+    components: { Icon },
+    props: {
+      customClass: {
+        type: String,
+        default: null
+      },
+      type: {
+        type: String,
+        default: null
+      },
+      icon: {
+        type: String,
+        default: null
       }
     },
-    getIcon() {
-      if (this.icon) return this.icon
+    computed: {
+      messageClass() {
+        switch (this.type) {
+          case 'success':
+            return 'message--success'
 
-      switch (this.type) {
-        case 'success':
-          return 'check'
+          case 'error':
+            return 'message--error'
 
-        case 'error':
-          return 'error'
+          default:
+            return 'message--warning'
+        }
+      },
+      getIcon() {
+        if (this.icon) return this.icon
 
-        default:
-          return 'warning'
+        switch (this.type) {
+          case 'success':
+            return 'check'
+
+          case 'error':
+            return 'error'
+
+          default:
+            return 'warning'
+        }
       }
     }
   }
-}
 </script>
 
 <style lang="scss">
-$message__margin-top         : $spacer--medium !default;
-$message__padding            : $spacer $spacer--extra-large !default;
-$message__margin-base        : $spacer--medium 0 0 0 !default;
-$message__font-size          : $font-size-small !default;
-$message__transition         : $transition-base !default;
-$message__background         : rgba($blue, 0.05) !default;
-$message__background--success: rgba($color-primary, 0.05) !default;
-$message__background--error  : rgba($red, 0.05) !default;
-$message__color              : $blue !default;
-$message__color--success     : $gray !default;
-$message__color--error       : $red !default;
-$message__border             : 1px solid $blue !default;
-$message__border--success    : 1px solid $color-primary !default;
-$message__border--error      : 1px solid $red !default;
-$message__border-radius      : 24px !default;
-$message__icon-spacer        : $spacer--medium !default;
-$message__icon-fill          : $blue !default;
-$message__icon-fill--success : $color-primary !default;
-$message__icon-fill--error   : $red !default;
+  $message__margin-top         : $spacer--medium !default;
+  $message__padding            : $spacer $spacer--extra-large !default;
+  $message__margin-base        : $spacer--medium 0 0 0 !default;
+  $message__font-size          : $font-size-small !default;
+  $message__transition         : $transition-base !default;
+  $message__background         : rgba($blue, 0.05) !default;
+  $message__background--success: rgba($color-primary, 0.05) !default;
+  $message__background--error  : rgba($red, 0.05) !default;
+  $message__color              : $blue !default;
+  $message__color--success     : $gray !default;
+  $message__color--error       : $red !default;
+  $message__border             : 1px solid $blue !default;
+  $message__border--success    : 1px solid $color-primary !default;
+  $message__border--error      : 1px solid $red !default;
+  $message__border-radius      : 24px !default;
+  $message__icon-spacer        : $spacer--medium !default;
+  $message__icon-fill          : $blue !default;
+  $message__icon-fill--success : $color-primary !default;
+  $message__icon-fill--error   : $red !default;
 
   .message {
     position: relative;
