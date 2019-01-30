@@ -21,16 +21,21 @@
       :name="name"
       :type="type"
       :placeholder="placeholder"
+      :value="value"
+      @input="input($event.target.value)"
     />
   </div>
 </template>
 
 <script>
-  import AlpacaLabel from '../../../01-globals/label/Label.vue'
-
+  import AlpacaLabel from '../../../01-globals/label/Label'
   export default {
     components: {
       AlpacaLabel
+    },
+    model: {
+      prop: 'value',
+      event: 'input'
     },
     props: {
       label: {
@@ -72,6 +77,15 @@
       inputClass: {
         type: String,
         default: null
+      },
+      value: {
+        type: [String, Number],
+        default: null
+      }
+    },
+    methods: {
+      input(value) {
+        this.$emit('input', value)
       }
     }
   }
