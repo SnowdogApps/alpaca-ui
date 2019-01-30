@@ -55,7 +55,7 @@ storiesOf('Elements/Table', module)
               >
                 {{ footCell.text }}
               </alpaca-table-cell>
-            </alpaca-table-row>        
+            </alpaca-table-row>
           </tfoot>
         </alpaca-table>
       </app>
@@ -109,7 +109,7 @@ storiesOf('Elements/Table', module)
               >
                 {{ footCell.text }}
               </alpaca-table-cell>
-            </alpaca-table-row>        
+            </alpaca-table-row>
           </tfoot>
         </alpaca-table>
       </app>
