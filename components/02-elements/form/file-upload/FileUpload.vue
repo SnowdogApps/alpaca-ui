@@ -148,14 +148,14 @@
 
       @include mq($screen-s) {
         margin-left: $file-upload__margin;
-        margin-top: 0;
+        margin-top: $reset;
       }
     }
 
     &__button {
       display: flex;
       align-items: center;
-      margin-bottom: 0;
+      margin-bottom: $reset;
       padding: $file-upload__button-padding;
       width: 100%;
 

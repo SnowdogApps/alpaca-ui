@@ -30,7 +30,7 @@
       </select>
     </div>
 
-    <template if="validations">
+    <template v-if="validations">
       <span
         v-for="(validation, index) in currentValidations"
         :key="index"
@@ -121,7 +121,7 @@
 
     &__field {
       position: relative;
-      padding: 0;
+      padding: $reset;
       border: $select__border;
       border-radius: $select__border-radius;
 

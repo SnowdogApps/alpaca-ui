@@ -180,7 +180,7 @@
       justify-content: center;
       list-style-type: none;
       padding: $pager__list-padding;
-      margin: 0;
+      margin: $reset;
     }
 
     &__item {
@@ -190,14 +190,14 @@
       flex-basis: $pager__item-size;
       height: $pager__item-size;
       margin: $pager__item-margin;
-      padding: 0;
+      padding: $reset;
 
       &:first-child {
-        margin-left: 0;
+        margin-left: $reset;
       }
 
       &:last-child {
-        margin-right: 0;
+        margin-right: $reset;
       }
 
       &--current {
@@ -224,7 +224,7 @@
       width: 100%;
       height: $pager__item-size;
       border-radius: 0;
-      border: 0;
+      border: none;
       background-color: transparent;
       text-decoration: none;
 

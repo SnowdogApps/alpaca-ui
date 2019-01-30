@@ -90,7 +90,6 @@
 
 <style lang="scss">
   $header__border-color: $gray-light !default;
-  $header__wrapper-padding: 0 !default;
   $header__wrapper-padding--mq-medium: 12px 0 !default;
   $header__logo-padding: 12px 0 12px $spacer !default;
   $header__logo-padding--mq-medium: 0 0 0 $spacer !default;
@@ -115,7 +114,7 @@
       justify-content: space-between;
       display: flex;
       flex-flow: row wrap;
-      padding: $header__wrapper-padding;
+      padding: $reset;
       @include mq($screen-m) {
         padding: $header__wrapper-padding--mq-medium;
       }

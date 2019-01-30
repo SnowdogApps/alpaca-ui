@@ -68,8 +68,6 @@
 
 <style lang="scss">
   $list__style:           none !default;
-  $list__margin:          0 !default;
-  $list__padding:         0 !default;
   $list__item-padding:    5px 0 !default;
   $list__content-padding: 10px !default;
   $list__label-padding:   0 5px 5px 0 !default;
@@ -94,8 +92,8 @@
   $list__margin-nested-second-level:  0 0 0 #{$spacer--large * 2} !default;
 
   .list {
-    margin: $list__margin;
-    padding: $list__padding;
+    margin: $reset;
+    padding: $reset;
     list-style: $list__style;
 
     &--center {
@@ -142,13 +140,13 @@
       .list__item {
         display: flex;
         align-items: center;
-        padding: 0;
+        padding: $reset;
 
         &:first-child {
-          padding-top: 0;
+          padding-top: $reset;
         }
         &:last-child {
-          padding-bottom: 0;
+          padding-bottom: $reset;
         }
       }
       .list__icon-link {
@@ -220,11 +218,11 @@
       padding: $list__item-padding;
 
       &:first-child {
-        padding-top: 0;
+        padding-top: $reset;
       }
 
       &:last-child {
-        padding-bottom: 0;
+        padding-bottom: $reset;
       }
     }
 

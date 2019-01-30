@@ -29,7 +29,6 @@
   $header-button__size: 48px !default;
   $header-button__margin: 0 0 0 $spacer !default;
   $header-button__margin--extra-large: 0 0 0 $spacer--medium !default;
-  $header-button__padding: 0 !default;
   $header-button__icon-margin: 0 0 2px 0 !default;
   $header-button__icon-margin--medium: 0 0 4px 0 !default;
   $header-button__icon-padding: 0 0 4px 0 !default;
@@ -57,7 +56,7 @@
     min-width: $header-button__size;
     display: flex;
     margin: $header-button__margin;
-    padding: $header-button__padding;
+    padding: $reset;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -79,7 +78,7 @@
     }
 
     &--reset-margin {
-      margin: 0;
+      margin: $reset;
     }
 
     &__icon {
