@@ -75,10 +75,10 @@
     },
     methods: {
       onClick() {
-        this.$emit('clear');
+        this.$emit('clear')
       },
       clearSingleFilter() {
-        this.$emit('singleFilter');
+        this.$emit('singleFilter')
       },
     }
   }
