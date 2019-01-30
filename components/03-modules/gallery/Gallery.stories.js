@@ -5,33 +5,34 @@ import AlpacaGallery from './Gallery.vue'
 
 import gallery from './mocks/gallery.json'
 
-storiesOf('Modules/Gallery', module).add('Default', () => ({
-  components: { App, AlpacaGallery },
-  data: () => ({
-    gallery
-  }),
-  template: `
-    <app>
-      <alpaca-gallery
-        :images="gallery.images"
-        :mainImage="1"
-      />
-    </app>
-  `
-}))
+storiesOf('Modules/Gallery', module)
+  .add('Default', () => ({
+    components: { App, AlpacaGallery },
+    data: () => ({
+      gallery
+    }),
+    template: `
+      <app>
+        <alpaca-gallery
+          :images="gallery.images"
+          :mainImage="1"
+        />
+      </app>
+    `
+  }))
   .add('Horizontal', () => ({
     components: { App, AlpacaGallery },
     data: () => ({
       gallery
     }),
     template: `
-    <app>
-      <alpaca-gallery
-        :images="gallery.images"
-        horizontal
-      />
-    </app>
-  `
+      <app>
+        <alpaca-gallery
+          :images="gallery.images"
+          horizontal
+        />
+      </app>
+    `
   }))
   .add('With label', () => ({
     components: { App, AlpacaGallery },
@@ -39,11 +40,11 @@ storiesOf('Modules/Gallery', module).add('Default', () => ({
       gallery
     }),
     template: `
-    <app>
-      <alpaca-gallery
-        :productLabel="gallery.productLabel"
-        :images="gallery.images"
-      />
-    </app>
-  `
+      <app>
+        <alpaca-gallery
+          :productLabel="gallery.productLabel"
+          :images="gallery.images"
+        />
+      </app>
+    `
   }))
