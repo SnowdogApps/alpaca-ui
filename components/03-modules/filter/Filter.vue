@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import Heading from '../../01-globals/heading/Heading.vue'
-import Divider from '../../02-elements/divider/Divider.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import Heading from '../../01-globals/heading/Heading'
+import Divider from '../../02-elements/divider/Divider'
+import AlpacaLink from '../../01-globals/link/Link'
 
 export default {
   components: {

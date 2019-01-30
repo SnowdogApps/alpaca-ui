@@ -54,13 +54,12 @@
 </template>
 
 <script>
-import Container from '../../01-globals/container/Container.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-import Logo from '../../02-elements/logo/Logo.vue'
-import MegaMenu from '../mega-menu/MegaMenu.vue'
-
-import HeaderButton from '../header-button/HeaderButton.vue'
-import HeaderSearch from '../header-search/HeaderSearch.vue'
+import Container from '../../01-globals/container/Container'
+import AlpacaIcon from '../../01-globals/icon/Icon'
+import Logo from '../../02-elements/logo/Logo'
+import MegaMenu from '../mega-menu/MegaMenu'
+import HeaderButton from '../header-button/HeaderButton'
+import HeaderSearch from '../header-search/HeaderSearch'
 
 export default {
   components: {

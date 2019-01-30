@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import Container from '../../01-globals/container/Container.vue'
-import CatalogFilter from '../../03-modules/filter/Filter.vue'
-import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import Container from '../../01-globals/container/Container'
+import CatalogFilter from '../../03-modules/filter/Filter'
+import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem'
 
 export default {
   components: {

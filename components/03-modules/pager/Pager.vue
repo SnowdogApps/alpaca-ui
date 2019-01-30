@@ -2,8 +2,8 @@
   <nav class="pager">
     <ul class="pager__list">
       <li class="pager__item">
-        <alpaca-button 
-          icon="arrow-left" 
+        <alpaca-button
+          icon="arrow-left"
           custom-class="pager__link pager__link--prev"
           aria-label="Go to previous page"
           :disabled="currentPage < 2"
@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaButton from '../../02-elements/button/Button'
 
 export default {
   components: {
@@ -149,7 +149,7 @@ export default {
       return this.listOfPageNumbers.slice(
         this.currentPage - Math.floor(this.limitPerPage / 2) - 1,
         this.currentPage + Math.floor(this.limitPerPage / 2)
-      ) 
+      )
     },
     setCurrentPage (value) {
       this.currentPage = value
@@ -231,7 +231,7 @@ $pager__link-fill                           : $green !default;
     &[disabled] {
       pointer-events: none;
       cursor: default;
-      
+
       .icon {
         fill: $pager__link-fill-disabled;
       }

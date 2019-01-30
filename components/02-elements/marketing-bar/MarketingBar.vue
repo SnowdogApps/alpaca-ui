@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import AlpacaButton from '../button/Button.vue'
+  import AlpacaButton from '../button/Button'
 
   export default {
     components: {

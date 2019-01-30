@@ -1,11 +1,11 @@
 <template>
   <li class="catalog-grid-item">
-    <a 
-      href="#" 
+    <a
+      href="#"
       class="catalog-grid-item__link"
     >
-      <img 
-        :src="image" 
+      <img
+        :src="image"
         class="catalog-grid-item__image"
       >
     </a>
@@ -24,8 +24,8 @@
       </div>
 
       <div class="catalog-grid-item__actions">
-        <form 
-          action="#" 
+        <form
+          action="#"
           class="catalog-grid-item__primary-form"
         >
           <alpaca-button
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaButton from '../../02-elements/button/Button'
 
 export default {
   components: {
