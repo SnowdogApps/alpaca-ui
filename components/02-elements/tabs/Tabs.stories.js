@@ -12,7 +12,16 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   }),
   template: `
     <app>
-      <alpaca-tabs :tabs="tabs.items">
+    
+      <alpaca-tabs 
+        v-for="(tab, i) in tabs.items"
+        :index="i"
+        :key="tab.tabId"
+        :tab="tab"
+        :tabs="tabs.items"
+      >
+        {{ tab.content }}
+      </alpaca-tabs>
     </app>
   `
 }))

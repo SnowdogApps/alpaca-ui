@@ -1,6 +1,5 @@
 {
   "icon": {
-    "class": "tab__icon",
     "iconId": "angle-down",
     "iconTitle": "Arrow Down"
   },

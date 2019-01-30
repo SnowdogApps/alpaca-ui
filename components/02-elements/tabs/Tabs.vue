@@ -1,41 +1,37 @@
 <template>
   <div class="tab">
-    <template v-for="{ id, tab } in getTabsWithId">
-      <button
-        :id="id"
-        :key="'tab' + tab.tabId"
-        :class="[
-          'tab__title',
-          { 'tab__title--active': tab.tabId === activeTab }
-        ]"
-        :data-tab="tab.tabId"
-        :aria-controls="tab.tabId"
-        :aria-selected="tab.tabId === activeTab"
-        :aria-expanded="tab.tabId === activeTab"
-        @click="setActiveTab(tab.tabId)"
-      >
-        {{ tab.title }}
-        <alpaca-icon
-          v-if="icon"
-          :icon="icon"
-          class="tab__icon"
-        />
-      </button>
-      <div
-        v-if="tab.tabId === activeTab"
-        :id="tab.tabId"
-        :key="'tab__content' + tab.tabId"
-        :data-content="tab.tabId"
-        :aria-labelledby="tab.titleId"
-        :aria-hidden="tab.tabId === activeTab"
-        :class="[
-          'tab__content',
-          { 'tab__content--active': tab.tabId === activeTab }
-        ]"
-      >
-        {{ tab.content }}
-      </div>
-    </template>
+    <button
+      :id="getTabsWithId"
+      :class="[
+        'tab__title',
+        { 'tab__title--active': activeTab === tab.tabId }
+      ]"
+      :data-tab="tab.tabId"
+      :aria-controls="tab.tabId"
+      :aria-selected="activeTab === tab.tabId"
+      :aria-expanded="activeTab === tab.tabId"
+      @click="setActiveTab(tab.tabId)"
+    >
+      {{ tab.title }}
+      <alpaca-icon
+        v-if="icon"
+        :icon="icon"
+        class="tab__icon"
+      />
+    </button>
+    <div
+      v-if="activeTab === tab.tabId"
+      :id="tab.tabId"
+      :data-content="tab.tabId"
+      :aria-labelledby="tab.titleId"
+      :aria-hidden="activeTab === tab.tabId"
+      :class="[
+        'tab__content',
+        { 'tab__content--active': activeTab === tab.tabId }
+      ]"
+    >
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -46,8 +42,16 @@
   export default {
     components: { AlpacaIcon },
     props: {
+      tab: {
+        type: Object,
+        required: true
+      },
       tabs: {
         type: Array,
+        required: true
+      },
+      index: {
+        type: Number,
         required: true
       },
       icon: {
@@ -57,19 +61,19 @@
     },
     data() {
       return {
-        activeTab: this.tabs[0].tabId
+        activeTab: false
       }
     },
     computed: {
       getTabsWithId() {
-        return this.tabs.map(tab => ({ id: uniqueId("tab"), tab }));
+        return uniqueId("tab");
       }
     },
     methods: {
       setActiveTab(tab) {
-        this.activeTab = this.tabs
-          .filter(el => el.tabId === tab)
-          .map(el => el.tabId)[0];
+        if (this.tabs[this.index].tabId === tab){
+          this.activeTab = tab;
+        }
       }
     }
   }
