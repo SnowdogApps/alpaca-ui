@@ -18,40 +18,40 @@
 </template>
 
 <script>
-export default {
-  props: {
-    legendText: {
-      type: String,
-      required: true
-    },
-    fieldsetClass: {
-      type: String,
-      default: null
-    },
-    legendClass: {
-      type: String,
-      default: null
+  export default {
+    props: {
+      legendText: {
+        type: String,
+        required: true
+      },
+      fieldsetClass: {
+        type: String,
+        default: null
+      },
+      legendClass: {
+        type: String,
+        default: null
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
-$fieldset__border            : none !default;
-$fieldset__legend-margin     : 0 0 25px !default;
-$fieldset__legend-font-size  : $font-size-large !default;
-$fieldset__legend-line-height: 1.2 !default;
+  $fieldset__border            : none !default;
+  $fieldset__legend-margin     : 0 0 25px !default;
+  $fieldset__legend-font-size  : $font-size-large !default;
+  $fieldset__legend-line-height: 1.2 !default;
 
-.fieldset {
-  border: $fieldset__border;
-  padding: $reset;
-  margin: $reset;
-
-  &__legend {
+  .fieldset {
+    border: $fieldset__border;
     padding: $reset;
-    margin: $fieldset__legend-margin;
-    font-size: $fieldset__legend-font-size;
-    line-height: $fieldset__legend-line-height;
+    margin: $reset;
+
+    &__legend {
+      padding: $reset;
+      margin: $fieldset__legend-margin;
+      font-size: $fieldset__legend-font-size;
+      line-height: $fieldset__legend-line-height;
+    }
   }
-}
 </style>
