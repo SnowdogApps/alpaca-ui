@@ -30,7 +30,7 @@
       </select>
     </div>
 
-    <template if="validations">
+    <template v-if="validations">
       <span
         v-for="(validation, index) in currentValidations"
         :key="index"
@@ -42,119 +42,119 @@
 </template>
 
 <script>
-import AlpacaLabel from '../../../01-globals/label/Label.vue'
+  import AlpacaLabel from '../../../01-globals/label/Label.vue'
 
-export default {
-  components: {
-    AlpacaLabel
-  },
-  props: {
-    id: {
-      type: String,
-      required: true,
-      default: null
+  export default {
+    components: {
+      AlpacaLabel
     },
-    name: {
-      type: String,
-      required: true,
-      default: null
+    props: {
+      id: {
+        type: String,
+        required: true,
+        default: null
+      },
+      name: {
+        type: String,
+        required: true,
+        default: null
+      },
+      options: {
+        type: Array,
+        required: true,
+        default: () => []
+      },
+      label: {
+        type: String,
+        required: true,
+        default: null
+      },
+      selected: {
+        type: String,
+        required: false,
+        default: null
+      },
+      validations: {
+        type: Array,
+        required: false,
+        default: () => []
+      },
+      selectClass: {
+        type: String,
+        required: false,
+        default: null
+      },
+      hiddenLabel: {
+        type: Boolean,
+        required: false,
+        default: false
+      },
+      inlineLabel: {
+        type: Boolean,
+        required: false,
+        default: false
+      },
+      labelClass: {
+        type: String,
+        required: false,
+        default: null
+      }
     },
-    options: {
-      type: Array,
-      required: true,
-      default: () => []
-    },
-    label: {
-      type: String,
-      required: true,
-      default: null
-    },
-    selected: {
-      type: String,
-      required: false,
-      default: null
-    },
-    validations: {
-      type: Array,
-      required: false,
-      default: () => []
-    },
-    selectClass: {
-      type: String,
-      required: false,
-      default: null
-    },
-    hiddenLabel: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    inlineLabel: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    labelClass: {
-      type: String,
-      required: false,
-      default: null
-    }
-  },
-  computed: {
-    currentValidations() {
-      return this.validations.filter(validation => validation.condition)
+    computed: {
+      currentValidations() {
+        return this.validations.filter(validation => validation.condition)
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">
-$select__margin: $spacer !default;
-$select__padding: 0 $spacer--medium 0 $spacer--medium !default;
-$select__border: 1px solid $form-elements-border-color !default;
-$select__spacing: 40px !default;
-$select__arrow-color: $gray-dark transparent transparent transparent;
-$select__border-radius: 20px !default;
+  $select__margin: $spacer !default;
+  $select__padding: 0 $spacer--medium 0 $spacer--medium !default;
+  $select__border: 1px solid $form-elements-border-color !default;
+  $select__spacing: 40px !default;
+  $select__arrow-color: $gray-dark transparent transparent transparent;
+  $select__border-radius: 20px !default;
 
-.select {
-  margin-bottom: $select__margin;
+  .select {
+    margin-bottom: $select__margin;
 
-  &__field {
-    position: relative;
-    padding: 0;
-    border: $select__border;
-    border-radius: $select__border-radius;
+    &__field {
+      position: relative;
+      padding: $reset;
+      border: $select__border;
+      border-radius: $select__border-radius;
 
-    &::after {
-      content: "";
-      height: 0;
-      width: 0;
-      border-style: solid;
-      border-color: $select__arrow-color;
-      border-width: 5px;
-      position: absolute;
-      right: 11.5px;
-      top: 50%;
-      margin-top: -2.5px;
-      pointer-events: none;
+      &::after {
+        content: "";
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-color: $select__arrow-color;
+        border-width: 5px;
+        position: absolute;
+        right: 11.5px;
+        top: 50%;
+        margin-top: -2.5px;
+        pointer-events: none;
+      }
+    }
+
+    &__input {
+      padding: $select__padding;
+      height: $select__spacing;
+      line-height: $select__spacing;
+      border: none;
+      width: 100%;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border-radius: 0;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
     }
   }
-
-  &__input {
-    padding: $select__padding;
-    height: $select__spacing;
-    line-height: $select__spacing;
-    border: none;
-    width: 100%;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border-radius: 0;
-    background-color: transparent;
-
-    &:hover,
-    &:focus {
-      outline: none;
-    }
-  }
-}
 </style>
