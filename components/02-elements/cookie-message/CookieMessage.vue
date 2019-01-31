@@ -89,21 +89,22 @@ export default {
 </script>
 
 <style lang="scss">
-$cookie-message__width                  : 100% !default;
-$cookie-message__background-color       : $gray-lightest !default;
-$cookie-message__font-size              : $font-size-small !default;
-$cookie-message__font-family            : $font-family-base !default;
-$cookie-message__text-color             : $gray !default;
-$cookie-message__text-padding           : $spacer--medium $spacer--medium 0 $spacer--medium !default;
-$cookie-message__text-padding--small    : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
-$cookie-message__link-color             : $blue !default;
-$cookie-message__close-color            : $cookie-message__text-color !default;
-$cookie-message__close-size             : 48px !default;
-$cookie-message__close-font-weight      : $font-weight-bold !default;
-$cookie-message__close-padding          : 0 $spacer--medium 0 0 !default;
-$cookie-message__text-padding--small    : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
-$cookie-message__close-icon-size        : 14px !default;
-$cookie-message__close-icon-margin-left : $spacer !default;
+$cookie-message__width                 : 100% !default;
+$cookie-message__background-color      : $gray-lightest !default;
+$cookie-message__font-size             : $font-size-small !default;
+$cookie-message__font-family           : $font-family-base !default;
+$cookie-message__text-color            : $gray !default;
+$cookie-message__text-padding          : $spacer--medium $spacer--medium 0 $spacer--medium !default;
+$cookie-message__text-padding--small   : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
+$cookie-message__link-color            : $blue !default;
+$cookie-message__close-color           : $cookie-message__text-color !default;
+$cookie-message__close-size            : 48px !default;
+$cookie-message__close-font-weight     : $font-weight-bold !default;
+$cookie-message__close-padding         : 0 $spacer--medium 0 0 !default;
+$cookie-message__close-padding--small  : 0 $spacer--medium 0 $spacer !default;
+$cookie-message__text-padding--small   : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
+$cookie-message__close-icon-size       : 14px !default;
+$cookie-message__close-icon-margin-left: $spacer !default;
 
 .cookie-message {
   display: none;
