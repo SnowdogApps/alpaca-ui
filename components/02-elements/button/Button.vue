@@ -4,7 +4,7 @@
     :class="[
       customClass,
       {
-        button: tag !== 'button',
+        button: tag,
         'button--icon': icon,
         'button--secondary': secondary,
         'button--link': tag === 'a',
