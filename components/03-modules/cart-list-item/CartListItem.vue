@@ -225,6 +225,7 @@
 
     &__price {
       margin: $cart-list-item__price-margin;
+      font-weight: normal;
       @include mq($screen-m) {
         margin: $reset;
       }
