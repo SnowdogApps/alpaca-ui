@@ -27,19 +27,3 @@ storiesOf('Modules/ActiveFilters', module)
       clearSingleMethod: action('Clear single element')
     }
   }))
-  .add('Link', () => ({
-    components: { App, AlpacaActiveFilters },
-    data: () => ({
-      listElements
-    }),
-    template: `
-      <app>
-        <alpaca-active-filters 
-          :items="listElements.filters"
-          :clear-all="listElements.clear"
-          allFilterTag="a"
-          singleFilterTag="a"
-        />
-      </app>
-    `
-  }))
