@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import toolbar from './mocks/toolbar.json'
 
-import App from '../../01-globals/app/App.vue
+import App from '../../01-globals/app/App.vue'
 import AlpacaToolbar from './Toolbar.vue'
 
 storiesOf('Modules/Toolbar', module).add('Default', () => ({
