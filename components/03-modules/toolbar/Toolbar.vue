@@ -32,18 +32,16 @@
       v-if="showSorter"
       class="toolbar__sorter"
     >
-      <div class="select toolbar__sorter-wrapper">
-        <alpaca-select
-          :id="sortBy.id"
-          :options="sortBy.options"
-          :label="sortBy.text"
-          :name="sortBy.name"
-          label-class="toolbar__sorter-label"
-          select-class="toolbar__sorter-select select__field-item "
-          inline-label
-          :selected="sortBy.options[0].text"
-        />
-      </div>
+      <alpaca-select
+        :id="sortBy.id"
+        :options="sortBy.options"
+        :label="sortBy.text"
+        :name="sortBy.name"
+        label-class="label toolbar__sorter-label"
+        select-class="toolbar__sorter-select select__field-item"
+        class="toolbar__sorter-wrapper"
+        :selected="sortBy.options[0].text"
+      />
     </div>
 
 
@@ -63,21 +61,20 @@
       v-if="showLimit"
       class="toolbar__limiter"
     >
-      <div class="select toolbar__limiter-wrapper">
-        <alpaca-select
-          :id="limiter.id"
-          :options="limiter.options"
-          :label="limiter.text"
-          :name="limiter.name"
-          label-class="toolbar__limiter-label"
-          select-class="toolbar__limiter-select select__field-item"
-          inline-label
-          :selected="limiter.options[0].text"
-        />
-        <span class="toolbar__limiter-suffix">
-          {{ limiter.suffix }}
-        </span>
-      </div>
+      <alpaca-select
+        :id="limiter.id"
+        :options="limiter.options"
+        :label="limiter.text"
+        :name="limiter.name"
+        label-class="toolbar__limiter-label"
+        select-class="toolbar__limiter-select select__field-item"
+        class="toolbar__limiter-wrapper"
+        inline-label
+        :selected="limiter.options[0].text"
+      />
+      <span class="toolbar__limiter-suffix">
+        {{ limiter.suffix }}
+      </span>
     </div>
 
     <div
