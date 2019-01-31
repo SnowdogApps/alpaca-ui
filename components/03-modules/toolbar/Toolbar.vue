@@ -170,7 +170,6 @@
   $toolbar__dropdown-icon-area-size      : 32px !default;
   $toolbar__dropdown-icon-color          : $gray !default;
   $toolbar__dropdown-icon-size           : 12px !default;
-  $toolbar__dropdown-icon-area-margin    : 0 !default;
   $toolbar__dropdown-icon-area-right     : 0 !default;
   $toolbar__dropdown-icon-area-top       : 0 !default;
   $toolbar__offset                       : $spacer !default;
@@ -181,7 +180,6 @@
   $toolbar__mode-icon-transition         : $transition-base !default;
   $toolbar__mode-icon-area-size          : 48px !default;
   $toolbar__mode-icon-margin             : 0 auto !default;
-  $toolbar__mode-icon-padding            : 0 !default;
   $toolbar__mode-icon-border             : none !default;
   $toolbar__mode-icon-background         : none !default;
   $toolbar__mode-icon-cursor             : pointer !default;
@@ -203,7 +201,6 @@
   $toolbar__sorter-icon-fill             : $gray !default;
   $toolbar__limiter-width                : 72px !default;
   $toolbar__limiter-margin\@medium       : $spacer 0 !default;
-  $toolbar__select-margin                : 0 !default;
   $toolbar__select-height                : 32px !default;
   $toolbar__select-font-family           : $font-family-base !default;
   $toolbar__select-single-border-radius  : $spacer--medium $spacer--medium 0 0 !default;
@@ -280,7 +277,7 @@
       display: block;
       width: $toolbar__mode-icon-size;
       height: $toolbar__mode-icon-size;
-      padding: $toolbar__mode-icon-padding;
+      padding: $reset;
       margin: $toolbar__mode-icon-margin;
       fill: $toolbar__icon-color;
       transition: $toolbar__mode-icon-transition;
@@ -309,7 +306,7 @@
 
     &__sorter-wrapper,
     &__limiter-wrapper {
-      margin: $toolbar__select-margin;
+      margin: $reset;
       display: flex;
       align-items: center;
       .choices {
@@ -433,7 +430,7 @@
         right: $toolbar__dropdown-icon-area-right;
         width: $toolbar__dropdown-icon-area-size;
         height: $toolbar__dropdown-icon-area-size;
-        margin: $toolbar__dropdown-icon-area-margin;
+        margin: $reset;
         border: $toolbar__dropdown-icon-area-border;
         background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M12 2L10.59.59 6 5.17 1.41.59 0 2l6 6z" fill="#{$toolbar__dropdown-icon-color}" /></svg>');
         background-size: $toolbar__dropdown-icon-size;
