@@ -74,14 +74,14 @@ export default {
   },
   methods: {
     closeBar() {
-      const focusable = document.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]');
+      const focusable = document.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]')
 
       this.isOpen = false
-      localStorage.setItem(this.dataType, 'closed');
+      localStorage.setItem(this.dataType, 'closed')
       // after closing message box move focus on first focusable element on the page
       if (focusable.length) {
         let firstFocusable = [...focusable].find(el => el.offsetParent !== null)
-        firstFocusable.focus();
+        firstFocusable.focus()
       }
     }
   }
