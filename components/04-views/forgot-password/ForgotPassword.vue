@@ -5,7 +5,6 @@
       :src="logoSrc"
       :link="logoLink"
     />
-
     <div class="container">
       <div class="forgot-password">
         <alpaca-heading
@@ -26,23 +25,20 @@
             name="email"
             placeholder="Email"
           />
-
           <alpaca-input
             id="captcha"
             v-model="captcha"
             label="Captcha"
-            type="captcha"
+            type="text"
             name="captcha"
             placeholder="Captcha"
           />
-
           <div class="forgot-password__captcha-wrapper">
             <alpaca-image
               class="forgot-password__image"
               :src="captchaSrc"
               alt="Captcha image"
             />
-
             <alpaca-button
               secondary
               @click.stop.prevent="reload"
@@ -62,11 +58,11 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-  import AlpacaImage from '../../02-elements/image/Image.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
-  import AlpacaHeader from '../../03-modules/header/Header.vue'
+  import AlpacaHeading from '../../01-globals/heading/Heading'
+  import AlpacaImage from '../../02-elements/image/Image'
+  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaInput from '../../02-elements/form/input/Input'
+  import AlpacaHeader from '../../03-modules/header/Header'
 
     export default {
       components: {
@@ -122,10 +118,10 @@
       },
       methods: {
         submit() {
-          this.$emit('submit', { email: this.email, captcha: this.captcha });
+          this.$emit('submit', { email: this.email, captcha: this.captcha })
         },
         reload() {
-          this.$emit('reload');
+          this.$emit('reload')
         }
       }
     }
