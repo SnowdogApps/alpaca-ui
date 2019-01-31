@@ -4,19 +4,19 @@ import { action } from '@storybook/addon-actions'
 import App from '../../01-globals/app/App.vue'
 import AlpacaActiveFilters from './ActiveFilters.vue'
 
-import listElements from './mocks/active-filters.json'
+import filters from './mocks/active-filters.json'
 
 storiesOf('Modules/ActiveFilters', module)
   .add('Default', () => ({
     components: { App, AlpacaActiveFilters },
     data: () => ({
-      listElements
+      filters
     }),
     template: `
       <app>
         <alpaca-active-filters 
-          :items="listElements.filters"
-          :clear-all="listElements.clear"
+          :items="filters"
+          clear-button="Clear all"
           @clear="clearMethod"
           @clearSingleFilter="clearSingleMethod"
         />

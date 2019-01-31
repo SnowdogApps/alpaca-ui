@@ -36,7 +36,7 @@
       class="active-filters__clear-all"
       @click="onClick"
     >
-      {{ clearAll.text }}
+      {{ clearButton }}
     </alpaca-button>
   </div>
 </template>
@@ -59,8 +59,8 @@
         type: Array,
         required: true
       },
-      clearAll: {
-        type: Object,
+      clearButton: {
+        type: String,
         required: true
       },
       singleFilterTag: {

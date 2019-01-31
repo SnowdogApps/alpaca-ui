@@ -1,39 +1,32 @@
-{
-  "clear": {
+[
+  {
+    "label": "Label",
+    "value": "Value",
+    "ariaLabel": "Disable filter",
     "href": "#",
-    "text": "Clear all",
-    "title": "Clear all filters"
-  },
-  "filters": [
-    {
-      "label": "Label",
-      "value": "Value",
-      "ariaLabel": "Disable filter",
-      "href": "#",
-      "icon": {
-        "iconId": "close",
-        "iconTitle": "Close"
-      }
-    },
-    {
-      "label": "Label2",
-      "value": "Value2",
-      "ariaLabel": "Disable filter",
-      "href": "#",
-      "icon": {
-        "iconId": "close",
-        "iconTitle": "Close"
-      }
-    },
-    {
-      "label": "Label3",
-      "value": "Value3",
-      "ariaLabel": "Disable filter",
-      "href": "#",
-      "icon": {
-        "iconId": "close",
-        "iconTitle": "Close"
-      }
+    "icon": {
+      "iconId": "close",
+      "iconTitle": "Close"
     }
-  ]
-}
+  },
+  {
+    "label": "Label2",
+    "value": "Value2",
+    "ariaLabel": "Disable filter",
+    "href": "#",
+    "icon": {
+      "iconId": "close",
+      "iconTitle": "Close"
+    }
+  },
+  {
+    "label": "Label3",
+    "value": "Value3",
+    "ariaLabel": "Disable filter",
+    "href": "#",
+    "icon": {
+      "iconId": "close",
+      "iconTitle": "Close"
+    }
+  }
+]
