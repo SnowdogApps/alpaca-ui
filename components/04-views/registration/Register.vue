@@ -28,7 +28,6 @@
               name="firstname"
               placeholder="First name"
             />
-
             <alpaca-input
               id="lastname"
               v-model="lastname"
@@ -37,7 +36,6 @@
               name="lastname"
               placeholder="Last name"
             />
-
             <!--TODO Update checkbox after merge #48744-->
             <alpaca-checkbox
               id="newsletter"
@@ -50,7 +48,6 @@
               :value="true"
             />
           </alpaca-fieldset>
-
           <alpaca-fieldset
             class="registration__fieldset"
             :legend-text="signInSectionText"
@@ -65,7 +62,6 @@
               name="email"
               placeholder="Email"
             />
-
             <div class="registration__password-wrapper">
               <alpaca-input
                 id="password"
@@ -88,7 +84,6 @@
               placeholder="Confirm password"
             />
           </alpaca-fieldset>
-
           <alpaca-button
             class="login__button"
             @click.stop.prevent="register"
@@ -102,14 +97,14 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-  import AlpacaPasswordStrength from '../../02-elements/password-strength/PasswordStrength.vue'
-  import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
-  import AlpacaDivider from '../../02-elements/divider/Divider.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
-  import AlpacaCheckbox from '../../02-elements/form/checkbox/Checkbox.vue'
-  import AlpacaHeader from '../../03-modules/header/Header.vue'
+  import AlpacaHeading from '../../01-globals/heading/Heading'
+  import AlpacaPasswordStrength from '../../02-elements/password-strength/PasswordStrength'
+  import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset'
+  import AlpacaDivider from '../../02-elements/divider/Divider'
+  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaInput from '../../02-elements/form/input/Input'
+  import AlpacaCheckbox from '../../02-elements/form/checkbox/Checkbox'
+  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
@@ -178,7 +173,7 @@
           email: this.email,
           password: this.password,
           newsletter: this.newsletter
-        });
+        })
       }
     }
   }
@@ -186,29 +181,20 @@
 
 <style lang="scss">
   $registration__padding-top                                  : $spacer--medium !default;
-
   $registration__content-margin                               : 0 0 $spacer--extra-large !default;
-
   $registration__input-margin                                 : 0 0 $spacer--medium !default;
-
   $registration__pasword-wrapper-margin                       : 0 0 $spacer--medium !default;
-
   $registration__fieldset-margin                              : 0 0 $spacer--medium !default;
-
   $registration__legend-font-size                             : $font-size-base;
   $registration__legend-font-weight                           : $font-weight-bold;
-  $registration__legend-margin                                : 0 !default;
   $registration__legend-padding                               : 0 0 $spacer--medium 0 !default;
   $registration__legend-width                                 : 100% !default;
-
   $registration__newsletter-checkbox-margin                   : 0 0 $spacer !default;
   $registration__newsletter-checkbox-icon-offset              : 15px !default;
   $registration__newsletter-checkbox-label-padding-left       : 48px !default;
   $registration__newsletter-checkbox-label-line-height        : 48px !default;
   $registration__newsletter-checkbox-icon-clickable-area      : 48px !default;
   $registration__newsletter-checkbox-checked-label-font-weight: $font-weight-bold !default;
-
-  $registration__password-margin                              : 0 !default;
 
   .container{
     .registration {
@@ -228,7 +214,7 @@
 
       &__legend {
         position: relative;
-        margin: $registration__legend-margin;
+        margin: $reset;
         padding: $registration__legend-padding;
         width: $registration__legend-width;
         font-size: $registration__legend-font-size;
@@ -276,7 +262,7 @@
       }
 
       &__password {
-        margin: $registration__password-margin;
+        margin: $reset;
       }
     }
   }
