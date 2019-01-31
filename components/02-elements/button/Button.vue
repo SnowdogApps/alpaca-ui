@@ -15,7 +15,6 @@
     @click="onClick"
   >
     <slot />
-
     <icon
       v-if="icon"
       :icon="icon"
