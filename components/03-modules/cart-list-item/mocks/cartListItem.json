@@ -9,18 +9,6 @@
   "productId": "qty1",
   "label":"Qty:",
   "placeholder": "Qty",
-  "editIcon": {
-    "href": "#",
-    "ariaLabel": "edit product in your shopping cart",
-    "iconId": "edit",
-    "iconTitle": "Edit pencil"
-  },
-  "removeIcon": {
-    "href": "#",
-    "ariaLabel":"remove this product from your shopping cart",
-    "iconId": "remove",
-    "iconTitle": "Trash bin"
-  },
   "productDetails":[
     {
       "label": "Size",

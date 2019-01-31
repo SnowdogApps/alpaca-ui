@@ -44,14 +44,14 @@
       </div>
       <div class="cart-list-item__actions">
         <alpaca-button
-          :icon="edit.iconId"
-          :aria-label="edit.ariaLabel"
+          icon="edit"
+          aria-label="Edit product in your shopping cart"
           custom-class="cart-list-item__actions-item"
           @click="onEdit"
         />
         <alpaca-button
-          :icon="remove.iconId"
-          :aria-label="remove.ariaLabel"
+          icon="remove"
+          aria-label="Remove this product from your shopping cart"
           custom-class="cart-list-item__actions-item"
           @click="onRemove"
         />
