@@ -152,33 +152,21 @@
 </script>
 
 <style lang="scss">
-  $cart-list-item__padding                   : $spacer--medium 0 !default;
-  $cart-list-item__border                    : 1px solid $gray-light !default;
-
-  $cart-list-item__image-width               : 160px !default;
-  $cart-list-item__image-padding             : 0 $spacer--medium 0 0 !default;
-
-  $cart-list-item__name-weight               : $font-weight-bold !default;
-  $cart-list-item__name-width                : 65% !default;
-  $cart-list-item__name-padding\@small       : 0 $spacer--medium 0 0 !default;
-
-  $cart-list-item__details-width             : calc(100% - #{$cart-list-item__name-width}) !default;
-  $cart-list-item__details-margin            : $spacer--medium 0 !default;
-  $cart-list-item__details-margin\@small     : 0 !default;
-
-  $cart-list-item__attributes-margin         : 0 0 $spacer--medium 0 !default;
-
-  $cart-list-item__price-margin              : $spacer 0 0 0 !default;
-  $cart-list-item__price-margin\@medium      : 0 !default;
-
-  $cart-list-item__qty-width                 : 100% !default;
-  $cart-list-item__qty-width\@small          : auto !default;
-
-  $cart-list-item__qty-wrapper-margin        : 0 !default;
-
-  $cart-list-item__qty-input-width\@small    : 70px !default;
-
-  $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
+  $cart-list-item__padding               : $spacer--medium 0 !default;
+  $cart-list-item__border                : 1px solid $gray-light !default;
+  $cart-list-item__image-width           : 160px !default;
+  $cart-list-item__image-padding         : 0 $spacer--medium 0 0 !default;
+  $cart-list-item__name-weight           : $font-weight-bold !default;
+  $cart-list-item__name-width            : 65% !default;
+  $cart-list-item__name-padding\@small   : 0 $spacer--medium 0 0 !default;
+  $cart-list-item__details-width         : calc(100% - #{$cart-list-item__name-width}) !default;
+  $cart-list-item__details-margin        : $spacer--medium 0 !default;
+  $cart-list-item__attributes-margin     : 0 0 $spacer--medium 0 !default;
+  $cart-list-item__price-margin          : $spacer 0 0 0 !default;
+  $cart-list-item__qty-width             : 100% !default;
+  $cart-list-item__qty-width\@small      : auto !default;
+  $cart-list-item__qty-input-width\@small: 70px !default;
+  $cart-list-item__actions-item-margin   : 0 0 0 $spacer !default;
 
   .cart-list-item {
     display: flex;
@@ -230,7 +218,7 @@
       margin: $cart-list-item__details-margin;
       @include mq($screen-m) {
         flex: 0 0 $cart-list-item__details-width;
-        margin: $cart-list-item__details-margin\@small;
+        margin: $reset;
         flex-direction: row;
         align-items: center;
       }
@@ -243,7 +231,7 @@
     &__price {
       margin: $cart-list-item__price-margin;
       @include mq($screen-m) {
-        margin: $cart-list-item__price-margin\@medium;
+        margin: $reset;
       }
     }
 
@@ -255,7 +243,7 @@
     }
 
     &__qty-wrapper {
-      margin: $cart-list-item__qty-wrapper-margin;
+      margin: $reset;
     }
 
     &__qty-input {
