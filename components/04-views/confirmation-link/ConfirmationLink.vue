@@ -5,7 +5,6 @@
       :src="logoSrc"
       :link="logoLink"
     />
-
     <div class="container">
       <alpaca-heading
         :level="headingLevel"
@@ -17,7 +16,6 @@
         <p>
           {{ info }}
         </p>
-
         <alpaca-input
           id="email"
           v-model="value"
@@ -26,7 +24,6 @@
           :name="name"
           :placeholder="placeholder"
         />
-
         <alpaca-button
           @click.stop.prevent="submit"
         >
@@ -45,11 +42,11 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-  import AlpacaLink from '../../01-globals/link/Link.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
-  import AlpacaHeader from '../../03-modules/header/Header.vue'
+  import AlpacaHeading from '../../01-globals/heading/Heading'
+  import AlpacaLink from '../../01-globals/link/Link'
+  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaInput from '../../02-elements/form/input/Input'
+  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
@@ -116,7 +113,7 @@
     },
     methods: {
       submit() {
-        this.$emit('submit', { email: this.value });
+        this.$emit('submit', { email: this.value })
       }
     }
   }
