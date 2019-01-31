@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 
 import App from '../../01-globals/app/App.vue'
-import AlpacaTabs from './Tab.vue'
+import AlpacaTab from './Tab.vue'
 import AlpacaTabsContainer from './TabsContainer.vue'
 import AlpacaTabContent from './TabContent.vue'
 
 import tabs from './mocks/tabs.json'
 
 storiesOf('Elements/Tabs', module).add('Default', () => ({
-  components: { App, AlpacaTabs, AlpacaTabsContainer, AlpacaTabContent },
+  components: { App, AlpacaTab, AlpacaTabsContainer, AlpacaTabContent },
   data: () => ({
     tabs,
     activeTab: tabs.items[0].tabId
@@ -19,7 +19,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
         <template
           v-for="tab in tabs.items"
         >
-          <alpaca-tabs 
+          <alpaca-tab
             :key="tab.tabId"
             :tab-id="tab.tabId"
             :title="tab.title"
@@ -46,7 +46,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   }
 }))
 .add('With icon', () => ({
-  components: { App, AlpacaTabs, AlpacaTabsContainer, AlpacaTabContent },
+  components: { App, AlpacaTab, AlpacaTabsContainer, AlpacaTabContent },
   data: () => ({
     tabs,
     activeTab: tabs.items[0].tabId
@@ -57,7 +57,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
         <template
           v-for="tab in tabs.items"
         >
-          <alpaca-tabs 
+          <alpaca-tab
             :key="tab.tabId"
             :tab-id="tab.tabId"
             :title="tab.title"
