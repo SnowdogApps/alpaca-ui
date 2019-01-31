@@ -111,17 +111,17 @@
         type: String,
         required: true
       },
-      label: {
-        type: String,
-        required: true
-      },
-      placeholder: {
-        type: String,
-        required: true
-      },
       productDetails: {
         type: Array,
         required: true
+      },
+      label: {
+        type: String,
+        default: 'Qty'
+      },
+      placeholder: {
+        type: String,
+        default: 'Qty'
       },
       hiddenLabel: {
         type: Boolean,

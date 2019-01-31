@@ -7,9 +7,7 @@
   "productName": "Some product long name",
   "productPrice": "$85.00",
   "productId": "qty1",
-  "label":"Qty:",
-  "placeholder": "Qty",
-  "productDetails":[
+  "productOptions":[
     {
       "label": "Size",
       "value": "XXL"
