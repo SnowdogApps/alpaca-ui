@@ -33,9 +33,10 @@
               />
             </div>
           </div>
-          <div class="cart-list-item__price">
-            {{ productPrice }}
-          </div>
+          <alpaca-price
+            :price="productPrice"
+            class="cart-list-item__price"
+          />
         </div>
         <alpaca-description-list
           :elements="productDetails"
@@ -61,16 +62,18 @@
 </template>
 
 <script>
-  import AlpacaImage from '../../02-elements/image/Image'
   import AlpacaLink from '../../01-globals/link/Link'
+  import AlpacaImage from '../../02-elements/image/Image'
+  import AlpacaPrice from '../../02-elements/price/Price'
   import AlpacaInput from '../../02-elements/form/input/Input'
   import AlpacaDescriptionList from '../../02-elements/list/DescriptionList'
   import AlpacaButton from '../../02-elements/button/Button'
 
   export default {
     components: {
-      AlpacaImage,
       AlpacaLink,
+      AlpacaImage,
+      AlpacaPrice,
       AlpacaInput,
       AlpacaDescriptionList,
       AlpacaButton
