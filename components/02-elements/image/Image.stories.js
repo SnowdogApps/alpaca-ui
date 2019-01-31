@@ -1,7 +1,7 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from '@storybook/vue'
 
-import App from '../../01-globals/app/App.vue';
-import AlpacaImage from './Image.vue';
+import App from '../../01-globals/app/App.vue'
+import AlpacaImage from './Image.vue'
 
 storiesOf('Elements/Image', module)
   .add('Default', () => ({
