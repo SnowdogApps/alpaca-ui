@@ -45,9 +45,9 @@
     "suffix": ""
   },
   "pager": {
-    "page": "1",
-    "limit": "4",
-    "totalSize": "15"
+    "page": 1,
+    "limit": 4,
+    "totalSize": 15
   },
   "amount": {
     "prefix": "Items",

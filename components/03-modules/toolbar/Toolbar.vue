@@ -4,30 +4,21 @@
       v-if="showMode"
       class="toolbar__mode"
     >
-      <a
-        :href="gridHref"
-        class="toolbar__mode-button"
+      <alpaca-button
         aria-label="Change to grid view"
-      >
-        <alpaca-icon
-          icon="grid"
-          title="Grid"
-          custom-class="toolbar__mode-icon toolbar__mode-icon--active"
-        />
-      </a>
-      <a
-        :href="listHref"
+        icon="grid"
+        icon-class="toolbar__mode-icon toolbar__mode-icon--active"
         class="toolbar__mode-button"
+        @click="gridView"
+      />
+      <alpaca-button
         aria-label="Change to list view"
-      >
-        <alpaca-icon
-          icon="list"
-          title="List"
-          custom-class="toolbar__mode-icon"
-        />
-      </a>
+        icon="list"
+        icon-class="toolbar__mode-icon"
+        class="toolbar__mode-button"
+        @click="listView"
+      />
     </div>
-
     <div
       v-if="showSorter"
       class="toolbar__sorter"
@@ -43,8 +34,6 @@
         :selected="sortBy.options[0].text"
       />
     </div>
-
-
     <div
       v-if="showAmount"
       class="toolbar__amount"
@@ -56,7 +45,6 @@
         {{ amount.total }}
       </span>
     </div>
-
     <div
       v-if="showLimit"
       class="toolbar__limiter"
@@ -76,30 +64,29 @@
         {{ limiter.suffix }}
       </span>
     </div>
-
     <div
       v-if="showPager"
       class="toolbar__pager"
     >
       <alpaca-pager
         :page="currentPage"
-        :lmit="pager.limit"
+        :limit="pager.limit"
         :total-size="pager.totalSize"
-        @update:page="(page) => {setCurrentPage(page)}"
+        @update:page="page => setCurrentPage(page)"
       />
     </div>
   </div>
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon'
   import AlpacaSelect from '../../02-elements/form/select/Select'
+  import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaPager from '../../03-modules/pager/Pager'
 
   export default {
     components: {
-      AlpacaIcon,
       AlpacaSelect,
+      AlpacaButton,
       AlpacaPager
     },
     props: {
@@ -138,15 +125,7 @@
       amount: {
         type: Object,
         default: null
-      },
-      gridHref: {
-        type: String,
-        default: null
-      },
-      listHref: {
-        type: String,
-        default: null
-      },
+      }
     },
     computed: {
       currentPage () {
@@ -156,6 +135,12 @@
     methods: {
       setCurrentPage(page) {
         this.pager.page = page
+      },
+      listView(event){
+        this.$emit('listView', event)
+      },
+      gridView(event){
+        this.$emit('gridView', event)
       }
     }
   }
@@ -295,6 +280,7 @@
 
       &:hover,
       &:focus {
+        background: none;
         .toolbar__mode-icon {
           fill: $toolbar__icon-color--hover;
         }

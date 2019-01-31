@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import toolbar from './mocks/toolbar.json'
 
@@ -22,9 +23,15 @@ storiesOf('Modules/Toolbar', module).add('Default', () => ({
           :sortBy="toolbar.sortBy"
           :limiter="toolbar.limiter"
           :amount="toolbar.amount"
+          @listView="listView"
+          @gridView="gridView"
         />
       </app>
-    `
+    `,
+    methods: {
+      listView: action('Change on list view'),
+      gridView: action('Change on gird view')
+    }
   }))
   .add('With pager', () => ({
     data: () => {
@@ -41,14 +48,18 @@ storiesOf('Modules/Toolbar', module).add('Default', () => ({
           showLimit
           showPager
           showAmount
-          gridHref="#"
-          listHref="#"
           :sortBy="toolbar.sortBy"
           :limiter="toolbar.limiter"
           :pager="toolbar.pager"
           :amount="toolbar.amount"
+          @listView="listView"
+          @gridView="gridView"
         />
       </app>
-    `
+    `,
+    methods: {
+      listView: action('Change on list view'),
+      gridView: action('Change on grid view')
+    }
   }))
 
