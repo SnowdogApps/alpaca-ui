@@ -28,8 +28,7 @@
 </template>
 
 <script>
-  import AlpacaLabel from '../../../01-globals/label/Label.vue'
-
+  import AlpacaLabel from '../../../01-globals/label/Label'
   export default {
     components: {
       AlpacaLabel
@@ -42,10 +41,6 @@
       label: {
         type: String,
         required: true
-      },
-      value: {
-        type: String,
-        default: null
       },
       type: {
         type: String,
@@ -81,6 +76,10 @@
       },
       inputClass: {
         type: String,
+        default: null
+      },
+      value: {
+        type: [String, Number],
         default: null
       }
     },

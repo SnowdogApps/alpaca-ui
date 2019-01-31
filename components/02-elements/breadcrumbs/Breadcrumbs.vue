@@ -109,7 +109,7 @@
     // TODO: Looks like page specific stuff, so should be moved to this page styles.
     & + .page-main {
       .heading--page {
-        margin-top: 0;
+        margin-top: $reset;
       }
     }
   }
