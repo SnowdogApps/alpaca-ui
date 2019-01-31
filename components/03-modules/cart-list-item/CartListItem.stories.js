@@ -39,27 +39,3 @@ storiesOf('Modules/Cart list item', module)
       changeMethod: action('Change')
     }
   }))
-  .add('With links', () => ({
-    components: { App, AlpacaCartListItem },
-    data: () => ({
-      cartListItem
-    }),
-    template: `
-      <app>
-        <alpaca-cart-list-item
-          :productImage="cartListItem.productImage"
-          :productName="cartListItem.productName"
-          :productPrice="cartListItem.productPrice"
-          :qtyInput="cartListItem.qtyInput"
-          :productDetails="cartListItem.productDetails"
-          :edit="cartListItem.editIcon"
-          :remove="cartListItem.removeIcon"
-          id="id"
-          name="name"
-          href="#"
-          link
-          hidden-label
-        />
-      </app>
-    `
-  }))

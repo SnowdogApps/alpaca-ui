@@ -44,17 +44,13 @@
       </div>
       <div class="cart-list-item__actions">
         <alpaca-button
-          :tag="link ? 'a' : 'button'"
           :icon="edit.iconId"
-          :link="edit.href"
           :aria-label="edit.ariaLabel"
           custom-class="cart-list-item__actions-item"
           @click="onEdit"
         />
         <alpaca-button
-          :tag="link ? 'a' : 'button'"
           :icon="remove.iconId"
-          :link="remove.href"
           :aria-label="remove.ariaLabel"
           custom-class="cart-list-item__actions-item"
           @click="onRemove"
@@ -123,10 +119,6 @@
       remove: {
         type: Object,
         required: true
-      },
-      link: {
-        type: Boolean,
-        default: false
       },
       hiddenLabel: {
         type: Boolean,
