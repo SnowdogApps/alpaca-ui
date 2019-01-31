@@ -32,27 +32,26 @@
       </alpaca-list-item>
     </alpaca-list>
 
-    <component
-      :is="allFilterTag"
+    <alpaca-button
       class="active-filters__clear-all"
-      :href="allFilterTag === 'a' && clearAll.href"
-      :title="clearAll.title"
       @click="onClick"
     >
       {{ clearAll.text }}
-    </component>
+    </alpaca-button>
   </div>
 </template>
 
 <script>
   import AlpacaIcon from '../../01-globals/icon/Icon'
   import AlpacaList from '../../02-elements/list/List'
+  import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaListItem from '../../02-elements/list/ListItem'
 
   export default {
     components: {
       AlpacaIcon,
       AlpacaList,
+      AlpacaButton,
       AlpacaListItem
     },
     props: {
@@ -63,10 +62,6 @@
       clearAll: {
         type: Object,
         required: true
-      },
-      allFilterTag: {
-        type: String,
-        default: 'button'
       },
       singleFilterTag: {
         type: String,
@@ -158,10 +153,12 @@
       font-weight: $active-filters__clear-font-weight;
       line-height: $active-filters__clear-line-height;
       text-decoration: none;
+      background: none;
 
       &:hover,
       &:focus {
         text-decoration: none;
+        background: none;
         color: $active-filters__clear-color;
       }
 
