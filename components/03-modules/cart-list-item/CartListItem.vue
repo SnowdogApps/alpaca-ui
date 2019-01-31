@@ -19,9 +19,9 @@
           <div class="cart-list-item__qty">
             <div class="cart-list-item__qty-wrapper">
               <alpaca-input
-                :id="qtyInput.id"
-                :label="qtyInput.label.text"
-                :placeholder="qtyInput.field.placeholder"
+                :id="productId"
+                :label="label"
+                :placeholder="placeholder"
                 :name="name"
                 type="number"
                 :min="0"
@@ -100,11 +100,19 @@
         type: String,
         required: true
       },
-      qtyInput: {
-        type: Object,
+      productId: {
+        type: String,
         required: true
       },
       name: {
+        type: String,
+        required: true
+      },
+      label: {
+        type: String,
+        required: true
+      },
+      placeholder: {
         type: String,
         required: true
       },

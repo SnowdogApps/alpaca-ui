@@ -6,15 +6,9 @@
   },
   "productName": "Some product long name",
   "productPrice": "$85.00",
-  "qtyInput": {
-    "id": "qty1",
-    "label": {
-      "text": "Qty:"
-    },
-    "field": {
-      "placeholder": "Qty"
-    }
-  },
+  "productId": "qty1",
+  "label":"Qty:",
+  "placeholder": "Qty",
   "editIcon": {
     "href": "#",
     "ariaLabel": "edit product in your shopping cart",
