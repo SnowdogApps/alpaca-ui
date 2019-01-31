@@ -5,7 +5,6 @@
       :src="logoSrc"
       :link="logoLink"
     />
-
     <main class="home">
       <alpaca-banner
         :link="mainBanner.link"
@@ -15,8 +14,6 @@
       />
       <div class="container">
         <section class="home__banners-handler">
-          <!--3-->
-
           <alpaca-banner
             v-for="banner in smallBanners"
             :key="banner.id"
@@ -27,7 +24,6 @@
           />
         </section>
         <section class="home__banners-handler">
-          <!--2-->
           <alpaca-banner
             v-for="banner in mediumBanners"
             :key="banner.id"
@@ -61,10 +57,10 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-  import AlpacaBanner from '../../02-elements/banner/Banner.vue'
-  import AlpacaImageList from '../../02-elements/list/ImageList.vue'
-  import AlpacaHeader from '../../03-modules/header/Header.vue'
+  import AlpacaHeading from '../../01-globals/heading/Heading'
+  import AlpacaBanner from '../../02-elements/banner/Banner'
+  import AlpacaImageList from '../../02-elements/list/ImageList'
+  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
