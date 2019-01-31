@@ -36,8 +36,8 @@
 </template>
 
 <script>
-  import uniqueId from 'lodash.uniqueid';
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+  import uniqueId from 'lodash.uniqueid'
+  import AlpacaIcon from '../../01-globals/icon/Icon'
 
   export default {
     components: { AlpacaIcon },
@@ -66,13 +66,13 @@
     },
     computed: {
       getTabsWithId() {
-        return uniqueId("tab");
+        return uniqueId("tab")
       }
     },
     methods: {
       setActiveTab(tab) {
         if (this.tabs[this.index].tabId === tab){
-          this.activeTab = tab;
+          this.activeTab = tab
         }
       }
     }
