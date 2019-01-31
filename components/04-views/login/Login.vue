@@ -5,7 +5,6 @@
       :src="logoSrc"
       :link="logoLink"
     />
-
     <div class="container">
       <alpaca-heading
         :level="1"
@@ -20,9 +19,7 @@
           >
             {{ formHeading }}
           </alpaca-heading>
-
           <alpaca-divider />
-
           <p class="login__info">
             {{ signInInfo }}
           </p>
@@ -40,7 +37,6 @@
                 name="email"
                 placeholder="Email"
               />
-
               <alpaca-input
                 id="password"
                 v-model="password"
@@ -53,7 +49,7 @@
             <div class="login__actions">
               <alpaca-button
                 class="login__button"
-                @click="login"
+                @click.stop.prevent="login"
               >
                 Login
               </alpaca-button>
@@ -110,13 +106,13 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-  import AlpacaLink from '../../01-globals/link/Link.vue'
-  import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
-  import AlpacaDivider from '../../02-elements/divider/Divider.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
-  import AlpacaHeader from '../../03-modules/header/Header.vue'
+  import AlpacaHeading from '../../01-globals/heading/Heading'
+  import AlpacaLink from '../../01-globals/link/Link'
+  import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset'
+  import AlpacaDivider from '../../02-elements/divider/Divider'
+  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaInput from '../../02-elements/form/input/Input'
+  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
@@ -194,13 +190,13 @@
     },
     methods: {
       login() {
-        this.$emit('login', { email: this.email, password: this.password });
+        this.$emit('login', { email: this.email, password: this.password })
       },
       createAccount() {
-        this.$emit('createAccount');
+        this.$emit('createAccount')
       },
       createCompanyAccount() {
-        this.$emit('createCompanyAccount');
+        this.$emit('createCompanyAccount')
       }
     }
   }
