@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
-import { withReadme } from 'storybook-readme';
+import { withReadme } from 'storybook-readme'
 
-import iconsReadme from './README.md';
+import iconsReadme from './README.md'
 import icons from './mocks/icons.json'
 
 import App from '../app/App.vue'
