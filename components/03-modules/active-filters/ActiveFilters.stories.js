@@ -18,7 +18,7 @@ storiesOf('Modules/ActiveFilters', module)
           :items="listElements.filters"
           :clear-all="listElements.clear"
           @clear="clearMethod"
-          @singleFilter="clearSingleMethod"
+          @clearSingleFilter="clearSingleMethod"
         />
       </app>
     `,

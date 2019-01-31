@@ -73,7 +73,7 @@
         this.$emit('clear')
       },
       clearSingleFilter() {
-        this.$emit('singleFilter')
+        this.$emit('clearSingleFilter')
       },
     }
   }
