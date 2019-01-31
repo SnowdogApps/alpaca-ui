@@ -16,9 +16,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-tabs-container>
-        <template
-          v-for="tab in tabs.items"
-        >
+        <template v-for="tab in tabs.items">
           <alpaca-tab
             :key="tab.tabId"
             :tab-id="tab.tabId"
@@ -54,9 +52,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-tabs-container>
-        <template
-          v-for="tab in tabs.items"
-        >
+        <template v-for="tab in tabs.items">
           <alpaca-tab
             :key="tab.tabId"
             :tab-id="tab.tabId"
