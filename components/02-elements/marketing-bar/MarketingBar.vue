@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import AlpacaButton from '../button/Button.vue';
+  import AlpacaButton from '../button/Button'
 
   export default {
     components: {
@@ -39,13 +39,13 @@
     mounted() {
       // Display message if it wasn't closed before
       if (localStorage.getItem(this.dataType) !== 'closed') {
-        this.isBarVisible = true;
+        this.isBarVisible = true
       }
     },
     methods: {
       onButtonClose() {
-        localStorage.setItem(this.dataType, 'closed');
-        this.isBarVisible = false;
+        localStorage.setItem(this.dataType, 'closed')
+        this.isBarVisible = false
       }
     }
   }
@@ -56,7 +56,6 @@
   $marketing-bar__background-color: $color-primary !default;
 
   $marketing-bar__text-padding: 0 32px 0 0 !default;
-  $marketing-bar__text-padding--medium: 0 !default;
   $marketing-bar__text-font-size: $font-size-base !default;
   $marketing-bar__text-font-color: $gray-darker !default;
   $marketing-bar__text-font-weight: $font-weight-bold !default;
@@ -90,7 +89,7 @@
       color: $marketing-bar__text-font-color;
 
       @include mq($screen-m) {
-        padding: $marketing-bar__text-padding--medium;
+        padding: $reset;
       }
     }
 

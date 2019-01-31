@@ -7,7 +7,7 @@
     ]"
   >
     <template v-for="(item, idx) in elements">
-      <dt 
+      <dt
         :key="`desc-list-label-${idx}`"
         :class="[
           'list__label',
@@ -25,31 +25,31 @@
       >
         {{ item.value }}
       </dd>
-    </template>        
+    </template>
   </dl>
 </template>
 
 <script>
-export default {
-  props: {
-    elements: {
-      type: Array,
-      required: true
-    },
-    listClass: {
-      type: String,
-      default: null
-    },
-    labelClass: {
-      type: String,
-      default: null
-    },
-    valueClass: {
-      type: String,
-      default: null
+  export default {
+    props: {
+      elements: {
+        type: Array,
+        required: true
+      },
+      listClass: {
+        type: String,
+        default: null
+      },
+      labelClass: {
+        type: String,
+        default: null
+      },
+      valueClass: {
+        type: String,
+        default: null
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">
