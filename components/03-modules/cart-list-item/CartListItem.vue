@@ -120,14 +120,6 @@
         type: Array,
         required: true
       },
-      edit: {
-        type: Object,
-        required: true
-      },
-      remove: {
-        type: Object,
-        required: true
-      },
       hiddenLabel: {
         type: Boolean,
         default: false

@@ -23,8 +23,6 @@ storiesOf('Modules/Cart list item', module)
           :placeholder="cartListItem.placeholder"
           :label="cartListItem.label"
           :productDetails="cartListItem.productDetails"
-          :edit="cartListItem.editIcon"
-          :remove="cartListItem.removeIcon"
           name="name"
           :maxInputValue="5"
           href="#"
