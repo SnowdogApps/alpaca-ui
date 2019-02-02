@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import information from "./mocks/information";
+import information from "./mocks/information"
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaInformation from './Information.vue'
