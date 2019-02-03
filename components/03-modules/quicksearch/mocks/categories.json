@@ -1,0 +1,20 @@
+[
+  {
+    "id": "category1",
+    "href": "#",
+    "title": "Category name",
+    "items": "598 item(s)"
+  },
+  {
+    "id": "category2",
+    "href": "#",
+    "title": "Category name",
+    "items": "598 item(s)"
+  },
+  {
+    "id": "category3",
+    "href": "#",
+    "title": "Category name",
+    "items": "598 item(s)"
+  }
+]
