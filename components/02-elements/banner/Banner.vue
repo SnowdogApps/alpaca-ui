@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import uniqueId from 'lodash.uniqueid';
+  import uniqueId from 'lodash.uniqueid'
 
   export default {
     props: {
@@ -40,7 +40,7 @@
     },
     computed: {
       getImageWithKey() {
-        return this.image.sources.map(source => ({ key: uniqueId("image"), source }));
+        return this.image.sources.map(source => ({ key: uniqueId("image"), source }))
       }
     },
   }
