@@ -20,7 +20,7 @@ storiesOf('Modules/Cart list item', module)
           :productName="cartListItem.productName"
           :productPrice="cartListItem.productPrice"
           :productId="cartListItem.productId"
-          :productDetails="cartListItem.productOptions"
+          :productOptions="cartListItem.productOptions"
           name="name"
           :maxInputValue="5"
           href="#"

@@ -39,7 +39,7 @@
           />
         </div>
         <alpaca-description-list
-          :elements="productDetails"
+          :elements="productOptions"
           list-class="cart-list-item__attributes"
         />
       </div>
@@ -111,7 +111,7 @@
         type: String,
         required: true
       },
-      productDetails: {
+      productOptions: {
         type: Array,
         required: true
       },
