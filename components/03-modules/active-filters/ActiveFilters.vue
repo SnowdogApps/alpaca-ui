@@ -13,13 +13,12 @@
           :href="singleFilterTag === 'a' && item.href"
           class="active-filters__remove"
           :aria-label="item.ariaLabel"
-          :title="item.icon.iconTitle"
           @click="clearItem"
         >
           <alpaca-icon
-            v-if="item.icon"
             custom-class="active-filters__remove-icon"
-            :icon="item.icon.iconId"
+            :title="closeIconTitle"
+            :icon="closeIcon"
           />
         </component>
 
@@ -66,6 +65,14 @@
       singleFilterTag: {
         type: String,
         default: 'button'
+      },
+      closeIcon: {
+        type: String,
+        default: 'close'
+      },
+      closeIconTitle: {
+        type: String,
+        default: 'Close'
       }
     },
     methods: {
