@@ -11,12 +11,12 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   components: { App, AlpacaTab, AlpacaTabsContainer, AlpacaTabContent },
   data: () => ({
     tabs,
-    activeTab: tabs.items[0].tabId
+    activeTab: tabs[0].tabId
   }),
   template: `
     <app>
       <alpaca-tabs-container>
-        <template v-for="tab in tabs.items">
+        <template v-for="tab in tabs">
           <alpaca-tab
             :key="tab.tabId"
             :tab-id="tab.tabId"
@@ -37,7 +37,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   `,
   methods: {
     setActiveTab(tab) {
-      this.activeTab = this.tabs.items
+      this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]
     }
@@ -47,18 +47,18 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   components: { App, AlpacaTab, AlpacaTabsContainer, AlpacaTabContent },
   data: () => ({
     tabs,
-    activeTab: tabs.items[0].tabId
+    activeTab: tabs[0].tabId
   }),
   template: `
     <app>
       <alpaca-tabs-container>
-        <template v-for="tab in tabs.items">
+        <template v-for="tab in tabs">
           <alpaca-tab
             :key="tab.tabId"
             :tab-id="tab.tabId"
             :title="tab.title"
             :active-tab="activeTab"
-            :icon="tabs.icon.iconId"
+            icon="angle-down"
             @click="setActiveTab(tab.tabId)"
           />
           <alpaca-tab-content
@@ -74,7 +74,7 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
   `,
   methods: {
     setActiveTab(tab) {
-      this.activeTab = this.tabs.items
+      this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]
     }
