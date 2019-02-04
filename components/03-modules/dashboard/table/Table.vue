@@ -9,39 +9,67 @@
       </alpaca-heading>
 
       <alpaca-link
-        href="#"
+        :href="viewAllLink"
         class="dashboard-table__link"
       >
-        {{ link }}
+        {{ 'View all' }}
       </alpaca-link>
     </div>
 
     <div class="dashboard-table__content">
-      <alpaca-table
-        :head-cells="headCells"
-        :body-rows="bodyRows"
-      />
+      <alpaca-table caption="This is a table">
+        <thead>
+          <alpaca-table-row>
+            <alpaca-table-cell
+              v-for="headCell in headCells"
+              :key="headCell.id"
+              tag="th"
+              :scope="headCell.scope"
+            >
+              {{ headCell.text }}
+            </alpaca-table-cell>
+          </alpaca-table-row>
+        </thead>
+        <tbody>
+          <alpaca-table-row
+            v-for="row in bodyRows"
+            :key="row.id"
+          >
+            <alpaca-table-cell
+              v-for="bodyCell in row"
+              :key="bodyCell.id"
+              :data-th="bodyCell.mobileHeading"
+            >
+              {{ bodyCell.text }}
+            </alpaca-table-cell>
+          </alpaca-table-row>
+        </tbody>
+      </alpaca-table>
     </div>
   </div>
 </template>
 
 <script>
-  import AlpacaHeading from '../../../01-globals/heading/Heading.vue'
-  import AlpacaLink from '../../../01-globals/link/Link.vue'
-  import AlpacaTable from '../../../02-elements/table/Table.vue'
+  import AlpacaHeading from '../../../01-globals/heading/Heading'
+  import AlpacaLink from '../../../01-globals/link/Link'
+  import AlpacaTable from '../../../02-elements/table/Table'
+  import AlpacaTableRow from '../../../02-elements/table/TableRow'
+  import AlpacaTableCell from '../../../02-elements/table/TableCell'
 
   export default {
     components: {
       AlpacaHeading,
       AlpacaLink,
-      AlpacaTable
+      AlpacaTable,
+      AlpacaTableRow,
+      AlpacaTableCell
     },
     props: {
       title: {
         type: String,
         required: true
       },
-      link: {
+      viewAllLink: {
         type: String,
         required: true
       },

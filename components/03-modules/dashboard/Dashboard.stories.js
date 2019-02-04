@@ -1,9 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 
-import form from './form/mocks/form.json'
+import form from './form/mocks/form'
 import nav from "./nav/mocks/nav";
 import items from "./items/mocks/items";
-import table from "./table/mocks/table";
+import bodyRows from "./table/mocks/bodyRows";
+import headCells from "./table/mocks/headCells";
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaDashboardForm from './form/Form.vue'
@@ -63,27 +64,14 @@ storiesOf('Modules/Dashboard', module)
   .add('Table', () => ({
     components: { App, AlpacaDashboardTable },
     data: () => ({
-      table
+      bodyRows,
+      headCells
     }),
-    computed: {
-      headCells() {
-        const headCells = table.table.mainTags
-          .find(el => el.mainTag === 'thead');
-
-        return headCells.rowTags[0].childTags;
-      },
-      bodyRows() {
-        const bodyRows = table.table.mainTags
-          .filter(el => el.mainTag === 'tbody');
-
-        return bodyRows[0].rowTags.map(el => el.childTags);
-      }
-    },
     template: `
       <app>
         <alpaca-dashboard-table
-          :title="table.title"
-          :link="table.link"
+          title="Recent Orders"
+          viewAllLink="#"
           :headCells="headCells"
           :bodyRows="bodyRows"
        />

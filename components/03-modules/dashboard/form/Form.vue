@@ -66,10 +66,10 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../../01-globals/heading/Heading.vue'
-  import AlpacaInput from '../../../02-elements/form/input/Input.vue'
-  import AlpacaSelect from '../../../02-elements/form/select/Select.vue'
-  import AlpacaCheckbox from '../../../02-elements/form/checkbox/Checkbox.vue'
+  import AlpacaHeading from '../../../01-globals/heading/Heading'
+  import AlpacaInput from '../../../02-elements/form/input/Input'
+  import AlpacaSelect from '../../../02-elements/form/select/Select'
+  import AlpacaCheckbox from '../../../02-elements/form/checkbox/Checkbox'
 
   export default {
     components: {
@@ -111,7 +111,7 @@
     },
     methods: {
       isChecked(){
-        console.log(this.test);
+        console.log(this.test)
       }
     }
   }
