@@ -17,13 +17,13 @@ storiesOf('Modules/ActiveFilters', module)
         <alpaca-active-filters 
           :items="filters"
           clear-button="Clear all"
-          @clear="clearMethod"
-          @clearSingleFilter="clearSingleMethod"
+          @clearAll="clearAll"
+          @clearItem="clearItem"
         />
       </app>
     `,
     methods: {
-      clearMethod: action('Clear all'),
-      clearSingleMethod: action('Clear single element')
+      clearAll: action('Clear all items'),
+      clearItem: action('Clear single item')
     }
   }))

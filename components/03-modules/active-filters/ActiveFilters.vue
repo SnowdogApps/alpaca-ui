@@ -14,7 +14,7 @@
           class="active-filters__remove"
           :aria-label="item.ariaLabel"
           :title="item.icon.iconTitle"
-          @click="clearSingleFilter"
+          @click="clearItem"
         >
           <alpaca-icon
             v-if="item.icon"
@@ -34,7 +34,7 @@
 
     <alpaca-button
       class="active-filters__clear-all"
-      @click="onClick"
+      @click="clearAll"
     >
       {{ clearButton }}
     </alpaca-button>
@@ -69,11 +69,11 @@
       }
     },
     methods: {
-      onClick() {
-        this.$emit('clear')
+      clearAll() {
+        this.$emit('clearAll')
       },
-      clearSingleFilter() {
-        this.$emit('clearSingleFilter')
+      clearItem() {
+        this.$emit('clearItem')
       },
     }
   }
