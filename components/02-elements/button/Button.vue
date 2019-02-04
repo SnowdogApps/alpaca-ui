@@ -176,15 +176,11 @@
       width: $button__width--fluid;
     }
 
-    &__icon {
-      width: $button__size--icon;
-      height: $button__size--icon;
-      fill: $button__fill--icon;
-      transition: $button__transition;
-    }
+  &__icon {
+    width: $button__size--icon;
+    height: $button__size--icon;
+    fill: $button__fill--icon;
+    transition: $button__transition;
   }
-
-  button {
-    @extend .button;
-  }
+}
 </style>
