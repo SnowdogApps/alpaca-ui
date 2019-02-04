@@ -7,11 +7,11 @@
         button: tag,
         'button--icon': icon,
         'button--secondary': secondary,
-        'button--link': link,
+        'button--link': tag === 'a',
         'button--fluid': fluid
       }
     ]"
-    :href="link"
+    :href="tag === 'a' && link"
     @click="onClick"
   >
     <slot />

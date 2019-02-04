@@ -1,0 +1,20 @@
+{
+  "productImage": {
+    "src": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "dataSrc": "/images/product/cart-product-160_160.jpg",
+    "alt": "product name goes here"
+  },
+  "productName": "Some product long name",
+  "productPrice": "$85.00",
+  "productId": "qty1",
+  "productOptions":[
+    {
+      "label": "Size",
+      "value": "XXL"
+    },
+    {
+      "label": "Color",
+      "value": "Red"
+    }
+  ]
+}
