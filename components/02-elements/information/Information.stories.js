@@ -15,7 +15,7 @@ storiesOf('Elements/Information', module)
       <app>
         <alpaca-information
           v-for="info in information"
-          :ke="info.id"
+          :key="info.id"
           :title="info.title"
           :text="info.text"
         >
