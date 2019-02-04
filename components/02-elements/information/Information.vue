@@ -35,12 +35,10 @@
 </script>
 
 <style lang="scss">
-  $information-margin: 15px !default;
-
   .information {
-    margin-bottom: $information-margin * 2;
+    margin-bottom: $spacer--medium * 2;
     &__title {
-      margin-bottom: $information-margin;
+      margin-bottom: $spacer--medium;
     }
     &__text {
       margin-bottom: 0;

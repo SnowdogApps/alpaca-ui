@@ -18,7 +18,7 @@ storiesOf('Elements/Information', module)
           :key="info.id"
           :title="info.title"
           :text="info.text"
-        >
+        />
       </app>
     `
   }))
