@@ -10,34 +10,27 @@
         class="cookie-message__text"
         v-html="text"
       />
-      <button
-        v-if="closeBar || closeIcon"
+      <alpaca-button
         class="cookie-message__close"
-        type="button"
         :aria-label="closeAriaLabel"
+        :icon="closeIcon"
+        icon-class="cookie-message__close-icon"
         @click="closeBar"
       >
-        {{ closeLabel }}
-        <icon
-          v-if="closeIcon"
-          :icon="closeIcon"
-          class="cookie-message__close-icon"
-        />
-      </button>
+        {{ closeButton }}
+      </alpaca-button>
     </div>
   </div>
 </template>
 
 <script>
-  import Icon from '../../01-globals/icon/Icon'
+  import AlpacaButton from '../../02-elements/button/Button'
 
   export default {
-    components: { Icon },
+    components: {
+      AlpacaButton
+    },
     props: {
-      ariaLabel: {
-        type: String,
-        required: true
-      },
       text: {
         type: String,
         required: true
@@ -48,18 +41,19 @@
       },
       closeIcon: {
         type: String,
-        required: false,
         default: null
       },
-      closeLabel: {
+      closeButton: {
         type: String,
-        required: false,
         default: null
+      },
+      ariaLabel: {
+        type: String,
+        default: 'Cookie policy message'
       },
       closeAriaLabel: {
         type: String,
-        required: false,
-        default: null
+        default: 'Close cookie message'
       }
     },
     data: () => {
@@ -169,7 +163,6 @@
         background: none;
         color: $cookie-message__close-color;
       }
-
       @include mq($screen-s) {
         padding: $cookie-message__close-padding--small;
       }
