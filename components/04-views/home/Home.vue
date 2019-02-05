@@ -1,10 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <alpaca-header
-      :menu="menu"
-      :src="logoSrc"
-      :link="logoLink"
-    />
     <main class="home">
       <alpaca-banner
         :link="mainBanner.link"
@@ -60,28 +55,14 @@
   import AlpacaHeading from '../../01-globals/heading/Heading'
   import AlpacaBanner from '../../02-elements/banner/Banner'
   import AlpacaImageList from '../../02-elements/list/ImageList'
-  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
       AlpacaHeading,
       AlpacaBanner,
-      AlpacaImageList,
-      AlpacaHeader
+      AlpacaImageList
     },
     props: {
-      menu: {
-        type: Array,
-        required: true
-      },
-      logoSrc: {
-        type: String,
-        required: true
-      },
-      logoLink: {
-        type: String,
-        required: true
-      },
       mainBanner: {
         type: Object,
         required: true

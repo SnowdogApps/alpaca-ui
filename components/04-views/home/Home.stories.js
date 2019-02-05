@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/vue'
 import App from '../../01-globals/app/App.vue'
 import AlpacaHome from './Home.vue'
 
-import menu from '../../03-modules/header/mocks/menu.json'
 import banner from '../../02-elements/banner/mocks/banner.json'
 import smallBanners from './mocks/smallBanners.json'
 import mediumBanners from './mocks/mediumBanners.json'
@@ -16,7 +15,6 @@ storiesOf('Views/Home', module)
     components: { App, AlpacaHome},
     data() {
       return {
-        menu,
         banner,
         smallBanners,
         mediumBanners,
@@ -27,9 +25,6 @@ storiesOf('Views/Home', module)
     template: `
       <app>
         <alpaca-home 
-          :menu="menu"
-          logoSrc="../../images/logo/alpaca.svg"
-          logoLink="#"
           :text="text.text"
           :headingLevel="2"
           heading="BRANDS"
