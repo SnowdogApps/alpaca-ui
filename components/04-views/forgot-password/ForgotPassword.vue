@@ -1,10 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <alpaca-header
-      :menu="menu"
-      :src="logoSrc"
-      :link="logoLink"
-    />
     <div class="container">
       <div class="forgot-password">
         <alpaca-heading
@@ -46,9 +41,7 @@
               {{ reloadButton }}
             </alpaca-button>
           </div>
-          <alpaca-button
-            @click.stop.prevent="submit"
-          >
+          <alpaca-button @click.stop.prevent="submit">
             {{ submitButton }}
           </alpaca-button>
         </form>
@@ -62,15 +55,13 @@
   import AlpacaImage from '../../02-elements/image/Image'
   import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaHeader from '../../03-modules/header/Header'
 
     export default {
       components: {
         AlpacaHeading,
         AlpacaImage,
         AlpacaButton,
-        AlpacaInput,
-        AlpacaHeader
+        AlpacaInput
       },
       props: {
         headingLevel: {
@@ -82,18 +73,6 @@
           required: true
         },
         info: {
-          type: String,
-          required: true
-        },
-        menu: {
-          type: Array,
-          required: true
-        },
-        logoSrc: {
-          type: String,
-          required: true
-        },
-        logoLink: {
           type: String,
           required: true
         },
