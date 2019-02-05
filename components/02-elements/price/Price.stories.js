@@ -13,9 +13,7 @@ storiesOf('Elements/Price', module)
     components: { App, AlpacaPrice },
     template: `
       <app>
-        <alpaca-price
-          :price="data[0].value"
-        />
+        <alpaca-price :price="data[0].value"/>
       </app>
     `
   }))
@@ -26,9 +24,7 @@ storiesOf('Elements/Price', module)
     }),
     template: `
       <app>
-        <alpaca-price
-          :specialPrice="data[0].value"
-        />
+        <alpaca-price :specialPrice="data[0].value"/>
       </app>
     `
   }))
@@ -39,9 +35,7 @@ storiesOf('Elements/Price', module)
     }),
     template: `
       <app>
-        <alpaca-price
-          :oldPrice="data[0].value"
-        />
+        <alpaca-price :oldPrice="data[0].value"/>
       </app>
     `
   }))
