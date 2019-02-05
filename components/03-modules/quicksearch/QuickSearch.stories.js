@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import products from './mocks/products.json'
 import categories from './mocks/categories.json'
@@ -24,7 +25,11 @@ storiesOf('Modules/Quick search', module)
           :products="products"
           :categories="categories"
           :manufacturers="manufacturers"
+          @seeAll="seeAll"
         />
       </app>
-    `
+    `,
+    methods: {
+      seeAll: action('See all')
+    }
   }))
