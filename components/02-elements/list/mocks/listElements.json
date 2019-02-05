@@ -1,11 +1,14 @@
 [
   {
-    "text": "Lorem Ipsum"
+    "text": "Lorem Ipsum",
+    "id": "el1"
   },
   {
-    "text": "Lorem Ipsum"
+    "text": "Lorem Ipsum",
+    "id": "el2"
   },
   {
-    "text": "Lorem Ipsum"
+    "text": "Lorem Ipsum",
+    "id": "el3"
   }
 ]
