@@ -20,17 +20,15 @@
         >
           {{ noResultText }}
         </alpaca-paragraph>
-
-        <!--TODO Use list component after merge #48311-->
-        <ul class="quicksearch__list quicksearch__list--column">
-          <li
+        <alpaca-list class="quicksearch__list quicksearch__list--column">
+          <alpaca-list-item
             v-for="product in products"
             :key="product.id"
+            :element="product"
             class="quicksearch__product"
           >
             <alpaca-link
               :href="product.href"
-              :title="product.title"
               class="quicksearch__product-image-wrapper"
             >
               <alpaca-image
@@ -43,7 +41,6 @@
               <alpaca-link
                 :href="product.href"
                 class="quicksearch__link"
-                :title="product.title"
                 inverted
               >
                 <alpaca-heading
@@ -54,22 +51,23 @@
                 </alpaca-heading>
               </alpaca-link>
               <alpaca-price
-                special-price="$2323"
+                :special-price="product.specialPrice"
+                :old-price="product.oldPrice"
               />
             </div>
-          </li>
-        </ul>
+          </alpaca-list-item>
+        </alpaca-list>
         <div class="quicksearch__categories-column">
-          <ul class="quicksearch__list">
-            <li
+          <alpaca-list class="quicksearch__list">
+            <alpaca-list-item
               v-for="category in categories"
               :key="category.id"
-              class="quicksearch__category"
+              class="quicksearch__list"
+              :element="category"
             >
               <alpaca-link
                 class="quicksearch__link"
                 :href="category.href"
-                :title="category.title"
                 inverted
               >
                 <alpaca-heading
@@ -80,18 +78,18 @@
                 </alpaca-heading>
               </alpaca-link>
               {{ category.items }}
-            </li>
-          </ul>
-          <ul class="quicksearch__list quicksearch__list--below">
-            <li
+            </alpaca-list-item>
+          </alpaca-list>
+          <alpaca-list class="quicksearch__list quicksearch__list--below">
+            <alpaca-list-item
               v-for="manufacturer in manufacturers"
               :key="manufacturer.id"
               class="quicksearch__manufacturer"
+              :element="manufacturer"
             >
               <alpaca-link
                 class="quicksearch__link"
                 :href="manufacturer.href"
-                :title="manufacturer.title"
                 inverted
               >
                 <alpaca-heading
@@ -102,8 +100,8 @@
                 </alpaca-heading>
               </alpaca-link>
               {{ manufacturer.items }}
-            </li>
-          </ul>
+            </alpaca-list-item>
+          </alpaca-list>
         </div>
       </div>
       <alpaca-button
@@ -123,6 +121,9 @@
   import AlpacaImage from '../../02-elements/image/Image'
   import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaPrice from '../../02-elements/price/Price'
+  import AlpacaList from '../../02-elements/list/List'
+  import AlpacaListItem from '../../02-elements/list/ListItem'
+
 
   export default {
     components: {
@@ -131,7 +132,9 @@
       AlpacaHeading,
       AlpacaImage,
       AlpacaButton,
-      AlpacaPrice
+      AlpacaPrice,
+      AlpacaList,
+      AlpacaListItem
     },
     props: {
       resultText: {
@@ -185,7 +188,6 @@
   $quicksearch__background                       : $white !default;
   $quicksearch__box-shadow                       : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
   $quicksearch__results-padding                  : $spacer--medium 0 !default;
-  $quicksearch__results-margin                   : 0 !default;
   $quicksearch__results-border                   : 1px solid $gray-light !default;
   $quicksearch__empty-margin                     : $spacer 0 !default;
   $quicksearch__typed-font-weight                : $font-weight-bold !default;
@@ -196,8 +198,6 @@
   $quicksearch__close-border                     : 0 !default;
   $quicksearch__close-size                       : $spacer--medium !default;
   $quicksearch__content-padding                  : $spacer 0 !default;
-  $quicksearch__list-margin                      : 0 !default;
-  $quicksearch__list-padding                     : 0 !default;
   $quicksearch__list-padding-top--below          : $spacer--medium !default;
   $quicksearch__category-padding                 : $spacer 0 !default;
   $quicksearch__categories-column-padding        : $spacer 0 0 0 !default;
@@ -207,15 +207,14 @@
   $quicksearch__product-padding                  : $spacer 0 !default;
   $quicksearch__product-image-size               : 72px !default;
   $quicksearch__product-image-margin-right       : $spacer !default;
-  $quicksearch__name-margin                      : 0 !default;
   $quicksearch__name-padding                     : $spacer 0 !default;
   $quicksearch__name-color                       : inherit !default;
   $quicksearch__name-font-size                   : 16px !default;
   $quicksearch__name-font-weight                 : $font-weight-normal !default;
-  $quicksearch__more-button-padding                : $spacer--medium 0 !default;
-  $quicksearch__more-button-border-top             : 1px solid $gray-light !default;
-  $quicksearch__more-button-text-align             : center !default;
-  $quicksearch__more-button-font-weight            : $font-weight-bold !default;
+  $quicksearch__more-button-padding              : $spacer--medium 0 !default;
+  $quicksearch__more-button-border-top           : 1px solid $gray-light !default;
+  $quicksearch__more-button-text-align           : center !default;
+  $quicksearch__more-button-font-weight          : $font-weight-bold !default;
 
   .quicksearch {
     position: absolute;
@@ -245,7 +244,7 @@
     }
 
     &__results {
-      margin: $quicksearch__results-margin;
+      margin: $reset;
       padding: $quicksearch__results-padding;
       border-bottom: $quicksearch__results-border;
     }
@@ -285,8 +284,8 @@
     }
 
     &__list {
-      margin: $quicksearch__list-margin;
-      padding: $quicksearch__list-padding;
+      margin: $reset;
+      padding: $reset;
       list-style-type: none;
       &--column {
         flex: 2;
@@ -333,7 +332,7 @@
       color: $quicksearch__name-color;
       font-size: $quicksearch__name-font-size;
       &--thin {
-        margin: $quicksearch__name-margin;
+        margin: $reset;
         padding: $quicksearch__name-padding;
         font-weight: $quicksearch__name-font-weight;
       }
@@ -355,7 +354,8 @@
       font-weight: $quicksearch__more-button-font-weight;
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background: none;
         color: $blue;
       }

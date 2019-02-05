@@ -5,7 +5,9 @@
     "title": "Simple title",
     "src": "/images/catalog-grid-item/product-1_320_312.jpg",
     "alt": "Simple alt",
-    "text": "Lorem Ipsum is simply dummy..."
+    "text": "Lorem Ipsum is simply dummy...",
+    "specialPrice": "$ 2442",
+    "oldPrice": "$ 2 999"
   },
   {
     "id": "product2",
@@ -13,7 +15,9 @@
     "title": "Simple title",
     "src": "/images/catalog-grid-item/product-1_320_312.jpg",
     "alt": "Simple alt",
-    "text": "Lorem Ipsum is simply dummy..."
+    "text": "Lorem Ipsum is simply dummy...",
+    "specialPrice": "$ 2442",
+    "oldPrice": "$ 2 999"
   },
   {
     "id": "product3",
@@ -21,7 +25,9 @@
     "title": "Simple title",
     "src": "/images/catalog-grid-item/product-1_320_312.jpg",
     "alt": "Simple alt",
-    "text": "Lorem Ipsum is simply dummy..."
+    "text": "Lorem Ipsum is simply dummy...",
+    "specialPrice": "$ 2442",
+    "oldPrice": "$ 2 999"
   },
   {
     "id": "product4",
@@ -29,6 +35,8 @@
     "title": "Simple title",
     "src": "/images/catalog-grid-item/product-1_320_312.jpg",
     "alt": "Simple alt",
-    "text": "Lorem Ipsum is simply dummy..."
+    "text": "Lorem Ipsum is simply dummy...",
+    "specialPrice": "$ 2442",
+    "oldPrice": "$ 2 999"
   }
 ]
