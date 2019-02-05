@@ -1,69 +1,21 @@
 <template>
   <component
     :is="listTag"
-    :class="[
-      'list',
-      listClass
-    ]"
+    class="list"
   >
-    <component
-      :is="elementTag"
-      v-for="(item, idx) in elements"
-      :key="`list-item-${idx}`"
-      :class="[
-        'list__item',
-        elementClass
-      ]"
-    >
-      <component
-        :is="item.linkHref ? 'a' : 'div'"
-        :href="item.linkHref"
-        :class="[
-          {
-            'link': item.linkHref
-          },
-          item.wrapperClass
-        ]"
-      >
-        {{ item.text }}
-        <template v-if="item.icon">
-          <alpaca-icon :icon="item.icon.iconId" />
-        </template>
-      </component>
-    </component>
+    <slot />
   </component>
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon'
-
-  export default {
-    components: {
-      AlpacaIcon
-    },
-    props: {
-      elements: {
-        type: Array,
-        required: true
-      },
-      listTag: {
-        type: String,
-        default: 'ul'
-      },
-      elementTag: {
-        type: String,
-        default: 'li'
-      },
-      listClass: {
-        type: String,
-        default: null
-      },
-      elementClass: {
-        type: String,
-        default: null
-      }
+export default {
+  props: {
+    listTag: {
+      type: String,
+      default: 'ul'
     }
   }
+}
 </script>
 
 <style lang="scss">
