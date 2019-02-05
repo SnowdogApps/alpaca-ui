@@ -16,10 +16,12 @@ module.exports = {
       'singleline': 'never',
       'multiline': 'always'
     }],
+    'semi': ['error', 'never'],
     'vue/singleline-html-element-content-newline': ['error', {
       'ignoreWhenNoAttributes': true,
       'ignores': ['pre', 'textarea']
     }],
-    'vue/no-v-html': 1
+    'vue/no-v-html': 1,
+    'no-console': 1
   }
 }
