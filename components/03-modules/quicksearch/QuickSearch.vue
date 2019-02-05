@@ -124,7 +124,6 @@
   import AlpacaList from '../../02-elements/list/List'
   import AlpacaListItem from '../../02-elements/list/ListItem'
 
-
   export default {
     components: {
       AlpacaParagraph,
