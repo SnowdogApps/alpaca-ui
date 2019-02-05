@@ -1,22 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import menu from '../../03-modules/header/mocks/menu.json'
-
 import App from '../../01-globals/app/App.vue'
 import AlpacaLogin from './Login.vue'
 
 storiesOf('Views/Login', module).add('Default', () => ({
   components: { App, AlpacaLogin },
-  data: () => ({
-    menu
-  }),
   template: `
     <app>
       <alpaca-login
-        :menu="menu"
-        logoSrc="../../images/logo/alpaca.svg"
-        logoLink="#"
         mainHeading="Customer login"
         formHeading="Registered Customer"
         linkHeading="New Customer"

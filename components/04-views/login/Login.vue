@@ -1,10 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <alpaca-header
-      :menu="menu"
-      :src="logoSrc"
-      :link="logoLink"
-    />
     <div class="container">
       <alpaca-heading
         :level="1"
@@ -14,9 +9,7 @@
       </alpaca-heading>
       <div class="row login">
         <div class="col-xs-12 col-md-6">
-          <alpaca-heading
-            :level="3"
-          >
+          <alpaca-heading :level="3">
             {{ formHeading }}
           </alpaca-heading>
           <alpaca-divider />
@@ -112,7 +105,6 @@
   import AlpacaDivider from '../../02-elements/divider/Divider'
   import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
@@ -121,22 +113,9 @@
       AlpacaFieldset,
       AlpacaDivider,
       AlpacaButton,
-      AlpacaInput,
-      AlpacaHeader
+      AlpacaInput
     },
     props: {
-      menu: {
-        type: Array,
-        required: true
-      },
-      logoSrc: {
-        type: String,
-        required: true
-      },
-      logoLink: {
-        type: String,
-        required: true
-      },
       mainHeading: {
         type: String,
         required: true
