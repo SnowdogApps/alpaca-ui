@@ -1,10 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <alpaca-header
-      :menu="menu"
-      :src="logoSrc"
-      :link="logoLink"
-    />
     <div class="container">
       <alpaca-heading
         page
@@ -104,7 +99,6 @@
   import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaInput from '../../02-elements/form/input/Input'
   import AlpacaCheckbox from '../../02-elements/form/checkbox/Checkbox'
-  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
@@ -114,22 +108,9 @@
       AlpacaDivider,
       AlpacaButton,
       AlpacaInput,
-      AlpacaCheckbox,
-      AlpacaHeader
+      AlpacaCheckbox
     },
     props: {
-      menu: {
-        type: Array,
-        required: true
-      },
-      logoSrc: {
-        type: String,
-        required: true
-      },
-      logoLink: {
-        type: String,
-        required: true
-      },
       mainHeading: {
         type: String,
         required: true
