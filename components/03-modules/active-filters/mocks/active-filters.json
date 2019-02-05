@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Label",
+    "value": "Value",
+    "ariaLabel": "Disable filter",
+    "href": "#"
+  },
+  {
+    "label": "Label2",
+    "value": "Value2",
+    "ariaLabel": "Disable filter",
+    "href": "#"
+  },
+  {
+    "label": "Label3",
+    "value": "Value3",
+    "ariaLabel": "Disable filter",
+    "href": "#"
+  }
+]
