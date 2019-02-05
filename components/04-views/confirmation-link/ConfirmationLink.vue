@@ -1,10 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <alpaca-header
-      :menu="menu"
-      :src="logoSrc"
-      :link="logoLink"
-    />
     <div class="container">
       <alpaca-heading
         :level="headingLevel"
@@ -24,9 +19,7 @@
           :name="name"
           :placeholder="placeholder"
         />
-        <alpaca-button
-          @click.stop.prevent="submit"
-        >
+        <alpaca-button @click.stop.prevent="submit">
           {{ button }}
         </alpaca-button>
 
@@ -46,21 +39,15 @@
   import AlpacaLink from '../../01-globals/link/Link'
   import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaHeader from '../../03-modules/header/Header'
 
   export default {
     components: {
       AlpacaHeading,
       AlpacaLink,
       AlpacaButton,
-      AlpacaInput,
-      AlpacaHeader
+      AlpacaInput
     },
     props: {
-      menu: {
-        type: Array,
-        required: true
-      },
       headingLevel: {
         type: Number,
         required: true
@@ -94,14 +81,6 @@
         required: true
       },
       label: {
-        type: String,
-        required: true
-      },
-      logoSrc: {
-        type: String,
-        required: true
-      },
-      logoLink: {
         type: String,
         required: true
       }
