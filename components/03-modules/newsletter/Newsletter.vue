@@ -81,7 +81,7 @@
     },
     methods: {
       onSubmit() {
-        this.$emit('submit', { email: this.value, checkboxes: this.selected });
+        this.$emit('submit', { email: this.value, checkboxes: this.selected })
       }
     }
   }

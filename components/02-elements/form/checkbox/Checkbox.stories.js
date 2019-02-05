@@ -5,7 +5,6 @@ import AlpacaCheckbox from './Checkbox.vue'
 storiesOf('Elements/Form/Checkbox', module)
   .add('Default', () => ({
     components: { App, AlpacaCheckbox },
-    data: () => ({ selected: null }),
     template: `
       <app>
         <alpaca-checkbox
@@ -20,7 +19,6 @@ storiesOf('Elements/Form/Checkbox', module)
   }))
   .add('Long label', () => ({
     components: { App, AlpacaCheckbox },
-    data: () => ({ selected: null }),
     template: `
       <app>
         <alpaca-checkbox
