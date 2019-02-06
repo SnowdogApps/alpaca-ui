@@ -3,7 +3,6 @@
     <alpaca-heading :level="5">
       {{ title }}
     </alpaca-heading>
-
     <div class="dashboard-form__divider">
       <template v-if="inputs">
         <alpaca-input
@@ -18,7 +17,6 @@
           :placeholder="field.placeholder"
         />
       </template>
-
       <template v-if="options">
         <alpaca-select
           v-for="option in options"
@@ -30,7 +28,6 @@
           :label="option.label"
         />
       </template>
-
       <template v-if="checkboxes">
         <alpaca-checkbox
           v-for="checkbox in checkboxes"
@@ -45,7 +42,6 @@
           {{ checkbox.text }}
         </alpaca-checkbox>
       </template>
-
       <div class="dashboard-form__divider dashboard-form__fields">
         <template v-if="visibleInputs">
           <alpaca-heading
@@ -54,7 +50,6 @@
           >
             {{ visibleTitle.title }}
           </alpaca-heading>
-
           <alpaca-input
             v-for="field in visibleInputs"
             :id="field.id"
