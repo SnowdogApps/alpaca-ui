@@ -14,23 +14,38 @@
       >
         {{ title }}
       </alpaca-heading>
-
-      <alpaca-list
-        :elements="list"
-        :list-class="listClass"
-      />
+      <alpaca-list class="dashboard-nav__list">
+        <alpaca-list-item
+          v-for="element in list"
+          :key="element.id"
+          :element="element"
+          class="dashboard-nav__item"
+        >
+          <alpaca-link
+            :href="element.href"
+            inverted
+            class="dashboard-nav__link"
+          >
+            {{ element.text }}
+          </alpaca-link>
+        </alpaca-list-item>
+      </alpaca-list>
     </div>
   </div>
 </template>
 
 <script>
-  import AlpacaHeading from '../../../01-globals/heading/Heading.vue'
+  import AlpacaHeading from '../../../01-globals/heading/Heading'
+  import AlpacaLink from '../../../01-globals/link/Link'
   import AlpacaList from '../../../02-elements/list/List'
+  import AlpacaListItem from '../../../02-elements/list/ListItem'
 
   export default {
     components: {
+      AlpacaHeading,
+      AlpacaLink,
       AlpacaList,
-      AlpacaHeading
+      AlpacaListItem
     },
     props: {
       actualPage: {
@@ -44,10 +59,6 @@
       list: {
         type: Array,
         required: true
-      },
-      listClass: {
-        type: String,
-        default: null
       }
     },
     data() {

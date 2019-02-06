@@ -1,6 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 
-import form from './form/mocks/form'
+import checkboxes from './form/mocks/checkboxes'
+import inputs from './form/mocks/inputs'
+import hidden from './form/mocks/hiddenInputs'
 import nav from "./nav/mocks/nav";
 import items from "./items/mocks/items";
 import bodyRows from "./table/mocks/bodyRows";
@@ -16,17 +18,19 @@ storiesOf('Modules/Dashboard', module)
   .add('Form', () => ({
     components: { App, AlpacaDashboardForm },
     data: () => ({
-      form
+      checkboxes,
+      inputs,
+      hidden
     }),
     template: `
       <app>
         <alpaca-dashboard-form
-          :level="5"
-          title="Example heading"
-          :fields="form.fields"
-          :checkboxes="form.checkboxes"
-          :hiddenFields="form.hiddenFields"
-          formTitle="Form title"
+          title="Account Information"
+          :inputs="inputs"
+          :checkboxes="checkboxes"
+          :hiddenInputs="hidden.hiddenInputs"
+          :hiddenTitles="hidden.hiddenTitles"
+          formTitle="Change"
        />
       </app>
     `
@@ -39,8 +43,8 @@ storiesOf('Modules/Dashboard', module)
     template: `
       <app>
         <alpaca-dashboard-item
-         :informations="items.informations"
-         :title="items.title"
+         :elements="items"
+         title="Addresses"
        />
       </app>
     `
@@ -53,10 +57,9 @@ storiesOf('Modules/Dashboard', module)
     template: `
       <app>
         <alpaca-dashboard-nav
-          :title="nav.title"
-          :list="nav.list.elements"
-          :listClass="nav.list.class"
-          :actualPage="nav.actualPage"
+          title="My Account"
+          :list="nav"
+          actualPage="Account Dashboard"
        />
       </app>
     `

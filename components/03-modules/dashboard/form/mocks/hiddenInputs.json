@@ -1,0 +1,46 @@
+{
+  "hiddenTitles": [
+    {
+      "title": "Change Email",
+      "type": "email"
+    },
+    {
+      "title": "Change password",
+      "type": "password"
+    },
+    {
+      "title": "Change email and password",
+      "type": true
+    }
+  ],
+  "hiddenInputs" : [
+    {
+      "class": "email",
+      "text": "Email",
+      "id": "email",
+      "name": "email",
+      "type": "email"
+    },
+    {
+      "class": "password",
+      "text": "Current Passwords",
+      "id": "password",
+      "name": "password",
+      "type": true
+    },
+    {
+      "class": "newPassword",
+      "text": "New Password",
+      "id": "newPassword",
+      "name": "newPassword",
+      "type": "password"
+    },
+    {
+      "class": "confirmPassword",
+      "text": "Confirm New Password",
+      "id": "confirmPassword",
+      "name": "confirmPassword",
+      "type": "password"
+    }
+  ]
+}

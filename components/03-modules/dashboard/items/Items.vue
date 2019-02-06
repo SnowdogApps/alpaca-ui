@@ -6,19 +6,17 @@
     >
       {{ title }}
     </h3>
-
     <div class="grid dashboard-items__content">
       <div
-        v-for="(information, i) in informations"
-        :key="i"
-        :class="['dashboard-items__item', information.class]"
+        v-for="element in elements"
+        :key="element.id"
+        class="dashboard-items__item grid__column grid__column--1-4"
       >
         <h5 class="heading heading--sixth-level">
-          {{ information.title }}
+          {{ element.title }}
         </h5>
-
         <div class="dashboard-items__address">
-          {{ information.information }}
+          {{ element.information }}
         </div>
       </div>
     </div>
@@ -28,7 +26,7 @@
 <script>
   export default {
     props: {
-      informations: {
+      elements: {
         type: Array,
         required: true
       },

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "changeEmail",
+    "type": "email",
+    "text": "Change Email"
+  },
+  {
+    "id": "changePassword",
+    "type": "password",
+    "text": "Change Password"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "firstName",
+    "name": "firstName",
+    "placeholder": "First name"
+  },
+  {
+    "id": "secondName",
+    "name": "secondName",
+    "placeholder": "Second name"
+  }
+]

@@ -1,22 +1,21 @@
 <template>
   <div class="dashboard-form">
-    <alpaca-heading
-      :level="level"
-    >
+    <alpaca-heading :level="5">
       {{ title }}
     </alpaca-heading>
 
     <div class="dashboard-form__divider">
-      <template v-if="fields">
+      <template v-if="inputs">
         <alpaca-input
-          v-for="field in fields"
-          :id="field.input.field.id"
-          :key="field.input.field.id"
-          :label="field.input.field.placeholder"
+          v-for="field in inputs"
+          :id="field.id"
+          :key="field.id"
+          class="dashboard-form__divider"
+          :label="field.placeholder"
           hidden-label
           type="text"
-          :name="field.input.field.name"
-          :placeholder="field.input.field.placeholder"
+          :name="field.name"
+          :placeholder="field.placeholder"
         />
       </template>
 
@@ -25,6 +24,7 @@
           v-for="option in options"
           :id="option.id"
           :key="option.id"
+          v-model="test"
           :name="option.name"
           :options="option.options"
           :label="option.label"
@@ -34,30 +34,36 @@
       <template v-if="checkboxes">
         <alpaca-checkbox
           v-for="checkbox in checkboxes"
-          :id="checkbox.checkbox.id"
-          :key="checkbox.checkbox.id"
-          v-model="test"
-          :value="checkbox.checkbox.id"
-          @change="isChecked"
+          :id="checkbox.id"
+          :key="checkbox.id"
+          v-model="selected[checkbox.type]"
+          :value="true"
+          :unchecked-value="false"
+          class="dashboard-form__divider"
+          @change="checkedValues"
         >
-          {{ checkbox.checkbox.label.text }}
+          {{ checkbox.text }}
         </alpaca-checkbox>
       </template>
 
       <div class="dashboard-form__divider dashboard-form__fields">
-        <h5 class="heading heading--five-level dashboard-form__title-form dashboard-form__divider">
-          {{ 'Change password' }}
-        </h5>
+        <template v-if="visibleInputs">
+          <alpaca-heading
+            :level="5"
+            class="dashboard-form__title-form dashboard-form__divider"
+          >
+            {{ visibleTitle.title }}
+          </alpaca-heading>
 
-        <template v-if="hiddenFields">
           <alpaca-input
-            v-for="field in hiddenFields"
-            :id="field.hiddenField.field.id"
-            :key="field.hiddenField.field.id"
-            :label="field.hiddenField.label.text"
+            v-for="field in visibleInputs"
+            :id="field.id"
+            :key="field.id"
+            class="dashboard-form__divider"
+            :label="field.text"
             type="text"
-            :name="field.hiddenField.field.name"
-            :placeholder="field.hiddenField.label.text"
+            :name="field.name"
+            :placeholder="field.text"
           />
         </template>
       </div>
@@ -79,15 +85,11 @@
       AlpacaCheckbox
     },
     props: {
-      level: {
-        type: Number,
-        required: true
-      },
       title: {
         type: String,
         required: true
       },
-      fields: {
+      inputs: {
         type: Array,
         default: null
       },
@@ -99,23 +101,37 @@
         type: Array,
         default: null
       },
-      hiddenFields: {
+      hiddenInputs: {
+        type: Array,
+        default: null
+      },
+      hiddenTitles: {
         type: Array,
         default: null
       }
     },
     data() {
       return {
-        test: {}
+        selected: {},
+        visibleInputs: [],
+        visibleTitle: {}
       }
     },
     methods: {
-      isChecked(){
-        console.log(this.test)
+      checkedValues() {
+        const selectedItemsNumber = Object.values(this.selected).filter(el => el).length
+
+        this.visibleInputs =
+          selectedItemsNumber ? this.hiddenInputs.filter(el => this.selected[el.type] || el.type === true)
+          : []
+
+        this.visibleTitle =
+          selectedItemsNumber === 1 ? this.hiddenTitles.find(el => this.selected[el.type])
+            : selectedItemsNumber > 1 ? this.hiddenTitles.find(el => el.type === true)
+            : []
       }
     }
   }
-
 </script>
 
 <style lang="scss">
