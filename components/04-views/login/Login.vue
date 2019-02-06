@@ -59,9 +59,7 @@
           </form>
         </div>
         <div class="col-xs-12 col-md-6">
-          <alpaca-heading
-            :level="3"
-          >
+          <alpaca-heading :level="3">
             {{ linkHeading }}
           </alpaca-heading>
           <alpaca-divider />
@@ -77,9 +75,7 @@
         </div>
         <div class="col-xs-12">
           <div class="login__company-wrapper" />
-          <alpaca-heading
-            :level="3"
-          >
+          <alpaca-heading :level="3">
             {{ linkCompanyHeading }}
           </alpaca-heading>
           <alpaca-divider />
