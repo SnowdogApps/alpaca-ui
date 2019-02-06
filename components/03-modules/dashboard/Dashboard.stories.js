@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/vue'
 import checkboxes from './form/mocks/checkboxes'
 import inputs from './form/mocks/inputs'
 import hidden from './form/mocks/hiddenInputs'
-import nav from "./nav/mocks/nav";
-import items from "./items/mocks/items";
-import bodyRows from "./table/mocks/bodyRows";
-import headCells from "./table/mocks/headCells";
+import nav from "./nav/mocks/nav"
+import items from "./items/mocks/items"
+import bodyRows from "./table/mocks/bodyRows"
+import headCells from "./table/mocks/headCells"
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaDashboardForm from './form/Form.vue'
