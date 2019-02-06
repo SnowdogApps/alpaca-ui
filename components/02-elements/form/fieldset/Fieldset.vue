@@ -1,10 +1,5 @@
 <template>
-  <fieldset
-    :class="[
-      'fieldset',
-      fieldsetClass
-    ]"
-  >
+  <fieldset class="fieldset">
     <legend
       :class="[
         'fieldset__legend',
@@ -24,16 +19,12 @@
         type: String,
         required: true
       },
-      fieldsetClass: {
-        type: String,
-        default: null
-      },
       legendClass: {
-        type: String,
-        default: null
-      }
+      type: String,
+      default: null
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
