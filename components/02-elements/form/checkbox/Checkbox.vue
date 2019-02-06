@@ -14,7 +14,7 @@
       class="checkbox__field"
       @change="change($event.target.checked)"
     >
-    <icon
+    <alpaca-icon
       icon="checked"
       :class="[
         iconClass,
@@ -32,10 +32,10 @@
 </template>
 
 <script>
-  import Icon from '../../../01-globals/icon/Icon'
+  import AlpacaIcon from '../../../01-globals/icon/Icon'
 
   export default {
-    components: { Icon },
+    components: { AlpacaIcon },
     model: {
       prop: 'selectedValue',
       event: 'change'
