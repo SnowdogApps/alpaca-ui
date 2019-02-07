@@ -11,44 +11,39 @@
             <header-button icon="phone">
               Contact
             </header-button>
-
             <header-button icon="account">
               Account
             </header-button>
-
             <div class="header__minicart">
               <button
                 type="button"
                 class="header-button popup-trigger"
                 data-popuptrigger="popup-minicart"
               >
-                <alpaca-icon icon="shopping-cart" />
-
+                <alpaca-icon
+                  icon="shopping-cart"
+                  class="header-button__icon"
+                />
                 <span class="header-button__text">
                   Cart
                 </span>
-
                 <span class="header-button__counter">
                   <span class="header-button__counter-dot" />
                 </span>
               </button>
             </div>
-
             <!-- <minicart /> -->
           </div>
-
           <logo
             :src="src"
             :to="link"
           />
-
           <div class="header__search-wrapper">
             <header-search />
           </div>
         </div>
       </container>
     </header>
-
     <mega-menu :menu="menu" />
   </div>
 </template>
