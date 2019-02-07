@@ -10,7 +10,7 @@
       type="checkbox"
       class="checkbox__field"
     >
-    <icon
+    <alpaca-icon
       icon="checked"
       :class="[
         iconClass,
@@ -28,10 +28,10 @@
 </template>
 
 <script>
-  import Icon from '../../../01-globals/icon/Icon'
+  import AlpacaIcon from '../../../01-globals/icon/Icon'
 
   export default {
-    components: { Icon },
+    components: { AlpacaIcon },
     props: {
       label: {
         type: String,
