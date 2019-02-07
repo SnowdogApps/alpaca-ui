@@ -77,7 +77,7 @@
                   {{ category.title }}
                 </alpaca-heading>
               </alpaca-link>
-              {{ category.items }}
+              {{ showItems(category.items) }}
             </alpaca-list-item>
           </alpaca-list>
           <alpaca-list class="quicksearch__list quicksearch__list--below">
@@ -99,7 +99,7 @@
                   {{ manufacturer.title }}
                 </alpaca-heading>
               </alpaca-link>
-              {{ manufacturer.items }}
+              {{ showItems(manufacturer.items) }}
             </alpaca-list-item>
           </alpaca-list>
         </div>
@@ -166,8 +166,11 @@
       }
     },
     methods: {
-      seeAll(){
+      seeAll() {
         this.$emit('seeAll')
+      },
+      showItems(items) {
+        return items + ' item(s)'
       }
     }
   }
