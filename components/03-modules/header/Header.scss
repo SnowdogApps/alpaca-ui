@@ -12,6 +12,7 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
 .header {
   position: relative;
   border-bottom: 1px solid $header__border-color;
+
   @include mq($screen-l) {
     border-bottom: none;
   }
@@ -22,6 +23,7 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     display: flex;
     flex-flow: row wrap;
     padding: $reset;
+
     @include mq($screen-m) {
       padding: $header__wrapper-padding--mq-medium;
     }
@@ -35,6 +37,7 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     order: 3;
     padding: $header__logo-padding;
     border-top: 1px solid $header__border-color;
+
     @include mq($screen-m) {
       padding: $header__logo-padding--mq-medium;
       border-top: none;
@@ -49,6 +52,7 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     justify-content: center;
     padding: $header__search-wrapper-padding;
     border-top: 1px solid $header__border-color;
+
     @include mq($screen-m) {
       order: 3;
       flex-direction: column;
@@ -64,6 +68,7 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
 
   &__minicart-content {
     top: calc(100% - 1px);
+
     &.popup {
       position: absolute;
       right: 0;
@@ -78,6 +83,7 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
+
     @include mq($screen-m) {
       order: 4;
       flex: 1 $header__buttons-width--mq-medium;
