@@ -30,11 +30,11 @@
         default: false
       },
       ariaLabel: {
-      type: String,
-      default: null
+        type: String,
+        default: null
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

@@ -36,29 +36,29 @@
         default: 'button'
       },
       icon: {
-      type: String,
-      default: null
+        type: String,
+        default: null
+      },
+      iconClass: {
+        type: String,
+        default: null
+      },
+      secondary: {
+        type: Boolean,
+        default: false
+      },
+      link: {
+        type: String,
+        default: null
+      },
+      fluid: {
+        type: Boolean,
+        default: false
+      }
     },
-    iconClass: {
-      type: String,
-      default: null
-    },
-    secondary: {
-      type: Boolean,
-      default: false
-    },
-    link: {
-      type: String,
-      default: null
-    },
-    fluid: {
-      type: Boolean,
-      default: false
-    }
-  },
-  methods: {
-    onClick(event) {
-      this.$emit('click', event)
+    methods: {
+      onClick(event) {
+        this.$emit('click', event)
       }
     }
   }
@@ -171,11 +171,11 @@
       width: $button__width--fluid;
     }
 
-  &__icon {
-    width: $button__size--icon;
-    height: $button__size--icon;
-    fill: $button__fill--icon;
-    transition: $button__transition;
+    &__icon {
+      width: $button__size--icon;
+      height: $button__size--icon;
+      fill: $button__fill--icon;
+      transition: $button__transition;
+    }
   }
-}
 </style>
