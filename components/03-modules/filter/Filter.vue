@@ -14,7 +14,7 @@
         <alpaca-link
           :invert="true"
           href="#"
-          custom-class="filter__item"
+          class="filter__item"
         >
           <span
             class="filter__label"

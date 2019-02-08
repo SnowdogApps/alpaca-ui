@@ -34,10 +34,12 @@
             </div>
             <!-- <minicart /> -->
           </div>
+
           <logo
-            :src="src"
-            :to="link"
+            :src="srcLogo"
+            :to="linkLogo"
           />
+
           <div class="header__search-wrapper">
             <header-search />
           </div>
@@ -56,30 +58,30 @@
   import HeaderButton from '../header-button/HeaderButton'
   import HeaderSearch from '../header-search/HeaderSearch'
 
-  export default {
-    components: {
-      Container,
-      AlpacaIcon,
-      Logo,
-      MegaMenu,
-      HeaderButton,
-      HeaderSearch
+export default {
+  components: {
+    Container,
+    AlpacaIcon,
+    Logo,
+    MegaMenu,
+    HeaderButton,
+    HeaderSearch
+  },
+  props: {
+    menu: {
+      type: Array,
+      required: true
     },
-    props: {
-      menu: {
-        type: Array,
-        required: true
-      },
-      src: {
-        type: String,
-        required: true
-      },
-      link: {
-        type: String,
-        required: true
-      }
+    srcLogo: {
+      type: String,
+      required: true
+    },
+    linkLogo: {
+      type: String,
+      required: true
     }
   }
+}
 </script>
 
 <style lang="scss">
