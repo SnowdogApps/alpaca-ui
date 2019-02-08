@@ -1,0 +1,9 @@
+{
+  "image": {
+    "dataSrc": "/images/product/minicart-product-72_72.png",
+    "alt": "product name goes here"
+  },
+  "name": "Some product name",
+  "price": "$85.00",
+  "updateButtonText": "Update"
+}

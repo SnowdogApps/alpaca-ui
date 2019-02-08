@@ -4,8 +4,7 @@
       :for="id"
       :hidden="hiddenLabel"
       :inline="inlineLabel"
-      :custom-class="labelClass"
-      class="select__label"
+      class="labelClass, select__label"
     >
       {{ label }}
     </alpaca-label>
