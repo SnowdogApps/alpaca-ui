@@ -10,7 +10,7 @@
       {{ badgeText }}
     </alpaca-badge>
     <alpaca-link
-      href="#"
+      :href="href"
       class="catalog-grid-item__link"
     >
       <alpaca-image
@@ -22,7 +22,7 @@
     <section class="catalog-grid-item__details">
       <h2 class="catalog-grid-item__name">
         <alpaca-link
-          href="#"
+          :href="href"
           class="catalog-grid-item__link catalog-grid-item__link--name"
         >
           {{ name }}
@@ -102,6 +102,10 @@
         required: true
       },
       alt: {
+        type: String,
+        required: true
+      },
+      href: {
         type: String,
         required: true
       },
