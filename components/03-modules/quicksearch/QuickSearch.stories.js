@@ -20,8 +20,8 @@ storiesOf('Modules/Quick search', module)
       <app>
         <alpaca-quick-search
           resultText="Results for your request:"
-          resultTyped="Ni"
           noResultText="No search results found."
+          resultTyped="Ni"
           :products="products"
           :categories="categories"
           :manufacturers="manufacturers"
