@@ -9,7 +9,8 @@
     <div class="minicart-product__info">
       <h3 class="minicart-product__name">
         <alpaca-link
-          class="link link--invert minicart-product__link"
+          inverted
+          class="minicart-product__link"
           :href="productLink"
         >
           {{ productName }}
@@ -27,7 +28,8 @@
         <div class="minicart-product__qty">
           <alpaca-input
             id="mini-qty"
-            class="input input--inline minicart-product__input"
+            inline
+            class="minicart-product__input"
             :label="label"
             input-class="input__field minicart-product__field"
             type="text"
