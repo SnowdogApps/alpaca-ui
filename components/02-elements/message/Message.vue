@@ -2,13 +2,12 @@
   <div
     :class="[
       'message',
-      customClass,
       messageClass
     ]"
     role="alert"
   >
     <slot />
-    <icon
+    <alpaca-icon
       :icon="getIcon"
       class="message__icon"
     />
@@ -16,29 +15,25 @@
 </template>
 
 <script>
-  import Icon from '../../01-globals/icon/Icon'
+  import AlpacaIcon from '../../01-globals/icon/Icon'
 
   export default {
-    components: { Icon },
+    components: { AlpacaIcon },
     props: {
-      customClass: {
-        type: String,
-        default: null
-      },
       type: {
-        type: String,
-        default: null
-      },
-      icon: {
-        type: String,
-        default: null
-      }
+      type: String,
+      default: null
     },
-    computed: {
-      messageClass() {
-        switch (this.type) {
-          case 'success':
-            return 'message--success'
+    icon: {
+      type: String,
+      default: null
+    }
+  },
+  computed: {
+    messageClass() {
+      switch (this.type) {
+        case 'success':
+          return 'message--success'
 
           case 'error':
             return 'message--error'

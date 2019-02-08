@@ -2,7 +2,6 @@
   <component
     :is="tag"
     :class="[
-      customClass,
       {
         button: tag,
         'button--icon': icon,
@@ -15,7 +14,7 @@
     @click="onClick"
   >
     <slot />
-    <icon
+    <alpaca-icon
       v-if="icon"
       :icon="icon"
       :class="[
@@ -27,18 +26,14 @@
 </template>
 
 <script>
-  import Icon from '../../01-globals/icon/Icon'
+  import AlpacaIcon from '../../01-globals/icon/Icon'
 
   export default {
-    components: { Icon },
+    components: { AlpacaIcon },
     props: {
       tag: {
         type: String,
         default: 'button'
-      },
-      customClass: {
-        type: String,
-        default: null
       },
       icon: {
         type: String,
@@ -176,11 +171,11 @@
       width: $button__width--fluid;
     }
 
-  &__icon {
-    width: $button__size--icon;
-    height: $button__size--icon;
-    fill: $button__fill--icon;
-    transition: $button__transition;
+    &__icon {
+      width: $button__size--icon;
+      height: $button__size--icon;
+      fill: $button__fill--icon;
+      transition: $button__transition;
+    }
   }
-}
 </style>
