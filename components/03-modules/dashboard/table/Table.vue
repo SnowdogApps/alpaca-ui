@@ -7,7 +7,6 @@
       >
         {{ title }}
       </alpaca-heading>
-
       <alpaca-link
         :href="viewAllLink"
         class="dashboard-table__link"
@@ -15,7 +14,6 @@
         {{ 'View all' }}
       </alpaca-link>
     </div>
-
     <div class="dashboard-table__content">
       <alpaca-table caption="This is a table">
         <thead>
