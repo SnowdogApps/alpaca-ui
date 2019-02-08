@@ -11,7 +11,7 @@
     />
     <alpaca-button
       icon="search"
-      custom-class="search-form__button"
+      class="search-form__button"
     />
   </form>
 </template>

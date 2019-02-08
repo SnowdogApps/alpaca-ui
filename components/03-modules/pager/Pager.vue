@@ -4,7 +4,7 @@
       <li class="pager__item">
         <alpaca-button
           icon="arrow-left"
-          custom-class="pager__link pager__link--prev"
+          class="pager__link pager__link--prev"
           aria-label="Go to previous page"
           :disabled="currentPage < 2"
           @click="setCurrentPage(currentPage - 1)"
@@ -14,7 +14,7 @@
       <template v-if="showFirst">
         <li class="pager__item">
           <alpaca-button
-            custom-class="pager__link"
+            class="pager__link"
             @click="setCurrentPage(1)"
           >
             1
@@ -34,7 +34,7 @@
         ]"
       >
         <alpaca-button
-          custom-class="pager__link"
+          class="pager__link"
           @click="setCurrentPage(number)"
         >
           {{ number }}
@@ -47,7 +47,7 @@
         </li>
         <li class="pager__item">
           <alpaca-button
-            custom-class="pager__link"
+            class="pager__link"
             @click="setCurrentPage(numberOfPages)"
           >
             {{ numberOfPages }}
@@ -58,7 +58,7 @@
       <li class="pager__item">
         <alpaca-button
           icon="arrow-right"
-          custom-class="pager__link pager__link--next"
+          class="pager__link pager__link--next"
           aria-label="Go to next page"
           :disabled="currentPage > numberOfPages - 1"
           @click="setCurrentPage(currentPage + 1)"
