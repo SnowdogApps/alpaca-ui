@@ -29,11 +29,11 @@
           </alpaca-link>
         </h2>
         <div class="catalog-list-item__reviews">
-          <alpaca-price :price="price" />
+          <!--TODO Add rating component-->
         </div>
       </div>
       <div class="catalog-list-item__price">
-        <!--TODO price needed-->
+        <alpaca-price :price="price" />
       </div>
       <div class="catalog-grid-item__options">
         <alpaca-swatch
