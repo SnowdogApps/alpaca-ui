@@ -14,8 +14,8 @@ storiesOf('Modules/Header', module).add('Default', () => ({
     <app>
       <alpaca-header 
         :menu="menu"
-        linkLogo="#"
-        srcLogo=""
+        src="../../images/logo/alpaca.svg"
+        link="#"
       />
     </app>
   `

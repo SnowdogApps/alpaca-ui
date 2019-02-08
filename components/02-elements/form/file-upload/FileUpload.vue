@@ -50,14 +50,14 @@
 </template>
 
 <script>
-import AlpacaButton from "../../../02-elements/button/Button.vue";
+  import AlpacaButton from "../../../02-elements/button/Button"
 
-export default {
-  components: {
-    AlpacaButton
-  },
-  props: {
-    labelText: {
+  export default {
+    components: {
+      AlpacaButton
+    },
+    props: {
+      labelText: {
       type: String,
       default: 'Your file (pdf, doc, max 1 MB)'
     },
@@ -107,56 +107,56 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$file-upload__margin        : $spacer--medium !default;
-$file-upload__field-height  : 48px !default;
-$file-upload__font-size     : 14px !default;
-$file-upload__button-padding: 0 $spacer--large !default;
+  $file-upload__margin        : $spacer--medium !default;
+  $file-upload__field-height  : 48px !default;
+  $file-upload__font-size     : 14px !default;
+  $file-upload__button-padding: 0 $spacer--large !default;
 
-.file-upload {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: $file-upload__margin;
-
-  &__wrapper {
+  .file-upload {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    position: relative;
-  }
+    margin-bottom: $file-upload__margin;
 
-  &__input {
-    @include visually-hidden();
-  }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      position: relative;
+    }
 
-  &__label {
-    display: flex;
-    flex-basis: 100%;
-    margin-bottom: $spacer;
-    font-size: $file-upload__font-size;
-  }
+    &__input {
+      @include visually-hidden();
+    }
 
-  &__name {
-    font-size: $file-upload__font-size;
-    margin-top: $file-upload__margin;
+    &__label {
+      display: flex;
+      flex-basis: 100%;
+      margin-bottom: $spacer;
+      font-size: $file-upload__font-size;
+    }
 
-    @include mq($screen-s) {
-      margin-left: $file-upload__margin;
-      margin-top: 0;
+    &__name {
+      font-size: $file-upload__font-size;
+      margin-top: $file-upload__margin;
+
+      @include mq($screen-s) {
+        margin-left: $file-upload__margin;
+        margin-top: $reset;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      margin-bottom: $reset;
+      padding: $file-upload__button-padding;
+      width: 100%;
+
+      @include mq($screen-s) {
+        width: auto;
+      }
     }
   }
-
-  &__button {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0;
-    padding: $file-upload__button-padding;
-    width: 100%;
-
-    @include mq($screen-s) {
-      width: auto;
-    }
-  }
-}
 </style>

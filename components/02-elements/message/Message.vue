@@ -7,7 +7,7 @@
     role="alert"
   >
     <slot />
-    <icon
+    <alpaca-icon
       :icon="getIcon"
       class="message__icon"
     />
@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import Icon from '../../01-globals/icon/Icon.vue'
+  import AlpacaIcon from '../../01-globals/icon/Icon'
 
-export default {
-  components: { Icon },
-  props: {
-    type: {
+  export default {
+    components: { AlpacaIcon },
+    props: {
+      type: {
       type: String,
       default: null
     },
@@ -35,51 +35,51 @@ export default {
         case 'success':
           return 'message--success'
 
-        case 'error':
-          return 'message--error'
+          case 'error':
+            return 'message--error'
 
-        default:
-          return 'message--warning'
-      }
-    },
-    getIcon() {
-      if (this.icon) return this.icon
+          default:
+            return 'message--warning'
+        }
+      },
+      getIcon() {
+        if (this.icon) return this.icon
 
-      switch (this.type) {
-        case 'success':
-          return 'check'
+        switch (this.type) {
+          case 'success':
+            return 'check'
 
-        case 'error':
-          return 'error'
+          case 'error':
+            return 'error'
 
-        default:
-          return 'warning'
+          default:
+            return 'warning'
+        }
       }
     }
   }
-}
 </script>
 
 <style lang="scss">
-$message__margin-top         : $spacer--medium !default;
-$message__padding            : $spacer $spacer--extra-large !default;
-$message__margin-base        : $spacer--medium 0 0 0 !default;
-$message__font-size          : $font-size-small !default;
-$message__transition         : $transition-base !default;
-$message__background         : rgba($blue, 0.05) !default;
-$message__background--success: rgba($color-primary, 0.05) !default;
-$message__background--error  : rgba($red, 0.05) !default;
-$message__color              : $blue !default;
-$message__color--success     : $gray !default;
-$message__color--error       : $red !default;
-$message__border             : 1px solid $blue !default;
-$message__border--success    : 1px solid $color-primary !default;
-$message__border--error      : 1px solid $red !default;
-$message__border-radius      : 24px !default;
-$message__icon-spacer        : $spacer--medium !default;
-$message__icon-fill          : $blue !default;
-$message__icon-fill--success : $color-primary !default;
-$message__icon-fill--error   : $red !default;
+  $message__margin-top         : $spacer--medium !default;
+  $message__padding            : $spacer $spacer--extra-large !default;
+  $message__margin-base        : $spacer--medium 0 0 0 !default;
+  $message__font-size          : $font-size-small !default;
+  $message__transition         : $transition-base !default;
+  $message__background         : rgba($blue, 0.05) !default;
+  $message__background--success: rgba($color-primary, 0.05) !default;
+  $message__background--error  : rgba($red, 0.05) !default;
+  $message__color              : $blue !default;
+  $message__color--success     : $gray !default;
+  $message__color--error       : $red !default;
+  $message__border             : 1px solid $blue !default;
+  $message__border--success    : 1px solid $color-primary !default;
+  $message__border--error      : 1px solid $red !default;
+  $message__border-radius      : 24px !default;
+  $message__icon-spacer        : $spacer--medium !default;
+  $message__icon-fill          : $blue !default;
+  $message__icon-fill--success : $color-primary !default;
+  $message__icon-fill--error   : $red !default;
 
   .message {
     position: relative;

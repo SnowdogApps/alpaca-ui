@@ -1,25 +1,24 @@
 <template>
   <svg
     class="icon"
+    role="img"
   >
     <title>{{ title }}</title>
-    <use
-      :xlink:href="url"
-    />
+    <use :xlink:href="url" />
   </svg>
 </template>
 
 <script>
-export default {
-  props: {
-    icon: {
-      type: String,
-      required: true
-    },
-    title: {
-      type: String,
-      default: null
-    }
+  export default {
+    props: {
+      icon: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String,
+        default: null
+      }
   },
   computed: {
     url() {
@@ -30,13 +29,13 @@ export default {
 </script>
 
 <style lang="scss">
-$icon__size: 24px !default;
-$icon__padding: 2px !default;
+  $icon__size: 24px !default;
+  $icon__padding: 2px !default;
 
-.icon {
-  display: block;
-  width: $icon__size;
-  height: $icon__size;
-  padding: $icon__padding;
-}
+  .icon {
+    display: block;
+    width: $icon__size;
+    height: $icon__size;
+    padding: $icon__padding;
+  }
 </style>
