@@ -15,14 +15,14 @@ storiesOf('Modules/Minicart product', module)
     template: `
       <app>
         <alpaca-mini-cart-product
-          :imageSrc="data.productImage.dataSrc"
-          :imageAlt="data.productImage.alt"
+          :imageSrc="data.image.dataSrc"
+          :imageAlt="data.image.alt"
           productLink="#"
-          :productName="data.productName"
-          :input="data.productQty"
-          :updateButton="data.updateQty.text"
-          :editIcon="data.editIcon.iconId"
-          :removeIcon="data.removeIcon.iconId"
+          :productName="data.name"
+          label="Qty:"
+          placeholder="32"
+          :updateButton="data.updateButtonText"
+          :price="data.price"
           @edit="edit"
           @remove="remove"
           @update="update"

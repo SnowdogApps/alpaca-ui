@@ -8,7 +8,6 @@
       label="Search entire store here..."
       placeholder="Search entire store here..."
       input-class="search-form__input"
-      name="search"
     />
     <alpaca-button
       icon="search"

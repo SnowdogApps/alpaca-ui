@@ -15,26 +15,25 @@
           {{ productName }}
         </alpaca-link>
       </h3>
-
-      <!--TODO dropdown-list is needed-->
-
+      <!--TODO Add dropdown-list component -->
       <div class="minicart-product__price">
-        <!--TODO price is needed-->
-        38$
+        <alpaca-price
+          :price="price"
+          :old-price="oldPrice"
+          :special-price="specialPrice"
+        />
       </div>
-
       <div class="minicart-product__bottom">
         <div class="minicart-product__qty">
           <alpaca-input
-            v-if="input"
-            :id="input.id"
+            id="mini-qty"
             class="input input--inline minicart-product__input"
-            :label="input.label"
+            :label="label"
             input-class="input__field minicart-product__field"
-            :type="input.type"
-            :name="input.name"
-            :placeholder="input.placeholder"
-            :aria-label="input.ariaLabel"
+            type="text"
+            name="mini-qty"
+            :placeholder="placeholder"
+            aria-label="Change the quantity"
             label-class="minicart-product__label"
           />
           <alpaca-button
@@ -43,16 +42,17 @@
             {{ updateButton }}
           </alpaca-button>
         </div>
-
         <div class="minicart-product__actions">
           <alpaca-button
             class="minicart-product__button"
+            aria-label="Edit product in your shopping cart"
             :icon="editIcon"
             icon-class="minicart-product__button-icon"
             @click="edit"
           />
           <alpaca-button
             class="minicart-product__button"
+            aria-label="Remove this product from your shopping cart"
             :icon="removeIcon"
             icon-class="minicart-product__button-icon"
             @click="remove"
@@ -67,6 +67,7 @@
 import AlpacaImage from "../../02-elements/image/Image"
 import AlpacaLink from "../../01-globals/link/Link"
 import AlpacaInput from "../../02-elements/form/input/Input"
+import AlpacaPrice from "../../02-elements/price/Price"
 import AlpacaButton from "../../02-elements/button/Button"
 
 export default {
@@ -74,6 +75,7 @@ export default {
     AlpacaImage,
     AlpacaLink,
     AlpacaInput,
+    AlpacaPrice,
     AlpacaButton
   },
   props: {
@@ -97,76 +99,90 @@ export default {
       type: String,
       required: true
     },
-    editIcon: {
+    label: {
       type: String,
       required: true
+    },
+    placeholder: {
+      type: String,
+      required: true
+    },
+    editIcon: {
+      type: String,
+      default: 'edit'
     },
     removeIcon: {
       type: String,
-      required: true
+      default: 'remove'
     },
-    input: {
-      type: Object,
+    price: {
+      type: String,
+      default: null
+    },
+    oldPrice: {
+      type: String,
+      default: null
+    },
+    specialPrice: {
+      type: String,
       default: null
     }
   },
   methods: {
     remove(){
-      this.$emit('remove', event);
+      this.$emit('remove')
     },
-    edit(event){
-      this.$emit('edit', event);
+    edit(){
+      this.$emit('edit')
     },
-    update(event){
-      this.$emit('update', event);
+    update(){
+      this.$emit('update')
     }
   }
 }
 </script>
 
 <style lang="scss">
-$minicart-product__padding: $spacer--medium 0 $spacer !default;
-$minicart-product__border: 1px solid $gray-lighter !default;
-$minicart-product__spacer: $spacer !default;
+  $minicart-product__padding                        : $spacer--medium 0 $spacer !default;
+  $minicart-product__border                         : 1px solid $gray-lighter !default;
+  $minicart-product__spacer                         : $spacer !default;
 
-$minicart-product__image-width: 72px !default;
+  $minicart-product__image-width                    : 72px !default;
 
-$minicart-product__info-padding: 0 0 0 $spacer--medium !default;
+  $minicart-product__info-padding                   : 0 0 0 $spacer--medium !default;
 
-$minicart-product__name-line-height: 1.15 !default;
+  $minicart-product__name-line-height               : 1.15 !default;
 
-$minicart-product__link-text-decoration: none !default;
+  $minicart-product__link-text-decoration           : none !default;
 
-$minicart-product__update-width: 90px !default;
-$minicart-product__update-height: 32px !default;
-$minicart-product__update-padding: 0 $spacer !default;
-$minicart-product__update-margin: 0 0 $spacer 0 !default;
+  $minicart-product__update-width                   : 90px !default;
+  $minicart-product__update-height                  : 32px !default;
+  $minicart-product__update-padding                 : 0 $spacer !default;
+  $minicart-product__update-margin                  : 0 0 $spacer 0 !default;
 
-$minicart-product__input-padding: $spacer 0 !default;
+  $minicart-product__input-padding                  : $spacer 0 !default;
 
-$minicart-product__field-width: 56px !default;
-$minicart-product__field-height: 32px !default;
-$minicart-product__field-padding: $spacer !default;
-$minicart-product__field-margin: 0 0 0 $spacer !default;
+  $minicart-product__field-width                    : 56px !default;
+  $minicart-product__field-height                   : 32px !default;
+  $minicart-product__field-padding                  : $spacer !default;
+  $minicart-product__field-margin                   : 0 0 0 $spacer !default;
 
-$minicart-product__attributes-button-margin: 0 !default;
-$minicart-product__attributes-button-padding: 0 !default;
-$minicart-product__attributes-button-color: $blue !default;
-$minicart-product__attributes-button-bg-color: $white !default;
-$minicart-product__attributes-button-font-family: $font-family-base !default;
-$minicart-product__attributes-button-font-size: $font-size-small !default;
-$minicart-product__attributes-list-padding: $spacer 0 0 0 !default;
-$minicart-product__attributes-list-color: $gray-dark !default;
-$minicart-product__attributes-list-icon-margin: 0 0 0 $spacer !default;
+  $minicart-product__attributes-button-color        : $blue !default;
+  $minicart-product__attributes-button-bg-color     : $white !default;
+  $minicart-product__attributes-button-font-family  : $font-family-base !default;
+  $minicart-product__attributes-button-font-size    : $font-size-small !default;
+  $minicart-product__attributes-list-padding        : $spacer 0 0 0 !default;
+  $minicart-product__attributes-list-color          : $gray-dark !default;
+  $minicart-product__attributes-list-icon-margin    : 0 0 0 $spacer !default;
 
-$minicart-product__price-color: $color-secondary !default;
-$minicart-product__price-font-weight: $font-weight-bold !default;
+  $minicart-product__price-color                    : $color-secondary !default;
+  $minicart-product__price-font-weight              : $font-weight-bold !default;
 
-$minicart-product__action-button-bg: transparent !default;
-$minicart-product__action-icon-size: 24px !default;
-$minicart-product__action-icon-padding: 2px !default;
-$minicart-product__action-icon-color: $gray !default;
-$minicart-product__action-icon-color--active: $color-primary !default;
+  $minicart-product__action-button-bg               : transparent !default;
+  $minicart-product__action-icon-size               : 24px !default;
+  $minicart-product__action-icon-padding            : 2px !default;
+  $minicart-product__action-icon-color              : $gray !default;
+  $minicart-product__action-icon-color--active      : $color-primary !default;
 
 .minicart-product {
   display: flex;
@@ -213,8 +229,8 @@ $minicart-product__action-icon-color--active: $color-primary !default;
   &__attributes-button {
     display: flex;
     align-items: center;
-    margin: $minicart-product__attributes-button-margin;
-    padding: $minicart-product__attributes-button-padding;
+    margin: $reset;
+    padding: $reset;
     font-family: $minicart-product__attributes-button-font-family;
     font-size: $minicart-product__attributes-button-font-size;
 
