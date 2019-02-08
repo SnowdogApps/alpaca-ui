@@ -2,7 +2,7 @@
   <button class="header-button">
     <alpaca-icon
       :icon="icon"
-      custom-class="header-button__icon"
+      class="header-button__icon"
     />
 
     <span class="header-button__text">
