@@ -28,6 +28,7 @@ storiesOf('Modules/Catalog list item', module)
           :addToCartButton="data.addToCartButton.text"
           :imageSrc="data.image.dataSrc"
           :imageAlt="data.image.alt"
+          :price="data.price"
           @addToCart="addToCart"
           @addToWishList="addToWishList"
           @compare="compare"

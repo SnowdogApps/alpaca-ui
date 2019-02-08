@@ -6,5 +6,6 @@
   "name": "Some product name - very long name because that's important",
   "addToCartButton": {
     "text": "Add to Cart"
-  }
+  },
+  "price": "$ 203"
 }
