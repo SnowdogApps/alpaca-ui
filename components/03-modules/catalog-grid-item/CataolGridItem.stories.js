@@ -39,14 +39,14 @@ storiesOf('Modules/Catalog grid item', module).add('Default', () => ({
     compare: action('Compared')
   }
 }))
-.add('With special price', () => ({
-  components: { App, AlpacaCatalogGridItem },
-  data: () => ({
-    data,
-    textSwatch,
-    iconSwatch
-  }),
-  template: `
+  .add('With special price', () => ({
+    components: { App, AlpacaCatalogGridItem },
+    data: () => ({
+      data,
+      textSwatch,
+      iconSwatch
+    }),
+    template: `
     <app>
       <alpaca-catalog-grid-item
         badgeType="new"
@@ -65,9 +65,9 @@ storiesOf('Modules/Catalog grid item', module).add('Default', () => ({
       />
     </app>
   `,
-  methods: {
-    addToCart: action('Added to cart'),
-    addToWishList: action('Added to wish list'),
-    compare: action('Compared')
-  }
-}))
+    methods: {
+      addToCart: action('Added to cart'),
+      addToWishList: action('Added to wish list'),
+      compare: action('Compared')
+    }
+  }))
