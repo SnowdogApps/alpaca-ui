@@ -52,7 +52,7 @@
         <form class="catalog-grid-item__primary-form">
           <alpaca-button
             secondary
-            custom-class="catalog-grid-item__primary-action"
+            class="catalog-grid-item__primary-action"
             @click.stop.prevent="addToCart"
           >
             Add to cart
