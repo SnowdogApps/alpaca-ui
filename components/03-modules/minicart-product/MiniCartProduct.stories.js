@@ -1,10 +1,10 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
 import data from './mocks/miniCartProduct'
 
-import App from '../../01-globals/app/App.vue';
-import AlpacaMiniCartProduct from './MiniCartProduct.vue';
+import App from '../../01-globals/app/App.vue'
+import AlpacaMiniCartProduct from './MiniCartProduct.vue'
 
 storiesOf('Modules/Minicart product', module)
   .add('Default', () => ({
