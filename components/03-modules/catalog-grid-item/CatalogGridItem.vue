@@ -26,7 +26,7 @@
         >
           <alpaca-button
             :secondary="true"
-            custom-class="catalog-grid-item__primary-action"
+            class="catalog-grid-item__primary-action"
           >
             Add to cart
           </alpaca-button>
