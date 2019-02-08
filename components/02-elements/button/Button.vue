@@ -2,7 +2,6 @@
   <component
     :is="tag"
     :class="[
-      customClass,
       {
         button: tag,
         'button--icon': icon,
@@ -35,10 +34,6 @@
       tag: {
         type: String,
         default: 'button'
-      },
-      customClass: {
-        type: String,
-        default: null
       },
       icon: {
         type: String,
@@ -176,11 +171,11 @@
       width: $button__width--fluid;
     }
 
-  &__icon {
-    width: $button__size--icon;
-    height: $button__size--icon;
-    fill: $button__fill--icon;
-    transition: $button__transition;
+    &__icon {
+      width: $button__size--icon;
+      height: $button__size--icon;
+      fill: $button__fill--icon;
+      transition: $button__transition;
+    }
   }
-}
 </style>

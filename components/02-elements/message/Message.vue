@@ -2,7 +2,6 @@
   <div
     :class="[
       'message',
-      customClass,
       messageClass
     ]"
     role="alert"
@@ -21,24 +20,20 @@
   export default {
     components: { AlpacaIcon },
     props: {
-      customClass: {
-        type: String,
-        default: null
-      },
       type: {
-        type: String,
-        default: null
-      },
-      icon: {
-        type: String,
-        default: null
-      }
+      type: String,
+      default: null
     },
-    computed: {
-      messageClass() {
-        switch (this.type) {
-          case 'success':
-            return 'message--success'
+    icon: {
+      type: String,
+      default: null
+    }
+  },
+  computed: {
+    messageClass() {
+      switch (this.type) {
+        case 'success':
+          return 'message--success'
 
           case 'error':
             return 'message--error'
