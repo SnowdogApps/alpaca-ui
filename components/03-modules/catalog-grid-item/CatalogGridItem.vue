@@ -49,12 +49,9 @@
         />
       </div>
       <div class="catalog-grid-item__actions">
-        <form
-          action="#"
-          class="catalog-grid-item__primary-form"
-        >
+        <form class="catalog-grid-item__primary-form">
           <alpaca-button
-            :secondary="true"
+            secondary
             custom-class="catalog-grid-item__primary-action"
             @click.stop.prevent="addToCart"
           >
