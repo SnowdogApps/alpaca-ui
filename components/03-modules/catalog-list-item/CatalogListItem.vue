@@ -184,7 +184,6 @@
 
   $catalog-list-item__details-width                                : 100%;
   $catalog-list-item__details-margin                               : $spacer 0 0 0 !default;
-  $catalog-list-item__details-margin\@medium                       : 0 !default;
 
   $catalog-list-item__name-margin                                  : 0 $spacer 0 0 !default;
   $catalog-list-item__name-margin\@medium                          : 0 $spacer--large 0 0 !default;
@@ -192,7 +191,6 @@
   $catalog-list-item__name-font-weight                             : $font-weight-normal !default;
 
   $catalog-list-item__reviews-padding                              : 4px 0 0 0 !default;
-  $catalog-list-item__reviews-padding\@medium                      : 0 !default;
 
   $catalog-list-item__price-margin                                 : $spacer 0 !default;
   $catalog-list-item__price-margin\@medium                         : $spacer--medium 0 0 0 !default;
@@ -207,7 +205,6 @@
   $catalog-list-item__actions-primary-button-padding\@medium       : 0 $spacer !default;
 
   $catalog-list-item__actions-secondary-margin                     : 0 0 0 $spacer--medium !default;
-  $catalog-list-item__actions-secondary-margin\@medium             : 0 !default;
   $catalog-list-item__actions-secondary-button-width               : 32px !default;
   $catalog-list-item__actions-secondary-button-width\@medium       : 48px !default;
   $catalog-list-item__actions-secondary-button-height              : 32px !default;
@@ -279,7 +276,7 @@
       margin: $catalog-list-item__details-margin;
       @include mq($screen-m) {
         flex-direction: row;
-        margin: $catalog-list-item__details-margin\@medium;
+        margin: $reset;
       }
     }
 
@@ -301,7 +298,7 @@
     &__reviews {
       margin: $catalog-list-item__reviews-padding;
       @include mq($screen-m) {
-        margin: $catalog-list-item__reviews-padding\@medium;
+        margin: $reset;
       }
     }
 
@@ -347,10 +344,10 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      margin: $catalog-list-item__actions-secondary-margin\@medium;
+      margin: $reset;
       @include mq($screen-m) {
         justify-content: flex-start;
-        margin: $catalog-list-item__actions-secondary-margin\@medium;
+        margin: $reset;
       }
 
       .button {
