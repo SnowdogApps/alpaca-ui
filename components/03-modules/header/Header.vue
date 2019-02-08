@@ -11,35 +11,33 @@
             <header-button icon="phone">
               Contact
             </header-button>
-
             <header-button icon="account">
               Account
             </header-button>
-
             <div class="header__minicart">
               <button
                 type="button"
                 class="header-button popup-trigger"
                 data-popuptrigger="popup-minicart"
               >
-                <alpaca-icon icon="shopping-cart" />
-
+                <alpaca-icon
+                  icon="shopping-cart"
+                  class="header-button__icon"
+                />
                 <span class="header-button__text">
                   Cart
                 </span>
-
                 <span class="header-button__counter">
                   <span class="header-button__counter-dot" />
                 </span>
               </button>
             </div>
-
             <!-- <minicart /> -->
           </div>
 
           <logo
-            :src="src"
-            :to="link"
+            :src="srcLogo"
+            :to="linkLogo"
           />
 
           <div class="header__search-wrapper">
@@ -48,7 +46,6 @@
         </div>
       </container>
     </header>
-
     <mega-menu :menu="menu" />
   </div>
 </template>
@@ -61,30 +58,30 @@
   import HeaderButton from '../header-button/HeaderButton'
   import HeaderSearch from '../header-search/HeaderSearch'
 
-  export default {
-    components: {
-      Container,
-      AlpacaIcon,
-      Logo,
-      MegaMenu,
-      HeaderButton,
-      HeaderSearch
+export default {
+  components: {
+    Container,
+    AlpacaIcon,
+    Logo,
+    MegaMenu,
+    HeaderButton,
+    HeaderSearch
+  },
+  props: {
+    menu: {
+      type: Array,
+      required: true
     },
-    props: {
-      menu: {
-        type: Array,
-        required: true
-      },
-      src: {
-        type: String,
-        required: true
-      },
-      link: {
-        type: String,
-        required: true
-      }
+    srcLogo: {
+      type: String,
+      required: true
+    },
+    linkLogo: {
+      type: String,
+      required: true
     }
   }
+}
 </script>
 
 <style lang="scss">

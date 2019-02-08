@@ -1,14 +1,10 @@
 <template>
   <svg
-    :class="[
-      'icon',
-      customClass
-    ]"
+    class="icon"
+    role="img"
   >
     <title>{{ title }}</title>
-    <use
-      :xlink:href="url"
-    />
+    <use :xlink:href="url" />
   </svg>
 </template>
 
@@ -22,18 +18,14 @@
       title: {
         type: String,
         default: null
-      },
-      customClass: {
-        type: String,
-        default: null
       }
-    },
-    computed: {
-      url() {
-        return `/icons/sprite.svg#${this.icon}`
-      }
+  },
+  computed: {
+    url() {
+      return `/icons/sprite.svg#${this.icon}`
     }
   }
+}
 </script>
 
 <style lang="scss">
