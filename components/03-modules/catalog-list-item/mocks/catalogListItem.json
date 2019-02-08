@@ -6,15 +6,5 @@
   "name": "Some product name - very long name because that's important",
   "addToCartButton": {
     "text": "Add to Cart"
-  },
-  "buttonWishList": {
-    "iconId": "heart",
-    "iconTitle": "Heart",
-    "ariaLabel": "Heart"
-  },
-  "buttonCompare": {
-    "iconId": "compare",
-    "iconTitle": "Compare",
-    "ariaLabel": "Add to compare"
   }
 }

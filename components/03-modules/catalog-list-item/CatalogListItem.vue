@@ -11,7 +11,6 @@
         />
       </div>
     </alpaca-link>
-
     <div class="catalog-list-item__main">
       <alpaca-badge
         v-if="badgeText"
@@ -20,7 +19,6 @@
       >
         {{ badgeText }}
       </alpaca-badge>
-
       <div class="catalog-list-item__details">
         <h2 class="catalog-list-item__name">
           <alpaca-link
@@ -31,27 +29,23 @@
           </alpaca-link>
         </h2>
         <div class="catalog-list-item__reviews">
-          <!--TODO rating needed-->
+          <alpaca-price :price="price" />
         </div>
       </div>
-
       <div class="catalog-list-item__price">
         <!--TODO price needed-->
       </div>
-
       <div class="catalog-grid-item__options">
         <alpaca-swatch
           v-if="textSwatch"
           :options="textSwatch"
         />
-
         <alpaca-swatch
           v-if="iconSwatch"
           :options="iconSwatch"
           image
         />
       </div>
-
       <div class="catalog-list-item__actions">
         <div class="catalog-list-item__actions-primary">
           <alpaca-button
@@ -65,7 +59,6 @@
             :icon="buttonWishlist"
             @click="addToWishList"
           />
-
           <alpaca-button
             :icon="buttonCompare"
             @click="compare"
@@ -77,11 +70,12 @@
 </template>
 
 <script>
-  import AlpacaLink from '../../01-globals/link/Link.vue'
-  import AlpacaImage from '../../02-elements/image/Image.vue'
-  import AlpacaBadge from '../../02-elements/badge/Badge.vue'
-  import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
+  import AlpacaLink from '../../01-globals/link/Link'
+  import AlpacaImage from '../../02-elements/image/Image'
+  import AlpacaBadge from '../../02-elements/badge/Badge'
+  import AlpacaSwatch from '../../02-elements/swatch/Swatch'
+  import AlpacaPrice from '../../02-elements/price/Price'
+  import AlpacaButton from '../../02-elements/button/Button'
 
   export default {
     components: {
@@ -89,6 +83,7 @@
       AlpacaImage,
       AlpacaBadge,
       AlpacaSwatch,
+      AlpacaPrice,
       AlpacaButton
     },
     props: {
@@ -109,6 +104,10 @@
         required: true
       },
       title: {
+        type: String,
+        required: true
+      },
+      price: {
         type: String,
         required: true
       },
@@ -134,30 +133,30 @@
       },
       buttonWishlist: {
         type: String,
-        default: null
+        default: 'heart'
       },
       ariaLabelCompare: {
         type: String,
-        reguired: true
+        default: 'Add to compare'
       },
       ariaLabelWishList: {
         type: String,
-        reguired: true
+        default: 'Add to wish list'
       },
       buttonCompare: {
         type: String,
-        default: null
+        default: 'compare'
       }
     },
     methods: {
       addToCart(event) {
-        this.$emit('addToCart', event);
+        this.$emit('addToCart', event)
       },
       addToWishList(event) {
-        this.$emit('addToWishList', event);
+        this.$emit('addToWishList', event)
       },
       compare(event) {
-        this.$emit('compare', event);
+        this.$emit('compare', event)
       }
     }
   }
