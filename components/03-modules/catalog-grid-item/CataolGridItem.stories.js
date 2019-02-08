@@ -25,6 +25,38 @@ storiesOf('Modules/Catalog grid item', module).add('Default', () => ({
         :name="data.name"
         :textSwatch="textSwatch.options"
         :iconSwatch="iconSwatch.options"
+        :price="data.price"
+        @addToCart="addToCart"
+        @addToWishList="addToWishList"
+        @compare="compare"
+      />
+    </app>
+  `,
+  methods: {
+    addToCart: action('Added to cart'),
+    addToWishList: action('Added to wish list'),
+    compare: action('Compared')
+  }
+}))
+.add('With special price', () => ({
+  components: { App, AlpacaCatalogGridItem },
+  data: () => ({
+    data,
+    textSwatch,
+    iconSwatch
+  }),
+  template: `
+    <app>
+      <alpaca-catalog-grid-item
+        badgeType="new"
+        badgeText="New"
+        :image="data.image.dataSrc"
+        :alt="data.image.alt"
+        :name="data.name"
+        :textSwatch="textSwatch.options"
+        :iconSwatch="iconSwatch.options"
+        :old-price="data.oldPrice"
+        :special-price="data.specialPrice"
         @addToCart="addToCart"
         @addToWishList="addToWishList"
         @compare="compare"

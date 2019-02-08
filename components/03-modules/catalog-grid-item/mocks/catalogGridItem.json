@@ -9,23 +9,9 @@
   },
   "name": "Some product name - very long name because that's important",
   "primaryAction": {
-    "tag": "button",
-    "text": "Add to Cart",
-    "iconId": "shopping-cart",
-    "iconTitle": "Shopping cart"
+    "text": "Add to Cart"
   },
-  "secondaryActions": {
-    "wishlist": {
-      "tag": "button",
-      "iconId": "heart",
-      "iconTitle": "Heart",
-      "ariaLabel": "Add to Wish List"
-    },
-    "compare": {
-      "tag": "button",
-      "iconId": "compare",
-      "iconTitle": "Compare",
-      "ariaLabel": "Add to compare"
-    }
-  }
+  "price": "$ 234",
+  "specialPrice": "$ 200",
+  "oldPrice": "$ 299"
 }

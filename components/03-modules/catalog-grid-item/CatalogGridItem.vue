@@ -9,7 +9,6 @@
     >
       {{ badgeText }}
     </alpaca-badge>
-
     <alpaca-link
       href="#"
       class="catalog-grid-item__link"
@@ -20,7 +19,6 @@
         class="catalog-grid-item__image"
       />
     </alpaca-link>
-
     <section class="catalog-grid-item__details">
       <h2 class="catalog-grid-item__name">
         <alpaca-link
@@ -32,25 +30,24 @@
       </h2>
 
       <div class="catalog-grid-item__price">
-        <!--TODO price is needed-->
+        <alpaca-price
+          :price="price"
+          :special-price="specialPrice"
+          :old-price="oldPrice"
+        />
       </div>
-
-      <!--TODO rating is needed-->
-
+      <!--TODO Add rating component-->
       <div class="catalog-grid-item__options">
         <alpaca-swatch
           v-if="textSwatch"
           :options="textSwatch"
         />
-
         <alpaca-swatch
           v-if="iconSwatch"
           :options="iconSwatch"
           image
         />
       </div>
-
-
       <div class="catalog-grid-item__actions">
         <form
           action="#"
@@ -59,19 +56,20 @@
           <alpaca-button
             :secondary="true"
             custom-class="catalog-grid-item__primary-action"
-            @click="addToCart"
+            @click.stop.prevent="addToCart"
           >
             Add to cart
           </alpaca-button>
         </form>
-
         <div class="catalog-grid-item__secondary-action">
           <alpaca-button
-            icon="heart"
+            :icon="wishListIcon"
+            :aria-label="wishListAriaLabel"
             @click="addToWishList"
           />
           <alpaca-button
-            icon="compare"
+            :icon="compareIcon"
+            :aria-label="compareAriaLabel"
             @click="compare"
           />
         </div>
@@ -82,29 +80,31 @@
 
 <script>
   import AlpacaButton from '../../02-elements/button/Button'
-import AlpacaBadge from '../../02-elements/badge/Badge.vue'
-import AlpacaImage from '../../02-elements/image/Image.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
-import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
+  import AlpacaBadge from '../../02-elements/badge/Badge'
+  import AlpacaLink from '../../01-globals/link/Link'
+  import AlpacaPrice from '../../02-elements/price/Price'
+  import AlpacaImage from '../../02-elements/image/Image'
+  import AlpacaSwatch from '../../02-elements/swatch/Swatch'
 
   export default {
     components: {
       AlpacaButton,
-    AlpacaBadge,
-    AlpacaImage,
-    AlpacaLink,
-    AlpacaSwatch
-  },
-  props: {
-    tag: {
-      type: String,
-      default: 'div'
+      AlpacaBadge,
+      AlpacaImage,
+      AlpacaPrice,
+      AlpacaLink,
+      AlpacaSwatch
     },
-    image: {
-      type: String,
-      required: true
-    },
-    alt: {
+    props: {
+      tag: {
+        type: String,
+        default: 'div'
+      },
+      image: {
+        type: String,
+        required: true
+      },
+      alt: {
         type: String,
         required: true
       },
@@ -112,87 +112,125 @@ import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
         type: String,
         required: true
       },
+      price: {
+        type: String,
+        default: null
+      },
+      oldPrice: {
+        type: String,
+        default: null
+      },
+      specialPrice: {
+        type: String,
+        default: null
+      },
       badgeText: {
         type: String,
-      default: null
-    },
-    badgeType: {
-      type: String,
         default: null
+      },
+      badgeType: {
+        type: String,
+        default: null
+      },
+      textSwatch: {
+        type: Array,
+        default: null
+      },
+      iconSwatch: {
+        type: Array,
+        default: null
+      },
+      compareAriaLabel: {
+        type: String,
+        default: 'Add to compare'
+      },
+      wishListAriaLabel: {
+        type: String,
+        default: 'Add to Wish List'
+      },
+      compareIcon: {
+        type: String,
+        default: 'compare'
+      },
+      wishListIcon: {
+        type: String,
+        default: 'heart'
+      }
     },
-    textSwatch: {
-      type: Array,
-      default: null
-    },
-    iconSwatch: {
-      type: Array,
-      default: null
-    }
-  },
-  methods: {
-    addToCart(event) {
-      this.$emit('addToCart', event);
-    },
-    addToWishList(event) {
-      this.$emit('addToWishList', event);
-    },
-    compare(event) {
-      this.$emit('compare', event);
+    methods: {
+      addToCart(event) {
+        this.$emit('addToCart', event)
+      },
+      addToWishList(event) {
+        this.$emit('addToWishList', event)
+      },
+      compare(event) {
+        this.$emit('compare', event)
       }
     }
   }
 </script>
 
 <style lang="scss">
-  $catalog-grid-item__base-spacing: $spacer !default;
-  $catalog-grid-item__border: 1px solid $gray-lightest !default;
-  $catalog-grid-item__font-size: $font-size-base !default;
-  $catalog-grid-item__font-size--mq-large: 16px !default;
-  $catalog-grid-item__line-height: 1.5 !default;
-  $catalog-grid-item__font-weight: $font-weight-bold !default;
-  $catalog-grid-item__badge-top-position: $spacer--medium !default;
-  $catalog-grid-item__badge-left-position: 0 !default;
-  $catalog-grid-item__badge-z-index: 1 !default;
-  $catalog-grid-item__badge-padding: 5px 12px !default;
-  $catalog-grid-item__badge-bg-color: $color-primary !default;
-  $catalog-grid-item__badge-font-size: $font-size-small !default;
-  $catalog-grid-item__badge-border-radius: 0 !default;
-  $catalog-grid-item__image-width: auto !default;
-  $catalog-grid-item__image-width--lazyload: 100% !default;
-  $catalog-grid-item__image-height: auto !default;
-  $catalog-grid-item__loader-margin-top: 30% !default;
-  $catalog-grid-item__link-overflow: hidden !default;
-  $catalog-grid-item__link-overflow--visible: visible !default;
-  $catalog-grid-item__link-white-space: nowrap !default;
-  $catalog-grid-item__link-white-space--visible: normal !default;
-  $catalog-grid-item__link-text-overflow: ellipsis !default;
-  $catalog-grid-item__content-bg-color: $white !default;
-  $catalog-grid-item__content-padding: $spacer !default;
-  $catalog-grid-item__content-width: 100% !default;
-  $catalog-grid-item__content-height: 67px !default;
-  $catalog-grid-item__content-height--mq-large: 73px !default;
-  $catalog-grid-item__content-translateY: translateY(
-      -$catalog-grid-item__content-height
-  ) !default;
-  $catalog-grid-item__content-translateY--mq-large: translateY(
-      -$catalog-grid-item__content-height--mq-large
-  ) !default;
+  $catalog-grid-item__base-spacing              : $spacer !default;
+  $catalog-grid-item__border                    : 1px solid $gray-lightest !default;
+  $catalog-grid-item__font-size                 : $font-size-base !default;
+  $catalog-grid-item__font-size\@large          : 16px !default;
+  $catalog-grid-item__line-height               : 1.5 !default;
+  $catalog-grid-item__font-weight               : $font-weight-bold !default;
+
+  $catalog-grid-item__badge-top-position        : $spacer--medium !default;
+  $catalog-grid-item__badge-left-position       : 0 !default;
+  $catalog-grid-item__badge-z-index             : 1 !default;
+  $catalog-grid-item__badge-padding             : 5px 12px !default;
+  $catalog-grid-item__badge-bg-color            : $color-primary !default;
+  $catalog-grid-item__badge-font-size           : $font-size-small !default;
+  $catalog-grid-item__badge-border-radius       : 0 !default;
+
+  $catalog-grid-item__image-margin              : 0 auto !default;
+  $catalog-grid-item__image-width               : auto !default;
+  $catalog-grid-item__image-width--lazyload     : 100% !default;
+  $catalog-grid-item__image-height              : auto !default;
+
+  $catalog-grid-item__loader-margin-top         : 30% !default;
+
+  $catalog-grid-item__link-overflow             : hidden !default;
+  $catalog-grid-item__link-overflow--visible    : visible !default;
+  $catalog-grid-item__link-white-space          : nowrap !default;
+  $catalog-grid-item__link-white-space--visible : normal !default;
+  $catalog-grid-item__link-text-overflow        : ellipsis !default;
+
+  $catalog-grid-item__content-bg-color          : $white !default;
+  $catalog-grid-item__content-padding           : $spacer !default;
+  $catalog-grid-item__content-width             : 100% !default;
+  $catalog-grid-item__content-height            : 67px !default;
+  $catalog-grid-item__content-height\@large     : 73px !default;
+  $catalog-grid-item__content-translateY        : translateY(-$catalog-grid-item__content-height) !default;
+  $catalog-grid-item__content-translateY\@large : translateY(-$catalog-grid-item__content-height\@large) !default;
   $catalog-grid-item__content-translateY--active: translateY(-100%) !default;
-  $catalog-grid-item__name-color: $font-color-base !default;
-  $catalog-grid-item__name-font-weight: $font-weight-normal !default;
-  $catalog-grid-item__name-margin-botttom: $spacer !default;
-  $catalog-grid-item__name-padding--bigger: $spacer--medium 0 !default;
-  $catalog-grid-item__rating-margin-bottom: $spacer !default;
-  $catalog-grid-item__price-margin-bottom: $spacer !default;
-  $catalog-grid-item__primary-padding: 0 $spacer !default;
-  $catalog-grid-item__action-size: 48px !default;
-  $catalog-grid-item__action-background: transparent !default;
-  $catalog-grid-item__action-border: none !default;
-  $catalog-grid-item__action-cursor: pointer !default;
-  $catalog-grid-item__action-icon-size: 18px !default;
-  $catalog-grid-item__action-icon-transition: $transition-base !default;
-  $catalog-grid-item__action-icon-fill: $gray-darker !default;
-  $catalog-grid-item__action-icon-fill-hover: $green !default;
+
+  $catalog-grid-item__name-color                : $font-color-base !default;
+  $catalog-grid-item__name-font-weight          : $font-weight-normal !default;
+  $catalog-grid-item__name-margin-botttom       : $spacer !default;
+  $catalog-grid-item__name-padding--bigger      : $spacer--medium 0 !default;
+
+  $catalog-grid-item__rating-margin-bottom      : $spacer !default;
+  $catalog-grid-item__price-margin-bottom       : $spacer !default;
+
+  $catalog-grid-item__primary-padding           : 0 $spacer !default;
+
+  $catalog-grid-item__action-size               : 48px !default;
+  $catalog-grid-item__action-background         : transparent !default;
+  $catalog-grid-item__action-border             : none !default;
+  $catalog-grid-item__action-cursor             : pointer !default;
+  $catalog-grid-item__action-icon-size          : 18px !default;
+  $catalog-grid-item__action-icon-transition    : $transition-base !default;
+  $catalog-grid-item__action-icon-fill          : $gray-darker !default;
+  $catalog-grid-item__action-icon-fill-hover    : $green !default;
+
+  $catalog-grid-item__IE-margin                 : 0 $spacer $spacer--medium $spacer !default;
+  $catalog-grid-item__IE-width                  : calc(50% - #{$spacer--medium} - 1px) !default;
+  $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--medium} - 1px) !default;
 
   .catalog-grid-item {
     position: relative;
@@ -247,7 +285,7 @@ import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
       }
 
       @media all and (min-width: 768px) and (min-width: 1600px) {
-        padding-bottom: $catalog-grid-item__content-height--mq-large;
+        padding-bottom: $reset;
       }
     }
 
@@ -275,7 +313,7 @@ import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
       margin-bottom: $catalog-grid-item__name-margin-botttom;
 
       @include mq($screen-xxl) {
-        font-size: $catalog-grid-item__font-size--mq-large;
+        font-size: $reset
       }
 
       &--bigger {
@@ -296,7 +334,7 @@ import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
       white-space: nowrap;
 
       @include mq($screen-xxl) {
-        font-size: $catalog-grid-item__font-size--mq-large;
+        font-size: $reset;
       }
     }
 
@@ -313,7 +351,7 @@ import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
       }
 
       @include mq($screen-xxl) {
-        transform: $catalog-grid-item__content-translateY--mq-large;
+        transform: $reset;
       }
     }
 
