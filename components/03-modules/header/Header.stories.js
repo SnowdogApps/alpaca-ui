@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
@@ -16,7 +17,13 @@ storiesOf('Modules/Header', module).add('Default', () => ({
         :menu="menu"
         src="../../images/logo/alpaca.svg"
         link="#"
+        @goToCart="goToCart"
+        @goToWishlist="goToWishlist"
       />
     </app>
-  `
+  `,
+  methods: {
+    goToCart: action('Go to cart'),
+    goToWishlist: action('Go to wishlist')
+  }
 }))

@@ -3,7 +3,10 @@
     <container>
       <div class="header__wrapper">
         <div class="header__buttons">
-          <header-button icon="heart">
+          <header-button 
+            icon="heart" 
+            @click.native="goToWishlist"
+          >
             Wishlist
           </header-button>
           <header-button icon="phone">
@@ -17,6 +20,7 @@
               type="button"
               class="header-button popup-trigger"
               data-popuptrigger="popup-minicart"
+              @click="goToCart"
             >
               <alpaca-icon
                 icon="shopping-cart"

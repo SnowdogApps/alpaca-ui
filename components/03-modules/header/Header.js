@@ -27,5 +27,13 @@ export default {
       type: String,
       required: true
     }
+  },
+  methods: {
+    goToCart() {
+      this.$emit('goToCart')
+    },
+    goToWishlist() {
+      this.$emit('goToWishlist')
+    },
   }
 }
