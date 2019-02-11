@@ -1,0 +1,24 @@
+<component
+  :is="tag"
+  :class="[
+    {
+      button: tag,
+      'button--icon': icon,
+      'button--secondary': secondary,
+      'button--link': tag === 'a',
+      'button--fluid': fluid
+    }
+  ]"
+  :href="tag === 'a' && link"
+  @click="onClick"
+  >
+  <slot />
+  <alpaca-icon
+    v-if="icon"
+    :icon="icon"
+    :class="[
+      iconClass,
+      'button__icon'
+    ]"
+  />
+</component>

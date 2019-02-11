@@ -20,7 +20,7 @@
     <component
       :is="link ? 'span' : 'label'"
       :for="id"
-      class="checkbox__label"
+      :class="['checkbox__label', labelClass]"
     >
       {{ label }}
     </component>
@@ -51,6 +51,10 @@
         type: String,
         required: false,
         default: null
+      },
+      labelClass: {
+        type: String,
+        required: false,
       },
       link: {
         type: Boolean,
