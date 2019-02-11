@@ -3,7 +3,8 @@ import { storiesOf } from '@storybook/vue'
 import App from '../../01-globals/app/App.vue'
 import AlpacaList from './List.vue'
 import AlpacaListItem from './ListItem.vue'
-import AlpacaImageList from './ImageList.vue'
+// import AlpacaImageList from './ImageList.vue'
+import AlpacaListImageItem from './ListImageItem.vue'
 import AlpacaDescriptionList from './DescriptionList.vue'
 import AlpacaIcon from './../../01-globals/icon/Icon.vue'
 import AlpacaLink from './../../01-globals/link/Link.vue'
@@ -113,16 +114,22 @@ storiesOf('Elements/List', module)
     `
   }))
   .add('Image', () => ({
-    components: { App, AlpacaImageList },
+    components: { App, AlpacaList, AlpacaListImageItem },
     data: () => ({
       imageListElements
     }),
     template: `
       <app>
-        <alpaca-image-list
-          :listClass="'list--with-image'"
-          :elements="imageListElements"
-        />
+        <alpaca-list class="list--with-image">
+          <alpaca-list-image-item
+           v-for="item in imageListElements"
+           :key="item.id"
+           :src="item.image.src"
+           :alt="item.image.alt"
+          >
+            {{ item.text }}
+          </alpaca-list-image-item>       
+        </alpaca-list>
       </app>
     `
   }))
