@@ -18,6 +18,8 @@
             :image="productImageUrl(product.image)"
             :price="product.price.regularPrice.amount.value"
             :special-price="product.special_price"
+            :alt="product.name"
+            :href="product.href"
           />
         </ul>
       </div>
