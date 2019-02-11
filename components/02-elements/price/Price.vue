@@ -1,5 +1,12 @@
 <template>
   <div class="price">
+    <del
+      v-if="oldPrice"
+      :aria-label="setAriaLabel(oldPrice)"
+      class="price--old"
+    >
+      {{ oldPrice }}
+    </del> &nbsp;
     <ins
       v-if="specialPrice"
       :aria-label="setAriaLabel(specialPrice)"
@@ -7,13 +14,6 @@
     >
       {{ specialPrice }}
     </ins>
-    <del
-      v-if="oldPrice"
-      :aria-label="setAriaLabel(oldPrice)"
-      class="price--old"
-    >
-      {{ oldPrice }}
-    </del>
     <span
       v-if="price"
       :aria-label="setAriaLabel(price)"
