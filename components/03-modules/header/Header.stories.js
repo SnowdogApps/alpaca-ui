@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
@@ -12,7 +13,17 @@ storiesOf('Modules/Header', module).add('Default', () => ({
   }),
   template: `
     <app>
-      <alpaca-header :menu="menu"/>
+      <alpaca-header 
+        :menu="menu"
+        src="../../images/logo/alpaca.svg"
+        link="#"
+        @toggleMicrocart="toggleMicrocart"
+        @toggleWishlist="toggleWishlist"
+      />
     </app>
-  `
+  `,
+  methods: {
+    toggleMicrocart: action('toggle Microcart'),
+    toggleWishlist: action('toggle Wishlist')
+  }
 }))

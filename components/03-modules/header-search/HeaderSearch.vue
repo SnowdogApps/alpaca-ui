@@ -1,99 +1,11 @@
-<template>
-  <form class="search-form">
-    <alpaca-input
-      id="header-search"
-      :hidden-label="true"
-      type="search"
-      label="Search entire store here..."
-      placeholder="Search entire store here..."
-      input-class="search-form__input"
-    />
-    <alpaca-button 
-      icon="search" 
-      custom-class="search-form__button"
-    />
-  </form>
-</template>
+<template src="./HeaderSearch.html" />
 
 <script>
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaInput from '../../02-elements/form/input/Input.vue'
+  import instance from "./HeaderSearch.js"
 
-export default {
-  components: {
-    AlpacaButton,
-    AlpacaInput
+  export default {
+    ...instance
   }
-}
 </script>
 
-<style lang="scss">
-$search-form__height: 34px !default;
-$search-form__width: 100% !default;
-$search-form__width--extra-large: 70% !default;
-$search-form__alignment: flex-end !default;
-$search-form__margin: 0 !default;
-$search-form__border-color: $gray-light !default;
-$search-form__font-size: $font-size-small !default;
-$search-form__input-height: 32px !default;
-$search-form__button-size: 18px !default;
-$search-form__button-margin: 0 !default;
-$search-form__button-border: none !default;
-$search-form__button-background: transparent !default;
-$search-form__button-icon-color: $gray-dark !default;
-$search-form__placeholder-color: $gray !default;
-
-.search-form {
-  width: $search-form__width;
-  height: $search-form__height;
-  align-self: $search-form__alignment;
-  margin: $search-form__margin;
-  border: 1px solid $search-form__border-color;
-  border-radius: $search-form__height;
-  z-index: 1;
-  @include mq($screen-m) {
-    position: relative;
-  }
-  @include mq($screen-xl) {
-    width: $search-form__width--extra-large;
-  }
-
-  &__input-wrapper {
-    position: relative;
-  }
-
-  &__input {
-    width: 100%;
-    height: $search-form__input-height;
-    border: none;
-    border-radius: $search-form__height;
-    font-size: $search-form__font-size;
-
-    &::placeholder {
-      color: $search-form__placeholder-color;
-      font-size: $search-form__font-size;
-    }
-  }
-
-  &__button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: $search-form__input-height;
-    margin: $search-form__button-margin;
-    border: $search-form__button-border;
-    border-radius: $search-form__height;
-    background-color: $search-form__button-background;
-    &:focus,
-    &:hover {
-      background-color: $search-form__button-background;
-    }
-  }
-
-  .button__icon {
-    width: $search-form__button-size;
-    height: $search-form__button-size;
-    fill: $search-form__button-icon-color;
-  }
-}
-</style>
+<style lang="scss" src="./HeaderSearch.scss"/>

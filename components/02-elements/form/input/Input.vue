@@ -20,17 +20,24 @@
       }]"
       :name="name"
       :type="type"
+      :min="min"
+      :max="max"
       :placeholder="placeholder"
+      :value="value"
+      @input="input($event.target.value)"
     />
   </div>
 </template>
 
 <script>
-  import AlpacaLabel from '../../../01-globals/label/Label.vue'
-
+  import AlpacaLabel from '../../../01-globals/label/Label'
   export default {
     components: {
       AlpacaLabel
+    },
+    model: {
+      prop: 'value',
+      event: 'input'
     },
     props: {
       label: {
@@ -65,6 +72,14 @@
         type: Boolean,
         default: false
       },
+      min: {
+        type: Number,
+        default: null
+      },
+      max: {
+        type: Number,
+        default: null
+      },
       labelClass: {
         type: String,
         default: null
@@ -72,6 +87,15 @@
       inputClass: {
         type: String,
         default: null
+      },
+      value: {
+        type: [String, Number],
+        default: null
+      }
+    },
+    methods: {
+      input(value) {
+        this.$emit('input', value)
       }
     }
   }
@@ -89,10 +113,8 @@
   $input__placeholder-color: $gray !default;
   $input__label-margin-right: $spacer--medium !default;
   $input__min-height--textarea: 100px !default;
-
   .input {
     margin-bottom: $input__margin-bottom;
-
     &--inline {
       display: flex;
       flex-flow: row nowrap;
@@ -101,7 +123,6 @@
         margin-right: $input__label-margin-right;
       }
     }
-
     &__field {
       width: 100%;
       height: $input__field-spacing;
@@ -109,20 +130,16 @@
       padding: $input__field-padding;
       border: $input__field-border;
       border-radius: $input__field-border-radius;
-
       &[type='search'] {
         -webkit-appearance: textfield;
-
         &::-webkit-search-decoration,
         &::-webkit-search-cancel-button {
           -webkit-appearance: none;
         }
       }
-
       &::placeholder {
         color: $input__placeholder-color;
       }
-
       &--textarea {
         display: block;
         border-radius: $input__field-border-radius--textarea;
