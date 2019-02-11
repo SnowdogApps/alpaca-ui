@@ -7,10 +7,6 @@ export default {
       type: String,
       default: 'button'
     },
-    customClass: {
-      type: String,
-      default: null
-    },
     icon: {
       type: String,
       default: null

@@ -1,7 +1,6 @@
 <component
   :is="tag"
   :class="[
-    customClass,
     {
       button: tag,
       'button--icon': icon,
@@ -12,7 +11,7 @@
   ]"
   :href="tag === 'a' && link"
   @click="onClick"
->
+  >
   <slot />
   <alpaca-icon
     v-if="icon"
