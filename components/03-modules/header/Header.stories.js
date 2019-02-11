@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
 import App from '../../01-globals/app/App.vue'
@@ -6,7 +7,9 @@ import AlpacaHeader from './Header.vue'
 
 import menu from './mocks/menu.json'
 
-storiesOf('Modules/Header', module).add('Default', () => ({
+storiesOf('Modules/Header', module)
+.addDecorator(StoryRouter())
+.add('Default', () => ({
   components: { App, AlpacaHeader },
   data: () => ({
     menu
