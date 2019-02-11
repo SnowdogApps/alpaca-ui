@@ -28,7 +28,7 @@
 </template>
 
 <script>
-  import AlpacaIcon from '../../../01-globals/icon/Icon'
+  import AlpacaIcon from '../../../01-globals/icon/Icon.vue'
 
   export default {
     components: { AlpacaIcon },
@@ -55,6 +55,7 @@
       labelClass: {
         type: String,
         required: false,
+        default: null
       },
       link: {
         type: Boolean,
