@@ -23,6 +23,16 @@
           <span class="footer__social-list-subtitle">
               {{ socialListSubtitle }}
           </span>
+          <alpaca-list class="list--with-icon">
+            <alpaca-list-item
+              v-for="element in elements"
+              :key="element.id"
+            >
+              <alpaca-icon
+                :icon="element.icon.iconId"
+              />
+            </alpaca-list-item>
+          </alpaca-list>
         </div>
 
         <small class="footer__copyright">
@@ -40,12 +50,18 @@
 </template>
 
 <script>
+  import AlpacaIcon from '../../01-globals/icon/Icon'
   import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaList from '../../02-elements/list/List'
+  import AlpacaListItem from '../../02-elements/list/ListItem'
   import AlpacaCookieMessage from '../../02-elements/cookie-message/CookieMessage'
 
   export default {
     components: {
       AlpacaButton,
+      AlpacaIcon,
+      AlpacaList,
+      AlpacaListItem,
       AlpacaCookieMessage
     },
     props: {
@@ -55,7 +71,11 @@
       },
       socialListSubtitle: {
         type: String,
-        rrequired: true
+        required: true
+      },
+      elements: {
+        type: Array,
+        required: true
       }
     },
     methods: {

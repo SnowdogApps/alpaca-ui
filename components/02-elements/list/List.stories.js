@@ -26,7 +26,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
            >
          {{ element.text }}
         </alpaca-list-item>
@@ -45,7 +44,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
           >
            {{ element.text }}
           </alpaca-list-item>
@@ -64,7 +62,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
           >
            {{ element.text }}
           </alpaca-list-item>
@@ -83,7 +80,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
           >
           {{ element.text }}
           </alpaca-list-item>
@@ -102,12 +98,11 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in iconListElements"
             :key="element.id"
-            :element="element"
           >
             <alpaca-icon
               :icon="element.icon.iconId"
             />
-          </alpaca-list-item>
+          </alpaca-list-item> 
         </alpaca-list>
       </app>
     `
@@ -143,7 +138,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
           >
             {{ element.text }}
           </alpaca-list-item>
@@ -162,7 +156,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
            >
             {{ element.text }}
           </alpaca-list-item>
@@ -181,7 +174,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
           >
             {{ element.text }}
           </alpaca-list-item>
@@ -200,7 +192,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
            >
             {{ element.text }}
           </alpaca-list-item>
@@ -219,7 +210,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in listElements"
             :key="element.id"
-            :element="element"
           >
            {{ element.text }}
           </alpaca-list-item>
@@ -253,7 +243,6 @@ storiesOf('Elements/List', module)
           <alpaca-list-item
             v-for="element in linkListElements"
             :key="element.id"
-            :element="element"
             elementTag="link"
            >
             <alpaca-link>
