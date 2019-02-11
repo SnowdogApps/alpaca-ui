@@ -17,7 +17,11 @@ storiesOf('Views/Catalog', module).add('Default', () => ({
   },
   template: `
     <app>
-      <alpaca-header :menu="menu"/>
+      <alpaca-header 
+        :menu="menu"
+        src="./../images/logo/alpaca.svg"
+        link="#"
+      />
       <catalog
         :products="products.items"
         :store-config="storeConfig"
