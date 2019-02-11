@@ -35,5 +35,8 @@ export default {
     toggleWishlist() {
       this.$emit('toggleWishlist')
     },
+    goToAccount() {
+      this.$emit('goToAccount')
+    }
   }
 }
