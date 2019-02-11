@@ -12,7 +12,10 @@
           <header-button icon="phone">
             Contact
           </header-button>
-          <header-button icon="account">
+          <header-button 
+            icon="account"
+            @click.native="goToAccount()"
+          >
             Account
           </header-button>
           <div class="header__minicart">

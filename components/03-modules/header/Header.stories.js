@@ -16,17 +16,19 @@ storiesOf('Modules/Header', module)
   }),
   template: `
     <app>
-      <alpaca-header 
+      <alpaca-header
         :menu="menu"
         src="../../images/logo/alpaca.svg"
         link="#"
         @toggleMicrocart="toggleMicrocart"
         @toggleWishlist="toggleWishlist"
+        @goToAccount="goToAccount"
       />
     </app>
   `,
   methods: {
     toggleMicrocart: action('toggle Microcart'),
-    toggleWishlist: action('toggle Wishlist')
+    toggleWishlist: action('toggle Wishlist'),
+    goToAccount: action('go to Account')
   }
 }))
