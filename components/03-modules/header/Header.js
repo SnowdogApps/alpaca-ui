@@ -29,8 +29,8 @@ export default {
     }
   },
   methods: {
-    goToCart() {
-      this.$emit('goToCart')
+    toggleMicrocart() {
+      this.$emit('toggleMicrocart')
     },
     goToWishlist() {
       this.$emit('goToWishlist')

@@ -17,13 +17,13 @@ storiesOf('Modules/Header', module).add('Default', () => ({
         :menu="menu"
         src="../../images/logo/alpaca.svg"
         link="#"
-        @goToCart="goToCart"
+        @toggleMicrocart="toggleMicrocart"
         @goToWishlist="goToWishlist"
       />
     </app>
   `,
   methods: {
-    goToCart: action('Go to cart'),
+    toggleMicrocart: action('toggle Microcart'),
     goToWishlist: action('Go to wishlist')
   }
 }))
