@@ -35,11 +35,15 @@
           >
             {{ heading }}
           </alpaca-heading>
-
-          <alpaca-image-list
-            list-class="home__brands-list"
-            :elements="imageListElements"
-          />
+          <alpaca-list class="home__brands-list">
+            <alpaca-list-image-item
+              v-for="item in imageListElements"
+              :key="item.id"
+              class="home__brands-list"
+              :src="item.image.src"
+              :alt="item.image.alt"
+            />
+          </alpaca-list>
         </section>
         <section class="home__static-block">
           <article class="home__static-text">
@@ -54,13 +58,15 @@
 <script>
   import AlpacaHeading from '../../01-globals/heading/Heading'
   import AlpacaBanner from '../../02-elements/banner/Banner'
-  import AlpacaImageList from '../../02-elements/list/ImageList'
+  import AlpacaList from '../../02-elements/list/List'
+  import AlpacaListImageItem from '../../02-elements/list/ListImageItem'
 
   export default {
     components: {
       AlpacaHeading,
       AlpacaBanner,
-      AlpacaImageList
+      AlpacaList,
+      AlpacaListImageItem
     },
     props: {
       mainBanner: {
