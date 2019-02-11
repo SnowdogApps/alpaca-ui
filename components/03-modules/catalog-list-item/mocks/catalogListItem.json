@@ -1,0 +1,11 @@
+{
+  "image": {
+    "alt": "Product image",
+    "dataSrc": "/images/catalog-grid-item/product-1_320_312.jpg"
+  },
+  "name": "Some product name - very long name because that's important",
+  "addToCartButton": {
+    "text": "Add to Cart"
+  },
+  "price": "$ 203"
+}
