@@ -1,0 +1,52 @@
+<footer class="footer">
+  <div class="footer__handler row container">
+    <alpaca-button
+      icon="arrow-up"
+      icon-class="footer__icon"
+      class="footer__scroll-top"
+      aria-label="Scroll to top"
+      @click="scrollToTop()"
+    />
+    <section class="footer__newsletter col-xs-12 col-lg-3">
+      <!--TODO Add newsletter component-->
+    </section>
+    <section class="footer__links col-xs-12 col-lg-9">
+        <!--TODO Add dropdown-list component instead of this list-->
+    </section>
+  </div>
+  <section class="footer__bottom-bar">
+    <div class="footer__bottom-bar-handler container">
+      <div class="footer__social-handler">
+          <span class="footer__social-list-subtitle">
+              {{ socialListSubtitle }}
+          </span>
+        <alpaca-list class="list--with-icon list--horizontal footer__social-list">
+          <alpaca-list-item
+            v-for="element in socialElements"
+            :key="element.id"
+            :aria-label="element.ariaLabel"
+          >
+            <alpaca-link
+              class="list__icon-link"
+              :href="element.link"
+            >
+              <alpaca-icon
+                :icon="element.iconId"
+                class="footer__social-icon"
+              />
+            </alpaca-link>
+          </alpaca-list-item>
+        </alpaca-list>
+      </div>
+      <small class="footer__copyright">
+        {{ copyrightText }}
+      </small>
+    </div>
+  </section>
+  <alpaca-cookie-message
+    :text="cookieText"
+    closeIcon="close"
+    dataType="cookie"
+    closeButton="Close"
+  />
+</footer>

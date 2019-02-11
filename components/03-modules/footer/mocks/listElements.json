@@ -1,0 +1,22 @@
+[
+  {
+    "id": "el1",
+    "iconId": "youtube",
+    "ariaLabel": "Go to Alpaca Youtube Channel"
+  },
+  {
+    "id": "el2",
+    "iconId": "facebook",
+    "ariaLabel": "Go to Alpaca Facebook Page"
+  },
+  {
+    "id": "el3",
+    "iconId": "instagram",
+    "ariaLabel": "Check Alpaca on Instagram"
+  },
+  {
+    "id": "el4",
+    "iconId": "google-plus",
+    "ariaLabel": "Find Alpaca on Google Plus"
+  }
+]
