@@ -18,12 +18,12 @@ storiesOf('Modules/Header', module).add('Default', () => ({
         src="../../images/logo/alpaca.svg"
         link="#"
         @toggleMicrocart="toggleMicrocart"
-        @goToWishlist="goToWishlist"
+        @toggleWishlist="toggleWishlist"
       />
     </app>
   `,
   methods: {
     toggleMicrocart: action('toggle Microcart'),
-    goToWishlist: action('Go to wishlist')
+    toggleWishlist: action('toggle Wishlist')
   }
 }))

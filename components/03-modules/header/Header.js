@@ -32,8 +32,8 @@ export default {
     toggleMicrocart() {
       this.$emit('toggleMicrocart')
     },
-    goToWishlist() {
-      this.$emit('goToWishlist')
+    toggleWishlist() {
+      this.$emit('toggleWishlist')
     },
   }
 }
