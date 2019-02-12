@@ -1,12 +1,12 @@
-import Container from '../../01-globals/container/Container.vue'
-import CatalogFilter from '../../03-modules/filter/Filter.vue'
-import CatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import AlpacaContainer from '../../01-globals/container/Container.vue'
+import AlpacaCatalogFilter from '../../03-modules/filter/Filter.vue'
+import AlpacaCatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
 export default {
   components: {
-    Container,
-    CatalogFilter,
-    CatalogGridItem
+    AlpacaContainer,
+    AlpacaCatalogFilter,
+    AlpacaCatalogGridItem
   },
   props: {
     products: {

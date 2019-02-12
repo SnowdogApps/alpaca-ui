@@ -1,7 +1,7 @@
-<container>
+<alpaca-container>
   <div class="catalog">
     <div class="catalog__sidebar">
-      <catalog-filter
+      <alpaca-catalog-filter
         v-for="filter in filters"
         :key="filter.request_var"
         :name="filter.name"
@@ -10,7 +10,7 @@
     </div>
     <div class="catalog__products">
       <ul class="catalog-grid">
-        <catalog-grid-item
+        <alpaca-catalog-grid-item
           v-for="product in products"
           :key="product.sku"
           :name="product.name"
@@ -26,4 +26,4 @@
       </ul>
     </div>
   </div>
-</container>
+</alpaca-container>

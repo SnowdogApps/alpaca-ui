@@ -6,12 +6,12 @@ import menu from '../../03-modules/header/mocks/menu.json'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from '../../03-modules/header/Header.vue'
-import Catalog from './Catalog.vue'
+import AlpacaCatalog from './Catalog.vue'
 
 storiesOf('Views/Catalog', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-  components: { App, AlpacaHeader, Catalog },
+  components: { App, AlpacaHeader, AlpacaCatalog },
   data() {
     return {
       ...data,
@@ -25,7 +25,7 @@ storiesOf('Views/Catalog', module)
         src="./../images/logo/alpaca.svg"
         link="#"
       />
-      <catalog
+      <alpaca-catalog
         :products="products.items"
         :filters="products.filters"
       />
