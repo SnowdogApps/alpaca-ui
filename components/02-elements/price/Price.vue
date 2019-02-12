@@ -27,15 +27,15 @@
   export default {
     props: {
       price: {
-        type: [String, Number],
+        type: String,
         default: null
       },
       specialPrice: {
-        type: [String, Number],
+        type: String,
         default: null
       },
       oldPrice: {
-        type: [String, Number],
+        type: String,
         default: null
       },
       ariaLabelPrice: {
