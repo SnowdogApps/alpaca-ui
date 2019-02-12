@@ -1,0 +1,74 @@
+<component
+  :is="tag"
+  class="catalog-grid-item"
+  >
+  <alpaca-badge
+    v-if="badgeText"
+    :type="badgeType"
+  >
+    {{ badgeText }}
+  </alpaca-badge>
+  <alpaca-link
+    :href="href"
+    class="catalog-grid-item__link"
+  >
+    <alpaca-image
+      :src="image"
+      :alt="alt"
+      class="catalog-grid-item__image"
+    />
+  </alpaca-link>
+  <section class="catalog-grid-item__details">
+    <h2 class="catalog-grid-item__name">
+      <alpaca-link
+        :href="href"
+        class="catalog-grid-item__link catalog-grid-item__link--name"
+      >
+        {{ name }}
+      </alpaca-link>
+    </h2>
+
+    <div class="catalog-grid-item__price">
+      <alpaca-price
+        :price="price"
+        :special-price="specialPrice"
+        :old-price="oldPrice"
+      />
+    </div>
+    <!--TODO Add rating component-->
+    <div class="catalog-grid-item__options">
+      <alpaca-swatch
+        v-if="textSwatch"
+        :options="textSwatch"
+      />
+      <alpaca-swatch
+        v-if="iconSwatch"
+        :options="iconSwatch"
+        image
+      />
+    </div>
+    <div class="catalog-grid-item__actions">
+      <form class="catalog-grid-item__primary-form">
+        <alpaca-button
+          secondary
+          class="catalog-grid-item__primary-action"
+          @click.stop.prevent="addToCart"
+        >
+          Add to cart
+        </alpaca-button>
+      </form>
+      <div class="catalog-grid-item__secondary-action">
+        <alpaca-button
+          :icon="wishListIcon"
+          :aria-label="wishListAriaLabel"
+          @click="addToWishList"
+        />
+        <alpaca-button
+          :icon="compareIcon"
+          :aria-label="compareAriaLabel"
+          @click="compare"
+        />
+      </div>
+    </div>
+  </section>
+</component>
