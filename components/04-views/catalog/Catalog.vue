@@ -15,9 +15,14 @@
             v-for="product in products"
             :key="product.sku"
             :name="product.name"
-            :image="productImageUrl(product.image)"
-            :price="product.price.regularPrice.amount.value"
+            :image="product.image"
+            :price="product.regular_price"
             :special-price="product.special_price"
+            :old-price="product.old_price"
+            :alt="product.name"
+            :href="product.href"
+            :text-swatch="product.textSwatch"
+            :icon-swatch="product.iconSwatch"
           />
         </ul>
       </div>
@@ -44,15 +49,6 @@
       filters: {
         type: Array,
         required: true
-      },
-      storeConfig: {
-        type: Object,
-        default: null
-      }
-    },
-    methods: {
-      productImageUrl(image) {
-        return this.storeConfig.base_media_url + 'catalog/product' + image
       }
     }
   }

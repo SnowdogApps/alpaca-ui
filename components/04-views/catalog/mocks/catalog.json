@@ -1,7 +1,4 @@
 {
-  "storeConfig": {
-    "base_media_url": "http://magento-2.3.test/media/"
-  },
   "products": {
     "total_count": 187,
     "page_info": {
@@ -11,362 +8,331 @@
     "items": [
       {
         "name": "Joust Duffle Bag",
+        "alt": "Joust Duffle Bag Image",
         "sku": "24-MB01",
-        "image": "/m/b/mb01-blue-0.jpg",
-        "small_image": "/m/b/mb01-blue-0.jpg",
-        "thumbnail": "/m/b/mb01-blue-0.jpg",
-        "swatch_image": null,
-        "url_key": "joust-duffle-bag",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 34,
-              "currency": "USD"
-            }
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "iconSwatch": [
+          {
+            "id": "opt-color-orange-1",
+            "style": "background-image: url('../../images/swatch/swatch-orange.jpg')",
+            "aria-label": "Orange",
+            "text": "S",
+            "value": "S"
+          },
+          {
+            "id": "opt-color-green-2",
+            "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+            "aria-label" : "Green",
+            "text": "M",
+            "value": "M"
+          },
+          {
+            "id": "opt-color-green-3",
+            "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+            "aria-label" : "Red",
+            "text": "L",
+            "value": "L"
+          },
+          {
+            "id": "opt-color-white-4",
+            "style": "background-image: url('../../images/swatch/swatch-white.jpg')",
+            "aria-label": "White",
+            "text": "XL",
+            "value": "XL"
           }
-        },
-        "special_price": null
+        ],
+        "textSwatch": [
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-xs",
+            "text": "XS",
+            "value": "XS"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-s",
+            "text": "S",
+            "value": "S"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-m",
+            "text": "M",
+            "value": "M"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-l",
+            "text": "L",
+            "value": "L"
+          }
+        ],
+        "href": "#",
+        "url_key": "joust-duffle-bag",
+        "special_price": "34 USD",
+        "old_price": "39 USD"
       },
       {
         "name": "Strive Shoulder Pack",
+        "alt": "Strive Shoulder Pack Image",
         "sku": "24-MB04",
-        "image": "/m/b/mb04-black-0.jpg",
-        "small_image": "/m/b/mb04-black-0.jpg",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "iconSwatch": [
+          {
+            "id": "opt-color-orange-1",
+            "style": "background-image: url('../../images/swatch/swatch-orange.jpg')",
+            "aria-label": "Orange",
+            "text": "S",
+            "value": "S"
+          },
+          {
+            "id": "opt-color-green-2",
+            "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+            "aria-label" : "Green",
+            "text": "M",
+            "value": "M"
+          },
+          {
+            "id": "opt-color-green-3",
+            "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+            "aria-label" : "Red",
+            "text": "L",
+            "value": "L"
+          }
+        ],
+        "href": "#",
         "thumbnail": "/m/b/mb04-black-0.jpg",
         "swatch_image": null,
         "url_key": "strive-shoulder-pack",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 32,
-              "currency": "USD"
-            }
-          }
-        },
-        "special_price": 32
+        "old_price": "34 USD",
+        "special_price": "32 USD"
       },
       {
         "name": "Crown Summit Backpack",
+        "alt": "Crown Summit Backpack Image",
         "sku": "24-MB03",
-        "image": "/m/b/mb03-black-0.jpg",
-        "small_image": "/m/b/mb03-black-0.jpg",
-        "thumbnail": "/m/b/mb03-black-0.jpg",
-        "swatch_image": null,
-        "url_key": "crown-summit-backpack",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 38,
-              "currency": "USD"
-            }
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "textSwatch": [
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-xs",
+            "text": "XS",
+            "value": "XS"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-s",
+            "text": "S",
+            "value": "S"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-m",
+            "text": "M",
+            "value": "M"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-l",
+            "text": "L",
+            "value": "L"
           }
-        },
-        "special_price": null
+        ],
+        "href": "#",
+        "url_key": "crown-summit-backpack",
+        "regular_price": "34 USD"
       },
       {
         "name": "Wayfarer Messenger Bag",
+        "alt": "Wayfarer Messenger Bag Image",
         "sku": "24-MB05",
-        "image": "/m/b/mb05-black-0.jpg",
-        "small_image": "/m/b/mb05-black-0.jpg",
-        "thumbnail": "/m/b/mb05-black-0.jpg",
-        "swatch_image": null,
-        "url_key": "wayfarer-messenger-bag",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 45,
-              "currency": "USD"
-            }
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "textSwatch": [
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-xs",
+            "text": "XS",
+            "value": "XS"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-s",
+            "text": "S",
+            "value": "S"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-m",
+            "text": "M",
+            "value": "M"
+          },
+          {
+            "headingId": "option-label-size-1",
+            "id": "opt-size-l",
+            "text": "L",
+            "value": "L"
           }
-        },
+        ],
+        "href": "#",
+        "url_key": "wayfarer-messenger-bag",
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Rival Field Messenger",
+        "alt": "Rival Field Messenger Image",
         "sku": "24-MB06",
-        "image": "/m/b/mb06-gray-0.jpg",
-        "small_image": "/m/b/mb06-gray-0.jpg",
-        "thumbnail": "/m/b/mb06-gray-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "rival-field-messenger",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 45,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Fusion Backpack",
+        "alt": "Fusion Backpack Image",
         "sku": "24-MB02",
-        "image": "/m/b/mb02-gray-0.jpg",
-        "small_image": "/m/b/mb02-gray-0.jpg",
-        "thumbnail": "/m/b/mb02-gray-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "fusion-backpack",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 59,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Impulse Duffle",
+        "alt": "Impulse Duffle Image",
         "sku": "24-UB02",
-        "image": "/u/b/ub02-black-0.jpg",
-        "small_image": "/u/b/ub02-black-0.jpg",
-        "thumbnail": "/u/b/ub02-black-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "impulse-duffle",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 74,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Voyage Yoga Bag",
+        "alt": "Voyage Yoga Bag Image",
         "sku": "24-WB01",
-        "image": "/w/b/wb01-black-0.jpg",
-        "small_image": "/w/b/wb01-black-0.jpg",
-        "thumbnail": "/w/b/wb01-black-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "voyage-yoga-bag",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 32,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Compete Track Tote",
+        "alt": "Compete Track Tote Image",
         "sku": "24-WB02",
-        "image": "/w/b/wb02-green-0.jpg",
-        "small_image": "/w/b/wb02-green-0.jpg",
-        "thumbnail": "/w/b/wb02-green-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "compete-track-tote",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 32,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Savvy Shoulder Tote",
+        "alt": "Savvy Shoulder Tote Image",
         "sku": "24-WB05",
-        "image": "/w/b/wb05-red-0.jpg",
-        "small_image": "/w/b/wb05-red-0.jpg",
-        "thumbnail": "/w/b/wb05-red-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "savvy-shoulder-tote",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 32,
-              "currency": "USD"
-            }
-          }
-        },
-        "special_price": 24
+        "regular_price": "34 USD"
       },
       {
         "name": "Endeavor Daytrip Backpack",
+        "alt": "Endeavor Daytrip Backpack Image",
         "sku": "24-WB06",
-        "image": "/w/b/wb06-red-0.jpg",
-        "small_image": "/w/b/wb06-red-0.jpg",
-        "thumbnail": "/w/b/wb06-red-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "endeavor-daytrip-backpack",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 33,
-              "currency": "USD"
-            }
-          }
-        },
-        "special_price": 33
+        "regular_price": "34 USD"
       },
       {
         "name": "Driven Backpack",
+        "alt": "Driven Backpack Image",
         "sku": "24-WB03",
-        "image": "/w/b/wb03-purple-0.jpg",
-        "small_image": "/w/b/wb03-purple-0.jpg",
-        "thumbnail": "/w/b/wb03-purple-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "driven-backpack",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 36,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Overnight Duffle",
+        "alt": "Overnight Duffle Image",
         "sku": "24-WB07",
-        "image": "/w/b/wb07-brown-0.jpg",
-        "small_image": "/w/b/wb07-brown-0.jpg",
-        "thumbnail": "/w/b/wb07-brown-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "overnight-duffle",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 45,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Push It Messenger Bag",
+        "alt": "Push It Messenger Bag Image",
         "sku": "24-WB04",
-        "image": "/w/b/wb04-blue-0.jpg",
-        "small_image": "/w/b/wb04-blue-0.jpg",
-        "thumbnail": "/w/b/wb04-blue-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "push-it-messenger-bag",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 45,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
-        "name": "Affirm Water Bottle ",
+        "name": "Affirm Water Bottle",
+        "alt": "Affirm Water Bottle Image",
         "sku": "24-UG06",
-        "image": "/u/g/ug06-lb-0.jpg",
-        "small_image": "/u/g/ug06-lb-0.jpg",
-        "thumbnail": "/u/g/ug06-lb-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "affirm-water-bottle",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 7,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Dual Handle Cardio Ball",
+        "alt": "Dual Handle Cardio Ball Image",
         "sku": "24-UG07",
-        "image": "/u/g/ug07-bk-0.jpg",
-        "small_image": "/u/g/ug07-bk-0.jpg",
-        "thumbnail": "/u/g/ug07-bk-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "dual-handle-cardio-ball",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 12,
-              "currency": "USD"
-            }
-          }
-        },
-        "special_price": 12
+        "regular_price": "13 USD"
       },
       {
         "name": "Zing Jump Rope",
+        "alt": "Zing Jump Rope Image",
         "sku": "24-UG04",
-        "image": "/u/g/ug04-bk-0.jpg",
-        "small_image": "/u/g/ug04-bk-0.jpg",
-        "thumbnail": "/u/g/ug04-bk-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "zing-jump-rope",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 12,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Pursuit Lumaflex&trade; Tone Band",
+        "alt": "Pursuit Lumaflex&trade; Tone Band Image",
         "sku": "24-UG02",
-        "image": "/u/g/ug02-bk-0.jpg",
-        "small_image": "/u/g/ug02-bk-0.jpg",
-        "thumbnail": "/u/g/ug02-bk-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "pursuit-lumaflex-trade-tone-band",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 16,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Go-Get'r Pushup Grips",
+        "alt": "Go-Get'r Pushup Grip Images",
         "sku": "24-UG05",
-        "image": "/u/g/ug05-gr-0.jpg",
-        "small_image": "/u/g/ug05-gr-0.jpg",
-        "thumbnail": "/u/g/ug05-gr-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "go-get-r-pushup-grips",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 19,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       },
       {
         "name": "Quest Lumaflex&trade; Band",
+        "alt": "Quest Lumaflex&trade Image",
         "sku": "24-UG01",
-        "image": "/u/g/ug01-bk-0.jpg",
-        "small_image": "/u/g/ug01-bk-0.jpg",
-        "thumbnail": "/u/g/ug01-bk-0.jpg",
-        "swatch_image": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg",
+        "href": "#",
         "url_key": "quest-lumaflex-trade-band",
-        "price": {
-          "regularPrice": {
-            "amount": {
-              "value": 19,
-              "currency": "USD"
-            }
-          }
-        },
+        "regular_price": "34 USD",
         "special_price": null
       }
     ],
