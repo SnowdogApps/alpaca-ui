@@ -139,7 +139,7 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
     margin-bottom: $catalog-grid-item__name-margin-botttom;
 
     @include mq($screen-xxl) {
-      font-size: $reset
+      font-size: $catalog-grid-item__font-size\@large
     }
 
     &--bigger {
@@ -160,7 +160,7 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
     white-space: nowrap;
 
     @include mq($screen-xxl) {
-      font-size: $reset;
+      font-size: $catalog-grid-item__font-size\@large;
     }
   }
 
