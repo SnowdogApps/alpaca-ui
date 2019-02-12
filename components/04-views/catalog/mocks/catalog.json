@@ -104,7 +104,7 @@
         "thumbnail": "/m/b/mb04-black-0.jpg",
         "swatch_image": null,
         "url_key": "strive-shoulder-pack",
-        "regular_price": "34 USD",
+        "old_price": "34 USD",
         "special_price": "32 USD"
       },
       {
@@ -140,8 +140,7 @@
         ],
         "href": "#",
         "url_key": "crown-summit-backpack",
-        "regular_price": "34 USD",
-        "special_price": null
+        "regular_price": "34 USD"
       },
       {
         "name": "Wayfarer Messenger Bag",
@@ -236,8 +235,7 @@
         "image": "/images/catalog-grid-item/product-1_320_312.jpg",
         "href": "#",
         "url_key": "savvy-shoulder-tote",
-        "regular_price": "34 USD",
-        "special_price": "24 USD"
+        "regular_price": "34 USD"
       },
       {
         "name": "Endeavor Daytrip Backpack",
@@ -246,8 +244,7 @@
         "image": "/images/catalog-grid-item/product-1_320_312.jpg",
         "href": "#",
         "url_key": "endeavor-daytrip-backpack",
-        "regular_price": "34 USD",
-        "special_price": "33 USD"
+        "regular_price": "34 USD"
       },
       {
         "name": "Driven Backpack",
@@ -296,8 +293,7 @@
         "image": "/images/catalog-grid-item/product-1_320_312.jpg",
         "href": "#",
         "url_key": "dual-handle-cardio-ball",
-        "regular_price": "13 USD",
-        "special_price": "12 USD"
+        "regular_price": "13 USD"
       },
       {
         "name": "Zing Jump Rope",

@@ -6,7 +6,7 @@
       class="price--old"
     >
       {{ oldPrice }}
-    </del> &nbsp;
+    </del>
     <ins
       v-if="specialPrice"
       :aria-label="setAriaLabel(specialPrice)"
@@ -66,20 +66,24 @@
 </script>
 
 <style lang="scss">
-  $price__color: inherit !default;
-  $price__color--special: $green !default;
-  $price__color--old: inherit !default;
-  $price__font-weight: $font-weight-bold !default;
-  $price__font-weight--old: $font-weight-normal !default;
-  $price__font-weight--old: $font-weight-normal !default;
+  $price__color              : inherit !default;
+  $price__color--special     : $green !default;
+  $price__color--old         : inherit !default;
+  $price__font-weight        : $font-weight-bold !default;
+  $price__font-weight--old   : $font-weight-normal !default;
+  $price__font-weight--old   : $font-weight-normal !default;
+  $price__special-margin-left: $spacer !default;
 
   .price {
     font-weight: $price__font-weight;
+
     &--old {
       text-decoration: line-through;
       font-weight: $price__font-weight--old;
     }
+
     &--special {
+      margin-left: $price__special-margin-left;
       color: $price__color--special;
       text-decoration: none;
     }
