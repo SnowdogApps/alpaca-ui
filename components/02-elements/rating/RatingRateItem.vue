@@ -37,7 +37,7 @@
     },
     methods: {
       onClick() {
-        this.$emit('select');
+        this.$emit('select')
       }
     }
   }

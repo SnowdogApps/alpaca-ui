@@ -69,7 +69,8 @@
     },
     methods: {
       onSelect(selectedIndex) {
-        this.$emit('change', selectedIndex);
+        console.log(selectedIndex, this.rating, this.rating >= selectedIndex, this.rating === selectedIndex)
+        this.$emit('change', selectedIndex)
       }
     }
   }
