@@ -8,8 +8,8 @@
   >
     {{ badgeText }}
   </alpaca-badge>
-  <alpaca-link
-    :href="href"
+  <router-link
+    :to="href"
     class="catalog-grid-item__link"
   >
     <alpaca-image
@@ -17,15 +17,15 @@
       :alt="alt"
       class="catalog-grid-item__image"
     />
-  </alpaca-link>
+  </router-link>
   <section class="catalog-grid-item__details">
     <h2 class="catalog-grid-item__name">
-      <alpaca-link
-        :href="href"
+      <router-link
+        :to="href"
         class="catalog-grid-item__link catalog-grid-item__link--name"
       >
         {{ name }}
-      </alpaca-link>
+      </router-link>
     </h2>
 
     <div class="catalog-grid-item__price">
