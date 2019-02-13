@@ -3,28 +3,29 @@
   class="catalog-grid-item"
   >
   <alpaca-badge
-    v-if="badgeText"
-    :type="badgeType"
+    v-if="badge"
+    :type="badge"
+    class="catalog-grid-item__badge"
   >
-    {{ badgeText }}
+    {{ badge }}
   </alpaca-badge>
   <router-link
-    :to="href"
+    :to="url"
     class="catalog-grid-item__link"
   >
     <alpaca-image
       :src="image"
-      :alt="alt"
+      :alt="product.name"
       class="catalog-grid-item__image"
     />
   </router-link>
   <section class="catalog-grid-item__details">
     <h2 class="catalog-grid-item__name">
       <router-link
-        :to="href"
+        :to="url"
         class="catalog-grid-item__link catalog-grid-item__link--name"
       >
-        {{ name }}
+        {{ product.name }}
       </router-link>
     </h2>
 
@@ -37,7 +38,7 @@
     </div>
     <!--TODO Add rating component-->
     <div class="catalog-grid-item__options">
-      <alpaca-swatch
+      <!-- <alpaca-swatch
         v-if="textSwatch"
         :options="textSwatch"
       />
@@ -45,7 +46,7 @@
         v-if="iconSwatch"
         :options="iconSwatch"
         image
-      />
+      /> -->
     </div>
     <div class="catalog-grid-item__actions">
       <form class="catalog-grid-item__primary-form">
