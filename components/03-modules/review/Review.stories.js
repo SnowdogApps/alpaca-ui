@@ -1,8 +1,10 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaReview from './review/Review.vue'
 import AlpacaReviewSummary from './review-summary/ReviewSummary.vue'
+import AlpacaReviewAdd from './review-add/ReviewAdd.vue'
 
 import reviews from './mocks/reviews.json'
 
@@ -36,4 +38,20 @@ storiesOf('Modules/Review', module)
       />
     </app>
   `
+  }))
+  .add('Add', () => ({
+    components: { App, AlpacaReviewAdd },
+    template: `
+    <app>
+      <alpaca-review-add
+        product-title="Product name"
+        heading-text="YOU'RE REVIEWING"
+        legend-text=""
+        @addReview="addReview"
+      />
+    </app>
+  `,
+    methods: {
+      addReview: action('Added')
+    }
   }))
