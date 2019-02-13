@@ -1,60 +1,15 @@
-<template>
-  <component
-    :is="tag"
-    :class="['badge', {
-      'badge--new': type === 'new' ,
-      'badge--discount': type === 'discount'
-    }]"
-  >
-    <slot />
-  </component>
-</template>
+<template src="./Badge.html" />
 
 <script>
+  import instance from "./Badge.js"
+
   export default {
-    props: {
-      tag: {
-        type: String,
-        default: 'div'
-      },
-      type: {
-        type: String,
-        default: null,
-        validate: type => ['new', 'discount'].indexOf(type)
-      }
-    }
+    ...instance
   }
+
 </script>
 
-<style lang="scss">
-  $badge__padding: 3px 13px !default;
-  $badge__background: $bg-color-base !default;
-  $badge__border-radius: $border-radius !default;
-  $badge__font-size: $font-size-small !default;
-  $badge__font-family: $font-family-base !default;
-  $badge__font-weight: $font-weight-bold !default;
-  $badge__text-transform: uppercase !default;
-  $badge__color: $font-color-base !default;
-  $badge__color--new: $color-success !default;
-  $badge__color--discount: $color-danger !default;
-
-  .badge {
-    display: inline-flex;
-    padding: $badge__padding;
-    font-family: $badge__font-family;
-    font-size: $badge__font-size;
-    font-weight: $badge__font-weight;
-    text-transform: $badge__text-transform;
-    color: $badge__color;
-    background: $badge__background;
-    border-radius: $badge__border-radius;
-
-    &--new {
-      color: $badge__color--new;
-    }
-
-    &--discount {
-      color: $badge__color--discount;
-    }
-  }
-</style>
+<style 
+  lang="scss" 
+  src="./Badge.scss"
+/>
