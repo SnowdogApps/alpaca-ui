@@ -1,6 +1,5 @@
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaBadge from '../../02-elements/badge/Badge.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
 import AlpacaPrice from '../../02-elements/price/Price.vue'
 import AlpacaImage from '../../02-elements/image/Image.vue'
 import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
@@ -11,7 +10,6 @@ export default {
     AlpacaBadge,
     AlpacaImage,
     AlpacaPrice,
-    AlpacaLink,
     AlpacaSwatch
   },
   props: {
