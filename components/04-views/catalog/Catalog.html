@@ -3,9 +3,9 @@
     <div class="catalog__sidebar">
       <alpaca-catalog-filter
         v-for="filter in filters"
-        :key="filter.request_var"
+        :key="filter.code"
         :name="filter.name"
-        :items="filter.filter_items"
+        :items="filter.items"
       />
     </div>
     <div class="catalog__products">
