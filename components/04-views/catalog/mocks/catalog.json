@@ -35,6 +35,66 @@
         "specialPrice": "$100,00",
         "oldPrice": "$299,99",
         "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Some product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Some product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Some product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Some extra product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Some extra product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Some extra product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
       }
     ],
     "filters": [
