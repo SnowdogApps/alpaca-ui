@@ -18,15 +18,15 @@ storiesOf('Modules/Catalog grid item', module)
       <app>
         <alpaca-catalog-grid-item
           :product="data.product"
-          @addToCart="addToCart"
-          @addToWishList="addToWishList"
-          @compare="compare"
+          @addToCart="addToCart()"
+          @addToWishList="addToWishList()"
+          @addToCompare="addToCompare()"
         />
       </app>
     `,
     methods: {
-      addToCart: action('Added to cart'),
-      addToWishList: action('Added to wish list'),
-      compare: action('Compared')
+      addToCart: action('Added to Cart'),
+      addToWishList: action('Added to Wishlist'),
+      addToCompare: action('Added to Compare')
     }
   }))

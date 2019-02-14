@@ -15,7 +15,7 @@ export default {
   props: {
     tag: {
       type: String,
-      default: 'div'
+      default: 'li'
     },
     product: {
       type: Object,
@@ -45,8 +45,8 @@ export default {
     addToWishList(event) {
       this.$emit('addToWishList', event)
     },
-    compare(event) {
-      this.$emit('compare', event)
+    addToCompare(event) {
+      this.$emit('addToCompare', event)
     }
   }
 }
