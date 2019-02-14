@@ -17,11 +17,6 @@ storiesOf('Modules/Catalog grid item', module)
     template: `
       <app>
         <alpaca-catalog-grid-item
-          :badge="data.badge"
-          :image="data.image.dataSrc"
-          :alt="data.image.alt"
-          :name="data.name"
-          :url="data.url"
           :product="data.product"
           @addToCart="addToCart"
           @addToWishList="addToWishList"
