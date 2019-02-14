@@ -1,6 +1,5 @@
 $dropdown-list__width                     : 100% !default;
 $dropdown-list__bg-color                  : $white !default;
-$dropdown-list__border-radius             : 0 !default;
 $dropdown-list__outline                   : none !default;
 $dropdown-list__font-size                 : $font-size-base !default;
 $dropdown-list__transition-height         : height 0.3s !default;
@@ -215,7 +214,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
     padding: $dropdown-list__item-padding;
     margin: 0;
     border: 0;
-    border-radius: $dropdown-list__border-radius;
+    border-radius: $reset;
     text-decoration: none;
     text-align: left;
     cursor: pointer;
