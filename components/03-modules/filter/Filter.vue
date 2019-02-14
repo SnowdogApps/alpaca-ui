@@ -3,13 +3,11 @@
     <heading level="2">
       {{ name }}
     </heading>
-
     <divider />
-
     <ul class="filter__content">
       <li
         v-for="item in items"
-        :key="item.label"
+        :key="item.id"
       >
         <alpaca-link
           :invert="true"
@@ -18,7 +16,7 @@
         >
           <span
             class="filter__label"
-            v-html="`${item.label} (${item.items_count})`"
+            v-html="item.label"
           />
         </alpaca-link>
       </li>
@@ -27,9 +25,9 @@
 </template>
 
 <script>
-  import Heading from '../../01-globals/heading/Heading'
-  import Divider from '../../02-elements/divider/Divider'
-  import AlpacaLink from '../../01-globals/link/Link'
+  import Heading from '../../01-globals/heading/Heading.vue'
+  import Divider from '../../02-elements/divider/Divider.vue'
+  import AlpacaLink from '../../01-globals/link/Link.vue'
 
   export default {
     components: {
