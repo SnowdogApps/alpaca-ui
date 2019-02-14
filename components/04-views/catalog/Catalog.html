@@ -3,9 +3,9 @@
     <div class="catalog__sidebar">
       <alpaca-catalog-filter
         v-for="filter in filters"
-        :key="filter.request_var"
+        :key="filter.code"
         :name="filter.name"
-        :items="filter.filter_items"
+        :items="filter.items"
       />
     </div>
     <div class="catalog__products">
@@ -13,15 +13,7 @@
         <alpaca-catalog-grid-item
           v-for="product in products"
           :key="product.sku"
-          :name="product.name"
-          :image="product.image"
-          :price="product.regular_price"
-          :special-price="product.special_price"
-          :old-price="product.old_price"
-          :alt="product.name"
-          :href="product.href"
-          :text-swatch="product.textSwatch"
-          :icon-swatch="product.iconSwatch"
+          :product="product"
         />
       </ul>
     </div>

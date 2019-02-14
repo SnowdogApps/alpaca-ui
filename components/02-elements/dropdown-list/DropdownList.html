@@ -1,0 +1,11 @@
+<div :class="['dropdown-list', {
+  'dropdown-list--inner': inner,
+  'dropdown-list--secondary': secondary,
+  'dropdown-list--dark': dark,
+  'dropdown-list@screen-m dropdown-list--is-open@screen-m': screenM
+  }]"
+>
+  <ul class="dropdown-list__list">
+    <slot />
+  </ul>
+</div>

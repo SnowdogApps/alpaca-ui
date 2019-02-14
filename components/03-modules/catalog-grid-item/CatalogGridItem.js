@@ -15,51 +15,11 @@ export default {
   props: {
     tag: {
       type: String,
-      default: 'div'
+      default: 'li'
     },
-    image: {
-      type: String,
+    product: {
+      type: Object,
       required: true
-    },
-    alt: {
-      type: String,
-      required: true
-    },
-    href: {
-      type: String,
-      required: true
-    },
-    name: {
-      type: String,
-      required: true
-    },
-    price: {
-      type: [String, Number],
-      default: null
-    },
-    oldPrice: {
-      type: [String, Number],
-      default: null
-    },
-    specialPrice: {
-      type: [String, Number],
-      default: null
-    },
-    badgeText: {
-      type: String,
-      default: null
-    },
-    badgeType: {
-      type: String,
-      default: null
-    },
-    textSwatch: {
-      type: Array,
-      default: null
-    },
-    iconSwatch: {
-      type: Array,
-      default: null
     },
     compareAriaLabel: {
       type: String,
@@ -85,8 +45,8 @@ export default {
     addToWishList(event) {
       this.$emit('addToWishList', event)
     },
-    compare(event) {
-      this.$emit('compare', event)
+    addToCompare(event) {
+      this.$emit('addToCompare', event)
     }
   }
 }
