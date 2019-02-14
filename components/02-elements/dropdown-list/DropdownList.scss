@@ -211,6 +211,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
     position: relative;
     width: 100%;
     background-color: $dropdown-list__item-bg-color;
+    color: $black;
     padding: $dropdown-list__item-padding;
     margin: 0;
     border: 0;
@@ -223,6 +224,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
     &:hover,
     &:focus {
       background-color: $dropdown-list__item-bg-color-hover;
+      color: $blue;
       text-decoration: none;
       outline: $dropdown-list__outline;
 

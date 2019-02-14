@@ -1,6 +1,7 @@
 [
   {
-    "title": "All"
+    "title": "All",
+    "href": "#"
   },
   {
     "title": "dropdown title",
@@ -11,5 +12,15 @@
     "title": "some longer longer and longer dropdown title",
     "id": "dropdown-2",
     "contentElement": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
+  },
+  {
+    "title": "dropdown title",
+    "id": "dropdown-link-3",
+    "href": "#"
+  },
+  {
+    "title": "dropdown title",
+    "id": "dropdown-link-4",
+    "href": "#"
   }
 ]

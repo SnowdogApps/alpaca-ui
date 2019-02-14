@@ -18,7 +18,7 @@ export default {
     },
     inner: {
       type: Boolean,
-      default: false
+      default() { return this.nested }
     },
     screenM: {
       type: Boolean,

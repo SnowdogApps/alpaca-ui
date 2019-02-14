@@ -6,34 +6,35 @@ import AlpacaDropdownListItem from "./dropdown-list-item/DropdownListItem.vue"
 import AlpacaDropdownListLink from "./dropdown-list-link/DropdownListLink.vue"
 
 import dropdownListItems from "./mocks/dropdownListItems.json"
-import dropdownListLinks from "./mocks/dropdownListLinks.json"
 import nestedDropdownList from "./mocks/nestedDropdownList.json"
 
 storiesOf("Elements/Dropdown List", module)
   .add("Default", () => ({
     components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
-      dropdownListItems,
-      dropdownListLinks
+      dropdownListItems
     }),
     template: `
       <app>
         <alpaca-dropdown-list>
-          <alpaca-dropdown-list-item 
-            v-for="element in dropdownListItems" 
-            :title="element.title" 
-            :key="element.id" 
-            :collapse="true" 
-            id="element.id" 
-          >
-            {{ element.contentElement }}
-          </alpaca-dropdown-list-item>
-          <alpaca-dropdown-list-link 
-            v-for="element in dropdownListLinks" 
-            :key="element.id" 
-            :title="element.title" 
-            :href="element.href" 
-          />
+          <template v-for="element in dropdownListItems">
+            <alpaca-dropdown-list-item 
+              v-if="element.contentElement"
+              :title="element.title" 
+              :key="element.id" 
+              :collapse="true" 
+              id="element.id" 
+            >      
+
+              {{ element.contentElement }}
+            </alpaca-dropdown-list-item>
+            <alpaca-dropdown-list-link 
+              v-else
+              :key="element.id" 
+              :title="element.title" 
+              :href="element.href" 
+            />
+          </template>
         </alpaca-dropdown-list>
       </app>
     `
@@ -41,27 +42,28 @@ storiesOf("Elements/Dropdown List", module)
   .add("Screen M", () => ({
     components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
-      dropdownListItems,
-      dropdownListLinks
+      dropdownListItems
     }),
     template: `
       <app>
         <alpaca-dropdown-list screenM>
-          <alpaca-dropdown-list-item 
-            v-for="element in dropdownListItems" 
-            :title="element.title" 
-            :key="element.id" 
-            :collapse="true" 
-            id="element.id" 
-          >
-            {{ element.contentElement }}
-          </alpaca-dropdown-list-item>
-          <alpaca-dropdown-list-link 
-            v-for="element in dropdownListLinks" 
-            :key="element.id" 
-            :title="element.title" 
-            :href="element.href" 
-          />
+          <template v-for="element in dropdownListItems">
+            <alpaca-dropdown-list-item 
+              v-if="element.contentElement"
+              :title="element.title" 
+              :key="element.id" 
+              :collapse="true" 
+              id="element.id" 
+            >
+              {{ element.contentElement }}
+            </alpaca-dropdown-list-item>
+            <alpaca-dropdown-list-link 
+              v-else
+              :key="element.id" 
+              :title="element.title" 
+              :href="element.href" 
+            />          
+          </template>
         </alpaca-dropdown-list>
       </app>
     `
@@ -69,27 +71,28 @@ storiesOf("Elements/Dropdown List", module)
   .add("Dark", () => ({
     components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
-      dropdownListItems,
-      dropdownListLinks
+      dropdownListItems
     }),
     template: `
       <app>
         <alpaca-dropdown-list dark>
-          <alpaca-dropdown-list-item 
-            v-for="element in dropdownListItems" 
-            :title="element.title" 
-            :key="element.id" 
-            :collapse="true" 
-            id="element.id" 
-          >
-            {{ element.contentElement }}
-          </alpaca-dropdown-list-item>
-          <alpaca-dropdown-list-link 
-            v-for="element in dropdownListLinks" 
-            :key="element.id" 
-            :title="element.title" 
-            :href="element.href" 
-          />
+          <template v-for="element in dropdownListItems">
+            <alpaca-dropdown-list-item 
+              v-if="element.contentElement"
+              :title="element.title" 
+              :key="element.id" 
+              :collapse="true" 
+              id="element.id" 
+            >
+              {{ element.contentElement }}
+            </alpaca-dropdown-list-item>
+            <alpaca-dropdown-list-link 
+              v-else
+              :key="element.id" 
+              :title="element.title" 
+              :href="element.href" 
+            />          
+          </template>
         </alpaca-dropdown-list>
       </app>
     `
@@ -97,27 +100,28 @@ storiesOf("Elements/Dropdown List", module)
   .add("Secondary", () => ({
     components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
-      dropdownListItems,
-      dropdownListLinks
+      dropdownListItems
     }),
     template: `
       <app>
         <alpaca-dropdown-list secondary>
-          <alpaca-dropdown-list-item 
-            v-for="element in dropdownListItems" 
-            :title="element.title" 
-            :key="element.id" 
-            :collapse="true" 
-            id="element.id" 
-          >
-            {{ element.contentElement }}
-          </alpaca-dropdown-list-item>
-          <alpaca-dropdown-list-link 
-            v-for="element in dropdownListLinks" 
-            :key="element.id" 
-            :title="element.title" 
-            :href="element.href" 
-          />
+          <template v-for="element in dropdownListItems">
+            <alpaca-dropdown-list-item 
+              v-if="element.contentElement"
+              :title="element.title" 
+              :key="element.id" 
+              :collapse="true" 
+              id="element.id" 
+            >
+              {{ element.contentElement }}
+            </alpaca-dropdown-list-item>
+            <alpaca-dropdown-list-link 
+              v-else
+              :key="element.id" 
+              :title="element.title" 
+              :href="element.href" 
+            />          
+          </template>
         </alpaca-dropdown-list>
       </app>
     `
@@ -125,27 +129,28 @@ storiesOf("Elements/Dropdown List", module)
   .add("Inner", () => ({
     components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
-      dropdownListItems,
-      dropdownListLinks
+      dropdownListItems
     }),
     template: `
       <app>
         <alpaca-dropdown-list inner>
-          <alpaca-dropdown-list-item 
-            v-for="element in dropdownListItems" 
-            :title="element.title" 
-            :key="element.id" 
-            :collapse="true" 
-            id="element.id" 
-          >
-            {{ element.contentElement }}
-          </alpaca-dropdown-list-item>
-          <alpaca-dropdown-list-link 
-            v-for="element in dropdownListLinks" 
-            :key="element.id" 
-            :title="element.title" 
-            :href="element.href" 
-          />
+          <template v-for="element in dropdownListItems">
+            <alpaca-dropdown-list-item 
+              v-if="element.contentElement"
+              :title="element.title" 
+              :key="element.id" 
+              :collapse="true" 
+              id="element.id" 
+            >
+              {{ element.contentElement }}
+            </alpaca-dropdown-list-item>
+            <alpaca-dropdown-list-link 
+              v-else
+              :key="element.id" 
+              :title="element.title" 
+              :href="element.href" 
+            />          
+          </template>
         </alpaca-dropdown-list>
       </app>
     `
