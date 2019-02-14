@@ -7,7 +7,7 @@ export default {
     type: {
       type: String,
       default: null,
-      validate: type => ['new', 'discount'].indexOf(type)
+      validate: type => ['new', 'sale'].indexOf(type)
     }
   }
 }
