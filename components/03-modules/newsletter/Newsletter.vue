@@ -16,7 +16,7 @@
         type="text"
       />
       <alpaca-button
-        custom-class="newsletter__button"
+        class="newsletter__button"
         @click.stop.prevent="onSubmit"
       >
         {{ button }}
@@ -41,9 +41,9 @@
 </template>
 
 <script>
-  import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaCheckbox from '../../02-elements/form/checkbox/Checkbox'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaInput from '../../02-elements/form/input/Input.vue'
+  import AlpacaCheckbox from '../../02-elements/form/checkbox/Checkbox.vue'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
     components: {
