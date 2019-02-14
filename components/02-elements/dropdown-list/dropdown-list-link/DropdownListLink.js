@@ -11,10 +11,6 @@ export default {
     linkClass: {
       type: String,
       default: null
-    },
-    isLabelClass: {
-      type: Boolean,
-      default: true
     }
   }
 }

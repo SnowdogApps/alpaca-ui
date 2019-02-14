@@ -5,7 +5,7 @@
   'dropdown-list@screen-m dropdown-list--is-open@screen-m': screenM
   }]"
 >
-  <ul :class="[{'dropdown-list__list': isListClass}, listClass]">
+  <ul :class="['dropdown-list__list', listClass]">
     <slot />
   </ul>
 </div>

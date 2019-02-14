@@ -5,7 +5,7 @@ import AlpacaList from '../../02-elements/list/List.vue'
 import AlpacaListItem from '../../02-elements/list/ListItem.vue'
 import AlpacaCookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
 import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
-import AlpacaDropdownListLink from '../../02-elements/dropdown-list/dropdown-list-link/DropdownListLink.vue'
+import AlpacaDropdownListItem from '../../02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
 
 export default {
   components: {
@@ -16,7 +16,7 @@ export default {
     AlpacaListItem,
     AlpacaCookieMessage,
     AlpacaDropdownList,
-    AlpacaDropdownListLink
+    AlpacaDropdownListItem
   },
   props: {
     copyrightText: {

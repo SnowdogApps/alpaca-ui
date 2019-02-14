@@ -27,10 +27,6 @@ export default {
     listClass: {
       type: String,
       default: null
-    },
-    isListClass: {
-      type: Boolean,
-      default: true
     }
   }
 }

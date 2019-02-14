@@ -11,25 +11,30 @@
       <!--TODO Add newsletter component-->
     </section>
     <section class="footer__links col-xs-12 col-lg-9">
-      <template v-for="element in listElements">
-        <button disabled class="dropdown-list__label">{{ element.title }}</button>
         <alpaca-dropdown-list
-          list-class="list footer__links-list"
-          class="dropdown-list__list"
           dark
           screenM
-          :is-list-class="false"
         >
-          <alpaca-dropdown-list-link
-            v-for="link in element.items"
-            :key="link.id"
-            :title="link.title"
-            :href="link.link"
-            link-class="footer__link"
-            :is-label-class="false"
-          />
+          <alpaca-dropdown-list-item
+            v-for="element in listElements"
+            :key="element.id"
+            :title="element.title"
+          >
+            <alpaca-list>
+              <alpaca-list-item
+                v-for="link in element.items"
+                :key="link.id"
+              >
+                <alpaca-link
+                  class="footer__link"
+                  :href="link.link"
+                >
+                  {{ link.title }}
+                </alpaca-link>
+              </alpaca-list-item>
+            </alpaca-list>
+          </alpaca-dropdown-list-item>
         </alpaca-dropdown-list>
-      </template>
     </section>
   </div>
   <section class="footer__bottom-bar">
