@@ -21,34 +21,6 @@ export default {
       type: Object,
       required: true
     },
-    image: {
-      type: String,
-      required: true
-    },
-    alt: {
-      type: String,
-      required: true
-    },
-    url: {
-      type: String,
-      required: true
-    },
-    price: {
-      type: [String, Number],
-      default: null
-    },
-    oldPrice: {
-      type: [String, Number],
-      default: null
-    },
-    specialPrice: {
-      type: [String, Number],
-      default: null
-    },
-    badge: {
-      type: String,
-      default: null
-    },
     compareAriaLabel: {
       type: String,
       default: 'Add to compare'

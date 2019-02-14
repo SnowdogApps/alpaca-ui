@@ -1,17 +1,13 @@
 {
-  "badge": "sale",
-  "url": "#",
-  "image": {
-    "dataSrc": "/images/catalog-grid-item/product-1_320_312.jpg",
-    "alt": "Product"
-  },
+  "tag": "li",
   "product": {
+    "id": 1,
     "name": "Some product name - very long name because that's important",
-    "price": "$ 234",
-    "specialPrice": "$ 200",
-    "oldPrice": "$ 299"
-  },
-  "addToCartButton": {
-    "text": "Add to Cart"
+    "badge": "sale",
+    "url": "#",
+    "price": "",
+    "specialPrice": "$100,00",
+    "oldPrice": "$299,99",
+    "image": "/images/catalog-grid-item/product-1_320_312.jpg"
   }
 }
