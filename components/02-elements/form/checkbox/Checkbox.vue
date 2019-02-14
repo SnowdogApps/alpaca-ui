@@ -24,7 +24,7 @@
     <component
       :is="link ? 'span' : 'label'"
       :for="link ? null : id"
-      class="checkbox__label"
+      :class="['checkbox__label', labelClass]"
     >
       <slot />
     </component>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import AlpacaIcon from '../../../01-globals/icon/Icon'
+  import AlpacaIcon from '../../../01-globals/icon/Icon.vue'
 
   export default {
     components: { AlpacaIcon },
@@ -63,6 +63,11 @@
       },
       iconClass: {
         type: String,
+        default: null
+      },
+      labelClass: {
+        type: String,
+        required: false,
         default: null
       },
       link: {

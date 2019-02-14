@@ -14,7 +14,7 @@
   export default {
     props: {
       level: {
-        type: Number,
+        type: [String, Number],
         required: true,
         validator: level => level >= 1 && level <= 6
       },
