@@ -17,6 +17,10 @@ export default {
       type: String,
       default: 'div'
     },
+    product: {
+      type: Object,
+      required: true
+    },
     image: {
       type: String,
       required: true
@@ -25,11 +29,7 @@ export default {
       type: String,
       required: true
     },
-    href: {
-      type: String,
-      required: true
-    },
-    name: {
+    url: {
       type: String,
       required: true
     },
@@ -45,20 +45,8 @@ export default {
       type: [String, Number],
       default: null
     },
-    badgeText: {
+    badge: {
       type: String,
-      default: null
-    },
-    badgeType: {
-      type: String,
-      default: null
-    },
-    textSwatch: {
-      type: Array,
-      default: null
-    },
-    iconSwatch: {
-      type: Array,
       default: null
     },
     compareAriaLabel: {
