@@ -1,0 +1,30 @@
+<div :class="[{'side-menu--is-open': isOpen, 'side-menu--right-side': right}]">
+  <button
+    type="button"
+    class="side-menu__trigger"
+    aria-label="Side menu open"
+    @click="open()"
+  >
+    <alpaca-icon :icon="icon"/>
+    <span class="side-menu__trigger-text">
+      {{ title }}
+    </span>
+  </button>
+  <div :class="['side-menu__content', { 'side-menu__right': right }]">
+    <div class="side-menu__trigger-wrapper">
+      <button
+        type="button"
+        class="side-menu__trigger"
+        aria-label="Side menu close"
+        @click="close()"
+      >
+        <alpaca-icon icon="close"/>
+        <span class="header-button__text">
+          {{ title }}
+        </span>
+      </button>
+    </div>
+    <slot />
+  </div>
+  <div class="side-menu__overlay"/>
+</div>
