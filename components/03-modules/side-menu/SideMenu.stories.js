@@ -8,14 +8,10 @@ import AlpacaDropdownListItem from "../../02-elements/dropdown-list/dropdown-lis
 import AlpacaDropdownListLink from "../../02-elements/dropdown-list/dropdown-list-link/DropdownListLink.vue"
 
 import nestedDropdownList from "../../02-elements/dropdown-list/mocks/nestedDropdownList.json"
-import sideMenu from './mocks/sideMenu.json'
 
 storiesOf('Modules/Side menu', module)
   .add('Default', () => ({
     components: { App, AlpacaSideMenu, AlpacaSideBar },
-    data: () => ({
-      sideMenu
-    }),
     template: `
     <app>
       <alpaca-side-bar>
@@ -31,9 +27,6 @@ storiesOf('Modules/Side menu', module)
   }))
   .add('Right', () => ({
     components: { App, AlpacaSideMenu, AlpacaSideBar },
-    data: () => ({
-      sideMenu
-    }),
     template: `
     <app>
       <alpaca-side-bar>
@@ -51,7 +44,6 @@ storiesOf('Modules/Side menu', module)
   .add('Multi elements', () => ({
     components: { App, AlpacaSideMenu, AlpacaSideBar, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
-      sideMenu,
       nestedDropdownList
     }),
     template: `
