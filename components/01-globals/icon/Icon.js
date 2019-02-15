@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     url() {
-      return `/icons/sprite.svg#${this.icon}`
+      return `/assets/icons/sprite.svg#${this.icon}`
     }
   }
 }

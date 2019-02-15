@@ -1,0 +1,23 @@
+<div class="review review--summary">
+  <div class="review__summary-handle">
+    <!--TODO Add rating component-->
+    <alpaca-link
+      v-if="amountLink"
+      :href="amountLink"
+    >
+      ({{ reviewsQty }})
+    </alpaca-link>
+    <span
+      class="review__amount"
+      v-if="!amountLink"
+    >
+      ({{ reviewsQty }})
+    </span>
+    <alpaca-link
+      :href="addReviewLink"
+      class="review__summary-add"
+    >
+      Add your review
+    </alpaca-link>
+  </div>
+</div>
