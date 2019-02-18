@@ -1,13 +1,14 @@
-$badge__padding        : 3px 13px !default;
-$badge__background     : $bg-color-base !default;
-$badge__border-radius  : $border-radius !default;
-$badge__font-size      : $font-size-small !default;
-$badge__font-family    : $font-family-base !default;
-$badge__font-weight    : $font-weight-bold !default;
-$badge__text-transform : uppercase !default;
-$badge__color          : $font-color-base !default;
-$badge__color--new     : $color-success !default;
-$badge__color--discount: $color-danger !default;
+$badge__padding         : 3px 13px !default;
+$badge__background      : $bg-color-base !default;
+$badge__border-radius   : $border-radius !default;
+$badge__font-size       : $font-size-small !default;
+$badge__font-family     : $font-family-base !default;
+$badge__font-weight     : $font-weight-bold !default;
+$badge__text-transform  : uppercase !default;
+$badge__color           : $font-color-base !default;
+$badge__color--new      : $white !default;
+$badge__background--new : $color-primary !default;
+$badge__background--sale: $color-primary !default;
 
 .badge {
   display: inline-flex;
@@ -21,10 +22,11 @@ $badge__color--discount: $color-danger !default;
   border-radius: $badge__border-radius;
 
   &--new {
+    background: $badge__background--new;
     color: $badge__color--new;
   }
 
   &--sale {
-    color: $badge__color--discount;
+    background: $badge__background--sale;
   }
 }
