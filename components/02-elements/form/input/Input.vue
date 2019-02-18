@@ -18,6 +18,7 @@
       :class="['input__field', inputClass,{
         'input__field--textarea': textarea
       }]"
+
       :name="name"
       :type="type"
       :min="min"
