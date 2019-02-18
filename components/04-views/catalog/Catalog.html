@@ -1,0 +1,21 @@
+<alpaca-container>
+  <div class="catalog">
+    <div class="catalog__sidebar">
+      <alpaca-catalog-filter
+        v-for="filter in filters"
+        :key="filter.code"
+        :name="filter.name"
+        :items="filter.items"
+      />
+    </div>
+    <div class="catalog__products">
+      <ul class="catalog-grid">
+        <alpaca-catalog-grid-item
+          v-for="product in products"
+          :key="product.sku"
+          :product="product"
+        />
+      </ul>
+    </div>
+  </div>
+</alpaca-container>

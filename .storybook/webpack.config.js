@@ -16,7 +16,6 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
           sourceMap: true,
           resources: [
             './assets/styles/_variables.scss',
-            './assets/styles/_reset.scss',
             './assets/styles/mixins/_grid-column-width.scss',
             './assets/styles/mixins/_isIE.scss',
             './assets/styles/mixins/_mq.scss',

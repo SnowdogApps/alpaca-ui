@@ -1,0 +1,27 @@
+<div class="review">
+  <div class="review__details">
+    <alpaca-heading
+      class="review__author"
+      :level="3"
+    >
+      {{ author }}
+    </alpaca-heading>
+    <div class="review__date">
+      {{ date }}
+    </div>
+    <!--TODO Add rating component-->
+  </div>
+  <div class="review__details">
+    <alpaca-heading
+      class="review__title"
+      :level="4"
+    >
+      {{ title }}
+    </alpaca-heading>
+    <div class="review__description">
+      <alpaca-paragraph>
+        {{ content }}
+      </alpaca-paragraph>
+    </div>
+  </div>
+</div>

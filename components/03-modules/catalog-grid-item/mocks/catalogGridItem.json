@@ -1,17 +1,13 @@
 {
-  "badge": {
-    "name": "badge--new",
-    "text": "NEW"
-  },
-  "image": {
-    "dataSrc": "/images/catalog-grid-item/product-1_320_312.jpg",
-    "alt": "Product"
-  },
-  "name": "Some product name - very long name because that's important",
-  "primaryAction": {
-    "text": "Add to Cart"
-  },
-  "price": "$ 234",
-  "specialPrice": "$ 200",
-  "oldPrice": "$ 299"
+  "tag": "li",
+  "product": {
+    "id": 1,
+    "name": "Some product name - very long name because that's important",
+    "badge": "sale",
+    "url": "#",
+    "price": "",
+    "specialPrice": "$100,00",
+    "oldPrice": "$299,99",
+    "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+  }
 }
