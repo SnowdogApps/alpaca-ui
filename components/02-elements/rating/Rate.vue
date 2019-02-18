@@ -1,6 +1,7 @@
 <template>
   <fieldset>
     <div
+      v-if="!disabled"
       class="rating rating--rate"
       role="listbox"
       aria-required="true"
@@ -10,9 +11,9 @@
         v-for="item in ratingItems"
         :id="item"
         :key="item"
-        :class="['rating__rate-item', { 'rating__rate-item--active': active }]"
+        :class="['rating__rate-item', active >= item ? 'rating__rate-item--active' : '']"
         role="option"
-        :aria-selected="selected"
+        :aria-selected="rating === item"
       >
         <label
           class="rating__star rating__star--rate"
@@ -23,12 +24,20 @@
           <span class="rating__indicator" />
         </label>
       </div>
-      <span
-        v-if="showText || showScore"
-        :style="{ color: textColor }"
+    </div>
+    <div
+      v-if="disabled"
+      class="rating"
+      :aria-label="`Average rating: ${rating}`"
+      :title="`Average rating: ${rating}`"
+      tabindex="0"
+    >
+      <div
+        class="rating__star"
+        :style="{'width': `${setScores}%`}"
       >
-        {{ text }}
-      </span>
+        <span class="rating__indicator" />
+      </div>
     </div>
   </fieldset>
 </template>
@@ -40,14 +49,6 @@
       event: 'change'
     },
     props: {
-      value: {
-        type: Number,
-        default: 0
-      },
-      max: {
-        type: Number,
-        default: 5
-      },
       rating: {
         type: Number,
         default: 0
@@ -56,38 +57,24 @@
         type: Number,
         required: true
       },
-      showText: {
+      disabled: {
         type: Boolean,
         default: false
-      },
-      showScore: {
-        type: Boolean,
-        default: false
-      },
-      score: {
-        type: Number,
-        default: null
-      },
-      textColor: {
-        type: String,
-        default: '#1f2d3d'
-      },
-      text: {
-        type: String,
-        default: null
       }
     },
-    data(){
+    data() {
       return {
-        active: false,
-        selected: false
+        active: this.rating
+      }
+    },
+    computed: {
+      setScores() {
+        return this.rating / this.ratingItems * 100
       }
     },
     methods: {
       selectValue(selectedIndex) {
-        console.log(selectedIndex, this.rating, this.rating >= selectedIndex, this.rating === selectedIndex)
-        this.active = this.rating >= selectedIndex
-        this.selected = this.rating === selectedIndex
+        this.active = selectedIndex
         this.$emit('change', selectedIndex)
       }
     }
@@ -143,7 +130,7 @@
         right: 0;
         width: $rating__size;
         height: $rating__item-size;
-        background-image: svg-uri("<svg viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='#{$icon__inactive-color}'/></svg>");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M-2-2h24v24H-2z'/%3E%3Cpath d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='%23c2c1df'/%3E%3C/svg%3E");
         background-repeat: repeat-x;
         background-position: left center;
         background-size: $rating__item-size;
@@ -176,7 +163,7 @@
         bottom: 0;
         width: auto;
         height: $rating__item-size;
-        background-image: svg-uri("<svg viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg' ><path fill='none' d='M-2-2h24v24H-2z'/><path d='M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27z' fill='#{$icon__active-color}'/></svg>");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='none' d='M-2-2h24v24H-2z'/%3E%3Cpath d='M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27z' fill='%23fab216'/%3E%3C/svg%3E");
         background-repeat: repeat-x;
         background-position: left center;
         background-size: $rating__item-size;
@@ -206,7 +193,7 @@
         bottom: 0;
         left: 0;
         height: $rating__item-size;
-        background-image: svg-uri("<svg viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='#{$icon__active-color--with-border}'/></svg>");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M-2-2h24v24H-2z'/%3E%3Cpath d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z' fill='%23fab216'/%3E%3C/svg%3E");
         background-repeat: repeat-x;
         background-size: $rating__item-size;
         background-position: left center;
