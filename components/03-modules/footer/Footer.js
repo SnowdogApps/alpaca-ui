@@ -58,8 +58,8 @@ export default {
     scrollToTop() {
       window.scrollTo(0, 0)
     },
-    submit(){
-      this.$emit('submit')
+    submitNewsletter(payload) {
+      this.$emit('submit', payload)
     }
   }
 }
