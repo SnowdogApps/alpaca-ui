@@ -132,7 +132,7 @@
         right: 0;
         width: $rating__size;
         height: $rating__item-size;
-        background-image: url(../../../public/images/rate/star.svg);
+        background-image: url(../../../assets/images/rate/star.svg);
         background-repeat: repeat-x;
         background-position: left center;
         background-size: $rating__item-size;
@@ -165,7 +165,7 @@
         bottom: 0;
         width: auto;
         height: $rating__item-size;
-        background-image: url(../../../public/images/rate/active-star.svg);
+        background-image: url(../../../assets/images/rate/active-star.svg);
         background-repeat: repeat-x;
         background-position: left center;
         background-size: $rating__item-size;
@@ -195,7 +195,7 @@
         bottom: 0;
         left: 0;
         height: $rating__item-size;
-        background-image: url(../../../public/images/rate/active-star.svg);
+        background-image: url(../../../assets/images/rate/active-star.svg);
         background-repeat: repeat-x;
         background-size: $rating__item-size;
         background-position: left center;
