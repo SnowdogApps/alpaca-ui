@@ -1,5 +1,5 @@
 <li class="dropdown-list__item">
-  <a class="dropdown-list__label" :href="href">
+  <router-link :class="['dropdown-list__label', linkClass]" :to="href">
     {{ title }}
-  </a>
+  </router-link>
 </li>
