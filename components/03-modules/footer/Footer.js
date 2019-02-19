@@ -29,11 +29,11 @@ export default {
       type: String,
       required: true
     },
-    socialElements: {
+    socialMenu: {
       type: Array,
       required: true
     },
-    listElements: {
+    menu: {
       type: Array,
       required: true
     },
@@ -59,7 +59,7 @@ export default {
       window.scrollTo(0, 0)
     },
     submitNewsletter(payload) {
-      this.$emit('submit', payload)
+      this.$emit('submitNewsletter', payload)
     }
   }
 }

@@ -22,7 +22,7 @@
           screenM
         >
           <alpaca-dropdown-list-item
-            v-for="element in listElements"
+            v-for="element in menu"
             :key="element.id"
             :title="element.title"
             :id="element.id"
@@ -52,7 +52,7 @@
         </span>
         <alpaca-list class="list--with-icon list--horizontal footer__social-list">
           <alpaca-list-item
-            v-for="element in socialElements"
+            v-for="element in socialMenu"
             :key="element.id"
             :aria-label="element.ariaLabel"
           >
