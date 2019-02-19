@@ -1,3 +1,5 @@
+const StyleLintPlugin = require('stylelint-webpack-plugin')
+
 module.exports = (storybookBaseConfig, configType, defaultConfig) => {
   defaultConfig.module.rules.push({
     test: /\.stories\.jsx?$/,
@@ -33,6 +35,14 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
       fix: true
     }
   })
+
+  defaultConfig.plugins.push(new StyleLintPlugin({
+    files: [
+      'components/**/*.vue',
+      'assets/styles/**/*.scss'
+    ],
+    fix: true
+  }))
 
   return defaultConfig
 }
