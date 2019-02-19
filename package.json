@@ -11,7 +11,8 @@
   "dependencies": {
     "lodash.uniqueid": "^4.0.1",
     "normalize.css": "^8.0.1",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-slider-component": "^2.8.7"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
