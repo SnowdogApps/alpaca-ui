@@ -1,9 +1,7 @@
 $filters__heading-font-weight        : $font-weight-bold !default;
 $filters__heading-font-weight\@medium: $font-weight-normal !default;
-$filters__heading-margin             : 0 !default;
 $filters__heading-margin\@medium     : 0 0 $spacer--medium 0 !default;
 $filters__switcher-margin            : $spacer 0 0 0 !default;
-$filters__switcher-padding           : 0 !default;
 $filters__switcher-border            : 1px solid $gray-lighter !default;
 $filters__switcher-border-radius     : 0 !default;
 $filters__switcher-background-color  : $bg-color-base !default;
@@ -26,7 +24,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 .filters {
   &__heading {
     font-weight: $filters__heading-font-weight;
-    margin: $filters__heading-margin;
+    margin: $reset;
     @include mq($screen-l) {
       font-weight: $filters__heading-font-weight\@medium;
       margin: $filters__heading-margin\@medium;
@@ -44,7 +42,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
     height: $filters__switcher-size;
     min-width: 100%;
     margin: $filters__switcher-margin;
-    padding: $filters__switcher-padding;
+    padding: $reset;
     border: none;
     border-top: $filters__switcher-border;
     border-radius: $filters__switcher-border-radius;
