@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import App from '../../01-globals/app/App.vue'
 import AlpacaRegister from './Register.vue'
 
-storiesOf('Views/Register', module).add('Default', () => ({
+storiesOf('Modules/Register', module).add('Default', () => ({
   components: { App, AlpacaRegister },
   template: `
     <app>
