@@ -22,6 +22,7 @@
 
   .grid__column {
     flex: 1 0 100%;
+
     @if ($grid__gutter > 0) {
       padding-left: ($grid__gutter / 2);
       padding-right: ($grid__gutter / 2);
@@ -39,6 +40,7 @@
       @include mq($screen-s) {
         @include grid-column-width(1, 2);
       }
+
       @include mq($screen-m) {
         @include grid-column-width(1, 3);
       }
@@ -99,6 +101,7 @@
       @include mq($screen-s) {
         @include grid-column-width(2, 6);
       }
+
       @include mq($screen-m) {
         @include grid-column-width(1, 6);
       }

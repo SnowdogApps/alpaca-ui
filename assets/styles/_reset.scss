@@ -1,11 +1,11 @@
-*:focus {
-  outline: $reset;
-}
-
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: $reset;
 }
 
 html,
