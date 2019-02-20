@@ -27,8 +27,8 @@ storiesOf('Modules/Header', module)
           @goToAccount="showRegister"
         />
         <alpaca-modal ref="registerModal" :max-width="500">
-          <h1>Register</h1>
           <alpaca-register
+            mainHeading="Create new customer account"
             personalSectionText="Personal information"
             signInSectionText="Sign-In information"
             buttonText="Create an Account"

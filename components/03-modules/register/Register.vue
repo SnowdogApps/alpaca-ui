@@ -1,5 +1,8 @@
 <template>
   <div class="registration">
+    <h1 class="registration__heading">
+      {{ mainHeading }}
+    </h1>
     <form class="registration__content">
       <alpaca-fieldset
         class="registration__fieldset"
@@ -55,7 +58,10 @@
           placeholder="Confirm password"
         />
       </alpaca-fieldset>
-      <alpaca-button @click.stop.prevent="register">
+      <alpaca-button 
+        fluid
+        @click.stop.prevent="register"
+      >
         {{ buttonText }}
       </alpaca-button>
     </form>
@@ -76,6 +82,10 @@
       AlpacaInput
     },
     props: {
+      mainHeading: {
+        type: String,
+        required: true
+      },
       personalSectionText: {
         type: String,
         required: true
@@ -114,18 +124,19 @@
 </script>
 
 <style lang="scss">
-  $registration__padding-top           : $spacer--medium !default;
-  $registration__content-margin        : 0 0 $spacer--extra-large !default;
-  $registration__input-margin          : 0 0 $spacer--medium !default;
-  $registration__pasword-wrapper-margin: 0 0 $spacer--medium !default;
-  $registration__fieldset-margin       : 0 0 $spacer--medium !default;
-  $registration__legend-font-size      : $font-size-base;
-  $registration__legend-font-weight    : $font-weight-bold;
-  $registration__legend-padding        : 0 0 $spacer--medium 0 !default;
-  $registration__legend-width          : 100% !default;
+  $registration__heading-margin    : 11px 0 $spacer--medium 0 !default;
+  $registration__content-margin    : 0 0 $spacer--medium !default;
+  $registration__input-margin      : 0 0 $spacer--medium !default;
+  $registration__fieldset-margin   : 0 0 $spacer--medium !default;
+  $registration__legend-font-size  : $font-size-base;
+  $registration__legend-font-weight: $font-weight-bold;
+  $registration__legend-padding    : 0 0 $spacer--medium 0 !default;
+  $registration__legend-width      : 100% !default;
 
   .registration {
-    padding-top: $registration__padding-top;
+    &__heading {
+      margin: $registration__heading-margin;
+    }
 
     &__divider {
       margin-bottom: $spacer--large;
