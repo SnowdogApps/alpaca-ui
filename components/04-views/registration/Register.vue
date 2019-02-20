@@ -177,7 +177,7 @@
   $registration__newsletter-checkbox-icon-clickable-area      : 48px !default;
   $registration__newsletter-checkbox-checked-label-font-weight: $font-weight-bold !default;
 
-  .container{
+  .container {
     .registration {
       padding-top: $registration__padding-top;
 
@@ -213,11 +213,13 @@
       &__newsletter-checkbox-label {
         padding-left: $registration__newsletter-checkbox-label-padding-left;
         line-height: $registration__newsletter-checkbox-label-line-height;
-        &:before {
+
+        &::before {
           top: $registration__newsletter-checkbox-icon-offset;
           left: $registration__newsletter-checkbox-icon-offset;
         }
-        &:after {
+
+        &::after {
           width: $registration__newsletter-checkbox-icon-clickable-area;
           height: $registration__newsletter-checkbox-icon-clickable-area;
           content: ' ';

@@ -123,7 +123,7 @@
         opacity: 1;
       }
 
-      .checkbox__label:before {
+      .checkbox__label::before {
         border: $checkbox__border--checked;
       }
     }
@@ -138,7 +138,7 @@
         opacity: 1;
       }
 
-      &:checked~.checkbox__label:before {
+      &:checked ~ .checkbox__label::before {
         border: $checkbox__border--checked;
       }
     }
@@ -149,7 +149,7 @@
       line-height: $checkbox__line-height;
       cursor: pointer;
 
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         top: $checkbox__gap;

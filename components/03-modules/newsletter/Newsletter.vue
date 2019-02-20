@@ -111,7 +111,7 @@
   $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !default;
 
   .newsletter {
-    background-color: #333333;
+    background-color: #333;
 
     &__heading {
       line-height: $newsletter__line-height;
@@ -122,11 +122,13 @@
       text-align: left;
       margin: $newsletter__heading-margin;
     }
+
     &__controls {
       position: relative;
       height: auto;
       margin-bottom: $newsletter__bottom-gap;
     }
+
     &__button {
       position: absolute;
       top: 0;
@@ -134,18 +136,22 @@
       height: $newsletter__controls-height;
       border-radius: $newsletter__field-border-radius;
       padding: 0 $newsletter__button-padding;
+
       &:hover,
       &:focus {
         cursor: pointer;
         outline: none;
       }
     }
+
     &__input {
       margin: 0;
     }
+
     &__label {
       @include visually-hidden;
     }
+
     &__field {
       background: $newsletter__input-background;
       padding: $newsletter__field-padding;
@@ -155,23 +161,22 @@
       height: $newsletter__field-height;
       color: $newsletter__input-color;
       line-height: $newsletter__field-height;
+
       &::placeholder {
         color: $newsletter__input-color--placeholder;
       }
     }
+
     &__agreements {
       margin-left: $spacer;
     }
+
     .checkbox__icon {
       top: $newsletter__checkbox-icon-position-top;
       left: 0;
       border-radius: $newsletter__checkbox-icon-border-radius;
     }
-    .checkbox__field {
-      &:checked ~ .checkbox__label:before {
-        background: none;
-      }
-    }
+
     .checkbox__label {
       width: 100%;
       opacity: 1;
@@ -180,7 +185,8 @@
       text-align: left;
       padding-left: $newsletter__checkbox-label-padding-left;
       color: $newsletter__checkbox-label-color;
-      &:before {
+
+      &::before {
         top: $newsletter__checkbox-icon-position-top; // to align with label, depends on line-height of label
         width: $newsletter__checkbox-icon-size;
         height: $newsletter__checkbox-icon-size;
@@ -193,6 +199,12 @@
         &:focus {
           color: $newsletter__checkbox-label-color;
         }
+      }
+    }
+
+    .checkbox__field {
+      &:checked ~ .checkbox__label::before {
+        background: none;
       }
     }
   }

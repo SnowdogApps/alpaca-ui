@@ -74,7 +74,7 @@
       padding-left: $filter__label-padding;
       cursor: pointer;
 
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         top: 0;

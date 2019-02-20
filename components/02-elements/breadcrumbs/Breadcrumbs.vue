@@ -55,13 +55,21 @@
       flex-wrap: wrap;
     }
 
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: $breadcrumbs__padding;
+      font-family: $breadcrumbs__font-family;
+      text-decoration: none;
+    }
+
     &__item {
       display: flex;
       align-items: stretch;
       color: $breadcrumbs__color;
       font-size: $breadcrumbs__font-size;
 
-      &:after {
+      &::after {
         content: '/';
         display: flex;
         align-items: center;
@@ -83,18 +91,10 @@
           color: $breadcrumbs__color--active;
         }
 
-        &:after {
+        &::after {
           display: none;
         }
       }
-    }
-
-    &__link {
-      display: flex;
-      align-items: center;
-      padding: $breadcrumbs__padding;
-      font-family: $breadcrumbs__font-family;
-      text-decoration: none;
     }
 
     // TODO: Missing variables.

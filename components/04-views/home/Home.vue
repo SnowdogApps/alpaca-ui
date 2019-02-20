@@ -124,6 +124,7 @@
 
     &__banner-content {
       margin-bottom: $home__banner-spacer-medium;
+
       @include mq($screen-m) {
         margin-right: $home__banner-spacer;
 
@@ -159,6 +160,7 @@
         &:nth-child(3n) {
           border-right: 0;
         }
+
         @include mq($screen-m) {
           width: 20%;
 

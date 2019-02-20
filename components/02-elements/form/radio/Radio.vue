@@ -105,8 +105,9 @@
 
       &:checked + .radio__label {
         color: $radio__label-color-active;
+
         .radio__icon {
-          &:before {
+          &::before {
             opacity: 1;
             transform: scale(1);
           }

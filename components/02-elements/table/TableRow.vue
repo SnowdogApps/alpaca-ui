@@ -11,6 +11,18 @@
   $table__border       : 1px solid $gray-light !default;
 
   .table {
+    tr {
+      display: block;
+      padding: $table__row__padding;
+      border-bottom: $table__border;
+
+      @include mq($screen-m) {
+        display: table-row;
+        padding: $reset;
+        border-bottom: $reset;
+      }
+    }
+
     thead {
       tr {
         padding: $reset;
@@ -34,18 +46,6 @@
             border-top-right-radius: $table__border-radius;
           }
         }
-      }
-    }
-
-    tr {
-      display: block;
-      padding: $table__row__padding;
-      border-bottom: $table__border;
-
-      @include mq($screen-m) {
-        display: table-row;
-        padding: $reset;
-        border-bottom: $reset;
       }
     }
   }

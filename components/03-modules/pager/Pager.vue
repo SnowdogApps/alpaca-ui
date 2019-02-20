@@ -163,7 +163,7 @@
   $pager__item-margin                         : 0 $spacer !default;
   $pager__item-after-height--current          : $spacer !default;
   $pager__item-after-background-color--current: $color-primary !default;
-  $pager__item-after-transition--current      : $transition-base  !default;
+  $pager__item-after-transition--current      : $transition-base !default;
   $pager__item-size                           : 48px !default;
   $pager__icon-width                          : 24px !default;
   $pager__icon-height                         : 24px !default;
@@ -202,7 +202,8 @@
 
       &--current {
         position: relative;
-        &:after {
+
+        &::after {
           content: '';
           position: absolute;
           bottom: 14px;
@@ -228,17 +229,8 @@
       background-color: transparent;
       text-decoration: none;
 
-      &[disabled] {
-        pointer-events: none;
-        cursor: default;
-
-        .icon {
-          fill: $pager__link-fill-disabled;
-        }
-      }
-
       &:focus,
-      &:hover{
+      &:hover {
         background-color: transparent;
         color: $color-primary;
       }
@@ -254,6 +246,15 @@
         &:focus:not([disabled]),
         &:hover:not([disabled]) {
           background-color: $color-secondary;
+        }
+      }
+
+      &[disabled] {
+        pointer-events: none;
+        cursor: default;
+
+        .icon {
+          fill: $pager__link-fill-disabled;
         }
       }
     }
