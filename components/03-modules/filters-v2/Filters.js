@@ -1,4 +1,5 @@
 import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
 import AlpacaDropdownListItem from '../../02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
@@ -10,6 +11,7 @@ import AlpacaColorFilter from '../../03-modules/filter/color-filter/ColorFilter.
 export default {
   components: {
     AlpacaHeading,
+    AlpacaIcon,
     AlpacaDivider,
     AlpacaDropdownList,
     AlpacaDropdownListItem,
@@ -42,6 +44,16 @@ export default {
     checkboxItems: {
       type: Array,
       required: true
+    }
+  },
+  data() {
+    return {
+      isVisible: true
+    }
+  },
+  methods: {
+    showFilters() {
+      this.isVisible = !this.isVisible
     }
   }
 }

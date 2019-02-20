@@ -16,7 +16,7 @@
           @click="clearItem"
         >
           <alpaca-icon
-            custom-class="active-filters__remove-icon"
+            class="active-filters__remove-icon"
             :title="closeIconTitle"
             :icon="closeIcon"
           />
@@ -41,10 +41,10 @@
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon'
-  import AlpacaList from '../../02-elements/list/List'
-  import AlpacaButton from '../../02-elements/button/Button'
-  import AlpacaListItem from '../../02-elements/list/ListItem'
+  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+  import AlpacaList from '../../02-elements/list/List.vue'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
+  import AlpacaListItem from '../../02-elements/list/ListItem.vue'
 
   export default {
     components: {

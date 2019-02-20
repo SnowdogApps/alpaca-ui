@@ -1,63 +1,54 @@
 <div class="filters">
   <alpaca-heading
-    :level="1"
+    :level="2"
     class="filters__heading"
   >
     {{ activeFiltersHeading }}
   </alpaca-heading>
-
-  <alpaca-divider/>
-
+  <alpaca-divider class="filters__divider"/>
   <div class="filters__active">
     <alpaca-active-filters
       :items="activeFilterItems"
       clear-button="Clear all"
     />
   </div>
-
-  <!--<button-->
-    <!--type="button"-->
-    <!--class="filters__switcher"-->
-    <!--data-state-current="hidden"-->
-  <!--&gt;-->
-    <!--Shopping Options-->
-    <!--{{ render '@icon' switcherIcon }}-->
-  <!--</button>-->
-
-  <div class="filters__list filters__list--mobile-hidden dropdown-list">
+  <button
+    class="filters__switcher"
+    @click="showFilters"
+  >
+    Shopping Options
+    <alpaca-icon
+      icon="angle-down"
+      :class="['filters__switcher-icon', {'filters__switcher-icon--active': !isVisible}]"
+    />
+  </button>
+  <div :class="['filters__list', 'dropdown-list', {'filters__list--mobile-hidden' : isVisible}]">
     <alpaca-heading
-      :level="1"
+      :level="2"
       class="filters__heading filters__heading--mobile-hidden"
     >
       {{ allFiltersHeading }}
     </alpaca-heading>
-
-    <alpaca-divider/>
-
+    <alpaca-divider class="filters__divider"/>
     <alpaca-dropdown-list
       secondary
     >
-      <alpaca-dropdown-list-item title="Shopping Options">
-        <alpaca-dropdown-list
-          secondary
-        >
-          <alpaca-checkbox-filter
-            title="Checkbox"
-            id="checkboxId"
-            :items="checkboxItems"
-          />
-          <alpaca-swatch-filter
-            title="Swatch"
-            id="swatchId"
-            :items="swatchItems"
-          />
-          <alpaca-color-filter
-            title="Color"
-            id="colorId"
-            :items="colorItems"
-          />
-        </alpaca-dropdown-list>
-      </alpaca-dropdown-list-item>
+      <alpaca-checkbox-filter
+        title="Checkbox"
+        id="checkboxId"
+        :items="checkboxItems"
+      />
+      <alpaca-swatch-filter
+        title="Swatch"
+        id="swatchId"
+        :items="swatchItems"
+      />
+      <alpaca-color-filter
+        title="Color"
+        id="colorId"
+        :items="colorItems"
+      />
+      <!--//TODO Add range component-->
     </alpaca-dropdown-list>
   </div>
 </div>
