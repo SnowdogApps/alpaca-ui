@@ -39,6 +39,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
   defaultConfig.plugins.push(new StyleLintPlugin({
     files: [
       'components/**/*.vue',
+      'components/**/*.scss',
       'assets/styles/**/*.scss'
     ],
     fix: true
