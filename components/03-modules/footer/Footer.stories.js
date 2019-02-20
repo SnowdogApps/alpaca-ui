@@ -23,10 +23,10 @@ storiesOf('Modules/Footer', module).add('Default', () => ({
        :checkboxes="newsletter.checkbox"
        social-list-subtitle="Find us on"
        heading="Sing up to our twisted newsletter"
-       :social-elements="listElements"
-       :list-elements="dropdownListElements"
+       :social-menu="listElements"
+       :menu="dropdownListElements"
        cookie-text="<a href='#' class='cookie-message__link'>Example link</a> Find out more about their purpose and settings in your browser. By browsing the site you are agreeing to use cookies according to your browser settings."
-       @submit="submit"
+       @submitNewsletter="submit"
       />
     </app>
   `,

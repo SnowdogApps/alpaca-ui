@@ -29,11 +29,11 @@ export default {
       type: String,
       required: true
     },
-    socialElements: {
+    socialMenu: {
       type: Array,
       required: true
     },
-    listElements: {
+    menu: {
       type: Array,
       required: true
     },
@@ -58,8 +58,8 @@ export default {
     scrollToTop() {
       window.scrollTo(0, 0)
     },
-    submit(){
-      this.$emit('submit')
+    submitNewsletter(payload) {
+      this.$emit('submitNewsletter', payload)
     }
   }
 }
