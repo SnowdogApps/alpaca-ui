@@ -25,17 +25,21 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
   &__heading {
     font-weight: $filters__heading-font-weight;
     margin: $reset;
+
     @include mq($screen-l) {
       font-weight: $filters__heading-font-weight\@medium;
       margin: $filters__heading-margin\@medium;
     }
+
     &--mobile-hidden {
       display: none;
+
       @include mq($screen-l) {
         display: block;
       }
     }
   }
+
   &__switcher {
     display: flex;
     align-items: center;
@@ -78,8 +82,10 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 
   &__list {
     margin: $filters__list-margin;
+
     &--mobile-hidden {
       display: none;
+
       @include mq($screen-l) {
         display: block;
       }
@@ -95,6 +101,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
     display: block;
     padding-bottom: $filters__link-padding-top;
     color: $filters__link-color;
+
     &:hover,
     &:focus {
       text-decoration: $filters__link-text-decoration;
@@ -108,6 +115,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
   &__divider {
     display: none;
     margin: $filters__divider-margin;
+
     @include mq($screen-l) {
       display: flex;
     }

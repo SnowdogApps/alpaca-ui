@@ -8,7 +8,6 @@ $filter__swatch-option-border              : 3px solid $white !default;
 $filter__swatch-option-border-color-hover  : $color-primary !default;
 $filter__swatch-option-border-color--active: $color-primary !default;
 // Label
-// Color
 $filter__color-option-width                : 56px !default;
 $filter__color-option-height               : 80px !default;
 $filter__color-option-border               : 2px solid transparent !default;
@@ -38,7 +37,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     padding-left: $reset;
   }
 
-  .dropdown-list__label.filter__label:before {
+  .dropdown-list__label.filter__label::before {
     content: none;
   }
 
@@ -99,7 +98,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     text-decoration: none;
     background: none;
 
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       top: $filter__color-option-after-top;
@@ -117,7 +116,8 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     &:focus {
       background: none;
       text-decoration: none;
-      &:after {
+
+      &::after {
         border-color: $filter__color-option-after-border-color;
       }
     }

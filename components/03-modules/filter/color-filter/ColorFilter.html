@@ -7,21 +7,24 @@
   :id="id"
   :data-dropdown="id"
 >
-    <div
-      class="filter__color"
-      v-for="item in items"
-      :key="item.id"
+  <div
+    class="filter__color"
+    v-for="item in items"
+    :key="item.id"
+  >
+    <alpaca-button
+      @click="click(item.id)"
+      class="filter__color-option"
+      :aria-label="item.ariaLabel"
     >
-      <alpaca-button
-        @click="click(item.id)"
-        class="filter__color-option"
-        :aria-label="item.ariaLabel"
-      >
-        <div class="filter__color-sample" :style="{'background-color': item.color}"/>
-        <span class="filter__color-label">
-          {{ item.label }}
-        </span>
-      </alpaca-button>
-    </div>
+      <div
+        class="filter__color-sample"
+        :style="{'background-color': item.color}"
+      />
+      <span class="filter__color-label">
+        {{ item.label }}
+      </span>
+    </alpaca-button>
+  </div>
   <div class="filter__divider"></div>
 </alpaca-dropdown-list-item>
