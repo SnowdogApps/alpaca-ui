@@ -5,15 +5,19 @@
         class="sidebar-block__title"
         level="2"
       >
-        Compare products
+        {{ heading }}
       </alpaca-heading>
       <span class="sidebar-block__counter">
-        3 items
+        {{ productsCount }} items
       </span>
     </div>
     <alpaca-divider class="sidebar-block__divider" />
     <ol class="list sidebar-block__list">
-      <li class="sidebar-block__item">
+      <li   
+        v-for="product in products"
+        :key="product.id"
+        class="sidebar-block__item"
+      >
         <alpaca-button
           class="sidebar-block__remove"
           :default-class="false"
@@ -24,12 +28,28 @@
         />
         <alpaca-link 
           class="sidebar-block__link"
-          href="#"
+          :href="product.link"
         >
-          Chaz Kangeroo Hoodie
+          {{ product.name }}
         </alpaca-link>
       </li>
     </ol>
+    <div>
+      <alpaca-button
+        class="sidebar-block__action"
+        tag="a"
+        href="#"
+      >
+        {{ compareButton }}
+      </alpaca-button>
+      <alpaca-button
+        class="sidebar-block__action"
+        tag="a"
+        href="#"
+      >
+        {{ clearAllButton }}
+      </alpaca-button>
+    </div>
   </div>
 </template>
 
@@ -45,6 +65,32 @@
       AlpacaButton,
       AlpacaDivider,
       AlpacaLink
+    },
+    props: {
+      heading: {
+        type: String,
+        required: false,
+        default: 'Compare Products'
+      },
+      compareButton: {
+        type: String,
+        required: false,
+        default: 'Compare'
+      },
+      clearAllButton: {
+        type: String,
+        required: false,
+        default: 'Clear All'
+      },
+      products: {
+        type: Array,
+        required: true
+      }
+    },
+    computed: {
+      productsCount() {
+        return this.products.length
+      }
     }
   }
 </script>
