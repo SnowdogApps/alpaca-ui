@@ -11,41 +11,46 @@
     </span>
   </div>
   <alpaca-divider class="sidebar-block__divider" />
-  <ol class="list sidebar-block__list">
-    <li   
-      v-for="product in products"
-      :key="product.id"
-      class="sidebar-block__item"
-    >
-      <alpaca-button
-        class="sidebar-block__remove"
-        :default-class="false"
-        icon="close"
-        icon-class="sidebar-block__remove-icon"
-        :default-icon-class="false"
-        aria-label="Remove product from compare"
-        @click="removeFromCompare"
-      />
-      <router-link
-        class="link sidebar-block__link"
-        :to="product.link"
+  <template v-if="productsCount">
+    <ol class="list sidebar-block__list">
+      <li   
+        v-for="product in products"
+        :key="product.id"
+        class="sidebar-block__item"
       >
-        {{ product.name }}
+        <alpaca-button
+          class="sidebar-block__remove"
+          :default-class="false"
+          icon="close"
+          icon-class="sidebar-block__remove-icon"
+          :default-icon-class="false"
+          aria-label="Remove product from compare"
+          @click="removeFromCompare"
+        />
+        <router-link
+          class="link sidebar-block__link"
+          :to="product.link"
+        >
+          {{ product.name }}
+        </router-link>
+      </li>
+    </ol>
+    <div>
+      <router-link
+        class="button button--link sidebar-block__action"
+        :to="comparePageUrl"
+      >
+        {{ compareButton }}
       </router-link>
-    </li>
-  </ol>
-  <div>
-    <router-link
-      class="button button--link sidebar-block__action"
-      :to="comparePageUrl"
-    >
-      {{ compareButton }}
-    </router-link>
-    <alpaca-button
-      class="sidebar-block__action"
-      @click="clearCompareList"
-    >
-      {{ clearAllButton }}
-    </alpaca-button>
-  </div>
+      <alpaca-button
+        class="sidebar-block__action"
+        @click="clearCompareList"
+      >
+        {{ clearAllButton }}
+      </alpaca-button>
+    </div>
+  </template>
+  <p v-else>
+    {{ noProductsMessage }}
+  </p>
 </div>

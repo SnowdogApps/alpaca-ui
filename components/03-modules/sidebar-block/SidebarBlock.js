@@ -30,8 +30,13 @@ export default {
     },
     comparePageUrl: {
       type: String,
-      requited: false,
+      required: false,
       default: 'compare'
+    },
+    noProductsMessage: {
+      type: String,
+      required: false,
+      default: 'You have no items to compare.'
     }
   },
   computed: {
