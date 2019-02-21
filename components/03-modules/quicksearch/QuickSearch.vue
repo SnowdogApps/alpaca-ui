@@ -122,7 +122,7 @@
   import AlpacaButton from '../../02-elements/button/Button'
   import AlpacaPrice from '../../02-elements/price/Price'
   import AlpacaList from '../../02-elements/list/List'
-  import AlpacaListItem from '../../02-elements/list/ListItem'
+  import AlpacaListItem from '../../02-elements/list/list-item/ListItem'
 
   export default {
     components: {

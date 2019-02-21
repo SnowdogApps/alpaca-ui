@@ -1,0 +1,14 @@
+$list__width--image: 16px !default;
+
+.list {
+  &--with-image {
+    .list__item {
+      display: flex;
+    }
+
+    .list__image {
+      width: $list__width--image;
+      height: auto;
+    }
+  }
+}

@@ -44,7 +44,7 @@
   import AlpacaIcon from '../../01-globals/icon/Icon'
   import AlpacaList from '../../02-elements/list/List'
   import AlpacaButton from '../../02-elements/button/Button'
-  import AlpacaListItem from '../../02-elements/list/ListItem'
+  import AlpacaListItem from '../../02-elements/list/list-item/ListItem'
 
   export default {
     components: {

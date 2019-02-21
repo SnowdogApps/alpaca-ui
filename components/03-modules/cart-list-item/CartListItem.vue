@@ -66,7 +66,7 @@
   import AlpacaImage from '../../02-elements/image/Image'
   import AlpacaPrice from '../../02-elements/price/Price'
   import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaDescriptionList from '../../02-elements/list/DescriptionList'
+  import AlpacaDescriptionList from '../../02-elements/list/description-list/DescriptionList'
   import AlpacaButton from '../../02-elements/button/Button'
 
   export default {
