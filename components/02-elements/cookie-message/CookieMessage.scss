@@ -78,6 +78,7 @@ $cookie-message__close-icon-margin-left: $spacer !default;
       background: none;
       color: $cookie-message__close-color;
     }
+
     @include mq($screen-s) {
       padding: $cookie-message__close-padding--small;
     }

@@ -67,6 +67,7 @@
       .list__item {
         display: flex;
       }
+
       .list__image {
         width: $list__width--image;
         height: auto;

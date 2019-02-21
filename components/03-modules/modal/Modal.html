@@ -1,0 +1,26 @@
+<div
+  @click.self="handleBackgroundClick"
+  :aria-hidden="ariaHidden"
+  :class="['modal', { 'modal--active': visibility }]"
+  :aria-labelledby="ariaLabelledby"
+  :aria-describedby="ariaDescribedby"
+  role="dialog" 
+>
+  <div
+    ref="modal"
+    :style="getMaxWidth"
+    role="document"
+    class="modal__content"
+    tabindex="0"
+  >
+    <slot/>
+    <button
+      v-if="closeButton"
+      @click="hide"
+      class="button button--icon modal__close-button"
+      type="button"
+    >
+      <alpaca-icon icon="close"/>
+    </button>
+  </div>
+</div>

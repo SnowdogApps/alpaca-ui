@@ -215,6 +215,7 @@
 
     &__amount {
       display: none;
+
       @include mq($screen-m) {
         flex: 1;
         justify-content: center;
@@ -242,6 +243,7 @@
       border-top: $toolbar__sorter-border-top;
       padding: $toolbar__sorter-padding;
       width: 100%;
+
       @include mq($screen-m) {
         width: auto;
         border-top: none;
@@ -263,6 +265,7 @@
       margin: $toolbar__mode-icon-margin;
       fill: $toolbar__icon-color;
       transition: $toolbar__mode-icon-transition;
+
       &--active {
         fill: $toolbar__icon-color--active;
       }
@@ -281,6 +284,7 @@
       &:hover,
       &:focus {
         background: none;
+
         .toolbar__mode-icon {
           fill: $toolbar__icon-color--hover;
         }
@@ -292,14 +296,18 @@
       margin: $reset;
       display: flex;
       align-items: center;
+
       .choices {
         flex-grow: 1;
+
         @include mq($screen-m) {
           width: $toolbar__sorter-width;
         }
       }
+
       .select__field-list {
         z-index: $toolbar__select-field-list-z-index;
+
         &--single {
           height: $toolbar__select-field-list-height;
           border: $toolbar__select-border;
@@ -313,7 +321,6 @@
       .choices {
         @include mq($screen-m) {
           display: block;
-
           width: $toolbar__limiter-width;
         }
       }
@@ -330,6 +337,7 @@
     &__limiter-select {
       height: $toolbar__select-height;
       font-family: $toolbar__select-font-family;
+
       @include mq($screen_m) {
         width: $toolbar__sorter-width;
       }
@@ -345,7 +353,7 @@
     &__limiter-label {
       color: $toolbar__secondary-text-color;
       margin-bottom: 0;
-      margin-right:  $toolbar__offset;
+      margin-right: $toolbar__offset;
     }
 
     &__sorter-label {
@@ -374,6 +382,7 @@
       align-items: center;
       justify-content: flex-end;
       width: 20%;
+
       @include mq($screen-m) {
         position: relative;
         top: auto;
@@ -393,22 +402,26 @@
 
     &__limiter-suffix {
       display: none;
+
       @include mq($screen-m) {
         color: $toolbar__secondary-text-color;
         display: block;
       }
     }
+
     .choices {
       &.is-open {
         .select__field-list--single {
           border-radius: $toolbar__select-single-border-radius;
         }
+
         .choices__list--dropdown {
           border-radius: $toolbar__select-dropdown-border-radius;
         }
       }
-      &.is-open:after,
-      &:after {
+
+      &.is-open::after,
+      &::after {
         top: $toolbar__dropdown-icon-area-top;
         right: $toolbar__dropdown-icon-area-right;
         width: $toolbar__dropdown-icon-area-size;
@@ -424,9 +437,11 @@
 
     ~ .toolbar {
       border-bottom: 0;
+
       .pager {
         display: block;
       }
+
       .toolbar {
         &__mode,
         &__sorter,

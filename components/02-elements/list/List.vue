@@ -19,29 +19,29 @@ export default {
 </script>
 
 <style lang="scss">
-  $list__style:           none !default;
-  $list__item-padding:    5px 0 !default;
+  $list__style: none !default;
+  $list__item-padding: 5px 0 !default;
   $list__content-padding: 10px !default;
-  $list__label-padding:   0 5px 5px 0 !default;
-  $list__icon-color:      $white !default;
+  $list__label-padding: 0 5px 5px 0 !default;
+  $list__icon-color: $white !default;
 
   // Horizontal
-  $list__padding--horizontal:         10px !default;
+  $list__padding--horizontal: 10px !default;
 
   // Horizontal\@medium
   $list__padding--horizontal\@medium: 10px !default;
 
   // With icon
-  $list__padding--with-icon:          12px !default;
+  $list__padding--with-icon: 12px !default;
 
   // Divided
-  $list__border--divider:             1px solid $gray-dark !default;
+  $list__border--divider: 1px solid $gray-dark !default;
 
-  $list__item-padding--native:        0 0 $spacer--medium $spacer--large !default;
+  $list__item-padding--native: 0 0 $spacer--medium $spacer--large !default;
 
   // Nested
-  $list__margin-nested:               0 0 0 $spacer--large !default;
-  $list__margin-nested-second-level:  0 0 0 #{$spacer--large * 2} !default;
+  $list__margin-nested: 0 0 0 $spacer--large !default;
+  $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
 
   .list {
     margin: $reset;
@@ -56,12 +56,14 @@ export default {
     &--horizontal {
       display: flex;
       flex-flow: row wrap;
+
       .list__item {
         padding: $list__padding--horizontal;
 
         &:first-child {
           padding-top: $list__padding--horizontal;
         }
+
         &:last-child {
           padding-bottom: $list__padding--horizontal;
         }
@@ -79,6 +81,7 @@ export default {
           &:first-child {
             padding-top: $list__padding--horizontal\@medium;
           }
+
           &:last-child {
             padding-bottom: $list__padding--horizontal\@medium;
           }
@@ -97,10 +100,12 @@ export default {
         &:first-child {
           padding-top: $reset;
         }
+
         &:last-child {
           padding-bottom: $reset;
         }
       }
+
       .list__icon-link {
         padding: $list__padding--with-icon;
       }
@@ -109,6 +114,7 @@ export default {
     &--divided {
       .list__item {
         border-bottom: $list__border--divider;
+
         &:last-child {
           border-bottom: none;
         }
@@ -118,6 +124,7 @@ export default {
         .list__item {
           border-bottom: none;
           border-right: $list__border--divider;
+
           &:last-child {
             border-right: none;
           }
@@ -130,6 +137,7 @@ export default {
             border-bottom: none;
             border-right: $list__border--divider;
           }
+
           &:last-child {
             @include mq($screen-m) {
               border-right: none;
@@ -144,7 +152,7 @@ export default {
         position: relative;
         padding: $list__item-padding--native;
 
-        &:before {
+        &::before {
           content: "";
           position: absolute;
           top: 5px;
@@ -182,7 +190,8 @@ export default {
       clear: left;
       float: left;
       padding: $list__label-padding;
-      &:after {
+
+      &::after {
         content: ": ";
       }
     }

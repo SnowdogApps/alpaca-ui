@@ -49,6 +49,7 @@
     position: relative;
     margin: $reset;
     border-bottom: $mega-menu__border-bottom;
+
     @include mq($screen-xl) {
       display: block;
     }
@@ -71,6 +72,7 @@
       font-weight: $mega-menu__font-weight;
       color: $mega-menu__link-color;
       text-decoration: $mega-menu__link-text-decoration;
+
       &:focus,
       &:hover {
         text-decoration: $mega-menu__link-text-decoration;

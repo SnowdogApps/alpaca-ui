@@ -145,46 +145,46 @@ export default {
 </script>
 
 <style lang="scss">
-  $minicart-product__padding                        : $spacer--medium 0 $spacer !default;
-  $minicart-product__border                         : 1px solid $gray-lighter !default;
-  $minicart-product__spacer                         : $spacer !default;
+$minicart-product__padding                        : $spacer--medium 0 $spacer !default;
+$minicart-product__border                         : 1px solid $gray-lighter !default;
+$minicart-product__spacer                         : $spacer !default;
 
-  $minicart-product__image-width                    : 72px !default;
+$minicart-product__image-width                    : 72px !default;
 
-  $minicart-product__info-padding                   : 0 0 0 $spacer--medium !default;
+$minicart-product__info-padding                   : 0 0 0 $spacer--medium !default;
 
-  $minicart-product__name-line-height               : 1.15 !default;
+$minicart-product__name-line-height               : 1.15 !default;
 
-  $minicart-product__link-text-decoration           : none !default;
+$minicart-product__link-text-decoration           : none !default;
 
-  $minicart-product__update-width                   : 90px !default;
-  $minicart-product__update-height                  : 32px !default;
-  $minicart-product__update-padding                 : 0 $spacer !default;
-  $minicart-product__update-margin                  : 0 0 $spacer 0 !default;
+$minicart-product__update-width                   : 90px !default;
+$minicart-product__update-height                  : 32px !default;
+$minicart-product__update-padding                 : 0 $spacer !default;
+$minicart-product__update-margin                  : 0 0 $spacer 0 !default;
 
-  $minicart-product__input-padding                  : $spacer 0 !default;
+$minicart-product__input-padding                  : $spacer 0 !default;
 
-  $minicart-product__field-width                    : 56px !default;
-  $minicart-product__field-height                   : 32px !default;
-  $minicart-product__field-padding                  : $spacer !default;
-  $minicart-product__field-margin                   : 0 0 0 $spacer !default;
+$minicart-product__field-width                    : 56px !default;
+$minicart-product__field-height                   : 32px !default;
+$minicart-product__field-padding                  : $spacer !default;
+$minicart-product__field-margin                   : 0 0 0 $spacer !default;
 
-  $minicart-product__attributes-button-color        : $blue !default;
-  $minicart-product__attributes-button-bg-color     : $white !default;
-  $minicart-product__attributes-button-font-family  : $font-family-base !default;
-  $minicart-product__attributes-button-font-size    : $font-size-small !default;
-  $minicart-product__attributes-list-padding        : $spacer 0 0 0 !default;
-  $minicart-product__attributes-list-color          : $gray-dark !default;
-  $minicart-product__attributes-list-icon-margin    : 0 0 0 $spacer !default;
+$minicart-product__attributes-button-color        : $blue !default;
+$minicart-product__attributes-button-bg-color     : $white !default;
+$minicart-product__attributes-button-font-family  : $font-family-base !default;
+$minicart-product__attributes-button-font-size    : $font-size-small !default;
+$minicart-product__attributes-list-padding        : $spacer 0 0 0 !default;
+$minicart-product__attributes-list-color          : $gray-dark !default;
+$minicart-product__attributes-list-icon-margin    : 0 0 0 $spacer !default;
 
-  $minicart-product__price-color                    : $color-secondary !default;
-  $minicart-product__price-font-weight              : $font-weight-bold !default;
+$minicart-product__price-color                    : $color-secondary !default;
+$minicart-product__price-font-weight              : $font-weight-bold !default;
 
-  $minicart-product__action-button-bg               : transparent !default;
-  $minicart-product__action-icon-size               : 24px !default;
-  $minicart-product__action-icon-padding            : 2px !default;
-  $minicart-product__action-icon-color              : $gray !default;
-  $minicart-product__action-icon-color--active      : $color-primary !default;
+$minicart-product__action-button-bg               : transparent !default;
+$minicart-product__action-icon-size               : 24px !default;
+$minicart-product__action-icon-padding            : 2px !default;
+$minicart-product__action-icon-color              : $gray !default;
+$minicart-product__action-icon-color--active      : $color-primary !default;
 
 .minicart-product {
   display: flex;
@@ -245,6 +245,7 @@ export default {
     &.dropdown-list__label {
       color: $minicart-product__attributes-button-color;
       background-color: $minicart-product__attributes-button-bg-color;
+
       &:focus,
       &:hover {
         background-color: $minicart-product__attributes-button-bg-color;
@@ -309,6 +310,7 @@ export default {
     padding: 12px;
     border: 0;
     background-color: $minicart-product__action-button-bg;
+
     &:focus,
     &:hover {
       background-color: $minicart-product__action-button-bg;
@@ -320,6 +322,7 @@ export default {
     width: $minicart-product__action-icon-size;
     padding: $minicart-product__action-icon-padding;
     fill: $minicart-product__action-icon-color;
+
     &:focus,
     &:hover {
       fill: $minicart-product__action-icon-color--active;
