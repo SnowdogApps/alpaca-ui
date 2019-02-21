@@ -15,11 +15,19 @@
     <ol class="list sidebar-block__list">
       <li class="sidebar-block__item">
         <alpaca-button
+          class="sidebar-block__remove"
+          :default-class="false"
           icon="close"
           icon-class="sidebar-block__remove-icon"
-          class="sidebar-block__remove"
+          :default-icon-class="false"
           aria-label="Remove product from compare"
         />
+        <alpaca-link 
+          class="sidebar-block__link"
+          href="#"
+        >
+          Chaz Kangeroo Hoodie
+        </alpaca-link>
       </li>
     </ol>
   </div>
@@ -27,6 +35,7 @@
 
 <script>
   import AlpacaHeading from '../../01-globals/heading/Heading'
+  import AlpacaLink from '../../01-globals/link/Link'
   import AlpacaButton from '../../02-elements/button/Button.vue'
   import AlpacaDivider from '../../02-elements/divider/Divider'
 
@@ -34,12 +43,13 @@
     components: {
       AlpacaHeading,
       AlpacaButton,
-      AlpacaDivider
+      AlpacaDivider,
+      AlpacaLink
     }
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $sidebar-block__padding                    : 0 0 $spacer--large !default;
   $sidebar-block__min-height                 : 150px !default;
   $sidebar-block__min-height--loaded         : auto !default;

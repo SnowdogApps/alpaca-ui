@@ -3,7 +3,7 @@
   :class="[
     {
       button: tag,
-      'button--icon': icon,
+      'button--icon': icon && defaultClass,
       'button--secondary': secondary,
       'button--link': tag === 'a',
       'button--fluid': fluid
@@ -17,8 +17,10 @@
     v-if="icon"
     :icon="icon"
     :class="[
-      iconClass,
-      'button__icon'
+      {
+        'button__icon': defaultIconClass
+      },
+      iconClass
     ]"
   />
 </component>
