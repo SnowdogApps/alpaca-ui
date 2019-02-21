@@ -1,4 +1,5 @@
 import AlpacaContainer from '../../01-globals/container/Container.vue'
+import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
 import AlpacaToolbar from '../../03-modules/toolbar/Toolbar.vue'
 import AlpacaCatalogFilter from '../../03-modules/filter/Filter.vue'
 import AlpacaCatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
@@ -6,6 +7,7 @@ import AlpacaCatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGri
 export default {
   components: {
     AlpacaContainer,
+    AlpacaBreadcrumbs,
     AlpacaToolbar,
     AlpacaCatalogFilter,
     AlpacaCatalogGridItem
@@ -21,6 +23,10 @@ export default {
     },
     toolbar: {
       type: Object,
+      required: true
+    },
+    breadcrumbs: {
+      type: Array,
       required: true
     }
   },

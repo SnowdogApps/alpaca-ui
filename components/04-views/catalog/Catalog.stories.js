@@ -4,6 +4,7 @@ import StoryRouter from 'storybook-vue-router'
 import data from './mocks/catalog.json'
 import menu from '../../03-modules/header/mocks/menu.json'
 import toolbar from '../../03-modules/toolbar/mocks/toolbar.json'
+import breadcrumbs from "../../02-elements/breadcrumbs/mocks/breadcrumbs"
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from '../../03-modules/header/Header.vue'
@@ -17,7 +18,8 @@ storiesOf('Views/Catalog', module)
     return {
       ...data,
       menu,
-      toolbar
+      toolbar,
+      breadcrumbs
     }
   },
   template: `
@@ -31,6 +33,7 @@ storiesOf('Views/Catalog', module)
         :products="products.items"
         :filters="products.filters"
         :toolbar="toolbar"
+        :breadcrumbs="breadcrumbs"
       />
     </app>
   `
