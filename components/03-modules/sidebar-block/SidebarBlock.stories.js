@@ -23,5 +23,6 @@ storiesOf('Modules/Sidebar Block', module)
     `,
     methods: {
       clearCompareList: action('Clear compare list'),
+      removeFromCompare: action('Remove product from compare')
     }
   }))

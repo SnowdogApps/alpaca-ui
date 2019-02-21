@@ -25,8 +25,9 @@
           icon-class="sidebar-block__remove-icon"
           :default-icon-class="false"
           aria-label="Remove product from compare"
+          @click="removeFromCompare"
         />
-        <alpaca-link 
+        <alpaca-link
           class="sidebar-block__link"
           :href="product.link"
         >
@@ -96,9 +97,12 @@
       }
     },
     methods: {
+      removeFromCompare() {
+        this.$emit('removeFromCompare')
+      },
       clearCompareList() {
         this.$emit('clearCompareList')
-      }
+      },
     }
   }
 </script>
