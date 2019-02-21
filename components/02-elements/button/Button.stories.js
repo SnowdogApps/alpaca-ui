@@ -73,7 +73,7 @@ storiesOf('Elements/Button', module)
     components: { App, AlpacaButton },
     template: `
       <app>
-        <alpaca-button 
+        <alpaca-button
           icon="search"
           @click="exampleMethod"
         />
@@ -87,7 +87,7 @@ storiesOf('Elements/Button', module)
     components: { App, AlpacaButton },
     template: `
       <app>
-        <alpaca-button 
+        <alpaca-button
           icon="search"
           @click="exampleMethod"
         >

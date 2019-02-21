@@ -4,7 +4,7 @@
   :class="['modal', { 'modal--active': visibility }]"
   :aria-labelledby="ariaLabelledby"
   :aria-describedby="ariaDescribedby"
-  role="dialog" 
+  role="dialog"
 >
   <div
     :style="getMaxWidth"
@@ -14,9 +14,9 @@
     tabindex="0"
   >
     <div class="modal__header row between-xs">
-      <alpaca-heading 
+      <alpaca-heading
         v-if="!blank"
-        :level="1" 
+        :level="1"
         class="modal__heading"
       >
         {{ heading }}
@@ -27,13 +27,13 @@
         class="button button--icon modal__close-button"
         type="button"
       >
-        <alpaca-icon 
-          icon="close" 
+        <alpaca-icon
+          icon="close"
           class="modal__close-button-icon"
         />
       </button>
     </div>
-    <alpaca-divider 
+    <alpaca-divider
       v-if="!blank"
       class="modal__divider"
     />

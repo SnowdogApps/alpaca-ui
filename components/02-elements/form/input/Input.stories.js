@@ -9,7 +9,7 @@ storiesOf('Elements/Form/Input', module)
     data: () => ({ value: null }),
     template: `
       <app>
-        <alpaca-input 
+        <alpaca-input
           label="Default label"
           type="text"
           id="field_id"
@@ -26,7 +26,7 @@ storiesOf('Elements/Form/Input', module)
     data: () => ({ value: null }),
     template: `
       <app>
-        <alpaca-input 
+        <alpaca-input
           label="Textarea"
           type="text"
           id="field_id"
@@ -44,7 +44,7 @@ storiesOf('Elements/Form/Input', module)
     data: () => ({ value: null }),
     template: `
       <app>
-        <alpaca-input 
+        <alpaca-input
           label="Hidden label"
           type="text"
           id="field_id"
@@ -62,7 +62,7 @@ storiesOf('Elements/Form/Input', module)
     data: () => ({ value: null }),
     template: `
       <app>
-        <alpaca-input 
+        <alpaca-input
           label="Inline text"
           type="text"
           id="field_id"

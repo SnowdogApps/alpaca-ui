@@ -26,8 +26,8 @@ storiesOf('Modules/Header', module)
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
-        <alpaca-modal 
-          ref="registerModal" 
+        <alpaca-modal
+          ref="registerModal"
           heading="Registred Customers"
         >
           <alpaca-login

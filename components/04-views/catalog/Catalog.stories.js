@@ -20,7 +20,7 @@ storiesOf('Views/Catalog', module)
   },
   template: `
     <app>
-      <alpaca-header 
+      <alpaca-header
         :menu="menu"
         src="./../images/logo/alpaca.svg"
         link="#"
