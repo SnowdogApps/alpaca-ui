@@ -1,0 +1,35 @@
+<div class="radio">
+  <fieldset
+    :aria-label="legendId"
+    class="radio"
+  >
+    <legend
+      :id="legendId"
+      class="radio__legend"
+    >
+      {{ legend }}
+    </legend>
+    <div
+      v-for="option in options"
+      :key="option.id"
+      class="radio__handler"
+    >
+      <input
+        :id="option.id"
+        :name="name"
+        :value="option.value"
+        :checked="checkedValue === option.value"
+        type="radio"
+        class="radio__field"
+        @change="$emit('change', $event.target.value)"
+      >
+      <label
+        :for="option.id"
+        class="radio__label"
+      >
+        <span class="radio__icon" />
+        {{ option.label }}
+      </label>
+    </div>
+  </fieldset>
+</div>
