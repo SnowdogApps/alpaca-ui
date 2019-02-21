@@ -1,19 +1,31 @@
 import AlpacaContainer from '../../01-globals/container/Container.vue'
-import AlpacaCatalogFilter from '../../03-modules/filters/Filter.vue'
-import AlpacaCatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import AlpacaFilters from '../../03-modules/filter/filters/Filters.vue'
+import AlpacaGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 
 export default {
   components: {
     AlpacaContainer,
-    AlpacaCatalogFilter,
-    AlpacaCatalogGridItem
+    AlpacaFilters,
+    AlpacaGridItem
   },
   props: {
     products: {
       type: Array,
       required: true
     },
-    filters: {
+    activeFilterItems: {
+      type: Array,
+      required: true
+    },
+    swatchItems: {
+      type: Array,
+      required: true
+    },
+    colorItems: {
+      type: Array,
+      required: true
+    },
+    checkboxItems: {
       type: Array,
       required: true
     }
