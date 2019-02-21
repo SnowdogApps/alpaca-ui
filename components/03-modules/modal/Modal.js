@@ -1,8 +1,12 @@
+import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
 export default {
   components: {
-    AlpacaIcon
+    AlpacaIcon,
+    AlpacaDivider,
+    AlpacaHeading
   },
   data() {
     return {
@@ -12,6 +16,10 @@ export default {
     }
   },
   props: {
+    heading: {
+      type: String,
+      default: null
+    },
     closeOnEsc: {
       type: Boolean,
       default: true
@@ -35,6 +43,10 @@ export default {
     closeButton: {
       type: Boolean,
       default: true
+    },
+    blank: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

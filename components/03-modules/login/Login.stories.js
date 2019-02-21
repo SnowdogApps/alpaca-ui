@@ -10,7 +10,6 @@ storiesOf('Modules/Login', module)
     template: `
       <app>
         <alpaca-login
-          main-heading="Customer login"
           link-heading="New Customer"
           legend=""
           forget-password-text="Forgot your password?"
