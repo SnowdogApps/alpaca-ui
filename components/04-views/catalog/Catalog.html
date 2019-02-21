@@ -1,5 +1,19 @@
 <alpaca-container>
   <div class="catalog">
+    <div class="catalog-list">
+      <div class="catalog-list__products">
+        <alpaca-toolbar
+          showMode
+          showSorter
+          showLimit
+          showAmount
+          :sortBy="toolbar.sortBy"
+          :limiter="toolbar.limiter"
+          :amount="toolbar.amount"
+          @listView="listView"
+          @gridView="gridView"
+        />
+      </div>
     <div class="catalog__sidebar">
       <alpaca-catalog-filter
         v-for="filter in filters"
@@ -16,6 +30,7 @@
           :product="product"
         />
       </ul>
+    </div>
     </div>
   </div>
 </alpaca-container>

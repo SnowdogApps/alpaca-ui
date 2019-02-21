@@ -3,6 +3,7 @@ import StoryRouter from 'storybook-vue-router'
 
 import data from './mocks/catalog.json'
 import menu from '../../03-modules/header/mocks/menu.json'
+import toolbar from '../../03-modules/toolbar/mocks/toolbar.json'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from '../../03-modules/header/Header.vue'
@@ -15,7 +16,8 @@ storiesOf('Views/Catalog', module)
   data() {
     return {
       ...data,
-      menu
+      menu,
+      toolbar
     }
   },
   template: `
@@ -28,6 +30,7 @@ storiesOf('Views/Catalog', module)
       <alpaca-catalog
         :products="products.items"
         :filters="products.filters"
+        :toolbar="toolbar"
       />
     </app>
   `
