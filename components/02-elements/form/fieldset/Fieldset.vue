@@ -1,48 +1,11 @@
-<template>
-  <fieldset class="fieldset">
-    <legend
-      :class="[
-        legendClass,
-        'fieldset__legend'
-      ]"
-    >
-      {{ legendText }}
-    </legend>
-    <slot />
-  </fieldset>
-</template>
+<template src="./Fieldset.html" />
 
 <script>
-export default {
-  props: {
-    legendText: {
-      type: String,
-      required: true
-    },
-    legendClass: {
-      type: String,
-      default: null
-    }
+  import instance from "./Fieldset.js"
+
+  export default {
+    ...instance
   }
-}
 </script>
 
-<style lang="scss">
-  $fieldset__border            : none !default;
-  $fieldset__legend-margin     : 0 0 25px !default;
-  $fieldset__legend-font-size  : $font-size-large !default;
-  $fieldset__legend-line-height: 1.2 !default;
-
-  .fieldset {
-    border: $fieldset__border;
-    padding: $reset;
-    margin: $reset;
-
-    &__legend {
-      padding: $reset;
-      margin: $fieldset__legend-margin;
-      font-size: $fieldset__legend-font-size;
-      line-height: $fieldset__legend-line-height;
-    }
-  }
-</style>
+<style lang="scss" src="./Fieldset.scss"/>
