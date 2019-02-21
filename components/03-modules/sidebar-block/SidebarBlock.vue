@@ -35,17 +35,15 @@
       </li>
     </ol>
     <div>
-      <alpaca-button
-        class="sidebar-block__action"
-        tag="a"
-        href="#"
+      <router-link
+        class="button button--link sidebar-block__action"
+        :to="comparePageUrl"
       >
         {{ compareButton }}
-      </alpaca-button>
+      </router-link>
       <alpaca-button
         class="sidebar-block__action"
-        tag="a"
-        href="#"
+        @click="clearCompareList"
       >
         {{ clearAllButton }}
       </alpaca-button>
@@ -85,11 +83,21 @@
       products: {
         type: Array,
         required: true
+      },
+      comparePageUrl: {
+        type: String,
+        requited: false,
+        default: 'compare'
       }
     },
     computed: {
       productsCount() {
         return this.products.length
+      }
+    },
+    methods: {
+      clearCompareList() {
+        this.$emit('clearCompareList')
       }
     }
   }
