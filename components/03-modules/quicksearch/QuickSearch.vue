@@ -119,7 +119,7 @@
   import AlpacaLink from '../../01-globals/link/Link'
   import AlpacaHeading from '../../01-globals/heading/Heading'
   import AlpacaImage from '../../02-elements/image/Image'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
   import AlpacaPrice from '../../02-elements/price/Price'
   import AlpacaList from '../../02-elements/list/List'
   import AlpacaListItem from '../../02-elements/list/ListItem'

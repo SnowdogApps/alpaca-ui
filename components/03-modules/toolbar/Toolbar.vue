@@ -80,7 +80,7 @@
 
 <script>
   import AlpacaSelect from '../../02-elements/form/select/Select'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
   import AlpacaPager from '../../03-modules/pager/Pager'
 
   export default {

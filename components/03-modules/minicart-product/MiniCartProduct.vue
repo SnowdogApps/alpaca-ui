@@ -70,7 +70,7 @@ import AlpacaImage from "../../02-elements/image/Image"
 import AlpacaLink from "../../01-globals/link/Link"
 import AlpacaInput from "../../02-elements/form/input/Input"
 import AlpacaPrice from "../../02-elements/price/Price"
-import AlpacaButton from "../../02-elements/button/Button"
+import AlpacaButton from "../../02-elements/button/Button.vue"
 
 export default {
   components: {

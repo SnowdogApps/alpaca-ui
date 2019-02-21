@@ -2,7 +2,7 @@
   <div class="swatch">
     <alpaca-label
       v-if="label"
-      custom-class="swatch__title"
+      class="swatch__title"
     >
       {{ label }}
     </alpaca-label>

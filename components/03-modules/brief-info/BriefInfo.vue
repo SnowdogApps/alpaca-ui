@@ -39,7 +39,7 @@
 <script>
   import uniqueId from 'lodash.uniqueid'
   import AlpacaHeading from '../../01-globals/heading/Heading'
-  import Icon from '../../01-globals/icon/Icon'
+  import Icon from '../../01-globals/icon/Icon.vue'
 
   export default {
     components: {

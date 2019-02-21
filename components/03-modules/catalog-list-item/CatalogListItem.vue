@@ -75,7 +75,7 @@
   import AlpacaBadge from '../../02-elements/badge/Badge'
   import AlpacaSwatch from '../../02-elements/swatch/Swatch'
   import AlpacaPrice from '../../02-elements/price/Price'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
     components: {

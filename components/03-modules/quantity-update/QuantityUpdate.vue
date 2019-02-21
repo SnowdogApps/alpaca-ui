@@ -32,7 +32,7 @@
 
 <script>
   import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
     components: {
