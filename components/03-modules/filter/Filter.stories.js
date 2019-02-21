@@ -13,11 +13,11 @@ import checkboxItems from './mocks/checkboxItems'
 
 storiesOf('Modules/Filter', module)
   .add('Swatch', () => ({
-  components: { App, AlpacaSwatchFilter, AlpacaDropdownList },
-  data: () => ({
-    swatchItems
-  }),
-  template: `
+    components: { App, AlpacaSwatchFilter, AlpacaDropdownList },
+    data: () => ({
+      swatchItems
+    }),
+    template: `
      <app>
        <alpaca-dropdown-list secondary>
           <alpaca-swatch-filter
@@ -32,7 +32,7 @@ storiesOf('Modules/Filter', module)
     methods: {
       click: action('Clicked'),
     }
-}))
+  }))
   .add('Color', () => ({
     components: { App, AlpacaDropdownList, AlpacaColorFilter },
     data: () => ({
