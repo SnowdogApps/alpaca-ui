@@ -5,14 +5,14 @@ import { action } from '@storybook/addon-actions'
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
-import AlpacaRegister from '../../03-modules/register/Register.vue'
+import AlpacaLogin from '../../03-modules/login/Login.vue'
 
 import menu from './mocks/menu.json'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { App, AlpacaHeader, AlpacaModal, AlpacaRegister },
+    components: { App, AlpacaHeader, AlpacaModal, AlpacaLogin },
     data: () => ({
       menu
     }),
@@ -27,12 +27,15 @@ storiesOf('Modules/Header', module)
           @goToAccount="showRegister"
         />
         <alpaca-modal ref="registerModal" :max-width="500">
-          <alpaca-register
-            mainHeading="Create new customer account"
-            personalSectionText="Personal information"
-            signInSectionText="Sign-In information"
-            buttonText="Create an Account"
-            @register="register"
+          <alpaca-login
+            main-heading="Customer login"
+            link-heading="New Customer"
+            legend=""
+            forget-password-text="Forgot your password?"
+            forget-password-link="#"
+            go-to-register-button="or register an account"
+            @login="login"
+            @goToRegister="goToRegister"
           />
         </alpaca-modal>
       </app>
@@ -41,7 +44,8 @@ storiesOf('Modules/Header', module)
       showRegister() {
         this.$refs.registerModal.show()
       },
-      register: action('Register'),
+      login: action('Login'),
+      goToRegister: action('Go to Register'),
       toggleMicrocart: action('toggle Microcart'),
       toggleWishlist: action('toggle Wishlist')
     }
