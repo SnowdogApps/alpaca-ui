@@ -1,0 +1,19 @@
+<a
+  :href="link"
+  class="banner"
+  :aria-label="ariaLabel"
+>
+  <picture class="image">
+    <source
+      v-for="{ key, source } in getImageWithKey"
+      :key="key"
+      :srcset="source.src"
+      :media="source.mediaQuery"
+    >
+    <img
+      class="lazyload"
+      :src="image.defaultSrc"
+      :alt="image.alt"
+    >
+  </picture>
+</a>
