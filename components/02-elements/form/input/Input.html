@@ -1,0 +1,29 @@
+<div
+  :class="['input',{
+      'input--inline': inline
+    }]"
+>
+  <alpaca-label
+    :for="id"
+    :hidden="hiddenLabel"
+    :class="labelClass"
+  >
+    {{ label }}
+  </alpaca-label>
+
+  <component
+    :is="textarea ? 'textarea' : 'input'"
+    :id="id"
+    :class="['input__field', inputClass,{
+        'input__field--textarea': textarea
+      }]"
+
+    :name="name"
+    :type="type"
+    :min="min"
+    :max="max"
+    :placeholder="placeholder"
+    :value="value"
+    @input="input($event.target.value)"
+  />
+</div>

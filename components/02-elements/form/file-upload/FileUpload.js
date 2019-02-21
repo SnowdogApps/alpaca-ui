@@ -1,4 +1,4 @@
-import AlpacaButton from "../../../02-elements/button/Button"
+import AlpacaButton from "../../../02-elements/button/Button.vue"
 
 export default {
   components: {
