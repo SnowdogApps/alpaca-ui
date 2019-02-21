@@ -3,13 +3,13 @@ import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
 import App from '../../01-globals/app/App.vue'
-import AlpacaSidebarBlock from './SidebarBlock.vue'
+import AlpacaSidebarBlock from './compare/SidebarBlock.vue'
 
 import products from './mocks/products.json'
 
 storiesOf('Modules/Sidebar Block', module)
   .addDecorator(StoryRouter())
-  .add('Default', () => ({
+  .add('Compare', () => ({
     components: { App, AlpacaSidebarBlock },
     data: () => ({
       products
