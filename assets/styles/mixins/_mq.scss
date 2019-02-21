@@ -3,11 +3,15 @@
     @media all and (min-width: $min-screen) and (max-width: $max-screen) {
       @content;
     }
-  } @else if ($max-screen and not $min-screen) {
+  }
+
+  @else if ($max-screen and not $min-screen) {
     @media all and (max-width: $max-screen) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @media all and (min-width: $min-screen) {
       @content;
     }

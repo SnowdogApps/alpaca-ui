@@ -129,13 +129,16 @@
       flex-direction: column;
       padding: $brief-info__icon-padding;
       flex: 1 0 0;
+
       @include mq($screen-m) {
         align-items: flex-start;
       }
+
       @include mq($screen-l) {
         align-items: center;
         flex-flow: row nowrap;
       }
+
       &:first-child,
       &:last-child {
         @include mq($screen-m) {
@@ -151,6 +154,7 @@
       width: $brief-info__icon-size;
       height: $brief-info__icon-size;
       flex-shrink: 0;
+
       @include mq($screen-l) {
         margin-bottom: $reset;
       }
@@ -168,6 +172,7 @@
       text-transform: $brief-info__title-text-transform;
       line-height: $brief-info__title-line-height;
       font-weight: $brief-info__title-font-weight;
+
       @include mq($screen-l) {
         font-size: $brief-info__title-font-size\@large;
         margin: 0 0 0 10px;
@@ -179,8 +184,10 @@
       font-weight: $brief-info__link-font-weight;
       text-decoration: $brief-info__link-text-decoration;
     }
+
     &__content {
       text-align: $brief-info__content-text-align;
+
       @include mq($screen-m) {
         text-align: $brief-info__content-text-align\@medium;
       }

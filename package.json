@@ -6,7 +6,8 @@
     "dev": "start-storybook -p 6006 -s ./public",
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",
-    "eslint": "eslint --ext .js,.vue components"
+    "eslint": "eslint --ext .js,.vue components",
+    "stylelint": "stylelint 'components/**/*.vue' 'components/**/*.scss' 'assets/styles/**/*.scss'"
   },
   "dependencies": {
     "lodash.uniqueid": "^4.0.1",
@@ -33,6 +34,10 @@
     "sass-resources-loader": "^2.0.0",
     "storybook-readme": "^4.0.2",
     "storybook-vue-router": "^1.0.2",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.5.3",
+    "stylelint-webpack-plugin": "^0.10.5",
     "vue-loader": "^15.6.2",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.5"

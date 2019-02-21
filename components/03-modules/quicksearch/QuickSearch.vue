@@ -227,6 +227,7 @@
     width: $quicksearch__width;
     background: $quicksearch__background;
     box-shadow: $quicksearch__box-shadow;
+
     @include mq($screen-m) {
       top: $quicksearch__top\@medium;
       left: $quicksearch__left\@medium;
@@ -234,9 +235,11 @@
       padding: $quicksearch__padding\@medium;
       width: $quicksearch__width\@medium;
     }
+
     @include mq($screen-l) {
       left: $quicksearch__left\@large;
     }
+
     &--visible {
       display: block;
     }
@@ -265,6 +268,7 @@
       right: $quicksearch__close-right;
       border: $quicksearch__close-border;
       background-color: $quicksearch__close-background;
+
       &:hover,
       &:focus {
         border: $quicksearch__close-border;
@@ -280,6 +284,7 @@
 
     &__content {
       padding: $quicksearch__content-padding;
+
       @include mq($screen-m) {
         display: flex;
       }
@@ -289,9 +294,11 @@
       margin: $reset;
       padding: $reset;
       list-style-type: none;
+
       &--column {
         flex: 2;
       }
+
       &--below {
         padding-top: $quicksearch__list-padding-top--below;
       }
@@ -300,6 +307,7 @@
     &__categories-column {
       flex: 1;
       padding: $quicksearch__categories-column-padding;
+
       @include mq($screen-m) {
         padding: $quicksearch__categories-column-padding\@medium;
       }
@@ -309,6 +317,7 @@
       display: flex;
       padding: $quicksearch__product-padding;
       border-bottom: $quicksearch__product-border;
+
       @include mq($screen-m) {
         &:last-child {
           border-bottom: $quicksearch__product-border--last;
@@ -333,6 +342,7 @@
     &__name {
       color: $quicksearch__name-color;
       font-size: $quicksearch__name-font-size;
+
       &--thin {
         margin: $reset;
         padding: $quicksearch__name-padding;

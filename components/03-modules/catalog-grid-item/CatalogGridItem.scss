@@ -137,7 +137,7 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
     margin-bottom: $catalog-grid-item__name-margin-botttom;
 
     @include mq($screen-xxl) {
-      font-size: $catalog-grid-item__font-size\@large
+      font-size: $catalog-grid-item__font-size\@large;
     }
 
     &--bigger {
@@ -194,6 +194,7 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
 
   &__primary-form {
     margin: $reset;
+
     @include mq($screen-m) {
       flex: 1;
     }
@@ -214,6 +215,7 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
 
   &__cart-text {
     display: none;
+
     @include mq($screen-m) {
       display: block;
     }
@@ -223,6 +225,7 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
     display: flex;
     align-items: center;
     justify-content: center;
+
     .button {
       height: $catalog-grid-item__action-size;
       width: $catalog-grid-item__action-size;
@@ -230,12 +233,14 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
       background: $catalog-grid-item__action-background;
       border: $catalog-grid-item__action-border;
       cursor: $catalog-grid-item__action-cursor;
+
       &:hover,
       &:focus {
         .button__icon {
           fill: $catalog-grid-item__action-icon-fill-hover;
         }
       }
+
       .button__icon {
         width: $catalog-grid-item__action-icon-size;
         height: $catalog-grid-item__action-icon-size;

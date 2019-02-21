@@ -23,6 +23,10 @@ export default {
     screenM: {
       type: Boolean,
       default: false
+    },
+    listClass: {
+      type: String,
+      default: null
     }
   }
 }

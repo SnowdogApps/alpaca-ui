@@ -49,6 +49,7 @@
     font-weight: $label-font-weight;
     line-height: $label-line-height;
     transition: $label-transition;
+
     &--inline {
       margin: $label-margin--inline;
     }

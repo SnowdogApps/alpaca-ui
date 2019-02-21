@@ -11,12 +11,14 @@ $catalog-grid__border              : 1px solid $gray-light !default;
   display: flex;
   flex-direction: column;
   margin: $catalog__margin;
+
   @include mq($screen-l) {
     flex-direction: row;
   }
 
   &__sidebar {
     border-bottom: $catalog__sidebar-border;
+
     @include mq($screen-l) {
       flex: 1 $catalog__sidebar-width--mq-medium;
       justify-content: space-between;
@@ -27,6 +29,7 @@ $catalog-grid__border              : 1px solid $gray-light !default;
 
   &__products {
     padding: $catalog__products-padding;
+
     @include mq($screen-l) {
       flex-grow: 1;
       flex-shrink: 1;

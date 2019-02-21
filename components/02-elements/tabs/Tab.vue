@@ -84,6 +84,21 @@
   $tab__icon-size                      : 48px !default;
 
   .tab {
+    &__icon {
+      position: absolute;
+      right: 15px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: $tab__icon-size;
+      height: $tab__icon-size;
+      padding: $tab__icon-padding;
+
+      @include mq($screen-l) {
+        display: none;
+      }
+    }
+
     &__title {
       position: relative;
       display: block;
@@ -108,7 +123,7 @@
         flex: 1;
         order: -1;
         border-top: none;
-        border-bottom : $tab__title-border--large;
+        border-bottom: $tab__title-border--large;
       }
 
       .tab__icon {
@@ -144,28 +159,13 @@
       }
 
       .counter {
-        &:before {
+        &::before {
           content: "(";
         }
 
-        &:after {
+        &::after {
           content: ")";
         }
-      }
-    }
-
-    &__icon {
-      position: absolute;
-      right: 15px;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      width: $tab__icon-size;
-      height: $tab__icon-size;
-      padding: $tab__icon-padding;
-
-      @include mq($screen-l) {
-        display: none;
       }
     }
   }
