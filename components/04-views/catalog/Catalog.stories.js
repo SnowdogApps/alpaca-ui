@@ -3,10 +3,10 @@ import StoryRouter from 'storybook-vue-router'
 
 import data from './mocks/catalog.json'
 import menu from '../../03-modules/header/mocks/menu.json'
-import swatchItems from "../../03-modules/filter/mocks/swatchItems";
-import colorItems from "../../03-modules/filter/mocks/colorItems";
-import activeFilterItems from "../../03-modules/active-filters/mocks/active-filters";
-import checkboxItems from "../../03-modules/filter/mocks/checkboxItems";
+import swatchItems from "../../03-modules/filter/mocks/swatchItems"
+import colorItems from "../../03-modules/filter/mocks/colorItems"
+import activeFilterItems from "../../03-modules/active-filters/mocks/active-filters"
+import checkboxItems from "../../03-modules/filter/mocks/checkboxItems"
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from '../../03-modules/header/Header.vue'
