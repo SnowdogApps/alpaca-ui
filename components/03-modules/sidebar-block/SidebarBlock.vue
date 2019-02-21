@@ -11,5 +11,5 @@
 
 <style
   lang="scss"
-  src="../SidebarBlock.scss"
+  src="./SidebarBlock.scss"
 />

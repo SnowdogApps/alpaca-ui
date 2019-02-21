@@ -1,6 +1,6 @@
-import AlpacaHeading from '../../../01-globals/heading/Heading'
-import AlpacaButton from '../../../02-elements/button/Button.vue'
-import AlpacaDivider from '../../../02-elements/divider/Divider'
+import AlpacaHeading from '../../01-globals/heading/Heading'
+import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaDivider from '../../02-elements/divider/Divider'
 
 export default {
   components: {
