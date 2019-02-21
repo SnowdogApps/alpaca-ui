@@ -1,6 +1,10 @@
 $modal__padding                      : 0 !default;
 $modal__background-color             : rgba(57, 50, 67, 0.6) !default;
 
+$modal__header-margin                : $reset !default;
+$modal__heading-margin               : $reset !default;
+$modal__divider-margin               : $spacer--medium 0 $spacer--large 0 !default;
+
 $modal__content-width                : calc(100% - (2 * #{$spacer--medium})) !default;
 $modal__content-width\@extra-large   : 80% !default;
 $modal__content-margin               : 56px 112px !default;
@@ -12,6 +16,8 @@ $modal__content-box-shadow           : 0 4px 6px 0 rgba(0, 0, 0, 0.3) !default;
 $modal__close-button-border          : none !default;
 $modal__close-button-background-color: transparent !default;
 $modal__close-button-icon-color      : $color-primary !default;
+$modal__close-button-icon-size       : 18px !default;
+$modal__close-button-icon-transition : $transition-base !default;
 
 .modal {
   position: fixed;
@@ -54,17 +60,17 @@ $modal__close-button-icon-color      : $color-primary !default;
   }
 
   &__header {
-    margin: $reset;
+    margin: $modal__header-margin;
   }
 
   &__heading {
     display: flex;
     align-items: center;
-    margin: $reset;
+    margin: $modal__heading-margin;
   }
 
   &__divider {
-    margin: $spacer--medium 0 $spacer--large 0;
+    margin: $modal__divider-margin;
   }
 
   &__close-button {
@@ -73,13 +79,13 @@ $modal__close-button-icon-color      : $color-primary !default;
 
     &:hover,
     &:focus {
-      background-color: $white;
+      background-color: $modal__close-button-background-color;
     }
 
     &-icon {
-      width: 18px;
-      height: 18px;
-      transition: $transition-base;
+      width: $modal__close-button-icon-size;
+      height: $modal__close-button-icon-size;
+      transition: $modal__close-button-icon-transition;
 
       &:hover,
       &:focus {
