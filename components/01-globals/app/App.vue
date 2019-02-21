@@ -1,18 +1,11 @@
-<template>
-  <div class="page-wrapper">
-    <slot />
-  </div>
-</template>
+<template src="./App.html" />
 
 <script>
-  import 'normalize.css'
+  import instance from "./App.js"
 
-  export default {}
+  export default {
+    ...instance
+  }
 </script>
 
-<style lang="scss">
-  /* Not the prettiest way, but I need it to work now */
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext');
-  @import './assets/styles/_reset.scss';
-  @import './assets/styles/_grid.scss';
-</style>
+<style lang="scss" src="./App.scss"/>
