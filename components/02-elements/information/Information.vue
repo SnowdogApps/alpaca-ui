@@ -1,49 +1,11 @@
-<template>
-  <div class="information">
-    <alpaca-heading
-      :level="5"
-      class="information__title"
-    >
-      {{ title }}
-    </alpaca-heading>
-    <alpaca-paragraph class="information__text">
-      {{ text }}
-    </alpaca-paragraph>
-  </div>
-</template>
+<template src="./Information.html" />
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading'
-  import AlpacaParagraph from '../../01-globals/paragraph/Paragraph'
+  import instance from "./Information.js"
 
   export default {
-    components: {
-      AlpacaHeading,
-      AlpacaParagraph
-    },
-    props: {
-      title: {
-        type: String,
-        required: true
-      },
-      text: {
-        type: String,
-        required: true
-      }
-    }
+    ...instance
   }
 </script>
 
-<style lang="scss">
-  .information {
-    margin-bottom: $spacer--medium * 2;
-
-    &__title {
-      margin-bottom: $spacer--medium;
-    }
-
-    &__text {
-      margin-bottom: 0;
-    }
-  }
-</style>
+<style lang="scss" src="./Information.scss"/>
