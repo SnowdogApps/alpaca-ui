@@ -12,13 +12,11 @@ storiesOf('Modules/Modal', module)
         <alpaca-button @click="showModal">
           Modal button
         </alpaca-button>
-        <alpaca-modal ref="myModalRef">
-          <h1>
-            Modal heading
-          </h1>
-          <div>
-            Modal body
-          </div>
+        <alpaca-modal 
+          ref="myModalRef" 
+          heading="Modal Heading"
+        >
+          <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </alpaca-modal>
       </app>
     `,
@@ -28,7 +26,7 @@ storiesOf('Modules/Modal', module)
       }
     }
   }))
-  .add('Close Button', () => ({
+  .add('Blank', () => ({
     components: { App, AlpacaButton, AlpacaModal },
     template: `
       <app>
@@ -36,11 +34,10 @@ storiesOf('Modules/Modal', module)
           Open Modal
         </alpaca-button>
         <alpaca-modal
+          blank
           ref="myModalCloseButtonRef" 
-          :max-width="500"
-          :closeButton="false"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </alpaca-modal>
       </app>
     `,

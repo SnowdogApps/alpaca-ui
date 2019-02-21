@@ -1,8 +1,5 @@
 <template>
   <div class="login">
-    <alpaca-heading :level="1">
-      {{ mainHeading }}
-    </alpaca-heading>
     <form class="login__form">
       <alpaca-fieldset
         class="login__fieldset"
@@ -52,7 +49,6 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
   import AlpacaLink from '../../01-globals/link/Link.vue'
   import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
   import AlpacaButton from '../../02-elements/button/Button.vue'
@@ -60,7 +56,6 @@
 
   export default {
     components: {
-      AlpacaHeading,
       AlpacaLink,
       AlpacaFieldset,
       AlpacaButton,
