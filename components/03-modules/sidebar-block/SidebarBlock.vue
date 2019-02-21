@@ -27,12 +27,12 @@
           aria-label="Remove product from compare"
           @click="removeFromCompare"
         />
-        <alpaca-link
-          class="sidebar-block__link"
-          :href="product.link"
+        <router-link
+          class="link sidebar-block__link"
+          :to="product.link"
         >
           {{ product.name }}
-        </alpaca-link>
+        </router-link>
       </li>
     </ol>
     <div>
@@ -54,7 +54,6 @@
 
 <script>
   import AlpacaHeading from '../../01-globals/heading/Heading'
-  import AlpacaLink from '../../01-globals/link/Link'
   import AlpacaButton from '../../02-elements/button/Button.vue'
   import AlpacaDivider from '../../02-elements/divider/Divider'
 
@@ -62,8 +61,7 @@
     components: {
       AlpacaHeading,
       AlpacaButton,
-      AlpacaDivider,
-      AlpacaLink
+      AlpacaDivider
     },
     props: {
       heading: {
