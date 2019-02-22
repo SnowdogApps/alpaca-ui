@@ -1,0 +1,17 @@
+[
+  {
+    "id": "checkbox1",
+    "name": "checkbox-name1",
+    "value": "checkbox-value1"
+  },
+  {
+    "id": "checkbox2",
+    "name": "checkbox-name2",
+    "value": "checkbox-value2"
+  },
+  {
+    "id": "checkbox3",
+    "name": "checkbox-name3",
+    "value": "checkbox-value3"
+  }
+]
