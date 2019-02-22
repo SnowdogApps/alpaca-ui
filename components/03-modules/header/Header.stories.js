@@ -31,10 +31,10 @@ storiesOf('Modules/Header', module)
           heading="Registred Customers"
         >
           <alpaca-login
-            link-heading="New Customer"
-            legend=""
+            legend="Login form"
             forget-password-text="Forgot your password?"
             forget-password-link="#"
+            submit-button="Sign In"
             go-to-register-button="or register an account"
             @login="login"
             @goToRegister="goToRegister"
