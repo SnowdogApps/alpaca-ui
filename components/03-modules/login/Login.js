@@ -1,23 +1,33 @@
-import AlpacaLink from '../../01-globals/link/Link.vue'
 import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaInput from '../../02-elements/form/input/Input.vue'
 
 export default {
   components: {
-    AlpacaLink,
     AlpacaFieldset,
     AlpacaButton,
     AlpacaInput
   },
   props: {
-    mainHeading: {
-      type: String,
-      required: true
-    },
     legend: {
       type: String,
       required: true
+    },
+    emailLabel: {
+      type: String,
+      default: 'Email'
+    },
+    emailPlaceholder: {
+      type: String,
+      default: 'Email'
+    },
+    passwordLabel: {
+      type: String,
+      default: 'Password'
+    },
+    passwordPlaceholder: {
+      type: String,
+      default: 'Password'
     },
     forgetPasswordText: {
       type: String,
@@ -27,11 +37,11 @@ export default {
       type: String,
       required: true
     },
-    linkHeading: {
+    goToRegisterButton: {
       type: String,
       required: true
     },
-    goToRegisterButton: {
+    submitButton: {
       type: String,
       required: true
     }

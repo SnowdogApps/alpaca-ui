@@ -1,5 +1,5 @@
 <div class="login">
-  <form class="login__form">
+  <form>
     <alpaca-fieldset
       class="login__fieldset"
       :legend-text="legend"
@@ -8,40 +8,42 @@
       <alpaca-input
         id="email"
         v-model="email"
-        label="Email"
+        :label="emailLabel"
+        :placeholder="emailPlaceholder"
         type="email"
         name="email"
-        placeholder="Email"
       />
       <alpaca-input
         id="password"
         v-model="password"
-        label="Password"
+        :label="passwordLabel"
+        :placeholder="passwordPlaceholder"
         type="password"
         name="password"
-        placeholder="Password"
       />
     </alpaca-fieldset>
-    <div class="login__actions">
+    <div class="row row--no-margins end-xs">
+      <router-link :to="forgetPasswordLink">
+        {{ forgetPasswordText }}
+      </router-link>
+    </div>
+    <div class="login__submit-wrapper row row--no-margins center-xs">
       <alpaca-button
-        class="login__button"
+        type="submit"
+        class="login__submit-button"
         @click.stop.prevent="login"
       >
-        Login
+        {{ submitButton }}
       </alpaca-button>
-      <alpaca-link
-        class="login__forgot-password"
-        :href="forgetPasswordLink"
-      >
-        {{ forgetPasswordText }}
-      </alpaca-link>
     </div>
   </form>
-  <alpaca-button
-    class="login__button"
-    secondary
-    @click="goToRegister"
-  >
-    {{ goToRegisterButton }}
-  </alpaca-button>
+  <div class="login__register-wrapper row row--no-margins center-xs">
+    <alpaca-button
+      class="login__register-button"
+      blank
+      @click="goToRegister"
+    >
+      {{ goToRegisterButton }}
+    </alpaca-button>
+  </div>
 </div>
