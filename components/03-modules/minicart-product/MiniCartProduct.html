@@ -1,0 +1,64 @@
+<div class="minicart-product">
+  <div class="minicart-product__image">
+    <alpaca-image
+      :src="imageSrc"
+      :alt="imageAlt"
+    />
+  </div>
+  <div class="minicart-product__info">
+    <h3 class="minicart-product__name">
+      <alpaca-link
+        inverted
+        class="minicart-product__link"
+        :href="productLink"
+      >
+        {{ productName }}
+      </alpaca-link>
+    </h3>
+    <!--TODO Add dropdown-list component -->
+    <div class="minicart-product__price">
+      <alpaca-price
+        :price="price"
+        :old-price="oldPrice"
+        :special-price="specialPrice"
+      />
+    </div>
+    <div class="minicart-product__bottom">
+      <div class="minicart-product__qty">
+        <alpaca-input
+          id="mini-qty"
+          inline
+          class="minicart-product__input"
+          :label="label"
+          input-class="input__field minicart-product__field"
+          type="text"
+          name="mini-qty"
+          :placeholder="placeholder"
+          aria-label="Change the quantity"
+          label-class="minicart-product__label"
+        />
+        <alpaca-button
+          @click="update"
+        >
+          {{ updateButton }}
+        </alpaca-button>
+      </div>
+      <div class="minicart-product__actions">
+        <alpaca-button
+          class="minicart-product__button"
+          aria-label="Edit product in your shopping cart"
+          :icon="editIcon"
+          icon-class="minicart-product__button-icon"
+          @click="edit"
+        />
+        <alpaca-button
+          class="minicart-product__button"
+          aria-label="Remove this product from your shopping cart"
+          :icon="removeIcon"
+          icon-class="minicart-product__button-icon"
+          @click="remove"
+        />
+      </div>
+    </div>
+  </div>
+</div>
