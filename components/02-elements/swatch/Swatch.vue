@@ -14,17 +14,21 @@
       <div
         v-for="(option) in options"
         :key="option.id"
-        :class="['swatch__option-container', selected === option.value && 'swatch__option-container--selected']"
+        :class="['swatch__option-container', selected === option.value && 'swatch__option-container--selected', wrapperClass]"
         :aria-label="option.aria-label"
         tabindex="0"
         @click="setActiveValue(option.value)"
       >
         <div
-          :class="['swatch__option', image && 'swatch__option--image']"
+          :class="['swatch__option', image && 'swatch__option--image', optionClass]"
           :style="option.style"
         >
           {{ image || color ? '' : option.text }}
         </div>
+
+        <span v-if="option.caption">
+          {{ option.caption }}
+        </span>
       </div>
     </div>
   </div>
@@ -62,6 +66,14 @@
         type: String,
         default: null
       },
+      optionClass: {
+        type: String,
+        default: null
+      },
+      wrapperClass: {
+        type: String,
+        default: null
+      }
     },
     methods: {
       setActiveValue(value){
