@@ -2,8 +2,10 @@ $modal__padding                      : 0 !default;
 $modal__background-color             : rgba(57, 50, 67, 0.6) !default;
 
 $modal__header-margin                : $reset !default;
+
 $modal__heading-margin               : $reset !default;
-$modal__divider-margin               : $spacer--medium 0 $spacer--large 0 !default;
+
+$modal__divider-margin               : $spacer 0 $spacer--large 0 !default;
 
 $modal__content-width                : calc(100% - (2 * #{$spacer--medium})) !default;
 $modal__content-width\@extra-large   : 80% !default;
