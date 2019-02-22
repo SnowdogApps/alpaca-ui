@@ -31,6 +31,7 @@ storiesOf('Modules/Header', module)
           heading="Registred Customers"
         >
           <alpaca-login
+            main-heading="New Customer"
             link-heading="New Customer"
             legend=""
             forget-password-text="Forgot your password?"
