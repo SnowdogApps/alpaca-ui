@@ -14,13 +14,13 @@
       :key="breadcrumb.name"
       class="breadcrumbs__item"
     >
-        <a
-          :href="breadcrumb.href"
+        <router-link
+          :to="breadcrumb.href"
           :aria-label="breadcrumb.ariaLabel"
           class="breadcrumbs__link link--invert"
         >
           {{ breadcrumb.name }}
-        </a>
+        </router-link>
       </span>
   </template>
 </div>

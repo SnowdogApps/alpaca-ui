@@ -8,7 +8,7 @@ export default {
   components: {
     AlpacaContainer,
     AlpacaFilters,
-    AlpacaGridItem
+    AlpacaGridItem,
     AlpacaBreadcrumbs,
     AlpacaToolbar
   },

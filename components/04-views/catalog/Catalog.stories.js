@@ -25,7 +25,7 @@ storiesOf('Views/Catalog', module)
       swatchItems,
       colorItems,
       activeFilterItems,
-      checkboxItems
+      checkboxItems,
       toolbar,
       breadcrumbs
     }
