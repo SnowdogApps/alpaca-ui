@@ -26,9 +26,11 @@ storiesOf('Modules/Header', module)
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
-        <alpaca-modal ref="registerModal" :max-width="500">
+        <alpaca-modal 
+          ref="registerModal" 
+          heading="Registred Customers"
+        >
           <alpaca-login
-            main-heading="Customer login"
             link-heading="New Customer"
             legend=""
             forget-password-text="Forgot your password?"
