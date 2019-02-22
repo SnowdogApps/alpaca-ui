@@ -1,0 +1,60 @@
+<div class="cart-list-item">
+  <div class="cart-list-item__image">
+    <alpaca-image
+      :src="productImage.dataSrc"
+      :alt="productImage.alt"
+    />
+  </div>
+  <div class="cart-list-item__info">
+    <div class="cart-list-item__data">
+      <alpaca-link
+        :href="href"
+        inverted
+        custom-class="cart-list-item__name"
+      >
+        {{ productName }}
+      </alpaca-link>
+      <div class="cart-list-item__details">
+        <div class="cart-list-item__qty">
+          <div class="cart-list-item__qty-wrapper">
+            <alpaca-input
+              :id="productId"
+              :label="label"
+              :placeholder="placeholder"
+              :name="name"
+              type="number"
+              :min="0"
+              :max="maxInputValue"
+              input-class="cart-list-item__qty-input"
+              :value="quantity"
+              :hidden-label="hiddenLabel"
+              @input="onChange($event)"
+            />
+          </div>
+        </div>
+        <alpaca-price
+          :price="productPrice"
+          class="cart-list-item__price"
+        />
+      </div>
+      <alpaca-description-list
+        :elements="productOptions"
+        list-class="cart-list-item__attributes"
+      />
+    </div>
+    <div class="cart-list-item__actions">
+      <alpaca-button
+        icon="edit"
+        aria-label="Edit product in your shopping cart"
+        custom-class="cart-list-item__actions-item"
+        @click="onEdit"
+      />
+      <alpaca-button
+        icon="remove"
+        aria-label="Remove this product from your shopping cart"
+        custom-class="cart-list-item__actions-item"
+        @click="onRemove"
+      />
+    </div>
+  </div>
+</div>
