@@ -1,0 +1,26 @@
+[
+  {
+    "headingId": "option-label-size-1",
+    "id": "opt-size-xs",
+    "text": "XS",
+    "caption": "XS"
+  },
+  {
+    "headingId": "option-label-size-1",
+    "id": "opt-size-s",
+    "text": "S",
+    "caption": "S"
+  },
+  {
+    "headingId": "option-label-size-1",
+    "id": "opt-size-m",
+    "text": "M",
+    "caption": "M"
+  },
+  {
+    "headingId": "option-label-size-1",
+    "id": "opt-size-l",
+    "text": "L",
+    "caption": "L"
+  }
+]

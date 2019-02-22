@@ -7,6 +7,10 @@ export default {
       type: String,
       default: 'button'
     },
+    type: {
+      type: String,
+      default: 'button'
+    },
     defaultClass: {
       type: Boolean,
       default: true
@@ -24,6 +28,10 @@ export default {
       default: true
     },
     secondary: {
+      type: Boolean,
+      default: false
+    },
+    blank: {
       type: Boolean,
       default: false
     },
