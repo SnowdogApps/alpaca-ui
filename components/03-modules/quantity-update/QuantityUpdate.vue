@@ -31,7 +31,7 @@
 </template>
 
 <script>
-  import AlpacaInput from '../../02-elements/form/input/Input'
+  import AlpacaInput from '../../02-elements/form/input/Input.vue'
   import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
