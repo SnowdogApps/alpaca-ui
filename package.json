@@ -7,7 +7,7 @@
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",
     "eslint": "eslint --ext .js,.vue components",
-    "stylelint": "stylelint 'components/**/*.vue' 'components/**/*.scss' 'assets/styles/**/*.scss'"
+    "stylelint": "stylelint 'components/**/*.vue' 'components/**/*.scss' 'assets/styles/**/*.scss' 'docs/styles/**/*.scss'"
   },
   "dependencies": {
     "lodash.uniqueid": "^4.0.1",

@@ -1,23 +1,23 @@
 .docs-only-styles {
-    .col-large .row__content {
-        height: 8em;
-    }
-    .grid-container {
-        padding: 0 25px;
-    }
-    .row {
-        min-height: 2em;
-        margin-bottom: $spacer;
-        padding-top: $spacer;
-        background: $gray;
+  .col-large .row__content {
+    height: 8em;
+  }
+  .grid-container {
+    padding: 0 25px;
+  }
+  .row {
+    min-height: 2em;
+    margin-bottom: $spacer;
+    padding-top: $spacer;
+    background: $gray;
 
-        &__content {
-            margin-bottom: $spacer;
-            padding: $spacer;
-            background: $gray-light;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-        }
+    &__content {
+      margin-bottom: $spacer;
+      padding: $spacer;
+      background: $gray-light;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
     }
+  }
 }
