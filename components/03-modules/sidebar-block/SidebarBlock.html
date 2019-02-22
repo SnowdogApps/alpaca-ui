@@ -12,10 +12,14 @@
   </div>
   <alpaca-divider class="sidebar-block__divider" />
   <template v-if="productsCount">
-    <ol class="list sidebar-block__list">
-      <li
+    <alpaca-list
+      list-tag="ol"
+      class="sidebar-block__list"
+    >
+      <alpaca-list-item
         v-for="product in products"
         :key="product.id"
+        :default-class="false"
         class="sidebar-block__item"
       >
         <alpaca-button
@@ -33,8 +37,8 @@
         >
           {{ product.name }}
         </router-link>
-      </li>
-    </ol>
+      </alpaca-list-item>
+    </alpaca-list>
     <div>
       <router-link
         class="button button--link sidebar-block__action"

@@ -1,14 +1,22 @@
 import AlpacaHeading from '../../01-globals/heading/Heading'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider'
+import AlpacaList from '../../02-elements/list/List.vue'
+import AlpacaListItem from '../../02-elements/list/ListItem.vue'
 
 export default {
   components: {
     AlpacaHeading,
     AlpacaButton,
-    AlpacaDivider
+    AlpacaDivider,
+    AlpacaList,
+    AlpacaListItem
   },
   props: {
+    products: {
+      type: Array,
+      required: true
+    },
     heading: {
       type: String,
       required: false,
@@ -23,10 +31,6 @@ export default {
       type: String,
       required: false,
       default: 'Clear All'
-    },
-    products: {
-      type: Array,
-      required: true
     },
     comparePageUrl: {
       type: String,
