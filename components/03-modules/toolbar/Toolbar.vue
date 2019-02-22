@@ -79,9 +79,9 @@
 </template>
 
 <script>
-  import AlpacaSelect from '../../02-elements/form/select/Select'
+  import AlpacaSelect from '../../02-elements/form/select/Select.vue'
   import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaPager from '../../03-modules/pager/Pager'
+  import AlpacaPager from '../../03-modules/pager/Pager.vue'
 
   export default {
     components: {

@@ -42,9 +42,9 @@
 
 <script>
   import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-  import AlpacaList from '../../02-elements/list/List'
+  import AlpacaList from '../../02-elements/list/List.vue'
   import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaListItem from '../../02-elements/list/ListItem'
+  import AlpacaListItem from '../../02-elements/list/ListItem.vue'
 
   export default {
     components: {
