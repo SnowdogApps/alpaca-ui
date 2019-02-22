@@ -1,19 +1,16 @@
-<div>
-  <alpaca-heading :level="1">{{ title }}</alpaca-heading>
-  <div class="grid-container">
+<div class="grid-container">
+  <div
+    v-for="grid in grids"
+    :key="grid.id"
+    :class="['row', rowClass]"
+  >
     <div
-      v-for="grid in grids"
-      :key="grid.id"
-      :class="['row', rowClass]"
+      v-for="(item, index) in grid"
+      :key="item.id"
+      :class="item"
     >
-      <div
-        v-for="(item, index) in grid"
-        :key="item.id"
-        :class="item"
-      >
-        <div class="row__content">
-          {{ index }}
-        </div>
+      <div class="row__content">
+        {{ index }}
       </div>
     </div>
   </div>

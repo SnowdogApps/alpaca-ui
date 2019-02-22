@@ -12,7 +12,7 @@ import alignmentStart from './mocks/alignmentStart'
 import alignmentMiddle from './mocks/alignmentMiddle'
 import reversing from './mocks/reversing'
 
-storiesOf('Global/Grid2', module)
+storiesOf('Global/Grid', module)
   .add('Default', () => ({
   components: { App, AlpacaGrid },
   data: () => ({
