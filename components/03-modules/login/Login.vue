@@ -76,11 +76,11 @@
       },
       passwordLabel: {
         type: String,
-        default: 'Email'
+        default: 'Password'
       },
       passwordPlaceholder: {
         type: String,
-        default: 'Email'
+        default: 'Password'
       },
       forgetPasswordText: {
         type: String,
