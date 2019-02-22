@@ -7,6 +7,10 @@ export default {
       type: String,
       default: 'button'
     },
+    type: {
+      type: String,
+      default: 'button'
+    },
     icon: {
       type: String,
       default: null
@@ -16,6 +20,10 @@ export default {
       default: null
     },
     secondary: {
+      type: Boolean,
+      default: false
+    },
+    blank: {
       type: Boolean,
       default: false
     },
