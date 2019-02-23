@@ -1,42 +1,50 @@
-<div
-  @click.self="handleBackgroundClick"
-  :aria-hidden="ariaHidden"
-  :class="['modal', { 'modal--active': visibility }]"
-  :aria-labelledby="ariaLabelledby"
-  :aria-describedby="ariaDescribedby"
-  role="dialog" 
->
+<transition name="fade">
   <div
-    :style="getMaxWidth"
-    :class="['modal__content', { 'modal__content--blank': blank }]"
-    ref="modal"
-    role="document"
-    tabindex="0"
+    v-show="visibility"
+    :aria-hidden="ariaHidden"
+    :aria-labelledby="ariaLabelledby"
+    :aria-describedby="ariaDescribedby"
+    class="modal"
+    role="dialog" 
   >
-    <div class="modal__header row between-xs">
-      <alpaca-heading 
-        v-if="!blank"
-        :level="1" 
-        class="modal__heading"
+    <div 
+      @click.self="handleBackgroundClick" 
+      class="modal__mask"
+    ></div>
+    <transition name="slide-down">
+      <div
+        :class="['modal__content', { 'modal__content--blank': blank }]"
+        v-show="visibility"
+        ref="modal"
+        role="document"
+        tabindex="-1"
       >
-        {{ heading }}
-      </alpaca-heading>
-      <button
-        v-if="closeButton && !blank"
-        @click="hide"
-        class="button button--icon modal__close-button"
-        type="button"
-      >
-        <alpaca-icon 
-          icon="close" 
-          class="modal__close-button-icon"
+        <div class="modal__header row between-xs">
+          <alpaca-heading 
+            v-if="!blank"
+            :level="1" 
+            class="modal__heading"
+          >
+            {{ heading }}
+          </alpaca-heading>
+          <button
+            v-if="closeButton && !blank"
+            @click="hide"
+            class="button button--icon modal__close-button"
+            type="button"
+          >
+            <alpaca-icon 
+              icon="close" 
+              class="modal__close-button-icon"
+            />
+          </button>
+        </div>
+        <alpaca-divider 
+          v-if="!blank"
+          class="modal__divider"
         />
-      </button>
-    </div>
-    <alpaca-divider 
-      v-if="!blank"
-      class="modal__divider"
-    />
-    <slot/>
+        <slot/>
+      </div>
+    </transition>
   </div>
-</div>
+</transition>
