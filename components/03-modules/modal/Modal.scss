@@ -1,0 +1,125 @@
+$modal__padding                      : 0 !default;
+$modal__background-color\@medium     : rgba(57, 50, 67, 0.6) !default;
+
+$modal__header-margin                : $reset !default;
+
+$modal__heading-margin               : $reset !default;
+
+$modal__divider-margin               : $spacer 0 $spacer--large 0 !default;
+
+$modal__content-width                : 100% !default;
+$modal__content-width\@medium        : calc(100% - (2 * #{$spacer--medium})) !default;
+$modal__content-width\@extra-large   : 80% !default;
+$modal__content-min-width            : 320px !default;
+$modal__content-max-width\@medium    : 496px !default;
+$modal__content-max-width\@large     : 624px !default;
+$modal__content-height               : 100% !default;
+$modal__content-height\@medium       : auto !default;
+$modal__content-padding              : 56px $spacer--medium !default;
+$modal__content-padding\@medium      : 56px $spacer--large !default;
+$modal__content-padding\@large       : 56px 112px !default;
+$modal__content-background-color     : $white !default;
+$modal__content-border               : none !default;
+$modal__content-box-shadow\@medium   : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
+
+$modal__close-button-border          : none !default;
+$modal__close-button-background-color: transparent !default;
+$modal__close-button-icon-color      : $color-primary !default;
+$modal__close-button-icon-size       : 18px !default;
+$modal__close-button-icon-transition : $transition-base !default;
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: $modal__padding;
+  animation-duration: 400ms;
+
+  &__mask {
+    @include mq($screen-m) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      background-color: $modal__background-color\@medium;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 101;
+    display: block;
+    height: $modal__content-height;
+    min-width: $modal__content-min-width;
+    width: $modal__content-width;
+    padding: $modal__content-padding;
+    border: $modal__content-border;
+    animation-duration: 400ms;
+    background-color: $modal__content-background-color;
+
+    @include mq($screen-m) {
+      max-width: $modal__content-max-width\@medium;
+      width: $modal__content-width\@medium;
+      height: $modal__content-height\@medium;
+      padding: $modal__content-padding\@medium;
+      box-shadow: $modal__content-box-shadow\@medium;
+    }
+
+    @include mq($screen-l) {
+      max-width: $modal__content-max-width\@large;
+      padding: $modal__content-padding\@large;
+    }
+
+    @include mq($screen-xl) {
+      width: $modal__content-width\@extra-large;
+    }
+
+    &--blank {
+      padding: $reset;
+    }
+  }
+
+  &__header {
+    margin: $modal__header-margin;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin: $modal__heading-margin;
+  }
+
+  &__divider {
+    margin: $modal__divider-margin;
+  }
+
+  &__close-button {
+    border: $modal__close-button-border;
+    background-color: $modal__close-button-background-color;
+
+    &:hover,
+    &:focus {
+      background-color: $modal__close-button-background-color;
+    }
+
+    &-icon {
+      width: $modal__close-button-icon-size;
+      height: $modal__close-button-icon-size;
+      transition: $modal__close-button-icon-transition;
+
+      &:hover,
+      &:focus {
+        fill: $modal__close-button-icon-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<component
+  :is="tag"
+  :class="['badge', {
+    'badge--new': type === 'new' ,
+    'badge--sale': type === 'sale'
+  }]"
+>
+  <slot />
+</component>

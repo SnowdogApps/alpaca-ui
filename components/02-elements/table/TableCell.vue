@@ -50,7 +50,7 @@
       padding: $table__cell__padding;
       background: $table__background;
 
-      &:before {
+      &::before {
         content: attr(data-th);
         display: block;
         max-width: 25%;
@@ -99,6 +99,19 @@
     }
 
     tfoot {
+      td {
+        display: block;
+        padding: $table__cell__padding;
+        background: $table__background;
+
+        @include mq($screen-m) {
+          display: table-cell;
+          padding: $table__padding;
+          border-right: $table__border;
+          background: $table__th-background;
+        }
+      }
+
       tr {
         &:last-child {
           border-bottom: $reset;
@@ -118,19 +131,6 @@
               }
             }
           }
-        }
-      }
-
-      td {
-        display: block;
-        padding: $table__cell__padding;
-        background: $table__background;
-
-        @include mq($screen-m) {
-          display: table-cell;
-          padding: $table__padding;
-          border-right: $table__border;
-          background: $table__th-background;
         }
       }
     }

@@ -2,8 +2,8 @@
   <fieldset class="fieldset">
     <legend
       :class="[
-        'fieldset__legend',
-        legendClass
+        legendClass,
+        'fieldset__legend'
       ]"
     >
       {{ legendText }}
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      legendText: {
-        type: String,
-        required: true
-      },
-      legendClass: {
+export default {
+  props: {
+    legendText: {
+      type: String,
+      required: true
+    },
+    legendClass: {
       type: String,
       default: null
     }
@@ -27,7 +27,7 @@
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $fieldset__border            : none !default;
   $fieldset__legend-margin     : 0 0 25px !default;
   $fieldset__legend-font-size  : $font-size-large !default;

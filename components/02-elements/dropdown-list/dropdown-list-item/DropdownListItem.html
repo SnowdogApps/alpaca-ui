@@ -1,0 +1,22 @@
+<li :class="['dropdown-list__item', {'dropdown-list__item--collapse': collapseLocal}]">
+  <button
+    :class="['dropdown-list__label', labelClass]"
+    :aria-controls="collapseLocal && id"
+    @click="toggle"
+    :aria-expanded="!collapseLocal"
+  >
+    {{ title }}
+    <alpaca-icon
+      icon="angle-down"
+      class="dropdown-list__icon"
+    />
+  </button>
+  <div
+    :id="id"
+    :class="['dropdown-list__content', contentClass]"
+    :data-content="id"
+    :aria-hidden="collapseLocal"
+  >
+    <slot />
+  </div>
+</li>

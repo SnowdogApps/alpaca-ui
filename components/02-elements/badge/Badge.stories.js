@@ -38,14 +38,14 @@ storiesOf('Elements/Badge', module)
       </app>
     `
   }))
-  .add('Discount', () => ({
+  .add('Sale', () => ({
     components: { App, AlpacaBadge },
     template: `
       <app>
         <alpaca-badge 
-          type="discount"
+          type="sale"
         >
-          Discount badge
+          Sale badge
         </alpaca-badge>
       </app>
     `
