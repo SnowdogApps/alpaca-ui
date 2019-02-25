@@ -1,4 +1,3 @@
-import AlpacaLink from "../../01-globals/link/Link.vue"
 import AlpacaImage from "../../02-elements/image/Image.vue"
 import AlpacaPrice from "../../02-elements/price/Price.vue"
 import AlpacaDescriptionList from "../../02-elements/list/DescriptionList.vue"
@@ -7,7 +6,6 @@ import AlpacaQuantityUpdate from "../../03-modules/quantity-update/QuantityUpdat
 
 export default {
   components: {
-    AlpacaLink,
     AlpacaImage,
     AlpacaPrice,
     AlpacaDescriptionList,
