@@ -1,0 +1,52 @@
+<component
+  :is="itemTag"
+  class="cart-list-item"
+>
+  <div class="cart-list-item__image">
+    <alpaca-image
+      :src="productImage.dataSrc"
+      :alt="productImage.alt"
+    />
+  </div>
+  <div class="cart-list-item__info">
+    <div class="cart-list-item__data">
+      <alpaca-link
+        :href="href"
+        class="cart-list-item__name"
+        inverted
+      >
+        {{ productName }}
+      </alpaca-link>
+      <alpaca-price
+        :price="productPrice.price"
+        :special-price="productPrice.specialPrice"
+        :old-price="productPrice.oldPrice"
+        class="cart-list-item__price"
+      />
+      <alpaca-description-list
+        :elements="productOptions"
+        list-class="cart-list-item__attributes"
+      />
+    </div>
+    <div class="cart-list-item__actions">
+      <div class="cart-list-item__qty-wrapper">
+        <span class="cart-list-item__qty-text">
+          Qty: 
+        </span>
+        <alpaca-quantity-update
+          :input="quantity.input"
+          :minus-button="quantity.minusQtyButton"
+          :plus-button="quantity.plusQtyButton"
+          @update="onChange"
+        />
+      </div>
+      <alpaca-button
+        icon="remove"
+        class="cart-list-item__action-button"
+        aria-label="Remove this product from your shopping cart"
+        custom-class="cart-list-item__actions-item"
+        @click="onRemove"
+      />
+    </div>
+  </div>
+</component>

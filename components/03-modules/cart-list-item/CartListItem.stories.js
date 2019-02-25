@@ -10,21 +10,20 @@ storiesOf('Modules/Cart list item', module)
   .add('Default', () => ({
     components: { App, AlpacaCartListItem },
     data: () => ({
-      cartListItem,
-      quantity: 1
+      cartListItem
     }),
     template: `
       <app>
         <alpaca-cart-list-item
           :productImage="cartListItem.productImage"
           :productName="cartListItem.productName"
-          :productPrice="cartListItem.productPrice"
+          :productPrice="cartListItem.price"
           :productId="cartListItem.productId"
           :productOptions="cartListItem.productOptions"
+          :quantity="cartListItem.quantity"
           name="name"
           :maxInputValue="5"
           href="#"
-          :quantity="quantity"
           @edit="editMethod"
           @remove="removeMethod"
           @change="changeMethod"
