@@ -1,10 +1,10 @@
 <component
   :is="tag"
-  :type="tag !== 'a' ? type: null"
+  :type="tag !== 'a' ? type : null"
   :class="[
     {
       button: tag,
-      'button--icon': icon,
+      'button--icon': icon && defaultClass,
       'button--secondary': secondary,
       'button--blank': blank,
       'button--link': tag === 'a',
@@ -19,8 +19,8 @@
     v-if="icon"
     :icon="icon"
     :class="[
-      iconClass,
-      'button__icon'
+      { 'button__icon': defaultIconClass },
+      iconClass
     ]"
   />
 </component>

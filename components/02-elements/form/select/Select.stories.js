@@ -11,7 +11,7 @@ storiesOf('Elements/Form/Select', module)
     template: `
       <app>
         <alpaca-select
-          :id="field.id"  
+          :id="field.id"
           :name="field.name"
           :options="countryOptions"
           label="Label text"
@@ -38,4 +38,3 @@ storiesOf('Elements/Form/Select', module)
       }
     }
   }))
-

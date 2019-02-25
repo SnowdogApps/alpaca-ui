@@ -58,7 +58,7 @@
           placeholder="Confirm password"
         />
       </alpaca-fieldset>
-      <alpaca-button 
+      <alpaca-button
         fluid
         @click.stop.prevent="register"
       >

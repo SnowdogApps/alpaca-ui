@@ -83,7 +83,7 @@ export default {
       window.addEventListener('keydown', this.handleEscapeKeyUp)
     }
   },
-  destroyed () { 
+  destroyed () {
     if (this.closeOnEsc) {
       window.removeEventListener('keydown', this.handleEscapeKeyUp)
     }
