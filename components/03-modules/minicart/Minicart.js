@@ -20,6 +20,10 @@ export default {
       type: Array[Object],
       required: true
     },
+    totals: {
+      type: Array[Object],
+      required: true
+    },
     summaryTitle: {
       type: String,
       required: true

@@ -26,80 +26,18 @@
       {{ summaryTitle }}
     </alpaca-heading>
     <div
-      class="
-        row
-        row--no-margins
-        between-xs
-      "
+      v-for="total in totals"
+      :key="total.code"
+      :class="[
+        'row row--no-margins between-xs',
+        { 'minicart__grand-total-row': total.code === 'grand_total' }
+      ]"
     >
       <div class="col-xs-9">
-        Subtotal
+        {{ total.title }}
       </div>
-      <div
-        class="
-          col-xs-3
-          end-xs
-        "
-      >
-        $00.00
-      </div>
-    </div>
-    <div
-      class="
-        row
-        row--no-margins
-        between-xs
-      "
-    >
-      <div class="col-xs-9">
-        Tax
-      </div>
-      <div
-        class="
-          col-xs-3
-          end-xs
-        "
-      >
-        $00.00
-      </div>
-    </div>
-    <div
-      class="
-        row
-        row--no-margins
-        between-xs
-      "
-    >
-      <div class="col-xs-9">
-        Next long row here
-      </div>
-      <div
-        class="
-          col-xs-3
-          end-xs
-        "
-      >
-        $00.00
-      </div>
-    </div>
-    <div
-      class="
-        row
-        row--no-margins
-        between-xs
-        minicart__summary-row
-      "
-    >
-      <div class="col-xs-9">
-        <strong>Order Total</strong>
-      </div>
-      <div
-        class="
-          col-xs-3
-          end-xs
-        "
-      >
-        <strong>$00.00</strong>
+      <div class="col-xs-3 end-xs">
+        {{ total.value }}
       </div>
     </div>
   </section>

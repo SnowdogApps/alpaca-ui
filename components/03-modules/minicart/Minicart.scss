@@ -9,17 +9,14 @@ $minicart__row-margin-bottom: $spacer--medium !default;
     padding: 0 $spacer--medium;
   }
 
-  &__list {
-    margin-bottom: $spacer--extra-large;
-  }
-
   &__summary-heading {
     margin-bottom: $spacer--large;
     font-weight: $font-weight-normal;
   }
 
-  &__summary-row {
+  &__grand-total-row {
     position: relative;
+    font-weight: $font-weight-bold;
 
     &::before {
       content: '';
@@ -42,6 +39,11 @@ $minicart__row-margin-bottom: $spacer--medium !default;
     .row {
       margin-bottom: $minicart__row-margin-bottom;
     }
+  }
+
+  &__list,
+  &__summary {
+    margin-bottom: $spacer--extra-large;
   }
 
   &__return-button {
