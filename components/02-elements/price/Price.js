@@ -12,6 +12,18 @@ export default {
       type: [String, Number],
       default: null
     },
+    regularPriceClass: {
+      type: String,
+      default: ''
+    },
+    specialPriceClass: {
+      type: String,
+      default: ''
+    },
+    oldPriceClass: {
+      type: String,
+      default: ''
+    },
     ariaLabelPrice: {
       type: String,
       default: 'Price:'
