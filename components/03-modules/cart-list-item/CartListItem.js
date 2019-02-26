@@ -55,9 +55,6 @@ export default {
     }
   },
   methods: {
-    onEdit() {
-      this.$emit("edit")
-    },
     onRemove() {
       this.$emit("remove")
     },

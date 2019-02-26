@@ -25,14 +25,12 @@ storiesOf('Modules/Cart list item', module)
           :quantity="cartListItem.quantity"
           name="name"
           href="#"
-          @edit="editMethod"
           @remove="removeMethod"
           @change="changeMethod"
         />
       </app>
     `,
     methods: {
-      editMethod: action('Edit'),
       removeMethod: action('Remove'),
       changeMethod: action('Change')
     }
