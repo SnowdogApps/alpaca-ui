@@ -75,14 +75,14 @@ $cart-list-item__action-icon-fill-color  : $gray-darker !default;
     }
 
     &--special {
-      margin-left: $spacer--extra-large;
+      margin-left: $spacer--medium;
       order: 1;
       color: $red;
       font-weight: bold;
     }
 
     &--special + &--regular {
-      margin-bottom: 4px;
+      margin-bottom: $spacer;
       font-size: $font-size-small;
       color: $gray;
       text-decoration: line-through;
