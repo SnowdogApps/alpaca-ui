@@ -74,22 +74,9 @@ $cart-list-item__action-icon-fill-color  : $gray-darker !default;
       align-items: baseline;
     }
 
-    &--special {
-      margin-left: $spacer--medium;
-      order: 1;
-      color: $red;
-      font-weight: bold;
-    }
-
-    &--special + &--regular {
+    &--special,
+    &--old {
       margin-bottom: $spacer;
-      font-size: $font-size-small;
-      color: $gray;
-      text-decoration: line-through;
-
-      @include mq($screen-m) {
-        margin-bottom: $reset;
-      }
     }
   }
 

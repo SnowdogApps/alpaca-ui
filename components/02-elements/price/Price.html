@@ -1,9 +1,9 @@
-<div class="price">
+<div class="price price__wrapper">
   <del
     v-if="oldPrice"
     :aria-label="setAriaLabel(oldPrice)"
     :class="[
-      'price__value--old',
+      'price__value price__value--old',
       oldPriceClass
     ]"
   >
@@ -13,7 +13,7 @@
     v-if="specialPrice"
     :aria-label="setAriaLabel(specialPrice)"
     :class="[
-      'price__value--special',
+      'price__value price__value--special',
       specialPriceClass
     ]"
   >
@@ -23,6 +23,7 @@
     v-if="price"
     :aria-label="setAriaLabel(price)"
     :class="[
+      'price__value',
       regularPriceClass
     ]"
   >

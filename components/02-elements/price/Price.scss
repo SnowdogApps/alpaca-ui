@@ -1,26 +1,42 @@
-$price__color              : inherit !default;
-$price__color--special     : $green !default;
-$price__color--old         : inherit !default;
-$price__font-weight        : $font-weight-bold !default;
-$price__font-weight--old   : $font-weight-normal !default;
-$price__font-weight--old   : $font-weight-normal !default;
-$price__special-margin-left: $spacer !default;
+$price__color                   : inherit !default;
+$price__color--special          : $bright-red !default;
+$price__color--old              : $gray !default;
+$price__font-weight             : $font-weight-bold !default;
+$price__font-weight--old        : $font-weight-normal !default;
+$price__special-margin-left     : $spacer--medium !default;
+$price__value-font-size--old    : $font-size-small !default;
+$price__wrapper-font-size       : $font-size-base !default;
+$price__wrapper-font-size--large: $font-size-large !default;
 
 .price {
-  font-weight: $price__font-weight;
+  position: relative;
 
   &__value {
-    position: relative;
+    font-weight: $price__font-weight;
 
     &--old {
-      text-decoration: line-through;
       font-weight: $price__font-weight--old;
+      font-size: $price__value-font-size--old;
+      color: $price__color--old;
+      text-decoration: line-through;
     }
 
     &--special {
-      margin-left: $price__special-margin-left;
       color: $price__color--special;
       text-decoration: none;
+    }
+
+    &--old + &--special {
+      margin-left: $price__special-margin-left;
+    }
+  }
+
+  &__wrapper {
+    font-size: $price__wrapper-font-size;
+
+    &--large,
+    &--large .price__value--old {
+      font-size: $price__wrapper-font-size--large;
     }
   }
 }
