@@ -1,6 +1,6 @@
 <li :class="['dropdown-list__item', {'dropdown-list__item--collapse': collapseLocal}]">
   <button
-    class="dropdown-list__label"
+    :class="['dropdown-list__label', labelClass]"
     :aria-controls="collapseLocal && id"
     @click="toggle"
     :aria-expanded="!collapseLocal"
@@ -13,7 +13,7 @@
   </button>
   <div
     :id="id"
-    class="dropdown-list__content"
+    :class="['dropdown-list__content', contentClass]"
     :data-content="id"
     :aria-hidden="collapseLocal"
   >

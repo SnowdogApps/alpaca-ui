@@ -31,7 +31,7 @@
 </template>
 
 <script>
-  import AlpacaLabel from '../../../01-globals/label/Label'
+  import AlpacaLabel from '../../../01-globals/label/Label.vue'
   export default {
     components: {
       AlpacaLabel

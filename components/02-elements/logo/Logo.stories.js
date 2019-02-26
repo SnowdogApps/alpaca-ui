@@ -10,7 +10,7 @@ storiesOf('Elements/Logo', module)
     components: { App, AlpacaLogo },
     template: `
       <app>
-        <alpaca-logo 
+        <alpaca-logo
           src="/images/logo/alpaca.svg"
           to="/"
         />

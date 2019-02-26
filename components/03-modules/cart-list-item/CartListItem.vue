@@ -11,7 +11,7 @@
         <alpaca-link
           :href="href"
           inverted
-          custom-class="cart-list-item__name"
+          class="cart-list-item__name"
         >
           {{ productName }}
         </alpaca-link>
@@ -47,13 +47,13 @@
         <alpaca-button
           icon="edit"
           aria-label="Edit product in your shopping cart"
-          custom-class="cart-list-item__actions-item"
+          class="cart-list-item__actions-item"
           @click="onEdit"
         />
         <alpaca-button
           icon="remove"
           aria-label="Remove this product from your shopping cart"
-          custom-class="cart-list-item__actions-item"
+          class="cart-list-item__actions-item"
           @click="onRemove"
         />
       </div>
@@ -62,12 +62,12 @@
 </template>
 
 <script>
-  import AlpacaLink from '../../01-globals/link/Link'
-  import AlpacaImage from '../../02-elements/image/Image'
-  import AlpacaPrice from '../../02-elements/price/Price'
-  import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaDescriptionList from '../../02-elements/list/DescriptionList'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaLink from '../../01-globals/link/Link.vue'
+  import AlpacaImage from '../../02-elements/image/Image.vue'
+  import AlpacaPrice from '../../02-elements/price/Price.vue'
+  import AlpacaInput from '../../02-elements/form/input/Input.vue'
+  import AlpacaDescriptionList from '../../02-elements/list/DescriptionList.vue'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
     components: {

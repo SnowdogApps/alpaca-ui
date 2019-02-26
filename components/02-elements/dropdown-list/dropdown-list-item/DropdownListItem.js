@@ -16,6 +16,14 @@ export default {
     collapse: {
       type: Boolean,
       default: true
+    },
+    labelClass: {
+      type: String,
+      default: null
+    },
+    contentClass: {
+      type: String,
+      default: null
     }
   },
   data() {

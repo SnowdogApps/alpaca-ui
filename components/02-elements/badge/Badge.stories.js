@@ -18,8 +18,8 @@ storiesOf('Elements/Badge', module)
     components: { App, AlpacaBadge },
     template: `
       <app>
-        <alpaca-badge 
-          tag="span" 
+        <alpaca-badge
+          tag="span"
         >
           Custom tag
         </alpaca-badge>
@@ -42,7 +42,7 @@ storiesOf('Elements/Badge', module)
     components: { App, AlpacaBadge },
     template: `
       <app>
-        <alpaca-badge 
+        <alpaca-badge
           type="sale"
         >
           Sale badge
