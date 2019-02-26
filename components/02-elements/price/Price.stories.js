@@ -82,5 +82,3 @@ storiesOf('Elements/Price', module)
       </app>
     `
   }))
-
-

@@ -8,7 +8,7 @@
   }
 </script>
 
-<style 
-  lang="scss" 
+<style
+  lang="scss"
   src="./CartListItem.scss"
 />

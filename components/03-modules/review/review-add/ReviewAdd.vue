@@ -6,7 +6,6 @@
   export default {
     ...instance
   }
-
 </script>
 
 <style
