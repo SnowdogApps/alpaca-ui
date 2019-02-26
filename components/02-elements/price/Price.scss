@@ -9,14 +9,18 @@ $price__special-margin-left: $spacer !default;
 .price {
   font-weight: $price__font-weight;
 
-  &--old {
-    text-decoration: line-through;
-    font-weight: $price__font-weight--old;
-  }
+  &__value {
+    position: relative;
 
-  &--special {
-    margin-left: $price__special-margin-left;
-    color: $price__color--special;
-    text-decoration: none;
+    &--old {
+      text-decoration: line-through;
+      font-weight: $price__font-weight--old;
+    }
+
+    &--special {
+      margin-left: $price__special-margin-left;
+      color: $price__color--special;
+      text-decoration: none;
+    }
   }
 }
