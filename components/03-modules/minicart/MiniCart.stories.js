@@ -16,7 +16,7 @@ storiesOf('Modules/Minicart', module)
     template: `
       <app>
         <alpaca-mini-cart
-          :cartItems="data.cartItems"
+          :cart-items="data.cartItems"
           :totals="data.totals"
           summary-title="Shopping summary"
           go-to-checkout-button="Go to Checkout"

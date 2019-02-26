@@ -17,11 +17,11 @@ storiesOf('Modules/Cart list item', module)
     template: `
       <app>
         <alpaca-cart-list-item
-          :productImage="cartListItem.productImage"
-          :productName="cartListItem.productName"
-          :productPrice="cartListItem.price"
-          :productId="cartListItem.productId"
-          :productOptions="cartListItem.productOptions"
+          :product-image="cartListItem.productImage"
+          :product-name="cartListItem.productName"
+          :product-price="cartListItem.price"
+          :product-id="cartListItem.productId"
+          :product-options="cartListItem.productOptions"
           :quantity="cartListItem.quantity"
           name="name"
           href="#"
