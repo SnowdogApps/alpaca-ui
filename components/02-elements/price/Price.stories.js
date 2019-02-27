@@ -26,7 +26,7 @@ storiesOf('Elements/Price', module)
       <app>
         <alpaca-price
           :price="price.default"
-          class="price__wrapper--large"
+          large
         />
       </app>
     `
@@ -77,7 +77,7 @@ storiesOf('Elements/Price', module)
         <alpaca-price
           :oldPrice="price.old"
           :specialPrice="price.special"
-          class="price__wrapper--large"
+          large
         />
       </app>
     `

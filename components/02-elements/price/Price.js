@@ -35,6 +35,10 @@ export default {
     ariaLabelOld: {
       type: String,
       default: 'Old price:'
+    },
+    large: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {

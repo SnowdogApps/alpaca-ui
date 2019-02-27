@@ -1,31 +1,22 @@
-<div class="price price__wrapper">
+<div :class="['price', { 'price--large': large }]">
   <del
     v-if="oldPrice"
     :aria-label="oldPriceAriaLabel"
-    :class="[
-      'price__value price__value--old',
-      oldPriceClass
-    ]"
+    :class="['price__wrapper price__wrapper--old', oldPriceClass]"
   >
     {{ oldPrice }}
   </del>
   <ins
     v-if="specialPrice"
     :aria-label="specialPriceAriaLabel"
-    :class="[
-      'price__value price__value--special',
-      specialPriceClass
-    ]"
+    :class="['price__wrapper price__wrapper--special', specialPriceClass]"
   >
     {{ specialPrice }}
   </ins>
   <span
     v-if="price"
     :aria-label="normalPriceAriaLabel"
-    :class="[
-      'price__value',
-      regularPriceClass
-    ]"
+    :class="['price__wrapper', regularPriceClass]"
   >
     {{ price }}
   </span>
