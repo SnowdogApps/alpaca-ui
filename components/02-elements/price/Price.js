@@ -37,14 +37,14 @@ export default {
       default: 'Old price:'
     }
   },
-  methods: {
-    setAriaLabel(type) {
-      if (type === this.specialPrice) {
-        return `${this.ariaLabelSpecial} ${this.specialPrice}`
-      }
-      if (type === this.oldPrice) {
-        return `${this.ariaLabelOld} ${this.oldPrice}`
-      }
+  computed: {
+    specialPriceAriaLabel() {
+      return `${this.ariaLabelSpecial} ${this.specialPrice}`
+    },
+    oldPriceAriaLabel() {
+      return `${this.ariaLabelOld} ${this.oldPrice}`
+    },
+    normalPriceAriaLabel() {
       return `${this.ariaLabelPrice} ${this.price}`
     }
   }
