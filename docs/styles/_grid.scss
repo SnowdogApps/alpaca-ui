@@ -1,0 +1,23 @@
+.docs-only-styles {
+  padding: 0 25px;
+
+  .col-large .row__content {
+    height: 8em;
+  }
+
+  .row {
+    min-height: 2em;
+    margin-bottom: $spacer;
+    padding-top: $spacer;
+    background: $gray;
+
+    &__content {
+      margin-bottom: $spacer;
+      padding: $spacer;
+      background: $gray-light;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
