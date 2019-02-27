@@ -14,7 +14,7 @@ storiesOf('Modules/ActiveFilters', module)
     }),
     template: `
       <app>
-        <alpaca-active-filters 
+        <alpaca-active-filters
           :items="filters"
           clear-button="Clear all"
           @clearAll="clearAll"

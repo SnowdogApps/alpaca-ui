@@ -66,11 +66,11 @@
 </template>
 
 <script>
-import AlpacaImage from "../../02-elements/image/Image"
-import AlpacaLink from "../../01-globals/link/Link"
-import AlpacaInput from "../../02-elements/form/input/Input"
-import AlpacaPrice from "../../02-elements/price/Price"
-import AlpacaButton from "../../02-elements/button/Button"
+import AlpacaImage from "../../02-elements/image/Image.vue"
+import AlpacaLink from "../../01-globals/link/Link.vue"
+import AlpacaInput from "../../02-elements/form/input/Input.vue"
+import AlpacaPrice from "../../02-elements/price/Price.vue"
+import AlpacaButton from "../../02-elements/button/Button.vue"
 
 export default {
   components: {

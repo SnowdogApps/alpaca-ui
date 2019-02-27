@@ -2,7 +2,7 @@
   <div class="swatch">
     <alpaca-label
       v-if="label"
-      custom-class="swatch__title"
+      class="swatch__title"
     >
       {{ label }}
     </alpaca-label>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import AlpacaLabel from '../../01-globals/label/Label'
+  import AlpacaLabel from '../../01-globals/label/Label.vue'
 
   export default {
     components: {

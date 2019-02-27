@@ -5,10 +5,10 @@
     :aria-labelledby="ariaLabelledby"
     :aria-describedby="ariaDescribedby"
     class="modal"
-    role="dialog" 
+    role="dialog"
   >
-    <div 
-      @click.self="handleBackgroundClick" 
+    <div
+      @click.self="handleBackgroundClick"
       class="modal__mask"
     ></div>
     <transition name="slide-down">
@@ -20,9 +20,9 @@
         tabindex="-1"
       >
         <div class="modal__header row between-xs">
-          <alpaca-heading 
+          <alpaca-heading
             v-if="!blank"
-            :level="1" 
+            :level="1"
             class="modal__heading"
           >
             {{ heading }}
@@ -33,13 +33,13 @@
             class="button button--icon modal__close-button"
             type="button"
           >
-            <alpaca-icon 
-              icon="close" 
+            <alpaca-icon
+              icon="close"
               class="modal__close-button-icon"
             />
           </button>
         </div>
-        <alpaca-divider 
+        <alpaca-divider
           v-if="!blank"
           class="modal__divider"
         />
