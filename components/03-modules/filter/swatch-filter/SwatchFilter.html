@@ -10,6 +10,7 @@
   <div class="filter__swatch">
     <alpaca-button
       v-for="item in items"
+      :key="item.id"
       class="filter__swatch-option"
       :aria-label="item.ariaLabel"
       @click="click(item.id)"
