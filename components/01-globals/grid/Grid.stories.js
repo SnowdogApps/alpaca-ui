@@ -19,12 +19,12 @@ storiesOf('Global/Grid', module)
       grid
     }),
     template: `
-        <app>
-          <alpaca-grid
-            class="docs-only-styles"
-            :grids="grid"/>
-        </app>
-      `
+      <app>
+        <alpaca-grid
+          class="docs-only-styles"
+          :grids="grid"/>
+      </app>
+    `
   }))
   .add('Fluid', () => ({
     components: { App, AlpacaGrid },
@@ -32,12 +32,12 @@ storiesOf('Global/Grid', module)
       fluid
     }),
     template: `
-        <app>
-          <alpaca-grid
-            class="docs-only-styles"
-            :grids="fluid"/>
-        </app>
-      `
+      <app>
+        <alpaca-grid
+          class="docs-only-styles"
+          :grids="fluid"/>
+      </app>
+    `
   }))
   .add('Auto width', () => ({
     components: { App, AlpacaGrid },
