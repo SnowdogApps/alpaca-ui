@@ -62,7 +62,7 @@ $cart-list-item__action-icon-fill-color  : $gray-darker !default;
     margin: $cart-list-item__attributes-margin;
   }
 
-  &__price-value {
+  &__price-wrapper {
     display: flex;
     flex-direction: column;
     font-weight: normal;
@@ -81,7 +81,7 @@ $cart-list-item__action-icon-fill-color  : $gray-darker !default;
   }
 
   &__name,
-  &__price-value,
+  &__price-wrapper,
   &__attributes {
     flex-basis: 50%;
   }
