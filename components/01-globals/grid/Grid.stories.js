@@ -14,31 +14,31 @@ import reversing from './mocks/reversing'
 
 storiesOf('Global/Grid', module)
   .add('Default', () => ({
-  components: { App, AlpacaGrid },
-  data: () => ({
-    grid
-  }),
-  template: `
-      <app>
-        <alpaca-grid 
-          class="docs-only-styles" 
-          :grids="grid"/>
-      </app>
-    `
-}))
+    components: { App, AlpacaGrid },
+    data: () => ({
+      grid
+    }),
+    template: `
+        <app>
+          <alpaca-grid
+            class="docs-only-styles"
+            :grids="grid"/>
+        </app>
+      `
+  }))
   .add('Fluid', () => ({
-  components: { App, AlpacaGrid },
-  data: () => ({
-    fluid
-  }),
-  template: `
-      <app>
-        <alpaca-grid 
-          class="docs-only-styles" 
-          :grids="fluid"/>
-      </app>
-    `
-}))
+    components: { App, AlpacaGrid },
+    data: () => ({
+      fluid
+    }),
+    template: `
+        <app>
+          <alpaca-grid
+            class="docs-only-styles"
+            :grids="fluid"/>
+        </app>
+      `
+  }))
   .add('Auto width', () => ({
     components: { App, AlpacaGrid },
     data: () => ({
@@ -46,8 +46,8 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
-          class="docs-only-styles" 
+        <alpaca-grid
+          class="docs-only-styles"
           :grids="autoWidth"/>
       </app>
     `
@@ -59,8 +59,8 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
-          class="docs-only-styles" 
+        <alpaca-grid
+          class="docs-only-styles"
           :grids="reordering"/>
       </app>
     `
@@ -72,8 +72,8 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
-          class="docs-only-styles" 
+        <alpaca-grid
+          class="docs-only-styles"
           row-class="around-xs"
           :grids="distribution"/>
       </app>
@@ -86,9 +86,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="between-xs"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="distribution"/>
       </app>
     `
@@ -100,9 +100,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="start-xs"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="alignmentStart"/>
       </app>
     `
@@ -114,9 +114,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="center-xs"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="alignmentStart"/>
       </app>
     `
@@ -128,9 +128,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="end-xs"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="alignmentStart"/>
       </app>
     `
@@ -142,9 +142,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="top-xs"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="alignmentMiddle"/>
       </app>
     `
@@ -156,9 +156,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="middle-xs"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="alignmentMiddle"/>
       </app>
     `
@@ -170,9 +170,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="bottom-xs"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="alignmentMiddle"/>
       </app>
     `
@@ -184,9 +184,9 @@ storiesOf('Global/Grid', module)
     }),
     template: `
       <app>
-        <alpaca-grid 
+        <alpaca-grid
           row-class="reverse"
-          class="docs-only-styles" 
+          class="docs-only-styles"
           :grids="reversing"/>
       </app>
     `

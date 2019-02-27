@@ -13,6 +13,7 @@
     "lodash.uniqueid": "^4.0.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.5",
+    "vue-carousel": "^0.18.0-alpha",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
