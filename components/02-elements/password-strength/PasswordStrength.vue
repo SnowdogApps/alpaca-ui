@@ -83,6 +83,7 @@
   .password-strength {
     color: $password-strength__color;
     font-size: $password-strength__font-size;
+
     &__indicator {
       position: relative;
       display: inline-block;
@@ -91,7 +92,8 @@
       border: $password-strength__indicator-border;
       border-radius: $password-strength__indicator-border-radius;
       background-color: transparent;
-      &:before {
+
+      &::before {
         position: absolute;
         content: '';
         left: 0;

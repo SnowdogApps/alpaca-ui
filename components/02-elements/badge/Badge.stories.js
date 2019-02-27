@@ -18,8 +18,8 @@ storiesOf('Elements/Badge', module)
     components: { App, AlpacaBadge },
     template: `
       <app>
-        <alpaca-badge 
-          tag="span" 
+        <alpaca-badge
+          tag="span"
         >
           Custom tag
         </alpaca-badge>
@@ -38,14 +38,14 @@ storiesOf('Elements/Badge', module)
       </app>
     `
   }))
-  .add('Discount', () => ({
+  .add('Sale', () => ({
     components: { App, AlpacaBadge },
     template: `
       <app>
-        <alpaca-badge 
-          type="discount"
+        <alpaca-badge
+          type="sale"
         >
-          Discount badge
+          Sale badge
         </alpaca-badge>
       </app>
     `

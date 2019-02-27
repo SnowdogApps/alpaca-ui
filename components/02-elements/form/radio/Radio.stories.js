@@ -15,10 +15,10 @@ storiesOf('Elements/Form/Radio', module)
     },
     template: `
       <app>
-        <alpaca-radio 
+        <alpaca-radio
           :legendId="options.legendId"
-          :legend="options.legend" 
-          :options="options.options" 
+          :legend="options.legend"
+          :options="options.options"
           :name="options.name"
         />
       </app>

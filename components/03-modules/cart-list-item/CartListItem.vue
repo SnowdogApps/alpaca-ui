@@ -11,7 +11,7 @@
         <alpaca-link
           :href="href"
           inverted
-          custom-class="cart-list-item__name"
+          class="cart-list-item__name"
         >
           {{ productName }}
         </alpaca-link>
@@ -47,13 +47,13 @@
         <alpaca-button
           icon="edit"
           aria-label="Edit product in your shopping cart"
-          custom-class="cart-list-item__actions-item"
+          class="cart-list-item__actions-item"
           @click="onEdit"
         />
         <alpaca-button
           icon="remove"
           aria-label="Remove this product from your shopping cart"
-          custom-class="cart-list-item__actions-item"
+          class="cart-list-item__actions-item"
           @click="onRemove"
         />
       </div>
@@ -62,12 +62,12 @@
 </template>
 
 <script>
-  import AlpacaLink from '../../01-globals/link/Link'
-  import AlpacaImage from '../../02-elements/image/Image'
-  import AlpacaPrice from '../../02-elements/price/Price'
-  import AlpacaInput from '../../02-elements/form/input/Input'
-  import AlpacaDescriptionList from '../../02-elements/list/DescriptionList'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaLink from '../../01-globals/link/Link.vue'
+  import AlpacaImage from '../../02-elements/image/Image.vue'
+  import AlpacaPrice from '../../02-elements/price/Price.vue'
+  import AlpacaInput from '../../02-elements/form/input/Input.vue'
+  import AlpacaDescriptionList from '../../02-elements/list/DescriptionList.vue'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
     components: {
@@ -185,6 +185,7 @@
     &__data {
       display: flex;
       flex-direction: column;
+
       @include mq($screen-m) {
         flex-flow: row wrap;
       }
@@ -194,6 +195,7 @@
       line-height: $font-line-height;
       text-decoration: none;
       font-weight: $cart-list-item__name-weight;
+
       @include mq($screen-m) {
         flex: 0 0 $cart-list-item__name-width;
         padding: $cart-list-item__name-padding\@small;
@@ -211,6 +213,7 @@
       justify-content: space-between;
       align-items: flex-start;
       margin: $cart-list-item__details-margin;
+
       @include mq($screen-m) {
         flex: 0 0 $cart-list-item__details-width;
         margin: $reset;
@@ -226,6 +229,7 @@
     &__price {
       margin: $cart-list-item__price-margin;
       font-weight: normal;
+
       @include mq($screen-m) {
         margin: $reset;
       }
@@ -233,6 +237,7 @@
 
     &__qty {
       width: $cart-list-item__qty-width;
+
       @include mq($screen-m) {
         width: $cart-list-item__qty-width\@small;
       }

@@ -13,8 +13,8 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading'
-  import AlpacaParagraph from '../../01-globals/paragraph/Paragraph'
+  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+  import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
 
   export default {
     components: {
@@ -37,9 +37,11 @@
 <style lang="scss">
   .information {
     margin-bottom: $spacer--medium * 2;
+
     &__title {
       margin-bottom: $spacer--medium;
     }
+
     &__text {
       margin-bottom: 0;
     }

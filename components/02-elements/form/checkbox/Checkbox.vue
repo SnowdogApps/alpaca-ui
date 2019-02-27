@@ -1,14 +1,18 @@
 <template>
   <component
     :is="link ? 'a' : 'div'"
+    :href="link ? href : null"
     :class="['checkbox', { 'checkbox--link': link }]"
   >
     <input
       v-if="!link"
       :id="id"
       :name="name"
+      :value="value"
+      :checked="selectedValue === value"
       type="checkbox"
       class="checkbox__field"
+      @change="change($event.target.checked)"
     >
     <alpaca-icon
       icon="checked"
@@ -19,43 +23,65 @@
     />
     <component
       :is="link ? 'span' : 'label'"
-      :for="id"
-      class="checkbox__label"
+      :for="link ? null : id"
+      :class="['checkbox__label', labelClass]"
     >
-      {{ label }}
+      <slot />
     </component>
   </component>
 </template>
 
 <script>
-  import AlpacaIcon from '../../../01-globals/icon/Icon'
+  import AlpacaIcon from '../../../01-globals/icon/Icon.vue'
 
   export default {
     components: { AlpacaIcon },
+    model: {
+      prop: 'selectedValue',
+      event: 'change'
+    },
     props: {
-      label: {
-        type: String,
-        required: true
+      selectedValue: {
+        type: [String, Boolean, Number, Object],
+        default: null
+      },
+      value: {
+        type: [String, Boolean, Number, Object],
+        default: null
+      },
+      uncheckedValue: {
+        type: [String, Boolean, Number, Object],
+        default: null
       },
       id: {
         type: String,
-        required: false,
         default: null
       },
       name: {
         type: String,
-        required: false,
         default: null
       },
       iconClass: {
+        type: String,
+        default: null
+      },
+      labelClass: {
         type: String,
         required: false,
         default: null
       },
       link: {
         type: Boolean,
-        required: false,
         default: false
+      },
+      href: {
+        type: String,
+        default: null
+      }
+    },
+    methods: {
+      change(checked) {
+        this.$emit('change', checked ? this.value : this.uncheckedValue)
       }
     }
   }
@@ -97,7 +123,7 @@
         opacity: 1;
       }
 
-      .checkbox__label:before {
+      .checkbox__label::before {
         border: $checkbox__border--checked;
       }
     }
@@ -112,7 +138,7 @@
         opacity: 1;
       }
 
-      &:checked~.checkbox__label:before {
+      &:checked ~ .checkbox__label::before {
         border: $checkbox__border--checked;
       }
     }
@@ -123,7 +149,7 @@
       line-height: $checkbox__line-height;
       cursor: pointer;
 
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         top: $checkbox__gap;

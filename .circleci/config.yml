@@ -6,3 +6,4 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn eslint
+      - run: yarn stylelint
