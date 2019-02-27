@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import {Carousel} from 'vue-carousel'
+  import { Carousel } from 'vue-carousel'
 
   export default {
     components: {

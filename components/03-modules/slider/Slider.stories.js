@@ -18,16 +18,18 @@ storiesOf('Modules/Slider', module)
     template: `
       <app>
         <alpaca-slider>
-          <template>
-            <slide class="slider__item" :key="index" v-for="(slide, index) in slides">
-              <div class="lazyload-wrapper">
-                <alpaca-image
-                  :src="slide.thumbnail"
-                  :alt="slide.alt"
-                />
-              </div>
-            </slide>
-          </template>
+          <slide 
+            class="slider__item"
+            :key="index"
+            v-for="(slide, index) in slides"
+          >
+            <div class="lazyload-wrapper">
+              <alpaca-image
+                :src="slide.thumbnail"
+                :alt="slide.alt"
+              />
+            </div>
+          </slide>
         </alpaca-slider>
       </app>
     `
@@ -41,16 +43,18 @@ storiesOf('Modules/Slider', module)
   template: `
       <app>
         <alpaca-slider :paginationEnabled="true">
-          <template>
-            <slide class="slider__item" :key="index" v-for="(slide, index) in slides">
-              <div class="lazyload-wrapper">
-                <alpaca-image
-                  :src="slide.thumbnail"
-                  :alt="slide.alt"
-                />
-              </div>
-            </slide>
-          </template>
+          <slide 
+            class="slider__item"
+            :key="index"
+            v-for="(slide, index) in slides"
+          >
+            <div class="lazyload-wrapper">
+              <alpaca-image
+                :src="slide.thumbnail"
+                :alt="slide.alt"
+              />
+            </div>
+          </slide>
         </alpaca-slider>
       </app>
     `
