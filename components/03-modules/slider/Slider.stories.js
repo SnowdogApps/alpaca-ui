@@ -18,7 +18,7 @@ storiesOf('Modules/Slider', module)
     template: `
       <app>
         <alpaca-slider>
-          <slide 
+          <slide
             class="slider__item"
             :key="index"
             v-for="(slide, index) in slides"
@@ -43,7 +43,7 @@ storiesOf('Modules/Slider', module)
   template: `
       <app>
         <alpaca-slider :paginationEnabled="true">
-          <slide 
+          <slide
             class="slider__item"
             :key="index"
             v-for="(slide, index) in slides"
