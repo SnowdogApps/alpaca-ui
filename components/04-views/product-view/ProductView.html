@@ -20,9 +20,9 @@
           </alpaca-heading>
           <!-- TODO: Use click event to open tab with reviews instead of links -->
           <alpaca-review-summary
-            :reviewsQty="product.reviews.length"
-            addReviewLink="#"
-            amountLink="#"
+            :reviews-qty="product.reviews.length"
+            add-review-link="#"
+            amount-link="#"
           />
         </div>
         <div class="product-view__sku">
@@ -67,21 +67,21 @@
             v-if="product.swatches.text"
             :options="product.swatches.text.options"
             :label="product.swatches.text.label"
-            labelClass="product-view__swatch-option-title"
+            label-class="product-view__swatch-option-title"
           />
           <alpaca-swatch
             color
             v-if="product.swatches.color"
             :options="product.swatches.color.options"
             :label="product.swatches.color.label"
-            labelClass="product-view__swatch-option-title"
+            label-class="product-view__swatch-option-title"
           />
           <alpaca-swatch
             image
             v-else-if="product.swatches.image"
             :options="product.swatches.image.options"
             :label="product.swatches.image.label"
-            labelClass="product-view__swatch-option-title"
+            label-class="product-view__swatch-option-title"
           />
         </div>
       </div>
