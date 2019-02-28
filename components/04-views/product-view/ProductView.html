@@ -29,6 +29,7 @@
           {{ product.sku }}
         </div>
         <div class="product-view__stock-line">
+          <!-- TODO: Add all price variants -->
           <alpaca-price
             large
             :old-price="product.price.old"
@@ -64,12 +65,6 @@
           class="product-view__options"
         >
           <alpaca-swatch
-            v-if="product.swatches.text"
-            :options="product.swatches.text.options"
-            :label="product.swatches.text.label"
-            label-class="product-view__swatch-option-title"
-          />
-          <alpaca-swatch
             color
             v-if="product.swatches.color"
             :options="product.swatches.color.options"
@@ -83,6 +78,21 @@
             :label="product.swatches.image.label"
             label-class="product-view__swatch-option-title"
           />
+          <alpaca-swatch
+            v-if="product.swatches.text"
+            :options="product.swatches.text.options"
+            :label="product.swatches.text.label"
+            label-class="product-view__swatch-option-title"
+          />
+        </div>
+        <div class="product-view__main-actions">
+          <div class="product-view__qty">
+            <alpaca-quantity-update
+              :input="quantityUpdate.input"
+              :minus-button="quantityUpdate.minusQtyButton"
+              :plus-button="quantityUpdate.plusQtyButton"
+            />
+          </div>
         </div>
       </div>
     </div>

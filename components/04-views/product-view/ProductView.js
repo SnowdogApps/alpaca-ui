@@ -5,6 +5,7 @@ import AlpacaPrice from '../../02-elements/price/Price.vue'
 import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue';
 import AlpacaGallery from '../../03-modules/gallery/Gallery.vue'
 import AlpacaReviewSummary from '../../03-modules/review/review-summary/ReviewSummary.vue'
+import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
 
 export default {
   components: {
@@ -14,7 +15,8 @@ export default {
     AlpacaPrice,
     AlpacaSwatch,
     AlpacaGallery,
-    AlpacaReviewSummary
+    AlpacaReviewSummary,
+    AlpacaQuantityUpdate
   },
   props: {
     breadcrumbs: {
@@ -26,6 +28,10 @@ export default {
       required: true
     },
     product: {
+      type: Object,
+      required: true
+    },
+    quantityUpdate: {
       type: Object,
       required: true
     }
