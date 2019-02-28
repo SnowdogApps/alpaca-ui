@@ -7,6 +7,7 @@ import AlpacaHeading from '../../01-globals/heading/Heading.vue'
 import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
 import AlpacaPrice from '../../02-elements/price/Price.vue'
 import AlpacaGallery from '../../03-modules/gallery/Gallery.vue'
+import AlpacaReviewSummary from '../../03-modules/review/review-summary/ReviewSummary.vue'
 
 export default {
   components: {
@@ -14,7 +15,8 @@ export default {
     AlpacaHeading,
     AlpacaBreadcrumbs,
     AlpacaPrice,
-    AlpacaGallery
+    AlpacaGallery,
+    AlpacaReviewSummary
   },
   data() {
     return {

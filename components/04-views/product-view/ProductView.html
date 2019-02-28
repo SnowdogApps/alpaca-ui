@@ -10,22 +10,31 @@
         />
       </div>
       <div class="product-view__main-details">
-        <alpaca-heading
-          tag="h1"
-          level="1"
-          class="product-view__title"
-        >
-          {{ product.name }}
-        </alpaca-heading>
-        <span class="product-view__sku">
+        <div class="product-view__heading">
+          <alpaca-heading
+            tag="h1"
+            level="1"
+            class="product-view__title"
+          >
+            {{ product.name }}
+          </alpaca-heading>
+          <!-- TODO: Use click event to open tab with reviews instead of links -->
+          <alpaca-review-summary
+            :reviewsQty="product.reviews.length"
+            addReviewLink="#"
+            amountLink="#"
+          />
+        </div>
+        <div class="product-view__sku">
           {{ product.sku }}
-        </span>
+        </div>
         <div class="product-view__stock-line">
           <alpaca-price
             large
             :old-price="product.price.old"
             :special-price="product.price.special"
           />
+          <!-- TODO: Replace with new stock component -->
           <span
             v-if="product.qty > 0 && product.qty <= 5"
             class="product-view__stock-status product-view__stock-status--alert"
