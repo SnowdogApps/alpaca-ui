@@ -20,11 +20,31 @@
         <span class="product-view__sku">
           {{ product.sku }}
         </span>
-        <alpaca-price
-          large
-          :old-price="product.price.old"
-          :special-price="product.price.special"
-        />
+        <div class="product-view__stock-line">
+          <alpaca-price
+            large
+            :old-price="product.price.old"
+            :special-price="product.price.special"
+          />
+          <span
+            v-if="product.qty > 0 && product.qty <= 5"
+            class="product-view__stock-status product-view__stock-status--alert"
+          >
+            In stock - only {{ product.qty }} left
+          </span>
+          <span
+            v-else-if="product.qty > 0"
+            class="product-view__stock-status"
+          >
+            In stock
+          </span>
+          <span
+            v-else
+            class="product-view__stock-status product-view__stock-status--out-of-stock"
+          >
+            Out of stock
+          </span>
+        </div>
       </div>
     </div>
   </div>
