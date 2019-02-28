@@ -2,6 +2,9 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
 import menu from '../../03-modules/header/mocks/menu.json'
+import breadcrumbs from '../../02-elements/breadcrumbs/mocks/breadcrumbs.json'
+import gallery from '../../03-modules/gallery/mocks/gallery.json';
+import product from './mocks/product.json';
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaProductView from './ProductView.vue'
@@ -13,7 +16,10 @@ storiesOf('Views/ProductView', module)
     components: { App, AlpacaHeader, AlpacaProductView },
     data() {
       return {
-        menu
+        menu,
+        breadcrumbs,
+        gallery,
+        product
       }
     },
     template: `
@@ -23,7 +29,11 @@ storiesOf('Views/ProductView', module)
           src="./../images/logo/alpaca.svg"
           link="#"
         />
-        <alpaca-product-view/>
+        <alpaca-product-view
+          :breadcrumbs="breadcrumbs"
+          :gallery="gallery"
+          :product="product"
+        />
       </app>
     `
   }))

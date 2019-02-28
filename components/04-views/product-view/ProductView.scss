@@ -99,6 +99,7 @@ $product-view__sku-margin-bottom                       : $spacer !default;
 
 $product-view__stock-line-width                        : 100% !default;
 $product-view__stock-line-margin-bottom                : $spacer--medium !default;
+$product-view__stock-line-margin-bottom\@medium        : 0 !default;
 
 $product-view__stock-margin-left                       : $spacer--medium !default;
 $product-view__stock-color                             : $gray-dark !default;
@@ -340,6 +341,10 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
     align-items: center;
     width: $product-view__stock-line-width;
     margin-bottom: $product-view__stock-line-margin-bottom;
+
+    @include mq($screen-m) {
+      margin-bottom: $product-view__stock-line-margin-bottom\@medium;
+    }
   }
 
   &__stock-status {

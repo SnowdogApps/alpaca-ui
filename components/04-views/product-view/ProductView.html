@@ -55,6 +55,36 @@
           </span>
         </div>
       </div>
+      <div class="product-view__secondary-details">
+        <div class="product-view__description">
+          {{ product.description }}
+        </div>
+        <div
+          v-if="product.swatches"
+          class="product-view__options"
+        >
+          <alpaca-swatch
+            v-if="product.swatches.text"
+            :options="product.swatches.text.options"
+            :label="product.swatches.text.label"
+            labelClass="product-view__swatch-option-title"
+          />
+          <alpaca-swatch
+            color
+            v-if="product.swatches.color"
+            :options="product.swatches.color.options"
+            :label="product.swatches.color.label"
+            labelClass="product-view__swatch-option-title"
+          />
+          <alpaca-swatch
+            image
+            v-else-if="product.swatches.image"
+            :options="product.swatches.image.options"
+            :label="product.swatches.image.label"
+            labelClass="product-view__swatch-option-title"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </alpaca-container>
