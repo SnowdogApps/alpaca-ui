@@ -5,9 +5,26 @@
     />
     <div class="product-view__wrapper">
       <div class="product-view__gallery">
-          <alpaca-gallery
-            :images="gallery.images"
-          />
+        <alpaca-gallery
+          :images="gallery.images"
+        />
+      </div>
+      <div class="product-view__main-details">
+        <alpaca-heading
+          tag="h1"
+          level="1"
+          class="product-view__title"
+        >
+          {{ product.name }}
+        </alpaca-heading>
+        <span class="product-view__sku">
+          {{ product.sku }}
+        </span>
+        <alpaca-price
+          large
+          :old-price="product.price.old"
+          :special-price="product.price.special"
+        />
       </div>
     </div>
   </div>

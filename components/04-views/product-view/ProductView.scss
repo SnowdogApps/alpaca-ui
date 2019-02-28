@@ -88,15 +88,6 @@ $product-view__order-gallery                           : 2 !default;
 $product-view__order-main-details                      : 1 !default;
 $product-view__order-secondary-details                 : 3 !default;
 
-$product-view__price-bottom-margin                     : $spacer--medium !default;
-$product-view__price-bottom-margin\@medium             : 0 !default;
-$product-view__price-color                             : $gray-darker !default;
-$product-view__price-color--old                        : $gray !default;
-$product-view__price-color--special                    : $gray-darker !default;
-$product-view__price-font-size                         : $font-size-large !default;
-$product-view__price-font-weight                       : $font-weight-bold !default;
-$product-view__price-label-font-weight                 : $font-weight-normal !default;
-
 $product-view__qty-margin-right\@small                 : $spacer--medium !default;
 
 $product-view__rating-link-color                       : $gray-dark !default;
@@ -118,6 +109,7 @@ $product-view__stock-color                             : $gray-dark !default;
 $product-view__stock-color--out-of-stock               : $red !default;
 $product-view__stock-color--alert                      : $red !default;
 $product-view__stock-font-weight\@medium               : $font-weight-bold !default;
+$product-view__stock-margin-bottom                     : $spacer--medium !default;
 
 $product-view__swatch-margin-bottom                    : $spacer--medium !default;
 $product-view__swatch-margin-right                     : $spacer--medium !default;
@@ -234,44 +226,6 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
       margin: 0;
       font-size: $product-view__title-font-size;
       text-transform: inherit;
-    }
-  }
-
-  &__price {
-    width: 50%;
-    font-size: $product-view__price-font-size;
-    font-weight: $product-view__price-font-weight;
-    margin-bottom: $product-view__price-bottom-margin;
-
-    @include mq($screen-m) {
-      float: left;
-      width: 100%;
-      padding-right: 55%;
-      margin-bottom: $product-view__price-bottom-margin\@medium;
-    }
-
-    .price-box {
-      display: flex;
-    }
-
-    .price-label {
-      font-weight: $product-view__price-label-font-weight;
-    }
-
-    .price__value {
-      color: $product-view__price-color;
-
-      &--old {
-        color: $product-view__price-color--old;
-      }
-
-      &--special {
-        color: $product-view__price-color--special;
-      }
-
-      &.sly-old-price {
-        display: none;
-      }
     }
   }
 
@@ -393,7 +347,7 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
     color: $product-view__stock-color;
     width: 50%;
     text-align: right;
-    margin-bottom: $product-view__price-bottom-margin;
+    margin-bottom: $product-view__stock-margin-bottom;
 
     @include mq($screen-m) {
       margin-bottom: 0;
