@@ -96,11 +96,13 @@
   .rating__wrapper {
     border: none;
   }
+
   .rating {
     width: $rating__size;
+
     &:hover,
     &:focus {
-      .rating__rate-item span:before {
+      .rating__rate-item span::before {
         display: block;
       }
     }
@@ -112,17 +114,18 @@
 
       &:hover,
       &:focus {
-        ~ .rating__rate-item span:before {
+        ~ .rating__rate-item span::before {
           display: none;
         }
       }
     }
+
     &__star {
       position: relative;
       height: $rating__item-size;
       width: $rating__size;
 
-      &:before { // inactive
+      &::before { // inactive
         content: '';
         position: absolute;
         display: block;
@@ -143,10 +146,12 @@
           background-size: $rating__item-size 100%;
         }
       }
+
       &--single {
         width: $rating__item-size;
       }
     }
+
     &__indicator {
       left: 0;
       top: 0;
@@ -155,7 +160,8 @@
       width: $rating__size;
       overflow: hidden;
       text-indent: -10000px;
-      &:before { // active
+
+      &::before { // active
         content: '';
         position: absolute;
         display: block;
@@ -180,13 +186,15 @@
         .rating__star--rate & {
           display: none;
         }
+
         .rating__star--rate:hover &,
         .rating__star--rate:focus &,
         .rating__rate-item--active & {
           display: block;
         }
       }
-      &:after { //active star with border
+
+      &::after { //active star with border
         content: '';
         position: absolute;
         display: block;
@@ -226,6 +234,7 @@
     .mage-error {
       display: none !important; // sass-lint:disable-line no-important
     }
+
     &--rate {
       display: flex;
       justify-content: center;
@@ -244,7 +253,7 @@
         background-color: transparent;
         cursor: pointer;
 
-        &:before {
+        &::before {
           width: $rating__item-size--rate;
           height: $rating__item-size--rate;
           background-size: $rating__item-size--rate;
@@ -258,16 +267,19 @@
           width: $rating__item-size--rate;
         }
       }
+
       .radio__field {
         width: 1px;
         height: 1px;
         bottom: 0;
+
         &:focus {
           opacity: 1;
           height: 0;
           outline: none;
           appearance: none;
-          &:before {
+
+          &::before {
             content: '';
             display: block;
             position: absolute;
@@ -283,12 +295,12 @@
         height: $rating__item-size--rate;
         width: $rating__item-size--rate;
 
-        &:before {
+        &::before {
           height: $rating__item-size--rate;
           background-size: $rating__item-size--rate;
         }
 
-        &:after {
+        &::after {
           height: $rating__item-size--rate;
           background-size: $rating__item-size--rate;
         }
