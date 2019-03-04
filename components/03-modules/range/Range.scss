@@ -1,0 +1,41 @@
+$range__padding       : $spacer 0 0 0 !default;
+$range__input-margin  : 0 !default;
+$range__dash-padding  : 0 $spacer--medium 0 $spacer !default;
+$range__suffix-padding: 0 $spacer !default;
+$range__button-padding: 0 $spacer--extra-large !default;
+$range__button-margin : 0 0 $spacer--medium 0 !default;
+
+.range-filter {
+  padding: $range__padding;
+  overflow: hidden;
+
+  &__inputs-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__dash {
+    text-align: center;
+    padding: $range__dash-padding;
+  }
+
+  &__suffix {
+    padding: $range__suffix-padding;
+  }
+
+  &__label {
+    @include visually-hidden();
+  }
+
+  &__input {
+    width: auto;
+    flex-grow: 1;
+    margin: $range__input-margin;
+  }
+
+  &__button {
+    margin: $range__button-margin;
+    padding: $range__button-padding;
+  }
+}
