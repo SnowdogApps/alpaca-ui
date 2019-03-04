@@ -3,8 +3,12 @@
     <alpaca-button
       :icon="minusButton.iconId"
       :aria-label="minusButton.ariaLabel"
-      :class="['button--icon quantity-update__button quantity-update__button--minus',
-               {'quantity-update__button--disabled' : currentValue === 0}
+      :class="[
+        'button--icon quantity-update__button quantity-update__button--minus',
+        {
+          'quantity-update__button--disabled': currentValue === 0
+        },
+        decrementButtonClass
       ]"
       icon-class="button__icon quantity-update__icon"
       @click="decrement"
@@ -15,15 +19,21 @@
       :label="input.ariaLabel"
       :value="currentValue"
       type="number"
+      :min="input.min"
+      :max="input.max"
       :name="input.name"
       :placeholder="input.placeholder"
+      :class="inputClass"
       input-class="quantity-update__input"
       hidden-label
     />
     <alpaca-button
       :icon="plusButton.iconId"
       :aria-label="plusButton.ariaLabel"
-      class="button--icon quantity-update__button quantity-update__button--plus"
+      :class="[
+        'button--icon quantity-update__button quantity-update__button--plus',
+        incrementButtonClass
+      ]"
       icon-class="button__icon quantity-update__icon"
       @click="increment"
     />
@@ -51,6 +61,18 @@
       plusButton: {
         type: Object,
         required: true
+      },
+      decrementButtonClass: {
+        type: String,
+        default: ''
+      },
+      incrementButtonClass: {
+        type: String,
+        default: ''
+      },
+      inputClass: {
+        type: String,
+        default: ''
       }
     },
     data() {
@@ -83,7 +105,7 @@
 
   // Icon
   $quantity-updater__icon-fill                       : $gray-dark !default;
-  $quantity-updater__icon-spacing                    : 12px !default;
+  $quantity-updater__icon-spacing                    : 18px !default;
 
   // Error
   $quantity-updater__error-margin                    : 0 0 0 $spacer !default;
