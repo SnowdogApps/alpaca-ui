@@ -7,12 +7,13 @@
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",
     "eslint": "eslint --ext .js,.vue components",
-    "stylelint": "stylelint 'components/**/*.vue' 'components/**/*.scss' 'assets/styles/**/*.scss'"
+    "stylelint": "stylelint 'components/**/*.vue' 'components/**/*.scss' 'assets/styles/**/*.scss' 'docs/styles/**/*.scss'"
   },
   "dependencies": {
     "lodash.uniqueid": "^4.0.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.5",
+    "vue-carousel": "^0.18.0-alpha",
     "vue-router": "^3.0.2",
     "vue-slider-component": "^2.8.12"
   },

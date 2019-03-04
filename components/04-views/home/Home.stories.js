@@ -24,7 +24,7 @@ storiesOf('Views/Home', module)
     },
     template: `
       <app>
-        <alpaca-home 
+        <alpaca-home
           :text="text.text"
           :headingLevel="2"
           heading="BRANDS"

@@ -56,10 +56,10 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading'
-  import AlpacaBanner from '../../02-elements/banner/Banner'
-  import AlpacaList from '../../02-elements/list/List'
-  import AlpacaListImageItem from '../../02-elements/list/ListImageItem'
+  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+  import AlpacaBanner from '../../02-elements/banner/Banner.vue'
+  import AlpacaList from '../../02-elements/list/List.vue'
+  import AlpacaListImageItem from '../../02-elements/list/ListImageItem.vue'
 
   export default {
     components: {

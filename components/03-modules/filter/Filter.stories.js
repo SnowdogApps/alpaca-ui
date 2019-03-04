@@ -61,7 +61,7 @@ storiesOf('Modules/Filter', module)
     }),
     template: `
      <app>
-       <alpaca-dropdown-list secondary>  
+       <alpaca-dropdown-list secondary>
           <alpaca-checkbox-filter
             title="Checkbox"
             id="checkboxId"

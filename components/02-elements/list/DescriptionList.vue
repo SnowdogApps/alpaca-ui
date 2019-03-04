@@ -1,11 +1,5 @@
 <template>
-  <dl
-    :class="[
-      'list',
-      'list--description',
-      listClass
-    ]"
-  >
+  <dl class="list list--description">
     <template v-for="(item, idx) in elements">
       <dt
         :key="`desc-list-label-${idx}`"
@@ -35,10 +29,6 @@
       elements: {
         type: Array,
         required: true
-      },
-      listClass: {
-        type: String,
-        default: null
       },
       labelClass: {
         type: String,

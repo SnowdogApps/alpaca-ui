@@ -70,7 +70,7 @@ storiesOf('Elements/Table', module)
     }),
     template: `
       <app>
-        <alpaca-table 
+        <alpaca-table
           caption="This is a table"
           class="table--odd-even"
         >
