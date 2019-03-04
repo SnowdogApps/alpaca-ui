@@ -56,19 +56,11 @@ $breadcrumbs__font-size          : $font-size-small !default;
     }
   }
 
-  // TODO: Missing variables.
   .link--invert {
-    color: #393243;
+    color: $gray-darker;
 
     &:hover {
-      color: #2962ff;
-    }
-  }
-
-  // TODO: Looks like page specific stuff, so should be moved to this page styles.
-  & + .page-main {
-    .heading--page {
-      margin-top: $reset;
+      color: $blue;
     }
   }
 }
