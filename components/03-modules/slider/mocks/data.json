@@ -1,0 +1,32 @@
+{
+  "slides": [
+    {
+      "thumbnail": "/images/gallery/product-img-320-312.jpg",
+      "alt": "Slider1"
+    },
+    {
+      "thumbnail": "/images/gallery/product-image-2-320-312.jpg",
+      "alt": "Slider2"
+    },
+    {
+      "thumbnail": "/images/gallery/product-img-320-312.jpg",
+      "alt": "Slider3"
+    },
+    {
+      "thumbnail": "/images/gallery/product-image-2-320-312.jpg",
+      "alt": "Slider4"
+    },
+    {
+      "thumbnail": "/images/gallery/product-img-320-312.jpg",
+      "alt": "Slider5"
+    },
+    {
+      "thumbnail": "/images/gallery/product-image-2-320-312.jpg",
+      "alt": "Slider6"
+    },
+    {
+      "thumbnail": "/images/gallery/product-img-320-312.jpg",
+      "alt": "Slider7"
+    }
+  ]
+}

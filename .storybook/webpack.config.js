@@ -1,3 +1,5 @@
+const StyleLintPlugin = require('stylelint-webpack-plugin')
+
 module.exports = (storybookBaseConfig, configType, defaultConfig) => {
   defaultConfig.module.rules.push({
     test: /\.stories\.jsx?$/,
@@ -19,8 +21,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
             './assets/styles/mixins/_grid-column-width.scss',
             './assets/styles/mixins/_isIE.scss',
             './assets/styles/mixins/_mq.scss',
-            './assets/styles/mixins/_visually-hidden.scss',
-            './assets/styles/_grid.scss'
+            './assets/styles/mixins/_visually-hidden.scss'
           ]
         }
       }
@@ -34,6 +35,15 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
       fix: true
     }
   })
+
+  defaultConfig.plugins.push(new StyleLintPlugin({
+    files: [
+      'components/**/*.vue',
+      'components/**/*.scss',
+      'assets/styles/**/*.scss'
+    ],
+    fix: true
+  }))
 
   return defaultConfig
 }

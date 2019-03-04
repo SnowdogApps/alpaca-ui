@@ -62,5 +62,3 @@ storiesOf('Elements/PasswordStrength', module)
       </app>
     `
   }))
-
-

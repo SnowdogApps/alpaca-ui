@@ -1,7 +1,7 @@
 <template>
   <component
     :is="elementTag"
-    class="list__item"
+    :class="{ 'list__item': defaultClass }"
   >
     <slot />
   </component>
@@ -13,6 +13,11 @@
       elementTag: {
         type: String,
         default: 'li'
+      },
+      defaultClass: {
+        type: Boolean,
+        required: false,
+        default: true
       }
     }
   }

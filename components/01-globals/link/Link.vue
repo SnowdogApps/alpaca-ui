@@ -50,7 +50,6 @@
 
   .link {
     color: $link__color;
-    text-decoration: $link__decoration;
     transition: $link__transition;
     font-family: $link__font-family;
     font-weight: $link__font-weight;

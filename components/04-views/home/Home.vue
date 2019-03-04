@@ -35,11 +35,15 @@
           >
             {{ heading }}
           </alpaca-heading>
-
-          <alpaca-image-list
-            list-class="home__brands-list"
-            :elements="imageListElements"
-          />
+          <alpaca-list class="home__brands-list">
+            <alpaca-list-image-item
+              v-for="item in imageListElements"
+              :key="item.id"
+              class="home__brands-list"
+              :src="item.image.src"
+              :alt="item.image.alt"
+            />
+          </alpaca-list>
         </section>
         <section class="home__static-block">
           <article class="home__static-text">
@@ -52,15 +56,17 @@
 </template>
 
 <script>
-  import AlpacaHeading from '../../01-globals/heading/Heading'
-  import AlpacaBanner from '../../02-elements/banner/Banner'
-  import AlpacaImageList from '../../02-elements/list/ImageList'
+  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+  import AlpacaBanner from '../../02-elements/banner/Banner.vue'
+  import AlpacaList from '../../02-elements/list/List.vue'
+  import AlpacaListImageItem from '../../02-elements/list/ListImageItem.vue'
 
   export default {
     components: {
       AlpacaHeading,
       AlpacaBanner,
-      AlpacaImageList
+      AlpacaList,
+      AlpacaListImageItem
     },
     props: {
       mainBanner: {
@@ -118,6 +124,7 @@
 
     &__banner-content {
       margin-bottom: $home__banner-spacer-medium;
+
       @include mq($screen-m) {
         margin-right: $home__banner-spacer;
 
@@ -153,6 +160,7 @@
         &:nth-child(3n) {
           border-right: 0;
         }
+
         @include mq($screen-m) {
           width: 20%;
 

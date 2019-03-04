@@ -17,11 +17,11 @@ storiesOf('Modules/Pager', module).add('Default', () => ({
   },
   template: `
     <app>
-      <pager 
+      <pager
         @update:page="(page) => {this.setCurrentPage(page)}"
         :page="currentPage"
-        :limit="pagination.limit" 
-        :totalSize="pagination.totalSize" 
+        :limit="pagination.limit"
+        :totalSize="pagination.totalSize"
       />
     </app>
   `,

@@ -70,12 +70,12 @@
 </template>
 
 <script>
-  import AlpacaLink from '../../01-globals/link/Link'
-  import AlpacaImage from '../../02-elements/image/Image'
-  import AlpacaBadge from '../../02-elements/badge/Badge'
-  import AlpacaSwatch from '../../02-elements/swatch/Swatch'
-  import AlpacaPrice from '../../02-elements/price/Price'
-  import AlpacaButton from '../../02-elements/button/Button'
+  import AlpacaLink from '../../01-globals/link/Link.vue'
+  import AlpacaImage from '../../02-elements/image/Image.vue'
+  import AlpacaBadge from '../../02-elements/badge/Badge.vue'
+  import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
+  import AlpacaPrice from '../../02-elements/price/Price.vue'
+  import AlpacaButton from '../../02-elements/button/Button.vue'
 
   export default {
     components: {
@@ -226,6 +226,7 @@
     padding: $catalog-list-item__padding;
     overflow: hidden;
     border-bottom: $catalog-list-item__border;
+
     &:first-child {
       border-top: $catalog-list-item__border;
     }
@@ -234,6 +235,7 @@
       .image {
         width: $catalog-list-item__image-width;
         height: $catalog-list-item__image-height--inner;
+
         @include mq($screen-m) {
           width: $catalog-list-item__image-width\@medium;
         }
@@ -244,6 +246,7 @@
       flex: 1 calc(100% - #{$catalog-list-item__image-width});
       max-width: calc(100% - #{$catalog-list-item__image-width});
       padding: $spacer;
+
       @include mq($screen-m) {
         flex: 1 calc(100% - #{$catalog-list-item__image-width\@medium});
         padding: $spacer $spacer $spacer $spacer--large;
@@ -255,6 +258,7 @@
       padding: $catalog-list-item__badge-padding;
       font-size: $catalog-list-item__badge-font-size;
       background-color: $catalog-list-item__badge-bg-color;
+
       @include mq($screen-m) {
         position: absolute;
         top: $catalog-list-item__badge-top-position\@medium;
@@ -274,6 +278,7 @@
       justify-content: space-between;
       width: $catalog-list-item__details-width;
       margin: $catalog-list-item__details-margin;
+
       @include mq($screen-m) {
         flex-direction: row;
         margin: $reset;
@@ -284,6 +289,7 @@
       margin: $catalog-list-item__name-margin;
       font-weight: $catalog-list-item__name-font-weight;
       font-size: $catalog-list-item__font-size--main;
+
       @include mq($screen-m) {
         margin: $catalog-list-item__name-margin\@medium;
         font-size: $catalog-list-item__font-size--main\@medium;
@@ -297,6 +303,7 @@
 
     &__reviews {
       margin: $catalog-list-item__reviews-padding;
+
       @include mq($screen-m) {
         margin: $reset;
       }
@@ -317,6 +324,7 @@
     &__actions {
       display: flex;
       margin: $catalog-list-item__actions-margin;
+
       @include mq($screen-m) {
         flex-direction: column-reverse;
       }
@@ -332,6 +340,7 @@
       height: $catalog-list-item__actions-primary-button-height;
       width: $catalog-list-item__actions-primary-button-width;
       font-size: $catalog-list-item__font-size;
+
       @include mq($screen-m) {
         height: $catalog-list-item__actions-primary-button-height\@medium;
         width: $catalog-list-item__actions-primary-button-width\@medium;
@@ -345,6 +354,7 @@
       align-items: center;
       justify-content: flex-end;
       margin: $reset;
+
       @include mq($screen-m) {
         justify-content: flex-start;
         margin: $reset;
@@ -357,6 +367,7 @@
         border: none;
         border-radius: 0;
         background-color: transparent;
+
         @include mq($screen-m) {
           margin: $catalog-list-item__actions-secondary-button-margin\@medium;
           width: $catalog-list-item__actions-secondary-button-width\@medium;
@@ -373,6 +384,7 @@
         width: $catalog-list-item__actions-secondary-button-icon-width;
         height: $catalog-list-item__actions-secondary-button-icon-height;
         fill: $catalog-list-item__actions-secondary-button-icon-fill;
+
         @include mq($screen-m) {
           width: $catalog-list-item__actions-secondary-button-icon-width\@medium;
           height: $catalog-list-item__actions-secondary-button-icon-height\@medium;

@@ -1,5 +1,6 @@
 [
   {
+    "id": "item1",
     "image": {
       "src": "https://via.placeholder.com/16",
       "alt": "Sample image"
@@ -7,6 +8,7 @@
     "text": "Lorem Ipsum"
   },
   {
+    "id": "item2",
     "image": {
       "src": "https://via.placeholder.com/16",
       "alt": "Sample image"
@@ -14,6 +16,7 @@
     "text": "Lorem Ipsum"
   },
   {
+    "id": "item3",
     "image": {
       "src": "https://via.placeholder.com/16",
       "alt": "Sample image"

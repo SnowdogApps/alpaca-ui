@@ -4,21 +4,13 @@
   </div>
 </template>
 
-<script>
-  export default {}
-</script>
-
 <style lang="scss">
-  $divider__color--left: $color-primary !default;
-  $divider__color--right: $gray-lighter !default;
-  $divider__size: 8px !default;
+  $divider__color--left : $color-primary !default;
+  $divider__color--right: $gray-lightest !default;
+  $divider__size        : 8px !default;
 
   .divider {
-    display: none;
-
-    @include mq($screen-m) {
-      display: flex;
-    }
+    display: flex;
 
     &__left,
     &__right {
