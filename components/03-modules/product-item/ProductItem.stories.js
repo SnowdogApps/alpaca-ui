@@ -3,26 +3,26 @@ import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
 import App from '../../01-globals/app/App.vue'
-import AlpacaCartListItem from './CartListItem.vue'
+import AlpacaProductItem from './ProductItem.vue'
 
-import cartListItem from './mocks/cartListItem.json'
+import ProductItem from './mocks/productItem.json'
 
-storiesOf('Modules/Cart list item', module)
+storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { App, AlpacaCartListItem },
+    components: { App, AlpacaProductItem },
     data: () => ({
-      cartListItem
+      ProductItem
     }),
     template: `
       <app>
-        <alpaca-cart-list-item
-          :product-image="cartListItem.productImage"
-          :product-name="cartListItem.productName"
-          :product-price="cartListItem.price"
-          :product-id="cartListItem.productId"
-          :product-options="cartListItem.productOptions"
-          :quantity="cartListItem.quantity"
+        <alpaca-product-item
+          :product-image="ProductItem.productImage"
+          :product-name="ProductItem.productName"
+          :product-price="ProductItem.price"
+          :product-id="ProductItem.productId"
+          :product-options="ProductItem.productOptions"
+          :quantity="ProductItem.quantity"
           name="name"
           href="#"
           @remove="removeMethod"
