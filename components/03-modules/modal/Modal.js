@@ -1,8 +1,14 @@
+import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+
+import EventBus from '../../../eventBus'
 
 export default {
   components: {
-    AlpacaIcon
+    AlpacaIcon,
+    AlpacaDivider,
+    AlpacaHeading
   },
   data() {
     return {
@@ -12,6 +18,10 @@ export default {
     }
   },
   props: {
+    heading: {
+      type: String,
+      default: null
+    },
     closeOnEsc: {
       type: Boolean,
       default: true
@@ -35,16 +45,19 @@ export default {
     closeButton: {
       type: Boolean,
       default: true
+    },
+    blank: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
     show() {
-      // TODO: focustrap
       this.ariaHidden = 'false'
       this.focused = document.activeElement
       this.visibility = !this.visibility
       this.$nextTick(() => this.$refs.modal.focus())
-    },
+  },
     hide() {
       this.ariaHidden = 'true'
       this.visibility = !this.visibility
@@ -67,11 +80,17 @@ export default {
     }
   },
   beforeMount () {
+    EventBus.$on('modal-show', this.show)
+    EventBus.$on('modal-hide', this.hide)
+
     if (this.closeOnEsc) {
       window.addEventListener('keydown', this.handleEscapeKeyUp)
     }
   },
-  destroyed () { 
+  beforeDestroy () {
+    EventBus.$off('modal-show', this.show)
+    EventBus.$off('modal-hide', this.hide)
+
     if (this.closeOnEsc) {
       window.removeEventListener('keydown', this.handleEscapeKeyUp)
     }

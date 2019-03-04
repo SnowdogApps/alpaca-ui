@@ -93,7 +93,7 @@ storiesOf('Elements/List', module)
       iconListElements
     }),
     template: `
-      <app>   
+      <app>
         <alpaca-list class="list--with-icon">
           <alpaca-list-item
             v-for="element in iconListElements"
@@ -102,7 +102,7 @@ storiesOf('Elements/List', module)
             <alpaca-icon
               :icon="element.icon.iconId"
             />
-          </alpaca-list-item> 
+          </alpaca-list-item>
         </alpaca-list>
       </app>
     `
@@ -122,7 +122,7 @@ storiesOf('Elements/List', module)
            :alt="item.image.alt"
           >
             {{ item.text }}
-          </alpaca-list-image-item>       
+          </alpaca-list-image-item>
         </alpaca-list>
       </app>
     `
@@ -133,7 +133,7 @@ storiesOf('Elements/List', module)
       listElements
     }),
     template: `
-      <app>        
+      <app>
         <alpaca-list class="list--divided">
           <alpaca-list-item
             v-for="element in listElements"
