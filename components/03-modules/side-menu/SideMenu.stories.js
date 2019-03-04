@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import StoryRouter from 'storybook-vue-router'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaSideMenu from './SideMenu.vue'
@@ -10,6 +11,7 @@ import AlpacaDropdownListLink from "../../02-elements/dropdown-list/dropdown-lis
 import nestedDropdownList from "../../02-elements/dropdown-list/mocks/nestedDropdownList.json"
 
 storiesOf('Modules/Side menu', module)
+  .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { App, AlpacaSideMenu, AlpacaSideBar },
     template: `
