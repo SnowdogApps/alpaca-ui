@@ -1,16 +1,18 @@
 <alpaca-container>
   <div class="catalog">
     <div class="catalog__sidebar">
-      <alpaca-catalog-filter
-        v-for="filter in filters"
-        :key="filter.code"
-        :name="filter.name"
-        :items="filter.items"
+      <alpaca-filters
+        active-filters-heading="Now Shopping by"
+        all-filters-heading="Shopping Options"
+        :active-filter-items="activeFilterItems"
+        :swatch-items="swatchItems"
+        :color-items="colorItems"
+        :checkbox-items="checkboxItems"
       />
     </div>
     <div class="catalog__products">
       <ul class="catalog-grid">
-        <alpaca-catalog-grid-item
+        <alpaca-grid-item
           v-for="product in products"
           :key="product.sku"
           :product="product"

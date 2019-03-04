@@ -17,7 +17,7 @@ storiesOf('Modules/Footer', module).add('Default', () => ({
   }),
   template: `
     <app>
-      <alpaca-footer 
+      <alpaca-footer
        copyright-text="Copyright © 2019 Alpaca. All rights reserved."
        :input="newsletter.input"
        :checkboxes="newsletter.checkbox"

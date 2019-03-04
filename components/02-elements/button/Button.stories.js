@@ -36,6 +36,22 @@ storiesOf('Elements/Button', module)
       exampleMethod: action('Clicked button')
     }
   }))
+  .add('Blank', () => ({
+    components: { App, AlpacaButton },
+    template: `
+      <app>
+        <alpaca-button
+          blank
+          @click="exampleMethod"
+        >
+          Blank button
+        </alpaca-button>
+      </app>
+    `,
+    methods: {
+      exampleMethod: action('Clicked button')
+    }
+  }))
   .add('Fluid', () => ({
     components: { App, AlpacaButton },
     template: `
@@ -73,7 +89,7 @@ storiesOf('Elements/Button', module)
     components: { App, AlpacaButton },
     template: `
       <app>
-        <alpaca-button 
+        <alpaca-button
           icon="search"
           @click="exampleMethod"
         />
@@ -87,7 +103,7 @@ storiesOf('Elements/Button', module)
     components: { App, AlpacaButton },
     template: `
       <app>
-        <alpaca-button 
+        <alpaca-button
           icon="search"
           @click="exampleMethod"
         >

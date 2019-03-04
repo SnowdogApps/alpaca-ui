@@ -63,4 +63,3 @@ storiesOf('Modules/Toolbar', module)
       gridView: action('Change on grid view')
     }
   }))
-

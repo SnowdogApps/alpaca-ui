@@ -11,7 +11,7 @@ storiesOf('Modules/Newsletter', module).add('Default', () => ({
   data: () => ({ newsletter }),
   template: `
     <app>
-      <alpaca-newsletter 
+      <alpaca-newsletter
         :heading="newsletter.heading"
         :input="newsletter.input"
         button="Submit"

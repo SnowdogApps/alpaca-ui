@@ -16,8 +16,8 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-        <alpaca-swatch 
-          :options="textSwatch.options" 
+        <alpaca-swatch
+          :options="textSwatch.options"
           v-model="selected"
         />
           Selected option: {{ selected }}
@@ -32,8 +32,8 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-        <alpaca-swatch 
-          :options="textSwatch.options" 
+        <alpaca-swatch
+          :options="textSwatch.options"
           v-model="selected"
           label="Label"
         />
@@ -49,8 +49,8 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-        <alpaca-swatch 
-          :options="imageSwatch.options" 
+        <alpaca-swatch
+          :options="imageSwatch.options"
           v-model="selected"
           image
         />
@@ -66,8 +66,8 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-       <alpaca-swatch 
-         :options="imageSwatch.options" 
+       <alpaca-swatch
+         :options="imageSwatch.options"
          v-model="selected"
          image
          label="Label"
@@ -84,8 +84,8 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-       <alpaca-swatch 
-         :options="colorSwatch.options" 
+       <alpaca-swatch
+         :options="colorSwatch.options"
          v-model="selected"
          color
        />
@@ -101,14 +101,13 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-       <alpaca-swatch 
-         :options="colorSwatch.options" 
+       <alpaca-swatch
+         :options="colorSwatch.options"
          v-model="selected"
          color
-         label="Label" 
+         label="Label"
        />
          Selected option: {{ selected }}
       </app>
     `
   }))
-
