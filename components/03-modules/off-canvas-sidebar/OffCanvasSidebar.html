@@ -13,7 +13,13 @@
     ></div>
     <transition name="slide-right">
       <div
-        :class="['off-canvas-sidebar__content', { 'off-canvas-sidebar__content--blank': blank }]"
+        :class="[
+          'off-canvas-sidebar__content',
+          {
+            'off-canvas-sidebar__content--blank': blank,
+            'off-canvas-sidebar__content--left': side === 'left'
+          }
+        ]"
         v-show="visibility"
         ref="offCanvasSidebar"
         role="document"

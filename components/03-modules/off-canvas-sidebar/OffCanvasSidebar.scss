@@ -17,7 +17,7 @@ $off-canvas-sidebar__content-padding\@medium       : 56px 88px !default;
 $off-canvas-sidebar__content-padding\@large       : 56px 112px !default;
 $off-canvas-sidebar__content-background-color     : $white !default;
 $off-canvas-sidebar__content-border               : none !default;
-$off-canvas-sidebar__content-box-shadow           : 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
+$off-canvas-sidebar__content-box-shadow           : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
 
 $off-canvas-sidebar__close-button-border          : none !default;
 $off-canvas-sidebar__close-button-background-color: transparent !default;
@@ -77,6 +77,10 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
 
     &--blank {
       padding: $reset;
+    }
+
+    &--left {
+      left: 0;
     }
   }
 

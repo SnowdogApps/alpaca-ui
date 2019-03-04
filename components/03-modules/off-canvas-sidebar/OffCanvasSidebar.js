@@ -2,6 +2,8 @@ import AlpacaHeading from '../../01-globals/heading/Heading.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
+import EventBus from '../../../eventBus'
+
 export default {
   components: {
     AlpacaIcon,
@@ -20,6 +22,10 @@ export default {
       type: String,
       default: null
     },
+    side: {
+      type: String,
+      default: 'right'
+    },
     closeOnEsc: {
       type: Boolean,
       default: true
@@ -27,10 +33,6 @@ export default {
     closeOnBackgroundClick: {
       type: Boolean,
       default: true
-    },
-    maxWidth: {
-      type: Number,
-      default: null
     },
     ariaLabelledby: {
       type: String,
@@ -79,11 +81,17 @@ export default {
     }
   },
   beforeMount () {
+    EventBus.$on('sidebar-show', this.show)
+    EventBus.$on('sidebar-hide', this.hide)
+
     if (this.closeOnEsc) {
       window.addEventListener('keydown', this.handleEscapeKeyUp)
     }
   },
-  destroyed () {
+  beforeDestroy () {
+    EventBus.$off('sidebar-show', this.show)
+    EventBus.$off('sidebar-hide', this.hide)
+
     if (this.closeOnEsc) {
       window.removeEventListener('keydown', this.handleEscapeKeyUp)
     }
