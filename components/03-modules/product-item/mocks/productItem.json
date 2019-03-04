@@ -10,7 +10,7 @@
     "specialPrice": "$84.00"
   },
   "productId": "qty1",
-  "productOptions":[
+  "productOptions": [
     {
       "label": "Size",
       "value": "XXL"
@@ -40,7 +40,9 @@
       "iconId": "plus",
       "iconTitle": "Plus mark"
     },
-    "text": "Qty:",
-    "removeAriaLabel": "Remove this product from your shopping cart"
+    "text": "Qty:"
+  },
+  "removeBtn": {
+    "ariaLabel": "Remove this product from your shopping cart"
   }
 }

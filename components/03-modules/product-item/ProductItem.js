@@ -29,6 +29,10 @@ export default {
       type: Object,
       default: null
     },
+    removeBtn: {
+      type: Object,
+      default: null
+    },
     href: {
       type: String,
       required: true
@@ -51,7 +55,12 @@ export default {
     },
     productOptions: {
       type: Array,
-      required: true
+      default: null
+    }
+  },
+  data () {
+    return {
+      defaultRemoveBtnAriaLabel: "Remove product"
     }
   },
   methods: {

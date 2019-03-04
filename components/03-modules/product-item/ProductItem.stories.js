@@ -23,6 +23,59 @@ storiesOf('Modules/Product item', module)
           :product-id="ProductItem.productId"
           :product-options="ProductItem.productOptions"
           :quantity="ProductItem.quantity"
+          :remove-btn="ProductItem.removeBtn"
+          name="name"
+          href="#"
+          @remove="removeMethod"
+          @change="changeMethod"
+        />
+      </app>
+    `,
+    methods: {
+      removeMethod: action('Remove'),
+      changeMethod: action('Change')
+    }
+  }))
+  .add('Without Qty', () => ({
+    components: { App, AlpacaProductItem },
+    data: () => ({
+      ProductItem
+    }),
+    template: `
+      <app>
+        <alpaca-product-item
+          :product-image="ProductItem.productImage"
+          :product-name="ProductItem.productName"
+          :product-price="ProductItem.price"
+          :product-id="ProductItem.productId"
+          :product-options="ProductItem.productOptions"
+          :remove-btn="ProductItem.removeBtn"
+          name="name"
+          href="#"
+          @remove="removeMethod"
+          @change="changeMethod"
+        />
+      </app>
+    `,
+    methods: {
+      removeMethod: action('Remove'),
+      changeMethod: action('Change')
+    }
+  }))
+  .add('Without remove', () => ({
+    components: { App, AlpacaProductItem },
+    data: () => ({
+      ProductItem
+    }),
+    template: `
+      <app>
+        <alpaca-product-item
+          :product-image="ProductItem.productImage"
+          :product-name="ProductItem.productName"
+          :product-price="ProductItem.price"
+          :product-id="ProductItem.productId"
+          :product-options="ProductItem.productOptions"
+          :quantity="ProductItem.quantity"
           name="name"
           href="#"
           @remove="removeMethod"

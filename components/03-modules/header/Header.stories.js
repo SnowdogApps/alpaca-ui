@@ -56,7 +56,7 @@ storiesOf('Modules/Header', module)
           heading="Shipping Cart"
         >
           <alpaca-minicart
-            :cart-items="minicart.cartItems"
+            :products="minicart.products"
             :totals="minicart.totals"
             summary-title="Shopping summary"
             go-to-checkout-button="Go to Checkout"

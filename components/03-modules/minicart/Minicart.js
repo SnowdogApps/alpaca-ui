@@ -16,7 +16,7 @@ export default {
       type: [String, Number],
       default: 0
     },
-    cartItems: {
+    products: {
       type: Array[Object],
       required: true
     },
@@ -38,8 +38,8 @@ export default {
     }
   },
   computed: {
-    getImageWithKey() {
-      return this.cartItems.map(item => ({ key: uniqueId("carItem"), item }))
+    getProductsWithKey() {
+      return this.products.map(product => ({ key: uniqueId("minicartItem"), product }))
     }
   },
   methods: {

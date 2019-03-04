@@ -101,6 +101,11 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
     align-items: center;
   }
 
+  &__action-buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &__qty-text,
   &__attributes {
     margin-right: $spacer;
@@ -125,16 +130,15 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
       padding: $reset;
       flex-direction: row;
     }
+
+    &--to-right {
+      justify-content: flex-end;
+    }
   }
 
   &__action-button {
     border: $product-item__button-border;
     background: $product-item__button-background;
-    justify-content: flex-end;
-
-    @include mq($screen-m) {
-      justify-content: center;
-    }
 
     &:hover,
     &:focus {

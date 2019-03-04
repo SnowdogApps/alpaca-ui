@@ -25,12 +25,21 @@
         special-price-class="product-item__price-wrapper--special"
       />
       <alpaca-description-list
+        v-if="productOptions"
         :elements="productOptions"
         class="product-item__attributes"
       />
     </div>
-    <div class="product-item__actions">
-      <div class="product-item__qty-wrapper">
+    <div
+      :class="[
+        'product-item__actions',
+        { 'product-item__actions--to-right': !quantity }
+      ]"
+    >
+      <div
+        v-if="quantity"
+        class="product-item__qty-wrapper"
+      >
         <span class="product-item__qty-text">
           {{ quantity.text }}
         </span>
@@ -44,14 +53,20 @@
           @update="onChange"
         />
       </div>
-      <alpaca-button
-        icon="remove"
-        class="product-item__action-button"
-        icon-class="product-item__action-icon"
-        :aria-label="quantity.removeAriaLabel"
-        custom-class="product-item__actions-item"
-        @click="onRemove"
-      />
+      <div
+        v-if="removeBtn"
+        class="product-item__action-buttons-wrapper"
+      >
+        <alpaca-button
+          v-if="removeBtn"
+          icon="remove"
+          class="product-item__action-button"
+          icon-class="product-item__action-icon"
+          :aria-label="removeBtn.ariaLabel || defaultRemoveBtnAriaLabel"
+          custom-class="product-item__actions-item"
+          @click="onRemove"
+        />
+      </div>
     </div>
   </div>
 </component>
