@@ -15,7 +15,7 @@ storiesOf('Elements/Banner', module)
     },
     template: `
       <app>
-        <alpaca-banner 
+        <alpaca-banner
           :link="banner.link"
           :image="banner.image"
           aria-label="Banner"

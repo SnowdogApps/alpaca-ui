@@ -1,0 +1,117 @@
+$off-canvas-sidebar__padding                      : 0 !default;
+$off-canvas-sidebar__background-color\@small      : rgba(57, 50, 67, 0.6) !default;
+
+$off-canvas-sidebar__header-margin                : $reset !default;
+
+$off-canvas-sidebar__heading-margin               : $reset !default;
+
+$off-canvas-sidebar__divider-margin               : $spacer 0 $spacer--large 0 !default;
+
+$off-canvas-sidebar__content-width                : 100% !default;
+$off-canvas-sidebar__content-width\@medium        : 712px !default;
+$off-canvas-sidebar__content-width\@extra-large   : 880px !default;
+$off-canvas-sidebar__content-min-width            : 320px !default;
+$off-canvas-sidebar__content-height               : 100vh !default;
+$off-canvas-sidebar__content-padding              : 24px $spacer--medium !default;
+$off-canvas-sidebar__content-padding\@medium       : 56px 88px !default;
+$off-canvas-sidebar__content-padding\@large       : 56px 112px !default;
+$off-canvas-sidebar__content-background-color     : $white !default;
+$off-canvas-sidebar__content-border               : none !default;
+$off-canvas-sidebar__content-box-shadow           : 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
+
+$off-canvas-sidebar__close-button-border          : none !default;
+$off-canvas-sidebar__close-button-background-color: transparent !default;
+$off-canvas-sidebar__close-button-icon-color      : $color-primary !default;
+$off-canvas-sidebar__close-button-icon-size       : 18px !default;
+$off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
+
+.off-canvas-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: $off-canvas-sidebar__padding;
+  animation-duration: 400ms;
+
+  &__mask {
+    @include mq($screen-s) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      background-color: $off-canvas-sidebar__background-color\@small;
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    display: block;
+    height: $off-canvas-sidebar__content-height;
+    min-width: $off-canvas-sidebar__content-min-width;
+    width: $off-canvas-sidebar__content-width;
+    padding: $off-canvas-sidebar__content-padding;
+    border: $off-canvas-sidebar__content-border;
+    animation-duration: 400ms;
+    background-color: $off-canvas-sidebar__content-background-color;
+    box-shadow: $off-canvas-sidebar__content-box-shadow;
+
+    @include mq($screen-m) {
+      width: $off-canvas-sidebar__content-width\@medium;
+      padding: $off-canvas-sidebar__content-padding\@medium;
+    }
+
+    @include mq($screen-l) {
+      padding: $off-canvas-sidebar__content-padding\@large;
+    }
+
+    @include mq($screen-xl) {
+      width: $off-canvas-sidebar__content-width\@extra-large;
+    }
+
+    &--blank {
+      padding: $reset;
+    }
+  }
+
+  &__header {
+    margin: $off-canvas-sidebar__header-margin;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin: $off-canvas-sidebar__heading-margin;
+  }
+
+  &__divider {
+    margin: $off-canvas-sidebar__divider-margin;
+  }
+
+  &__close-button {
+    border: $off-canvas-sidebar__close-button-border;
+    background-color: $off-canvas-sidebar__close-button-background-color;
+
+    &:hover,
+    &:focus {
+      background-color: $off-canvas-sidebar__close-button-background-color;
+    }
+
+    &-icon {
+      width: $off-canvas-sidebar__close-button-icon-size;
+      height: $off-canvas-sidebar__close-button-icon-size;
+      transition: $off-canvas-sidebar__close-button-icon-transition;
+
+      &:hover,
+      &:focus {
+        fill: $off-canvas-sidebar__close-button-icon-color;
+      }
+    }
+  }
+}

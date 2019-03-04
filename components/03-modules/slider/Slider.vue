@@ -1,0 +1,134 @@
+<template>
+  <div class="slider">
+    <carousel
+      class="slider__slides"
+      v-bind="$attrs"
+      pagination-color="#4c4555"
+      pagination-active-color="#31e37d"
+      :pagination-padding="16"
+      :pagination-size="16"
+      :per-page-custom="[[480, 2], [768, 4]]"
+      :navigation-enabled="true"
+      :loop="true"
+      :scroll-per-page="false"
+      :pagination-enabled="false"
+      navigation-prev-label="<svg class='button__icon slider__icon' role='img'><use xlink:href='/assets/icons/sprite.svg#angle-left'/></svg>"
+      navigation-next-label="<svg class='button__icon slider__icon' role='img'><use xlink:href='/assets/icons/sprite.svg#angle-right'/></svg>"
+      v-on="$listeners"
+    >
+      <slot />
+    </carousel>
+  </div>
+</template>
+
+<script>
+  import { Carousel } from 'vue-carousel'
+
+  export default {
+    components: {
+      Carousel
+    }
+  }
+</script>
+
+<style lang="scss">
+  $slider__margin                    : $spacer--medium !default;
+  $slider__transition                : $transition-base !default;
+  $slider__item-width                : 50% !default;
+  $slider__item-width\@medium        : 25% !default;
+  $slider__navigation-margin         : $spacer !default;
+  $slider__navigation-icon-size      : 48px !default;
+  $slider__navigation-icon-margin    : $spacer !default;
+  $slider__navigation-icon-background: $white !default;
+  $slider__icon-size                 : 25px !default;
+  $slider__icon-fill                 : $color-primary !default;
+  $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
+
+  .slider {
+    margin-bottom: $slider__margin;
+    position: relative;
+
+    &__handler {
+      overflow: hidden;
+    }
+
+    &__slides {
+      display: flex;
+    }
+
+    &__item {
+      position: relative;
+      min-width: $slider__item-width;
+      border: 0;
+
+      @include mq($screen-m) {
+        min-width: $slider__item-width\@medium;
+      }
+    }
+
+    &__icon {
+      width: $slider__icon-size;
+      height: $slider__icon-size;
+      fill: $slider__icon-fill;
+      transition: $slider__transition;
+      cursor: pointer;
+    }
+
+    .VueCarousel-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: $slider__navigation-margin;
+
+      &-button {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $slider__navigation-icon-size;
+        width: $slider__navigation-icon-size;
+        background-color: $slider__navigation-icon-background;
+        top: unset;
+        transform: unset;
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+          background-color: $slider__navigation-icon-background;
+
+          .slider__icon {
+            fill: $slider__icon-fill-hover;
+          }
+        }
+      }
+
+      &-next {
+        margin-left: $slider__navigation-icon-margin !important; // sass-lint:disable-line no-important
+      }
+
+      &-prev {
+        margin-right: $slider__navigation-icon-margin !important; // sass-lint:disable-line no-important
+      }
+    }
+
+    .VueCarousel-pagination {
+      display: flex;
+    }
+
+    .VueCarousel-dot {
+      margin-top: 0 !important; // sass-lint:disable-line no-important
+
+      &:focus {
+        outline: none;
+      }
+
+      &-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: $spacer !important; // sass-lint:disable-line no-important
+      }
+    }
+  }
+</style>

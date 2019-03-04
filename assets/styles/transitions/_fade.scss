@@ -1,0 +1,33 @@
+@-webkit-keyframes fade-enter {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-enter {
+  from {
+    opacity: 0;
+  }
+}
+
+.fade-enter-active {
+  -webkit-animation: fade-enter both ease-in;
+  animation: fade-enter both ease-in;
+}
+
+@-webkit-keyframes fade-leave {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-leave {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-leave-active {
+  -webkit-animation: fade-leave both ease-out;
+  animation: fade-leave both ease-out;
+}
