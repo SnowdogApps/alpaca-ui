@@ -82,16 +82,15 @@ export default {
   beforeMount () {
     EventBus.$on('modal-show', this.show)
     EventBus.$on('modal-hide', this.hide)
-  },
-  beforeDestroy () {
-    EventBus.$off('modal-show', this.show)
-    EventBus.$off('modal-hide', this.hide)
 
     if (this.closeOnEsc) {
       window.addEventListener('keydown', this.handleEscapeKeyUp)
     }
   },
-  destroyed () {
+  beforeDestroy () {
+    EventBus.$off('modal-show', this.show)
+    EventBus.$off('modal-hide', this.hide)
+
     if (this.closeOnEsc) {
       window.removeEventListener('keydown', this.handleEscapeKeyUp)
     }

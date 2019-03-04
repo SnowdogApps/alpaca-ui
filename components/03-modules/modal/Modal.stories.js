@@ -23,7 +23,7 @@ storiesOf('Modules/Modal', module)
     `,
     methods: {
       showModal () {
-        EventBus.$emit('modal-show',)
+        EventBus.$emit('modal-show')
       }
     }
   }))
