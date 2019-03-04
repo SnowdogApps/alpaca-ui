@@ -20,6 +20,11 @@ $breadcrumbs__font-size          : $font-size-small !default;
     padding: $breadcrumbs__padding;
     font-family: $breadcrumbs__font-family;
     text-decoration: none;
+    color: $gray-darker;
+
+    &:hover {
+      color: $blue;
+    }
   }
 
   &__item {
@@ -53,14 +58,6 @@ $breadcrumbs__font-size          : $font-size-small !default;
       &::after {
         display: none;
       }
-    }
-  }
-
-  .link--invert {
-    color: $gray-darker;
-
-    &:hover {
-      color: $blue;
     }
   }
 }
