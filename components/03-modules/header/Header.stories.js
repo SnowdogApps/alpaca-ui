@@ -62,7 +62,7 @@ storiesOf('Modules/Header', module)
             go-to-checkout-button="Go to Checkout"
             return-to-shopping-button="Return to shopping"
           />
-        </alpaca-minicart>
+        </alpaca-off-canvas-sidebar>
       </app>
     `,
     methods: {
