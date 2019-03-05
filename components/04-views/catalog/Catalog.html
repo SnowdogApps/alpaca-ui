@@ -1,5 +1,20 @@
 <alpaca-container>
+  <alpaca-breadcrumbs :breadcrumbs="breadcrumbs"/>
   <div class="catalog">
+    <div class="catalog-list">
+      <div class="catalog-list__products">
+        <alpaca-toolbar
+          show-mode
+          show-sorter
+          show-limit
+          show-amount
+          :sort-by="toolbar.sortBy"
+          :limiter="toolbar.limiter"
+          :amount="toolbar.amount"
+          @listView="listView"
+          @gridView="gridView"
+        />
+      </div>
     <div class="catalog__sidebar">
       <alpaca-filters
         active-filters-heading="Now Shopping by"
@@ -18,6 +33,7 @@
           :product="product"
         />
       </ul>
+    </div>
     </div>
   </div>
 </alpaca-container>
