@@ -1,12 +1,16 @@
 import AlpacaContainer from '../../01-globals/container/Container.vue'
 import AlpacaFilters from '../../03-modules/filters/Filters.vue'
 import AlpacaGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
+import AlpacaToolbar from '../../03-modules/toolbar/Toolbar.vue'
 
 export default {
   components: {
     AlpacaContainer,
     AlpacaFilters,
-    AlpacaGridItem
+    AlpacaGridItem,
+    AlpacaBreadcrumbs,
+    AlpacaToolbar
   },
   props: {
     products: {
@@ -28,6 +32,22 @@ export default {
     checkboxItems: {
       type: Array,
       required: true
+    },
+    toolbar: {
+      type: Object,
+      required: true
+    },
+    breadcrumbs: {
+      type: Array,
+      required: true
+    }
+  },
+  methods: {
+    listView(){
+      this.$emit('listView')
+    },
+    gridView(){
+      this.$emit('gridView')
     }
   }
 }

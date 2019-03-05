@@ -1,3 +1,6 @@
+import AlpacaDropdownListItem from "./dropdown-list-item/DropdownListItem.vue"
+import AlpacaDropdownListLink from "./dropdown-list-link/DropdownListLink.vue"
+
 export default {
   provide: {
     nested: true
@@ -7,7 +10,15 @@ export default {
       default: false
     }
   },
+  components: {
+    AlpacaDropdownListItem,
+    AlpacaDropdownListLink
+  },
   props: {
+    items: {
+      type: Array,
+      default: null
+    },
     secondary: {
       type: Boolean,
       default: false
@@ -28,5 +39,11 @@ export default {
       type: String,
       default: null
     }
+  },
+  beforeCreate() {
+    this.$options.components.AlpacaDropdownList = require('./DropdownList.vue').default
+  },
+  methods: {
+    isArray: Array.isArray
   }
 }
