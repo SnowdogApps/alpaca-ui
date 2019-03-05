@@ -17,11 +17,11 @@ storiesOf('Modules/Toolbar', module)
     template: `
       <app>
         <alpaca-toolbar
-          showMode
-          showSorter
-          showLimit
-          showAmount
-          :sortBy="toolbar.sortBy"
+          show-mode
+          show-sorter
+          show-limit
+          show-amount
+          :sort-by="toolbar.sortBy"
           :limiter="toolbar.limiter"
           :amount="toolbar.amount"
           @listView="listView"
@@ -44,12 +44,12 @@ storiesOf('Modules/Toolbar', module)
     template: `
       <app>
         <alpaca-toolbar
-          showMode
-          showSorter
-          showLimit
-          showPager
-          showAmount
-          :sortBy="toolbar.sortBy"
+          show-mode
+          show-sorter
+          show-limit
+          show-pager
+          show-amount
+          :sort-by="toolbar.sortBy"
           :limiter="toolbar.limiter"
           :pager="toolbar.pager"
           :amount="toolbar.amount"

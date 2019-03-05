@@ -1,14 +1,6 @@
 $minicart__row-margin-bottom: $spacer--medium !default;
 
 .minicart {
-  position: relative;
-
-  &__list,
-  &__summary,
-  &__actions {
-    padding: 0 $spacer--medium;
-  }
-
   &__summary-heading {
     margin-bottom: $spacer--large;
     font-weight: $font-weight-normal;

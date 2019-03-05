@@ -4,6 +4,8 @@ import App from '../../01-globals/app/App.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
 
+import EventBus from '../../../eventBus'
+
 storiesOf('Modules/Modal', module)
   .add('Default', () => ({
     components: { App, AlpacaButton, AlpacaModal },
@@ -13,7 +15,6 @@ storiesOf('Modules/Modal', module)
           Modal button
         </alpaca-button>
         <alpaca-modal
-          ref="myModalRef"
           heading="Modal Heading"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -22,7 +23,7 @@ storiesOf('Modules/Modal', module)
     `,
     methods: {
       showModal () {
-        this.$refs.myModalRef.show()
+        EventBus.$emit('modal-show')
       }
     }
   }))

@@ -6,15 +6,26 @@ import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
 import AlpacaLogin from '../../03-modules/login/Login.vue'
+import AlpacaMinicart from '../../03-modules/minicart/MiniCart.vue'
+import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu.json'
+import minicart from '../minicart/mocks/minicart.json'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { App, AlpacaHeader, AlpacaModal, AlpacaLogin },
+    components: {
+      App,
+      AlpacaHeader,
+      AlpacaModal,
+      AlpacaLogin,
+      AlpacaOffCanvasSidebar,
+      AlpacaMinicart
+    },
     data: () => ({
-      menu
+      menu,
+      minicart
     }),
     template: `
       <app>
@@ -40,15 +51,29 @@ storiesOf('Modules/Header', module)
             @goToRegister="goToRegister"
           />
         </alpaca-modal>
+        <alpaca-off-canvas-sidebar
+          ref="cartSidebar"
+          heading="Shipping Cart"
+        >
+          <alpaca-minicart
+            :cart-items="minicart.cartItems"
+            :totals="minicart.totals"
+            summary-title="Shopping summary"
+            go-to-checkout-button="Go to Checkout"
+            return-to-shopping-button="Return to shopping"
+          />
+        </alpaca-minicart>
       </app>
     `,
     methods: {
       showRegister() {
         this.$refs.registerModal.show()
       },
+      toggleMicrocart() {
+        this.$refs.cartSidebar.show()
+      },
       login: action('Login'),
       goToRegister: action('Go to Register'),
-      toggleMicrocart: action('toggle Microcart'),
       toggleWishlist: action('toggle Wishlist')
     }
   }))

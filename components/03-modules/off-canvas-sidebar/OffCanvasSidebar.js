@@ -22,6 +22,10 @@ export default {
       type: String,
       default: null
     },
+    side: {
+      type: String,
+      default: 'right'
+    },
     closeOnEsc: {
       type: Boolean,
       default: true
@@ -29,10 +33,6 @@ export default {
     closeOnBackgroundClick: {
       type: Boolean,
       default: true
-    },
-    maxWidth: {
-      type: Number,
-      default: null
     },
     ariaLabelledby: {
       type: String,
@@ -53,11 +53,12 @@ export default {
   },
   methods: {
     show() {
+      // TODO: focustrap
       this.ariaHidden = 'false'
       this.focused = document.activeElement
       this.visibility = !this.visibility
-      this.$nextTick(() => this.$refs.modal.focus())
-  },
+      this.$nextTick(() => this.$refs.offCanvasSidebar.focus())
+    },
     hide() {
       this.ariaHidden = 'true'
       this.visibility = !this.visibility
@@ -80,16 +81,16 @@ export default {
     }
   },
   beforeMount () {
-    EventBus.$on('modal-show', this.show)
-    EventBus.$on('modal-hide', this.hide)
+    EventBus.$on('sidebar-show', this.show)
+    EventBus.$on('sidebar-hide', this.hide)
 
     if (this.closeOnEsc) {
       window.addEventListener('keydown', this.handleEscapeKeyUp)
     }
   },
   beforeDestroy () {
-    EventBus.$off('modal-show', this.show)
-    EventBus.$off('modal-hide', this.hide)
+    EventBus.$off('sidebar-show', this.show)
+    EventBus.$off('sidebar-hide', this.hide)
 
     if (this.closeOnEsc) {
       window.removeEventListener('keydown', this.handleEscapeKeyUp)

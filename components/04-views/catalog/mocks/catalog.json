@@ -100,7 +100,7 @@
     "filters": [
       {
         "name": "Category",
-        "code": "cat",
+        "code": "cat1",
         "items": [
           {
             "label": "Gear",
@@ -114,7 +114,7 @@
       },
       {
         "name": "Style",
-        "code": "cat",
+        "code": "cat2",
         "items": [
           {
             "label": "New",
