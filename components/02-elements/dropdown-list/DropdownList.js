@@ -11,7 +11,8 @@ export default {
     }
   },
   components: {
-    AlpacaDropdownListItem, AlpacaDropdownListLink
+    AlpacaDropdownListItem,
+    AlpacaDropdownListLink
   },
   props: {
     items: {
