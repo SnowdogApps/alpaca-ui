@@ -21,37 +21,13 @@ export default {
       type: String,
       default: 'div'
     },
-    productImage: {
+    product: {
       type: Object,
       required: true
     },
-    quantity: {
-      type: Object,
-      default: null
-    },
-    href: {
+    removeAriaLabel: {
       type: String,
-      required: true
-    },
-    productName: {
-      type: String,
-      required: true
-    },
-    productPrice: {
-      type: Object,
-      required: true
-    },
-    productId: {
-      type: String,
-      required: true
-    },
-    name: {
-      type: String,
-      required: true
-    },
-    productOptions: {
-      type: Array,
-      required: true
+      default: 'Remove this product from your shopping cart'
     }
   },
   methods: {
