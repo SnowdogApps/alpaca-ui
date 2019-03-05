@@ -14,7 +14,8 @@
     "normalize.css": "^8.0.1",
     "vue": "^2.6.5",
     "vue-carousel": "^0.18.0-alpha",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "vue-slider-component": "^2.8.12"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
