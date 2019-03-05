@@ -1,0 +1,15 @@
+<alpaca-list class="wishlist">
+    <alpaca-product-item
+      v-for="{ key, product } in getProductsWithKey"
+      :key="key"
+      item-tag="li"
+      :product-image="product.productImage"
+      :product-name="product.productName"
+      :product-price="product.price"
+      :product-id="product.productId"
+      :quantity="product.quantity"
+      :remove-btn="product.removeBtn"
+      :name="`wishlist_${key}`"
+      href="#"
+    />
+</alpaca-list>
