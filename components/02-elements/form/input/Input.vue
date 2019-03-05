@@ -15,10 +15,14 @@
     <component
       :is="textarea ? 'textarea' : 'input'"
       :id="id"
-      :class="['input__field', inputClass,{
-        'input__field--textarea': textarea
-      }]"
-
+      :class="[
+        inputClass,
+        {
+          'input__field': inputDefaultClass,
+          'input__field--textarea': textarea
+        }
+      ]"
+      :autocomplete="autocomplete"
       :name="name"
       :type="type"
       :min="min"
@@ -85,6 +89,10 @@
         type: String,
         default: null
       },
+      inputDefaultClass: {
+        type: Boolean,
+        default: true
+      },
       inputClass: {
         type: String,
         default: null
@@ -92,6 +100,10 @@
       value: {
         type: [String, Number],
         default: null
+      },
+      autocomplete: {
+        type: String,
+        default: 'on'
       }
     },
     methods: {

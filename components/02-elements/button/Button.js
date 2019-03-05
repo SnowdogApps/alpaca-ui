@@ -23,6 +23,10 @@ export default {
       type: String,
       default: null
     },
+    iconTitle: {
+      type: String,
+      default: null
+    },
     defaultIconClass: {
       type: Boolean,
       default: true

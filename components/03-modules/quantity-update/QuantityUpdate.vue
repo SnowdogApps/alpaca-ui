@@ -2,41 +2,42 @@
   <div class="quantity-update">
     <label
       class="quantity-update__label"
-      :for="input.id"
+      :for="inputId"
     >
       {{ label }}
     </label>
     <div class="quantity-update__qty">
       <alpaca-button
-        :icon="minusButton.iconId"
-        :aria-label="minusButton.ariaLabel"
+        icon="minus"
+        :icon-title="decrementIconTitle"
+        :aria-label="decrementAriaLabel"
         :class="[
           'button--icon quantity-update__button quantity-update__button--minus',
-          {
-            'quantity-update__button--disabled': currentValue === 0
-          },
+          {'quantity-update__button--disabled': currentValue === 0},
           decrementButtonClass
         ]"
         icon-class="button__icon quantity-update__icon"
         @click="decrement"
       />
       <alpaca-input
-        :id="input.id"
-        v-model="currentValue"
-        :label="input.ariaLabel"
+        :id="inputId"
+        :label="inputAriaLabel"
         :value="currentValue"
         type="number"
-        :min="input.min"
-        :max="input.max"
-        :name="input.name"
-        :placeholder="input.placeholder"
+        :min="inputMin"
+        :max="inputMax"
+        :name="inputName"
+        :placeholder="inputPlaceholder"
         :class="inputClass"
+        :input-default-class="false"
         input-class="quantity-update__input"
+        autocomplete="off"
         hidden-label
       />
       <alpaca-button
-        :icon="plusButton.iconId"
-        :aria-label="plusButton.ariaLabel"
+        icon="plus"
+        :icon-title="incrementIconTitle"
+        :aria-label="incrementAriaLabel"
         :class="[
           'button--icon quantity-update__button quantity-update__button--plus',
           incrementButtonClass
@@ -58,34 +59,65 @@
       AlpacaButton
     },
     props: {
-      label: {
-        type: String,
-        required: false,
-        default: 'Quantity'
-      },
       input: {
         type: Object,
         required: true
       },
-      minusButton: {
-        type: Object,
-        required: true
+      label: {
+        type: String,
+        default: 'Quantity'
       },
-      plusButton: {
-        type: Object,
-        required: true
+      inputClass: {
+        type: String,
+        default: ''
+      },
+      inputId: {
+        type: String,
+        default: 'qty'
+      },
+      inputName: {
+        type: String,
+        default: 'qty'
+      },
+      inputMin: {
+        type: Number,
+        default: 1
+      },
+      inputMax: {
+        type: Number,
+        default: null
+      },
+      inputPlaceholder: {
+        type: String,
+        default: '0'
+      },
+      inputAriaLabel: {
+        type: String,
+        default: 'Change the quantity'
       },
       decrementButtonClass: {
         type: String,
         default: ''
       },
+      decrementAriaLabel: {
+        type: String,
+        default: 'Decrease the quantity'
+      },
+      decrementIconTitle: {
+        type: String,
+        default: 'Minus mark'
+      },
       incrementButtonClass: {
         type: String,
         default: ''
       },
-      inputClass: {
+      incrementAriaLabel: {
         type: String,
-        default: ''
+        default: 'Increase the quantity'
+      },
+      incrementIconTitle: {
+        type: String,
+        default: 'Plus mark'
       }
     },
     data() {
@@ -95,10 +127,10 @@
     },
     methods: {
       increment() {
-        this.$emit('update', ++this.currentValue)
+        this.$emit('update', this.currentValue++)
       },
       decrement() {
-        this.$emit('update', --this.currentValue)
+        this.$emit('update', this.currentValue--)
       }
     }
   }
