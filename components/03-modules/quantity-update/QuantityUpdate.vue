@@ -17,12 +17,12 @@
           decrementButtonClass
         ]"
         icon-class="button__icon quantity-update__icon"
-        @click="decrement"
+        @click="currentValue--"
       />
       <alpaca-input
         :id="inputId"
+        v-model="currentValue"
         :label="inputAriaLabel"
-        :value="currentValue"
         type="number"
         :min="inputMin"
         :max="inputMax"
@@ -43,7 +43,7 @@
           incrementButtonClass
         ]"
         icon-class="button__icon quantity-update__icon"
-        @click="increment"
+        @click="currentValue++"
       />
     </div>
   </div>
@@ -59,10 +59,6 @@
       AlpacaButton
     },
     props: {
-      input: {
-        type: Object,
-        required: true
-      },
       label: {
         type: String,
         default: 'Quantity'
@@ -123,14 +119,6 @@
     data() {
       return {
         currentValue: 1
-      }
-    },
-    methods: {
-      increment() {
-        this.$emit('update', this.currentValue++)
-      },
-      decrement() {
-        this.$emit('update', this.currentValue--)
       }
     }
   }

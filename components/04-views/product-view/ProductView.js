@@ -30,10 +30,6 @@ export default {
     product: {
       type: Object,
       required: true
-    },
-    quantityUpdate: {
-      type: Object,
-      required: true
     }
   }
 }

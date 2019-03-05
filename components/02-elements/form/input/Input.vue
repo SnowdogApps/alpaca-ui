@@ -29,7 +29,7 @@
       :max="max"
       :placeholder="placeholder"
       :value="value"
-      @input="input($event.target.value)"
+      @input="$emit('input', $event.target.value)"
     />
   </div>
 </template>
@@ -104,11 +104,6 @@
       autocomplete: {
         type: String,
         default: 'on'
-      }
-    },
-    methods: {
-      input(value) {
-        this.$emit('input', value)
       }
     }
   }
