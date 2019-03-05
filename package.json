@@ -12,25 +12,25 @@
   "dependencies": {
     "lodash.uniqueid": "^4.0.1",
     "normalize.css": "^8.0.1",
-    "vue": "^2.6.5",
+    "vue": "^2.6.8",
     "vue-carousel": "^0.18.0-alpha",
     "vue-router": "^3.0.2",
-    "vue-slider-component": "^2.8.12"
+    "vue-slider-component": "^3.0.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@storybook/addon-actions": "^4.0.9",
-    "@storybook/addon-options": "4.0.7",
-    "@storybook/addon-storysource": "^4.0.7",
-    "@storybook/addon-viewport": "4.0.7",
-    "@storybook/addons": "4.0.7",
-    "@storybook/vue": "^4.1.11",
+    "@babel/core": "^7.3.4",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-options": "5.0.0",
+    "@storybook/addon-storysource": "^5.0.0",
+    "@storybook/addon-viewport": "5.0.0",
+    "@storybook/addons": "5.0.0",
+    "@storybook/vue": "^5.0.0",
     "babel-loader": "^8.0.5",
     "babel-preset-vue": "^2.0.2",
-    "css-loader": "^1.0.1",
-    "eslint": "^5.12.0",
-    "eslint-loader": "2.1.0",
-    "eslint-plugin-vue": "^5.1.0",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.15.1",
+    "eslint-loader": "2.1.2",
+    "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^2.0.0",
@@ -38,10 +38,10 @@
     "storybook-vue-router": "^1.0.2",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^3.5.3",
+    "stylelint-scss": "^3.5.4",
     "stylelint-webpack-plugin": "^0.10.5",
-    "vue-loader": "^15.6.2",
+    "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.5"
+    "vue-template-compiler": "^2.6.8"
   }
 }
