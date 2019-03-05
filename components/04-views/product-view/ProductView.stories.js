@@ -11,7 +11,7 @@ import App from '../../01-globals/app/App.vue'
 import AlpacaProductView from './ProductView.vue'
 import AlpacaHeader from '../../03-modules/header/Header.vue'
 
-storiesOf('Views/ProductView', module)
+storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())
   .add('Configurable', () => ({
     components: { App, AlpacaHeader, AlpacaProductView },

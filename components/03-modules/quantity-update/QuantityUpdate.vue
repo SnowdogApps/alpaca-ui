@@ -1,42 +1,50 @@
 <template>
   <div class="quantity-update">
-    <alpaca-button
-      :icon="minusButton.iconId"
-      :aria-label="minusButton.ariaLabel"
-      :class="[
-        'button--icon quantity-update__button quantity-update__button--minus',
-        {
-          'quantity-update__button--disabled': currentValue === 0
-        },
-        decrementButtonClass
-      ]"
-      icon-class="button__icon quantity-update__icon"
-      @click="decrement"
-    />
-    <alpaca-input
-      :id="input.id"
-      v-model="currentValue"
-      :label="input.ariaLabel"
-      :value="currentValue"
-      type="number"
-      :min="input.min"
-      :max="input.max"
-      :name="input.name"
-      :placeholder="input.placeholder"
-      :class="inputClass"
-      input-class="quantity-update__input"
-      hidden-label
-    />
-    <alpaca-button
-      :icon="plusButton.iconId"
-      :aria-label="plusButton.ariaLabel"
-      :class="[
-        'button--icon quantity-update__button quantity-update__button--plus',
-        incrementButtonClass
-      ]"
-      icon-class="button__icon quantity-update__icon"
-      @click="increment"
-    />
+    <label
+      class="quantity-update__label"
+      :for="input.id"
+    >
+      {{ label }}
+    </label>
+    <div class="quantity-update__qty">
+      <alpaca-button
+        :icon="minusButton.iconId"
+        :aria-label="minusButton.ariaLabel"
+        :class="[
+          'button--icon quantity-update__button quantity-update__button--minus',
+          {
+            'quantity-update__button--disabled': currentValue === 0
+          },
+          decrementButtonClass
+        ]"
+        icon-class="button__icon quantity-update__icon"
+        @click="decrement"
+      />
+      <alpaca-input
+        :id="input.id"
+        v-model="currentValue"
+        :label="input.ariaLabel"
+        :value="currentValue"
+        type="number"
+        :min="input.min"
+        :max="input.max"
+        :name="input.name"
+        :placeholder="input.placeholder"
+        :class="inputClass"
+        input-class="quantity-update__input"
+        hidden-label
+      />
+      <alpaca-button
+        :icon="plusButton.iconId"
+        :aria-label="plusButton.ariaLabel"
+        :class="[
+          'button--icon quantity-update__button quantity-update__button--plus',
+          incrementButtonClass
+        ]"
+        icon-class="button__icon quantity-update__icon"
+        @click="increment"
+      />
+    </div>
   </div>
 </template>
 
@@ -50,6 +58,11 @@
       AlpacaButton
     },
     props: {
+      label: {
+        type: String,
+        required: false,
+        default: 'Quantity'
+      },
       input: {
         type: Object,
         required: true
@@ -92,6 +105,10 @@
 </script>
 
 <style lang="scss">
+  // Label
+  $quantity-update__label-font-size                  : $font-size-base !default;
+  $quantity-update__label-font-weight                : $font-weight-bold !default;
+
   // Input
   $quantity-update__input-border                     : 1px solid $gray-dark !default;
   $quantity-update__input-width                      : 48px !default;
@@ -112,7 +129,14 @@
   $quantity-updater__error-max-width                 : 120px !default;
 
   .quantity-update {
-    display: flex;
+    &__label {
+      font-size: $quantity-update__label-font-size;
+      font-weight: $quantity-update__label-font-weight;
+    }
+
+    &__qty {
+      display: flex;
+    }
 
     &__input {
       border-top: $quantity-update__input-border;
