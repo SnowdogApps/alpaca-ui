@@ -7,10 +7,12 @@ import AlpacaHeader from './Header.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
 import AlpacaLogin from '../../03-modules/login/Login.vue'
 import AlpacaMinicart from '../../03-modules/minicart/MiniCart.vue'
+import AlpacaWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu.json'
 import minicart from '../minicart/mocks/minicart.json'
+import wishlist from '../wishlist/mocks/wishlist.json'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
@@ -21,11 +23,13 @@ storiesOf('Modules/Header', module)
       AlpacaModal,
       AlpacaLogin,
       AlpacaOffCanvasSidebar,
-      AlpacaMinicart
+      AlpacaMinicart,
+      AlpacaWishlist
     },
     data: () => ({
       menu,
-      minicart
+      minicart,
+      wishlist
     }),
     template: `
       <app>
@@ -63,6 +67,12 @@ storiesOf('Modules/Header', module)
             return-to-shopping-button="Return to shopping"
           />
         </alpaca-off-canvas-sidebar>
+        <alpaca-off-canvas-sidebar
+          ref="wishlistSidebar"
+          heading="Wishlist"
+        >
+          <alpaca-wishlist :products="wishlist.products" />
+        </alpaca-off-canvas-sidebar>
       </app>
     `,
     methods: {
@@ -72,8 +82,10 @@ storiesOf('Modules/Header', module)
       toggleMicrocart() {
         this.$refs.cartSidebar.show()
       },
+      toggleWishlist() {
+        this.$refs.wishlistSidebar.show()
+      },
       login: action('Login'),
-      goToRegister: action('Go to Register'),
-      toggleWishlist: action('toggle Wishlist')
+      goToRegister: action('Go to Register')
     }
   }))
