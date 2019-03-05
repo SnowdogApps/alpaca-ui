@@ -1,0 +1,46 @@
+{
+  "productImage": {
+    "src": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "dataSrc": "/images/product/cart-product-160_160.jpg",
+    "alt": "product name goes here"
+  },
+  "productName": "Ingrid Running Jacket",
+  "price": {
+    "oldPrice": "$1684.00",
+    "specialPrice": "$84.00"
+  },
+  "productId": "qty1",
+  "productOptions":[
+    {
+      "label": "Size",
+      "value": "XXL"
+    },
+    {
+      "label": "Color",
+      "value": "Red"
+    }
+  ],
+  "quantity": {
+    "input": {
+      "id": "qty",
+      "name": "qty",
+      "min": 1,
+      "max": 5,
+      "defaultValue": "1",
+      "ariaLabel": "Change the quantity",
+      "placeholder": "0"
+    },
+    "minusQtyButton": {
+      "ariaLabel": "Decrease the quantity",
+      "iconId": "minus",
+      "iconTitle": "Minus mark"
+    },
+    "plusQtyButton": {
+      "ariaLabel": "Increase the quantity",
+      "iconId": "plus",
+      "iconTitle": "Plus mark"
+    },
+    "text": "Qty:",
+    "removeAriaLabel": "Remove this product from your shopping cart"
+  }
+}

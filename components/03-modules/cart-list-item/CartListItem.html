@@ -4,33 +4,33 @@
 >
   <div class="cart-list-item__image">
     <alpaca-image
-      :src="product.image"
-      :alt="product.name"
+      :src="productImage.dataSrc"
+      :alt="productImage.alt"
     />
   </div>
   <div class="cart-list-item__info">
     <div class="cart-list-item__data">
       <router-link
-        :to="product.url"
+        :to="href"
         class="link link--inverted cart-list-item__name"
       >
-        {{ product.name }}
+        {{ productName }}
       </router-link>
       <alpaca-price
-        :price="product.price"
-        :special-price="product.specialPrice"
-        :old-price="product.oldPrice"
+        :price="productPrice.price"
+        :special-price="productPrice.specialPrice"
+        :old-price="productPrice.oldPrice"
         class="cart-list-item__price-wrapper"
         old-price-class="cart-list-item__price-wrapper--old"
         special-price-class="cart-list-item__price-wrapper--special"
       />
       <alpaca-description-list
-        :elements="product.options"
+        :elements="productOptions"
         class="cart-list-item__attributes"
       />
     </div>
     <div class="cart-list-item__actions">
-      <!-- <div class="cart-list-item__qty-wrapper">
+      <div class="cart-list-item__qty-wrapper">
         <span class="cart-list-item__qty-text">
           {{ quantity.text }}
         </span>
@@ -43,12 +43,12 @@
           input-class="cart-list-item__qty-input"
           @update="onChange"
         />
-      </div> -->
+      </div>
       <alpaca-button
         icon="remove"
         class="cart-list-item__action-button"
         icon-class="cart-list-item__action-icon"
-        :aria-label="removeAriaLabel"
+        :aria-label="quantity.removeAriaLabel"
         custom-class="cart-list-item__actions-item"
         @click="onRemove"
       />

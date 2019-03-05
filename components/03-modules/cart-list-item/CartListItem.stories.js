@@ -5,19 +5,26 @@ import StoryRouter from 'storybook-vue-router'
 import App from '../../01-globals/app/App.vue'
 import AlpacaCartListItem from './CartListItem.vue'
 
-import product from './mocks/product.json'
+import cartListItem from './mocks/cartListItem.json'
 
 storiesOf('Modules/Cart list item', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { App, AlpacaCartListItem },
     data: () => ({
-      product
+      cartListItem
     }),
     template: `
       <app>
         <alpaca-cart-list-item
-          :product="product"
+          :product-image="cartListItem.productImage"
+          :product-name="cartListItem.productName"
+          :product-price="cartListItem.price"
+          :product-id="cartListItem.productId"
+          :product-options="cartListItem.productOptions"
+          :quantity="cartListItem.quantity"
+          name="name"
+          href="#"
           @remove="removeMethod"
           @change="changeMethod"
         />
