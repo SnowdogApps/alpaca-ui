@@ -28,29 +28,20 @@ $catalog-list__products-width\@medium : calc(100% - #{$catalog__sidebar-width--m
     }
   }
 
-  &__products {
-    padding: $catalog__products-padding;
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $catalog-grid__gap;
+    margin: $reset;
+    padding: $catalog-grid__padding;
+    border-bottom: $catalog-grid__border;
+    list-style: none;
 
-    @include mq($screen-l) {
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: calc(100% - #{$catalog__sidebar-width--mq-medium});
-    }
-
-    .catalog-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: $catalog-grid__gap;
-      margin: $reset;
-      padding: $catalog-grid__padding;
-      border-bottom: $catalog-grid__border;
-      list-style: none;
-
-      @include mq($screen-m) {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
+    @include mq($screen-m) {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
 
   &-list {
     display: flex;
@@ -71,14 +62,6 @@ $catalog-list__products-width\@medium : calc(100% - #{$catalog__sidebar-width--m
       }
     }
 
-    &__sidebar,
-    &__sidebar-additional {
-      @include mq($screen-l) {
-        float: left;
-        width: $catalog__sidebar-width--mq-medium;
-      }
-    }
-
     &__sidebar {
       order: 0;
       border-bottom: $catalog__sidebar-border;
@@ -86,14 +69,8 @@ $catalog-list__products-width\@medium : calc(100% - #{$catalog__sidebar-width--m
       @include mq($screen-l) {
         margin: $catalog__sidebar-margin--mq-medium;
         border-bottom: none;
-      }
-    }
-
-    &__sidebar-additional {
-      order: 2;
-
-      @include mq($screen-l) {
-        clear: left;
+        float: left;
+        width: $catalog__sidebar-width--mq-medium;
       }
     }
   }

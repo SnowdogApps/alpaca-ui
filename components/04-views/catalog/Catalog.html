@@ -14,26 +14,24 @@
           @listView="listView"
           @gridView="gridView"
         />
-        <div class="catalog__products">
-          <ul class="catalog-grid">
-            <alpaca-grid-item
-              v-for="product in products"
-              :key="product.sku"
-              :product="product"
-            />
-          </ul>
-        </div>
+        <ul class="catalog-grid">
+          <alpaca-grid-item
+            v-for="product in products"
+            :key="product.sku"
+            :product="product"
+          />
+        </ul>
       </div>
-    <div class="catalog-list__sidebar">
-      <alpaca-filters
-        active-filters-heading="Now Shopping by"
-        all-filters-heading="Shopping Options"
-        :active-filter-items="activeFilterItems"
-        :swatch-items="swatchItems"
-        :color-items="colorItems"
-        :checkbox-items="checkboxItems"
-      />
-    </div>
+      <div class="catalog-list__sidebar">
+        <alpaca-filters
+          active-filters-heading="Now Shopping by"
+          all-filters-heading="Shopping Options"
+          :active-filter-items="activeFilterItems"
+          :swatch-items="swatchItems"
+          :color-items="colorItems"
+          :checkbox-items="checkboxItems"
+        />
+      </div>
 
     </div>
   </div>
