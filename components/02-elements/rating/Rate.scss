@@ -9,10 +9,6 @@ $icon__inactive-color           : $gray-light !default;
 $rating__error-margin-bottom    : $spacer !default;
 $rating__error-color            : $red !default;
 
-.rating__wrapper {
-  border: none;
-}
-
 .rating {
   width: $rating__size;
 
@@ -21,6 +17,10 @@ $rating__error-color            : $red !default;
     .rating__rate-item span::before {
       display: block;
     }
+  }
+
+  &__wrapper {
+    border: none;
   }
 
   &__rate-item {
@@ -172,33 +172,6 @@ $rating__error-color            : $red !default;
 
         @include isIE() {
           background-size: $rating__item-size--rate 100%;
-        }
-      }
-
-      &--single {
-        width: $rating__item-size--rate;
-      }
-    }
-
-    .radio__field {
-      width: 1px;
-      height: 1px;
-      bottom: 0;
-
-      &:focus {
-        opacity: 1;
-        height: 0;
-        outline: none;
-        appearance: none;
-
-        &::before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: -48px;
-          width: 42px;
-          height: 45px;
-          border: 2px dashed $blue;
         }
       }
     }
