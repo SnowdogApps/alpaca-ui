@@ -15,6 +15,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
           Sidebar button
         </alpaca-button>
         <alpaca-off-canvas-sidebar
+          name="default"
           heading="Sidebar Heading"
           side="left"
         >
@@ -24,7 +25,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     `,
     methods: {
       showSidebar () {
-        EventBus.$emit('sidebar-show')
+        EventBus.$emit('sidebar-show', 'default')
       }
     }
   }))
@@ -36,7 +37,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
           Blank sidebar button
         </alpaca-button>
         <alpaca-off-canvas-sidebar
-          ref="myBlankSidebarRef"
+          name="blank"
           blank
           :closeOnBackgroundClick="false"
         >
@@ -45,11 +46,8 @@ storiesOf('Modules/Off Canvas Sidebar', module)
       </app>
     `,
     methods: {
-      showSidebar () {
-        this.$refs.mySidebarRef.show()
-      },
       showBlankSidebar () {
-        this.$refs.myBlankSidebarRef.show()
+        EventBus.$emit('sidebar-show', 'blank')
       }
     }
   }))

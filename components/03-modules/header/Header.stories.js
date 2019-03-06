@@ -10,6 +10,8 @@ import AlpacaMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AlpacaWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
+import EventBus from '../../../eventBus'
+
 import menu from './mocks/menu.json'
 import miniCart from '../mini-cart/mocks/mini-cart.json'
 import wishlistProducts from '../wishlist/mocks/products.json'
@@ -37,12 +39,12 @@ storiesOf('Modules/Header', module)
           :menu="menu"
           src="../../images/logo/alpaca.svg"
           link="#"
-          @toggleMicrocart="toggleMicrocart"
+          @toggleMicrocart="showMiniCart"
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
         <alpaca-modal
-          ref="registerModal"
+          name="register"
           heading="Registred Customers"
         >
           <alpaca-login
@@ -56,7 +58,7 @@ storiesOf('Modules/Header', module)
           />
         </alpaca-modal>
         <alpaca-off-canvas-sidebar
-          ref="cartSidebar"
+          name="mini-cart"
           heading="Shipping Cart"
         >
           <alpaca-mini-cart
@@ -68,7 +70,7 @@ storiesOf('Modules/Header', module)
           />
         </alpaca-off-canvas-sidebar>
         <alpaca-off-canvas-sidebar
-          ref="wishlistSidebar"
+          name="wishlist"
           heading="Wishlist"
         >
           <alpaca-wishlist :products="wishlistProducts" />
@@ -77,13 +79,13 @@ storiesOf('Modules/Header', module)
     `,
     methods: {
       showRegister() {
-        this.$refs.registerModal.show()
+        EventBus.$emit('modal-show', 'register')
       },
-      toggleMicrocart() {
-        this.$refs.cartSidebar.show()
+      showMiniCart() {
+        EventBus.$emit('sidebar-show', 'mini-cart')
       },
       toggleWishlist() {
-        this.$refs.wishlistSidebar.show()
+        EventBus.$emit('sidebar-show', 'wishlist')
       },
       login: action('Login'),
       goToRegister: action('Go to Register')

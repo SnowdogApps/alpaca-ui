@@ -35,7 +35,7 @@
           </alpaca-heading>
           <button
             v-if="closeButton && !blank"
-            @click="hide"
+            @click="toggle(false)"
             class="button button--icon off-canvas-sidebar__close-button"
             type="button"
           >
