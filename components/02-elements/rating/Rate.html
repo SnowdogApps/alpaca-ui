@@ -1,0 +1,41 @@
+<fieldset class="rating__wrapper">
+  <div
+    v-if="!disabled"
+    class="rating rating--rate"
+    role="listbox"
+    aria-required="true"
+    aria-labelledby="rating-field-label"
+  >
+    <div
+      v-for="item in ratingItems"
+      :id="item"
+      :key="item"
+      :class="['rating__rate-item', active >= item ? 'rating__rate-item--active' : '']"
+      role="option"
+      :aria-selected="rating === item"
+    >
+      <label
+        class="rating__star rating__star--rate"
+        :for="item"
+        :aria-label="`Rate option, ${item} of ${ratingItems}. Click to vote`"
+        @click="selectValue(item)"
+      >
+        <span class="rating__indicator" />
+      </label>
+    </div>
+  </div>
+  <div
+    v-else
+    class="rating"
+    :aria-label="`Average rating: ${rating}`"
+    :title="`Average rating: ${rating}`"
+    tabindex="0"
+  >
+    <div
+      class="rating__star"
+      :style="{'width': `${setScores}%`}"
+    >
+      <span class="rating__indicator" />
+    </div>
+  </div>
+</fieldset>
