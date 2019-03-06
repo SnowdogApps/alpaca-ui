@@ -14,8 +14,17 @@
           @listView="listView"
           @gridView="gridView"
         />
+        <div class="catalog__products">
+          <ul class="catalog-grid">
+            <alpaca-grid-item
+              v-for="product in products"
+              :key="product.sku"
+              :product="product"
+            />
+          </ul>
+        </div>
       </div>
-    <div class="catalog__sidebar">
+    <div class="catalog-list__sidebar">
       <alpaca-filters
         active-filters-heading="Now Shopping by"
         all-filters-heading="Shopping Options"
@@ -25,15 +34,7 @@
         :checkbox-items="checkboxItems"
       />
     </div>
-    <div class="catalog__products">
-      <ul class="catalog-grid">
-        <alpaca-grid-item
-          v-for="product in products"
-          :key="product.sku"
-          :product="product"
-        />
-      </ul>
-    </div>
+
     </div>
   </div>
 </alpaca-container>

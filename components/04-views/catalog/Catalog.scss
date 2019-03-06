@@ -1,11 +1,12 @@
-$catalog__margin                   : $spacer--medium 0 0 0 !default;
-$catalog__sidebar-width--mq-medium : 306px !default;
-$catalog__sidebar-margin--mq-medium: 0 $spacer--medium 0 0 !default;
-$catalog__sidebar-border           : 1px solid $gray-lighter !default;
-$catalog__products-padding         : 0 0 $spacer--large 0 !default;
-$catalog-grid__gap                 : $spacer--medium !default;
-$catalog-grid__padding             : $spacer--medium 0 $spacer--large 0 !default;
-$catalog-grid__border              : 1px solid $gray-light !default;
+$catalog__margin                      : $spacer--medium 0 0 0 !default;
+$catalog__sidebar-width--mq-medium    : 306px !default;
+$catalog__sidebar-margin--mq-medium   : 0 $spacer--medium 0 0 !default;
+$catalog__sidebar-border              : 1px solid $gray-lighter !default;
+$catalog__products-padding            : 0 0 $spacer--large 0 !default;
+$catalog-grid__gap                    : $spacer--medium !default;
+$catalog-grid__padding                : $spacer--medium 0 $spacer--large 0 !default;
+$catalog-grid__border                 : 1px solid $gray-light !default;
+$catalog-list__products-width\@medium : calc(100% - #{$catalog__sidebar-width--mq-medium} - #{$spacer--medium}) !default;
 
 .catalog {
   display: flex;
@@ -47,6 +48,52 @@ $catalog-grid__border              : 1px solid $gray-light !default;
 
       @include mq($screen-m) {
         grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    margin: $catalog__margin;
+
+    @include mq($screen-l) {
+      display: block;
+    }
+
+    &__products {
+      order: 1;
+      padding: $catalog__products-padding;
+
+      @include mq($screen-l) {
+        float: right;
+        width: $catalog-list__products-width\@medium;
+      }
+    }
+
+    &__sidebar,
+    &__sidebar-additional {
+      @include mq($screen-l) {
+        float: left;
+        width: $catalog__sidebar-width--mq-medium;
+      }
+    }
+
+    &__sidebar {
+      order: 0;
+      border-bottom: $catalog__sidebar-border;
+
+      @include mq($screen-l) {
+        margin: $catalog__sidebar-margin--mq-medium;
+        border-bottom: none;
+      }
+    }
+
+    &__sidebar-additional {
+      order: 2;
+
+      @include mq($screen-l) {
+        clear: left;
       }
     }
   }
