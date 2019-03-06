@@ -1,3 +1,7 @@
 .wishlist {
-  position: relative;
+  &__item {
+    &:first-child {
+      padding-top: $reset;
+    }
+  }
 }

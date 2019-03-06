@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import data from './mocks/wishlist'
+import products from './mocks/products'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaWishlist from './Wishlist.vue'
@@ -11,11 +11,11 @@ storiesOf('Modules/Wishlist', module)
   .add('Default', () => ({
     components: { App, AlpacaWishlist },
     data: () => ({
-      data
+      products
     }),
     template: `
       <app>
-        <alpaca-wishlist :products="data.products" />
+        <alpaca-wishlist :products="products" />
       </app>
     `
   }))

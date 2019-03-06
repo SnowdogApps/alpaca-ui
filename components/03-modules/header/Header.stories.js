@@ -12,7 +12,7 @@ import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanva
 
 import menu from './mocks/menu.json'
 import miniCart from '../mini-cart/mocks/mini-cart.json'
-import wishlist from '../wishlist/mocks/wishlist.json'
+import wishlistProducts from '../wishlist/mocks/products.json'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
@@ -29,7 +29,7 @@ storiesOf('Modules/Header', module)
     data: () => ({
       menu,
       miniCart,
-      wishlist
+      wishlistProducts
     }),
     template: `
       <app>
@@ -71,7 +71,7 @@ storiesOf('Modules/Header', module)
           ref="wishlistSidebar"
           heading="Wishlist"
         >
-          <alpaca-wishlist :products="wishlist.products" />
+          <alpaca-wishlist :products="wishlistProducts" />
         </alpaca-off-canvas-sidebar>
       </app>
     `,
