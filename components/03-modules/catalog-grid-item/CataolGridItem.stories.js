@@ -17,6 +17,7 @@ storiesOf('Modules/Catalog grid item', module)
     template: `
       <app>
         <alpaca-catalog-grid-item
+          style="width: 430px; height: 533px;"
           :product="data.product"
           @addToCart="addToCart()"
           @addToWishList="addToWishList()"

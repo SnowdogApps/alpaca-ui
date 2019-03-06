@@ -7,9 +7,12 @@ storiesOf('Elements/Image', module)
   .add('Default', () => ({
     components: { App, AlpacaImage },
     template: `
-      <app>
+      <app style="width: 480px; height: 480px; overflow: hidden;">
         <alpaca-image
-          src="images/image/banner-480_480.png"
+          width="480"
+          height="480"
+          lazy-src="/images/image/banner-480_480.png"
+          lazy-srcset="/images/image/banner-480_480.png 2x"
           alt="alt image text"
         />
       </app>

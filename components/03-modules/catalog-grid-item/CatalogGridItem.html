@@ -14,7 +14,10 @@
     class="catalog-grid-item__link"
   >
     <alpaca-image
-      :src="product.image"
+      :lazy-src="product.image"
+      :lazy-srcset="product.image + ' 2x'"
+      width="430"
+      height="533"
       :alt="product.name"
       class="catalog-grid-item__image"
     />
