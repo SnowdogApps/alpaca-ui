@@ -26,7 +26,7 @@
       </div>
     </div>
     <div
-      v-if="disabled"
+      v-else
       class="rating"
       :aria-label="`Average rating: ${rating}`"
       :title="`Average rating: ${rating}`"
