@@ -7,10 +7,13 @@ import AlpacaRate from './Rate.vue'
 storiesOf('Elements/Rate', module)
   .add('Default', () => ({
     components: { App, AlpacaRate },
+    data: () => ({
+      rating: 2.4
+    }),
     template: `
       <app>
         <alpaca-rate 
-         v-model="2.4"
+         v-model="rating"
          :rating-items="5"
          disabled
          legend="Your rating"
