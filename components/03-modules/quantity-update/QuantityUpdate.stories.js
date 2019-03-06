@@ -6,9 +6,6 @@ import AlpacaQuantityUpdate from './QuantityUpdate.vue'
 
 storiesOf('Modules/Quantity Update', module)
   .add('Default', () => ({
-    data: () => ({
-      quantity
-    }),
     components: { App, AlpacaQuantityUpdate },
     template: `
       <app>
