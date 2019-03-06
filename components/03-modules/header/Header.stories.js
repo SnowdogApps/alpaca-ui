@@ -6,12 +6,12 @@ import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
 import AlpacaLogin from '../../03-modules/login/Login.vue'
-import AlpacaMinicart from '../../03-modules/minicart/MiniCart.vue'
+import AlpacaMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AlpacaWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu.json'
-import minicart from '../minicart/mocks/minicart.json'
+import miniCart from '../mini-cart/mocks/mini-cart.json'
 import wishlist from '../wishlist/mocks/wishlist.json'
 
 storiesOf('Modules/Header', module)
@@ -23,12 +23,12 @@ storiesOf('Modules/Header', module)
       AlpacaModal,
       AlpacaLogin,
       AlpacaOffCanvasSidebar,
-      AlpacaMinicart,
+      AlpacaMiniCart,
       AlpacaWishlist
     },
     data: () => ({
       menu,
-      minicart,
+      miniCart,
       wishlist
     }),
     template: `
@@ -59,9 +59,9 @@ storiesOf('Modules/Header', module)
           ref="cartSidebar"
           heading="Shipping Cart"
         >
-          <alpaca-minicart
-            :products="minicart.products"
-            :totals="minicart.totals"
+          <alpaca-mini-cart
+            :products="miniCart.products"
+            :totals="miniCart.totals"
             summary-title="Shopping summary"
             go-to-checkout-button="Go to Checkout"
             return-to-shopping-button="Return to shopping"
