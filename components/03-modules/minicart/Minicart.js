@@ -12,10 +12,6 @@ export default {
     AlpacaProductItem
   },
   props: {
-    taxAmount: {
-      type: [String, Number],
-      default: 0
-    },
     products: {
       type: Array[Object],
       required: true
@@ -35,6 +31,10 @@ export default {
     goToCheckoutButton: {
       type: String,
       required: true
+    },
+    taxAmount: {
+      type: [String, Number],
+      default: 0
     }
   },
   computed: {
