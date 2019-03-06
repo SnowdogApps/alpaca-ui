@@ -17,10 +17,6 @@ export default {
     event: "change"
   },
   props: {
-    itemTag: {
-      type: String,
-      default: 'div'
-    },
     productImage: {
       type: Object,
       required: true
@@ -49,9 +45,9 @@ export default {
       type: String,
       required: true
     },
-    name: {
+    itemTag: {
       type: String,
-      required: true
+      default: 'div'
     },
     productOptions: {
       type: Array,

@@ -24,8 +24,7 @@ storiesOf('Modules/Product item', module)
           :product-options="productItem.productOptions"
           :quantity="productItem.quantity"
           :remove-btn="productItem.removeBtn"
-          name="name"
-          href="#"
+          :href="productItem.link"
           @remove="removeMethod"
           @change="changeMethod"
         />

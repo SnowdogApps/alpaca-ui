@@ -44,5 +44,6 @@
   },
   "removeBtn": {
     "ariaLabel": "Remove this product from your shopping cart"
-  }
+  },
+  "link": "#"
 }
