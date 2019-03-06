@@ -1,13 +1,13 @@
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
-module.exports = (storybookBaseConfig, configType, defaultConfig) => {
-  defaultConfig.module.rules.push({
+module.exports = ({ config, mode }) => {
+  config.module.rules.push({
     test: /\.stories\.jsx?$/,
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
     enforce: 'pre'
   })
 
-  defaultConfig.module.rules.push({
+  config.module.rules.push({
     test: /\.scss$/,
     use: [
       'vue-style-loader',
@@ -28,7 +28,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     ]
   })
 
-  defaultConfig.module.rules.push({
+  config.module.rules.push({
     test: /\.vue$/,
     loader: 'eslint-loader',
     options: {
@@ -36,7 +36,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     }
   })
 
-  defaultConfig.plugins.push(new StyleLintPlugin({
+  config.plugins.push(new StyleLintPlugin({
     files: [
       'components/**/*.vue',
       'components/**/*.scss',
@@ -45,5 +45,5 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     fix: true
   }))
 
-  return defaultConfig
+  return config
 }
