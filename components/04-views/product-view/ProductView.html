@@ -194,12 +194,18 @@
         >
           <alpaca-catalog-grid-item
             :product="product"
-            @addToCart="featuredProductsLabel = 'dupa'"
-            @addToWishList="addToWishList()"
-            @addToCompare="addToCompare()"
           />
         </slide>
       </alpaca-slider>
+    </div>
+    <alpaca-additional-content
+      class="product-view__additional-content"
+      v-if="banner.length"
+      :picture="banner"
+      :pictureAlt="bannerAlt"
+      :first-column-text="firstColumnText"
+      :second-column-text="secondColumnText"
+    />
     </div>
   </div>
 </alpaca-container>

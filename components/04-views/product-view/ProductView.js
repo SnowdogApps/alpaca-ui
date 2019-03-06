@@ -7,6 +7,7 @@ import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
 import AlpacaTab from '../../02-elements/tabs/Tab.vue'
 import AlpacaTabsContainer from '../../02-elements/tabs/TabsContainer.vue'
 import AlpacaTabContent from '../../02-elements/tabs/TabContent.vue'
+import AlpacaAdditionalContent from '../../03-modules/additional-content/AdditionalContent.vue'
 import AlpacaCatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 import AlpacaGallery from '../../03-modules/gallery/Gallery.vue'
 import AlpacaBriefInfo from '../../03-modules/brief-info/BriefInfo.vue'
@@ -26,6 +27,7 @@ export default {
     AlpacaTab,
     AlpacaTabsContainer,
     AlpacaTabContent,
+    AlpacaAdditionalContent,
     AlpacaCatalogGridItem,
     AlpacaGallery,
     AlpacaBriefInfo,
@@ -62,6 +64,22 @@ export default {
     featuredProductsLabel: {
       type: String,
       default: 'You may also like'
+    },
+    banner: {
+      type: Array,
+      default: () => []
+    },
+    bannerAlt: {
+      type: String,
+      default: ''
+    },
+    firstColumnText: {
+      type: String,
+      default: ''
+    },
+    secondColumnText: {
+      type: String,
+      default: ''
     }
   },
   data () {
