@@ -1,8 +1,8 @@
 $rating__size                   : 120px !default;
 $rating__item-size              : $rating__size / 5 !default;
-$rating__size--rate             : 250px !default;
+$rating__size--large             : 250px !default;
+$rating__item-size--large        : $rating__size--large / 5 !default;
 $rating__margin--rate           : $spacer--medium !default;
-$rating__item-size--rate        : $rating__size--rate / 5 !default;
 $icon__active-color             : $orange !default;
 $icon__active-color--with-border: $orange !default;
 $icon__inactive-color           : $gray-light !default;
@@ -17,10 +17,6 @@ $rating__error-color            : $red !default;
     .rating__rate-item span::before {
       display: block;
     }
-  }
-
-  &__wrapper {
-    border: none;
   }
 
   &__rate-item {
@@ -151,43 +147,83 @@ $rating__error-color            : $red !default;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $rating__size--rate;
+    width: $rating__size;
     margin-bottom: $rating__margin--rate;
 
     .rating__rate-item {
-      flex: 1 0 $rating__item-size--rate;
+      flex: 1 0 $rating__item-size;
     }
+  }
 
-    .rating__star {
-      height: $rating__item-size--rate;
-      width: $rating__item-size--rate;
-      border: 0;
-      background-color: transparent;
-      cursor: pointer;
+  &--large {
+    .rating {
+      width: $rating__size--large;
 
-      &::before {
-        width: $rating__item-size--rate;
-        height: $rating__item-size--rate;
-        background-size: $rating__item-size--rate;
+      &__rate-item {
+        flex: 1 0 $rating__item-size--large;
+      }
 
-        @include isIE() {
-          background-size: $rating__item-size--rate 100%;
+      &__star {
+        height: $rating__item-size--large;
+        width: $rating__size--large;
+
+        &::before { // inactive
+          width: $rating__size--large;
+          height: $rating__item-size--large;
+          background-size: $rating__item-size--large;
+
+          @include isIE() {
+            background-size: $rating__item-size--large 100%;
+          }
+        }
+
+        &--single {
+          width: $rating__item-size--large;
         }
       }
-    }
 
-    .rating__indicator {
-      height: $rating__item-size--rate;
-      width: $rating__item-size--rate;
+      &__indicator {
+        height: $rating__item-size--large;
+        width: $rating__size--large;
 
-      &::before {
-        height: $rating__item-size--rate;
-        background-size: $rating__item-size--rate;
+
+        &::before { // active
+          height: $rating__item-size--large;
+          background-size: $rating__item-size--large;
+
+
+          @include isIE() {
+            background-size: $rating__item-size--large 100%;
+          }
+        }
+
+        &::after {
+          height: $rating__item-size--large;
+          background-size: $rating__item-size--large;
+
+          @include isIE() {
+            background-size: $rating__item-size--large 100%;
+          }
+        }
       }
 
-      &::after {
-        height: $rating__item-size--rate;
-        background-size: $rating__item-size--rate;
+      &--rate {
+        width: $rating__size--large;
+
+        .rating__indicator {
+          height: $rating__item-size--large;
+          width: $rating__item-size--large;
+
+          &::before {
+            height: $rating__item-size--large;
+            background-size: $rating__item-size--large;
+          }
+
+          &::after {
+            height: $rating__item-size--large;
+            background-size: $rating__item-size--large;
+          }
+        }
       }
     }
   }

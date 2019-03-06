@@ -1,4 +1,9 @@
+import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
+
 export default {
+  components: {
+    AlpacaFieldset
+  },
   model: {
     prop: 'rating',
     event: 'change'
@@ -15,6 +20,10 @@ export default {
     ariaLabelRate: {
       type: String,
       default: null
+    },
+    large: {
+      type: Boolean,
+      default: false
     },
     disabledRateAriaLabel: {
       type: String,

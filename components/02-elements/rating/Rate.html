@@ -1,7 +1,7 @@
-<fieldset class="rating__wrapper">
+<alpaca-fieldset :class="['rating', {'rating--large': large}]">
   <div
     v-if="!disabled"
-    class="rating rating--rate"
+    class=" rating--rate"
     role="listbox"
     aria-required="true"
     aria-labelledby="rating-field-label"
@@ -26,7 +26,6 @@
   </div>
   <div
     v-else
-    class="rating"
     :aria-label="disabledRateAriaLabel"
     :title="disabledRateTitle"
     tabindex="0"
@@ -38,4 +37,4 @@
       <span class="rating__indicator" />
     </div>
   </div>
-</fieldset>
+</alpaca-fieldset>

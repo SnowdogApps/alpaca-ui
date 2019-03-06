@@ -17,7 +17,7 @@ export default {
   props: {
     legendText: {
       type: String,
-      required: true
+      default: null
     },
     legendClass: {
       type: String,

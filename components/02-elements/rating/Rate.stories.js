@@ -48,3 +48,22 @@ storiesOf('Elements/Rate', module)
       }
     }
   }))
+  .add('Large', () => ({
+    components: { App, AlpacaRate },
+    data: () => ({
+      rating: 2.4,
+      ratingItems: 5
+    }),
+    template: `
+      <app>
+        <alpaca-rate 
+         v-model="rating"
+         :rating-items="ratingItems"
+         disabled
+         large
+         legend="Your rating"
+        >
+        </alpaca-rate>
+      </app>
+    `
+  }))
