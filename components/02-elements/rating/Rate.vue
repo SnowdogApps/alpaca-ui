@@ -231,10 +231,6 @@
       }
     }
 
-    .mage-error {
-      display: none !important; // sass-lint:disable-line no-important
-    }
-
     &--rate {
       display: flex;
       justify-content: center;
