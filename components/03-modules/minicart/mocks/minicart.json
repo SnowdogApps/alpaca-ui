@@ -45,7 +45,8 @@
       },
       "removeBtn": {
         "ariaLabel": "Remove this product from your shopping cart"
-      }
+      },
+      "link": "#"
     },
     {
       "productImage": {
@@ -91,7 +92,8 @@
       },
       "removeBtn": {
         "ariaLabel": "Remove this product from your shopping cart"
-      }
+      },
+      "link": "#"
     }
   ],
   "totals": [

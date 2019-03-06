@@ -14,7 +14,8 @@
       "productId": "prod1",
       "removeBtn": {
         "ariaLabel": "Remove this product from your wishlist"
-      }
+      },
+      "link": "#"
     },
     {
       "productImage": {
@@ -29,7 +30,8 @@
       "productId": "prod2",
       "removeBtn": {
         "ariaLabel": "Remove this product from your wishlist"
-      }
+      },
+      "link": "#"
     }
   ]
 }
