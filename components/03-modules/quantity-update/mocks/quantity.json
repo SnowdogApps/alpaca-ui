@@ -7,12 +7,12 @@
       "ariaLabel": "Change the quantity",
       "placeholder": "0"
     },
-    "minusQtyButton": {
+    "decrementQtyButton": {
       "ariaLabel": "Decrease the quantity",
       "iconId": "minus",
       "iconTitle": "Minus mark"
     },
-    "plusQtyButton": {
+    "incrementQtyButton": {
       "ariaLabel": "Increase the quantity",
       "iconId": "plus",
       "iconTitle": "Plus mark"

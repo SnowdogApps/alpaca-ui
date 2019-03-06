@@ -1,8 +1,8 @@
 <template>
   <div class="quantity-update">
     <alpaca-button
-      :icon="minusButton.iconId"
-      :aria-label="minusButton.ariaLabel"
+      :icon="decrementButton.iconId"
+      :aria-label="decrementButton.ariaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--minus',
         {
@@ -28,8 +28,8 @@
       hidden-label
     />
     <alpaca-button
-      :icon="plusButton.iconId"
-      :aria-label="plusButton.ariaLabel"
+      :icon="incrementButton.iconId"
+      :aria-label="incrementButton.ariaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--plus',
         incrementButtonClass
@@ -54,11 +54,11 @@
         type: Object,
         required: true
       },
-      minusButton: {
+      decrementButton: {
         type: Object,
         required: true
       },
-      plusButton: {
+      incrementButton: {
         type: Object,
         required: true
       },
