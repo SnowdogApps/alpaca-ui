@@ -10,7 +10,7 @@
     "specialPrice": "$84.00"
   },
   "productId": "qty1",
-  "productOptions":[
+  "productOptions": [
     {
       "label": "Size",
       "value": "XXL"
@@ -30,17 +30,20 @@
       "ariaLabel": "Change the quantity",
       "placeholder": "0"
     },
-    "minusQtyButton": {
+    "decrementQtyButton": {
       "ariaLabel": "Decrease the quantity",
       "iconId": "minus",
       "iconTitle": "Minus mark"
     },
-    "plusQtyButton": {
+    "incrementQtyButton": {
       "ariaLabel": "Increase the quantity",
       "iconId": "plus",
       "iconTitle": "Plus mark"
     },
-    "text": "Qty:",
-    "removeAriaLabel": "Remove this product from your shopping cart"
-  }
+    "text": "Qty:"
+  },
+  "removeBtn": {
+    "ariaLabel": "Remove this product from your shopping cart"
+  },
+  "link": "#"
 }

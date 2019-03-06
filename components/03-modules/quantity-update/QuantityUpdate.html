@@ -1,0 +1,39 @@
+<div class="quantity-update">
+  <alpaca-button
+    :icon="decrementButton.iconId"
+    :aria-label="decrementButton.ariaLabel"
+    :class="[
+      'button--icon quantity-update__button quantity-update__button--minus',
+      {
+        'quantity-update__button--disabled': currentValue === 0
+      },
+      decrementButtonClass
+    ]"
+    icon-class="button__icon quantity-update__icon"
+    @click="decrement"
+  />
+  <alpaca-input
+    :id="input.id"
+    v-model="currentValue"
+    :label="input.ariaLabel"
+    :value="currentValue"
+    type="number"
+    :min="input.min"
+    :max="input.max"
+    :name="input.name"
+    :placeholder="input.placeholder"
+    :class="inputClass"
+    input-class="quantity-update__input"
+    hidden-label
+  />
+  <alpaca-button
+    :icon="incrementButton.iconId"
+    :aria-label="incrementButton.ariaLabel"
+    :class="[
+      'button--icon quantity-update__button quantity-update__button--plus',
+      incrementButtonClass
+    ]"
+    icon-class="button__icon quantity-update__icon"
+    @click="increment"
+  />
+</div>
