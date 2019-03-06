@@ -3,6 +3,7 @@ import AlpacaParagraph from '../../../01-globals/paragraph/Paragraph.vue'
 import AlpacaButton from '../../../02-elements/button/Button.vue'
 import AlpacaInput from '../../../02-elements/form/input/Input.vue'
 import AlpacaFieldset from '../../../02-elements/form/fieldset/Fieldset.vue'
+import AlpacaTextarea from '../../../02-elements/form/input/textarea/Textarea.vue'
 
 export default {
   components: {
@@ -10,7 +11,8 @@ export default {
     AlpacaParagraph,
     AlpacaButton,
     AlpacaInput,
-    AlpacaFieldset
+    AlpacaFieldset,
+    AlpacaTextarea
   },
   props: {
     productTitle: {

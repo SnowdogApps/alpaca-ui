@@ -65,7 +65,7 @@
       },
       inputClass: {
         type: String,
-        default: ''
+        default: 'quantity-update__input-wrapper'
       },
       inputId: {
         type: String,
@@ -130,6 +130,7 @@
   $quantity-update__label-font-weight                : $font-weight-bold !default;
 
   // Input
+  $quantity-update__input-wrapper-margin             : 0 !default;
   $quantity-update__input-border                     : 1px solid $gray-dark !default;
   $quantity-update__input-width                      : 48px !default;
   $quantity-update__input-color                      : $gray-dark !default;
@@ -156,6 +157,10 @@
 
     &__qty {
       display: flex;
+    }
+
+    &__input-wrapper {
+      margin: $quantity-update__input-wrapper-margin;
     }
 
     &__input {

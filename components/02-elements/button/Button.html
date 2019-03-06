@@ -3,7 +3,7 @@
   :type="tag !== 'a' ? type : null"
   :class="[
     {
-      button: tag,
+      button: tag && defaultClass,
       'button--icon': icon && defaultClass,
       'button--secondary': secondary,
       'button--blank': blank,

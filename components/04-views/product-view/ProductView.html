@@ -87,7 +87,45 @@
         </div>
         <div class="product-view__main-actions">
           <div class="product-view__qty">
+            <!-- TODO: Add method for price update -->
             <alpaca-quantity-update/>
+          </div>
+          <div class="product-view__action-elements">
+            <div class="product-view__add-to-cart">
+              <!-- TODO: Add methods for action buttons -->
+              <alpaca-button class="product-view__add-to-cart-btn">
+                Add to cart
+              </alpaca-button>
+            </div>
+            <div class="product-view__extra-actions">
+              <alpaca-button
+                icon="heart"
+                :default-class="false"
+                class="
+                  product-view__action
+                  product-view__action--button
+                  product-view__action--wishlist
+                "
+              />
+              <alpaca-button
+                icon="compare"
+                :default-class="false"
+                class="
+                  product-view__action
+                  product-view__action--button
+                  product-view__action--compare
+                "
+              />
+              <alpaca-button
+                icon="envelope"
+                :default-class="false"
+                class="
+                  product-view__action
+                  product-view__action--button
+                  product-view__action--emailfriend
+                "
+              />
+            </div>
           </div>
         </div>
       </div>
