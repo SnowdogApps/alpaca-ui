@@ -2,8 +2,8 @@
     "input": {
       "id": "qty",
       "name": "qty",
-      "min": "1",
-      "defaultValue": "1",
+      "min": 1,
+      "defaultValue": 1,
       "ariaLabel": "Change the quantity",
       "placeholder": "0"
     },
