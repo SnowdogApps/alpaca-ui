@@ -9,12 +9,11 @@ storiesOf('Modules/Register', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-register
-        mainHeading="Create new customer account"
-        personalSectionText="Personal information"
-        :passwordStrength="3"
-        signInSectionText="Sign-In information"
-        checkboxLabel="Sign Up for Newsletter"
-        buttonText="Create an Account"
+        style="padding: 20px;"
+        personal-information-legend="Personal information"
+        sign-in-legend="Sign-In information"
+        submit-button="Create an Account"
+        go-to-login-button="or login to your account"
         @register="exampleMethod"
       />
     </app>
