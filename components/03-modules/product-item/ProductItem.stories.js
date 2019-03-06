@@ -5,25 +5,25 @@ import StoryRouter from 'storybook-vue-router'
 import App from '../../01-globals/app/App.vue'
 import AlpacaProductItem from './ProductItem.vue'
 
-import ProductItem from './mocks/productItem.json'
+import productItem from './mocks/productItem.json'
 
 storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      ProductItem
+      productItem
     }),
     template: `
       <app>
         <alpaca-product-item
-          :product-image="ProductItem.productImage"
-          :product-name="ProductItem.productName"
-          :product-price="ProductItem.price"
-          :product-id="ProductItem.productId"
-          :product-options="ProductItem.productOptions"
-          :quantity="ProductItem.quantity"
-          :remove-btn="ProductItem.removeBtn"
+          :product-image="productItem.productImage"
+          :product-name="productItem.productName"
+          :product-price="productItem.price"
+          :product-id="productItem.productId"
+          :product-options="productItem.productOptions"
+          :quantity="productItem.quantity"
+          :remove-btn="productItem.removeBtn"
           name="name"
           href="#"
           @remove="removeMethod"
@@ -39,17 +39,17 @@ storiesOf('Modules/Product item', module)
   .add('Without Qty', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      ProductItem
+      productItem
     }),
     template: `
       <app>
         <alpaca-product-item
-          :product-image="ProductItem.productImage"
-          :product-name="ProductItem.productName"
-          :product-price="ProductItem.price"
-          :product-id="ProductItem.productId"
-          :product-options="ProductItem.productOptions"
-          :remove-btn="ProductItem.removeBtn"
+          :product-image="productItem.productImage"
+          :product-name="productItem.productName"
+          :product-price="productItem.price"
+          :product-id="productItem.productId"
+          :product-options="productItem.productOptions"
+          :remove-btn="productItem.removeBtn"
           name="name"
           href="#"
           @remove="removeMethod"
@@ -65,17 +65,17 @@ storiesOf('Modules/Product item', module)
   .add('Without remove', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      ProductItem
+      productItem
     }),
     template: `
       <app>
         <alpaca-product-item
-          :product-image="ProductItem.productImage"
-          :product-name="ProductItem.productName"
-          :product-price="ProductItem.price"
-          :product-id="ProductItem.productId"
-          :product-options="ProductItem.productOptions"
-          :quantity="ProductItem.quantity"
+          :product-image="productItem.productImage"
+          :product-name="productItem.productName"
+          :product-price="productItem.price"
+          :product-id="productItem.productId"
+          :product-options="productItem.productOptions"
+          :quantity="productItem.quantity"
           name="name"
           href="#"
           @remove="removeMethod"
