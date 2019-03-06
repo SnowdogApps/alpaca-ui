@@ -5,8 +5,8 @@ import breadcrumbs from '../../02-elements/breadcrumbs/mocks/breadcrumbs.json'
 import tabs from '../../02-elements/tabs/mocks/tabs.json'
 import menu from '../../03-modules/header/mocks/menu.json'
 import briefInfo from '../../03-modules/brief-info/mocks/brief-info.json'
-import gallery from '../../03-modules/gallery/mocks/gallery.json';
-import product from './mocks/product.json';
+import gallery from '../../03-modules/gallery/mocks/gallery.json'
+import product from './mocks/product.json'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaProductView from './ProductView.vue'
@@ -23,7 +23,7 @@ storiesOf('Views/Product View', module)
         menu,
         briefInfo,
         gallery,
-        product,
+        product
       }
     },
     template: `

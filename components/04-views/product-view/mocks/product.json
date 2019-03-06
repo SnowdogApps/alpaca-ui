@@ -80,5 +80,79 @@
   "reviews": [
     {},
     {}
+  ],
+  "relatedProducts": [
+    {
+      "id": 1,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    }
+  ],
+  "featuredProducts": [
+    {
+      "id": 1,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    }
   ]
 }

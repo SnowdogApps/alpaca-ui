@@ -160,5 +160,46 @@
         </template>
       </alpaca-tabs-container>
     </div>
+    <div
+      v-if="product.relatedProducts && product.relatedProducts.length"
+      class="product-view__slider"
+    >
+      <alpaca-heading tag="h3" level="3">
+        {{ relatedProductsLabel }}
+      </alpaca-heading>
+      <alpaca-slider>
+        <slide
+          class="slider__item product-view__slide-item"
+          v-for="(product, index) in product.relatedProducts"
+          :key="index"
+        >
+          <alpaca-catalog-grid-item
+            :product="product"
+          />
+        </slide>
+      </alpaca-slider>
+    </div>
+    <div
+      v-if="product.featuredProducts && product.featuredProducts.length"
+      class="product-view__slider"
+    >
+      <alpaca-heading tag="h3" level="3">
+        {{ featuredProductsLabel }}
+      </alpaca-heading>
+      <alpaca-slider>
+        <slide
+          class="slider__item product-view__slide-item"
+          v-for="(product, index) in product.featuredProducts"
+          :key="index"
+        >
+          <alpaca-catalog-grid-item
+            :product="product"
+            @addToCart="featuredProductsLabel = 'dupa'"
+            @addToWishList="addToWishList()"
+            @addToCompare="addToCompare()"
+          />
+        </slide>
+      </alpaca-slider>
+    </div>
   </div>
 </alpaca-container>
