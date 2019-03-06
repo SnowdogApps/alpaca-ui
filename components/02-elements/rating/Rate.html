@@ -17,7 +17,7 @@
       <label
         class="rating__star rating__star--rate"
         :for="item"
-        :aria-label="`Rate option, ${item} of ${ratingItems}. Click to vote`"
+        :aria-label="ariaLabelRate"
         @click="selectValue(item)"
       >
         <span class="rating__indicator" />
@@ -27,8 +27,8 @@
   <div
     v-else
     class="rating"
-    :aria-label="`Average rating: ${rating}`"
-    :title="`Average rating: ${rating}`"
+    :aria-label="disabledRateAriaLabel"
+    :title="disabledRateTitle"
     tabindex="0"
   >
     <div

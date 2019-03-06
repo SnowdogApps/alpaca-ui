@@ -8,13 +8,14 @@ storiesOf('Elements/Rate', module)
   .add('Default', () => ({
     components: { App, AlpacaRate },
     data: () => ({
-      rating: 2.4
+      rating: 2.4,
+      ratingItems: 5
     }),
     template: `
       <app>
         <alpaca-rate 
          v-model="rating"
-         :rating-items="5"
+         :rating-items="ratingItems"
          disabled
          legend="Your rating"
         >
@@ -25,13 +26,15 @@ storiesOf('Elements/Rate', module)
   .add('Rate', () => ({
     components: { App, AlpacaRate },
     data: () => ({
-      rating: 3
+      rating: 3,
+      ratingItems: 5
     }),
     template: `
       <app> 
         <alpaca-rate 
          v-model="rating"
-         :rating-items="5"
+         :rating-items="ratingItems"
+         :aria-label-rate="ariaLabelRate()"
          legend="Your rating"
          @change="select"
         >
@@ -39,6 +42,9 @@ storiesOf('Elements/Rate', module)
       </app>
     `,
     methods: {
-      select: action('Selected')
+      select: action('Selected'),
+      ariaLabelRate() {
+        return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
+      }
     }
   }))

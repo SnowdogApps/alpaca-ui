@@ -12,6 +12,22 @@ export default {
       type: Number,
       required: true
     },
+    ariaLabelRate: {
+      type: String,
+      default: null
+    },
+    disabledRateAriaLabel: {
+      type: String,
+      default() {
+        return `Average rating: ${this.rating}`
+      }
+    },
+    disabledRateTitle: {
+      type: String,
+      default() {
+        return `Average rating: ${this.rating}`
+      }
+    },
     disabled: {
       type: Boolean,
       default: false
