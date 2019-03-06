@@ -40,7 +40,6 @@
     </form>
     <div class="login__register-wrapper row row--no-margins center-xs">
       <alpaca-button
-        class="login__register-button"
         blank
         @click="goToRegister"
       >

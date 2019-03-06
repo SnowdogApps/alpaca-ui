@@ -1,15 +1,11 @@
 <template>
-  <div class="registration">
-    <h1 class="registration__heading">
-      {{ mainHeading }}
-    </h1>
-    <form class="registration__content">
+  <div class="register">
+    <form>
       <alpaca-fieldset
-        class="registration__fieldset"
-        :legend-text="personalSectionText"
-        legend-class="registration__legend"
+        class="register__fieldset"
+        :legend-text="personalInformationLegend"
+        legend-class="register__legend"
       >
-        <alpaca-divider class="registration__divider" />
         <alpaca-input
           id="firstname"
           v-model="firstname"
@@ -28,11 +24,10 @@
         />
       </alpaca-fieldset>
       <alpaca-fieldset
-        class="registration__fieldset"
-        :legend-text="signInSectionText"
-        legend-class="registration__legend"
+        class="register__fieldset"
+        :legend-text="signInLegend"
+        legend-class="register__legend"
       >
-        <alpaca-divider class="registration__divider" />
         <alpaca-input
           id="email"
           v-model="email"
@@ -58,46 +53,56 @@
           placeholder="Confirm password"
         />
       </alpaca-fieldset>
-      <alpaca-button
-        fluid
-        @click.stop.prevent="register"
-      >
-        {{ buttonText }}
-      </alpaca-button>
+      <div class="row row--no-margins center-xs">
+        <alpaca-button
+          type="submit"
+          class="register__submit-button"
+          @click.stop.prevent="register"
+        >
+          {{ submitButton }}
+        </alpaca-button>
+      </div>
     </form>
+    <div class="register__login-wrapper row row--no-margins center-xs">
+      <alpaca-button
+        class="register__register-button"
+        blank
+        @click="goToRegister"
+      >
+        {{ goToLoginButton }}
+      </alpaca-button>
+    </div>
   </div>
 </template>
 
 <script>
   import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
-  import AlpacaDivider from '../../02-elements/divider/Divider.vue'
   import AlpacaButton from '../../02-elements/button/Button.vue'
   import AlpacaInput from '../../02-elements/form/input/Input.vue'
 
   export default {
     components: {
       AlpacaFieldset,
-      AlpacaDivider,
       AlpacaButton,
       AlpacaInput
     },
     props: {
-      mainHeading: {
+      personalInformationLegend: {
         type: String,
         required: true
       },
-      personalSectionText: {
+      signInLegend: {
         type: String,
         required: true
       },
-      signInSectionText: {
+      submitButton: {
         type: String,
         required: true
       },
-      buttonText: {
+      goToLoginButton: {
         type: String,
         required: true
-      }
+      },
     },
     data() {
       return {
@@ -124,43 +129,36 @@
 </script>
 
 <style lang="scss">
-  $registration__heading-margin    : 11px 0 $spacer--medium 0 !default;
-  $registration__content-margin    : 0 0 $spacer--medium !default;
-  $registration__input-margin      : 0 0 $spacer--medium !default;
-  $registration__fieldset-margin   : 0 0 $spacer--medium !default;
-  $registration__legend-font-size  : $font-size-base;
-  $registration__legend-font-weight: $font-weight-bold;
-  $registration__legend-padding    : 0 0 $spacer--medium 0 !default;
-  $registration__legend-width      : 100% !default;
+  $register__fieldset-margin            : 0 0 $spacer--medium !default;
+  $register__legend-font-size           : $font-size-large !default;
+  $register__legend-color               : $gray-darker !default;
+  $register__legend-padding             : 0 0 $spacer--medium 0 !default;
+  $register__submit-button-width        : 100% !default;
+  $register__submit-button-width\@medium: 240px !default;
+  $register__login-wrapper-margin       : $spacer 0 0 0 !default;
 
-  .registration {
-    &__heading {
-      margin: $registration__heading-margin;
-    }
-
-    &__divider {
-      margin-bottom: $spacer--large;
-    }
-
-    &__content {
-      margin: $registration__content-margin;
-    }
-
-    &__input {
-      margin: $registration__input-margin;
+  .register {
+    &__fieldset {
+      margin: $register__fieldset-margin;
     }
 
     &__legend {
-      position: relative;
       margin: $reset;
-      padding: $registration__legend-padding;
-      width: $registration__legend-width;
-      font-size: $registration__legend-font-size;
-      font-weight: $registration__legend-font-weight;
+      padding: $register__legend-padding;
+      font-size: $register__legend-font-size;
+      color: $register__legend-color;
     }
 
-    &__fieldset {
-      margin: $registration__fieldset-margin;
+    &__submit-button {
+      width: $register__submit-button-width;
+
+      @include mq($screen-m) {
+        width: $register__submit-button-width\@medium;
+      }
+    }
+
+    &__login-wrapper {
+      margin: $register__login-wrapper-margin;
     }
   }
 </style>
