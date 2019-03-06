@@ -138,5 +138,27 @@
         </div>
       </div>
     </div>
+    <div class="product-view__tabs">
+      <!-- TODO: Remove mock from tabs component (leave content), add reviews -->
+      <alpaca-tabs-container>
+        <template v-for="tab in tabs">
+          <alpaca-tab
+            :key="tab.tabId"
+            :tab-id="tab.tabId"
+            :title="tab.title"
+            :active-tab="activeTab"
+            icon="angle-down"
+            @click="setActiveTab(tab.tabId)"
+          />
+          <alpaca-tab-content
+            :tab-id="tab.tabId"
+            :title-id="tab.titleId"
+            :active-tab="activeTab"
+          >
+            {{ tab.content }}
+          </alpaca-tab-content>
+        </template>
+      </alpaca-tabs-container>
+    </div>
   </div>
 </alpaca-container>

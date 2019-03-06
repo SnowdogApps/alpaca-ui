@@ -1,8 +1,9 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import menu from '../../03-modules/header/mocks/menu.json'
 import breadcrumbs from '../../02-elements/breadcrumbs/mocks/breadcrumbs.json'
+import tabs from '../../02-elements/tabs/mocks/tabs.json'
+import menu from '../../03-modules/header/mocks/menu.json'
 import briefInfo from '../../03-modules/brief-info/mocks/brief-info.json'
 import gallery from '../../03-modules/gallery/mocks/gallery.json';
 import product from './mocks/product.json';
@@ -17,11 +18,12 @@ storiesOf('Views/Product View', module)
     components: { App, AlpacaHeader, AlpacaProductView },
     data() {
       return {
-        menu,
         breadcrumbs,
+        tabs,
+        menu,
         briefInfo,
         gallery,
-        product
+        product,
       }
     },
     template: `
@@ -33,6 +35,7 @@ storiesOf('Views/Product View', module)
         />
         <alpaca-product-view
           :breadcrumbs="breadcrumbs"
+          :tabs="tabs"
           :brief-info="briefInfo"
           :gallery="gallery"
           :product="product"
