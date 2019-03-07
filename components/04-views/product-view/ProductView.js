@@ -57,6 +57,10 @@ export default {
       type: Object,
       required: true
     },
+    stockAlertMaxQty: {
+      type: Number,
+      default: 5
+    },
     inStockAlertText: {
       type: String,
       default: 'In stock - only'

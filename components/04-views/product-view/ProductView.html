@@ -31,7 +31,7 @@
             :special-price="product.price.special"
           />
           <span
-            v-if="product.qty > 0 && product.qty <= 5"
+            v-if="product.qty > 0 && product.qty <= stockAlertMaxQty"
             class="product-view__stock-status product-view__stock-status--alert"
           >
             {{ inStockAlertText }}
