@@ -16,9 +16,9 @@ storiesOf('Modules/Additional Content', module).add('Default', () => ({
     <app>
       <alpaca-additional-content
         :picture="picture"
-        pictureAlt="Sample alt text"
-        firstColumnText="First column"
-        secondColumnText="Second column"
+        picture-alt="Sample alt text"
+        first-column-text="First column"
+        second-column-text="Second column"
       />
     </app>
   `
