@@ -29,7 +29,6 @@ storiesOf('Elements/Form/Input', module)
       <app>
         <alpaca-textarea
           label="Textarea"
-          type="text"
           id="field_id"
           name="textarea"
           placeholder="First and last name"

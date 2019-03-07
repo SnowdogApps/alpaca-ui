@@ -15,7 +15,7 @@
         v-for="(option) in options"
         :key="option.id"
         :class="['swatch__option-container', selected === option.value && 'swatch__option-container--selected', wrapperClass]"
-        :aria-label="option.ariaLabel"
+        :aria-label="option.label"
         tabindex="0"
         @click="setActiveValue(option.value)"
       >
