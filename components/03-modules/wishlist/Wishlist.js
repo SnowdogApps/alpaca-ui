@@ -1,4 +1,3 @@
-import uniqueId from 'lodash.uniqueid'
 import AlpacaList from "../../02-elements/list/List.vue"
 import AlpacaProductItem from "../../03-modules/product-item/ProductItem.vue"
 

@@ -39,7 +39,7 @@ storiesOf('Modules/Product item', module)
   .add('Without Qty', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      productItem
+      product
     }),
     template: `
       <app>
@@ -66,7 +66,7 @@ storiesOf('Modules/Product item', module)
   .add('Without remove', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      productItem
+      product
     }),
     template: `
       <app>
