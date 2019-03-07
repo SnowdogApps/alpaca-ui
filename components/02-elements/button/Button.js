@@ -15,6 +15,10 @@ export default {
       type: Boolean,
       default: true
     },
+    defaultButtonIconClass: {
+      type: Boolean,
+      default: true
+    },
     icon: {
       type: String,
       default: null
