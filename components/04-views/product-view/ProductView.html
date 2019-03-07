@@ -24,11 +24,16 @@
           {{ product.sku }}
         </div>
         <div class="product-view__stock-line">
-          <!-- TODO: Add all price variants -->
           <alpaca-price
+            v-if="product.price.old && product.price.special"
             large
             :old-price="product.price.old"
             :special-price="product.price.special"
+          />
+          <alpaca-price
+            v-else
+            large
+            :price="product.price.regular"
           />
           <span
             v-if="product.qty > 0 && product.qty <= stockAlertMaxQty"
