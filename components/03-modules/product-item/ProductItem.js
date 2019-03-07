@@ -17,41 +17,49 @@ export default {
     event: "change"
   },
   props: {
-    productImage: {
-      type: Object,
+    id: {
+      type: Number,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    url: {
+      type: String,
+      required: true
+    },
+    image: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: String,
+      required: true
+    },
+    specialPrice: {
+      type: String,
+      required: true
+    },
+    oldPrice: {
+      type: String,
       required: true
     },
     quantity: {
       type: Object,
       default: null
     },
-    removeBtn: {
-      type: Object,
+    removeButton: {
+      type: String,
       default: null
     },
-    href: {
-      type: String,
-      required: true
-    },
-    productName: {
-      type: String,
-      required: true
-    },
-    productPrice: {
-      type: Object,
-      required: true
-    },
-    productId: {
-      type: String,
-      required: true
+    options: {
+      type: Array,
+      default: null
     },
     itemTag: {
       type: String,
       default: 'div'
-    },
-    productOptions: {
-      type: Array,
-      default: null
     }
   },
   data () {
@@ -60,8 +68,8 @@ export default {
     }
   },
   methods: {
-    onRemove() {
-      this.$emit("remove")
+    onRemove(val) {
+      this.$emit("remove", val)
     },
     onChange(val) {
       this.$emit("change", val)

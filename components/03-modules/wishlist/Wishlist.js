@@ -11,11 +11,15 @@ export default {
     products: {
       type: Array[Object],
       required: true
+    },
+    removeButton: {
+      type: String,
+      default: null
     }
   },
-  computed: {
-    getProductsWithKey() {
-      return this.products.map(product => ({ key: uniqueId("wishlistItem"), product }))
-    }
+  methods: {
+    onRemove(val) {
+      this.$emit("remove", val)
+    },
   }
 }

@@ -1,35 +1,20 @@
 [
   {
-    "productImage": {
-      "src": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "dataSrc": "/images/product/cart-product-160_160.jpg",
-      "alt": "product name goes here"
-    },
-    "productName": "Ingrid Running Jacket",
-    "price": {
-      "oldPrice": "$1684.00",
-      "specialPrice": "$84.00"
-    },
-    "productId": "prod1",
-    "removeBtn": {
-      "ariaLabel": "Remove this product from your wishlist"
-    },
-    "link": "#"
+    "id": 1,
+    "name": "Ingrid Running Jacket",
+    "image": "/images/product/cart-product-160_160.jpg",
+    "price": "",
+    "specialPrice": "$100,00",
+    "oldPrice": "$299,99",
+    "url": "#"
   },
   {
-    "productImage": {
-      "src": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "dataSrc": "/images/product/cart-product-160_160.jpg",
-      "alt": "product name goes here"
-    },
-    "productName": "Ingrid Running Jacket",
-    "price": {
-      "price": "$1684.00"
-    },
-    "productId": "prod2",
-    "removeBtn": {
-      "ariaLabel": "Remove this product from your wishlist"
-    },
-    "link": "#"
+    "id": 2,
+    "name": "Ingrid Running Jacket",
+    "image": "/images/product/cart-product-160_160.jpg",
+    "price": "$32,99",
+    "specialPrice": "",
+    "oldPrice": "",
+    "url": "#"
   }
 ]
