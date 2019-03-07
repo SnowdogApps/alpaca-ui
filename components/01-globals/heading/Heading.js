@@ -1,7 +1,7 @@
 export default {
   props: {
     level: {
-      type: [String, Number],
+      type: Number,
       required: true,
       validator: level => level >= 1 && level <= 6
     },
@@ -17,17 +17,17 @@ export default {
   computed: {
     levelClassName() {
       switch (this.level) {
-        case '1':
+        case 1:
           return 'first'
-        case '2':
+        case 2:
           return 'second'
-        case '3':
+        case 3:
           return 'third'
-        case '4':
+        case 4:
           return 'fourth'
-        case '5':
+        case 5:
           return 'fifth'
-        case '6':
+        case 6:
           return 'sixth'
         default:
           return null

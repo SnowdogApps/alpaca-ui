@@ -7,42 +7,66 @@ export default {
     AlpacaButton
   },
   props: {
-    input: {
-      type: Object,
-      required: true
+    label: {
+      type: String,
+      default: 'Quantity'
     },
-    decrementButton: {
-      type: Object,
-      required: true
+    inputClass: {
+      type: String,
+      default: 'quantity-update__input-wrapper'
     },
-    incrementButton: {
-      type: Object,
-      required: true
+    inputId: {
+      type: String,
+      default: 'qty'
+    },
+    inputName: {
+      type: String,
+      default: 'qty'
+    },
+    inputMin: {
+      type: Number,
+      default: 1
+    },
+    inputMax: {
+      type: Number,
+      default: null
+    },
+    inputPlaceholder: {
+      type: String,
+      default: '0'
+    },
+    inputAriaLabel: {
+      type: String,
+      default: 'Change the quantity'
     },
     decrementButtonClass: {
       type: String,
       default: ''
     },
+    decrementAriaLabel: {
+      type: String,
+      default: 'Decrease the quantity'
+    },
+    decrementIconTitle: {
+      type: String,
+      default: 'Minus mark'
+    },
     incrementButtonClass: {
       type: String,
       default: ''
     },
-    inputClass: {
+    incrementAriaLabel: {
       type: String,
-      default: ''
+      default: 'Increase the quantity'
+    },
+    incrementIconTitle: {
+      type: String,
+      default: 'Plus mark'
     }
   },
   data() {
     return {
       currentValue: 1
-    }
-  },
-  methods: {
-    increment() {
-      this.$emit('update', ++this.currentValue)
-    },
-    decrement() {
-      this.$emit('update', --this.currentValue)
     }
   }
 }

@@ -18,6 +18,8 @@ $review__summary-max-width\@large: 300px !default;
   }
 
   &--summary {
+    width: auto;
+
     @include mq($screen-m) {
       display: flex;
       justify-content: flex-end;

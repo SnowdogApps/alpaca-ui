@@ -1,4 +1,9 @@
+// Label
+$quantity-update__label-font-size                  : $font-size-base !default;
+$quantity-update__label-font-weight                : $font-weight-bold !default;
+
 // Input
+$quantity-update__input-wrapper-margin             : 0 !default;
 $quantity-update__input-border                     : 1px solid $gray-dark !default;
 $quantity-update__input-width                      : 48px !default;
 $quantity-update__input-color                      : $gray-dark !default;
@@ -18,7 +23,18 @@ $quantity-updater__error-margin                    : 0 0 0 $spacer !default;
 $quantity-updater__error-max-width                 : 120px !default;
 
 .quantity-update {
-  display: flex;
+  &__label {
+    font-size: $quantity-update__label-font-size;
+    font-weight: $quantity-update__label-font-weight;
+  }
+
+  &__qty {
+    display: flex;
+  }
+
+  &__input-wrapper {
+    margin: $quantity-update__input-wrapper-margin;
+  }
 
   &__input {
     border-top: $quantity-update__input-border;

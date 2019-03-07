@@ -9,32 +9,28 @@
       "headingId": "option-label-color-1",
       "id": "opt-color-orange-1",
       "style": "background-color: #ffa500",
-      "aria-label": "Orange",
-      "text": "Orange",
+      "label": "Orange",
       "value": "Orange"
     },
     {
       "headingId": "option-label-color-1",
       "id": "opt-color-green-2",
       "style": "background-color: #00ff00",
-      "aria-label" : "Green",
-      "text": "Green",
+      "label": "Green",
       "value": "Green"
     },
     {
       "headingId": "option-label-color-1",
       "id": "opt-color-green-3",
       "style": "background-color: #ff0000",
-      "aria-label" : "Red",
-      "text": "Red",
+      "label": "Red",
       "value": "Red"
     },
     {
       "headingId": "option-label-color-1",
       "id": "opt-color-white-4",
       "style": "background-color: #000000",
-      "aria-label": "White",
-      "text": "White",
+      "label": "White",
       "value": "White"
     }
   ]

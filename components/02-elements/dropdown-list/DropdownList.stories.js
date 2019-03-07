@@ -58,9 +58,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
+        <alpaca-dropdown-list
           screenM
-          :items="dropdownListItems" 
+          :items="dropdownListItems"
         />
       </app>
     `
@@ -72,9 +72,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
-          dark 
-          :items="dropdownListItems" 
+        <alpaca-dropdown-list
+          dark
+          :items="dropdownListItems"
         />
       </app>
     `
@@ -86,9 +86,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
-          secondary 
-          :items="dropdownListItems" 
+        <alpaca-dropdown-list
+          secondary
+          :items="dropdownListItems"
         />
       </app>
     `
@@ -100,9 +100,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
-          inner 
-          :items="dropdownListItems" 
+        <alpaca-dropdown-list
+          inner
+          :items="dropdownListItems"
         />
       </app>
     `
