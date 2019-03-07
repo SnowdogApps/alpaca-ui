@@ -12,6 +12,7 @@
       v-for="item in items"
       :key="item.id"
       class="filter__swatch-option"
+      :default-class="false"
       :aria-label="item.ariaLabel"
       @click="click(item.id)"
     >

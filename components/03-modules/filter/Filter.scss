@@ -11,7 +11,7 @@ $filter__swatch-option-border-color--active: $color-primary !default;
 $filter__color-option-width                : 56px !default;
 $filter__color-option-height               : 80px !default;
 $filter__color-option-border               : 2px solid transparent !default;
-$filter__color-option-after-top            : 4px !default;
+$filter__color-option-after-top            : 5px !default;
 $filter__color-option-after-left           : 8px !default;
 $filter__color-option-after-size           : 40px !default;
 $filter__color-option-after-border-radius  : 100% !default;
@@ -97,6 +97,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     max-height: $filter__color-option-height;
     text-decoration: none;
     background: none;
+    border: none;
 
     &::after {
       content: '';
