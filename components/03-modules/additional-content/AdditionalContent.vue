@@ -51,7 +51,7 @@ export default {
 
 <style lang="scss">
 $additional-content__image-margin       : 0 0 41px !default;
-$additional-content__image-margin\@large: 0 0 32px !default;
+$additional-content__image-margin\@large: 0 0 $spacer--large !default;
 $additional-section-width               : 48% !default;
 
 .additional-content {

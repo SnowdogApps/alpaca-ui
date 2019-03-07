@@ -8,8 +8,7 @@
       <div class="product-view__main-details">
         <div class="product-view__heading">
           <alpaca-heading
-            tag="h1"
-            level="1"
+            :level="1"
             class="product-view__title"
           >
             {{ product.name }}
@@ -160,7 +159,7 @@
       v-if="product.relatedProducts && product.relatedProducts.length"
       class="product-view__slider"
     >
-      <alpaca-heading tag="h3" level="3">
+      <alpaca-heading tag="h3" :level="3">
         {{ relatedProductsLabel }}
       </alpaca-heading>
       <alpaca-slider>
@@ -179,7 +178,7 @@
       v-if="product.featuredProducts && product.featuredProducts.length"
       class="product-view__slider"
     >
-      <alpaca-heading tag="h3" level="3">
+      <alpaca-heading tag="h3" :level="3">
         {{ featuredProductsLabel }}
       </alpaca-heading>
       <alpaca-slider>
