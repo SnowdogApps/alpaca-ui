@@ -77,6 +77,10 @@ export default {
       type: String,
       default: 'Out of stock'
     },
+    addToCartText: {
+      type: String,
+      default: 'Add to cart'
+    },
     relatedProductsLabel: {
       type: String,
       default: 'Related products'
