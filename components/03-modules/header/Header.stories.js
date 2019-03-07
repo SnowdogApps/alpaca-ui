@@ -6,11 +6,15 @@ import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
 import AlpacaLogin from '../../03-modules/login/Login.vue'
-import AlpacaMinicart from '../../03-modules/minicart/MiniCart.vue'
+import AlpacaMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
+import AlpacaWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
+import EventBus from '../../../eventBus'
+
 import menu from './mocks/menu.json'
-import minicart from '../minicart/mocks/minicart.json'
+import miniCart from '../mini-cart/mocks/mini-cart.json'
+import wishlistProducts from '../wishlist/mocks/products.json'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
@@ -21,11 +25,13 @@ storiesOf('Modules/Header', module)
       AlpacaModal,
       AlpacaLogin,
       AlpacaOffCanvasSidebar,
-      AlpacaMinicart
+      AlpacaMiniCart,
+      AlpacaWishlist
     },
     data: () => ({
       menu,
-      minicart
+      miniCart,
+      wishlistProducts
     }),
     template: `
       <app>
@@ -33,12 +39,12 @@ storiesOf('Modules/Header', module)
           :menu="menu"
           src="../../images/logo/alpaca.svg"
           link="#"
-          @toggleMicrocart="toggleMicrocart"
+          @toggleMicrocart="showMiniCart"
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
         <alpaca-modal
-          ref="registerModal"
+          name="register"
           heading="Registred Customers"
         >
           <alpaca-login
@@ -52,28 +58,36 @@ storiesOf('Modules/Header', module)
           />
         </alpaca-modal>
         <alpaca-off-canvas-sidebar
-          ref="cartSidebar"
+          name="mini-cart"
           heading="Shipping Cart"
         >
-          <alpaca-minicart
-            :cart-items="minicart.cartItems"
-            :totals="minicart.totals"
+          <alpaca-mini-cart
+            :products="miniCart.products"
+            :totals="miniCart.totals"
             summary-title="Shopping summary"
             go-to-checkout-button="Go to Checkout"
             return-to-shopping-button="Return to shopping"
           />
         </alpaca-off-canvas-sidebar>
+        <alpaca-off-canvas-sidebar
+          name="wishlist"
+          heading="Wishlist"
+        >
+          <alpaca-wishlist :products="wishlistProducts" />
+        </alpaca-off-canvas-sidebar>
       </app>
     `,
     methods: {
       showRegister() {
-        this.$refs.registerModal.show()
+        EventBus.$emit('modal-show', 'register')
       },
-      toggleMicrocart() {
-        this.$refs.cartSidebar.show()
+      showMiniCart() {
+        EventBus.$emit('sidebar-show', 'mini-cart')
+      },
+      toggleWishlist() {
+        EventBus.$emit('sidebar-show', 'wishlist')
       },
       login: action('Login'),
-      goToRegister: action('Go to Register'),
-      toggleWishlist: action('toggle Wishlist')
+      goToRegister: action('Go to Register')
     }
   }))

@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import data from './mocks/minicart'
+import data from './mocks/mini-cart.json'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaMiniCart from './MiniCart.vue'
 
-storiesOf('Modules/Minicart', module)
+storiesOf('Modules/Mini Cart', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { App, AlpacaMiniCart },
@@ -16,7 +16,7 @@ storiesOf('Modules/Minicart', module)
     template: `
       <app>
         <alpaca-mini-cart
-          :cart-items="data.cartItems"
+          :products="data.products"
           :totals="data.totals"
           summary-title="Shopping summary"
           go-to-checkout-button="Go to Checkout"

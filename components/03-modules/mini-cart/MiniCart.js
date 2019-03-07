@@ -2,21 +2,17 @@ import uniqueId from 'lodash.uniqueid'
 import AlpacaHeading from '../../01-globals/heading/Heading.vue'
 import AlpacaList from "../../02-elements/list/List.vue"
 import AlpacaButton from "../../02-elements/button/Button.vue"
-import AlpacaCartListItem from "../../03-modules/cart-list-item/CartListItem.vue"
+import AlpacaProductItem from "../../03-modules/product-item/ProductItem.vue"
 
 export default {
   components: {
     AlpacaHeading,
     AlpacaList,
     AlpacaButton,
-    AlpacaCartListItem
+    AlpacaProductItem
   },
   props: {
-    taxAmount: {
-      type: [String, Number],
-      default: 0
-    },
-    cartItems: {
+    products: {
       type: Array[Object],
       required: true
     },
@@ -35,11 +31,15 @@ export default {
     goToCheckoutButton: {
       type: String,
       required: true
+    },
+    taxAmount: {
+      type: [String, Number],
+      default: 0
     }
   },
   computed: {
-    getImageWithKey() {
-      return this.cartItems.map(item => ({ key: uniqueId("carItem"), item }))
+    getProductsWithKey() {
+      return this.products.map(product => ({ key: uniqueId("minicartItem"), product }))
     }
   },
   methods: {

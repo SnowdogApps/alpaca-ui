@@ -17,15 +17,15 @@ export default {
     event: "change"
   },
   props: {
-    itemTag: {
-      type: String,
-      default: 'div'
-    },
     productImage: {
       type: Object,
       required: true
     },
     quantity: {
+      type: Object,
+      default: null
+    },
+    removeBtn: {
       type: Object,
       default: null
     },
@@ -45,13 +45,18 @@ export default {
       type: String,
       required: true
     },
-    name: {
+    itemTag: {
       type: String,
-      required: true
+      default: 'div'
     },
     productOptions: {
       type: Array,
-      required: true
+      default: null
+    }
+  },
+  data () {
+    return {
+      defaultRemoveBtnAriaLabel: "Remove product"
     }
   },
   methods: {

@@ -15,6 +15,7 @@ storiesOf('Modules/Modal', module)
           Modal button
         </alpaca-button>
         <alpaca-modal
+          name="default"
           heading="Modal Heading"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -23,7 +24,7 @@ storiesOf('Modules/Modal', module)
     `,
     methods: {
       showModal () {
-        EventBus.$emit('modal-show')
+        EventBus.$emit('modal-show', 'default')
       }
     }
   }))
@@ -35,16 +36,16 @@ storiesOf('Modules/Modal', module)
           Open Modal
         </alpaca-button>
         <alpaca-modal
+          name="blank"
           blank
-          ref="myModalCloseButtonRef"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </alpaca-modal>
       </app>
     `,
     methods: {
-      showModal() {
-        this.$refs.myModalCloseButtonRef.show()
+      showModal () {
+        EventBus.$emit('modal-show', 'blank')
       }
     }
   }))

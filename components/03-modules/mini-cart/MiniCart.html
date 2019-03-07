@@ -1,17 +1,19 @@
 <div class="minicart">
   <alpaca-list class="minicart__list">
-    <alpaca-cart-list-item
-      v-for="{ key, item } in getImageWithKey"
+    <alpaca-product-item
+      v-for="{ key, product } in getProductsWithKey"
       :key="key"
       item-tag="li"
-      :product-image="item.productImage"
-      :product-name="item.productName"
-      :product-price="item.price"
-      :product-id="item.productId"
-      :product-options="item.productOptions"
-      :quantity="item.quantity"
-      :name="`qty_${key}`"
-      href="#"
+      :product-image="product.productImage"
+      :product-name="product.productName"
+      :product-price="product.price"
+      :product-id="product.productId"
+      :product-options="product.productOptions"
+      :quantity="product.quantity"
+      :remove-btn="product.removeBtn"
+      :name="`minicart_${key}`"
+      :href="product.link"
+      class="minicart__product-item"
     />
   </alpaca-list>
   <section class="minicart__summary">
