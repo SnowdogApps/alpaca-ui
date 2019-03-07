@@ -30,24 +30,25 @@
             :old-price="product.price.old"
             :special-price="product.price.special"
           />
-          <!-- TODO: Replace with new stock component -->
           <span
             v-if="product.qty > 0 && product.qty <= 5"
             class="product-view__stock-status product-view__stock-status--alert"
           >
-            In stock - only {{ product.qty }} left
+            {{ inStockAlertText }}
+            {{ product.qty }}
+            {{ inStockAlertTextSuffix }}
           </span>
           <span
             v-else-if="product.qty > 0"
             class="product-view__stock-status"
           >
-            In stock
+            {{ inStockText }}
           </span>
           <span
             v-else
             class="product-view__stock-status product-view__stock-status--out-of-stock"
           >
-            Out of stock
+            {{ outOfStockText }}
           </span>
         </div>
       </div>

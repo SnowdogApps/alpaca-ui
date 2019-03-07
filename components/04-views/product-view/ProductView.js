@@ -57,6 +57,22 @@ export default {
       type: Object,
       required: true
     },
+    inStockAlertText: {
+      type: String,
+      default: 'In stock - only'
+    },
+    inStockAlertTextSuffix: {
+      type: String,
+      default: 'left'
+    },
+    inStockText: {
+      type: String,
+      default: 'In stock'
+    },
+    outOfStockText: {
+      type: String,
+      default: 'Out of stock'
+    },
     relatedProductsLabel: {
       type: String,
       default: 'Related products'
