@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
-import products from './mocks/products'
+import products from '../../../mocks/product-list'
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaWishlist from './Wishlist.vue'

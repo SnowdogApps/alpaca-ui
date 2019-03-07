@@ -26,7 +26,7 @@ export default {
       required: true
     },
     url: {
-      type: String,
+      type: [Object, String],
       required: true
     },
     image: {

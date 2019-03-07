@@ -5,14 +5,14 @@ import StoryRouter from 'storybook-vue-router'
 import App from '../../01-globals/app/App.vue'
 import AlpacaProductItem from './ProductItem.vue'
 
-import product from './mocks/productItem.json'
+import products from '../../../mocks/product-list'
 
 storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      product
+      product: products[0]
     }),
     template: `
       <app>
@@ -39,7 +39,7 @@ storiesOf('Modules/Product item', module)
   .add('Without Qty', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      product
+      product: products[0]
     }),
     template: `
       <app>
@@ -52,7 +52,7 @@ storiesOf('Modules/Product item', module)
           :special-price="product.specialPrice"
           :old-price="product.oldPrice"
           :options="product.options"
-          :remove-button="Remove this product from your shopping cart"
+          remove-button="Remove this product from your shopping cart"
           @remove="removeMethod"
           @change="changeMethod"
         />
@@ -66,7 +66,7 @@ storiesOf('Modules/Product item', module)
   .add('Without remove', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      product
+      product: products[0]
     }),
     template: `
       <app>
