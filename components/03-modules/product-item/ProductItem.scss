@@ -6,9 +6,6 @@ $product-item__name-weight\@medium     : $font-weight-bold !default;
 $product-item__name-width              : 65% !default;
 $product-item__name-padding\@medium    : 0 $spacer--medium 0 0 !default;
 $product-item__attributes-margin       : 0 0 $spacer--medium 0 !default;
-$product-item__qty-width               : 100% !default;
-$product-item__qty-width\@medium       : auto !default;
-$product-item__qty-input-width\@medium : 70px !default;
 $product-item__actions-item-margin     : 0 0 0 $spacer !default;
 $product-item__actions-item-padding    : 0 $spacer--medium 0 0 !default;
 $product-item__button-border           : none !default;
@@ -58,10 +55,6 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
     }
   }
 
-  &__attributes {
-    margin: $product-item__attributes-margin;
-  }
-
   &__price-wrapper {
     display: flex;
     flex-direction: column;
@@ -87,18 +80,13 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
   }
 
   &__qty {
-    width: $product-item__qty-width;
-
-    @include mq($screen-m) {
-      width: $product-item__qty-width\@medium;
-    }
+    display: flex;
   }
 
-  &__qty-wrapper {
-    display: flex;
-    margin: $reset;
-    flex-direction: row;
-    align-items: center;
+  &__qty-label {
+    align-self: center;
+    margin-right: $spacer;
+    font-weight: normal;
   }
 
   &__action-buttons-wrapper {
@@ -106,18 +94,14 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
     justify-content: flex-end;
   }
 
-  &__qty-text,
   &__attributes {
+    margin: $product-item__attributes-margin;
     margin-right: $spacer;
     font-size: $font-size-small;
 
     @include mq($screen-m) {
       font-size: $font-size-base;
     }
-  }
-
-  &__qty-input {
-    margin: $reset;
   }
 
   &__actions {

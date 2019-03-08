@@ -11,6 +11,10 @@ export default {
       type: String,
       default: 'Quantity'
     },
+    labelClass: {
+      type: String,
+      default: ''
+    },
     inputId: {
       type: String,
       default: 'qty'

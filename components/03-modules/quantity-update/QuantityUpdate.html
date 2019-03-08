@@ -1,7 +1,7 @@
 <div class="quantity-update">
   <label
     v-if="label !== ''"
-    class="quantity-update__label"
+    :class="['quantity-update__label', labelClass]"
     :for="inputId"
   >
     {{ label }}

@@ -96,7 +96,6 @@ storiesOf('Modules/Header', module)
                 @remove="removeMethod(product.id)"
               >
                 <template #quantity>
-                  <span class="product-item__qty-text">Qty:</span>
                   <alpaca-quantity-update
                     :input-id="'qty' + product.id"
                     input-aria-label="Change the quantity"
@@ -104,7 +103,9 @@ storiesOf('Modules/Header', module)
                     decrement-icon-title="Minus mark"
                     increment-aria-label="Increase the quantity"
                     increment-icon-title="Plus mark"
-                    label=""
+                    class="product-item__qty"
+                    label="Qty:"
+                    label-class="product-item__qty-label"
                     @update="changeMethod"
                   />
                 </template>
