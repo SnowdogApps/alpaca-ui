@@ -15,6 +15,10 @@ export default {
       type: Array,
       required: true
     },
+    quantity: {
+      type: Object,
+      required: true
+    },
     totals: {
       type: Array[Object],
       required: true

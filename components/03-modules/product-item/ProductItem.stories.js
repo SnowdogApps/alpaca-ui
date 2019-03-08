@@ -5,14 +5,18 @@ import StoryRouter from 'storybook-vue-router'
 import App from '../../01-globals/app/App.vue'
 import AlpacaProductItem from './ProductItem.vue'
 
-import products from '../../../mocks/product-list'
+import products from '../../../mocks/products'
 
 storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      product: products[0]
+      product: products[0],
+      quantity: {
+        text: 'Qty:',
+        label: ''
+      }
     }),
     template: `
       <app>
@@ -26,6 +30,7 @@ storiesOf('Modules/Product item', module)
           :old-price="product.oldPrice"
           :options="product.options"
           remove-button="Remove this product from your shopping cart"
+          :quantity="quantity"
           @remove="removeMethod"
           @change="changeMethod"
         />
