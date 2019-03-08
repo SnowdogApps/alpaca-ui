@@ -34,33 +34,20 @@
     <div
       :class="[
         'product-item__actions',
-        { 'product-item__actions--to-right': !quantity }
+        { 'product-item__actions--to-right': !$slots.quantity }
       ]"
     >
       <div
-        v-if="quantity"
+        v-if="$slots.quantity"
         class="product-item__qty-wrapper"
       >
-        <span class="product-item__qty-text">
-          {{ quantity.text }}
-        </span>
-        <alpaca-quantity-update
-          :input="quantity.input"
-          :label="quantity.label"
-          :decrement-button="quantity.decrementQtyButton"
-          :increment-button="quantity.incrementQtyButton"
-          decrement-button-class="product-item__qty-button"
-          increment-button-class="product-item__qty-button"
-          input-class="product-item__qty-input"
-          @update="onChange"
-        />
+        <slot name="quantity"/>
       </div>
       <div
         v-if="removeButton"
         class="product-item__action-buttons-wrapper"
       >
         <alpaca-button
-          v-if="removeButton"
           icon="remove"
           class="product-item__action-button"
           icon-class="product-item__action-icon"

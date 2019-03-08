@@ -6,7 +6,17 @@
     "price": "",
     "specialPrice": "$100,00",
     "oldPrice": "$299,99",
-    "url": "#"
+    "url": "#",
+    "options": [
+      {
+        "label": "Size",
+        "value": "XXL"
+      },
+      {
+        "label": "Color",
+        "value": "Red"
+      }
+    ]
   },
   {
     "id": 2,

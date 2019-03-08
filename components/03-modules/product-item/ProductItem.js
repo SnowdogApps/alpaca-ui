@@ -45,10 +45,6 @@ export default {
       type: String,
       required: true
     },
-    quantity: {
-      type: Object,
-      default: null
-    },
     removeButton: {
       type: String,
       default: null

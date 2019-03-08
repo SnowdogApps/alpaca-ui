@@ -11,10 +11,6 @@ export default {
       type: String,
       default: 'Quantity'
     },
-    inputClass: {
-      type: String,
-      default: 'quantity-update__input-wrapper'
-    },
     inputId: {
       type: String,
       default: 'qty'
