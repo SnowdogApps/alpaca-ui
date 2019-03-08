@@ -68,5 +68,10 @@ export default {
     return {
       currentValue: 1
     }
+  },
+  methods: {
+    changeValue () {
+      this.$emit('update', this.currentValue)
+    }
   }
 }
