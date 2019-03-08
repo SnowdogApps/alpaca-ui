@@ -1,7 +1,6 @@
 <div class="range-filter">
   <vue-slider
     ref="slider"
-    class="range-filter__slider"
     :value="currentValue"
     :height="slider.height"
     :min="min"
@@ -9,17 +8,14 @@
     :enable-cross="slider.enableCross"
     :dot-size="slider.dotSize"
     :tooltip="slider.tooltip"
-    :bg-style="slider.bgStyle"
-    :slider-style="slider.sliderStyle"
+    :rail-style="slider.railStyle"
+    :dot-style="slider.dotStyle"
     :process-style="slider.processStyle"
     @input="syncValue"
   />
   <div class="range-filter__inputs-wrapper">
     <label
-      class="
-            label
-            range-filter__label
-        "
+      class="label range-filter__label"
       :for="lowerInput.field.id"
     >
       {{ lowerInput.label }}
@@ -27,7 +23,7 @@
     <input
       :id="lowerInput.field.id"
       v-model.number.lazy="minInput"
-      class="input__field range-filter__input range-filter__input--lower"
+      class="input__field range-filter__input"
       :label="lowerInput.label"
       type="text"
       :name="lowerInput.field.name"
@@ -43,10 +39,7 @@
       -
     </span>
     <label
-      class="
-            label
-            range-filter__label
-        "
+      class="label range-filter__label"
       :for="upperInput.field.id"
     >
       {{ upperInput.field.label }}
@@ -54,7 +47,7 @@
     <input
       :id="upperInput.field.id"
       v-model.number.lazy="maxInput"
-      class="input__field range-filter__input range-filter__input--upper"
+      class="input__field range-filter__input"
       :label="upperInput.label"
       type="text"
       :name="upperInput.field.name"
