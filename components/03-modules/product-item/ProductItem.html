@@ -1,33 +1,33 @@
 <component
   :is="itemTag"
-  :id="productId"
+  :id="id"
   class="product-item"
 >
   <div class="product-item__image">
     <alpaca-image
-      :src="productImage.dataSrc"
-      :alt="productImage.alt"
+      :src="image"
+      :alt="name"
     />
   </div>
   <div class="product-item__info">
     <div class="product-item__data">
       <router-link
-        :to="href"
+        :to="url"
         class="link link--inverted product-item__name"
       >
-        {{ productName }}
+        {{ name }}
       </router-link>
       <alpaca-price
-        :price="productPrice.price"
-        :special-price="productPrice.specialPrice"
-        :old-price="productPrice.oldPrice"
+        :price="price"
+        :special-price="specialPrice"
+        :old-price="oldPrice"
         class="product-item__price-wrapper"
         old-price-class="product-item__price-wrapper--old"
         special-price-class="product-item__price-wrapper--special"
       />
       <alpaca-description-list
-        v-if="productOptions"
-        :elements="productOptions"
+        v-if="options"
+        :elements="options"
         class="product-item__attributes"
       />
     </div>
@@ -46,6 +46,7 @@
         </span>
         <alpaca-quantity-update
           :input="quantity.input"
+          :label="quantity.label"
           :decrement-button="quantity.decrementQtyButton"
           :increment-button="quantity.incrementQtyButton"
           decrement-button-class="product-item__qty-button"
@@ -55,17 +56,17 @@
         />
       </div>
       <div
-        v-if="removeBtn"
+        v-if="removeButton"
         class="product-item__action-buttons-wrapper"
       >
         <alpaca-button
-          v-if="removeBtn"
+          v-if="removeButton"
           icon="remove"
           class="product-item__action-button"
           icon-class="product-item__action-icon"
-          :aria-label="removeBtn.ariaLabel || defaultRemoveBtnAriaLabel"
+          :aria-label="removeButton || defaultRemoveBtnAriaLabel"
           custom-class="product-item__actions-item"
-          @click="onRemove"
+          @click="onRemove(id)"
         />
       </div>
     </div>

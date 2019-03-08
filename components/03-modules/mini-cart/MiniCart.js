@@ -1,4 +1,3 @@
-import uniqueId from 'lodash.uniqueid'
 import AlpacaHeading from '../../01-globals/heading/Heading.vue'
 import AlpacaList from "../../02-elements/list/List.vue"
 import AlpacaButton from "../../02-elements/button/Button.vue"
@@ -13,12 +12,20 @@ export default {
   },
   props: {
     products: {
-      type: Array[Object],
+      type: Array,
+      required: true
+    },
+    quantity: {
+      type: Object,
       required: true
     },
     totals: {
       type: Array[Object],
       required: true
+    },
+    removeButton: {
+      type: String,
+      default: ''
     },
     summaryTitle: {
       type: String,
@@ -37,17 +44,15 @@ export default {
       default: 0
     }
   },
-  computed: {
-    getProductsWithKey() {
-      return this.products.map(product => ({ key: uniqueId("minicartItem"), product }))
-    }
-  },
   methods: {
     returnToShopping() {
       this.$emit('returnToShopping')
     },
     goToCheckout() {
       this.$emit('goToCheckout')
+    },
+    onRemove(val) {
+      this.$emit("remove", val)
     }
   }
 }
