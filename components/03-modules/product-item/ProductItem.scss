@@ -85,7 +85,7 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
 
   &__qty-label {
     align-self: center;
-    margin-right: $spacer;
+    margin: 0 $spacer 0 0;
     font-weight: normal;
   }
 
