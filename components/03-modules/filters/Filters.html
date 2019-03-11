@@ -34,37 +34,37 @@
       secondary
     >
       <template
-        v-if="checkboxItems && checkboxItems.every(el => Array.isArray(el))"
+        v-if="checkboxItems && Array.isArray(checkboxItems)"
       >
         <alpaca-checkbox-filter
           v-for="{ key, checkboxArray } in getCheckboxArrayWithId"
-          key="key"
-          title="Checkbox"
+          :key="key"
+          :title="checkboxArray.name"
           :id="key"
-          :items="checkboxArray"
+          :items="checkboxArray.items"
           @select="selectOptions"
         />
       </template>
       <alpaca-checkbox-filter
         v-else-if="checkboxItems"
         key="key"
-        title="Checkbox"
+        :title="checkboxItems.name"
         id="checkboxId"
-        :items="checkboxItems"
+        :items="checkboxItems.items"
         @select="selectOptions"
       />
       <alpaca-swatch-filter
         v-if="swatchItems"
-        title="Swatch"
+        :title="swatchItems.name"
         id="swatchId"
-        :items="swatchItems"
+        :items="swatchItems.items"
         @click="checkSwatch"
       />
       <alpaca-color-filter
         v-if="colorItems"
-        title="Color"
+        :title="colorItems.name"
         id="colorId"
-        :items="colorItems"
+        :items="colorItems.items"
         @click="checkColor"
       />
       <alpaca-range

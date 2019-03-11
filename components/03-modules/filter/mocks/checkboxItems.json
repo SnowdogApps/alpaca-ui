@@ -1,17 +1,42 @@
 [
   {
-    "id": "checkbox1",
-    "name": "checkbox-name1",
-    "value": "checkbox-value1"
+    "name": "Checkbox",
+    "items": [
+      {
+        "id": "checkbox1",
+        "name": "checkbox-name1",
+        "value": "checkbox-value1"
+      },
+      {
+        "id": "checkbox2",
+        "name": "checkbox-name2",
+        "value": "checkbox-value2"
+      },
+      {
+        "id": "checkbox3",
+        "name": "checkbox-name3",
+        "value": "checkbox-value3"
+      }
+    ]
   },
   {
-    "id": "checkbox2",
-    "name": "checkbox-name2",
-    "value": "checkbox-value2"
-  },
-  {
-    "id": "checkbox3",
-    "name": "checkbox-name3",
-    "value": "checkbox-value3"
+    "name": "Checkbox2",
+    "items": [
+      {
+        "id": "checkbox4",
+        "name": "checkbox-name4",
+        "value": "checkbox-value4"
+      },
+      {
+        "id": "checkbox5",
+        "name": "checkbox-name5",
+        "value": "checkbox-value5"
+      },
+      {
+        "id": "checkbox6",
+        "name": "checkbox-name6",
+        "value": "checkbox-value6"
+      }
+    ]
   }
 ]

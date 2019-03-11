@@ -49,15 +49,15 @@ export default {
       default: null
     },
     swatchItems: {
-      type: Array,
+      type: Object,
       default: null
     },
     colorItems: {
-      type: Array,
+      type: Object,
       default: null
     },
     checkboxItems: {
-      type: Array,
+      type: [Object, Array],
       default: null
     }
   },
@@ -68,7 +68,7 @@ export default {
   },
   computed: {
     getCheckboxArrayWithId() {
-      return this.checkboxItems.map(checkboxArray => ({ key: uniqueId("checkbox"), checkboxArray }))
+      return this.checkboxItems.map(checkboxArray => ({ key: uniqueId("checkboxArray"), checkboxArray }))
     }
   },
   methods: {
