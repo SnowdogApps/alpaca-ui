@@ -43,7 +43,7 @@ export default {
             "width": "24px",
             "height": "24px",
             "border-radius": "50%",
-            "background-color": "white"
+            "background-color": "#fff"
           }
         }
       }

@@ -11,14 +11,6 @@ export default {
     AlpacaProductItem
   },
   props: {
-    products: {
-      type: Array,
-      required: true
-    },
-    quantity: {
-      type: Object,
-      required: true
-    },
     totals: {
       type: Array[Object],
       required: true
@@ -51,8 +43,5 @@ export default {
     goToCheckout() {
       this.$emit('goToCheckout')
     },
-    onRemove(val) {
-      this.$emit("remove", val)
-    }
   }
 }

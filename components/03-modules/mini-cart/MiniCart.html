@@ -1,22 +1,6 @@
 <div class="minicart">
   <alpaca-list class="minicart__list">
-    <alpaca-product-item
-      v-for="product in products"
-      :key="product.id"
-      :id="product.id"
-      :name="product.name"
-      :url="product.url"
-      :image="product.image"
-      :price="product.price"
-      :special-price="product.specialPrice"
-      :old-price="product.oldPrice"
-      :options="product.options"
-      :quantity="quantity"
-      :remove-button="removeButton"
-      item-tag="li"
-      class="minicart__product-item"
-      @remove="onRemove(product.id)"
-    />
+    <slot name="products"/>
   </alpaca-list>
   <section class="minicart__summary">
     <alpaca-heading
@@ -41,15 +25,7 @@
       </div>
     </div>
   </section>
-  <div
-    class="
-      row
-      row--no-margins
-      center-xs
-      between-md
-      minicart__actions
-    "
-  >
+  <div class="row row--no-margins center-xs between-md minicart__actions">
     <alpaca-button
       class="col-xs-12 col-md-4 minicart__return-button"
       blank
@@ -58,13 +34,7 @@
       {{ returnToShoppingButton }}
     </alpaca-button>
     <alpaca-button
-      class="
-        col-xs-12
-        col-md-4
-        first-xs
-        last-md
-        minicart__checkout-button
-      "
+      class="col-xs-12 col-md-4 first-xs last-md minicart__checkout-button"
       secondary
       @click="goToCheckout"
     >

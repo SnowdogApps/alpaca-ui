@@ -1,7 +1,7 @@
 <div class="quantity-update">
   <label
     v-if="label !== ''"
-    class="quantity-update__label"
+    :class="['quantity-update__label', labelClass]"
     :for="inputId"
   >
     {{ label }}
@@ -27,9 +27,9 @@
       :max="inputMax"
       :name="inputName"
       :placeholder="inputPlaceholder"
-      :class="inputClass"
       :input-default-class="false"
       type="number"
+      class="quantity-update__input-wrapper"
       input-class="quantity-update__input"
       autocomplete="off"
       hidden-label
