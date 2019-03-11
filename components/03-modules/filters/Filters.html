@@ -33,22 +33,46 @@
     <alpaca-dropdown-list
       secondary
     >
+      <template
+        v-if="checkboxItems && checkboxItems.every(el => Array.isArray(el))"
+      >
+        <alpaca-checkbox-filter
+          v-for="{ key, checkboxArray } in getCheckboxArrayWithId"
+          key="key"
+          title="Checkbox"
+          :id="key"
+          :items="checkboxArray"
+          @select="selectOptions"
+        />
+      </template>
       <alpaca-checkbox-filter
+        v-else-if="checkboxItems"
+        key="key"
         title="Checkbox"
         id="checkboxId"
         :items="checkboxItems"
+        @select="selectOptions"
       />
       <alpaca-swatch-filter
+        v-if="swatchItems"
         title="Swatch"
         id="swatchId"
         :items="swatchItems"
+        @click="checkSwatch"
       />
       <alpaca-color-filter
+        v-if="colorItems"
         title="Color"
         id="colorId"
         :items="colorItems"
+        @click="checkColor"
       />
-      <!--//TODO Add range component-->
+      <alpaca-range
+        v-model="val"
+        :min="min"
+        :max="max"
+        @apply="updateVal"
+      />
     </alpaca-dropdown-list>
   </div>
 </div>

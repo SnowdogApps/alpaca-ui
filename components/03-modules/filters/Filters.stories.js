@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from "@storybook/addon-actions"
 
 import App from '../../01-globals/app/App.vue'
 import AlpacaFilters from './Filters.vue'
@@ -15,7 +16,8 @@ storiesOf('Modules/Filters', module)
       swatchItems,
       colorItems,
       activeFilterItems,
-      checkboxItems
+      checkboxItems,
+      val: [0, 1000]
     }),
     template: `
       <app>
@@ -26,7 +28,20 @@ storiesOf('Modules/Filters', module)
           :swatch-items="swatchItems"
           :color-items="colorItems"
           :checkbox-items="checkboxItems"
+          :min="0"
+          :max="1000"
+          :val="val"
+          @selectOptions="selectOptions"
+          @checkSwatch="checkSwatch"
+          @checkColor="checkColor"
+          @updateVal="updateVal"
         />
       </app>
-    `
+    `,
+    methods: {
+      selectOptions: action('Updated val'),
+      checkSwatch: action('Updated swatch'),
+      checkColor: action('Updated color'),
+      updateVal: action('Updated range')
+    }
   }))

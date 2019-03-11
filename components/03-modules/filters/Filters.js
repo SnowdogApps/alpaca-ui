@@ -1,8 +1,10 @@
+import uniqueId from 'lodash.uniqueid'
 import AlpacaHeading from '../../01-globals/heading/Heading.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
 import AlpacaDropdownListItem from '../../02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
+import AlpacaRange from '../../03-modules/range/Range.vue'
 import AlpacaActiveFilters from '../active-filters/ActiveFilters.vue'
 import AlpacaSwatchFilter from '../filter/swatch-filter/SwatchFilter.vue'
 import AlpacaCheckboxFilter from '../filter/checkbox-filter/CheckboxFilter.vue'
@@ -15,6 +17,7 @@ export default {
     AlpacaDivider,
     AlpacaDropdownList,
     AlpacaDropdownListItem,
+    AlpacaRange,
     AlpacaActiveFilters,
     AlpacaColorFilter,
     AlpacaSwatchFilter,
@@ -29,21 +32,33 @@ export default {
       type: String,
       required: true
     },
-    activeFilterItems: {
+    min: {
+      type: Number,
+      required: true
+    },
+    max: {
+      type: Number,
+      required: true
+    },
+    val: {
       type: Array,
       required: true
+    },
+    activeFilterItems: {
+      type: Array,
+      default: null
     },
     swatchItems: {
       type: Array,
-      required: true
+      default: null
     },
     colorItems: {
       type: Array,
-      required: true
+      default: null
     },
     checkboxItems: {
       type: Array,
-      required: true
+      default: null
     }
   },
   data() {
@@ -51,9 +66,26 @@ export default {
       isVisible: true
     }
   },
+  computed: {
+    getCheckboxArrayWithId() {
+      return this.checkboxItems.map(checkboxArray => ({ key: uniqueId("checkbox"), checkboxArray }))
+    }
+  },
   methods: {
     showFilters() {
       this.isVisible = !this.isVisible
-    }
+    },
+    selectOptions(val) {
+      this.$emit('selectOptions', val)
+    },
+    checkSwatch(val) {
+      this.$emit('checkSwatch', val)
+    },
+    checkColor(val) {
+      this.$emit('checkColor', val)
+    },
+    updateVal(val) {
+      this.$emit('updateVal', val)
+    },
   }
 }
