@@ -11,7 +11,7 @@
     :rail-style="slider.railStyle"
     :dot-style="slider.dotStyle"
     :process-style="slider.processStyle"
-    @input="syncValue"
+    @change="syncValue"
   />
   <div class="range-filter__inputs-wrapper">
     <label
@@ -70,3 +70,4 @@
     {{ applyLabel }}
   </alpaca-button>
 </div>
+

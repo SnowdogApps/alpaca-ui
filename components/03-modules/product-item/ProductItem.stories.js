@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
 import App from '../../01-globals/app/App.vue'
+import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
 import AlpacaProductItem from './ProductItem.vue'
 
 import products from '../../../mocks/products'
@@ -12,11 +13,7 @@ storiesOf('Modules/Product item', module)
   .add('Default', () => ({
     components: { App, AlpacaProductItem },
     data: () => ({
-      product: products[0],
-      quantity: {
-        text: 'Qty:',
-        label: ''
-      }
+      product: products[0]
     }),
     template: `
       <app>
@@ -30,19 +27,16 @@ storiesOf('Modules/Product item', module)
           :old-price="product.oldPrice"
           :options="product.options"
           remove-button="Remove this product from your shopping cart"
-          :quantity="quantity"
           @remove="removeMethod"
-          @change="changeMethod"
         />
       </app>
     `,
     methods: {
       removeMethod: action('Remove'),
-      changeMethod: action('Change')
     }
   }))
-  .add('Without Qty', () => ({
-    components: { App, AlpacaProductItem },
+  .add('With Qty', () => ({
+    components: { App, AlpacaProductItem, AlpacaQuantityUpdate },
     data: () => ({
       product: products[0]
     }),
@@ -59,34 +53,22 @@ storiesOf('Modules/Product item', module)
           :options="product.options"
           remove-button="Remove this product from your shopping cart"
           @remove="removeMethod"
-          @change="changeMethod"
-        />
-      </app>
-    `,
-    methods: {
-      removeMethod: action('Remove'),
-      changeMethod: action('Change')
-    }
-  }))
-  .add('Without remove', () => ({
-    components: { App, AlpacaProductItem },
-    data: () => ({
-      product: products[0]
-    }),
-    template: `
-      <app>
-        <alpaca-product-item
-          :id="product.id"
-          :name="product.name"
-          :url="product.url"
-          :image="product.image"
-          :price="product.price"
-          :special-price="product.specialPrice"
-          :old-price="product.oldPrice"
-          :options="product.options"
-          @remove="removeMethod"
-          @change="changeMethod"
-        />
+        >
+          <template #quantity>
+            <alpaca-quantity-update
+              :input-id="'qty' + product.id"
+              input-aria-label="Change the quantity"
+              decrement-aria-label="Decrease the quantity"
+              decrement-icon-title="Minus mark"
+              increment-aria-label="Increase the quantity"
+              increment-icon-title="Plus mark"
+              class="product-item__qty"
+              label="Qty:"
+              label-class="product-item__qty-label"
+              @update="changeMethod"
+            />
+          </template>
+        </alpaca-product-item>
       </app>
     `,
     methods: {

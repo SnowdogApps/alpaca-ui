@@ -11,9 +11,9 @@ export default {
       type: String,
       default: 'Quantity'
     },
-    inputClass: {
+    labelClass: {
       type: String,
-      default: 'quantity-update__input-wrapper'
+      default: ''
     },
     inputId: {
       type: String,
