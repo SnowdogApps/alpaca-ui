@@ -35,12 +35,12 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
 
   &__data {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
 
   &__name {
-    margin-bottom: 8px;
+    margin-bottom: $spacer;
+    flex: 1;
     line-height: $font-line-height;
     text-decoration: none;
 
@@ -73,12 +73,6 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
     }
   }
 
-  &__name,
-  &__price-wrapper,
-  &__attributes {
-    flex-basis: 50%;
-  }
-
   &__qty {
     display: flex;
   }
@@ -97,6 +91,7 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
   &__attributes {
     margin: $product-item__attributes-margin;
     margin-right: $spacer;
+    flex: 100%;
     font-size: $font-size-small;
 
     @include mq($screen-m) {
