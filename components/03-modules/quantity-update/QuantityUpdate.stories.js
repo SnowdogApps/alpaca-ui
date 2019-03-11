@@ -9,7 +9,10 @@ storiesOf('Modules/Quantity Update', module)
     components: { App, AlpacaQuantityUpdate },
     template: `
       <app>
-        <alpaca-quantity-update @update="updateVal"/>
+        <alpaca-quantity-update
+          :value="4"
+          @update="updateVal"
+        />
       </app>
     `,
     methods: {

@@ -7,6 +7,10 @@ export default {
     AlpacaButton
   },
   props: {
+    value: {
+      type: Number,
+      required: true
+    },
     label: {
       type: String,
       default: 'Quantity'
@@ -66,12 +70,15 @@ export default {
   },
   data() {
     return {
-      currentValue: 1
+      currentValue: null
     }
   },
   methods: {
     changeValue () {
-      this.$emit('update', this.currentValue)
+      this.$emit('update', parseInt(this.currentValue, 10))
     }
+  },
+  created () {
+    this.currentValue = this.value
   }
 }
