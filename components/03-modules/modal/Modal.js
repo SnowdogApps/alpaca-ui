@@ -18,6 +18,10 @@ export default {
     }
   },
   props: {
+    name: {
+      type: String,
+      required: true
+    },
     heading: {
       type: String,
       default: null
@@ -52,25 +56,35 @@ export default {
     }
   },
   methods: {
-    show() {
-      this.ariaHidden = 'false'
-      this.focused = document.activeElement
-      this.visibility = !this.visibility
-      this.$nextTick(() => this.$refs.modal.focus())
-  },
-    hide() {
-      this.ariaHidden = 'true'
-      this.visibility = !this.visibility
-      this.$nextTick(() => this.focused.focus())
+    show (name) {
+      if (name === this.name) {
+        this.focused = document.activeElement
+        this.toggle(true)
+      }
     },
-    handleBackgroundClick() {
+    hide (name) {
+      if (name === this.name) {
+        this.toggle(false)
+      }
+    },
+    toggle (state) {
+      this.ariaHidden = state ? 'false' : 'true'
+      this.visibility = state
+
+      if (state === true) {
+        this.$nextTick(() => this.$refs.modal.focus())
+      } else {
+        this.$nextTick(() => this.focused.focus())
+      }
+    },
+    handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
-        this.hide()
+        this.toggle(false)
       }
     },
     handleEscapeKeyUp (event) {
       if (event.which === 27 && this.visibility) {
-        this.hide()
+        this.toggle(false)
       }
     }
   },

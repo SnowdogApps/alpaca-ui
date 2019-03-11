@@ -2,7 +2,7 @@
   <div class="swatch">
     <alpaca-label
       v-if="label"
-      class="swatch__title"
+      :class="['swatch__title', labelClass]"
     >
       {{ label }}
     </alpaca-label>
@@ -15,7 +15,7 @@
         v-for="(option) in options"
         :key="option.id"
         :class="['swatch__option-container', selected === option.value && 'swatch__option-container--selected', wrapperClass]"
-        :aria-label="option.aria-label"
+        :aria-label="option.label"
         tabindex="0"
         @click="setActiveValue(option.value)"
       >
@@ -51,6 +51,10 @@
         required: true
       },
       label: {
+        type: String,
+        default: null
+      },
+      labelClass: {
         type: String,
         default: null
       },

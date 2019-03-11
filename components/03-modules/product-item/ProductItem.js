@@ -17,46 +17,55 @@ export default {
     event: "change"
   },
   props: {
-    itemTag: {
-      type: String,
-      default: 'div'
-    },
-    productImage: {
-      type: Object,
-      required: true
-    },
-    quantity: {
-      type: Object,
-      default: null
-    },
-    href: {
-      type: String,
-      required: true
-    },
-    productName: {
-      type: String,
-      required: true
-    },
-    productPrice: {
-      type: Object,
-      required: true
-    },
-    productId: {
-      type: String,
+    id: {
+      type: Number,
       required: true
     },
     name: {
       type: String,
       required: true
     },
-    productOptions: {
-      type: Array,
+    url: {
+      type: [Object, String],
       required: true
+    },
+    image: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: String,
+      required: true
+    },
+    specialPrice: {
+      type: String,
+      required: true
+    },
+    oldPrice: {
+      type: String,
+      required: true
+    },
+    removeButton: {
+      type: String,
+      default: null
+    },
+    options: {
+      type: Array,
+      default: null
+    },
+    itemTag: {
+      type: String,
+      default: 'div'
+    }
+  },
+  data () {
+    return {
+      defaultRemoveBtnAriaLabel: "Remove product"
     }
   },
   methods: {
-    onRemove() {
-      this.$emit("remove")
+    onRemove(val) {
+      this.$emit("remove", val)
     },
     onChange(val) {
       this.$emit("change", val)

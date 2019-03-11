@@ -15,7 +15,6 @@ storiesOf('Modules/Gallery', module)
       <app>
         <alpaca-gallery
           :images="gallery.images"
-          :mainImage="1"
         />
       </app>
     `

@@ -9,7 +9,7 @@ storiesOf('Modules/Range', module).add('Default', () => ({
   template: `
     <app>
       <alpaca-range
-        v-model="value" 
+        v-model="value"
         :min="min"
         :max="max"
         @apply="updateVal"
