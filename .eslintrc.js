@@ -17,7 +17,7 @@ module.exports = {
       'multiline': 'always'
     }],
     'semi': ['error', 'never'],
-    'vue/singleline-html-element-content-newline': ['error', {
+    'vue/singleline-html-element-content-newline': ['warning', {
       'ignoreWhenNoAttributes': true,
       'ignores': ['pre', 'textarea']
     }],

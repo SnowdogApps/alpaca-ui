@@ -2,8 +2,8 @@
   <div class="register">
     <form>
       <alpaca-fieldset
-        class="register__fieldset"
         :legend-text="personalInformationLegend"
+        class="register__fieldset"
         legend-class="register__legend"
       >
         <alpaca-input
@@ -24,8 +24,8 @@
         />
       </alpaca-fieldset>
       <alpaca-fieldset
-        class="register__fieldset"
         :legend-text="signInLegend"
+        class="register__fieldset"
         legend-class="register__legend"
       >
         <alpaca-input

@@ -1,8 +1,8 @@
 <template>
   <a
     :href="link"
-    class="banner"
     :aria-label="ariaLabel"
+    class="banner"
   >
     <picture class="image">
       <source
@@ -12,9 +12,9 @@
         :media="source.mediaQuery"
       >
       <img
-        class="lazyload"
         :src="image.defaultSrc"
         :alt="image.alt"
+        class="lazyload"
       >
     </picture>
   </a>

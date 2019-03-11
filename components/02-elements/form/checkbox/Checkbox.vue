@@ -15,11 +15,11 @@
       @change="change($event.target.checked)"
     >
     <alpaca-icon
-      icon="checked"
       :class="[
         iconClass,
         'checkbox__icon'
       ]"
+      icon="checked"
     />
     <component
       :is="link ? 'span' : 'label'"
