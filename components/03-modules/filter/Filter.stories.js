@@ -23,7 +23,7 @@ storiesOf('Modules/Filter', module)
           <alpaca-swatch-filter
             title="Swatch"
             id="swatchId"
-            :items="swatchItems"
+            :items="swatchItems.items"
             @click="click"
           />
         </alpaca-dropdown-list>
@@ -44,7 +44,7 @@ storiesOf('Modules/Filter', module)
           <alpaca-color-filter
             title="Color"
             id="colorId"
-            :items="colorItems"
+            :items="colorItems.items"
             @click="click"
           />
         </alpaca-dropdown-list>
@@ -65,9 +65,13 @@ storiesOf('Modules/Filter', module)
           <alpaca-checkbox-filter
             title="Checkbox"
             id="checkboxId"
-            :items="checkboxItems"
+            :items="checkboxItems[0].items"
+            @select="select"
           />
         </alpaca-dropdown-list>
       </app>
-    `
+    `,
+    methods: {
+      select: action('Selected'),
+    }
   }))
