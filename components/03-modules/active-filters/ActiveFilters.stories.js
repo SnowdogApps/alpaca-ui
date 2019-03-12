@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaActiveFilters from './ActiveFilters.vue'
 
 import filters from './mocks/active-filters.json'

@@ -2,21 +2,21 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
-import AlpacaModal from '../../03-modules/modal/Modal.vue'
-import AlpacaLogin from '../../03-modules/login/Login.vue'
-import AlpacaMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
-import AlpacaWishlist from '../../03-modules/wishlist/Wishlist.vue'
-import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
-import AlpacaProductItem from '../../03-modules/product-item/ProductItem.vue'
-import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AlpacaModal from '@alpaca-storybook/components/03-modules/modal/Modal.vue'
+import AlpacaLogin from '@alpaca-storybook/components/03-modules/login/Login.vue'
+import AlpacaMiniCart from '@alpaca-storybook/components/03-modules/mini-cart/MiniCart.vue'
+import AlpacaWishlist from '@alpaca-storybook/components/03-modules/wishlist/Wishlist.vue'
+import AlpacaQuantityUpdate from '@alpaca-storybook/components/03-modules/quantity-update/QuantityUpdate.vue'
+import AlpacaProductItem from '@alpaca-storybook/components/03-modules/product-item/ProductItem.vue'
+import AlpacaOffCanvasSidebar from '@alpaca-storybook/components/03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
-import EventBus from '../../../eventBus'
+import EventBus from '@alpaca-storybook/eventBus'
 
 import menu from './mocks/menu'
-import products from '../../../mocks/products'
-import totals from '../../../mocks/totals'
+import products from '@alpaca-storybook/mocks/products'
+import totals from '@alpaca-storybook/mocks/totals'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())

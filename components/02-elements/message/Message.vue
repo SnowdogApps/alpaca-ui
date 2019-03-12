@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+  import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 
   export default {
     components: { AlpacaIcon },

@@ -76,9 +76,9 @@
 </template>
 
 <script>
-  import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
+  import AlpacaFieldset from '@alpaca-storybook/components/02-elements/form/fieldset/Fieldset.vue'
+  import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
+  import AlpacaInput from '@alpaca-storybook/components/02-elements/form/input/Input.vue'
 
   export default {
     components: {

@@ -38,8 +38,8 @@
 
 <script>
   import uniqueId from 'lodash.uniqueid'
-  import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-  import Icon from '../../01-globals/icon/Icon.vue'
+  import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Heading.vue'
+  import Icon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 
   export default {
     components: {
