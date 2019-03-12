@@ -29,7 +29,7 @@ export default {
       type: String,
       default: 'Password'
     },
-    goToForgetPasswordButton: {
+    goToForgotPasswordButton: {
       type: String,
       required: true
     },

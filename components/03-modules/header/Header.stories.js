@@ -60,6 +60,7 @@ storiesOf('Modules/Header', module)
             forget-password-text="Forgot your password?"
             forget-password-link="#"
             submit-button="Sign In"
+            go-to-forgot-password-button=""
             go-to-register-button="or register an account"
             @login="login"
             @goToRegister="goToRegister"
@@ -97,6 +98,7 @@ storiesOf('Modules/Header', module)
               >
                 <template #quantity>
                   <alpaca-quantity-update
+                    :value="3"
                     :input-id="'qty' + product.id"
                     input-aria-label="Change the quantity"
                     decrement-aria-label="Decrease the quantity"
