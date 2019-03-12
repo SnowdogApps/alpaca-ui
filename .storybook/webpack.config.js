@@ -47,7 +47,7 @@ module.exports = ({ config, mode }) => {
 
   config.resolve.alias = {
     ...config.resolve.alias,
-    '@': path.resolve(__dirname, '../')
+    '@alpaca-storybook': path.resolve(__dirname, '../')
   }
 
   return config

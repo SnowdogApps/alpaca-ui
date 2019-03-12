@@ -41,9 +41,9 @@
 </template>
 
 <script>
-  import AlpacaInput from '@/components/02-elements/form/input/Input.vue'
-  import AlpacaCheckbox from '@/components/02-elements/form/checkbox/Checkbox.vue'
-  import AlpacaButton from '@/components/02-elements/button/Button.vue'
+  import AlpacaInput from '@alpaca-storybook/components/02-elements/form/input/Input.vue'
+  import AlpacaCheckbox from '@alpaca-storybook/components/02-elements/form/checkbox/Checkbox.vue'
+  import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 
   export default {
     components: {

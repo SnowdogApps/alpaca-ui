@@ -115,14 +115,14 @@
 </template>
 
 <script>
-  import AlpacaParagraph from '@/components/01-globals/paragraph/Paragraph.vue'
-  import AlpacaLink from '@/components/01-globals/link/Link.vue'
-  import AlpacaHeading from '@/components/01-globals/heading/Heading.vue'
-  import AlpacaImage from '@/components/02-elements/image/Image.vue'
-  import AlpacaButton from '@/components/02-elements/button/Button.vue'
-  import AlpacaPrice from '@/components/02-elements/price/Price.vue'
-  import AlpacaList from '@/components/02-elements/list/List.vue'
-  import AlpacaListItem from '@/components/02-elements/list/ListItem.vue'
+  import AlpacaParagraph from '@alpaca-storybook/components/01-globals/paragraph/Paragraph.vue'
+  import AlpacaLink from '@alpaca-storybook/components/01-globals/link/Link.vue'
+  import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Heading.vue'
+  import AlpacaImage from '@alpaca-storybook/components/02-elements/image/Image.vue'
+  import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
+  import AlpacaPrice from '@alpaca-storybook/components/02-elements/price/Price.vue'
+  import AlpacaList from '@alpaca-storybook/components/02-elements/list/List.vue'
+  import AlpacaListItem from '@alpaca-storybook/components/02-elements/list/ListItem.vue'
 
   export default {
     components: {

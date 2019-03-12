@@ -1,8 +1,8 @@
-import AlpacaHeading from '@/components/01-globals/heading/Heading.vue'
-import AlpacaDivider from '@/components/02-elements/divider/Divider.vue'
-import AlpacaIcon from '@/components/01-globals/icon/Icon.vue'
+import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Heading.vue'
+import AlpacaDivider from '@alpaca-storybook/components/02-elements/divider/Divider.vue'
+import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 
-import EventBus from '@/eventBus'
+import EventBus from '@alpaca-storybook/eventBus'
 
 export default {
   components: {

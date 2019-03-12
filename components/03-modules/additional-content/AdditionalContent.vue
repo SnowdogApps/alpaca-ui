@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import AlpacaPicture from '@/components/03-modules/picture/Picture.vue'
+import AlpacaPicture from '@alpaca-storybook/components/03-modules/picture/Picture.vue'
 export default {
   components: {
     AlpacaPicture

@@ -1,9 +1,9 @@
-import Container from '@/components/01-globals/container/Container.vue'
-import AlpacaIcon from '@/components/01-globals/icon/Icon.vue'
-import Logo from '@/components/02-elements/logo/Logo.vue'
-import MegaMenu from '@/components/03-modules/mega-menu/MegaMenu.vue'
-import HeaderButton from '@/components/03-modules/header-button/HeaderButton.vue'
-import HeaderSearch from '@/components/03-modules/header-search/HeaderSearch.vue'
+import Container from '@alpaca-storybook/components/01-globals/container/Container.vue'
+import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
+import Logo from '@alpaca-storybook/components/02-elements/logo/Logo.vue'
+import MegaMenu from '@alpaca-storybook/components/03-modules/mega-menu/MegaMenu.vue'
+import HeaderButton from '@alpaca-storybook/components/03-modules/header-button/HeaderButton.vue'
+import HeaderSearch from '@alpaca-storybook/components/03-modules/header-search/HeaderSearch.vue'
 
 export default {
   components: {

@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '@/components/01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaRegister from './Register.vue'
 
 storiesOf('Modules/Register', module).add('Default', () => ({

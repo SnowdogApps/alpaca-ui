@@ -1,9 +1,9 @@
-import AlpacaHeading from '@/components/01-globals/heading/Heading.vue'
-import AlpacaParagraph from '@/components/01-globals/paragraph/Paragraph.vue'
-import AlpacaButton from '@/components/02-elements/button/Button.vue'
-import AlpacaInput from '@/components/02-elements/form/input/Input.vue'
-import AlpacaFieldset from '@/components/02-elements/form/fieldset/Fieldset.vue'
-import AlpacaTextarea from '@/components/02-elements/form/input/textarea/Textarea.vue'
+import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Heading.vue'
+import AlpacaParagraph from '@alpaca-storybook/components/01-globals/paragraph/Paragraph.vue'
+import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
+import AlpacaInput from '@alpaca-storybook/components/02-elements/form/input/Input.vue'
+import AlpacaFieldset from '@alpaca-storybook/components/02-elements/form/fieldset/Fieldset.vue'
+import AlpacaTextarea from '@alpaca-storybook/components/02-elements/form/input/textarea/Textarea.vue'
 
 export default {
   components: {

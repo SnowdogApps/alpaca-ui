@@ -22,7 +22,7 @@
 
 <script>
   import uniqueId from 'lodash.uniqueid'
-  import AlpacaIcon from '@/components/01-globals/icon/Icon.vue'
+  import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 
   export default {
     components: {

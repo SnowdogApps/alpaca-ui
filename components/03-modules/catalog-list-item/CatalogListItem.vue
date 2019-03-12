@@ -70,12 +70,12 @@
 </template>
 
 <script>
-  import AlpacaLink from '@/components/01-globals/link/Link.vue'
-  import AlpacaImage from '@/components/02-elements/image/Image.vue'
-  import AlpacaBadge from '@/components/02-elements/badge/Badge.vue'
-  import AlpacaSwatch from '@/components/02-elements/swatch/Swatch.vue'
-  import AlpacaPrice from '@/components/02-elements/price/Price.vue'
-  import AlpacaButton from '@/components/02-elements/button/Button.vue'
+  import AlpacaLink from '@alpaca-storybook/components/01-globals/link/Link.vue'
+  import AlpacaImage from '@alpaca-storybook/components/02-elements/image/Image.vue'
+  import AlpacaBadge from '@alpaca-storybook/components/02-elements/badge/Badge.vue'
+  import AlpacaSwatch from '@alpaca-storybook/components/02-elements/swatch/Swatch.vue'
+  import AlpacaPrice from '@alpaca-storybook/components/02-elements/price/Price.vue'
+  import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 
   export default {
     components: {

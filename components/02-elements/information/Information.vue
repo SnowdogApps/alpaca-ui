@@ -13,8 +13,8 @@
 </template>
 
 <script>
-  import AlpacaHeading from '@/components/01-globals/heading/Heading.vue'
-  import AlpacaParagraph from '@/components/01-globals/paragraph/Paragraph.vue'
+  import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Heading.vue'
+  import AlpacaParagraph from '@alpaca-storybook/components/01-globals/paragraph/Paragraph.vue'
 
   export default {
     components: {

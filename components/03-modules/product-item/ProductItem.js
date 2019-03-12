@@ -1,8 +1,8 @@
-import AlpacaImage from "@/components/02-elements/image/Image.vue"
-import AlpacaPrice from "@/components/02-elements/price/Price.vue"
-import AlpacaDescriptionList from "@/components/02-elements/list/DescriptionList.vue"
-import AlpacaButton from "@/components/02-elements/button/Button.vue"
-import AlpacaQuantityUpdate from "@/components/03-modules/quantity-update/QuantityUpdate.vue"
+import AlpacaImage from "@alpaca-storybook/components/02-elements/image/Image.vue"
+import AlpacaPrice from "@alpaca-storybook/components/02-elements/price/Price.vue"
+import AlpacaDescriptionList from "@alpaca-storybook/components/02-elements/list/DescriptionList.vue"
+import AlpacaButton from "@alpaca-storybook/components/02-elements/button/Button.vue"
+import AlpacaQuantityUpdate from "@alpaca-storybook/components/03-modules/quantity-update/QuantityUpdate.vue"
 
 export default {
   components: {

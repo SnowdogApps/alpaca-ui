@@ -69,7 +69,7 @@
 </template>
 
 <script>
-  import AlpacaButton from '@/components/02-elements/button/Button.vue'
+  import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 
   export default {
     components: {

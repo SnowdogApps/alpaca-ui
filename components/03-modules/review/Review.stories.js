@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '@/components/01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaReview from './review/Review.vue'
 import AlpacaReviewSummary from './review-summary/ReviewSummary.vue'
 import AlpacaReviewAdd from './review-add/ReviewAdd.vue'

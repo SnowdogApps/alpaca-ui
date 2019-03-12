@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import AlpacaImage from '@/components/02-elements/image/Image.vue'
+  import AlpacaImage from '@alpaca-storybook/components/02-elements/image/Image.vue'
 
   export default {
     components: {

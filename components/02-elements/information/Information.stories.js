@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import information from "./mocks/information"
 
-import App from '@/components/01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaInformation from './Information.vue'
 
 storiesOf('Elements/Information', module)

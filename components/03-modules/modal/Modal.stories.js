@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@/components/01-globals/app/App.vue'
-import AlpacaButton from '@/components/02-elements/button/Button.vue'
-import AlpacaModal from '@/components/03-modules/modal/Modal.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
+import AlpacaModal from '@alpaca-storybook/components/03-modules/modal/Modal.vue'
 
-import EventBus from '@/eventBus'
+import EventBus from '@alpaca-storybook/eventBus'
 
 storiesOf('Modules/Modal', module)
   .add('Default', () => ({
