@@ -55,6 +55,11 @@ export default {
       default: false
     }
   },
+  watch: {
+    visibility (isVisible) {
+      document.body.style.overflow = isVisible ? 'hidden' : 'auto'
+    }
+  },
   methods: {
     show (name) {
       if (name === this.name) {
