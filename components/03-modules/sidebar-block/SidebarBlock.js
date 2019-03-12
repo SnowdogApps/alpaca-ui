@@ -1,8 +1,8 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaDivider from '../../02-elements/divider/Divider.vue'
-import AlpacaList from '../../02-elements/list/List.vue'
-import AlpacaListItem from '../../02-elements/list/ListItem.vue'
+import AlpacaHeading from '@/components/01-globals/heading/Heading.vue'
+import AlpacaButton from '@/components/02-elements/button/Button.vue'
+import AlpacaDivider from '@/components/02-elements/divider/Divider.vue'
+import AlpacaList from '@/components/02-elements/list/List.vue'
+import AlpacaListItem from '@/components/02-elements/list/ListItem.vue'
 
 export default {
   components: {

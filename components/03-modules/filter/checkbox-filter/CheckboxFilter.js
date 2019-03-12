@@ -1,5 +1,5 @@
-import AlpacaDropdownListItem from '../../../02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
-import AlpacaCheckbox from '../../../02-elements/form/checkbox/Checkbox.vue'
+import AlpacaDropdownListItem from '@/components/02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
+import AlpacaCheckbox from '@/components/02-elements/form/checkbox/Checkbox.vue'
 
 export default {
   components: {

@@ -1,5 +1,5 @@
-import AlpacaLink from '../../../01-globals/link/Link.vue'
-import AlpacaButton from '../../../02-elements/button/Button.vue'
+import AlpacaLink from '@/components/01-globals/link/Link.vue'
+import AlpacaButton from '@/components/02-elements/button/Button.vue'
 
 export default {
   components: {

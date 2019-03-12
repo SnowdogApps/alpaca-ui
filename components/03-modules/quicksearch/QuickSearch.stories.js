@@ -5,7 +5,7 @@ import products from './mocks/products.json'
 import categories from './mocks/categories.json'
 import manufacturers from './mocks/manufacturers.json'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@/components/01-globals/app/App.vue'
 import AlpacaQuickSearch from './QuickSearch.vue'
 
 storiesOf('Modules/Quick search', module)

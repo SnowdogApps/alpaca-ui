@@ -1,7 +1,7 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaList from "../../02-elements/list/List.vue"
-import AlpacaButton from "../../02-elements/button/Button.vue"
-import AlpacaProductItem from "../../03-modules/product-item/ProductItem.vue"
+import AlpacaHeading from '@/components/01-globals/heading/Heading.vue'
+import AlpacaList from "@/components/02-elements/list/List.vue"
+import AlpacaButton from "@/components/02-elements/button/Button.vue"
+import AlpacaProductItem from "@/components/03-modules/product-item/ProductItem.vue"
 
 export default {
   components: {

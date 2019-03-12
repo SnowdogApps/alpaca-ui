@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 import data from './mocks/data'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@/components/01-globals/app/App.vue'
 import AlpacaSlider from './Slider.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-import AlpacaImage from '../../02-elements/image/Image'
+import AlpacaIcon from '@/components/01-globals/icon/Icon.vue'
+import AlpacaImage from '@/components/02-elements/image/Image'
 import { Slide } from 'vue-carousel'
 
 storiesOf('Modules/Slider', module)

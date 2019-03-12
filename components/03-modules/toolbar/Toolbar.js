@@ -1,6 +1,6 @@
-import AlpacaSelect from '../../02-elements/form/select/Select.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaPager from '../../03-modules/pager/Pager.vue'
+import AlpacaSelect from '@/components/02-elements/form/select/Select.vue'
+import AlpacaButton from '@/components/02-elements/button/Button.vue'
+import AlpacaPager from '@/components/03-modules/pager/Pager.vue'
 
 export default {
   components: {

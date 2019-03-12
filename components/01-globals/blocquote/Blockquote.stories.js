@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../app/App.vue'
+import App from '@/components/01-globals/app/App.vue'
 import AlpacaBlockquote from './Blockquote.vue'
 
 storiesOf('Global/Blockquote', module)

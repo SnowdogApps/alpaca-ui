@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@/components/01-globals/app/App.vue'
 import AlpacaQuantityUpdate from './QuantityUpdate.vue'
 
 storiesOf('Modules/Quantity Update', module)

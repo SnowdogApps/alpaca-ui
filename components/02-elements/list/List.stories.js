@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@/components/01-globals/app/App.vue'
 import AlpacaList from './List.vue'
 import AlpacaListItem from './ListItem.vue'
 import AlpacaListImageItem from './ListImageItem.vue'
 import AlpacaDescriptionList from './DescriptionList.vue'
-import AlpacaIcon from './../../01-globals/icon/Icon.vue'
-import AlpacaLink from './../../01-globals/link/Link.vue'
+import AlpacaIcon from '@/components/01-globals/icon/Icon.vue'
+import AlpacaLink from '@/components/01-globals/link/Link.vue'
 
 import listElements from './mocks/listElements.json'
 import iconListElements from './mocks/iconListElements.json'
