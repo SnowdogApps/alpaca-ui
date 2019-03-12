@@ -39,8 +39,8 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
   }
 
   &__name {
-    margin-bottom: $spacer;
     flex: 1;
+    margin-bottom: $spacer;
     line-height: $font-line-height;
     text-decoration: none;
 
