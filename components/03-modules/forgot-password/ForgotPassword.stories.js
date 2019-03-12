@@ -10,14 +10,17 @@ storiesOf('Modules/Forgot Password', module)
     template: `
       <app>
         <alpaca-forgot-password
+          style="padding: 20px;"
           info="Please enter your email address below to receive a password reset link."
           submit-button="Reset my password"
           return-button="or return to log in"
-          @submit="exampleMethod"
+          @goToLogin="goToLogin"
+          @submit="resetPassword"
         />
       </app>
     `,
     methods: {
-      exampleMethod: action('Clicked button')
+      resetPassword: action('Reset password'),
+      goToLogin: action('Login view'),
     }
   }))
