@@ -94,4 +94,10 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
       max-width: $header__buttons-width--mq-extra-large;
     }
   }
+
+  &__mobile-menu {
+    @include mq($screen-xl) {
+      display: none;
+    }
+  }
 }

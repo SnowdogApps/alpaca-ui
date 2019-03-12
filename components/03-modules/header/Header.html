@@ -37,8 +37,12 @@
               </span>
             </button>
           </div>
-          <!-- <minicart /> -->
         </div>
+        <header-button
+          icon="mobile-menu"
+          class="header__mobile-menu"
+          @click.native="toggleSideMenu()"
+        />
         <logo
           :src="src"
           :to="link"

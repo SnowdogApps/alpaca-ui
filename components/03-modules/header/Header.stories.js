@@ -11,10 +11,12 @@ import AlpacaWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
 import AlpacaProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AlpacaSideMenu from '../../03-modules/side-menu/SideMenu.vue'
 
 import EventBus from '../../../eventBus'
 
 import menu from './mocks/menu'
+import sideMenu from '../side-menu/mocks/menu.json'
 import products from '../../../mocks/products'
 import totals from '../../../mocks/totals'
 
@@ -30,10 +32,12 @@ storiesOf('Modules/Header', module)
       AlpacaMiniCart,
       AlpacaWishlist,
       AlpacaQuantityUpdate,
-      AlpacaProductItem
+      AlpacaProductItem,
+      AlpacaSideMenu
     },
     data: () => ({
       menu,
+      sideMenu,
       products,
       totals,
       quantity: {
@@ -49,6 +53,7 @@ storiesOf('Modules/Header', module)
           link="#"
           @toggleMicrocart="showMiniCart"
           @toggleWishlist="toggleWishlist"
+          @toggleSideMenu="toggleSideMenu"
           @goToAccount="showRegister"
         />
         <alpaca-modal
@@ -119,6 +124,15 @@ storiesOf('Modules/Header', module)
         >
           <alpaca-wishlist :products="products" />
         </alpaca-off-canvas-sidebar>
+        <alpaca-off-canvas-sidebar
+          ref="sideMenu"
+          heading="Menu"
+          side="left"
+        >
+          <alpaca-side-menu
+            :menuItems="sideMenu"
+          />
+        </alpaca-off-canvas-sidebar>
       </app>
     `,
     methods: {
@@ -130,6 +144,9 @@ storiesOf('Modules/Header', module)
       },
       toggleWishlist() {
         EventBus.$emit('sidebar-show', 'wishlist')
+      },
+      toggleSideMenu() {
+        this.$refs.sideMenu.show()
       },
       login: action('Login'),
       removeMethod: action('Remove'),
