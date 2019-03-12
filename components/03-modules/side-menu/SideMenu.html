@@ -1,0 +1,43 @@
+<ul class="side-menu">
+  <li
+    v-if="prevLevel"
+    class="side-menu__item side-menu__item--prev"
+  >
+    <button
+      type="button"
+      class="side-menu__button side-menu__button--prev"
+      @click.prevent="load(prevLevel)"
+    >
+      <alpaca-icon
+        icon="angle-left"
+        class="side-menu__icon side-menu__icon--prev"
+      />
+      {{ currentItem.label }}
+    </button>
+  </li>
+  <li
+    v-for="(item, idx) in currentItem.nodes"
+    :key="item.level"
+    class="side-menu__item"
+  >
+    <a
+      v-if="item.href"
+      :href="item.href"
+      class="side-menu__link"
+    >
+      {{ item.label }}
+    </a>
+    <button
+      v-if="item.nodes"
+      type="button"
+      class="side-menu__button"
+      @click.prevent="load(item.level)"
+    >
+      {{ item.label }}
+      <alpaca-icon
+        icon="angle-right"
+        class="side-menu__icon"
+      />
+    </button>
+  </li>
+</ul>

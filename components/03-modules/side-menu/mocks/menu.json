@@ -1,0 +1,46 @@
+[
+  {
+    "label": "What's new",
+    "nodes": [
+      {
+        "label": "What's new Subcategory",
+        "nodes": [
+          {
+            "label": "Subcategory subcategory",
+            "nodes": [
+              {
+                "label": "Subcategory subcategory Link",
+                "href": "/sub-link/subcategory"
+              }
+            ]
+          },
+          {
+            "label": "Subcategory Link",
+            "href": "/sub-link"
+          },
+          {
+            "label": "Next Subcategory Link",
+            "href": "/next-sub-link"
+          }
+        ]
+      },
+      {
+        "label": "What's new Link",
+        "href": "/link"
+      }
+    ]
+  },
+  {
+    "label": "Men's",
+    "nodes": [
+      {
+        "label": "Men's Link",
+        "href": "/men-link"
+      }
+    ]
+  },
+  {
+    "label": "Sale",
+    "href": "/sale"
+  }
+]

@@ -10,6 +10,7 @@
     "stylelint": "stylelint 'components/**/*.vue' 'components/**/*.scss' 'assets/styles/**/*.scss' 'docs/styles/**/*.scss'"
   },
   "dependencies": {
+    "lodash.get": "^4.4.2",
     "lodash.uniqueid": "^4.0.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.8",

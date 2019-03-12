@@ -1,0 +1,74 @@
+$side-menu__item-hover-bg-color     : #f6f6fa !default;
+$side-menu__item-border             : $border-width-base $border-style-base $gray-light !default;
+$side-menu__icon-size               : 16px !default;
+$side-menu__item-padding-left       : $spacer !default;
+$side-menu__item-padding            : 0 $spacer--medium 0 $side-menu__item-padding-left !default;
+$side-menu__item-nested-padding-left: $spacer--large !default;
+$side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-left} - #{$side-menu__icon-size} - #{$side-menu__item-padding-left}) !default;
+
+.side-menu {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    padding: $side-menu__item-padding;
+
+    &:hover,
+    &:focus {
+      background: $side-menu__item-hover-bg-color;
+    }
+
+    &--prev {
+      border-bottom: $side-menu__item-border;
+    }
+
+    &--prev ~ & {
+      padding-left: $side-menu__item-nested-padding-left;
+    }
+  }
+
+  &__button {
+    display: flex;
+    padding: $reset;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    font-weight: $font-weight-bold;
+    background: none;
+    cursor: pointer;
+
+    &--prev {
+      justify-content: left;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__item,
+  &__link,
+  &__button {
+    font-size: $font-size-base;
+    line-height: $font-line-height;
+    color: $gray-darker;
+  }
+
+  &__link,
+  &__button {
+    padding: $spacer--medium 0;
+  }
+
+  &__icon {
+    width: $side-menu__icon-size;
+    height: $side-menu__icon-size;
+    fill: $gray-darker;
+
+    &--prev {
+      margin-right: $side-menu__icon-prev-margin-right;
+    }
+  }
+}
