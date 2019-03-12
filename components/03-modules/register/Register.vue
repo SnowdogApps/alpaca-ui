@@ -67,7 +67,7 @@
       <alpaca-button
         class="register__register-button"
         blank
-        @click="goToRegister"
+        @click="goToLogin"
       >
         {{ goToLoginButton }}
       </alpaca-button>
@@ -123,6 +123,9 @@
           password: this.password,
           newsletter: this.newsletter
         })
+      },
+      goToLogin() {
+        this.$emit('goToLogin')
       }
     }
   }

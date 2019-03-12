@@ -14,15 +14,18 @@ storiesOf('Modules/Login', module)
         <alpaca-login
           style="padding: 20px;"
           legend="Login form"
-          forget-password-text="Forgot your password?"
-          forget-password-link="#"
+          go-to-forget-password-button="Forgot Your Password?"
           submit-button="Sign In"
           go-to-register-button="or register an account"
-          @login="exampleMethod"
+          @goToRegister="goToRegister"
+          @goToForgotPassword="goToForgotPassword"
+          @login="login"
         />
       </app>
     `,
     methods: {
-      exampleMethod: action('Clicked button')
+      login: action('Login'),
+      goToRegister: action('Register view'),
+      goToForgotPassword: action('Forgot password view'),
     }
   }))

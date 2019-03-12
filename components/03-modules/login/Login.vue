@@ -24,9 +24,13 @@
         />
       </alpaca-fieldset>
       <div class="row row--no-margins end-xs">
-        <router-link :to="forgetPasswordLink">
-          {{ forgetPasswordText }}
-        </router-link>
+        <alpaca-button
+          class="login__forgot-password-button"
+          blank
+          @click="goToForgotPassword"
+        >
+          {{ goToForgetPasswordButton }}
+        </alpaca-button>
       </div>
       <div class="login__submit-wrapper row row--no-margins center-xs">
         <alpaca-button
@@ -81,11 +85,7 @@
         type: String,
         default: 'Password'
       },
-      forgetPasswordText: {
-        type: String,
-        required: true
-      },
-      forgetPasswordLink: {
+      goToForgetPasswordButton: {
         type: String,
         required: true
       },
@@ -110,17 +110,24 @@
       },
       goToRegister() {
         this.$emit('goToRegister')
+      },
+      goToForgotPassword() {
+        this.$emit('goToForgotPassword')
       }
     }
   }
 </script>
 
 <style lang="scss">
-  $login__fieldset-margin            : 0 0 $spacer 0 !default;
-  $login__submit-wrapper-margin      : $spacer--large 0 0 0 !default;
-  $login__submit-button-width        : 100% !default;
-  $login__submit-button-width\@medium: 240px !default;
-  $login__register-wrapper-margin    : $spacer 0 0 0 !default;
+  $login__fieldset-margin                       : 0 0 $spacer 0 !default;
+  $login__forgot-password-button-height         : 24px !default;
+  $login__forgot-password-button-text-decoration: underline !default;
+  $login__forgot-password-button-color          : $blue !default;
+  $login__forgot-password-button-color--hover   : $gray-darker !default;
+  $login__submit-wrapper-margin                 : $spacer--large 0 0 0 !default;
+  $login__submit-button-width                   : 100% !default;
+  $login__submit-button-width\@medium           : 240px !default;
+  $login__register-wrapper-margin               : $spacer 0 0 0 !default;
 
   .login {
     &__fieldset {
@@ -133,6 +140,18 @@
 
     &__submit-wrapper {
       margin: $login__submit-wrapper-margin;
+    }
+
+    &__forgot-password-button {
+      height: $login__forgot-password-button-height;
+      padding: $reset;
+      text-decoration: $login__forgot-password-button-text-decoration;
+      color: $login__forgot-password-button-color;
+
+      &:hover,
+      &:focus {
+        color: $login__forgot-password-button-color--hover;
+      }
     }
 
     &__submit-button {

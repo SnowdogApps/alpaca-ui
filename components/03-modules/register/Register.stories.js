@@ -14,11 +14,13 @@ storiesOf('Modules/Register', module).add('Default', () => ({
         sign-in-legend="Sign-In information"
         submit-button="Create an Account"
         go-to-login-button="or login to your account"
-        @register="exampleMethod"
+        @goToLogin="goToLogin"
+        @register="register"
       />
     </app>
   `,
   methods: {
-    exampleMethod: action('Clicked button')
+    register: action('Register'),
+    goToLogin: action('Login view')
   }
 }))
