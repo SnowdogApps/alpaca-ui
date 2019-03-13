@@ -1,5 +1,5 @@
 import vueSlider from 'vue-slider-component'
-import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 
 export default {
   components: {

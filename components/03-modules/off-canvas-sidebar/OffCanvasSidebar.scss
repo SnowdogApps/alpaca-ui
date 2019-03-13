@@ -61,6 +61,7 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
     animation-duration: 400ms;
     background-color: $off-canvas-sidebar__content-background-color;
     box-shadow: $off-canvas-sidebar__content-box-shadow;
+    overflow: auto;
 
     @include mq($screen-m) {
       width: $off-canvas-sidebar__content-width\@medium;

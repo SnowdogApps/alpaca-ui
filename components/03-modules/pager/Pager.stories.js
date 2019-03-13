@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import Pager from './Pager.vue'
 
 import pagination from './mocks/pagination.json'

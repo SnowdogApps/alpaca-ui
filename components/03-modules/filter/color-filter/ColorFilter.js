@@ -1,5 +1,5 @@
-import AlpacaDropdownListItem from '../../../02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
-import AlpacaButton from '../../../02-elements/button/Button.vue'
+import AlpacaDropdownListItem from '@alpaca-storybook/components/02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
+import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 
 export default {
   components: {
