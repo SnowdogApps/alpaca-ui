@@ -32,10 +32,10 @@ export default {
           tooltip: null,
           enableCross: false,
           railStyle: {
-            "background-color": "#73739c"
+            "background-color": "#c2c1df"
           },
           processStyle: {
-            "background-color": "#31e37d",
+            "background-color": "#393243",
             "box-shadow": "inset 0 0 3px rgba(51, 51, 51, 0.45)"
           },
           dotStyle: {

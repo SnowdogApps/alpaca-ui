@@ -21,8 +21,8 @@ export default {
     }
   },
   methods: {
-    click(val) {
-      this.$emit('click', val)
+    click(id, label) {
+      this.$emit('click', {id: id, label: label})
     }
   }
 }

@@ -1,9 +1,9 @@
 $range__padding       : $spacer 0 0 0 !default;
-$range__input-margin  : $reset !default;
+$range__input-margin  : $spacer--medium 0 !default;
 $range__dash-padding  : 0 $spacer--medium 0 $spacer !default;
 $range__suffix-padding: 0 $spacer !default;
-$range__button-padding: 0 $spacer--extra-large !default;
-$range__button-margin : 0 0 $spacer--medium 0 !default;
+$range__button-padding: 0 $spacer--medium !default;
+$range__button-margin : $spacer--medium 0 $spacer--medium 0 !default;
 
 .range-filter {
   padding: $range__padding;
@@ -37,5 +37,7 @@ $range__button-margin : 0 0 $spacer--medium 0 !default;
   &__button {
     margin: $range__button-margin;
     padding: $range__button-padding;
+    width: 136px;
+    height: 48px;
   }
 }

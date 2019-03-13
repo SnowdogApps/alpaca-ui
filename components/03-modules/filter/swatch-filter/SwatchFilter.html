@@ -14,7 +14,7 @@
       class="filter__swatch-option"
       :default-class="false"
       :aria-label="item.ariaLabel"
-      @click="click(item.id)"
+      @click="click(item.id, item.label)"
     >
       {{ item.text }}
     </alpaca-button>

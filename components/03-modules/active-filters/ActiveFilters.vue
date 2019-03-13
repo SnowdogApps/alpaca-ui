@@ -1,6 +1,6 @@
 <template>
   <div>
-    <alpaca-list>
+    <alpaca-list v-if="items">
       <alpaca-list-item
         v-for="item in items"
         :key="item.value"
@@ -32,6 +32,7 @@
     </alpaca-list>
 
     <alpaca-button
+      v-show="hasActiveFilters"
       class="active-filters__clear-all"
       @click="clearAll"
     >
@@ -54,13 +55,17 @@
       AlpacaListItem
     },
     props: {
-      items: {
-        type: Array,
-        required: true
-      },
       clearButton: {
         type: String,
         required: true
+      },
+      items: {
+        type: Array,
+        default: null
+      },
+      hasActiveFilters: {
+        type: Boolean,
+        default: false
       },
       singleFilterTag: {
         type: String,

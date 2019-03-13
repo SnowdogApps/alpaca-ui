@@ -44,16 +44,28 @@ export default {
       type: Array,
       required: true
     },
+    colorTitle: {
+      type: String,
+      default: null
+    },
+    swatchTitle: {
+      type: String,
+      default: null
+    },
+    hasActiveFilters: {
+      type: Boolean,
+      default: false
+    },
     activeFilterItems: {
       type: Array,
       default: null
     },
     swatchItems: {
-      type: Object,
+      type: Array,
       default: null
     },
     colorItems: {
-      type: Object,
+      type: Array,
       default: null
     },
     checkboxItems: {
@@ -79,13 +91,16 @@ export default {
       this.$emit('selectOptions', val)
     },
     checkSwatch(val) {
-      this.$emit('checkSwatch', val)
+      this.$emit('checkSwatch', { id: val.id, label: val.label })
     },
     checkColor(val) {
-      this.$emit('checkColor', val)
+      this.$emit('checkColor', { id: val.id, label: val.label })
     },
     updateVal(val) {
       this.$emit('updateVal', val)
+    },
+    clearAll() {
+      this.$emit('clearAll')
     },
   }
 }

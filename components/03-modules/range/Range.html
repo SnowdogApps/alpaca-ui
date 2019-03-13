@@ -25,7 +25,7 @@
       v-model.number.lazy="minInput"
       class="input__field range-filter__input"
       :label="lowerInput.label"
-      type="text"
+      type="number"
       :name="lowerInput.field.name"
       :placeholder="lowerInput.field.placeholder"
     >
@@ -49,7 +49,7 @@
       v-model.number.lazy="maxInput"
       class="input__field range-filter__input"
       :label="upperInput.label"
-      type="text"
+      type="number"
       :name="upperInput.field.name"
       :placeholder="upperInput.field.placeholder"
     >
@@ -61,6 +61,7 @@
     </span>
   </div>
   <alpaca-button
+    inner
     v-if="applyLabel"
     type="button"
     class="button--secondary button--fluid range-filter__button"

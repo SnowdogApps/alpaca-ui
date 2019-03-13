@@ -10,6 +10,8 @@
     <alpaca-active-filters
       :items="activeFilterItems"
       clear-button="Clear all"
+      @clearAll="clearAll"
+      :has-active-filters="hasActiveFilters"
     />
   </div>
   <button
@@ -33,38 +35,40 @@
     <alpaca-dropdown-list
       secondary
     >
-      <template
-        v-if="checkboxItems && Array.isArray(checkboxItems)"
-      >
+      <template>
+        <template
+          v-if="checkboxItems && Array.isArray(checkboxItems)"
+        >
+          <alpaca-checkbox-filter
+            v-for="{ key, checkboxArray } in getCheckboxArrayWithId"
+            :key="key"
+            :title="checkboxArray.name"
+            :id="key"
+            :items="checkboxArray.items"
+            @select="selectOptions"
+          />
+        </template>
         <alpaca-checkbox-filter
-          v-for="{ key, checkboxArray } in getCheckboxArrayWithId"
-          :key="key"
-          :title="checkboxArray.name"
-          :id="key"
-          :items="checkboxArray.items"
+          v-else-if="checkboxItems"
+          key="key"
+          :title="checkboxItems.name"
+          id="checkboxId"
+          :items="checkboxItems.items"
           @select="selectOptions"
         />
       </template>
-      <alpaca-checkbox-filter
-        v-else-if="checkboxItems"
-        key="key"
-        :title="checkboxItems.name"
-        id="checkboxId"
-        :items="checkboxItems.items"
-        @select="selectOptions"
-      />
       <alpaca-swatch-filter
         v-if="swatchItems"
-        :title="swatchItems.name"
+        :title="swatchTitle"
         id="swatchId"
-        :items="swatchItems.items"
+        :items="swatchItems"
         @click="checkSwatch"
       />
       <alpaca-color-filter
         v-if="colorItems"
-        :title="colorItems.name"
+        :title="colorTitle"
         id="colorId"
-        :items="colorItems.items"
+        :items="colorItems"
         @click="checkColor"
       />
       <alpaca-range
