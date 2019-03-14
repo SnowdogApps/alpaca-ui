@@ -13,7 +13,7 @@
           :href="singleFilterTag === 'a' && item.href"
           :aria-label="item.ariaLabel"
           class="active-filters__remove"
-          @click="clearItem"
+          @click="clearItem(item)"
         >
           <alpaca-icon
             :title="closeIconTitle"
@@ -92,8 +92,8 @@
       clearAll() {
         this.$emit('clearAll')
       },
-      clearItem() {
-        this.$emit('clearItem')
+      clearItem(val) {
+        this.$emit('clearItem', val)
       },
     }
   }

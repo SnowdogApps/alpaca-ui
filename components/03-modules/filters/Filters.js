@@ -99,8 +99,12 @@ export default {
     updateVal(val) {
       this.$emit('updateVal', val)
     },
+    clearItem(val) {
+      this.$emit('clearItem', val)
+    },
     clearAll() {
       this.$emit('clearAll')
     },
   }
 }
+
