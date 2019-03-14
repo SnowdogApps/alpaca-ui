@@ -23,10 +23,10 @@
         </component>
 
         <span class="active-filters__label">
-          {{ item.label }} :&nbsp;
+          {{ nameOfFilter(item.attribute_code) }} :&nbsp;
         </span>
         <span class="active-filters__value">
-          {{ item.value }}
+          {{ item.label }}
         </span>
       </alpaca-list-item>
     </alpaca-list>
@@ -81,6 +81,9 @@
       }
     },
     methods: {
+      nameOfFilter(el) {
+        return el.charAt(0).toUpperCase() + el.slice(1)
+      },
       clearAll() {
         this.$emit('clearAll')
       },
