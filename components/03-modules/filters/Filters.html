@@ -72,7 +72,7 @@
         @click="checkColor"
       />
       <alpaca-range
-        v-model="val"
+        :value.sync="val"
         :min="min"
         :max="max"
         @apply="updateVal"

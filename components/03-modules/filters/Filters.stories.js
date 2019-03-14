@@ -4,9 +4,9 @@ import { action } from "@storybook/addon-actions"
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaFilters from './Filters.vue'
 
-import swatchItems from '@alpaca-storybook/components/03-modules/filter/mocks/swatchItems'
-import colorItems from '@alpaca-storybook/components/03-modules/filter/mocks/colorItems'
-import checkboxItems from '@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems'
+import swatchItems from '@alpaca-storybook/components/03-modules/filter/mocks/swatchItems.json'
+import colorItems from '@alpaca-storybook/components/03-modules/filter/mocks/colorItems.json'
+import checkboxItems from '@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems.json'
 import activeFilterItems from '@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters.json'
 
 storiesOf('Modules/Filters', module)
@@ -26,7 +26,9 @@ storiesOf('Modules/Filters', module)
           all-filters-heading="Shopping Options"
           :active-filter-items="activeFilterItems"
           :swatch-items="swatchItems"
+          swatch-title="Swatch"
           :color-items="colorItems"
+          color-title="color"
           :checkbox-items="checkboxItems"
           :min="0"
           :max="1000"

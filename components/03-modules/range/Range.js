@@ -83,7 +83,7 @@ export default {
   },
   data() {
     return {
-      currentValue: this.value
+      currentValue: [0, 1000]
     }
   },
   computed: {
@@ -98,7 +98,6 @@ export default {
         } else {
           this.$set(this.currentValue, 0, minValue)
         }
-        this.syncValue()
       }
     },
     maxInput: {
@@ -112,7 +111,6 @@ export default {
         } else {
           this.$set(this.currentValue, 1, maxValue)
         }
-        this.syncValue()
       }
     }
   },
