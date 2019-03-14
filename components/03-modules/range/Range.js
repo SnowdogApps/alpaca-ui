@@ -83,7 +83,7 @@ export default {
   },
   data() {
     return {
-      currentValue: [0, 1000]
+      currentValue: this.value
     }
   },
   computed: {
