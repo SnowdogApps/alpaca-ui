@@ -130,10 +130,9 @@ storiesOf('Modules/Header', module)
           ref="sideMenu"
           heading="Menu"
           side="left"
+          compact
         >
-          <alpaca-side-menu
-            :menuItems="sideMenu"
-          />
+          <alpaca-side-menu :menu-items="sideMenu" />
         </alpaca-off-canvas-sidebar>
       </app>
     `,

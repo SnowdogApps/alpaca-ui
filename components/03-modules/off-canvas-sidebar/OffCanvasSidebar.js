@@ -53,6 +53,10 @@ export default {
     blank: {
       type: Boolean,
       default: false
+    },
+    compact: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
