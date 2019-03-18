@@ -1,17 +1,17 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import breadcrumbs from '../../02-elements/breadcrumbs/mocks/breadcrumbs.json'
-import tabs from '../../02-elements/tabs/mocks/tabs.json'
-import menu from '../../03-modules/header/mocks/menu.json'
-import banner from '../../03-modules/additional-content/mocks/picture.json'
-import briefInfo from '../../03-modules/brief-info/mocks/brief-info.json'
-import gallery from '../../03-modules/gallery/mocks/gallery.json'
+import breadcrumbs from '@alpaca-storybook/components/02-elements/breadcrumbs/mocks/breadcrumbs.json'
+import tabs from '@alpaca-storybook/components/02-elements/tabs/mocks/tabs.json'
+import menu from '@alpaca-storybook/components/03-modules/header/mocks/menu.json'
+import banner from '@alpaca-storybook/components/03-modules/additional-content/mocks/picture.json'
+import briefInfo from '@alpaca-storybook/components/03-modules/brief-info/mocks/brief-info.json'
+import gallery from '@alpaca-storybook/components/03-modules/gallery/mocks/gallery.json'
 import product from './mocks/product.json'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaProductView from './ProductView.vue'
-import AlpacaHeader from '../../03-modules/header/Header.vue'
+import AlpacaHeader from '@alpaca-storybook/components/03-modules/header/Header.vue'
 
 storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())

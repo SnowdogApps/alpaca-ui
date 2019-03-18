@@ -2,11 +2,11 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
-import App from '../../01-globals/app/App.vue'
-import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import AlpacaQuantityUpdate from '@alpaca-storybook/components/03-modules/quantity-update/QuantityUpdate.vue'
 import AlpacaProductItem from './ProductItem.vue'
 
-import products from '../../../mocks/products'
+import products from '@alpaca-storybook/mocks/products'
 
 storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())

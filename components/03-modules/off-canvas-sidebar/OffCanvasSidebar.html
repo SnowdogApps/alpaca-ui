@@ -26,13 +26,15 @@
         tabindex="-1"
       >
         <div class="off-canvas-sidebar__header row between-xs">
-          <alpaca-heading
-            v-if="!blank"
-            :level="1"
-            class="off-canvas-sidebar__heading"
-          >
-            {{ heading }}
-          </alpaca-heading>
+          <slot name="heading">
+            <alpaca-heading
+              v-if="!blank"
+              :level="1"
+              class="off-canvas-sidebar__heading"
+            >
+              {{ heading }}
+            </alpaca-heading>
+          </slot>
           <button
             v-if="closeButton && !blank"
             @click="toggle(false)"

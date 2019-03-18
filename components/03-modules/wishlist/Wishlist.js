@@ -1,5 +1,5 @@
-import AlpacaList from "../../02-elements/list/List.vue"
-import AlpacaProductItem from "../../03-modules/product-item/ProductItem.vue"
+import AlpacaList from "@alpaca-storybook/components/02-elements/list/List.vue"
+import AlpacaProductItem from "@alpaca-storybook/components/03-modules/product-item/ProductItem.vue"
 
 export default {
   components: {

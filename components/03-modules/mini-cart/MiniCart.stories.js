@@ -2,12 +2,12 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
-import totals from '../../../mocks/totals'
-import products from '../../../mocks/products'
+import totals from '@alpaca-storybook/mocks/totals'
+import products from '@alpaca-storybook/mocks/products'
 
-import App from '../../01-globals/app/App.vue'
-import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
-import AlpacaProductItem from '../../03-modules/product-item/ProductItem.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import AlpacaQuantityUpdate from '@alpaca-storybook/components/03-modules/quantity-update/QuantityUpdate.vue'
+import AlpacaProductItem from '@alpaca-storybook/components/03-modules/product-item/ProductItem.vue'
 import AlpacaMiniCart from './MiniCart.vue'
 
 storiesOf('Modules/Mini Cart', module)
