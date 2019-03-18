@@ -1,74 +1,87 @@
-import get from 'lodash.get'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
+import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 
 export default {
   components: {
-    AlpacaIcon
+    AlpacaIcon,
+    AlpacaButton
   },
   props: {
     menuItems: {
       type: Array,
       required: true
     },
-    rootPositionSign: {
+    startLevel: {
       type: String,
-      default: '*'
+      default: ''
+    },
+    prevIcon: {
+      type: String,
+      default: 'angle-left'
+    },
+    nextIcon: {
+      type: String,
+      default: 'angle-right'
     }
   },
   data () {
     return {
       items: [],
-      currentItem: {
-        label: '',
-        path: ''
-      }
+      currentLevel: this.startLevel,
+      direction: 'ltr'
     }
   },
   mounted() {
     this.items = this.prepareData(this.menuItems)
-    this.currentItem = {
-      path: this.rootPositionSign,
-      nodes: this.menuItems
-    }
   },
   computed: {
-    prevLevel() {
-      let path = ''
-
-      if ((this.currentItem.path.match(/.nodes\[\d\]/g) || []).length) {
-        // prepare path to previous element based on current item path
-        path = this.currentItem.path.split('.').slice(0, -1).join('.')
-      } else if ((this.currentItem.path.match(/\[\d\]/g) || []).length) {
-        // if depth is only one digit, then go back to the root position
-        path = this.rootPositionSign
+    currentItem() {
+      const item = this.getDataByLevelPath(this.currentLevel)
+      return {
+        label: item.label,
+        nodes: item.nodes
       }
-
-      return path
+    },
+    prevLevel() {
+      return this.currentLevel.slice(0, -1)
+    },
+    isRootPosition() {
+      return this.currentLevel === this.prevLevel
+    },
+    transitionName() {
+      return `side-menu-list-${this.direction}`
+    }
+  },
+  watch: {
+    currentLevel(newVal, oldVal) {
+      this.direction = newVal.length > oldVal.length ? 'ltr' : 'rtl'
     }
   },
   methods: {
     prepareData(items, parentLevel) {
       return items.map((item, idx) => {
-        const level = this.setLevel(parentLevel, idx)
+        const level = parentLevel ? `${parentLevel}${idx}` : `${idx}`
 
         item['level'] = level
 
-        if (item.nodes) item.nodes = this.prepareData(item.nodes, level)
+        if (item.nodes) {
+          item.nodes = this.prepareData(item.nodes, level)
+        }
 
         return item
       })
     },
-    setLevel(currentLevel, nextLevel) {
-      // create level path recognized by lodash.get function
-      return currentLevel ? `${currentLevel}.nodes[${nextLevel}]` : `[${nextLevel}]`
+    getDataByLevelPath(levelPath) {
+      let data
+
+      String(levelPath).split('').forEach(level => {
+        data = data && data.nodes ? data.nodes[level] : this.items[level]
+      })
+
+      return data || { nodes: this.items }
     },
     load(levelPath) {
-      const data = levelPath == this.rootPositionSign ? this.items : get(this.items, `${levelPath}`)
-      this.currentItem = {
-        label: data.label,
-        path: levelPath,
-        nodes: [...data.nodes || this.items]
-      }
+      this.currentLevel = levelPath
     }
   }
 }

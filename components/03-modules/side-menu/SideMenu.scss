@@ -4,13 +4,18 @@ $side-menu__icon-size               : 16px !default;
 $side-menu__item-padding-left       : $spacer !default;
 $side-menu__item-padding            : 0 $spacer--medium 0 $side-menu__item-padding-left !default;
 $side-menu__item-nested-padding-left: $spacer--large !default;
-$side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-left} - #{$side-menu__icon-size} - #{$side-menu__item-padding-left}) !default;
+$side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-left} - #{$side-menu__icon-size}) !default;
 
 .side-menu {
   position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: hidden;
+
+  &--nested {
+    overflow: visible;
+  }
 
   &__item {
     padding: $side-menu__item-padding;
@@ -27,6 +32,13 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
     &--prev ~ & {
       padding-left: $side-menu__item-nested-padding-left;
     }
+
+    &--no-hover {
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
+    }
   }
 
   &__button {
@@ -36,9 +48,16 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
     justify-content: space-between;
     width: 100%;
     border: none;
+    border-radius: 0;
     font-weight: $font-weight-bold;
     background: none;
     cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+    }
 
     &--prev {
       justify-content: left;
@@ -53,7 +72,6 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
   &__link,
   &__button {
     font-size: $font-size-base;
-    line-height: $font-line-height;
     color: $gray-darker;
   }
 
@@ -69,6 +87,49 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
 
     &--prev {
       margin-right: $side-menu__icon-prev-margin-right;
+      order: -1;
     }
   }
+}
+
+/* Animations */
+$animation-time : 300ms;
+$animation-delay: 310ms;
+
+.side-menu-list-ltr-enter,
+.side-menu-list-rtl-enter {
+  opacity: 0;
+}
+
+.side-menu-list-ltr-enter-active,
+.side-menu-list-rtl-enter-active {
+  transition: all $animation-time ease-in-out $animation-delay;
+}
+
+.side-menu-list-ltr-leave-active,
+.side-menu-list-rtl-leave-active {
+  transition: all $animation-time ease-in-out;
+}
+
+.side-menu-list-ltr-enter-to,
+.side-menu-list-ltr-leave,
+.side-menu-list-rtl-enter-to,
+.side-menu-list-rtl-leave {
+  transform: translate(0, 0);
+}
+
+.side-menu-list-ltr-enter {
+  transform: translate(100%, 0);
+}
+
+.side-menu-list-ltr-leave-to {
+  transform: translate(-100%, 0);
+}
+
+.side-menu-list-rtl-enter {
+  transform: translate(-100%, 0);
+}
+
+.side-menu-list-rtl-leave-to {
+  transform: translate(100%, 0);
 }
