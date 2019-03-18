@@ -18,10 +18,10 @@ storiesOf('Modules/Toolbar', module)
       <app>
         <alpaca-toolbar
           show-mode
-          show-sorter
-          show-limit
-          show-amount
-          :sort-by="toolbar.sortBy"
+          :sortById="toolbar.id"
+          :sortByName="toolbar.name"
+          :sortByLabel="toolbar.text"
+          :sort-by="toolbar.sortBy.options"
           :limiter="toolbar.limiter"
           :amount="toolbar.amount"
           @listView="listView"
@@ -45,11 +45,10 @@ storiesOf('Modules/Toolbar', module)
       <app>
         <alpaca-toolbar
           show-mode
-          show-sorter
-          show-limit
-          show-pager
-          show-amount
-          :sort-by="toolbar.sortBy"
+          :sortById="toolbar.id"
+          :sortByName="toolbar.name"
+          :sortByLabel="toolbar.text"
+          :sort-by="toolbar.sortBy.options"
           :limiter="toolbar.limiter"
           :pager="toolbar.pager"
           :amount="toolbar.amount"

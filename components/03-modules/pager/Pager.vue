@@ -3,10 +3,10 @@
     <ul class="pager__list">
       <li class="pager__item">
         <alpaca-button
+          :disabled="currentPage < 2"
           icon="arrow-left"
           class="pager__link pager__link--prev"
           aria-label="Go to previous page"
-          :disabled="currentPage < 2"
           @click="setCurrentPage(currentPage - 1)"
         />
       </li>
@@ -57,10 +57,10 @@
 
       <li class="pager__item">
         <alpaca-button
+          :disabled="currentPage > numberOfPages - 1"
           icon="arrow-right"
           class="pager__link pager__link--next"
           aria-label="Go to next page"
-          :disabled="currentPage > numberOfPages - 1"
           @click="setCurrentPage(currentPage + 1)"
         />
       </li>

@@ -19,22 +19,23 @@
     />
   </div>
   <div
-    v-if="showSorter"
+    v-if="sortBy"
     class="toolbar__sorter"
   >
     <alpaca-select
-      :id="sortBy.id"
-      :options="sortBy.options"
-      :label="sortBy.text"
-      :name="sortBy.name"
+      :id="sortById"
+      :options="sortBy"
+      :label="sortByLabel"
+      :name="sortByName"
       label-class="label toolbar__sorter-label"
       select-class="toolbar__sorter-select select__field-item"
       class="toolbar__sorter-wrapper"
-      :selected="sortBy.options[0].text"
+      :selected="sortBy[0].text"
+      @change="change"
     />
   </div>
   <div
-    v-if="showAmount"
+    v-if="amount"
     class="toolbar__amount"
   >
       <span class="toolbar__amount-content">
@@ -45,7 +46,7 @@
       </span>
   </div>
   <div
-    v-if="showLimit"
+    v-if="limiter"
     class="toolbar__limiter"
   >
     <alpaca-select
@@ -64,7 +65,7 @@
       </span>
   </div>
   <div
-    v-if="showPager"
+    v-if="pager"
     class="toolbar__pager"
   >
     <alpaca-pager

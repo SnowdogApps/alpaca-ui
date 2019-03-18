@@ -13,24 +13,20 @@ export default {
       type: Boolean,
       default: false
     },
-    showSorter: {
-      type: Boolean,
-      default: false
-    },
-    showLimit: {
-      type: Boolean,
-      default: false
-    },
-    showAmount: {
-      type: Boolean,
-      default: false
-    },
-    showPager: {
-      type: Boolean,
-      default: false
-    },
     sortBy: {
-      type: Object,
+      type: Array,
+      default: null
+    },
+    sortByLabel: {
+      type: String,
+      default: null
+    },
+    sortByName: {
+      type: String,
+      default: null
+    },
+    sortById: {
+      type: String,
       default: null
     },
     limiter: {
@@ -60,6 +56,9 @@ export default {
     },
     gridView(event){
       this.$emit('gridView', event)
+    },
+    change(event) {
+      this.$emit('change', event)
     }
   }
 }

@@ -10,12 +10,12 @@
     </alpaca-label>
     <div class="select__field">
       <select
-        :id:="id"
         :name="name"
         :class="['select__input', selectClass]"
+        :id:="id"
         @focus="$emit('focus')"
         @blur="$emit('blur')"
-        @change="$emit('input', $event.target.value)"
+        @change="change"
       >
         <option v-if="!selected" />
         <option
@@ -102,6 +102,11 @@
     computed: {
       currentValidations() {
         return this.validations.filter(validation => validation.condition)
+      }
+    },
+    methods: {
+      change(event) {
+        this.$emit('change', event.target.value)
       }
     }
   }
