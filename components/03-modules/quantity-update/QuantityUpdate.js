@@ -37,7 +37,7 @@ export default {
     },
     inputPlaceholder: {
       type: String,
-      default: '0'
+      default: '1'
     },
     inputAriaLabel: {
       type: String,
