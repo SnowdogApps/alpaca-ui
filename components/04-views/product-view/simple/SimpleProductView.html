@@ -1,0 +1,208 @@
+<alpaca-container>
+  <div class="product-view">
+    <alpaca-breadcrumbs :breadcrumbs="breadcrumbs"/>
+    <div class="product-view__wrapper">
+      <div class="product-view__gallery">
+        <alpaca-gallery :images="gallery.images"/>
+      </div>
+      <div class="product-view__main-details">
+        <div class="product-view__heading">
+          <alpaca-heading
+            :level="1"
+            class="product-view__title"
+          >
+            {{ product.name }}
+          </alpaca-heading>
+          <!-- TODO: Use click event to open tab with reviews instead of links -->
+          <alpaca-review-summary
+            :reviews-qty="product.reviews.length"
+            add-review-link="#"
+            amount-link="#"
+          />
+        </div>
+        <div class="product-view__sku">
+          {{ product.sku }}
+        </div>
+        <div class="product-view__stock-line">
+          <alpaca-price
+            v-if="product.price.old && product.price.special"
+            large
+            :old-price="product.price.old"
+            :special-price="product.price.special"
+          />
+          <alpaca-price
+            v-else
+            large
+            :price="product.price.regular"
+          />
+          <span
+            v-if="product.qty > 0 && product.qty <= stockAlertMaxQty"
+            class="product-view__stock-status product-view__stock-status--alert"
+          >
+            {{ inStockAlertText }}
+            {{ product.qty }}
+            {{ inStockAlertTextSuffix }}
+          </span>
+          <span
+            v-else-if="product.qty > 0"
+            class="product-view__stock-status"
+          >
+            {{ inStockText }}
+          </span>
+          <span
+            v-else
+            class="product-view__stock-status product-view__stock-status--out-of-stock"
+          >
+            {{ outOfStockText }}
+          </span>
+        </div>
+      </div>
+      <div class="product-view__secondary-details">
+        <div class="product-view__description">
+          {{ product.description }}
+        </div>
+        <div
+          v-if="product.swatches"
+          class="product-view__options"
+        >
+          <alpaca-swatch
+            color
+            v-if="product.swatches.color"
+            :options="product.swatches.color.options"
+            :label="product.swatches.color.label"
+            label-class="product-view__swatch-option-title"
+          />
+          <alpaca-swatch
+            image
+            v-else-if="product.swatches.image"
+            :options="product.swatches.image.options"
+            :label="product.swatches.image.label"
+            label-class="product-view__swatch-option-title"
+          />
+          <alpaca-swatch
+            v-if="product.swatches.text"
+            :options="product.swatches.text.options"
+            :label="product.swatches.text.label"
+            label-class="product-view__swatch-option-title"
+          />
+        </div>
+        <div class="product-view__main-actions">
+          <div class="product-view__qty">
+            <!-- TODO: Add method for price update -->
+            <alpaca-quantity-update :value="1"/>
+          </div>
+          <div class="product-view__action-elements">
+            <div class="product-view__add-to-cart">
+              <!-- TODO: Add methods for action buttons -->
+              <alpaca-button class="product-view__add-to-cart-btn">
+                {{ addToCartText }}
+              </alpaca-button>
+            </div>
+            <div class="product-view__extra-actions">
+              <alpaca-button
+                icon="heart"
+                :default-class="false"
+                class="
+                  product-view__action
+                  product-view__action--button
+                  product-view__action--wishlist
+                "
+              />
+              <alpaca-button
+                icon="compare"
+                :default-class="false"
+                class="
+                  product-view__action
+                  product-view__action--button
+                  product-view__action--compare
+                "
+              />
+              <alpaca-button
+                icon="envelope"
+                :default-class="false"
+                class="
+                  product-view__action
+                  product-view__action--button
+                  product-view__action--emailfriend
+                "
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-view__information">
+          <!-- TODO: Remove mock from brief-info component -->
+          <alpaca-brief-info
+            :items="briefInfo.items"
+            :level="3"
+            :heading="briefInfo.heading.text"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="product-view__tabs">
+      <!-- TODO: Remove mock from tabs component (leave content), add reviews -->
+      <alpaca-tabs-container>
+        <template v-for="tab in tabs">
+          <alpaca-tab
+            :key="tab.tabId"
+            :tab-id="tab.tabId"
+            :title="tab.title"
+            :active-tab="activeTab"
+            icon="angle-down"
+            @click="setActiveTab(tab.tabId)"
+          />
+          <alpaca-tab-content
+            :key="`${tab.tabId}-content`"
+            :tab-id="tab.tabId"
+            :title-id="tab.titleId"
+            :active-tab="activeTab"
+          >
+            {{ tab.content }}
+          </alpaca-tab-content>
+        </template>
+      </alpaca-tabs-container>
+    </div>
+    <div
+      v-if="product.relatedProducts && product.relatedProducts.length"
+      class="product-view__slider"
+    >
+      <alpaca-heading tag="h3" :level="3">
+        {{ relatedProductsLabel }}
+      </alpaca-heading>
+      <alpaca-slider>
+        <slide
+          class="slider__item product-view__slide-item"
+          v-for="(product, index) in product.relatedProducts"
+          :key="index"
+        >
+          <alpaca-catalog-grid-item :product="product"/>
+        </slide>
+      </alpaca-slider>
+    </div>
+    <div
+      v-if="product.featuredProducts && product.featuredProducts.length"
+      class="product-view__slider"
+    >
+      <alpaca-heading tag="h3" :level="3">
+        {{ featuredProductsLabel }}
+      </alpaca-heading>
+      <alpaca-slider>
+        <slide
+          class="slider__item product-view__slide-item"
+          v-for="(product, index) in product.featuredProducts"
+          :key="index"
+        >
+          <alpaca-catalog-grid-item :product="product"/>
+        </slide>
+      </alpaca-slider>
+    </div>
+    <alpaca-additional-content
+      class="product-view__additional-content"
+      v-if="banner.length"
+      :picture="banner"
+      :picture-alt="bannerAlt"
+      :first-column-text="firstColumnText"
+      :second-column-text="secondColumnText"
+    />
+  </div>
+</alpaca-container>
