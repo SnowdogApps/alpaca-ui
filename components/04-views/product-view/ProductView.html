@@ -89,7 +89,7 @@
         <div class="product-view__main-actions">
           <div class="product-view__qty">
             <!-- TODO: Add method for price update -->
-            <alpaca-quantity-update/>
+            <alpaca-quantity-update :value="1"/>
           </div>
           <div class="product-view__action-elements">
             <div class="product-view__add-to-cart">
@@ -152,6 +152,7 @@
             @click="setActiveTab(tab.tabId)"
           />
           <alpaca-tab-content
+            :key="`${tab.tabId}-content`"
             :tab-id="tab.tabId"
             :title-id="tab.titleId"
             :active-tab="activeTab"
@@ -174,9 +175,7 @@
           v-for="(product, index) in product.relatedProducts"
           :key="index"
         >
-          <alpaca-catalog-grid-item
-            :product="product"
-          />
+          <alpaca-catalog-grid-item :product="product"/>
         </slide>
       </alpaca-slider>
     </div>
@@ -201,10 +200,9 @@
       class="product-view__additional-content"
       v-if="banner.length"
       :picture="banner"
-      :pictureAlt="bannerAlt"
+      :picture-alt="bannerAlt"
       :first-column-text="firstColumnText"
       :second-column-text="secondColumnText"
     />
-    </div>
   </div>
 </alpaca-container>
