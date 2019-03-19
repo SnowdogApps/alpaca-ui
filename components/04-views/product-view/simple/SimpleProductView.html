@@ -15,36 +15,36 @@
           </alpaca-heading>
           <!-- TODO: Use click event to open tab with reviews instead of links -->
           <alpaca-review-summary
-            :reviews-qty="product.reviews.length"
+            :reviews-qty="oldProduct.reviews.length"
             add-review-link="#"
             amount-link="#"
           />
         </div>
         <div class="product-view__sku">
-          {{ product.sku }}
+          SKU: {{ product.sku }}
         </div>
         <div class="product-view__stock-line">
           <alpaca-price
-            v-if="product.price.old && product.price.special"
+            v-if="product.regular_price && product.price"
             large
-            :old-price="product.price.old"
-            :special-price="product.price.special"
+            :old-price="product.regular_price | price"
+            :special-price="product.price | price"
           />
           <alpaca-price
             v-else
             large
-            :price="product.price.regular"
+            :price="product.price | price"
           />
           <span
-            v-if="product.qty > 0 && product.qty <= stockAlertMaxQty"
+            v-if="oldProduct.qty > 0 && oldProduct.qty <= stockAlertMaxQty"
             class="product-view__stock-status product-view__stock-status--alert"
           >
             {{ inStockAlertText }}
-            {{ product.qty }}
+            {{ oldProduct.qty }}
             {{ inStockAlertTextSuffix }}
           </span>
           <span
-            v-else-if="product.qty > 0"
+            v-else-if="oldProduct.qty > 0"
             class="product-view__stock-status"
           >
             {{ inStockText }}
@@ -58,33 +58,8 @@
         </div>
       </div>
       <div class="product-view__secondary-details">
-        <div class="product-view__description">
-          {{ product.description }}
-        </div>
-        <div
-          v-if="product.swatches"
-          class="product-view__options"
-        >
-          <alpaca-swatch
-            color
-            v-if="product.swatches.color"
-            :options="product.swatches.color.options"
-            :label="product.swatches.color.label"
-            label-class="product-view__swatch-option-title"
-          />
-          <alpaca-swatch
-            image
-            v-else-if="product.swatches.image"
-            :options="product.swatches.image.options"
-            :label="product.swatches.image.label"
-            label-class="product-view__swatch-option-title"
-          />
-          <alpaca-swatch
-            v-if="product.swatches.text"
-            :options="product.swatches.text.options"
-            :label="product.swatches.text.label"
-            label-class="product-view__swatch-option-title"
-          />
+        <div class="product-view__description product-view__description--smaller">
+          {{ oldProduct.description }}
         </div>
         <div class="product-view__main-actions">
           <div class="product-view__qty">
@@ -163,7 +138,7 @@
       </alpaca-tabs-container>
     </div>
     <div
-      v-if="product.relatedProducts && product.relatedProducts.length"
+      v-if="oldProduct.relatedProducts && oldProduct.relatedProducts.length"
       class="product-view__slider"
     >
       <alpaca-heading tag="h3" :level="3">
@@ -172,7 +147,7 @@
       <alpaca-slider>
         <slide
           class="slider__item product-view__slide-item"
-          v-for="(product, index) in product.relatedProducts"
+          v-for="(product, index) in oldProduct.relatedProducts"
           :key="index"
         >
           <alpaca-catalog-grid-item :product="product"/>
@@ -180,7 +155,7 @@
       </alpaca-slider>
     </div>
     <div
-      v-if="product.featuredProducts && product.featuredProducts.length"
+      v-if="oldProduct.featuredProducts && oldProduct.featuredProducts.length"
       class="product-view__slider"
     >
       <alpaca-heading tag="h3" :level="3">
@@ -189,7 +164,7 @@
       <alpaca-slider>
         <slide
           class="slider__item product-view__slide-item"
-          v-for="(product, index) in product.featuredProducts"
+          v-for="(product, index) in oldProduct.featuredProducts"
           :key="index"
         >
           <alpaca-catalog-grid-item :product="product"/>

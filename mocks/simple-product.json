@@ -1,0 +1,84 @@
+{
+  "activity": "9",
+  "gender": "81",
+  "description": "<p>Designed to stand up to your active lifestyle, this women's Luma Analog Watch features a tasteful brushed chrome finish and a stainless steel, water-resistant construction for lasting durability.</p>\n<ul>\n<li>Precision Miyota&reg; three-hand movement.</li>\n</ul>",
+  "tsk": 1551705236617,
+  "custom_attributes": null,
+  "regular_price": 52.890001,
+  "final_price": 52.890001,
+  "price": 43,
+  "special_from_date": "2017-11-06 12:16:30",
+  "links": {},
+  "id": 41,
+  "category_ids": [
+    "3",
+    "6"
+  ],
+  "sku": "24-WG09",
+  "category_gear": "86,88,90",
+  "stock": {
+    "min_sale_qty": 1,
+    "item_id": 41,
+    "min_qty": 0,
+    "stock_status_changed_auto": 0,
+    "is_in_stock": true,
+    "max_sale_qty": 10000,
+    "show_default_notification_message": false,
+    "backorders": 0,
+    "product_id": 41,
+    "qty": 16,
+    "is_decimal_divided": false,
+    "is_qty_decimal": false,
+    "low_stock_date": null,
+    "use_config_qty_increments": true
+  },
+  "slug": "luma-analog-watch-41",
+  "url_path": "gear/gear-3/luma-analog-watch-41.html",
+  "image": "/w/g/wg09-gr-0.jpg",
+  "thumbnail": "/w/g/wg09-gr-0.jpg",
+  "visibility": 4,
+  "type_id": "simple",
+  "tax_class_id": "2",
+  "media_gallery": [
+    {
+      "vid": null,
+      "image": "/w/g/wg09-gr-0.jpg",
+      "pos": 1,
+      "typ": "image",
+      "lab": "Image"
+    }
+  ],
+  "url_key": "luma-analog-watch",
+  "sale": "1",
+  "max_price": 52.890001,
+  "minimal_regular_price": 52.890001,
+  "material": "47",
+  "special_price": 0,
+  "minimal_price": 52.890001,
+  "name": "Luma Analog Watch",
+  "max_regular_price": 52.890001,
+  "category": [
+    {
+      "path": "gear/watches/watches-6",
+      "category_id": 6,
+      "name": "Watches",
+      "slug": "watches-6"
+    },
+    {
+      "path": "gear/gear-3",
+      "category_id": 3,
+      "name": "Gear",
+      "slug": "gear-3"
+    }
+  ],
+  "status": 1,
+  "priceTax": 9.89,
+  "priceInclTax": 52.89,
+  "specialPriceTax": 9.89,
+  "specialPriceInclTax": 52.89,
+  "_score": 0,
+  "errors": {},
+  "info": {},
+  "parentSku": "24-WG09",
+  "qty": 1
+}

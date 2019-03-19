@@ -36,6 +36,7 @@ $product-view__col-right-width                         : calc(#{$product-view__c
 $product-view__description-color                       : $gray-darker !default;
 $product-view__description-margin                      : 0 $spacer--medium $spacer--medium !default;
 $product-view__description-margin\@medium              : 0 0 $spacer--large !default;
+$product-view__description-margin--smaller             : 0 0 $spacer--medium !default;
 $product-view__description-padding                     : $spacer--medium !default;
 $product-view__description-padding\@medium             : $spacer--medium 0 !default;
 $product-view__description-border-top                  : 1px solid $gray-light !default;
@@ -222,6 +223,10 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
     @include mq($screen-m) {
       padding: $product-view__description-padding\@medium;
       margin: $product-view__description-margin\@medium;
+    }
+
+    &--smaller {
+      margin: $product-view__description-margin--smaller;
     }
   }
 

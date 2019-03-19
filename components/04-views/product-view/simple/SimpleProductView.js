@@ -57,6 +57,10 @@ export default {
       type: Object,
       required: true
     },
+    oldProduct: {
+      type: Object,
+      required: true
+    },
     stockAlertMaxQty: {
       type: Number,
       default: 5
@@ -116,6 +120,11 @@ export default {
       this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]
+    }
+  },
+  filters: {
+    price (value) {
+      return `$${parseFloat(value).toFixed(2)}`
     }
   }
 }
