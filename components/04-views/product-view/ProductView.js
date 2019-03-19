@@ -112,7 +112,7 @@ export default {
     }
   },
   methods: {
-    setActiveTab(tab) {
+    setActiveTab (tab) {
       this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]

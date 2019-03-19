@@ -152,6 +152,7 @@
             @click="setActiveTab(tab.tabId)"
           />
           <alpaca-tab-content
+            :key="`${tab.tabId}-content`"
             :tab-id="tab.tabId"
             :title-id="tab.titleId"
             :active-tab="activeTab"
@@ -201,10 +202,9 @@
       class="product-view__additional-content"
       v-if="banner.length"
       :picture="banner"
-      :pictureAlt="bannerAlt"
+      :picture-alt="bannerAlt"
       :first-column-text="firstColumnText"
       :second-column-text="secondColumnText"
     />
-    </div>
   </div>
 </alpaca-container>
