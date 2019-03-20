@@ -12,7 +12,7 @@
       </div>
     </div>
     <div
-      v-if="this.images.length > 1"
+      v-if="images.length > 1"
       :class="['gallery__nav', horizontal ? 'gallery__nav--horizontal' : 'gallery__nav--vertical']"
     >
       <div

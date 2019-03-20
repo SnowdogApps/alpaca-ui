@@ -68,7 +68,7 @@ export default {
   },
   data () {
     return {
-      activeTab: this.tabs[0].tabId,
+      activeTab: 'tab-details',
       calculatedOldPrice: 0,
       calculatedPrice: 0
     }
@@ -101,9 +101,7 @@ export default {
   },
   methods: {
     setActiveTab (tab) {
-      this.activeTab = this.tabs
-        .filter(el => el.tabId === tab)
-        .map(el => el.tabId)[0]
+      this.activeTab = tab
     },
     updatePrice (qty) {
       this.oldPrice *= qty

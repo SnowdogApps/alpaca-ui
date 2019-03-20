@@ -120,26 +120,35 @@
       </div>
     </div>
     <div class="product-view__tabs">
-      <!-- TODO: Remove mock from tabs component (leave content), add reviews -->
+      <!-- TODO: Add reviews -->
       <alpaca-tabs-container>
-        <template v-for="tab in tabs">
-          <alpaca-tab
-            :key="tab.tabId"
-            :tab-id="tab.tabId"
-            :title="tab.title"
-            :active-tab="activeTab"
-            icon="angle-down"
-            @click="setActiveTab(tab.tabId)"
-          />
-          <alpaca-tab-content
-            :key="`${tab.tabId}-content`"
-            :tab-id="tab.tabId"
-            :title-id="tab.titleId"
-            :active-tab="activeTab"
-          >
-            {{ tab.content }}
-          </alpaca-tab-content>
-        </template>
+        <alpaca-tab
+          tab-id="tab-details"
+          title="Details"
+          :active-tab="activeTab"
+          icon="angle-down"
+          @click="setActiveTab('tab-details')"
+        />
+        <alpaca-tab-content
+          tab-id="tab-details"
+          title-id="tab-title-details"
+          :active-tab="activeTab"
+          v-html="product.description"
+        />
+        <alpaca-tab
+          tab-id="tab-more"
+          title="More Information"
+          :active-tab="activeTab"
+          icon="angle-down"
+          @click="setActiveTab('tab-more')"
+        />
+        <alpaca-tab-content
+          tab-id="tab-more"
+          title-id="tab-title-more"
+          :active-tab="activeTab"
+        >
+          Custom attributes
+        </alpaca-tab-content>
       </alpaca-tabs-container>
     </div>
     <div

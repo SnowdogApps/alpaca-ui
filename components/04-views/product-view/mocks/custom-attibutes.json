@@ -1,0 +1,354 @@
+[
+  {
+    "is_visible_on_front": "1",
+    "is_visible": true,
+    "default_frontend_label": "Activity",
+    "attribute_id": 135,
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Hike",
+        "value": "4"
+      },
+      {
+        "label": "Outdoor",
+        "value": "5"
+      },
+      {
+        "label": "Running",
+        "value": "6"
+      },
+      {
+        "label": "Warmup",
+        "value": "7"
+      },
+      {
+        "label": "Yoga",
+        "value": "8"
+      },
+      {
+        "label": "Recreation",
+        "value": "9"
+      },
+      {
+        "label": "Lounge",
+        "value": "10"
+      },
+      {
+        "label": "Gym",
+        "value": "11"
+      },
+      {
+        "label": "Climbing",
+        "value": "12"
+      },
+      {
+        "label": "Crosstraining",
+        "value": "13"
+      },
+      {
+        "label": "Post-workout",
+        "value": "14"
+      },
+      {
+        "label": "Cycling",
+        "value": "15"
+      },
+      {
+        "label": "Athletic",
+        "value": "16"
+      },
+      {
+        "label": "Sports",
+        "value": "17"
+      },
+      {
+        "label": "Hiking",
+        "value": "18"
+      },
+      {
+        "label": "Overnight",
+        "value": "19"
+      },
+      {
+        "label": "School",
+        "value": "20"
+      },
+      {
+        "label": "Trail",
+        "value": "21"
+      },
+      {
+        "label": "Travel",
+        "value": "22"
+      },
+      {
+        "label": "Urban",
+        "value": "23"
+      }
+    ],
+    "default_value": "",
+    "entity_type_id": "4",
+    "id": 135,
+    "frontend_input": "multiselect",
+    "is_user_defined": true,
+    "is_comparable": "1",
+    "attribute_code": "activity",
+    "_score": 0,
+    "slug": ""
+  },
+  {
+    "is_visible_on_front": "1",
+    "is_visible": true,
+    "default_frontend_label": "Material",
+    "attribute_id": 137,
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Burlap",
+        "value": "31"
+      },
+      {
+        "label": "Cocona&reg; performance fabric",
+        "value": "143"
+      },
+      {
+        "label": "Canvas",
+        "value": "32"
+      },
+      {
+        "label": "Wool",
+        "value": "144"
+      },
+      {
+        "label": "Cotton",
+        "value": "33"
+      },
+      {
+        "label": "Fleece",
+        "value": "145"
+      },
+      {
+        "label": "Faux Leather",
+        "value": "34"
+      },
+      {
+        "label": "Hemp",
+        "value": "146"
+      },
+      {
+        "label": "Jersey",
+        "value": "147"
+      },
+      {
+        "label": "Leather",
+        "value": "35"
+      },
+      {
+        "label": "LumaTech&trade;",
+        "value": "148"
+      },
+      {
+        "label": "Mesh",
+        "value": "36"
+      },
+      {
+        "label": "Lycra&reg;",
+        "value": "149"
+      },
+      {
+        "label": "Nylon",
+        "value": "37"
+      },
+      {
+        "label": "Microfiber",
+        "value": "150"
+      },
+      {
+        "label": "Polyester",
+        "value": "38"
+      },
+      {
+        "label": "Rayon",
+        "value": "39"
+      },
+      {
+        "label": "Spandex",
+        "value": "151"
+      },
+      {
+        "label": "HeatTec&reg;",
+        "value": "152"
+      },
+      {
+        "label": "Ripstop",
+        "value": "40"
+      },
+      {
+        "label": "EverCool&trade;",
+        "value": "153"
+      },
+      {
+        "label": "Suede",
+        "value": "41"
+      },
+      {
+        "label": "Foam",
+        "value": "42"
+      },
+      {
+        "label": "Organic Cotton",
+        "value": "154"
+      },
+      {
+        "label": "Metal",
+        "value": "43"
+      },
+      {
+        "label": "TENCEL",
+        "value": "155"
+      },
+      {
+        "label": "CoolTech&trade;",
+        "value": "156"
+      },
+      {
+        "label": "Plastic",
+        "value": "44"
+      },
+      {
+        "label": "Khaki",
+        "value": "157"
+      },
+      {
+        "label": "Rubber",
+        "value": "45"
+      },
+      {
+        "label": "Linen",
+        "value": "158"
+      },
+      {
+        "label": "Synthetic",
+        "value": "46"
+      },
+      {
+        "label": "Stainless Steel",
+        "value": "47"
+      },
+      {
+        "label": "Wool",
+        "value": "159"
+      },
+      {
+        "label": "Silicone",
+        "value": "48"
+      },
+      {
+        "label": "Terry",
+        "value": "160"
+      }
+    ],
+    "default_value": "",
+    "entity_type_id": "4",
+    "id": 137,
+    "frontend_input": "multiselect",
+    "is_user_defined": true,
+    "is_comparable": "0",
+    "attribute_code": "material",
+    "_score": 0,
+    "slug": ""
+  },
+  {
+    "is_visible_on_front": "1",
+    "is_visible": true,
+    "default_frontend_label": "Gender",
+    "attribute_id": 140,
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Men",
+        "value": "80"
+      },
+      {
+        "label": "Women",
+        "value": "81"
+      },
+      {
+        "label": "Boys",
+        "value": "82"
+      },
+      {
+        "label": "Girls",
+        "value": "83"
+      },
+      {
+        "label": "Unisex",
+        "value": "84"
+      }
+    ],
+    "default_value": "",
+    "entity_type_id": "4",
+    "id": 140,
+    "frontend_input": "multiselect",
+    "is_user_defined": true,
+    "is_comparable": "0",
+    "attribute_code": "gender",
+    "_score": 0,
+    "slug": ""
+  },
+  {
+    "is_visible_on_front": "1",
+    "is_visible": true,
+    "default_frontend_label": "Category Gear",
+    "attribute_id": 141,
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Cardio",
+        "value": "85"
+      },
+      {
+        "label": "Electronic",
+        "value": "86"
+      },
+      {
+        "label": "Exercise",
+        "value": "87"
+      },
+      {
+        "label": "Fashion",
+        "value": "88"
+      },
+      {
+        "label": "Hydration",
+        "value": "89"
+      },
+      {
+        "label": "Timepiece",
+        "value": "90"
+      }
+    ],
+    "default_value": "",
+    "entity_type_id": "4",
+    "id": 141,
+    "frontend_input": "multiselect",
+    "is_user_defined": true,
+    "is_comparable": "0",
+    "attribute_code": "category_gear",
+    "_score": 0,
+    "slug": ""
+  }
+]
