@@ -1,8 +1,8 @@
 <template>
   <img
-    class="image"
     :src="src"
     :alt="alt"
+    class="image"
   >
 </template>
 

@@ -8,7 +8,10 @@ storiesOf('Elements/Message', module)
     components: { App, AlpacaMessage },
     template: `
       <app>
-        <alpaca-message>
+        <alpaca-message 
+          accept="Ok" 
+          abort="Proceed to checkout"
+        >
           You added Jacket to your shopping cart.
         </alpaca-message>
       </app>
@@ -18,8 +21,9 @@ storiesOf('Elements/Message', module)
     components: { App, AlpacaMessage },
     template: `
       <app>
-        <alpaca-message
-          type="success"
+        <alpaca-message 
+          success
+          accept="Ok" 
         >
           You added Jacket to your shopping cart.
         </alpaca-message>
@@ -30,8 +34,9 @@ storiesOf('Elements/Message', module)
     components: { App, AlpacaMessage },
     template: `
       <app>
-        <alpaca-message
-          type="error"
+        <alpaca-message 
+          error
+          abort="Ok" 
         >
           You added Jacket to your shopping cart.
         </alpaca-message>

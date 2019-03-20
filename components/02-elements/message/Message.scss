@@ -1,0 +1,81 @@
+$message__margin-top         : $spacer--medium !default;
+$message__padding            : $spacer $spacer--medium !default;
+$message__margin-base        : $spacer--medium 0 0 0 !default;
+$message__font-size          : $font-size-small !default;
+$message__transition         : $transition-base !default;
+$message__background         : #1976d2 !default;
+$message__background--success: #69dca1 !default;
+$message__background--error  : #d32f2f !default;
+$message__color              : $blue !default;
+$message__color--success     : $gray !default;
+$message__color--error       : $red !default;
+$message__border             : 1px solid $blue !default;
+$message__border--success    : 1px solid $color-primary !default;
+$message__border--error      : 1px solid $red !default;
+$message__border-radius      : 24px !default;
+$message__icon-spacer        : $spacer--medium !default;
+$message__icon-fill          : $blue !default;
+$message__icon-fill--success : $color-primary !default;
+$message__icon-fill--error   : $red !default;
+
+.message {
+  position: relative;
+  //display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 320px;
+  height: auto;
+  padding: 16px 24px 0 16px;
+  margin: $message__margin-base;
+  background-color: $message__background;
+  box-shadow: 0 4px 6px 0 rgba(57, 50, 67, 0.3);
+  color: white;
+  font-size: $message__font-size;
+  transition: $message__transition;
+
+  &--success {
+    color: black;
+    background-color: $message__background--success;
+  }
+
+  &--error {
+    background-color: #d32f2f;
+    color: white;
+  }
+
+  &__information {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(57, 50, 67, 0.3);
+    line-height: 1.5;
+    padding: 0 0 10px 0;
+  }
+
+  &__actions {
+    display: flex;
+
+    &-abort,
+    &-accept {
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0);
+      color: #fff;
+      text-align: center;
+      border: none;
+      font-size: 14px;
+      margin: 10px 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:last-child {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    &-is-abort {
+      font-weight: normal;
+    }
+  }
+}
