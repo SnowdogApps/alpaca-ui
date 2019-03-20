@@ -2,8 +2,6 @@ import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Headi
 import AlpacaDivider from '@alpaca-storybook/components/02-elements/divider/Divider.vue'
 import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 
-import EventBus from '@alpaca-storybook/eventBus'
-
 export default {
   components: {
     AlpacaIcon,
@@ -99,17 +97,11 @@ export default {
     }
   },
   beforeMount () {
-    EventBus.$on('sidebar-show', this.show)
-    EventBus.$on('sidebar-hide', this.hide)
-
     if (this.closeOnEsc) {
       window.addEventListener('keydown', this.handleEscapeKeyUp)
     }
   },
   beforeDestroy () {
-    EventBus.$off('sidebar-show', this.show)
-    EventBus.$off('sidebar-hide', this.hide)
-
     if (this.closeOnEsc) {
       window.removeEventListener('keydown', this.handleEscapeKeyUp)
     }
