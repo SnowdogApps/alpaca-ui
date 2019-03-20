@@ -15,7 +15,7 @@ storiesOf('Modules/Side Menu', module)
     }),
     template: `
       <app>
-        <alpaca-side-menu :menuItems="menu"/>
+        <alpaca-side-menu :menu-items="menu"/>
       </app>
     `
   }))

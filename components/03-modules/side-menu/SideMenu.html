@@ -5,7 +5,7 @@
   >
     <alpaca-button
       class="side-menu__button side-menu__button--prev"
-      iconClass="side-menu__icon side-menu__icon--prev"
+      icon-class="side-menu__icon side-menu__icon--prev"
       :icon="prevIcon"
       @click="load(prevLevel)"
     >
@@ -33,7 +33,7 @@
         <alpaca-button
           v-if="item.nodes"
           class="side-menu__button"
-          iconClass="side-menu__icon"
+          icon-class="side-menu__icon"
           :icon="nextIcon"
           @click="load(item.level)"
         >
