@@ -11,7 +11,10 @@
         <alpaca-image :src="selectedImage.image" />
       </div>
     </div>
-    <div :class="['gallery__nav', horizontal ? 'gallery__nav--horizontal' : 'gallery__nav--vertical']">
+    <div
+      v-if="this.images.length > 1"
+      :class="['gallery__nav', horizontal ? 'gallery__nav--horizontal' : 'gallery__nav--vertical']"
+    >
       <div
         class="gallery__thumb-arr"
         @click="setCurrentImage(currentImage - 1)"
