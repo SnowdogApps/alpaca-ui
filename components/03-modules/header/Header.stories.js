@@ -12,8 +12,6 @@ import AlpacaQuantityUpdate from '@alpaca-storybook/components/03-modules/quanti
 import AlpacaProductItem from '@alpaca-storybook/components/03-modules/product-item/ProductItem.vue'
 import AlpacaOffCanvasSidebar from '@alpaca-storybook/components/03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
-import EventBus from '@alpaca-storybook/eventBus'
-
 import menu from './mocks/menu'
 import products from '@alpaca-storybook/mocks/products'
 import totals from '@alpaca-storybook/mocks/totals'
@@ -53,6 +51,7 @@ storiesOf('Modules/Header', module)
         />
         <alpaca-modal
           name="register"
+          ref="modalRegister"
           heading="Registred Customers"
         >
           <alpaca-login
@@ -68,6 +67,7 @@ storiesOf('Modules/Header', module)
         </alpaca-modal>
         <alpaca-off-canvas-sidebar
           name="mini-cart"
+          ref="modalMiniCart"
           heading="Shipping Cart"
         >
           <alpaca-mini-cart
@@ -117,6 +117,7 @@ storiesOf('Modules/Header', module)
         </alpaca-off-canvas-sidebar>
         <alpaca-off-canvas-sidebar
           name="wishlist"
+          ref="modalWishlist"
           heading="Wishlist"
         >
           <alpaca-wishlist :products="products" />
@@ -125,13 +126,13 @@ storiesOf('Modules/Header', module)
     `,
     methods: {
       showRegister() {
-        EventBus.$emit('modal-show', 'register')
+        this.$refs.modalRegister.show('register')
       },
       showMiniCart() {
-        EventBus.$emit('sidebar-show', 'mini-cart')
+        this.$refs.modalMiniCart.show('mini-cart')
       },
       toggleWishlist() {
-        EventBus.$emit('sidebar-show', 'wishlist')
+        this.$refs.modalWishlist.show('wishlist')
       },
       login: action('Login'),
       removeMethod: action('Remove'),
