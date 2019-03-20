@@ -1,19 +1,19 @@
 [
   {
-    "label": "Label",
-    "value": "Value",
+    "attribute_code": "Label",
+    "label": "Value",
     "ariaLabel": "Disable filter",
     "href": "#"
   },
   {
-    "label": "Label2",
-    "value": "Value2",
+    "attribute_code": "Label2",
+    "label": "Value2",
     "ariaLabel": "Disable filter",
     "href": "#"
   },
   {
-    "label": "Label3",
-    "value": "Value3",
+    "attribute_code": "Label3",
+    "label": "Value3",
     "ariaLabel": "Disable filter",
     "href": "#"
   }

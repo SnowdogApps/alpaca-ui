@@ -37,7 +37,27 @@ export default {
       type: Object,
       required: true
     },
+    colorTitle: {
+      type: String,
+      default: null
+    },
+    swatchTitle: {
+      type: String,
+      default: null
+    },
     breadcrumbs: {
+      type: Array,
+      required: true
+    },
+    min: {
+      type: Number,
+      required: true
+    },
+    max: {
+      type: Number,
+      required: true
+    },
+    val: {
       type: Array,
       required: true
     }

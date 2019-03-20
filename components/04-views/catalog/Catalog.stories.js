@@ -4,11 +4,11 @@ import StoryRouter from 'storybook-vue-router'
 import data from './mocks/catalog.json'
 import menu from '@alpaca-storybook/components/03-modules/header/mocks/menu.json'
 import toolbar from '@alpaca-storybook/components/03-modules/toolbar/mocks/toolbar.json'
-import breadcrumbs from "@alpaca-storybook/components/02-elements/breadcrumbs/mocks/breadcrumbs"
-import swatchItems from "@alpaca-storybook/components/03-modules/filter/mocks/swatchItems"
-import colorItems from "@alpaca-storybook/components/03-modules/filter/mocks/colorItems"
-import activeFilterItems from "@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters"
-import checkboxItems from "@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems"
+import breadcrumbs from "@alpaca-storybook/components/02-elements/breadcrumbs/mocks/breadcrumbs.json"
+import swatchItems from "@alpaca-storybook/components/03-modules/filter/mocks/swatchItems.json"
+import colorItems from "@alpaca-storybook/components/03-modules/filter/mocks/colorItems.json"
+import activeFilterItems from "@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters.json"
+import checkboxItems from "@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems.json"
 
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaHeader from '@alpaca-storybook/components/03-modules/header/Header.vue'
@@ -27,7 +27,8 @@ storiesOf('Views/Catalog', module)
       activeFilterItems,
       checkboxItems,
       toolbar,
-      breadcrumbs
+      breadcrumbs,
+      val: [0, 1000]
     }
   },
   template: `
@@ -39,12 +40,17 @@ storiesOf('Views/Catalog', module)
       />
       <alpaca-catalog
         :products="products.items"
-        :swatchItems="swatchItems"
-        :colorItems="colorItems"
-        :activeFilterItems="activeFilterItems"
-        :checkboxItems="checkboxItems"
+        :swatch-items="swatchItems"
+        swatch-title="Swatch"
+        :color-items="colorItems"
+        color-title="Color"
+        :active-filter-items="activeFilterItems"
+        :checkbox-items="checkboxItems"
         :toolbar="toolbar"
         :breadcrumbs="breadcrumbs"
+        :min="0"
+        :max="1000"
+        :val="val"
       />
     </app>
   `
