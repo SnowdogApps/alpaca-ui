@@ -72,10 +72,30 @@ export default {
   },
   data () {
     return {
-      activeTab: this.tabs[0].tabId
+      activeTab: this.tabs[0].tabId,
+      calculatedOldPrice: 0,
+      calculatedPrice: 0
     }
   },
   computed: {
+    oldPrice: {
+      get () {
+        this.calculatedOldPrice = this.product.regular_price
+        return this.product.regular_price
+      },
+      set (value) {
+        this.calculatedOldPrice = value
+      }
+    },
+    currentPrice: {
+      get () {
+        this.calculatedPrice = this.product.price
+        return this.product.price
+      },
+      set (value) {
+        this.calculatedPrice = value
+      }
+    },
     inStock () {
       return this.product.stock.is_in_stock
     },
@@ -88,6 +108,10 @@ export default {
       this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]
+    },
+    updatePrice (qty) {
+      this.oldPrice *= qty
+      this.currentPrice *= qty
     }
   },
   filters: {

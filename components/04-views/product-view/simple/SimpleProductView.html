@@ -25,15 +25,15 @@
         </div>
         <div class="product-view__stock-line">
           <alpaca-price
-            v-if="product.regular_price && product.price"
+            v-if="oldPrice && currentPrice"
             large
-            :old-price="product.regular_price | price"
-            :special-price="product.price | price"
+            :old-price="calculatedOldPrice | price"
+            :special-price="calculatedPrice | price"
           />
           <alpaca-price
             v-else
             large
-            :price="product.price | price"
+            :price="calculatedPrice | price"
           />
           <span
             v-if="inStock && stockQty > 0 && stockQty <= 5"
@@ -58,8 +58,10 @@
       <div class="product-view__secondary-details">
         <div class="product-view__main-actions">
           <div class="product-view__qty">
-            <!-- TODO: Add method for price update -->
-            <alpaca-quantity-update :value="1"/>
+            <alpaca-quantity-update
+              :value="1"
+              @update="updatePrice"
+            />
           </div>
           <div class="product-view__action-elements">
             <div class="product-view__add-to-cart">
