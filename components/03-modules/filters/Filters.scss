@@ -1,5 +1,4 @@
 $filters__heading-font-weight        : $font-weight-bold !default;
-$filters__heading-font-weight\@medium: $font-weight-normal !default;
 $filters__heading-margin\@medium     : 0 0 $spacer--medium 0 !default;
 $filters__switcher-margin            : $spacer 0 0 0 !default;
 $filters__switcher-border            : 1px solid $gray-lighter !default;
@@ -27,7 +26,6 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
     margin: $reset;
 
     @include mq($screen-l) {
-      font-weight: $filters__heading-font-weight\@medium;
       margin: $filters__heading-margin\@medium;
     }
 

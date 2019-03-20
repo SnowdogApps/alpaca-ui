@@ -4,9 +4,7 @@ $filter__swatch-margin                     : 0 0 $spacer--medium 0 !default;
 $filter__swatch-option-size                : 48px !default;
 $filter__swatch-option-margin              : $spacer--medium !default;
 $filter__swatch-option-color               : $gray-dark !default;
-$filter__swatch-option-border              : 3px solid $white !default;
-$filter__swatch-option-border-color-hover  : $color-primary !default;
-$filter__swatch-option-border-color--active: $color-primary !default;
+$filter__swatch-option-border              : 1px solid $white !default;
 // Label
 $filter__color-option-width                : 56px !default;
 $filter__color-option-height               : 80px !default;
@@ -15,7 +13,6 @@ $filter__color-option-after-top            : 5px !default;
 $filter__color-option-after-left           : 8px !default;
 $filter__color-option-after-size           : 40px !default;
 $filter__color-option-after-border-radius  : 100% !default;
-$filter__color-option-after-border-color   : $color-primary !default;
 $filter__color-sample-size                 : 32px !default;
 $filter__color-sample-margin               : $spacer !default;
 $filter__color-sample-border               : 1px solid $gray-lighter;
@@ -65,7 +62,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     &:hover,
     &:focus {
       text-decoration: none;
-      border-color: $filter__swatch-option-border-color-hover;
+      border-color: $filter__swatch-option-color;
       background: none;
       color: $filter__swatch-option-color;
     }
@@ -75,7 +72,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     }
 
     &--active {
-      border-color: $filter__swatch-option-border-color--active;
+      border-color: $filter__swatch-option-color;
     }
   }
 
@@ -119,7 +116,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
       text-decoration: none;
 
       &::after {
-        border-color: $filter__color-option-after-border-color;
+        border-color: $filter__swatch-option-color;
       }
     }
   }
