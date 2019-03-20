@@ -1,5 +1,11 @@
 // Storybook
-import {configure} from '@storybook/vue'
+import {configure, addParameters} from '@storybook/vue'
+
+addParameters({
+  options: {
+    showPanel: false
+  }
+})
 
 function loadStories() {
   const req = require.context('../components', true, /.stories.js$/)
