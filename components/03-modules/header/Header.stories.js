@@ -16,7 +16,7 @@ import AlpacaSideMenu from '@alpaca-storybook/components/03-modules/side-menu/Si
 import EventBus from '@alpaca-storybook/eventBus'
 
 import menu from './mocks/menu'
-import sideMenu from '../side-menu/mocks/menu.json'
+import sideMenu from '@alpaca-storybook/mocks/side-menu'
 import products from '@alpaca-storybook/mocks/products'
 import totals from '@alpaca-storybook/mocks/totals'
 

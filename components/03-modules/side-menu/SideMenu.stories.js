@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import menu from './mocks/menu.json'
+import menu from '@alpaca-storybook/mocks/side-menu'
 
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaSideMenu from './SideMenu.vue'
