@@ -1,10 +1,11 @@
 $side-menu__item-hover-bg-color     : #f6f6fa !default;
+$side-menu__item-color              : $gray-darker !default;
+$side-menu__item-icon-color         : $side-menu__item-color !default;
 $side-menu__item-border             : $border-width-base $border-style-base $gray-light !default;
+$side-menu__item-element-padding    : $spacer--medium !default;
 $side-menu__icon-size               : 16px !default;
-$side-menu__item-padding-left       : $spacer !default;
-$side-menu__item-padding            : 0 $spacer--medium 0 $side-menu__item-padding-left !default;
-$side-menu__item-nested-padding-left: $spacer--large !default;
-$side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-left} - #{$side-menu__icon-size}) !default;
+$side-menu__icon-right-margin--prev : $spacer--medium !default;
+$side-menu__nested-item-padding-left: calc(#{$side-menu__icon-right-margin--prev} + #{$side-menu__item-element-padding}) !default;
 
 .side-menu {
   position: relative;
@@ -18,8 +19,6 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
   }
 
   &__item {
-    padding: $side-menu__item-padding;
-
     &:hover,
     &:focus {
       background: $side-menu__item-hover-bg-color;
@@ -29,8 +28,8 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
       border-bottom: $side-menu__item-border;
     }
 
-    &--prev ~ & {
-      padding-left: $side-menu__item-nested-padding-left;
+    &--prev ~ & & {
+      padding-left: $side-menu__nested-item-padding-left;
     }
 
     &--no-hover {
@@ -57,6 +56,10 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
     &:active,
     &:focus {
       background: transparent;
+
+      .side-menu__icon {
+        fill: $side-menu__item-icon-color;
+      }
     }
 
     &--prev {
@@ -72,21 +75,27 @@ $side-menu__icon-prev-margin-right  : calc(#{$side-menu__item-nested-padding-lef
   &__link,
   &__button {
     font-size: $font-size-base;
-    color: $gray-darker;
+    color: $side-menu__item-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $side-menu__item-color;
+    }
   }
 
   &__link,
   &__button {
-    padding: $spacer--medium 0;
+    padding: $side-menu__item-element-padding;
   }
 
   &__icon {
     width: $side-menu__icon-size;
     height: $side-menu__icon-size;
-    fill: $gray-darker;
+    fill: $side-menu__item-icon-color;
 
     &--prev {
-      margin-right: $side-menu__icon-prev-margin-right;
+      margin-right: $side-menu__icon-right-margin--prev;
       order: -1;
     }
   }
