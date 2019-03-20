@@ -6,12 +6,9 @@
           v-if="productLabel"
           class="badge--new gallery__product-label"
         >
-          {{ productLabel.text }}
+          {{ productLabel }}
         </alpaca-badge>
-        <alpaca-image
-          :src="selectedImage.originalSize"
-          :alt="selectedImage.alt"
-        />
+        <alpaca-image :src="selectedImage.image" />
       </div>
     </div>
     <div :class="['gallery__nav', horizontal ? 'gallery__nav--horizontal' : 'gallery__nav--vertical']">
@@ -30,10 +27,7 @@
         :class="['gallery__thumb', i === currentImage && 'gallery__thumb--active']"
         @click="setCurrentImage(i)"
       >
-        <alpaca-image
-          :src="image.thumbnail"
-          :alt="image.alt"
-        />
+        <alpaca-image :src="image.image" />
       </div>
       <div
         class="gallery__thumb-arr"

@@ -14,7 +14,7 @@ storiesOf('Modules/Gallery', module)
     template: `
       <app>
         <alpaca-gallery
-          :images="gallery.images"
+          :images="gallery.media_gallery"
         />
       </app>
     `
@@ -27,7 +27,7 @@ storiesOf('Modules/Gallery', module)
     template: `
       <app>
         <alpaca-gallery
-          :images="gallery.images"
+          :images="gallery.media_gallery"
           horizontal
         />
       </app>
@@ -41,8 +41,8 @@ storiesOf('Modules/Gallery', module)
     template: `
       <app>
         <alpaca-gallery
-          :productLabel="gallery.productLabel"
-          :images="gallery.images"
+          productLabel="New"
+          :images="gallery.media_gallery"
         />
       </app>
     `

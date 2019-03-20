@@ -109,21 +109,21 @@
   "media_gallery": [
     {
       "vid": null,
-      "image": "/m/h/mh01-gray_main.jpg",
+      "image": "/images/gallery/product-img-496-496.jpg",
       "pos": 1,
       "typ": "image",
       "lab": ""
     },
     {
       "vid": null,
-      "image": "/m/h/mh01-gray_alt1.jpg",
+      "image": "/images/gallery/product-img-496-496.jpg",
       "pos": 2,
       "typ": "image",
       "lab": ""
     },
     {
       "vid": null,
-      "image": "/m/h/mh01-gray_back.jpg",
+      "image": "/images/gallery/product-img-496-496.jpg",
       "pos": 3,
       "typ": "image",
       "lab": ""

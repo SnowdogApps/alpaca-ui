@@ -1,27 +1,25 @@
 {
-  "productLabel": {
-    "text": "new"
-  },
-  "images": [
+  "media_gallery": [
     {
-      "thumbnail": "/images/gallery/product-img-80-80.jpg",
-      "originalSize": "/images/gallery/product-img-496-496.jpg",
-      "alt": ""
+      "vid": null,
+      "image": "/images/gallery/product-img-496-496.jpg",
+      "pos": 1,
+      "typ": "image",
+      "lab": "Image"
     },
     {
-      "thumbnail": "/images/gallery/product-img-80-80.jpg",
-      "originalSize": "/images/image/banner-480_480.png",
-      "alt": ""
+      "vid": null,
+      "image": "/images/gallery/product-img-496-496.jpg",
+      "pos": 2,
+      "typ": "image",
+      "lab": "Image"
     },
     {
-      "thumbnail": "/images/gallery/product-img-80-80.jpg",
-      "originalSize": "/images/gallery/product-img-496-496.jpg",
-      "alt": ""
-    },
-    {
-      "thumbnail": "/images/gallery/product-img-80-80.jpg",
-      "originalSize": "/images/gallery/product-img-496-496.jpg",
-      "alt": ""
+      "vid": null,
+      "image": "/images/gallery/product-img-496-496.jpg",
+      "pos": 3,
+      "typ": "image",
+      "lab": "Image"
     }
   ]
 }

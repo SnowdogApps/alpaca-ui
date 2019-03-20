@@ -3,7 +3,7 @@
     <alpaca-breadcrumbs :breadcrumbs="breadcrumbs"/>
     <div class="product-view__wrapper">
       <div class="product-view__gallery">
-        <alpaca-gallery :images="gallery.images"/>
+        <alpaca-gallery :images="product.media_gallery"/>
       </div>
       <div class="product-view__main-details">
         <div class="product-view__heading">
@@ -42,7 +42,7 @@
             In stock - only {{ stockQty }} left
           </span>
           <span
-            v-else-if="inStock && oldProduct.qty > 0"
+            v-else-if="inStock && stockQty > 0"
             class="product-view__stock-status"
           >
             In stock
@@ -57,15 +57,20 @@
       </div>
       <div class="product-view__secondary-details">
         <div class="product-view__main-actions">
-          <div class="product-view__qty">
+          <div
+            v-if="inStock && stockQty > 0"
+            class="product-view__qty"
+          >
             <alpaca-quantity-update
               :value="1"
               @update="updatePrice"
             />
           </div>
           <div class="product-view__action-elements">
-            <div class="product-view__add-to-cart">
-              <!-- TODO: Add methods for action buttons -->
+            <div
+              v-if="inStock && stockQty > 0"
+              class="product-view__add-to-cart"
+            >
               <alpaca-button class="product-view__add-to-cart-btn">
                 Add to cart
               </alpaca-button>

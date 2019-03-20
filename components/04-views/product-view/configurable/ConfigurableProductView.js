@@ -49,7 +49,7 @@ export default {
       type: Object,
       required: true
     },
-    gallery: {
+    newProduct: {
       type: Object,
       required: true
     },

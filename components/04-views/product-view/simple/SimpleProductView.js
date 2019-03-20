@@ -49,10 +49,6 @@ export default {
       type: Object,
       required: true
     },
-    gallery: {
-      type: Object,
-      required: true
-    },
     product: {
       type: Object,
       required: true
