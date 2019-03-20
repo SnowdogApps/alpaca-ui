@@ -36,31 +36,26 @@
             :price="product.price | price"
           />
           <span
-            v-if="oldProduct.qty > 0 && oldProduct.qty <= stockAlertMaxQty"
+            v-if="inStock && stockQty > 0 && stockQty <= 5"
             class="product-view__stock-status product-view__stock-status--alert"
           >
-            {{ inStockAlertText }}
-            {{ oldProduct.qty }}
-            {{ inStockAlertTextSuffix }}
+            In stock - only {{ stockQty }} left
           </span>
           <span
-            v-else-if="oldProduct.qty > 0"
+            v-else-if="inStock && oldProduct.qty > 0"
             class="product-view__stock-status"
           >
-            {{ inStockText }}
+            In stock
           </span>
           <span
             v-else
             class="product-view__stock-status product-view__stock-status--out-of-stock"
           >
-            {{ outOfStockText }}
+            Out of stock
           </span>
         </div>
       </div>
       <div class="product-view__secondary-details">
-        <div class="product-view__description product-view__description--smaller">
-          {{ oldProduct.description }}
-        </div>
         <div class="product-view__main-actions">
           <div class="product-view__qty">
             <!-- TODO: Add method for price update -->
@@ -70,13 +65,14 @@
             <div class="product-view__add-to-cart">
               <!-- TODO: Add methods for action buttons -->
               <alpaca-button class="product-view__add-to-cart-btn">
-                {{ addToCartText }}
+                Add to cart
               </alpaca-button>
             </div>
             <div class="product-view__extra-actions">
               <alpaca-button
                 icon="heart"
                 :default-class="false"
+                :default-button-icon-class="false"
                 class="
                   product-view__action
                   product-view__action--button
@@ -86,6 +82,7 @@
               <alpaca-button
                 icon="compare"
                 :default-class="false"
+                :default-button-icon-class="false"
                 class="
                   product-view__action
                   product-view__action--button
@@ -95,6 +92,7 @@
               <alpaca-button
                 icon="envelope"
                 :default-class="false"
+                :default-button-icon-class="false"
                 class="
                   product-view__action
                   product-view__action--button
@@ -142,7 +140,7 @@
       class="product-view__slider"
     >
       <alpaca-heading tag="h3" :level="3">
-        {{ relatedProductsLabel }}
+        Related products
       </alpaca-heading>
       <alpaca-slider>
         <slide
@@ -159,7 +157,7 @@
       class="product-view__slider"
     >
       <alpaca-heading tag="h3" :level="3">
-        {{ featuredProductsLabel }}
+        You may also like
       </alpaca-heading>
       <alpaca-slider>
         <slide
@@ -176,8 +174,8 @@
       v-if="banner.length"
       :picture="banner"
       :picture-alt="bannerAlt"
-      :first-column-text="firstColumnText"
-      :second-column-text="secondColumnText"
+      first-column-text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      second-column-text="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     />
   </div>
 </alpaca-container>
