@@ -18,7 +18,6 @@ $dropdown-list__icon-width                : 16px !default;
 $dropdown-list__icon-height               : 16px !default;
 $dropdown-list__icon-fill                 : $black !default;
 $dropdown-list__icon-fill-hover           : $color-primary !default;
-$dropdown-list__icon-fill--open           : $color-primary !default;
 
 // Secondary list variant
 $dropdown-list__font-weight--secondary    : $font-weight-bold !default;
@@ -29,7 +28,6 @@ $dropdown-list__icon-padding--secondary   : 0 5px !default;
 $dropdown-list__icon-margin--secondary    : 0 0 0 5px !default;
 $dropdown-list__icon-fill--secondary      : $dropdown-list__icon-fill !default;
 $dropdown-list__icon-fill-hover--secondary: $gray !default;
-$dropdown-list__icon-fill---secondary-open: $color-primary !default;
 
 // Dark list variant
 $dropdown-list__bg-color--dark            : $gray-darker !default;
@@ -100,7 +98,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
 
         &[aria-expanded="true"] {
           & > .dropdown-list__icon {
-            fill: $dropdown-list__icon-fill---secondary-open;
+            fill: $black;
           }
         }
       }
@@ -242,7 +240,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
       background-color: $dropdown-list__item-bg-color--open;
 
       & > .dropdown-list__icon {
-        fill: $dropdown-list__icon-fill--open;
+        fill: $black;
         transform: rotate(180deg);
       }
     }

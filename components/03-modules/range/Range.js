@@ -32,7 +32,8 @@ export default {
           tooltip: null,
           enableCross: false,
           railStyle: {
-            "background-color": "#c2c1df"
+            "background-color": "#c2c1df",
+            "border-radius": "100px"
           },
           processStyle: {
             "background-color": "#393243",

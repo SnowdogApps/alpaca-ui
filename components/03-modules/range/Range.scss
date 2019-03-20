@@ -1,9 +1,11 @@
 $range__padding       : $spacer 0 0 0 !default;
 $range__input-margin  : $spacer--medium 0 !default;
-$range__dash-padding  : 0 $spacer--medium 0 $spacer !default;
+$range__input-padding  : 0 40px 0 0 !default;
+$range__dash-padding  : 0 $spacer 0 $spacer !default;
 $range__suffix-padding: 0 $spacer !default;
 $range__button-padding: 0 $spacer--medium !default;
-$range__button-margin : $spacer--medium 0 $spacer--medium 0 !default;
+$range__button-margin : $spacer 0 $spacer--medium 0 !default;
+$range__button-width  : 136px !default;
 
 .range-filter {
   padding: $range__padding;
@@ -15,13 +17,25 @@ $range__button-margin : $spacer--medium 0 $spacer--medium 0 !default;
     justify-content: space-between;
   }
 
+  &__from,
+  &__to {
+    position: relative;
+    width: 100%;
+  }
+
   &__dash {
     text-align: center;
     padding: $range__dash-padding;
   }
 
   &__suffix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     padding: $range__suffix-padding;
+    right: $spacer;
+    font-size: $font-size-base;
+    color: $gray;
   }
 
   &__label {
@@ -29,15 +43,18 @@ $range__button-margin : $spacer--medium 0 $spacer--medium 0 !default;
   }
 
   &__input {
-    width: auto;
     flex-grow: 1;
+    width: 100%;
+    height: $spacer--large;
+    font-size: $font-size-base;
     margin: $range__input-margin;
+    padding-right: $range__input-padding;
   }
 
   &__button {
     margin: $range__button-margin;
     padding: $range__button-padding;
-    width: 136px;
-    height: 48px;
+    width: $range__button-width;
+    height: $spacer--extra-large;
   }
 }
