@@ -1,0 +1,40 @@
+$animation-time : 300ms;
+$animation-delay: 310ms;
+
+.slide-ltr-enter,
+.slide-rtl-enter {
+  opacity: 0;
+}
+
+.slide-ltr-enter-active,
+.slide-rtl-enter-active {
+  transition: all $animation-time ease-in-out $animation-delay;
+}
+
+.slide-ltr-leave-active,
+.slide-rtl-leave-active {
+  transition: all $animation-time ease-in-out;
+}
+
+.slide-ltr-enter-to,
+.slide-ltr-leave,
+.slide-rtl-enter-to,
+.slide-rtl-leave {
+  transform: translate(0, 0);
+}
+
+.slide-ltr-enter {
+  transform: translate(100%, 0);
+}
+
+.slide-ltr-leave-to {
+  transform: translate(-100%, 0);
+}
+
+.slide-rtl-enter {
+  transform: translate(-100%, 0);
+}
+
+.slide-rtl-leave-to {
+  transform: translate(100%, 0);
+}

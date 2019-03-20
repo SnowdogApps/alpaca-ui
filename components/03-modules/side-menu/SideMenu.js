@@ -49,7 +49,7 @@ export default {
       return this.currentLevel === this.prevLevel
     },
     transitionName() {
-      return `side-menu-list-${this.direction}`
+      return `slide-${this.direction}`
     }
   },
   watch: {
