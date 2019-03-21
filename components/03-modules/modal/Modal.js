@@ -74,7 +74,7 @@ export default {
         this.hide(this.name)
       }
     },
-    handleKeyboard(event) {
+    handleKeydown(event) {
       if(this.visibility) {
         if (event.which === 27 ) {
           this.hide(this.name)
@@ -109,12 +109,5 @@ export default {
     getMaxWidth () {
       return this.maxWidth !== null ? `max-width: ${this.maxWidth}px;`: null
     }
-  },
-  beforeMount() {
-    window.addEventListener('keydown', this.handleKeyboard)
-  },
-  beforeDestroy() {
-    this.$nextTick(() => this.openTrigger.focus())
-    window.removeEventListener('keydown', this.handleKeyboard)
   }
 }
