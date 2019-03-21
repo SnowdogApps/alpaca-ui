@@ -2,15 +2,19 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
-import AlpacaModal from '../../03-modules/modal/Modal.vue'
-import AlpacaLogin from '../../03-modules/login/Login.vue'
-import AlpacaMinicart from '../../03-modules/minicart/MiniCart.vue'
-import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AlpacaModal from '@alpaca-storybook/components/03-modules/modal/Modal.vue'
+import AlpacaLogin from '@alpaca-storybook/components/03-modules/login/Login.vue'
+import AlpacaMiniCart from '@alpaca-storybook/components/03-modules/mini-cart/MiniCart.vue'
+import AlpacaWishlist from '@alpaca-storybook/components/03-modules/wishlist/Wishlist.vue'
+import AlpacaQuantityUpdate from '@alpaca-storybook/components/03-modules/quantity-update/QuantityUpdate.vue'
+import AlpacaProductItem from '@alpaca-storybook/components/03-modules/product-item/ProductItem.vue'
+import AlpacaOffCanvasSidebar from '@alpaca-storybook/components/03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
-import menu from './mocks/menu.json'
-import minicart from '../minicart/mocks/minicart.json'
+import menu from './mocks/menu'
+import products from '@alpaca-storybook/mocks/products'
+import totals from '@alpaca-storybook/mocks/totals'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
@@ -21,11 +25,19 @@ storiesOf('Modules/Header', module)
       AlpacaModal,
       AlpacaLogin,
       AlpacaOffCanvasSidebar,
-      AlpacaMinicart
+      AlpacaMiniCart,
+      AlpacaWishlist,
+      AlpacaQuantityUpdate,
+      AlpacaProductItem
     },
     data: () => ({
       menu,
-      minicart
+      products,
+      totals,
+      quantity: {
+        text: 'Qty:',
+        label: ''
+      }
     }),
     template: `
       <app>
@@ -33,12 +45,13 @@ storiesOf('Modules/Header', module)
           :menu="menu"
           src="../../images/logo/alpaca.svg"
           link="#"
-          @toggleMicrocart="toggleMicrocart"
+          @toggleMicrocart="showMiniCart"
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
         <alpaca-modal
-          ref="registerModal"
+          name="register"
+          ref="modalRegister"
           heading="Registred Customers"
         >
           <alpaca-login
@@ -46,34 +59,84 @@ storiesOf('Modules/Header', module)
             forget-password-text="Forgot your password?"
             forget-password-link="#"
             submit-button="Sign In"
+            go-to-forgot-password-button=""
             go-to-register-button="or register an account"
             @login="login"
             @goToRegister="goToRegister"
           />
         </alpaca-modal>
         <alpaca-off-canvas-sidebar
-          ref="cartSidebar"
+          name="mini-cart"
+          ref="modalMiniCart"
           heading="Shipping Cart"
         >
-          <alpaca-minicart
-            :cart-items="minicart.cartItems"
-            :totals="minicart.totals"
+          <alpaca-mini-cart
+            :products="products"
+            :totals="totals"
+            :quantity="quantity"
             summary-title="Shopping summary"
+            remove-button="Remove button"
             go-to-checkout-button="Go to Checkout"
             return-to-shopping-button="Return to shopping"
-          />
+          >
+            <template #products>
+              <alpaca-product-item
+                v-for="product in products"
+                :key="product.id"
+                :id="product.id"
+                :name="product.name"
+                :url="product.url"
+                :image="product.image"
+                :price="product.price"
+                :special-price="product.specialPrice"
+                :old-price="product.oldPrice"
+                :options="product.options"
+                remove-button="Remove button"
+                item-tag="li"
+                class="minicart__product-item"
+                @remove="removeMethod(product.id)"
+              >
+                <template #quantity>
+                  <alpaca-quantity-update
+                    :value="3"
+                    :input-id="'qty' + product.id"
+                    input-aria-label="Change the quantity"
+                    decrement-aria-label="Decrease the quantity"
+                    decrement-icon-title="Minus mark"
+                    increment-aria-label="Increase the quantity"
+                    increment-icon-title="Plus mark"
+                    class="product-item__qty"
+                    label="Qty:"
+                    label-class="product-item__qty-label"
+                    @update="changeMethod"
+                  />
+                </template>
+              </alpaca-product-item>
+            </template>
+          </alpaca-mini-cart>
+        </alpaca-off-canvas-sidebar>
+        <alpaca-off-canvas-sidebar
+          name="wishlist"
+          ref="modalWishlist"
+          heading="Wishlist"
+        >
+          <alpaca-wishlist :products="products" />
         </alpaca-off-canvas-sidebar>
       </app>
     `,
     methods: {
       showRegister() {
-        this.$refs.registerModal.show()
+        this.$refs.modalRegister.show('register')
       },
-      toggleMicrocart() {
-        this.$refs.cartSidebar.show()
+      showMiniCart() {
+        this.$refs.modalMiniCart.show('mini-cart')
+      },
+      toggleWishlist() {
+        this.$refs.modalWishlist.show('wishlist')
       },
       login: action('Login'),
-      goToRegister: action('Go to Register'),
-      toggleWishlist: action('toggle Wishlist')
+      removeMethod: action('Remove'),
+      changeMethod: action('Change'),
+      goToRegister: action('Go to Register')
     }
   }))

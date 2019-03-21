@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/vue"
 import StoryRouter from 'storybook-vue-router'
 
-import App from "../../01-globals/app/App.vue"
+import App from "@alpaca-storybook/components/01-globals/app/App.vue"
 import AlpacaDropdownList from "./DropdownList.vue"
 import AlpacaDropdownListItem from "./dropdown-list-item/DropdownListItem.vue"
 import AlpacaDropdownListLink from "./dropdown-list-link/DropdownListLink.vue"
@@ -58,9 +58,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
+        <alpaca-dropdown-list
           screenM
-          :items="dropdownListItems" 
+          :items="dropdownListItems"
         />
       </app>
     `
@@ -72,9 +72,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
-          dark 
-          :items="dropdownListItems" 
+        <alpaca-dropdown-list
+          dark
+          :items="dropdownListItems"
         />
       </app>
     `
@@ -86,9 +86,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
-          secondary 
-          :items="dropdownListItems" 
+        <alpaca-dropdown-list
+          secondary
+          :items="dropdownListItems"
         />
       </app>
     `
@@ -100,9 +100,9 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
       <app>
-        <alpaca-dropdown-list 
-          inner 
-          :items="dropdownListItems" 
+        <alpaca-dropdown-list
+          inner
+          :items="dropdownListItems"
         />
       </app>
     `

@@ -3,8 +3,8 @@
   :type="tag !== 'a' ? type : null"
   :class="[
     {
-      button: tag,
-      'button--icon': icon && defaultClass,
+      button: tag && defaultClass,
+      'button--icon': icon && defaultButtonIconClass,
       'button--secondary': secondary,
       'button--blank': blank,
       'button--link': tag === 'a',
@@ -22,5 +22,6 @@
       { 'button__icon': defaultIconClass },
       iconClass
     ]"
+    :title="iconTitle || icon"
   />
 </component>

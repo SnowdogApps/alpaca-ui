@@ -20,16 +20,18 @@
         tabindex="-1"
       >
         <div class="modal__header row between-xs">
-          <alpaca-heading
-            v-if="!blank"
-            :level="1"
-            class="modal__heading"
-          >
-            {{ heading }}
-          </alpaca-heading>
+          <slot name="heading">
+            <alpaca-heading 
+              v-if="!blank"
+              :level="1"
+              class="modal__heading"
+            >
+              {{ heading }}
+            </alpaca-heading>
+          </slot>
           <button
             v-if="closeButton && !blank"
-            @click="hide"
+            @click="toggle(false)"
             class="button button--icon modal__close-button"
             type="button"
           >

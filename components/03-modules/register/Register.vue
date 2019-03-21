@@ -67,7 +67,7 @@
       <alpaca-button
         class="register__register-button"
         blank
-        @click="goToRegister"
+        @click="goToLogin"
       >
         {{ goToLoginButton }}
       </alpaca-button>
@@ -76,9 +76,9 @@
 </template>
 
 <script>
-  import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaInput from '../../02-elements/form/input/Input.vue'
+  import AlpacaFieldset from '@alpaca-storybook/components/02-elements/form/fieldset/Fieldset.vue'
+  import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
+  import AlpacaInput from '@alpaca-storybook/components/02-elements/form/input/Input.vue'
 
   export default {
     components: {
@@ -123,6 +123,9 @@
           password: this.password,
           newsletter: this.newsletter
         })
+      },
+      goToLogin() {
+        this.$emit('goToLogin')
       }
     }
   }

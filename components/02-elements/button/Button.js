@@ -1,4 +1,4 @@
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 
 export default {
   components: { AlpacaIcon },
@@ -15,11 +15,19 @@ export default {
       type: Boolean,
       default: true
     },
+    defaultButtonIconClass: {
+      type: Boolean,
+      default: true
+    },
     icon: {
       type: String,
       default: null
     },
     iconClass: {
+      type: String,
+      default: null
+    },
+    iconTitle: {
       type: String,
       default: null
     },

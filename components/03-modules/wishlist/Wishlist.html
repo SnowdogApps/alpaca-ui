@@ -1,0 +1,18 @@
+<alpaca-list class="wishlist">
+  <alpaca-product-item
+    v-for="product in products"
+    :key="product.id"
+    :id="product.id"
+    :name="product.name"
+    :url="product.url"
+    :image="product.image"
+    :price="product.price"
+    :specialPrice="product.specialPrice"
+    :oldPrice="product.oldPrice"
+    :quantity="product.quantity"
+    :remove-button="removeButton"
+    item-tag="li"
+    class="wishlist__item"
+    @remove="onRemove(product.id)"
+  />
+</alpaca-list>

@@ -1,5 +1,5 @@
 import vueSlider from 'vue-slider-component'
-import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 
 export default {
   components: {
@@ -31,15 +31,19 @@ export default {
           height: 8,
           tooltip: null,
           enableCross: false,
-          bgStyle: {
-            "backgroundColor": "#73739c"
+          railStyle: {
+            "background-color": "#73739c"
           },
           processStyle: {
-            "backgroundColor": "#31e37d",
+            "background-color": "#31e37d",
             "box-shadow": "inset 0 0 3px rgba(51, 51, 51, 0.45)"
           },
-          sliderStyle: {
-            "boxShadow": "0 2px 4px 0 rgba(51, 51, 51, 0.5)"
+          dotStyle: {
+            "box-shadow": "0 2px 4px 0 rgba(51, 51, 51, 0.5)",
+            "width": "24px",
+            "height": "24px",
+            "border-radius": "50%",
+            "background-color": "#fff"
           }
         }
       }

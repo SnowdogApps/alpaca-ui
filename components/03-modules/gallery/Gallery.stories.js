@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaGallery from './Gallery.vue'
 
 import gallery from './mocks/gallery.json'
@@ -15,7 +15,6 @@ storiesOf('Modules/Gallery', module)
       <app>
         <alpaca-gallery
           :images="gallery.images"
-          :mainImage="1"
         />
       </app>
     `

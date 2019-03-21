@@ -41,10 +41,10 @@
 </template>
 
 <script>
-  import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-  import AlpacaList from '../../02-elements/list/List.vue'
-  import AlpacaButton from '../../02-elements/button/Button.vue'
-  import AlpacaListItem from '../../02-elements/list/ListItem.vue'
+  import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
+  import AlpacaList from '@alpaca-storybook/components/02-elements/list/List.vue'
+  import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
+  import AlpacaListItem from '@alpaca-storybook/components/02-elements/list/ListItem.vue'
 
   export default {
     components: {

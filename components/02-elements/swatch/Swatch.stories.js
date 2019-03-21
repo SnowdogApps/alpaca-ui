@@ -4,7 +4,7 @@ import textSwatch from './mocks/text-swatch.json'
 import imageSwatch from './mocks/icon-swatch.json'
 import colorSwatch from './mocks/color-swatch.json'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaSwatch from './Swatch.vue'
 
 storiesOf('Elements/Swatch', module)
@@ -20,7 +20,7 @@ storiesOf('Elements/Swatch', module)
           :options="textSwatch.options"
           v-model="selected"
         />
-          Selected option: {{ selected }}
+        Selected option: {{ selected }}
       </app>
     `
   }))
@@ -37,7 +37,7 @@ storiesOf('Elements/Swatch', module)
           v-model="selected"
           label="Label"
         />
-          Selected option: {{ selected }}
+        Selected option: {{ selected }}
       </app>
     `
   }))
@@ -54,7 +54,7 @@ storiesOf('Elements/Swatch', module)
           v-model="selected"
           image
         />
-          Selected option: {{ selected }}
+        Selected option: {{ selected }}
       </app>
     `
   }))
@@ -66,13 +66,13 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-       <alpaca-swatch
-         :options="imageSwatch.options"
-         v-model="selected"
-         image
-         label="Label"
-       />
-         Selected option: {{ selected }}
+        <alpaca-swatch
+          :options="imageSwatch.options"
+          v-model="selected"
+          image
+          label="Label"
+        />
+        Selected option: {{ selected }}
       </app>
     `
   }))
@@ -84,12 +84,12 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-       <alpaca-swatch
-         :options="colorSwatch.options"
-         v-model="selected"
-         color
-       />
-         Selected option: {{ selected }}
+        <alpaca-swatch
+          :options="colorSwatch.options"
+          v-model="selected"
+          color
+        />
+        Selected option: {{ selected }}
       </app>
     `
   }))
@@ -101,13 +101,13 @@ storiesOf('Elements/Swatch', module)
     }),
     template: `
       <app>
-       <alpaca-swatch
-         :options="colorSwatch.options"
-         v-model="selected"
-         color
-         label="Label"
-       />
-         Selected option: {{ selected }}
+        <alpaca-swatch
+          :options="colorSwatch.options"
+          v-model="selected"
+          color
+          label="Label"
+        />
+        Selected option: {{ selected }}
       </app>
     `
   }))

@@ -1,6 +1,14 @@
 $minicart__row-margin-bottom: $spacer--medium !default;
 
 .minicart {
+  &__product-item {
+    padding-bottom: $spacer--medium;
+
+    &:first-child {
+      padding-top: $reset;
+    }
+  }
+
   &__summary-heading {
     margin-bottom: $spacer--large;
     font-weight: $font-weight-normal;

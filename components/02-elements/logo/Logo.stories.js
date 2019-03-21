@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import App from '../../01-globals/app/App.vue'
+import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaLogo from './Logo.vue'
 
 storiesOf('Elements/Logo', module)
