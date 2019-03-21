@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       visibility: false,
+      trigger: null,
       focused: null,
       ariaHidden: 'true'
     }
