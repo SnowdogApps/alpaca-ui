@@ -1,6 +1,5 @@
 $catalog__margin                      : $spacer--medium 0 0 0 !default;
-$catalog__sidebar-width--mq-medium    : 620px !default;
-$catalog__sidebar-max-width           : 300px !default;
+$catalog__sidebar-width--mq-medium    : 390px !default;
 $catalog__sidebar-margin--mq-medium   : 0 $spacer--medium 0 0 !default;
 $catalog__sidebar-border              : 1px solid $gray-lighter !default;
 $catalog__products-padding            : 0 0 $spacer--large 0 !default;
@@ -26,7 +25,6 @@ $catalog-list__products-width\@medium : calc(100% - #{$catalog__sidebar-width--m
       justify-content: space-between;
       margin: $catalog__sidebar-margin--mq-medium;
       border-bottom: none;
-      max-width: $catalog__sidebar-max-width;
     }
   }
 
