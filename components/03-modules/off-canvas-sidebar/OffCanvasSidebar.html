@@ -23,7 +23,8 @@
         v-show="visibility"
         ref="offCanvasSidebar"
         role="document"
-        tabindex="-1"
+        tabindex="0"
+        @keydown="handleKeydown"
       >
         <div class="off-canvas-sidebar__header row between-xs">
           <slot name="heading">

@@ -79,7 +79,7 @@ export default {
       }
     },
     handleKeydown(event) {
-      if(this.visibility) {
+      if (this.visibility) {
         switch (event.key) {
           case "Esc": // IE/Edge specific value
           case "Escape":

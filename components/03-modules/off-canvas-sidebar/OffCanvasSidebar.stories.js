@@ -3,10 +3,12 @@ import { storiesOf } from '@storybook/vue'
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 import AlpacaOffCanvasSidebar from '@alpaca-storybook/components/03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AlpacaInput from '@alpaca-storybook/components/02-elements/form/input/Input.vue'
 
 storiesOf('Modules/Off Canvas Sidebar', module)
   .add('Default', () => ({
-    components: { App, AlpacaButton, AlpacaOffCanvasSidebar },
+    components: { App, AlpacaButton, AlpacaOffCanvasSidebar, AlpacaInput },
+    data: () => ({ value: null }),
     template: `
       <app>
         <alpaca-button @click="showSidebar">
@@ -18,6 +20,15 @@ storiesOf('Modules/Off Canvas Sidebar', module)
           heading="Sidebar Heading"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <alpaca-input
+            label="Inline text"
+            type="text"
+            id="field_id"
+            name="inline"
+            placeholder="Test focus trap"
+            inline
+            v-model="value"
+          />
         </alpaca-off-canvas-sidebar>
       </app>
     `,
