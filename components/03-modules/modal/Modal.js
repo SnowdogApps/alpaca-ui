@@ -12,7 +12,8 @@ export default {
     return {
       visibility: false,
       focused: null,
-      ariaHidden: 'true'
+      ariaHidden: 'true',
+      openTrigger: null
     }
   },
   props: {
@@ -23,10 +24,6 @@ export default {
     heading: {
       type: String,
       default: null
-    },
-    closeOnEsc: {
-      type: Boolean,
-      default: true
     },
     closeOnBackgroundClick: {
       type: Boolean,
@@ -56,7 +53,8 @@ export default {
   methods: {
     show (name) {
       if (name === this.name) {
-        this.focused = document.activeElement
+        this.openTrigger = document.activeElement
+        this.focused = this.$refs.modal
         this.toggle(true)
       }
     },
@@ -69,20 +67,41 @@ export default {
       this.ariaHidden = state ? 'false' : 'true'
       this.visibility = state
 
-      if (state === true) {
-        this.$nextTick(() => this.$refs.modal.focus())
-      } else {
-        this.$nextTick(() => this.focused.focus())
-      }
+      this.$nextTick(() => this.focused.focus())
     },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
-        this.toggle(false)
+        this.hide(this.name)
       }
     },
-    handleEscapeKeyUp (event) {
-      if (event.which === 27 && this.visibility) {
-        this.toggle(false)
+    handleKeyboard(event) {
+      if(this.visibility) {
+        if (event.which === 27 ) {
+          this.hide(this.name)
+          return false
+        }
+
+        if (event.which === 9) {
+          const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
+          const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
+
+          let currentFocus = document.activeElement
+          let totalOfFocusable = focusableChildren.length
+          let focusedIndex = focusableChildren.indexOf(currentFocus)
+
+          if (event.shiftKey) {
+            if (focusedIndex <= 0) {
+              event.preventDefault()
+              focusableChildren[totalOfFocusable - 1].focus()
+            }
+          }
+          else {
+            if (focusedIndex === totalOfFocusable - 1) {
+              event.preventDefault()
+              focusableChildren[0].focus()
+            }
+          }
+        }
       }
     }
   },
@@ -91,14 +110,11 @@ export default {
       return this.maxWidth !== null ? `max-width: ${this.maxWidth}px;`: null
     }
   },
-  beforeMount () {
-    if (this.closeOnEsc) {
-      window.addEventListener('keydown', this.handleEscapeKeyUp)
-    }
+  beforeMount() {
+    window.addEventListener('keydown', this.handleKeyboard)
   },
-  beforeDestroy () {
-    if (this.closeOnEsc) {
-      window.removeEventListener('keydown', this.handleEscapeKeyUp)
-    }
+  beforeDestroy() {
+    this.$nextTick(() => this.openTrigger.focus())
+    window.removeEventListener('keydown', this.handleKeyboard)
   }
 }
