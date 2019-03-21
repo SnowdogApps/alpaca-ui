@@ -53,7 +53,7 @@ export default {
   methods: {
     show (name) {
       if (name === this.name) {
-        this.openTrigger = document.activeElement
+        this.trigger = document.activeElement
         this.focused = this.$refs.modal
         this.toggle(true)
       }
@@ -67,7 +67,11 @@ export default {
       this.ariaHidden = state ? 'false' : 'true'
       this.visibility = state
 
-      this.$nextTick(() => this.focused.focus())
+      if(state) {
+        this.$nextTick(() => this.focused.focus())
+      } else {
+        this.$nextTick(() => this.trigger.focus())
+      }
     },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
@@ -76,31 +80,35 @@ export default {
     },
     handleKeydown(event) {
       if(this.visibility) {
-        if (event.which === 27 ) {
-          this.hide(this.name)
-          return false
+        switch (event.key) {
+          case "Esc": // IE/Edge specific value
+          case "Escape":
+            this.hide(this.name)
+            break
+          case "Tab":
+            this.setFocusTrap(event)
+            break
         }
+      }
+    },
+    setFocusTrap(event) {
+      const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
+      const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
 
-        if (event.which === 9) {
-          const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
-          const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
+      let currentFocus = document.activeElement
+      let totalOfFocusable = focusableChildren.length
+      let focusedIndex = focusableChildren.indexOf(currentFocus)
 
-          let currentFocus = document.activeElement
-          let totalOfFocusable = focusableChildren.length
-          let focusedIndex = focusableChildren.indexOf(currentFocus)
-
-          if (event.shiftKey) {
-            if (focusedIndex <= 0) {
-              event.preventDefault()
-              focusableChildren[totalOfFocusable - 1].focus()
-            }
-          }
-          else {
-            if (focusedIndex === totalOfFocusable - 1) {
-              event.preventDefault()
-              focusableChildren[0].focus()
-            }
-          }
+      if (event.shiftKey) {
+        if (focusedIndex <= 0) {
+          event.preventDefault()
+          focusableChildren[totalOfFocusable - 1].focus()
+        }
+      }
+      else {
+        if (focusedIndex === totalOfFocusable - 1) {
+          event.preventDefault()
+          focusableChildren[0].focus()
         }
       }
     }
