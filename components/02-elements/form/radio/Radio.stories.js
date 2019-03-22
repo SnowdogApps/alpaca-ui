@@ -24,3 +24,22 @@ storiesOf('Elements/Form/Radio', module)
       </app>
     `
   }))
+  .add('Square', () => ({
+    components: { App, AlpacaRadio },
+    data() {
+      return {
+        options
+      }
+    },
+    template: `
+      <app>
+        <alpaca-radio
+          square
+          :legendId="options.legendId"
+          :legend="options.legend"
+          :options="options.options"
+          :name="options.name"
+        />
+      </app>
+    `
+  }))

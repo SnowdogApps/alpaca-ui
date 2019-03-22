@@ -36,6 +36,28 @@
     <alpaca-dropdown-list
       secondary
     >
+      <alpaca-swatch-filter
+        v-if="swatchItems"
+        :title="swatchTitle"
+        id="swatchId"
+        :items="swatchItems"
+        @click="checkSwatch"
+      />
+      <alpaca-color-filter
+        v-if="colorItems"
+        :title="colorTitle"
+        id="colorId"
+        :items="colorItems"
+        @click="checkColor"
+      />
+      <no-ssr>
+        <alpaca-range
+          :value.sync="val"
+          :min="min"
+          :max="max"
+          @apply="updateVal"
+        />
+      </no-ssr>
       <template>
         <template
           v-if="checkboxItems && Array.isArray(checkboxItems)"
@@ -58,26 +80,6 @@
           @select="selectOptions"
         />
       </template>
-      <alpaca-swatch-filter
-        v-if="swatchItems"
-        :title="swatchTitle"
-        id="swatchId"
-        :items="swatchItems"
-        @click="checkSwatch"
-      />
-      <alpaca-color-filter
-        v-if="colorItems"
-        :title="colorTitle"
-        id="colorId"
-        :items="colorItems"
-        @click="checkColor"
-      />
-      <alpaca-range
-        :value.sync="val"
-        :min="min"
-        :max="max"
-        @apply="updateVal"
-      />
     </alpaca-dropdown-list>
   </div>
 </div>

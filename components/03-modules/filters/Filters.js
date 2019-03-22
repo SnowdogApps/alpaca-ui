@@ -4,11 +4,13 @@ import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 import AlpacaDivider from '@alpaca-storybook/components/02-elements/divider/Divider.vue'
 import AlpacaDropdownList from '@alpaca-storybook/components/02-elements/dropdown-list/DropdownList.vue'
 import AlpacaDropdownListItem from '@alpaca-storybook/components/02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
-import AlpacaRange from '../../03-modules/range/Range.vue'
 import AlpacaActiveFilters from '@alpaca-storybook/components/03-modules/active-filters/ActiveFilters.vue'
 import AlpacaSwatchFilter from '@alpaca-storybook/components/03-modules/filter/swatch-filter/SwatchFilter.vue'
 import AlpacaCheckboxFilter from '@alpaca-storybook/components/03-modules/filter/checkbox-filter/CheckboxFilter.vue'
 import AlpacaColorFilter from '@alpaca-storybook/components/03-modules/filter/color-filter/ColorFilter.vue'
+import NoSSR from "vue-no-ssr"
+
+const AlpacaRange = () => import('@alpaca-storybook/components/03-modules/range/Range.vue')
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     AlpacaActiveFilters,
     AlpacaColorFilter,
     AlpacaSwatchFilter,
-    AlpacaCheckboxFilter
+    AlpacaCheckboxFilter,
+    'no-ssr': NoSSR
   },
   props: {
     activeFiltersHeading: {

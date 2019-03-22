@@ -10,7 +10,7 @@
       :name="name"
       :value="value"
       :checked="selectedValue === value"
-      type="checkbox"
+      :type="type"
       class="checkbox__field"
       @change="change($event.target.checked)"
     >
@@ -46,12 +46,16 @@
         default: null
       },
       value: {
-        type: [String, Boolean, Number, Object],
+        type: [String, Boolean, Number, Object, Array],
         default: null
       },
       uncheckedValue: {
         type: [String, Boolean, Number, Object],
         default: null
+      },
+      type: {
+        type: String,
+        default: 'checkbox'
       },
       id: {
         type: String,
