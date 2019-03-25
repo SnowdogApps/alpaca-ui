@@ -30,6 +30,7 @@ storiesOf('Views/Catalog', module)
     }
   },
   template: `
+    <div>
       <alpaca-header
         :menu="menu"
         src="./../images/logo/alpaca.svg"
@@ -44,5 +45,6 @@ storiesOf('Views/Catalog', module)
         :toolbar="toolbar"
         :breadcrumbs="breadcrumbs"
       />
+    </div>
   `
 }))

@@ -2,7 +2,7 @@
 import { configure, addDecorator } from '@storybook/vue'
 
 // Wrap every story in Alpaca App component
-import AApp from '../components/01-globals/app/App.vue'
+import AApp from '../src/01-globals/app/App.vue'
 addDecorator(() => ({
   components: {
     AApp
@@ -15,7 +15,7 @@ addDecorator(() => ({
 }))
 
 function loadStories() {
-  const req = require.context('../components', true, /.stories.js$/)
+  const req = require.context('../src', true, /.stories.js$/)
   req.keys().forEach(filename => req(filename))
 }
 

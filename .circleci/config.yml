@@ -4,6 +4,7 @@ jobs:
       - image: circleci/node:carbon-browsers
     steps:
       - checkout
+      - run: cd components
       - run: yarn
       - run: yarn eslint
       - run: yarn stylelint

@@ -26,8 +26,8 @@ module.exports = ({ config, mode }) => {
 
   config.plugins.push(new StyleLintPlugin({
     files: [
-      'components/**/*.vue',
-      'components/**/*.scss',
+      'src/**/*.vue',
+      'src/**/*.scss',
       'assets/styles/**/*.scss'
     ],
     fix: true
