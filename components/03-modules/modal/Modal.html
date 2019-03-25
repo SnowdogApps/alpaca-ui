@@ -32,7 +32,7 @@
           </slot>
           <button
             v-if="closeButton && !blank"
-            @click="toggle(false)"
+            @click="hide(name)"
             class="button button--icon modal__close-button"
             type="button"
           >

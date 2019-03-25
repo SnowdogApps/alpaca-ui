@@ -38,7 +38,7 @@
           </slot>
           <button
             v-if="closeButton && !blank"
-            @click="toggle(false)"
+            @click="hide(name)"
             class="button button--icon off-canvas-sidebar__close-button"
             type="button"
           >

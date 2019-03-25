@@ -12,7 +12,6 @@ export default {
     return {
       visibility: false,
       trigger: null,
-      focused: null,
       ariaHidden: 'true'
     }
   },
@@ -58,28 +57,24 @@ export default {
   methods: {
     show (name) {
       if (name === this.name) {
-        this.focused = document.activeElement
-        this.toggle(true)
+        this.trigger = document.activeElement
+        this.toggleParams(true)
+        this.$nextTick(() => this.$refs.offCanvasSidebar.focus())
       }
     },
     hide (name) {
       if (name === this.name) {
-        this.toggle(false)
+        this.toggleParams(false)
+        this.$nextTick(() => this.trigger.focus())
       }
     },
-    toggle (state) {
+    toggleParams (state) {
       this.ariaHidden = state ? 'false' : 'true'
       this.visibility = state
-
-      if (state === true) {
-        this.$nextTick(() => this.$refs.offCanvasSidebar.focus())
-      } else {
-        this.$nextTick(() => this.focused.focus())
-      }
     },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
-        this.toggle(false)
+        this.toggleParams(false)
       }
     },
     handleKeydown (event) {
