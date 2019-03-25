@@ -18,9 +18,9 @@ storiesOf('Modules/Toolbar', module)
       <app>
         <alpaca-toolbar
           show-mode
-          :sortById="toolbar.id"
-          :sortByName="toolbar.name"
-          :sortByLabel="toolbar.text"
+          :sort-byId="toolbar.id"
+          :sort-byName="toolbar.name"
+          :sort-byLabel="toolbar.text"
           :sort-by="toolbar.sortBy.options"
           :limiter="toolbar.limiter"
           :amount="toolbar.amount"
@@ -45,9 +45,9 @@ storiesOf('Modules/Toolbar', module)
       <app>
         <alpaca-toolbar
           show-mode
-          :sortById="toolbar.id"
-          :sortByName="toolbar.name"
-          :sortByLabel="toolbar.text"
+          :sort-byId="toolbar.id"
+          :sort-byName="toolbar.name"
+          :sort-byLabel="toolbar.text"
           :sort-by="toolbar.sortBy.options"
           :limiter="toolbar.limiter"
           :pager="toolbar.pager"
