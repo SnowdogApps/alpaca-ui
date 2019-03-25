@@ -26,10 +26,16 @@
         role="document"
         tabindex="-1"
       >
-        <div class="off-canvas-sidebar__header row between-xs">
+        <div
+          :class="[
+            'off-canvas-sidebar__header row',
+            { 'between-xs': !blank && heading },
+            { 'end-xs': !blank && !heading }
+          ]"
+        >
           <slot name="heading">
             <alpaca-heading
-              v-if="!blank"
+              v-if="!blank && heading"
               :level="1"
               class="off-canvas-sidebar__heading"
             >
@@ -49,7 +55,7 @@
           </button>
         </div>
         <alpaca-divider
-          v-if="!blank"
+          v-if="!blank && !compact"
           class="off-canvas-sidebar__divider"
         />
         <slot/>
