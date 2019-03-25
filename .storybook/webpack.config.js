@@ -1,4 +1,3 @@
-const path = require('path')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = ({ config, mode }) => {
@@ -44,11 +43,6 @@ module.exports = ({ config, mode }) => {
     ],
     fix: true
   }))
-
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    '@alpaca-storybook': path.resolve(__dirname, '../')
-  }
 
   return config
 }

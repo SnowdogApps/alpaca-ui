@@ -1,0 +1,10 @@
+<component
+  :is="tag"
+  :class="{
+      label: tag !== 'label',
+      'label--inline': inline,
+      'label--hidden': hidden
+    }"
+>
+  <slot />
+</component>

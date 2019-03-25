@@ -1,37 +1,12 @@
-<template>
-  <component
-    :is="tag"
-    :class="tag !== 'pre' && 'preformatted'"
-  >
-    <slot />
-  </component>
-</template>
+<template src="./Preformatted.html" />
 
 <script>
+  import instance from "./Preformatted.js"
+
   export default {
-    props: {
-      tag: {
-        type: String,
-        default: 'pre'
-      }
-    }
+    ...instance
   }
 </script>
 
-<style lang="scss">
-  $preformatted__padding: 20px !default;
-  $preformatted__background: $gray-lightest !default;
-  $preformatted__overflow: scroll !default;
-  $preformatted__font-family: $font-family-monospace !default;
+<style lang="scss" src="./Preformatted.scss"/>
 
-  .preformatted {
-    padding: $preformatted__padding;
-    background: $preformatted__background;
-    overflow: $preformatted__overflow;
-    font-family: $preformatted__font-family;
-  }
-
-  pre {
-    @extend .preformatted;
-  }
-</style>
