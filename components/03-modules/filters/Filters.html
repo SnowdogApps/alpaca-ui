@@ -64,11 +64,11 @@
       </no-ssr>
       <template>
         <template
-          v-if="othersFilters"
+          v-if="otherFilters"
         >
         </template>
         <alpaca-button-filter
-          v-for="item in othersFilters"
+          v-for="item in otherFilters"
           :key="item.id"
           :id="item.id"
           :title="item.title"

@@ -70,7 +70,7 @@ export default {
       type: Array,
       default: null
     },
-    othersFilters: {
+    otherFilters: {
       type: Array,
       default: null
     }
