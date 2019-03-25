@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 
 import AlpacaTable from './Table.vue'
-import AlpacaTableRow from './TableRow.vue'
-import AlpacaTableCell from './TableCell.vue'
+import AlpacaTableRow from './table-row/TableRow.vue'
+import AlpacaTableCell from './table-cell/TableCell.vue'
 
 import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'

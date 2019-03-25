@@ -2,9 +2,9 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
-import data from './mocks/catalogGridItem.json'
-
 import AlpacaCatalogGridItem from './CatalogGridItem.vue'
+
+import data from './mocks/catalogGridItem.json'
 
 storiesOf('Modules/Catalog grid item', module)
   .addDecorator(StoryRouter())

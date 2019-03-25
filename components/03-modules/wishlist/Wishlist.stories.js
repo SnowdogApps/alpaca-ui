@@ -2,9 +2,9 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
-import products from '@alpaca-storybook/mocks/products'
-
 import AlpacaWishlist from './Wishlist.vue'
+
+import products from '../../../mocks/products'
 
 storiesOf('Modules/Wishlist', module)
   .addDecorator(StoryRouter())

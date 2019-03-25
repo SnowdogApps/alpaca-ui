@@ -1,17 +1,17 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import data from './mocks/catalog.json'
-import menu from '@alpaca-storybook/components/03-modules/header/mocks/menu.json'
-import toolbar from '@alpaca-storybook/components/03-modules/toolbar/mocks/toolbar.json'
-import breadcrumbs from "@alpaca-storybook/components/02-elements/breadcrumbs/mocks/breadcrumbs"
-import swatchItems from "@alpaca-storybook/components/03-modules/filter/mocks/swatchItems"
-import colorItems from "@alpaca-storybook/components/03-modules/filter/mocks/colorItems"
-import activeFilterItems from "@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters"
-import checkboxItems from "@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems"
-
-import AlpacaHeader from '@alpaca-storybook/components/03-modules/header/Header.vue'
+import AlpacaHeader from '../../03-modules/header/Header.vue'
 import AlpacaCatalog from './Catalog.vue'
+
+import data from './mocks/catalog.json'
+import menu from '../../03-modules/header/mocks/menu.json'
+import toolbar from '../../03-modules/toolbar/mocks/toolbar.json'
+import breadcrumbs from "../../02-elements/breadcrumbs/mocks/breadcrumbs"
+import swatchItems from "../../03-modules/filter/mocks/swatchItems"
+import colorItems from "../../03-modules/filter/mocks/colorItems"
+import activeFilterItems from "../../03-modules/active-filters/mocks/active-filters"
+import checkboxItems from "../../03-modules/filter/mocks/checkboxItems"
 
 storiesOf('Views/Catalog', module)
   .addDecorator(StoryRouter())

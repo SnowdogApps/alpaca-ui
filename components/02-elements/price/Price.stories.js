@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 
-import price from './mocks/price.json'
-
 import AlpacaPrice from './Price.vue'
+
+import price from './mocks/price.json'
 
 storiesOf('Elements/Price', module)
   .add('Default', () => ({

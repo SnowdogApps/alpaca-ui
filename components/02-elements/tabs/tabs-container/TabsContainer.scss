@@ -1,0 +1,8 @@
+@import '../../../../assets/styles/globals';
+
+.tab {
+  @include mq($screen-l) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}

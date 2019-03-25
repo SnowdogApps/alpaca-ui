@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 
+import AlpacaSwatch from './Swatch.vue'
+
 import textSwatch from './mocks/text-swatch.json'
 import imageSwatch from './mocks/icon-swatch.json'
 import colorSwatch from './mocks/color-swatch.json'
-
-import AlpacaSwatch from './Swatch.vue'
 
 storiesOf('Elements/Swatch', module)
   .add('Default', () => ({

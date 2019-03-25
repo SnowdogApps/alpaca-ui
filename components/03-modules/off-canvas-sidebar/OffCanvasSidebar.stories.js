@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
-import AlpacaOffCanvasSidebar from '@alpaca-storybook/components/03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 storiesOf('Modules/Off Canvas Sidebar', module)
   .add('Default', () => ({

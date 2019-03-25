@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaTab from './Tab.vue'
-import AlpacaTabsContainer from './TabsContainer.vue'
-import AlpacaTabContent from './TabContent.vue'
+import AlpacaTab from './Tabs.vue'
+import AlpacaTabsContainer from './tabs-container/TabsContainer.vue'
+import AlpacaTabContent from './tab-content/TabContent.vue'
 
 import tabs from './mocks/tabs.json'
 

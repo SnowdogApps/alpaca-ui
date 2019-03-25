@@ -1,6 +1,6 @@
-import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
-import AlpacaInput from '@alpaca-storybook/components/02-elements/form/input/Input.vue'
-import AlpacaParagraph from '@alpaca-storybook/components/01-globals/paragraph/Paragraph.vue'
+import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaInput from '../../02-elements/form/input/Input.vue'
+import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
 
 export default {
   components: {

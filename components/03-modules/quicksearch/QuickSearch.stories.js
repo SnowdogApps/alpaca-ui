@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
+import AlpacaQuickSearch from './QuickSearch.vue'
+
 import products from './mocks/products.json'
 import categories from './mocks/categories.json'
 import manufacturers from './mocks/manufacturers.json'
-
-import AlpacaQuickSearch from './QuickSearch.vue'
 
 storiesOf('Modules/Quick search', module)
   .add('Default', () => ({

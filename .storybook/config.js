@@ -1,7 +1,7 @@
 // Storybook
 import { configure, addDecorator } from '@storybook/vue'
 
-// Wrapp every story in Alpaca App component
+// Wrap every story in Alpaca App component
 import AApp from '../components/01-globals/app/App.vue'
 addDecorator(() => ({
   components: {

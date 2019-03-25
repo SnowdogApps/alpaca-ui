@@ -2,10 +2,10 @@ import { storiesOf } from '@storybook/vue'
 
 import AlpacaFilters from './Filters.vue'
 
-import swatchItems from '@alpaca-storybook/components/03-modules/filter/mocks/swatchItems'
-import colorItems from '@alpaca-storybook/components/03-modules/filter/mocks/colorItems'
-import checkboxItems from '@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems'
-import activeFilterItems from '@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters.json'
+import swatchItems from '../../03-modules/filter/mocks/swatchItems'
+import colorItems from '../../03-modules/filter/mocks/colorItems'
+import checkboxItems from '../../03-modules/filter/mocks/checkboxItems'
+import activeFilterItems from '../../03-modules/active-filters/mocks/active-filters.json'
 
 storiesOf('Modules/Filters', module)
   .add('Default', () => ({

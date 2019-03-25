@@ -1,4 +1,3 @@
-const path = require('path')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = ({ config, mode }) => {
@@ -13,18 +12,7 @@ module.exports = ({ config, mode }) => {
     use: [
       'vue-style-loader',
       'css-loader',
-      'sass-loader',
-      { loader: 'sass-resources-loader',
-        options: {
-          sourceMap: true,
-          resources: [
-            './assets/styles/_variables.scss',
-            './assets/styles/mixins/_grid-column-width.scss',
-            './assets/styles/mixins/_mq.scss',
-            './assets/styles/mixins/_visually-hidden.scss'
-          ]
-        }
-      }
+      'sass-loader'
     ]
   })
 
@@ -44,11 +32,6 @@ module.exports = ({ config, mode }) => {
     ],
     fix: true
   }))
-
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    '@alpaca-storybook': path.resolve(__dirname, '../')
-  }
 
   return config
 }
