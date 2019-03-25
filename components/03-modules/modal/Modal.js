@@ -28,6 +28,10 @@ export default {
       type: Boolean,
       default: true
     },
+    closeOnEsc: {
+      type: Boolean,
+      default: true
+    },
     maxWidth: {
       type: Number,
       default: null
@@ -77,7 +81,9 @@ export default {
         switch (event.key) {
           case "Esc": // IE/Edge specific value
           case "Escape":
-            this.hide(this.name)
+            if (this.closeOnEsc) {
+              this.hide(this.name)
+            }
             break
           case "Tab":
             this.setFocusTrap(event)
