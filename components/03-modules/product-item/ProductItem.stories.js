@@ -6,7 +6,7 @@ import App from '../../01-globals/app/App.vue'
 import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
 import AlpacaProductItem from './ProductItem.vue'
 
-import products from '@alpaca-storybook/mocks/products'
+import products from '../../../mocks/products'
 
 storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())

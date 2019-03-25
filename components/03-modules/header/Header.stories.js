@@ -13,8 +13,8 @@ import AlpacaProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu'
-import products from '@alpaca-storybook/mocks/products'
-import totals from '@alpaca-storybook/mocks/totals'
+import products from '../../../mocks/products'
+import totals from '../../../mocks/totals'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
