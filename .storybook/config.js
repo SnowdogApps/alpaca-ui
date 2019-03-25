@@ -7,7 +7,11 @@ addDecorator(() => ({
   components: {
     AApp
   },
-  template: `<a-app><story /></a-app>`
+  template: `
+    <a-app>
+      <story />
+    </a-app>
+  `
 }))
 
 function loadStories() {
