@@ -13,7 +13,11 @@
     <div
       v-for="(option) in options"
       :key="option.id"
-      :class="['swatch__option-container', selected === option.value && 'swatch__option-container--selected', wrapperClass]"
+      :class="[
+        'swatch__option-container',
+        selected === option.value && 'swatch__option-container--selected',
+        wrapperClass
+      ]"
       :aria-label="option.label"
       tabindex="0"
       @click="setActiveValue(option.value)"
@@ -26,8 +30,8 @@
       </div>
 
       <span v-if="option.caption">
-          {{ option.caption }}
-        </span>
+        {{ option.caption }}
+      </span>
     </div>
   </div>
 </div>

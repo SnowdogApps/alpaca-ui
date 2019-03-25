@@ -9,4 +9,3 @@
 </script>
 
 <style lang="scss" src="./Tabs.scss"/>
-

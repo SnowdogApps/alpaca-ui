@@ -28,9 +28,9 @@
       v-for="number in limitedPageNumbers"
       :key="number"
       :class="[
-          'pager__item',
-          { 'pager__item--current': currentPage === number }
-        ]"
+        'pager__item',
+        { 'pager__item--current': currentPage === number }
+      ]"
     >
       <alpaca-button
         class="pager__link"

@@ -13,15 +13,16 @@
       :key="key"
       class="brief-info__item"
     >
-        <span
-          :class="['brief-info__icon-wrapper', iconWrapperClass]"
-          :aria-label="item.iconLabel"
-        >
-          <icon
-            :icon="item.icon.iconId"
-            :class="['brief-info__icon', iconClass]"
-          />
-        </span>
+      <span
+        :class="['brief-info__icon-wrapper', iconWrapperClass]"
+        :aria-label="item.iconLabel"
+      >
+        <icon
+          :icon="item.icon.iconId"
+          :class="['brief-info__icon', iconClass]"
+        />
+      </span>
+
       <div class="brief-info__content">
         <component
           :is="titleTag"

@@ -6,12 +6,14 @@
       aria-label="Close quicksearch"
       icon="close"
     />
+
     <alpaca-paragraph class="quicksearch__results">
       {{ resultText }}
       <span class="quicksearch__typed">
-          {{ resultTyped }}
-        </span>
+        {{ resultTyped }}
+      </span>
     </alpaca-paragraph>
+
     <div class="quicksearch__content">
       <alpaca-paragraph
         v-if="isNoResult"
@@ -19,6 +21,7 @@
       >
         {{ noResultText }}
       </alpaca-paragraph>
+
       <alpaca-list class="quicksearch__list quicksearch__list--column">
         <alpaca-list-item
           v-for="product in products"
@@ -36,6 +39,7 @@
               class="quicksearch__product-image"
             />
           </alpaca-link>
+
           <div class="quicksearch__product-details">
             <alpaca-link
               :href="product.href"
@@ -49,6 +53,7 @@
                 {{ product.text }}
               </alpaca-heading>
             </alpaca-link>
+
             <alpaca-price
               :special-price="product.specialPrice"
               :old-price="product.oldPrice"
@@ -56,6 +61,7 @@
           </div>
         </alpaca-list-item>
       </alpaca-list>
+
       <div class="quicksearch__categories-column">
         <alpaca-list class="quicksearch__list">
           <alpaca-list-item
@@ -76,9 +82,11 @@
                 {{ category.title }}
               </alpaca-heading>
             </alpaca-link>
+
             {{ showItems(category.items) }}
           </alpaca-list-item>
         </alpaca-list>
+
         <alpaca-list class="quicksearch__list quicksearch__list--below">
           <alpaca-list-item
             v-for="manufacturer in manufacturers"
@@ -98,11 +106,13 @@
                 {{ manufacturer.title }}
               </alpaca-heading>
             </alpaca-link>
+
             {{ showItems(manufacturer.items) }}
           </alpaca-list-item>
         </alpaca-list>
       </div>
     </div>
+
     <alpaca-button
       class="quicksearch__more-button"
       @click="seeAll"

@@ -10,6 +10,7 @@
       />
     </div>
   </alpaca-link>
+
   <div class="catalog-list-item__main">
     <alpaca-badge
       v-if="badgeText"
@@ -18,6 +19,7 @@
     >
       {{ badgeText }}
     </alpaca-badge>
+
     <div class="catalog-list-item__details">
       <h2 class="catalog-list-item__name">
         <alpaca-link
@@ -27,24 +29,29 @@
           {{ title }}
         </alpaca-link>
       </h2>
+
       <div class="catalog-list-item__reviews">
         <!--TODO Add rating component-->
       </div>
     </div>
+
     <div class="catalog-list-item__price">
       <alpaca-price :price="price" />
     </div>
+
     <div class="catalog-grid-item__options">
       <alpaca-swatch
         v-if="textSwatch"
         :options="textSwatch"
       />
+
       <alpaca-swatch
         v-if="iconSwatch"
         :options="iconSwatch"
         image
       />
     </div>
+
     <div class="catalog-list-item__actions">
       <div class="catalog-list-item__actions-primary">
         <alpaca-button
@@ -53,11 +60,13 @@
           {{ addToCartButton }}
         </alpaca-button>
       </div>
+
       <div class="catalog-list-item__actions-secondary">
         <alpaca-button
           :icon="buttonWishlist"
           @click="addToWishList"
         />
+
         <alpaca-button
           :icon="buttonCompare"
           @click="compare"

@@ -5,22 +5,22 @@
   <div
     v-if="src"
     :class="[
-        'list__image',
-        imageWrapperClass
-      ]"
+      'list__image',
+      imageWrapperClass
+    ]"
   >
     <div class="lazyload-wrapper">
       <alpaca-image
         :class="[
-            'lazyloaded',
-
-            imageClass
-          ]"
+          'lazyloaded',
+          imageClass
+        ]"
         :src="src"
         :alt="alt"
       />
     </div>
   </div>
+
   <div class="list__content">
     <slot />
   </div>
