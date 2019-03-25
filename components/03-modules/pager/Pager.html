@@ -1,0 +1,67 @@
+<nav class="pager">
+  <ul class="pager__list">
+    <li class="pager__item">
+      <alpaca-button
+        icon="arrow-left"
+        class="pager__link pager__link--prev"
+        aria-label="Go to previous page"
+        :disabled="currentPage < 2"
+        @click="setCurrentPage(currentPage - 1)"
+      />
+    </li>
+
+    <template v-if="showFirst">
+      <li class="pager__item">
+        <alpaca-button
+          class="pager__link"
+          @click="setCurrentPage(1)"
+        >
+          1
+        </alpaca-button>
+      </li>
+      <li class="pager__item">
+        ...
+      </li>
+    </template>
+
+    <li
+      v-for="number in limitedPageNumbers"
+      :key="number"
+      :class="[
+          'pager__item',
+          { 'pager__item--current': currentPage === number }
+        ]"
+    >
+      <alpaca-button
+        class="pager__link"
+        @click="setCurrentPage(number)"
+      >
+        {{ number }}
+      </alpaca-button>
+    </li>
+
+    <template v-if="showLast">
+      <li class="pager__item">
+        ...
+      </li>
+      <li class="pager__item">
+        <alpaca-button
+          class="pager__link"
+          @click="setCurrentPage(numberOfPages)"
+        >
+          {{ numberOfPages }}
+        </alpaca-button>
+      </li>
+    </template>
+
+    <li class="pager__item">
+      <alpaca-button
+        icon="arrow-right"
+        class="pager__link pager__link--next"
+        aria-label="Go to next page"
+        :disabled="currentPage > numberOfPages - 1"
+        @click="setCurrentPage(currentPage + 1)"
+      />
+    </li>
+  </ul>
+</nav>

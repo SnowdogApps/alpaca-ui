@@ -1,0 +1,32 @@
+$register__fieldset-margin            : 0 0 $spacer--medium !default;
+$register__legend-font-size           : $font-size-large !default;
+$register__legend-color               : $gray-darker !default;
+$register__legend-padding             : 0 0 $spacer--medium 0 !default;
+$register__submit-button-width        : 100% !default;
+$register__submit-button-width\@medium: 240px !default;
+$register__login-wrapper-margin       : $spacer 0 0 0 !default;
+
+.register {
+  &__fieldset {
+    margin: $register__fieldset-margin;
+  }
+
+  &__legend {
+    margin: $reset;
+    padding: $register__legend-padding;
+    font-size: $register__legend-font-size;
+    color: $register__legend-color;
+  }
+
+  &__submit-button {
+    width: $register__submit-button-width;
+
+    @include mq($screen-m) {
+      width: $register__submit-button-width\@medium;
+    }
+  }
+
+  &__login-wrapper {
+    margin: $register__login-wrapper-margin;
+  }
+}

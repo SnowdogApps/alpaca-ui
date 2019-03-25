@@ -1,8 +1,8 @@
-import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
-import AlpacaBadge from '@alpaca-storybook/components/02-elements/badge/Badge.vue'
-import AlpacaPrice from '@alpaca-storybook/components/02-elements/price/Price.vue'
-import AlpacaImage from '@alpaca-storybook/components/02-elements/image/Image.vue'
-import AlpacaSwatch from '@alpaca-storybook/components/02-elements/swatch/Swatch.vue'
+import AlpacaButton from '../../02-elements/button/Button.vue'
+import AlpacaBadge from '../../02-elements/badge/Badge.vue'
+import AlpacaPrice from '../../02-elements/price/Price.vue'
+import AlpacaImage from '../../02-elements/image/Image.vue'
+import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
 
 export default {
   components: {

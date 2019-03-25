@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import data from './mocks/catalogListItem'
-import textSwatch from '@alpaca-storybook/components/02-elements/swatch/mocks/text-swatch'
-import iconSwatch from '@alpaca-storybook/components/02-elements/swatch/mocks/icon-swatch'
-
-import App from '../app/App.vue'
+import App from '../../01-globals/app/App.vue'
 import AlpacaCatalogListItem from './CatalogListItem.vue'
+
+import data from './mocks/catalogListItem'
+import textSwatch from '../../02-elements/swatch/mocks/text-swatch'
+import iconSwatch from '../../02-elements/swatch/mocks/icon-swatch'
 
 storiesOf('Modules/Catalog list item', module)
   .add('Default', () => ({
