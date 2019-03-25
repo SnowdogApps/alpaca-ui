@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaHeader from './Header.vue'
 import AlpacaModal from '@alpaca-storybook/components/03-modules/modal/Modal.vue'
 import AlpacaLogin from '@alpaca-storybook/components/03-modules/login/Login.vue'

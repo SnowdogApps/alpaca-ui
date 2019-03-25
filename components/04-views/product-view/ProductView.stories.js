@@ -9,7 +9,7 @@ import briefInfo from '@alpaca-storybook/components/03-modules/brief-info/mocks/
 import gallery from '@alpaca-storybook/components/03-modules/gallery/mocks/gallery.json'
 import product from './mocks/product.json'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaProductView from './ProductView.vue'
 import AlpacaHeader from '@alpaca-storybook/components/03-modules/header/Header.vue'
 

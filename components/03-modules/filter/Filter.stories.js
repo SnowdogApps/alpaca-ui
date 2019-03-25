@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaDropdownList from '@alpaca-storybook/components/02-elements/dropdown-list/DropdownList.vue'
 import AlpacaCheckboxFilter from './checkbox-filter/CheckboxFilter.vue'
 import AlpacaColorFilter from './color-filter/ColorFilter.vue'

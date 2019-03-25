@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaTable from './Table.vue'
 import AlpacaTableRow from './TableRow.vue'
 import AlpacaTableCell from './TableCell.vue'

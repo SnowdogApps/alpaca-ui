@@ -5,7 +5,7 @@ import data from './mocks/catalogListItem'
 import textSwatch from '@alpaca-storybook/components/02-elements/swatch/mocks/text-swatch'
 import iconSwatch from '@alpaca-storybook/components/02-elements/swatch/mocks/icon-swatch'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaCatalogListItem from './CatalogListItem.vue'
 
 storiesOf('Modules/Catalog list item', module)

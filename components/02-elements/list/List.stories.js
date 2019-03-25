@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaList from './List.vue'
 import AlpacaListItem from './ListItem.vue'
 import AlpacaListImageItem from './ListImageItem.vue'

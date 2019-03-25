@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 
 import products from '@alpaca-storybook/mocks/products'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaWishlist from './Wishlist.vue'
 
 storiesOf('Modules/Wishlist', module)

@@ -10,7 +10,7 @@ import colorItems from "@alpaca-storybook/components/03-modules/filter/mocks/col
 import activeFilterItems from "@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters"
 import checkboxItems from "@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems"
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaHeader from '@alpaca-storybook/components/03-modules/header/Header.vue'
 import AlpacaCatalog from './Catalog.vue'
 

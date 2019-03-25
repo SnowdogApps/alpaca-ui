@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaCookieMessage from './CookieMessage.vue'
 
 storiesOf('Elements/CookieMessage', module)

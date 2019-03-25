@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import data from './mocks/data'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaSlider from './Slider.vue'
 import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 import AlpacaImage from '@alpaca-storybook/components/02-elements/image/Image'

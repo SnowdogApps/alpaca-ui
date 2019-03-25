@@ -4,7 +4,7 @@ import { withReadme } from 'storybook-readme'
 import iconsReadme from './README.md'
 import icons from './mocks/icons.json'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaIcon from './Icon.vue'
 
 storiesOf('Global/Icon', module)

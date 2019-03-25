@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
+import App from '../app/App.vue'
 import AlpacaButton from '@alpaca-storybook/components/02-elements/button/Button.vue'
 import AlpacaOffCanvasSidebar from '@alpaca-storybook/components/03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
