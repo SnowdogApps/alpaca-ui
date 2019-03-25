@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
-import App from '../../01-globals/app/App.vue'
 import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
 import AlpacaProductItem from './ProductItem.vue'
 
@@ -11,12 +10,11 @@ import products from '../../../mocks/products'
 storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { App, AlpacaProductItem },
+    components: { AlpacaProductItem },
     data: () => ({
       product: products[0]
     }),
     template: `
-      <app>
         <alpaca-product-item
           :id="product.id"
           :name="product.name"
@@ -29,19 +27,17 @@ storiesOf('Modules/Product item', module)
           remove-button="Remove this product from your shopping cart"
           @remove="removeMethod"
         />
-      </app>
     `,
     methods: {
       removeMethod: action('Remove'),
     }
   }))
   .add('With Qty', () => ({
-    components: { App, AlpacaProductItem, AlpacaQuantityUpdate },
+    components: { AlpacaProductItem, AlpacaQuantityUpdate },
     data: () => ({
       product: products[0]
     }),
     template: `
-      <app>
         <alpaca-product-item
           :id="product.id"
           :name="product.name"
@@ -69,7 +65,6 @@ storiesOf('Modules/Product item', module)
             />
           </template>
         </alpaca-product-item>
-      </app>
     `,
     methods: {
       removeMethod: action('Remove'),

@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '../../01-globals/app/App.vue'
 import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
 import AlpacaCheckboxFilter from './checkbox-filter/CheckboxFilter.vue'
 import AlpacaColorFilter from './color-filter/ColorFilter.vue'
@@ -13,12 +12,11 @@ import checkboxItems from './mocks/checkboxItems'
 
 storiesOf('Modules/Filter', module)
   .add('Swatch', () => ({
-    components: { App, AlpacaSwatchFilter, AlpacaDropdownList },
+    components: { AlpacaSwatchFilter, AlpacaDropdownList },
     data: () => ({
       swatchItems
     }),
     template: `
-     <app>
        <alpaca-dropdown-list secondary>
           <alpaca-swatch-filter
             title="Swatch"
@@ -27,19 +25,17 @@ storiesOf('Modules/Filter', module)
             @click="click"
           />
         </alpaca-dropdown-list>
-      </app>
     `,
     methods: {
       click: action('Clicked'),
     }
   }))
   .add('Color', () => ({
-    components: { App, AlpacaDropdownList, AlpacaColorFilter },
+    components: { AlpacaDropdownList, AlpacaColorFilter },
     data: () => ({
       colorItems
     }),
     template: `
-     <app>
        <alpaca-dropdown-list secondary>
           <alpaca-color-filter
             title="Color"
@@ -48,19 +44,17 @@ storiesOf('Modules/Filter', module)
             @click="click"
           />
         </alpaca-dropdown-list>
-      </app>
     `,
     methods: {
       click: action('Clicked'),
     }
   }))
   .add('Checkbox', () => ({
-    components: { App, AlpacaDropdownList, AlpacaCheckboxFilter },
+    components: { AlpacaDropdownList, AlpacaCheckboxFilter },
     data: () => ({
       checkboxItems
     }),
     template: `
-     <app>
        <alpaca-dropdown-list secondary>
           <alpaca-checkbox-filter
             title="Checkbox"
@@ -68,6 +62,5 @@ storiesOf('Modules/Filter', module)
             :items="checkboxItems"
           />
         </alpaca-dropdown-list>
-      </app>
     `
   }))

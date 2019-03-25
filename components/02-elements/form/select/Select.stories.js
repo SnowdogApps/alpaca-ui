@@ -2,14 +2,12 @@ import {storiesOf} from '@storybook/vue'
 
 import countries from './mocks/countries.json'
 
-import App from '../../../01-globals/app/App.vue'
 import AlpacaSelect from './Select.vue'
 
 storiesOf('Elements/Form/Select', module)
   .add('Default', () => ({
-    components: { App, AlpacaSelect },
+    components: { AlpacaSelect },
     template: `
-      <app>
         <alpaca-select
           :id="field.id"
           :name="field.name"
@@ -17,7 +15,6 @@ storiesOf('Elements/Form/Select', module)
           label="Label text"
           selected="PL"
         />
-      </app>
     `,
     data() {
       return {

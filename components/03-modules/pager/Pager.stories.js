@@ -1,12 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../../01-globals/app/App.vue'
 import Pager from './Pager.vue'
 
 import pagination from './mocks/pagination.json'
 
 storiesOf('Modules/Pager', module).add('Default', () => ({
-  components: { App, Pager },
+  components: { Pager },
   data: () => ({
     pagination
   }),
@@ -16,14 +15,12 @@ storiesOf('Modules/Pager', module).add('Default', () => ({
     }
   },
   template: `
-    <app>
       <pager
         @update:page="(page) => {this.setCurrentPage(page)}"
         :page="currentPage"
         :limit="pagination.limit"
         :totalSize="pagination.totalSize"
       />
-    </app>
   `,
   methods: {
     setCurrentPage(page) {

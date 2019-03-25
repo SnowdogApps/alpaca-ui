@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '../../01-globals/app/App.vue'
 import AlpacaPicture from './Picture.vue'
 import images from './mocks/images.json'
 
@@ -9,13 +8,11 @@ storiesOf('Modules/Picture', module)
     data: () => ({
       images
     }),
-    components: { App, AlpacaPicture },
+    components: { AlpacaPicture },
     template: `
-      <app>
         <alpaca-picture
           :images="images"
           alt="example alt text"
         />
-      </app>
     `
   }))

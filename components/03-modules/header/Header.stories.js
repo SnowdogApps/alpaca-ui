@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
-import App from '../../01-globals/app/App.vue'
 import AlpacaHeader from './Header.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
 import AlpacaLogin from '../../03-modules/login/Login.vue'
@@ -20,7 +19,6 @@ storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: {
-      App,
       AlpacaHeader,
       AlpacaModal,
       AlpacaLogin,
@@ -40,7 +38,6 @@ storiesOf('Modules/Header', module)
       }
     }),
     template: `
-      <app>
         <alpaca-header
           :menu="menu"
           src="../../images/logo/alpaca.svg"
@@ -122,7 +119,6 @@ storiesOf('Modules/Header', module)
         >
           <alpaca-wishlist :products="products" />
         </alpaca-off-canvas-sidebar>
-      </app>
     `,
     methods: {
       showRegister() {

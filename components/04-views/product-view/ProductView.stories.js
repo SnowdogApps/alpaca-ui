@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import App from '../../01-globals/app/App.vue'
 import AlpacaProductView from './ProductView.vue'
 import AlpacaHeader from '../../03-modules/header/Header.vue'
 
@@ -16,7 +15,7 @@ import product from './mocks/product.json'
 storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())
   .add('Configurable', () => ({
-    components: { App, AlpacaHeader, AlpacaProductView },
+    components: { AlpacaHeader, AlpacaProductView },
     data() {
       return {
         breadcrumbs,
@@ -29,7 +28,6 @@ storiesOf('Views/Product View', module)
       }
     },
     template: `
-      <app>
         <alpaca-header
           :menu="menu"
           src="./../images/logo/alpaca.svg"
@@ -45,6 +43,5 @@ storiesOf('Views/Product View', module)
           first-column-text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
           second-column-text="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         />
-      </app>
     `
   }))

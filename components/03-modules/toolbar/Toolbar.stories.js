@@ -3,7 +3,6 @@ import { action } from '@storybook/addon-actions'
 
 import toolbar from './mocks/toolbar.json'
 
-import App from '../../01-globals/app/App.vue'
 import AlpacaToolbar from './Toolbar.vue'
 
 storiesOf('Modules/Toolbar', module)
@@ -13,9 +12,8 @@ storiesOf('Modules/Toolbar', module)
         toolbar
       }
     },
-    components: { App, AlpacaToolbar },
+    components: { AlpacaToolbar },
     template: `
-      <app>
         <alpaca-toolbar
           show-mode
           show-sorter
@@ -27,7 +25,6 @@ storiesOf('Modules/Toolbar', module)
           @listView="listView"
           @gridView="gridView"
         />
-      </app>
     `,
     methods: {
       listView: action('Change on list view'),
@@ -40,9 +37,8 @@ storiesOf('Modules/Toolbar', module)
         toolbar
       }
     },
-    components: { App, AlpacaToolbar },
+    components: { AlpacaToolbar },
     template: `
-      <app>
         <alpaca-toolbar
           show-mode
           show-sorter
@@ -56,7 +52,6 @@ storiesOf('Modules/Toolbar', module)
           @listView="listView"
           @gridView="gridView"
         />
-      </app>
     `,
     methods: {
       listView: action('Change on list view'),
