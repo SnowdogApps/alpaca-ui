@@ -28,12 +28,7 @@
           :for="option.id"
           class="radio__label"
         >
-          <span
-            :class="{
-              'radio__icon': !square,
-              'radio__icon--square': square
-            }"
-          />
+          <span class="radio__icon" />
           {{ option.label }}
         </label>
       </div>
@@ -67,14 +62,6 @@
       name: {
         type: String,
         required: true
-      },
-      square: {
-        type: Boolean,
-        default: false
-      },
-      iconClass: {
-        type: String,
-        default: null
       }
     }
   }
@@ -119,12 +106,8 @@
       &:checked + .radio__label {
         color: $radio__label-color-active;
 
-        .radio__icon,
-        .radio__icon--square {
-          border: none;
-
+        .radio__icon {
           &::before {
-            fill: red;
             opacity: 1;
             transform: scale(1);
           }
@@ -168,26 +151,6 @@
         transform: scale(0);
         background-color: $radio__icon-background;
         transition: $radio__icon-transition;
-      }
-
-      &--square {
-        border-radius: 0;
-        display: inline-block;
-        border: $radio__icon-border;
-        width: $radio__size;
-        height: $radio__size;
-        margin-right: $spacer;
-        vertical-align: top;
-        position: relative;
-
-        &::before {
-          border-radius: 0;
-          content: url(../../../../assets/icons/checked.svg);
-          width: $radio__size;
-          height: $radio__size;
-          margin: auto;
-          opacity: 0;
-        }
       }
     }
   }

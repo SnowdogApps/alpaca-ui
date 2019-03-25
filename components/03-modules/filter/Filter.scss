@@ -8,7 +8,7 @@ $filter__swatch-option-border              : 1px solid $white !default;
 // Label
 $filter__color-option-width                : 56px !default;
 $filter__color-option-height               : 80px !default;
-$filter__color-option-border               : 2px solid transparent !default;
+$filter__color-option-border               : 1px solid transparent !default;
 $filter__color-option-after-top            : 5px !default;
 $filter__color-option-after-left           : 8px !default;
 $filter__color-option-after-size           : 40px !default;
@@ -23,6 +23,15 @@ $filter__color-label-color                 : $gray-darkest !default;
 $filter__divider-border-top                : 1px solid $gray-light !default;
 // Range
 $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
+// Button
+$filter__button-margin                     : 12px 0;
+$filter__button-icon-color-active          : $color-primary !default;
+$filter__button-icon-border                : 2px solid $gray !default;
+$filter__button-border-radius              : 2px !default;
+$filter__button-width                      : 18px !default;
+$filter__button-height                     : 18px !default;
+$filter__button-font-size                  : $font-size-base !default;
+$filter__button-label-margin               : 10px !default;
 
 .filter {
   &__content-color {
@@ -133,6 +142,39 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     color: $filter__color-label-color;
     word-break: break-all;
     text-align: center;
+  }
+
+  &__button {
+    width: $filter__button-width;
+    height: $filter__button-height;
+    border: $filter__button-icon-border;
+    border-radius: $filter__button-border-radius;
+    margin: $filter__button-margin;
+    cursor: pointer;
+
+    &-checked {
+      border: none;
+      position: relative;
+    }
+
+    &-label {
+      font-size: $filter__button-font-size;
+      margin-left: $filter__button-label-margin;
+
+      &-checked {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: $filter__button-width;
+    height: $filter__button-height;
+    fill: $filter__button-icon-color-active;
+    left: 0;
+    top: 0;
+    padding: $reset;
   }
 
   &__range {

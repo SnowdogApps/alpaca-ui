@@ -9,7 +9,7 @@ import AlpacaSwatchFilter from './swatch-filter/SwatchFilter.vue'
 
 import swatchItems from './mocks/swatchItems'
 import colorItems from './mocks/colorItems'
-import checkboxItems from './mocks/checkboxItems'
+import checkboxItems from '../../../mocks/checkboxItems'
 
 storiesOf('Modules/Filter', module)
   .add('Swatch', () => ({

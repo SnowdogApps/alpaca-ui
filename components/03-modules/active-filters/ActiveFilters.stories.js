@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaActiveFilters from './ActiveFilters.vue'
 
-import filters from './mocks/active-filters.json'
+import filters from '../../../mocks/active-filters.json'
 
 storiesOf('Modules/ActiveFilters', module)
   .add('Default', () => ({

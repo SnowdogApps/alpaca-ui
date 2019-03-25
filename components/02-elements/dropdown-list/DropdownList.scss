@@ -98,7 +98,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
 
         &[aria-expanded="true"] {
           & > .dropdown-list__icon {
-            fill: $black;
+            fill: $dropdown-list__icon-fill;
           }
         }
       }
@@ -240,7 +240,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
       background-color: $dropdown-list__item-bg-color--open;
 
       & > .dropdown-list__icon {
-        fill: $black;
+        fill: $dropdown-list__icon-fill;
         transform: rotate(180deg);
       }
     }

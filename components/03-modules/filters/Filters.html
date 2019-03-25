@@ -1,20 +1,24 @@
 <div class="filters">
-  <alpaca-heading
-    :level="2"
-    class="filters__heading"
-  >
-    {{ activeFiltersHeading }}
-  </alpaca-heading>
-  <alpaca-divider class="filters__divider"/>
-  <div class="filters__active">
-    <alpaca-active-filters
-      :items="activeFilterItems"
-      clear-button="Clear all"
-      @clearAll="clearAll"
-      @clearItem="clearItem"
-      :has-active-filters="hasActiveFilters"
+  <template v-if="hasActiveFilters">
+    <alpaca-heading
+      :level="2"
+      class="filters__heading"
+    >
+      {{ activeFiltersHeading }}
+    </alpaca-heading>
+    <alpaca-divider
+      class="filters__divider"
     />
-  </div>
+    <div class="filters__active">
+      <alpaca-active-filters
+        :items="activeFilterItems"
+        clear-button="Clear all"
+        @clearAll="clearAll"
+        @clearItem="clearItem"
+        :has-active-filters="hasActiveFilters"
+      />
+    </div>
+  </template>
   <button
     class="filters__switcher"
     @click="showFilters"
@@ -60,24 +64,16 @@
       </no-ssr>
       <template>
         <template
-          v-if="checkboxItems && Array.isArray(checkboxItems)"
+          v-if="othersFilters"
         >
-          <alpaca-checkbox-filter
-            v-for="{ key, checkboxArray } in getCheckboxArrayWithId"
-            :key="key"
-            :title="checkboxArray.name"
-            :id="key"
-            :items="checkboxArray.items"
-            @select="selectOptions"
-          />
         </template>
-        <alpaca-checkbox-filter
-          v-else-if="checkboxItems"
-          key="key"
-          :title="checkboxItems.name"
-          id="checkboxId"
-          :items="checkboxItems.items"
-          @select="selectOptions"
+        <alpaca-button-filter
+          v-for="item in othersFilters"
+          :key="item.id"
+          :id="item.id"
+          :title="item.title"
+          :items="item.items"
+          @changeFilter="changeFilter"
         />
       </template>
     </alpaca-dropdown-list>

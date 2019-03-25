@@ -14,7 +14,6 @@
       <img
         :src="image.defaultSrc"
         :alt="image.alt"
-        class="lazyload"
       >
     </picture>
   </a>

@@ -7,8 +7,8 @@ import toolbar from '@alpaca-storybook/components/03-modules/toolbar/mocks/toolb
 import breadcrumbs from "@alpaca-storybook/components/02-elements/breadcrumbs/mocks/breadcrumbs.json"
 import swatchItems from "@alpaca-storybook/components/03-modules/filter/mocks/swatchItems.json"
 import colorItems from "@alpaca-storybook/components/03-modules/filter/mocks/colorItems.json"
-import activeFilterItems from "@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters.json"
-import checkboxItems from "@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems.json"
+import activeFilterItems from "@alpaca-storybook/mocks/active-filters.json"
+import checkboxItems from "@alpaca-storybook/mocks/checkboxItems.json"
 
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaHeader from '@alpaca-storybook/components/03-modules/header/Header.vue'

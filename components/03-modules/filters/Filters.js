@@ -1,4 +1,3 @@
-import uniqueId from 'lodash.uniqueid'
 import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Heading.vue'
 import AlpacaIcon from '@alpaca-storybook/components/01-globals/icon/Icon.vue'
 import AlpacaDivider from '@alpaca-storybook/components/02-elements/divider/Divider.vue'
@@ -6,7 +5,7 @@ import AlpacaDropdownList from '@alpaca-storybook/components/02-elements/dropdow
 import AlpacaDropdownListItem from '@alpaca-storybook/components/02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
 import AlpacaActiveFilters from '@alpaca-storybook/components/03-modules/active-filters/ActiveFilters.vue'
 import AlpacaSwatchFilter from '@alpaca-storybook/components/03-modules/filter/swatch-filter/SwatchFilter.vue'
-import AlpacaCheckboxFilter from '@alpaca-storybook/components/03-modules/filter/checkbox-filter/CheckboxFilter.vue'
+import AlpacaButtonFilter from '@alpaca-storybook/components/03-modules/filter/button-filter/ButtonFilter.vue'
 import AlpacaColorFilter from '@alpaca-storybook/components/03-modules/filter/color-filter/ColorFilter.vue'
 import NoSSR from "vue-no-ssr"
 
@@ -23,7 +22,7 @@ export default {
     AlpacaActiveFilters,
     AlpacaColorFilter,
     AlpacaSwatchFilter,
-    AlpacaCheckboxFilter,
+    AlpacaButtonFilter,
     'no-ssr': NoSSR
   },
   props: {
@@ -71,8 +70,8 @@ export default {
       type: Array,
       default: null
     },
-    checkboxItems: {
-      type: [Object, Array],
+    othersFilters: {
+      type: Array,
       default: null
     }
   },
@@ -81,17 +80,9 @@ export default {
       isVisible: true
     }
   },
-  computed: {
-    getCheckboxArrayWithId() {
-      return this.checkboxItems.map(checkboxArray => ({ key: uniqueId("checkboxArray"), checkboxArray }))
-    }
-  },
   methods: {
     showFilters() {
       this.isVisible = !this.isVisible
-    },
-    selectOptions(val) {
-      this.$emit('selectOptions', val)
     },
     checkSwatch(val) {
       this.$emit('checkSwatch', { id: val.id, label: val.label })
@@ -108,6 +99,9 @@ export default {
     clearAll() {
       this.$emit('clearAll')
     },
+    changeFilter(val) {
+      this.$emit('changeFilter', val)
+    }
   }
 }
 

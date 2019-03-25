@@ -1,0 +1,31 @@
+<alpaca-dropdown-list-item
+  class="filter"
+  label-class="filter__label"
+  :title="title"
+  :collapse="true"
+  :id="id"
+  :data-dropdown="id"
+>
+  <div v-for="(item, i) in items">
+    <alpaca-button
+      :key="i"
+      @click="changeFilter(item)"
+      :default-class="false"
+      :class="['filter__button', {
+        'filter__button-checked': activeEl && item.id === activeEl.id && item.code === activeEl.code
+      }]"
+    >
+      <alpaca-icon
+        :class="'filter__icon'"
+        icon="checked"
+        v-if="activeEl && item.id === activeEl.id && item.code === activeEl.code"
+      />
+    </alpaca-button>
+    <span :class="['filter__button-label', {
+      'filter__button-label-checked': activeEl && item.id === activeEl.id && item.code === activeEl.code
+    }]">
+      {{ item.label }}
+    </span>
+  </div>
+  <div class="filter__divider"></div>
+</alpaca-dropdown-list-item>

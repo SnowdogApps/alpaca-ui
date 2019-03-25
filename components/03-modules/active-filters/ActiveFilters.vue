@@ -23,7 +23,7 @@
         </component>
 
         <span class="active-filters__label">
-          {{ item.attribute_code && nameOfFilter(item.attribute_code) }} :&nbsp;
+          {{ item.attribute_code && nameOfFilter(item.attribute_code) }}:&nbsp;
         </span>
         <span class="active-filters__value">
           {{ labelOfFilter(item) }}
