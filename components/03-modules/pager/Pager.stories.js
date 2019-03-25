@@ -21,7 +21,7 @@ storiesOf('Modules/Pager', module).add('Default', () => ({
         @update:page="(page) => {this.setCurrentPage(page)}"
         :page="currentPage"
         :limit="pagination.limit"
-        :totalSize="pagination.totalSize"
+        :total-size="pagination.totalSize"
       />
     </app>
   `,

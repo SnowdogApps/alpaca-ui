@@ -4,9 +4,9 @@
       <li class="pager__item">
         <alpaca-button
           :disabled="currentPage < 2"
+          :aria-label="ariaLabelPrevious"
           icon="arrow-left"
           class="pager__link pager__link--prev"
-          aria-label="Go to previous page"
           @click="setCurrentPage(currentPage - 1)"
         />
       </li>
@@ -58,9 +58,9 @@
       <li class="pager__item">
         <alpaca-button
           :disabled="currentPage > numberOfPages - 1"
+          :aria-label="ariaLabelNext"
           icon="arrow-right"
           class="pager__link pager__link--next"
-          aria-label="Go to next page"
           @click="setCurrentPage(currentPage + 1)"
         />
       </li>
@@ -87,6 +87,14 @@
       limit: {
         type: Number,
         default: 5
+      },
+      ariaLabelPrevious: {
+        type: String,
+        default: 'Go to previous page'
+      },
+      ariaLabelNext: {
+        type: String,
+        default: 'Go to next page'
       }
     },
     data () {

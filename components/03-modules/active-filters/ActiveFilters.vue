@@ -11,14 +11,14 @@
         <component
           :is="singleFilterTag"
           :href="singleFilterTag === 'a' && item.href"
-          class="active-filters__remove"
           :aria-label="item.ariaLabel"
+          class="active-filters__remove"
           @click="clearItem"
         >
           <alpaca-icon
-            class="active-filters__remove-icon"
             :title="closeIconTitle"
             :icon="closeIcon"
+            class="active-filters__remove-icon"
           />
         </component>
 
