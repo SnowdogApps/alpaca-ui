@@ -1,7 +1,7 @@
-import AlpacaHeading from '@alpaca-storybook/components/01-globals/heading/Heading.vue'
-import AlpacaBanner from '@alpaca-storybook/components/02-elements/banner/Banner.vue'
-import AlpacaList from '@alpaca-storybook/components/02-elements/list/List.vue'
-import AlpacaListImageItem from '@alpaca-storybook/components/02-elements/list/ListImageItem.vue'
+import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaBanner from '../../02-elements/banner/Banner.vue'
+import AlpacaList from '../../02-elements/list/List.vue'
+import AlpacaListImageItem from '../../02-elements/list/list-image-item/ListImageItem.vue'
 
 export default {
   components: {
