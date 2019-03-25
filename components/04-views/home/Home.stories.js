@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaHome from './Home.vue'
 
 import banner from '@alpaca-storybook/components/02-elements/banner/mocks/banner.json'
@@ -9,10 +8,9 @@ import mediumBanners from './mocks/mediumBanners.json'
 import imageListElements from './mocks/imageListElements.json'
 import text from './mocks/text.json'
 
-
 storiesOf('Views/Home', module)
   .add('Default', () => ({
-    components: { App, AlpacaHome},
+    components: { AlpacaHome},
     data() {
       return {
         banner,
@@ -23,7 +21,6 @@ storiesOf('Views/Home', module)
       }
     },
     template: `
-      <app>
         <alpaca-home
           :text="text.text"
           :headingLevel="2"
@@ -33,6 +30,5 @@ storiesOf('Views/Home', module)
           :small-banners="smallBanners"
           :medium-banners="mediumBanners"
         />
-      </app>
     `
   }))

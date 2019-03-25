@@ -48,7 +48,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss">
 $additional-content__image-margin       : 0 0 41px !default;
 $additional-content__image-margin\@large: 0 0 $spacer--large !default;

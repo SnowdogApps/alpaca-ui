@@ -34,7 +34,6 @@ $table__font-size                : $font-size-small !default;
 $table__border-radius            : $border-radius !default;
 $table__border                   : 1px solid $gray-light !default;
 
-
 .table {
   width: 100%;
   border: $table__border;

@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaTable from './Table.vue'
 import AlpacaTableRow from './TableRow.vue'
 import AlpacaTableCell from './TableCell.vue'
@@ -11,14 +10,13 @@ import footCells from './mocks/footCells.json'
 
 storiesOf('Elements/Table', module)
   .add('Default', () => ({
-    components: { App, AlpacaTable, AlpacaTableRow, AlpacaTableCell },
+    components: { AlpacaTable, AlpacaTableRow, AlpacaTableCell },
     data: () => ({
       bodyRows,
       headCells,
       footCells
     }),
     template: `
-      <app>
         <alpaca-table caption="This is a table">
           <thead>
             <alpaca-table-row>
@@ -58,18 +56,16 @@ storiesOf('Elements/Table', module)
             </alpaca-table-row>
           </tfoot>
         </alpaca-table>
-      </app>
     `
   }))
   .add('Odd Even', () => ({
-    components: { App, AlpacaTable, AlpacaTableRow, AlpacaTableCell },
+    components: { AlpacaTable, AlpacaTableRow, AlpacaTableCell },
     data: () => ({
       bodyRows,
       headCells,
       footCells
     }),
     template: `
-      <app>
         <alpaca-table
           caption="This is a table"
           class="table--odd-even"
@@ -112,6 +108,5 @@ storiesOf('Elements/Table', module)
             </alpaca-table-row>
           </tfoot>
         </alpaca-table>
-      </app>
     `
   }))

@@ -10,14 +10,13 @@ import colorItems from "@alpaca-storybook/components/03-modules/filter/mocks/col
 import activeFilterItems from "@alpaca-storybook/components/03-modules/active-filters/mocks/active-filters"
 import checkboxItems from "@alpaca-storybook/components/03-modules/filter/mocks/checkboxItems"
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaHeader from '@alpaca-storybook/components/03-modules/header/Header.vue'
 import AlpacaCatalog from './Catalog.vue'
 
 storiesOf('Views/Catalog', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-  components: { App, AlpacaHeader, AlpacaCatalog },
+  components: { AlpacaHeader, AlpacaCatalog },
   data() {
     return {
       ...data,
@@ -31,7 +30,6 @@ storiesOf('Views/Catalog', module)
     }
   },
   template: `
-    <app>
       <alpaca-header
         :menu="menu"
         src="./../images/logo/alpaca.svg"
@@ -46,6 +44,5 @@ storiesOf('Views/Catalog', module)
         :toolbar="toolbar"
         :breadcrumbs="breadcrumbs"
       />
-    </app>
   `
 }))

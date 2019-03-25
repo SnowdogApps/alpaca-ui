@@ -4,16 +4,14 @@ import { withReadme } from 'storybook-readme'
 import iconsReadme from './README.md'
 import icons from './mocks/icons.json'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaIcon from './Icon.vue'
 
 storiesOf('Global/Icon', module)
   .addDecorator(withReadme(iconsReadme))
   .add('Default', () => ({
-    components: { App, AlpacaIcon },
+    components: { AlpacaIcon },
     data: () => ({ icons }),
     template: `
-      <app>
         <div style="display: flex; flex-wrap: wrap; padding: 10px;">
           <div
             v-for="icon in icons"
@@ -30,6 +28,5 @@ storiesOf('Global/Icon', module)
             </span>
           </div>
         </div>
-      </app>
     `
   }))

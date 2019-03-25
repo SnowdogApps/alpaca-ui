@@ -5,7 +5,6 @@ import StoryRouter from 'storybook-vue-router'
 import totals from '@alpaca-storybook/mocks/totals'
 import products from '@alpaca-storybook/mocks/products'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaQuantityUpdate from '@alpaca-storybook/components/03-modules/quantity-update/QuantityUpdate.vue'
 import AlpacaProductItem from '@alpaca-storybook/components/03-modules/product-item/ProductItem.vue'
 import AlpacaMiniCart from './MiniCart.vue'
@@ -13,13 +12,12 @@ import AlpacaMiniCart from './MiniCart.vue'
 storiesOf('Modules/Mini Cart', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { App, AlpacaMiniCart, AlpacaProductItem, AlpacaQuantityUpdate },
+    components: { AlpacaMiniCart, AlpacaProductItem, AlpacaQuantityUpdate },
     data: () => ({
       totals,
       products
     }),
     template: `
-      <app>
         <alpaca-mini-cart
           style="padding: 20px;"
           :totals="totals"
@@ -60,7 +58,6 @@ storiesOf('Modules/Mini Cart', module)
             </alpaca-product-item>
           </template>
         </alpaca-mini-cart>
-      </app>
     `,
     methods: {
       removeMethod: action('Remove'),

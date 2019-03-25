@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaList from './List.vue'
 import AlpacaListItem from './ListItem.vue'
 import AlpacaListImageItem from './ListImageItem.vue'
@@ -16,12 +15,11 @@ import linkListElements from './mocks/linkListElements.json'
 
 storiesOf('Elements/List', module)
   .add('Default', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list>
           <alpaca-list-item
             v-for="element in listElements"
@@ -30,16 +28,14 @@ storiesOf('Elements/List', module)
          {{ element.text }}
         </alpaca-list-item>
        </alpaca-list>
-      </app>
     `
   }))
   .add('Native', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--native">
           <alpaca-list-item
             v-for="element in listElements"
@@ -48,16 +44,14 @@ storiesOf('Elements/List', module)
            {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Horizontal', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--horizontal">
           <alpaca-list-item
             v-for="element in listElements"
@@ -66,16 +60,14 @@ storiesOf('Elements/List', module)
            {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Horizontal Medium', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--horizontal@medium">
           <alpaca-list-item
             v-for="element in listElements"
@@ -84,16 +76,14 @@ storiesOf('Elements/List', module)
           {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Icon', () => ({
-    components: { App, AlpacaList, AlpacaListItem, AlpacaIcon },
+    components: { AlpacaList, AlpacaListItem, AlpacaIcon },
     data: () => ({
       iconListElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--with-icon">
           <alpaca-list-item
             v-for="element in iconListElements"
@@ -104,16 +94,14 @@ storiesOf('Elements/List', module)
             />
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Image', () => ({
-    components: { App, AlpacaList, AlpacaListImageItem },
+    components: { AlpacaList, AlpacaListImageItem },
     data: () => ({
       imageListElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--with-image">
           <alpaca-list-image-item
            v-for="item in imageListElements"
@@ -124,16 +112,14 @@ storiesOf('Elements/List', module)
             {{ item.text }}
           </alpaca-list-image-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Divided', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--divided">
           <alpaca-list-item
             v-for="element in listElements"
@@ -142,16 +128,14 @@ storiesOf('Elements/List', module)
             {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Center', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--center">
           <alpaca-list-item
             v-for="element in listElements"
@@ -160,16 +144,14 @@ storiesOf('Elements/List', module)
             {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Center Horizontal', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--center list--horizontal">
           <alpaca-list-item
             v-for="element in listElements"
@@ -178,16 +160,14 @@ storiesOf('Elements/List', module)
             {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Divided Horizontal', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--divided list--horizontal">
           <alpaca-list-item
             v-for="element in listElements"
@@ -196,16 +176,14 @@ storiesOf('Elements/List', module)
             {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Divided Horizontal Medium', () => ({
-    components: { App, AlpacaList, AlpacaListItem },
+    components: { AlpacaList, AlpacaListItem },
     data: () => ({
       listElements
     }),
     template: `
-      <app>
         <alpaca-list class="list--divided list--horizontal@medium">
           <alpaca-list-item
             v-for="element in listElements"
@@ -214,31 +192,27 @@ storiesOf('Elements/List', module)
            {{ element.text }}
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))
   .add('Description', () => ({
-    components: { App, AlpacaDescriptionList },
+    components: { AlpacaDescriptionList },
     data: () => ({
       descListElements
     }),
     template: `
-      <app>
         <alpaca-description-list
           :listClass="'list--divided'"
           :title="'Alpaca description List'"
           :elements="descListElements"
         />
-      </app>
     `
   }))
   .add('Link', () => ({
-    components: { App, AlpacaList, AlpacaListItem, AlpacaLink },
+    components: { AlpacaList, AlpacaListItem, AlpacaLink },
     data: () => ({
       linkListElements
     }),
     template: `
-      <app>
         <alpaca-list>
           <alpaca-list-item
             v-for="element in linkListElements"
@@ -250,6 +224,5 @@ storiesOf('Elements/List', module)
             </alpaca-link>
           </alpaca-list-item>
         </alpaca-list>
-      </app>
     `
   }))

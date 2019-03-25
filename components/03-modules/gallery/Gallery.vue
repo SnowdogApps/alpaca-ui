@@ -124,7 +124,6 @@
   $gallery__thumb-width                      : 48px !default;
   $gallery__thumb-width--large               : 80px !default;
 
-
   .gallery {
     display: flex;
     flex-flow: nowrap;

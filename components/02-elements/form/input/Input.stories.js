@@ -1,15 +1,13 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaInput from './Input.vue'
 import AlpacaTextarea from './textarea/Textarea.vue'
 
 storiesOf('Elements/Form/Input', module)
   .add('Default', () => ({
-    components: { App, AlpacaInput },
+    components: { AlpacaInput },
     data: () => ({ value: null }),
     template: `
-      <app>
         <alpaca-input
           label="Default label"
           type="text"
@@ -19,14 +17,12 @@ storiesOf('Elements/Form/Input', module)
           v-model="value"
         />
         Text: {{ value }}
-      </app>
     `
   }))
   .add('Textarea', () => ({
-    components: { App, AlpacaTextarea },
+    components: { AlpacaTextarea },
     data: () => ({ value: null }),
     template: `
-      <app>
         <alpaca-textarea
           label="Textarea"
           id="field_id"
@@ -35,14 +31,12 @@ storiesOf('Elements/Form/Input', module)
           v-model="value"
         />
         Text: {{ value }}
-      </app>
     `
   }))
   .add('Hidden label', () => ({
-    components: { App, AlpacaInput },
+    components: { AlpacaInput },
     data: () => ({ value: null }),
     template: `
-      <app>
         <alpaca-input
           label="Hidden label"
           type="text"
@@ -53,14 +47,12 @@ storiesOf('Elements/Form/Input', module)
           v-model="value"
         />
         Text: {{ value }}
-      </app>
     `
   }))
   .add('Inline label', () => ({
-    components: { App, AlpacaInput },
+    components: { AlpacaInput },
     data: () => ({ value: null }),
     template: `
-      <app>
         <alpaca-input
           label="Inline text"
           type="text"
@@ -71,6 +63,5 @@ storiesOf('Elements/Form/Input', module)
           v-model="value"
         />
         Text: {{ value }}
-      </app>
     `
   }))

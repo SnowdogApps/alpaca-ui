@@ -1,13 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaRegister from './Register.vue'
 
 storiesOf('Modules/Register', module).add('Default', () => ({
-  components: { App, AlpacaRegister },
+  components: { AlpacaRegister },
   template: `
-    <app>
       <alpaca-register
         style="padding: 20px;"
         personal-information-legend="Personal information"
@@ -17,7 +15,6 @@ storiesOf('Modules/Register', module).add('Default', () => ({
         @goToLogin="goToLogin"
         @register="register"
       />
-    </app>
   `,
   methods: {
     register: action('Register'),

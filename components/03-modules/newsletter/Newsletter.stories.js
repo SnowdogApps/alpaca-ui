@@ -1,16 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaNewsletter from './Newsletter.vue'
 
 import newsletter from './mocks/newsletter.json'
 
 storiesOf('Modules/Newsletter', module).add('Default', () => ({
-  components: { App, AlpacaNewsletter },
+  components: { AlpacaNewsletter },
   data: () => ({ newsletter }),
   template: `
-    <app>
       <alpaca-newsletter
         :heading="newsletter.heading"
         :input="newsletter.input"
@@ -18,7 +16,6 @@ storiesOf('Modules/Newsletter', module).add('Default', () => ({
         :checkboxes="newsletter.checkboxes"
         @submit="exampleMethod"
       />
-    </app>
   `,
   methods: {
     exampleMethod: action('Clicked button')

@@ -1,13 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from "@storybook/addon-actions"
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaRange from './Range.vue'
 
 storiesOf('Modules/Range', module).add('Default', () => ({
-  components: { App, AlpacaRange },
+  components: { AlpacaRange },
   template: `
-    <app>
       <alpaca-range
         v-model="value"
         :min="min"
@@ -15,7 +13,6 @@ storiesOf('Modules/Range', module).add('Default', () => ({
         @apply="updateVal"
       />
       Range: {{ value }}
-    </app>
   `,
   data: () => {
     return {

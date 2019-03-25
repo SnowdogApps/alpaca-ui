@@ -1,11 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import MarketingBar from './MarketingBar.vue'
 
 storiesOf('Elements/MarketingBar', module)
   .add('Default', () => ({
-    components: { App, MarketingBar },
+    components: { MarketingBar },
     template: `
       <MarketingBar>
         Subscribe and get 10$ for Shopping!

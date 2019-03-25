@@ -12,12 +12,11 @@ import dropdownListItems from "./mocks/dropdownListItems.json"
 storiesOf("Elements/Dropdown List", module)
   .addDecorator(StoryRouter())
   .add("Default", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
+    components: { AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-      <app>
         <alpaca-dropdown-list>
           <template v-for="element in dropdownListItems">
             <alpaca-dropdown-list-item
@@ -37,73 +36,62 @@ storiesOf("Elements/Dropdown List", module)
             />
           </template>
         </alpaca-dropdown-list>
-      </app>
     `
   }))
   .add("Nested with items as props", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
+    components: { AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
       dropdownListItemsNested
     }),
     template: `
-      <app>
         <alpaca-dropdown-list :items="dropdownListItemsNested" />
-      </app>
     `
   }))
   .add("Screen M", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
+    components: { AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-      <app>
         <alpaca-dropdown-list
           screenM
           :items="dropdownListItems"
         />
-      </app>
     `
   }))
   .add("Dark", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
+    components: { AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-      <app>
         <alpaca-dropdown-list
           dark
           :items="dropdownListItems"
         />
-      </app>
     `
   }))
   .add("Secondary", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
+    components: { AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-      <app>
         <alpaca-dropdown-list
           secondary
           :items="dropdownListItems"
         />
-      </app>
     `
   }))
   .add("Inner", () => ({
-    components: { App, AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
+    components: { AlpacaDropdownList, AlpacaDropdownListItem, AlpacaDropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-      <app>
         <alpaca-dropdown-list
           inner
           :items="dropdownListItems"
         />
-      </app>
     `
   }))

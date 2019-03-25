@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaGrid from './Grid.vue'
 
 // Preview styles
@@ -8,9 +7,8 @@ import './preview/styles.css'
 
 storiesOf('Global/Grid', module)
   .add('Default', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           :grids="[
             [
@@ -28,13 +26,11 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))
   .add('Fluid', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           :grids="[
             [
@@ -66,13 +62,11 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))
   .add('Auto width', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           :grids="[
             [
@@ -94,13 +88,11 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))
   .add('Reordering', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           :grids="[
             [
@@ -121,13 +113,11 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))
   .add('Distribution around', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="around-xs"
           :grids="[
@@ -136,13 +126,11 @@ storiesOf('Global/Grid', module)
             'col-xs-2'
           ]"
         />
-      </app>
     `
   }))
   .add('Distribution between', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="between-xs"
           :grids="[
@@ -151,52 +139,44 @@ storiesOf('Global/Grid', module)
             'col-xs-2'
           ]"
         />
-      </app>
     `
   }))
   .add('Alignment start', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="start-xs"
           :grids="[
             ['col-xs-6']
           ]"
         />
-      </app>
     `
   }))
   .add('Alignment center', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="center-xs"
           :grids="[
             ['col-xs-6']
           ]"
         />
-      </app>
     `
   }))
   .add('Alignment end', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="end-xs"
           :grids="[
             ['col-xs-6']
           ]"
         />
-      </app>
     `
   }))
   .add('Alignment top', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="top-xs"
           :grids="[
@@ -206,13 +186,11 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))
   .add('Alignment middle', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="middle-xs"
           :grids="[
@@ -222,13 +200,11 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))
   .add('Alignment bottom', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="bottom-xs"
           :grids="[
@@ -238,13 +214,11 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))
   .add('Reversing', () => ({
-    components: { App, AlpacaGrid },
+    components: { AlpacaGrid },
     template: `
-      <app>
         <alpaca-grid
           row-class="reverse"
           :grids="[
@@ -257,6 +231,5 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
-      </app>
     `
   }))

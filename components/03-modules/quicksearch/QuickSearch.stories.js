@@ -5,7 +5,6 @@ import products from './mocks/products.json'
 import categories from './mocks/categories.json'
 import manufacturers from './mocks/manufacturers.json'
 
-import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaQuickSearch from './QuickSearch.vue'
 
 storiesOf('Modules/Quick search', module)
@@ -15,9 +14,8 @@ storiesOf('Modules/Quick search', module)
       categories,
       manufacturers
     }),
-    components: { App, AlpacaQuickSearch },
+    components: { AlpacaQuickSearch },
     template: `
-      <app>
         <alpaca-quick-search
           resultText="Results for your request:"
           noResultText="No search results found."
@@ -27,7 +25,6 @@ storiesOf('Modules/Quick search', module)
           :manufacturers="manufacturers"
           @seeAll="seeAll"
         />
-      </app>
     `,
     methods: {
       seeAll: action('See all')
