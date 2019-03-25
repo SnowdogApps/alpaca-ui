@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/vue"
 import StoryRouter from 'storybook-vue-router'
 
-import App from "../app/App.vue"
+import App from "../../01-globals/app/App.vue"
 import AlpacaDropdownList from "./DropdownList.vue"
 import AlpacaDropdownListItem from "./dropdown-list-item/DropdownListItem.vue"
 import AlpacaDropdownListLink from "./dropdown-list-link/DropdownListLink.vue"

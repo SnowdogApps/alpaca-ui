@@ -29,7 +29,7 @@ storiesOf('Global/Icon', module)
               {{ icon.iconId }}
             </span>
           </div>
-        </div>
+        </div> 
       </app>
     `
   }))

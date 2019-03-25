@@ -2,7 +2,7 @@ import {storiesOf} from '@storybook/vue'
 
 import countries from './mocks/countries.json'
 
-import App from '../app/App.vue'
+import App from '../../../01-globals/app/App.vue'
 import AlpacaSelect from './Select.vue'
 
 storiesOf('Elements/Form/Select', module)

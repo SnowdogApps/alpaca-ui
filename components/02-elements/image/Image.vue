@@ -1,38 +1,12 @@
-<template>
-  <img
-    class="image"
-    :src="src"
-    :alt="alt"
-  >
-</template>
+<template src="./Image.html" />
 
 <script>
+  import instance from "./Image.js"
+
   export default {
-    props: {
-      src: {
-        type: String,
-        required: true
-      },
-      alt: {
-        type: String,
-        required: true
-      }
-    }
+    ...instance
   }
 </script>
 
-<style lang="scss">
-  $image__width : 100% !default;
-  $image__wrapper-background-color: $white !default;
+<style lang="scss" src="./Image.scss"/>
 
-  .image {
-    display: block;
-    width: $image__width;
-    max-width: $image__width;
-  }
-
-  img,
-  picture {
-    @extend .image;
-  }
-</style>
