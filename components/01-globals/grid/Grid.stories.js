@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/vue'
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
 import AlpacaGrid from './Grid.vue'
 
-import grid from './mocks/default'
-import fluid from './mocks/fluid'
+// Preview styles
+import './preview/styles.css'
 import autoWidth from './mocks/autoWidth'
 import reordering from './mocks/reordering'
 import distribution from './mocks/distribution'
