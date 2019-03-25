@@ -1,6 +1,7 @@
 $side-menu__item-hover-bg-color     : #f6f6fa !default;
 $side-menu__item-color              : $gray-darker !default;
 $side-menu__item-icon-color         : $side-menu__item-color !default;
+$side-menu__item-min-height         : 48px !default;
 $side-menu__item-border             : $border-width-base $border-style-base $gray-light !default;
 $side-menu__item-element-padding    : $spacer--medium !default;
 $side-menu__icon-size               : 16px !default;
@@ -19,6 +20,8 @@ $side-menu__nested-item-padding-left: calc(#{$side-menu__icon-right-margin--prev
   }
 
   &__item {
+    min-height: $side-menu__item-min-height;
+
     &:hover,
     &:focus {
       background: $side-menu__item-hover-bg-color;
@@ -26,6 +29,11 @@ $side-menu__nested-item-padding-left: calc(#{$side-menu__icon-right-margin--prev
 
     &--prev {
       border-bottom: $side-menu__item-border;
+      transition: $transition-base;
+
+      &:empty {
+        height: calc(#{$side-menu__item-min-height} + #{$border-width-base});
+      }
     }
 
     &--prev ~ & & {
@@ -37,6 +45,10 @@ $side-menu__nested-item-padding-left: calc(#{$side-menu__icon-right-margin--prev
       &:focus {
         background: transparent;
       }
+    }
+
+    &--no-border {
+      border-color: transparent;
     }
   }
 

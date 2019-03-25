@@ -1,9 +1,13 @@
 <ul class="side-menu">
   <li
-    v-if="!isRootPosition"
-    class="side-menu__item side-menu__item--prev"
-  >
+    :class="[
+      'side-menu__item',
+      'side-menu__item--prev',
+      { 'side-menu__item--no-hover' : isRootPosition },
+      { 'side-menu__item--no-border' : isRootPosition }
+    ]">
     <alpaca-button
+      v-if="!isRootPosition"
       class="side-menu__button side-menu__button--prev"
       icon-class="side-menu__icon side-menu__icon--prev"
       :icon="prevIcon"
