@@ -1,4 +1,4 @@
-@import './assets/styles/_styles.scss';
+@import 'assets/styles/globals';
 
 .tab {
   @include mq($screen-l) {

@@ -1,4 +1,4 @@
-@import './assets/styles/_styles.scss';
+@import 'assets/styles/globals';
 
 $quicksearch__top                              : calc(100% - #{$spacer} + 1px) !default;
 $quicksearch__top\@medium                      : calc(100% + 1px) !default;
