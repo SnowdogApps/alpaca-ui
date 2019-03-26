@@ -2,11 +2,11 @@ import AlpacaHeading from '../../01-globals/heading/Heading.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
-import AlpacaDropdownListItem from '../../02-elements/dropdown-list/dropdown-list-item/DropdownListItem.vue'
+import AlpacaDropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
 import AlpacaActiveFilters from '../../03-modules/active-filters/ActiveFilters.vue'
-import AlpacaSwatchFilter from '../../03-modules/filter/swatch-filter/SwatchFilter.vue'
-import AlpacaCheckboxFilter from '../../03-modules/filter/checkbox-filter/CheckboxFilter.vue'
-import AlpacaColorFilter from '../../03-modules/filter/color-filter/ColorFilter.vue'
+import AlpacaSwatchFilter from '../swatch-filter/SwatchFilter.vue'
+import AlpacaCheckboxFilter from '../checkbox-filter/CheckboxFilter.vue'
+import AlpacaColorFilter from '../color-filter/ColorFilter.vue'
 
 export default {
   components: {

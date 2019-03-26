@@ -1,4 +1,4 @@
-import AlpacaSelect from '../../02-elements/form/select/Select.vue'
+import AlpacaSelect from '../../02-elements/select/Select.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaPager from '../../03-modules/pager/Pager.vue'
 

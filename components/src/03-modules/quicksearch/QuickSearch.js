@@ -5,7 +5,7 @@ import AlpacaImage from '../../02-elements/image/Image.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaPrice from '../../02-elements/price/Price.vue'
 import AlpacaList from '../../02-elements/list/List.vue'
-import AlpacaListItem from '../../02-elements/list/list-item/ListItem.vue'
+import AlpacaListItem from '../../02-elements/list-item/ListItem.vue'
 
 export default {
   components: {
