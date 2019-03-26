@@ -1,23 +1,23 @@
 <div>
   <header class="header">
-    <container>
+    <alpaca-container>
       <div class="header__wrapper">
         <div class="header__buttons">
-          <header-button
+          <alpaca-header-button
             icon="heart"
             @click.native="toggleWishlist()"
           >
             Wishlist
-          </header-button>
-          <header-button icon="phone">
+          </alpaca-header-button>
+          <alpaca-header-button icon="phone">
             Contact
-          </header-button>
-          <header-button
+          </alpaca-header-button>
+          <alpaca-header-button
             icon="account"
             @click.native="goToAccount()"
           >
             Account
-          </header-button>
+          </alpaca-header-button>
           <div class="header__minicart">
             <button
               type="button"
@@ -37,17 +37,16 @@
               </span>
             </button>
           </div>
-          <!-- <minicart /> -->
         </div>
-        <logo
+        <alpaca-logo
           :src="src"
           :to="link"
         />
         <div class="header__search-wrapper">
-          <header-search />
+          <alpaca-header-search />
         </div>
       </div>
-    </container>
+    </alpaca-container>
   </header>
-  <mega-menu :menu="menu" />
+  <alpaca-mega-menu :menu="menu" />
 </div>
