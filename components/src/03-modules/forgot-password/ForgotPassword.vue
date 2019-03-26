@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./ForgotPassword.scss"
-/>
+<style lang="scss" src="./ForgotPassword.scss"/>

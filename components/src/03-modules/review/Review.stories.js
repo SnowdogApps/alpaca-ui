@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaReview from './review/Review.vue'
-import AlpacaReviewSummary from './review-summary/ReviewSummary.vue'
-import AlpacaReviewAdd from './review-add/ReviewAdd.vue'
+import AlpacaReview from './Review.vue'
+import AlpacaReviewSummary from '../review-summary/ReviewSummary.vue'
+import AlpacaReviewAdd from '../review-add/ReviewAdd.vue'
 
 import reviews from './mocks/reviews.json'
 

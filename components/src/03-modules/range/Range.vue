@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./Range.scss"
-/>
+<style lang="scss" src="./Range.scss"/>

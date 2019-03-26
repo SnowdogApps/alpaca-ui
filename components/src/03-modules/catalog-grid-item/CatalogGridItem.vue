@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./CatalogGridItem.scss"
-/>
+<style lang="scss" src="./CatalogGridItem.scss"/>

@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./Modal.scss"
-/>
+<style lang="scss" src="./Modal.scss"/>

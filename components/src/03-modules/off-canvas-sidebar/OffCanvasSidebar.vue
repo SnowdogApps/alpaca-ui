@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./OffCanvasSidebar.scss"
-/>
+<style lang="scss" src="./OffCanvasSidebar.scss"/>

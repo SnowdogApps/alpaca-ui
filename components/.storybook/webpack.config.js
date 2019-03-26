@@ -1,5 +1,4 @@
 const path = require('path')
-const path = require('path')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = ({ config }) => {

@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./MiniCart.scss"
-/>
+<style lang="scss" src="./MiniCart.scss"/>

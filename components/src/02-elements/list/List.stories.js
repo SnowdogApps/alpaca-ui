@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/vue'
 
 import AlpacaList from './List.vue'
-import AlpacaListItem from './list-item/ListItem.vue'
-import AlpacaListImageItem from './list-image-item/ListImageItem.vue'
-import AlpacaDescriptionList from './description-list/DescriptionList.vue'
+import AlpacaListItem from '../list-item/ListItem.vue'
+import AlpacaListImageItem from '../list-image-item/ListImageItem.vue'
+import AlpacaDescriptionList from '../description-list/DescriptionList.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 import AlpacaLink from '../../01-globals/link/Link.vue'
 

@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./ProductItem.scss"
-/>
+<style lang="scss" src="./ProductItem.scss"/>
