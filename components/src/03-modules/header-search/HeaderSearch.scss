@@ -21,6 +21,7 @@ $search-form__placeholder-color : $gray !default;
   border: 1px solid $search-form__border-color;
   border-radius: $search-form__height;
   z-index: 1;
+  position: relative;
 
   @include mq($screen-m) {
     position: relative;
@@ -67,5 +68,6 @@ $search-form__placeholder-color : $gray !default;
     width: $search-form__button-size;
     height: $search-form__button-size;
     fill: $search-form__button-icon-color;
+    padding: $reset;
   }
 }
