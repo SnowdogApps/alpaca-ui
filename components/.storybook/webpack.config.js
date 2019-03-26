@@ -1,6 +1,8 @@
+const path = require('path')
+const path = require('path')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
-module.exports = ({ config, mode }) => {
+module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.stories\.jsx?$/,
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
@@ -32,6 +34,11 @@ module.exports = ({ config, mode }) => {
     ],
     fix: true
   }))
+
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    'styles': path.resolve(__dirname, '../assets/styles')
+  }
 
   return config
 }
