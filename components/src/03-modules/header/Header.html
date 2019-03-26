@@ -19,8 +19,8 @@
             Account
           </alpaca-header-button>
           <div class="header__minicart">
-            <button
-              type="button"
+            <alpaca-button
+              :default-class="false"
               class="header-button popup-trigger"
               data-popuptrigger="popup-minicart"
               @click="toggleMicrocart()"
@@ -35,7 +35,7 @@
               <span class="header-button__counter">
                 <span class="header-button__counter-dot" />
               </span>
-            </button>
+            </alpaca-button>
           </div>
         </div>
         <alpaca-logo
