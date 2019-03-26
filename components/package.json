@@ -1,7 +1,7 @@
 {
   "name": "@snowdog/alpaca-components",
   "repository": "github:SnowdogApps/alpaca-storybook",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "dev": "start-storybook -p 6006 -s ./public",
     "build": "build-storybook -o dist -s ./public",
@@ -49,5 +49,9 @@
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.8"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "e7d20d622866e5cd1174ab580c3fd127987d5055"
 }
