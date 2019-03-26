@@ -2,8 +2,8 @@ import { storiesOf } from "@storybook/vue"
 import StoryRouter from 'storybook-vue-router'
 
 import AlpacaDropdownList from "./DropdownList.vue"
-import AlpacaDropdownListItem from "./dropdown-list-item/DropdownListItem.vue"
-import AlpacaDropdownListLink from "./dropdown-list-link/DropdownListLink.vue"
+import AlpacaDropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
+import AlpacaDropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
 
 import dropdownListItemsNested from "./mocks/dropdownListItemsNested.json"
 import dropdownListItems from "./mocks/dropdownListItems.json"

@@ -6,10 +6,6 @@
   export default {
     ...instance
   }
-
 </script>
 
-<style
-  lang="scss"
-  src="./Breadcrumbs.scss"
-/>
+<style lang="scss" src="./Breadcrumbs.scss"/>

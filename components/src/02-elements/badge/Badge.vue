@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./Badge.scss"
-/>
+<style lang="scss" src="./Badge.scss"/>

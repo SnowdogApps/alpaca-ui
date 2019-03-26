@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./Header.scss"
-/>
+<style lang="scss" src="./Header.scss"/>

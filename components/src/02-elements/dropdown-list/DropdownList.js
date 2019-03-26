@@ -1,5 +1,5 @@
-import AlpacaDropdownListItem from "./dropdown-list-item/DropdownListItem.vue"
-import AlpacaDropdownListLink from "./dropdown-list-link/DropdownListLink.vue"
+import AlpacaDropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
+import AlpacaDropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
 
 export default {
   provide: {
