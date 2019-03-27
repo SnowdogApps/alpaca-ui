@@ -26,10 +26,12 @@
         tabindex="0"
         @keydown="handleKeydown"
       >
-        <div class="off-canvas-sidebar__header row between-xs">
+        <div
+          class="off-canvas-sidebar__header row between-xs"
+          v-if="!blank"
+        >
           <slot name="heading">
             <alpaca-heading
-              v-if="!blank"
               :level="1"
               class="off-canvas-sidebar__heading"
             >

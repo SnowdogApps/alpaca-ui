@@ -17,7 +17,8 @@
         v-show="visibility"
         ref="modal"
         role="document"
-        tabindex="-1"
+        tabindex="0"
+        @keydown="handleKeydown"
       >
         <div
           class="modal__header row between-xs"
@@ -33,7 +34,7 @@
           </slot>
           <button
             v-if="closeButton && !blank"
-            @click="toggle(false)"
+            @click="hide(name)"
             class="button button--icon modal__close-button"
             type="button"
           >
