@@ -1,15 +1,15 @@
-.grid-container {
+.wrapper .grid-container {
   overflow: hidden;
 }
 
-.row {
+.wrapper .row {
   min-height: 2em;
   margin-bottom: 8px;
   padding-top: 8px;
   background: #73739c;
 }
 
-.row__content {
+.wrapper .row__content {
   margin-bottom: 8px;
   padding: 8px;
   background: #c2c1df;
@@ -18,6 +18,6 @@
   font-weight: bold;
 }
 
-.col-large .row__content {
+.wrapper .col-large .row__content {
   height: 8em;
 }

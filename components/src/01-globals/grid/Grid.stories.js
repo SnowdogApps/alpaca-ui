@@ -9,28 +9,31 @@ storiesOf('Global/Grid', module)
   .add('Default', () => ({
     components: { AlpacaGrid },
     template: `
-        <alpaca-grid
-          :grids="[
-            [
-              'col-xs-12 col-sm-3 col-md-2 col-lg-1',
-              'col-xs-6 col-sm-6 col-md-8 col-lg-10',
-              'col-xs-6 col-sm-3 col-md-2 col-lg-1'
-            ],
-            [
-              'col-xs-12 col-sm-3 col-md-2 col-lg-1',
-              'col-xs-12 col-sm-9 col-md-10 col-lg-11'
-            ],
-            [
-              'col-xs-10 col-sm-6 col-md-8 col-lg-10',
-              'col-xs-2 col-sm-6 col-md-4 col-lg-2'
-            ]
-          ]"
-        />
+       <div class="wrapper">
+          <alpaca-grid
+             :grids="[
+               [
+                 'col-xs-12 col-sm-3 col-md-2 col-lg-1',
+                 'col-xs-6 col-sm-6 col-md-8 col-lg-10',
+                 'col-xs-6 col-sm-3 col-md-2 col-lg-1'
+               ],
+               [
+                 'col-xs-12 col-sm-3 col-md-2 col-lg-1',
+                 'col-xs-12 col-sm-9 col-md-10 col-lg-11'
+               ],
+               [
+                 'col-xs-10 col-sm-6 col-md-8 col-lg-10',
+                 'col-xs-2 col-sm-6 col-md-4 col-lg-2'
+               ]
+             ]"
+          />
+      </div>
     `
   }))
   .add('Fluid', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           :grids="[
             [
@@ -62,11 +65,13 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
+      </div>
     `
   }))
   .add('Auto width', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper"> 
         <alpaca-grid
           :grids="[
             [
@@ -88,11 +93,13 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
+      </div>  
     `
   }))
   .add('Reordering', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           :grids="[
             [
@@ -113,11 +120,13 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
+      </div>  
     `
   }))
   .add('Distribution around', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           row-class="around-xs"
           :grids="[
@@ -126,11 +135,13 @@ storiesOf('Global/Grid', module)
             'col-xs-2'
           ]"
         />
+      </div>>  
     `
   }))
   .add('Distribution between', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper"> 
         <alpaca-grid
           row-class="between-xs"
           :grids="[
@@ -139,44 +150,52 @@ storiesOf('Global/Grid', module)
             'col-xs-2'
           ]"
         />
+      </div>  
     `
   }))
   .add('Alignment start', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           row-class="start-xs"
           :grids="[
             ['col-xs-6']
           ]"
         />
+      </div>  
     `
   }))
   .add('Alignment center', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           row-class="center-xs"
           :grids="[
             ['col-xs-6']
           ]"
         />
+      </div>  
     `
   }))
   .add('Alignment end', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           row-class="end-xs"
           :grids="[
             ['col-xs-6']
           ]"
         />
+      </div>  
     `
   }))
   .add('Alignment top', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper"> 
         <alpaca-grid
           row-class="top-xs"
           :grids="[
@@ -186,11 +205,13 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
+      </div>  
     `
   }))
   .add('Alignment middle', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           row-class="middle-xs"
           :grids="[
@@ -200,11 +221,13 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
+      </div>  
     `
   }))
   .add('Alignment bottom', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           row-class="bottom-xs"
           :grids="[
@@ -214,11 +237,13 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
+      </div>  
     `
   }))
   .add('Reversing', () => ({
     components: { AlpacaGrid },
     template: `
+      <div class="wrapper">
         <alpaca-grid
           row-class="reverse"
           :grids="[
@@ -231,5 +256,6 @@ storiesOf('Global/Grid', module)
             ]
           ]"
         />
+      </div>  
     `
   }))
