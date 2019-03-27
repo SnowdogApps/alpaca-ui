@@ -1,4 +1,4 @@
-import AlpacaContainer from '../../01-globals/container/Container.vue'
+import AlpacaContainer from '../../atoms/container/Container.vue'
 import AlpacaFilters from '../../03-modules/filters/Filters.vue'
 import AlpacaGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'

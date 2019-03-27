@@ -1,4 +1,4 @@
-import AlpacaContainer from '../../01-globals/container/Container.vue'
+import AlpacaContainer from '../../atoms/container/Container.vue'
 import AlpacaHeading from '../../01-globals/heading/Heading.vue'
 import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'

@@ -1,4 +1,4 @@
-import Container from '../../01-globals/container/Container.vue'
+import Container from '../../atoms/container/Container.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 import Logo from '../../02-elements/logo/Logo.vue'
 import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
