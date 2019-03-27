@@ -1,0 +1,74 @@
+<div class="register">
+  <form>
+    <alpaca-fieldset
+      class="register__fieldset"
+      :legend-text="personalInformationLegend"
+      legend-class="register__legend"
+    >
+      <alpaca-input
+        id="firstname"
+        v-model="firstname"
+        label="First name"
+        type="text"
+        name="firstname"
+        placeholder="First name"
+      />
+      <alpaca-input
+        id="lastname"
+        v-model="lastname"
+        label="Last name"
+        type="text"
+        name="lastname"
+        placeholder="Last name"
+      />
+    </alpaca-fieldset>
+    <alpaca-fieldset
+      class="register__fieldset"
+      :legend-text="signInLegend"
+      legend-class="register__legend"
+    >
+      <alpaca-input
+        id="email"
+        v-model="email"
+        label="Email"
+        type="email"
+        name="email"
+        placeholder="Email"
+      />
+      <alpaca-input
+        id="password"
+        v-model="password"
+        label="Password"
+        type="password"
+        name="password"
+        placeholder="Password"
+      />
+      <alpaca-input
+        id="passwordConfirmation"
+        v-model="passwordConfirmation"
+        label="Confirm password"
+        type="password"
+        name="passwordConfirmation"
+        placeholder="Confirm password"
+      />
+    </alpaca-fieldset>
+    <div class="row row--no-margins center-xs">
+      <alpaca-button
+        type="submit"
+        class="register__submit-button"
+        @click.stop.prevent="register"
+      >
+        {{ submitButton }}
+      </alpaca-button>
+    </div>
+  </form>
+  <div class="register__login-wrapper row row--no-margins center-xs">
+    <alpaca-button
+      class="register__register-button"
+      blank
+      @click="goToLogin"
+    >
+      {{ goToLoginButton }}
+    </alpaca-button>
+  </div>
+</div>

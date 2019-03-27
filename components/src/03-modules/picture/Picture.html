@@ -1,0 +1,13 @@
+<picture class="image">
+  <source
+    v-for="(image, index) in images"
+    :key="'image_' + index"
+    :media="image['max-width'] && `(max-width: ${image['max-width']})`"
+    :srcset="image.src"
+  >
+
+  <alpaca-image
+    :src="images[0].src"
+    :alt="alt"
+  />
+</picture>
