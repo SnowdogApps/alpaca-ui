@@ -129,6 +129,7 @@ storiesOf('Modules/Header', module)
         <alpaca-off-canvas-sidebar
           ref="sideMenu"
           side="left"
+          class="header__side-menu"
           compact
         >
           <alpaca-side-menu :menu-items="sideMenu"/>

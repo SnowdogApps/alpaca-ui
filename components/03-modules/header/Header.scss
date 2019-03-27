@@ -74,6 +74,26 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     }
   }
 
+  &__side-menu {
+    .off-canvas-sidebar__content {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .off-canvas-sidebar__header {
+      position: absolute;
+      z-index: 10;
+    }
+
+    .side-menu {
+      flex: 1;
+    }
+
+    .side-menu__item--prev {
+      padding-right: 30px;
+    }
+  }
+
   &__buttons {
     display: flex;
     order: 2;

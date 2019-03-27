@@ -29,7 +29,6 @@ $side-menu__nested-item-padding-left: calc(#{$side-menu__icon-right-margin--prev
 
     &--prev {
       border-bottom: $side-menu__item-border;
-      transition: $transition-base;
 
       &:empty {
         height: calc(#{$side-menu__item-min-height} + #{$border-width-base});
@@ -45,10 +44,6 @@ $side-menu__nested-item-padding-left: calc(#{$side-menu__icon-right-margin--prev
       &:focus {
         background: transparent;
       }
-    }
-
-    &--no-border {
-      border-color: transparent;
     }
   }
 
