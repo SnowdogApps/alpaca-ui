@@ -1,4 +1,4 @@
-import AlpacaLabel from '../../01-globals/label/Label.vue'
+import AlpacaLabel from '../../atoms/label/Label.vue'
 
 export default {
   components: {
