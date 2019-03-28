@@ -1,7 +1,7 @@
 {
   "name": "@snowdog/alpaca-cookbook",
   "repository": "github:SnowdogApps/alpaca-storybook",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "start-storybook -p 6006 -s ./public",
