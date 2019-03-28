@@ -1,0 +1,19 @@
+<button
+  :id="getTabsWithId"
+  :class="[
+    'tab__title',
+    { 'tab__title--active': activeTab === tabId }
+  ]"
+  :data-tab="tabId"
+  :aria-controls="tabId"
+  :aria-selected="activeTab === tabId"
+  :aria-expanded="activeTab === tabId"
+  @click="setActiveTab"
+>
+  {{ title }}
+  <alpaca-icon
+    v-if="icon"
+    :icon="icon"
+    class="tab__icon"
+  />
+</button>

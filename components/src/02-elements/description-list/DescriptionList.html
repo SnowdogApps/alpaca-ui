@@ -1,0 +1,22 @@
+<dl class="list list--description">
+  <template v-for="(item, idx) in elements">
+    <dt
+      :key="`desc-list-label-${idx}`"
+      :class="[
+        'list__label',
+        labelClass
+      ]"
+    >
+      {{ item.label }}
+    </dt>
+    <dd
+      :key="`desc-list-value-${idx}`"
+      :class="[
+        'list__value',
+        valueClass
+      ]"
+    >
+      {{ item.value }}
+    </dd>
+  </template>
+</dl>

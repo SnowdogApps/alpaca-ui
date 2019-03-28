@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Ingrid Running Jacket",
+    "image": "/images/product/cart-product-160_160.jpg",
+    "price": "",
+    "specialPrice": "$100,00",
+    "oldPrice": "$299,99",
+    "url": "#",
+    "options": [
+      {
+        "label": "Size",
+        "value": "XXL"
+      },
+      {
+        "label": "Color",
+        "value": "Red"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ingrid Running Jacket",
+    "image": "/images/product/cart-product-160_160.jpg",
+    "price": "$32,99",
+    "specialPrice": "",
+    "oldPrice": "",
+    "url": "#"
+  }
+]

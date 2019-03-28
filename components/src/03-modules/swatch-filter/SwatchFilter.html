@@ -1,0 +1,24 @@
+<alpaca-dropdown-list-item
+  class="filter"
+  label-class="filter__label"
+  content-class="filter__content"
+  :title="title"
+  :collapse="true"
+  :id="id"
+  :data-dropdown="id"
+>
+  <div class="filter__swatch">
+    <alpaca-button
+      v-for="item in items"
+      :key="item.id"
+      class="filter__swatch-option"
+      :default-class="false"
+      :aria-label="item.ariaLabel"
+      @click="click(item.id)"
+    >
+      {{ item.text }}
+    </alpaca-button>
+  </div>
+
+  <div class="filter__divider"></div>
+</alpaca-dropdown-list-item>
