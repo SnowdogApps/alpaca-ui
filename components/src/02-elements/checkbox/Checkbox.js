@@ -33,7 +33,6 @@ export default {
     },
     labelClass: {
       type: String,
-      required: false,
       default: null
     },
     link: {

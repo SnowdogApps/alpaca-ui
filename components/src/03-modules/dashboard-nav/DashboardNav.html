@@ -1,0 +1,33 @@
+<div class="dashboard-nav">
+  <div
+    :class="['dashboard-nav__mobile', isActive && 'dashboard-nav__mobile--active']"
+    @click="isActive = !isActive"
+  >
+    {{ actualPage }}
+  </div>
+
+  <div :class="['dashboard-nav__content', isActive && 'dashboard-nav__content--visible']">
+    <alpaca-heading
+      :level="5"
+      class="dashboard-nav__title"
+    >
+      {{ title }}
+    </alpaca-heading>
+    <alpaca-list class="dashboard-nav__list">
+      <alpaca-list-item
+        v-for="element in list"
+        :key="element.id"
+        :element="element"
+        class="dashboard-nav__item"
+      >
+        <alpaca-link
+          :href="element.href"
+          inverted
+          class="dashboard-nav__link"
+        >
+          {{ element.text }}
+        </alpaca-link>
+      </alpaca-list-item>
+    </alpaca-list>
+  </div>
+</div>

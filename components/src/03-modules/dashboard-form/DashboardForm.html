@@ -1,0 +1,65 @@
+<div class="dashboard-form">
+  <alpaca-heading :level="5">
+    {{ title }}
+  </alpaca-heading>
+  <div class="dashboard-form__divider">
+    <template v-if="inputs">
+      <alpaca-input
+        v-for="field in inputs"
+        :id="field.id"
+        :key="field.id"
+        class="dashboard-form__divider"
+        :label="field.placeholder"
+        hidden-label
+        type="text"
+        :name="field.name"
+        :placeholder="field.placeholder"
+      />
+    </template>
+    <template v-if="options">
+      <alpaca-select
+        v-for="option in options"
+        :id="option.id"
+        :key="option.id"
+        v-model="test"
+        :name="option.name"
+        :options="option.options"
+        :label="option.label"
+      />
+    </template>
+    <template v-if="checkboxes">
+      <alpaca-checkbox
+        v-for="checkbox in checkboxes"
+        :id="checkbox.id"
+        :key="checkbox.id"
+        v-model="selected[checkbox.type]"
+        :value="true"
+        :unchecked-value="false"
+        class="dashboard-form__divider"
+        @change="checkedValues"
+      >
+        {{ checkbox.text }}
+      </alpaca-checkbox>
+    </template>
+    <div class="dashboard-form__divider dashboard-form__fields">
+      <template v-if="visibleInputs">
+        <alpaca-heading
+          :level="5"
+          class="dashboard-form__title-form dashboard-form__divider"
+        >
+          {{ visibleTitle.title }}
+        </alpaca-heading>
+        <alpaca-input
+          v-for="field in visibleInputs"
+          :id="field.id"
+          :key="field.id"
+          class="dashboard-form__divider"
+          :label="field.text"
+          type="text"
+          :name="field.name"
+          :placeholder="field.text"
+        />
+      </template>
+    </div>
+  </div>
+</div>

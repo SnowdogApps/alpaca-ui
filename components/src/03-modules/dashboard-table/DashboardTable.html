@@ -1,0 +1,46 @@
+<div class="dashboard-table">
+  <div class="dashboard-table__header">
+    <alpaca-heading
+      :level="5"
+      class="dashboard-table__title"
+    >
+      {{ title }}
+    </alpaca-heading>
+    <alpaca-link
+      :href="viewAllLink"
+      class="dashboard-table__link"
+    >
+      {{ 'View all' }}
+    </alpaca-link>
+  </div>
+  <div class="dashboard-table__content">
+    <alpaca-table caption="This is a table">
+      <thead>
+      <alpaca-table-row>
+        <alpaca-table-cell
+          v-for="headCell in headCells"
+          :key="headCell.id"
+          tag="th"
+          :scope="headCell.scope"
+        >
+          {{ headCell.text }}
+        </alpaca-table-cell>
+      </alpaca-table-row>
+      </thead>
+      <tbody>
+      <alpaca-table-row
+        v-for="row in bodyRows"
+        :key="row.id"
+      >
+        <alpaca-table-cell
+          v-for="bodyCell in row"
+          :key="bodyCell.id"
+          :data-th="bodyCell.mobileHeading"
+        >
+          {{ bodyCell.text }}
+        </alpaca-table-cell>
+      </alpaca-table-row>
+      </tbody>
+    </alpaca-table>
+  </div>
+</div>
