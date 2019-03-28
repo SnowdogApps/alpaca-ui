@@ -14,10 +14,12 @@ const info = `
 
 storiesOf('Atoms/Icon', module)
   .addDecorator(withReadme(iconsReadme))
-  .add('Default', () => ({
-    components: { AIcon },
-    data: () => ({ icons }),
-    template: `
+  .add(
+    'Default',
+    () => ({
+      components: { AIcon },
+      data: () => ({ icons }),
+      template: `
         <div style="display: flex; flex-wrap: wrap; padding: 10px;">
           <div
             v-for="icon in icons"
@@ -35,7 +37,7 @@ storiesOf('Atoms/Icon', module)
             </span>
           </div>
         </div>
-    `
+      `
     }),
     { info }
   )
