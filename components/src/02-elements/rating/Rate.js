@@ -1,4 +1,4 @@
-import AlpacaFieldset from '../../02-elements/form/fieldset/Fieldset.vue'
+import AlpacaFieldset from '../../02-elements/fieldset/Fieldset.vue'
 
 export default {
   components: {

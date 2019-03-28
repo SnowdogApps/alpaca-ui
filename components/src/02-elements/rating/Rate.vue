@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./Rate.scss"
-/>
+<style lang="scss" src="./Rate.scss"/>
