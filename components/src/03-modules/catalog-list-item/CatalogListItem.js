@@ -1,4 +1,4 @@
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaImage from '../../02-elements/image/Image.vue'
 import AlpacaBadge from '../../02-elements/badge/Badge.vue'
 import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'

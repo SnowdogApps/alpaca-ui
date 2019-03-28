@@ -1,4 +1,4 @@
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 
 export default {

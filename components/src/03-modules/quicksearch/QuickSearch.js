@@ -1,5 +1,5 @@
 import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaImage from '../../02-elements/image/Image.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'

@@ -1,5 +1,5 @@
 import AlpacaIcon from '../../atoms/icon/Icon.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaList from '../../02-elements/list/List.vue'
 import AlpacaListItem from '../../02-elements/list-item/ListItem.vue'

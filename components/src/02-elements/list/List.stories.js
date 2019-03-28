@@ -5,7 +5,7 @@ import AlpacaListItem from '../list-item/ListItem.vue'
 import AlpacaListImageItem from '../list-image-item/ListImageItem.vue'
 import AlpacaDescriptionList from '../description-list/DescriptionList.vue'
 import AlpacaIcon from '../../atoms/icon/Icon.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaLink from '../../atoms/link/Link.vue'
 
 import listElements from './mocks/listElements.json'
 import iconListElements from './mocks/iconListElements.json'
