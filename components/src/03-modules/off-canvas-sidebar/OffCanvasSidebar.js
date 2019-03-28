@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       visibility: false,
-      focused: null,
+      trigger: null,
       ariaHidden: 'true'
     }
   },
@@ -28,11 +28,11 @@ export default {
       type: String,
       default: 'right'
     },
-    closeOnEsc: {
+    closeOnBackgroundClick: {
       type: Boolean,
       default: true
     },
-    closeOnBackgroundClick: {
+    closeOnEsc: {
       type: Boolean,
       default: true
     },
@@ -61,49 +61,66 @@ export default {
   methods: {
     show (name) {
       if (name === this.name) {
-        this.focused = document.activeElement
-        this.toggle(true)
+        this.trigger = document.activeElement
+        this.toggleParams(true)
+        this.$nextTick(() => this.$refs.offCanvasSidebar.focus())
       }
     },
     hide (name) {
       if (name === this.name) {
-        this.toggle(false)
+        this.toggleParams(false)
+        this.$nextTick(() => this.trigger.focus())
       }
     },
-    toggle (state) {
+    toggleParams (state) {
       this.ariaHidden = state ? 'false' : 'true'
       this.visibility = state
-
-      if (state === true) {
-        this.$nextTick(() => this.$refs.offCanvasSidebar.focus())
-      } else {
-        this.$nextTick(() => this.focused.focus())
-      }
     },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
-        this.toggle(false)
+        this.hide(this.name)
       }
     },
-    handleEscapeKeyUp (event) {
-      if (event.which === 27 && this.visibility) {
-        this.toggle(false)
+    handleKeydown (event) {
+      if (this.visibility) {
+        switch (event.key) {
+          case "Esc": // IE/Edge specific value
+          case "Escape":
+            if (this.closeOnEsc) {
+              this.hide(this.name)
+            }
+            break
+          case "Tab":
+            this.setFocusTrap(event)
+            break
+        }
+      }
+    },
+    setFocusTrap(event) {
+      const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
+      const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
+
+      let currentFocus = document.activeElement
+      let totalOfFocusable = focusableChildren.length
+      let focusedIndex = focusableChildren.indexOf(currentFocus)
+
+      if (event.shiftKey) {
+        if (focusedIndex <= 0) {
+          event.preventDefault()
+          focusableChildren[totalOfFocusable - 1].focus()
+        }
+      }
+      else {
+        if (focusedIndex === totalOfFocusable - 1) {
+          event.preventDefault()
+          focusableChildren[0].focus()
+        }
       }
     }
   },
   computed: {
     getMaxWidth () {
       return this.maxWidth !== null ? `max-width: ${this.maxWidth}px;`: null
-    }
-  },
-  beforeMount () {
-    if (this.closeOnEsc) {
-      window.addEventListener('keydown', this.handleEscapeKeyUp)
-    }
-  },
-  beforeDestroy () {
-    if (this.closeOnEsc) {
-      window.removeEventListener('keydown', this.handleEscapeKeyUp)
     }
   }
 }

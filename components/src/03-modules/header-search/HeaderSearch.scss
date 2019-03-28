@@ -14,12 +14,13 @@ $search-form__button-icon-color : $gray-dark !default;
 $search-form__placeholder-color : $gray !default;
 
 .search-form {
+  position: relative;
   width: $search-form__width;
   height: $search-form__height;
-  align-self: $search-form__alignment;
   margin: $reset;
   border: 1px solid $search-form__border-color;
   border-radius: $search-form__height;
+  align-self: $search-form__alignment;
   z-index: 1;
 
   @include mq($screen-m) {
@@ -66,6 +67,7 @@ $search-form__placeholder-color : $gray !default;
   .button__icon {
     width: $search-form__button-size;
     height: $search-form__button-size;
+    padding: $reset;
     fill: $search-form__button-icon-color;
   }
 }

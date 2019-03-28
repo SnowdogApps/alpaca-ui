@@ -1,15 +1,16 @@
-.grid-container {
+.grid-preview.grid-container {
   overflow: hidden;
+  padding: 0 25px;
 }
 
-.row {
+.grid-preview .row {
   min-height: 2em;
   margin-bottom: 8px;
   padding-top: 8px;
   background: #73739c;
 }
 
-.row__content {
+.grid-preview .row__content {
   margin-bottom: 8px;
   padding: 8px;
   background: #c2c1df;
@@ -18,6 +19,6 @@
   font-weight: bold;
 }
 
-.col-large .row__content {
+.grid-preview .col-large .row__content {
   height: 8em;
 }
