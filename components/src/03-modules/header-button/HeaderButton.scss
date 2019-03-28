@@ -26,19 +26,19 @@ $header-button__counter-dot-bg-color: $white !default;
 
 .header-button {
   position: relative;
-  height: $header-button__size;
-  min-width: $header-button__size;
   display: flex;
-  margin: $header-button__margin;
-  padding: $reset;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
+  height: $header-button__size;
+  min-width: $header-button__size;
+  margin: $header-button__margin;
+  padding: $reset;
   background-color: #fff;
+  border: none;
   font-family: $header-button__text-font-family;
+  text-decoration: none;
+  cursor: pointer;
 
   @include mq($screen-xl) {
     margin: $header-button__margin--extra-large;
@@ -69,26 +69,26 @@ $header-button__counter-dot-bg-color: $white !default;
   }
 
   &__text {
-    font-size: $header-button__text-font-size;
-    line-height: $header-button__text-line-height;
-    text-align: center;
     color: $header-button__text-font-color;
+    font-size: $header-button__text-font-size;
+    text-align: center;
+    line-height: $header-button__text-line-height;
   }
 
   &__counter {
     position: absolute;
+    display: flex;
     top: $header-button__counter-top;
     right: $header-button__counter-right;
-    display: flex;
     width: $header-button__counter-size;
     height: $header-button__counter-size;
+    color: $header-button__counter-color;
+    background-color: $header-button__counter-background;
     border: $header-button__counter-border;
     border-radius: $header-button__counter-size;
     line-height: $header-button__counter-size;
     font-size: $header-button__counter-font-size;
     text-align: center;
-    color: $header-button__counter-color;
-    background-color: $header-button__counter-background;
 
     &--hidden {
       display: none;
@@ -99,11 +99,11 @@ $header-button__counter-dot-bg-color: $white !default;
     }
 
     &-dot {
+      margin: auto;
       width: $header-button__counter-dot-size;
       height: $header-button__counter-dot-size;
-      border-radius: $header-button__counter-dot-size;
-      margin: auto;
       background-color: $header-button__counter-dot-bg-color;
+      border-radius: $header-button__counter-dot-size;
     }
   }
 }
