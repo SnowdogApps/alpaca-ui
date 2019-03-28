@@ -1,0 +1,146 @@
+@import '~styles/globals';
+
+$table__padding      : $spacer--medium !default;
+$table__cell__padding: $spacer $table__padding !default;
+$table__background   : $white !default;
+$table__border       : 1px solid $gray-light !default;
+$table__border-radius: $border-radius !default;
+$table__th-background: $gray-lightest !default;
+
+.table {
+  th {
+    display: none;
+
+    &:last-child {
+      @include mq($screen-m) {
+        border-right: $reset;
+      }
+    }
+
+    @include mq($screen-m) {
+      display: table-cell;
+      padding: $table__padding;
+      border-bottom: $table__border;
+      border-right: $table__border;
+      background: $table__th-background;
+    }
+  }
+
+  td {
+    display: flex;
+    padding: $table__cell__padding;
+    background: $table__background;
+
+    &::before {
+      content: attr(data-th);
+      display: block;
+      max-width: 25%;
+      width: 25%;
+      margin-right: 10px;
+      font-weight: bold;
+
+      @include mq($screen-m) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      @include mq($screen-m) {
+        border-right: $reset;
+      }
+    }
+
+    @include mq($screen-m) {
+      display: table-cell;
+      padding: $table__padding;
+      border-bottom: $table__border;
+      border-right: $table__border;
+      background: $table__background;
+    }
+  }
+
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          &:first-child {
+            @include mq($screen-m) {
+              border-bottom-left-radius: $table__border-radius;
+            }
+          }
+
+          &:last-child {
+            @include mq($screen-m) {
+              border-bottom-right-radius: $table__border-radius;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  tfoot {
+    td {
+      display: block;
+      padding: $table__cell__padding;
+      background: $table__background;
+
+      @include mq($screen-m) {
+        display: table-cell;
+        padding: $table__padding;
+        border-right: $table__border;
+        background: $table__th-background;
+      }
+    }
+
+    tr {
+      &:last-child {
+        border-bottom: $reset;
+
+        td {
+          border-bottom: $reset;
+
+          &:first-child {
+            @include mq($screen-m) {
+              border-bottom-left-radius: $table__border-radius;
+            }
+          }
+
+          &:last-child {
+            @include mq($screen-m) {
+              border-bottom-right-radius: $table__border-radius;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--odd-even {
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background: $table__background;
+        }
+
+        &:nth-child(even) {
+          background: $table__th-background;
+        }
+
+        &:first-child {
+          border-top-left-radius: $table__border-radius;
+          border-top-right-radius: $table__border-radius;
+
+          @include mq($screen-m) {
+            border-top-left-radius: $reset;
+            border-top-right-radius: $reset;
+          }
+        }
+      }
+
+      td {
+        background-color: transparent;
+      }
+    }
+  }
+}

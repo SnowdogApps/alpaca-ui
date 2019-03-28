@@ -2,9 +2,9 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
 import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
-import AlpacaCheckboxFilter from './checkbox-filter/CheckboxFilter.vue'
-import AlpacaColorFilter from './color-filter/ColorFilter.vue'
-import AlpacaSwatchFilter from './swatch-filter/SwatchFilter.vue'
+import AlpacaCheckboxFilter from '../checkbox-filter/CheckboxFilter.vue'
+import AlpacaColorFilter from '../color-filter/ColorFilter.vue'
+import AlpacaSwatchFilter from '../swatch-filter/SwatchFilter.vue'
 
 import swatchItems from './mocks/swatchItems'
 import colorItems from './mocks/colorItems'

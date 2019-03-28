@@ -7,6 +7,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
   .add('Default', () => ({
     components: { AlpacaButton, AlpacaOffCanvasSidebar },
     template: `
+      <div>
         <alpaca-button @click="showSidebar">
           Sidebar button
         </alpaca-button>
@@ -17,6 +18,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </alpaca-off-canvas-sidebar>
+      </div>
     `,
     methods: {
       showSidebar () {
@@ -27,6 +29,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
   .add('Blank', () => ({
     components: { AlpacaButton, AlpacaOffCanvasSidebar },
     template: `
+      <div>
         <alpaca-button @click="showBlankSidebar">
           Blank sidebar button
         </alpaca-button>
@@ -38,6 +41,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </alpaca-off-canvas-sidebar>
+      </div>
     `,
     methods: {
       showBlankSidebar () {

@@ -8,6 +8,7 @@ storiesOf('Modules/Modal', module)
   .add('Default', () => ({
     components: { AlpacaButton, AlpacaModal, AlpacaHeading },
     template: `
+      <div>
         <alpaca-button @click="showModal">
           Modal button
         </alpaca-button>
@@ -19,6 +20,7 @@ storiesOf('Modules/Modal', module)
           </template>
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </alpaca-modal>
+      </div>
     `,
     methods: {
       showModal () {
@@ -29,6 +31,7 @@ storiesOf('Modules/Modal', module)
   .add('Blank', () => ({
     components: { AlpacaButton, AlpacaModal },
     template: `
+      <div>
         <alpaca-button @click="showModal">
           Open Modal
         </alpaca-button>
@@ -39,6 +42,7 @@ storiesOf('Modules/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </alpaca-modal>
+      </div>
     `,
     methods: {
       showModal () {

@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./QuantityUpdate.scss"
-/>
+<style lang="scss" src="./QuantityUpdate.scss"/>

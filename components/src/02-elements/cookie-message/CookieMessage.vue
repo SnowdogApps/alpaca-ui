@@ -8,7 +8,4 @@
   }
 </script>
 
-<style
-  lang="scss"
-  src="./CookieMessage.scss"
-/>
+<style lang="scss" src="./CookieMessage.scss"/>
