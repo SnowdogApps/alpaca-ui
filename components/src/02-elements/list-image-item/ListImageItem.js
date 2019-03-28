@@ -1,4 +1,4 @@
-import AlpacaImage from '../image/Image.vue'
+import AlpacaImage from '../../atoms/image/Image.vue'
 export default {
   components: {
     AlpacaImage

@@ -1,4 +1,4 @@
-import AlpacaImage from "../../02-elements/image/Image.vue"
+import AlpacaImage from "../../atoms/image/Image.vue"
 import AlpacaPrice from "../../02-elements/price/Price.vue"
 import AlpacaDescriptionList from "../../02-elements/description-list/DescriptionList.vue"
 import AlpacaButton from "../../02-elements/button/Button.vue"

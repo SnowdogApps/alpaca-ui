@@ -2,12 +2,17 @@ import { storiesOf } from '@storybook/vue'
 
 import ABanner from './Banner.vue'
 import ASource from '../source/Source.vue'
+import AImage from '../image/Image.vue'
 
 import banner from './mocks/banner.json'
 
+const info = `
+  This component does not have any modifiers.
+`
+
 storiesOf('Atoms/Banner', module)
   .add('Default', () => ({
-    components: { ABanner, ASource },
+    components: { ABanner, ASource, AImage },
     data() {
       return {
         banner
@@ -24,10 +29,12 @@ storiesOf('Atoms/Banner', module)
            :srcset="item.src"
            :media="item.mediaQuery"
          />
-         <img
+         <a-image
            :src="banner.defaultSrc"
            alt="banner-image"
-         >
+         />
         </a-banner>
     `
-  }))
+    }),
+    { info }
+  )

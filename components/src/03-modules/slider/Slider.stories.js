@@ -3,7 +3,7 @@ import data from './mocks/data'
 
 import AlpacaSlider from './Slider.vue'
 import AlpacaIcon from '../../atoms/icon/Icon.vue'
-import AlpacaImage from '../../02-elements/image/Image'
+import AlpacaImage from '../../atoms/image/Image'
 import { Slide } from 'vue-carousel'
 
 storiesOf('Modules/Slider', module)
