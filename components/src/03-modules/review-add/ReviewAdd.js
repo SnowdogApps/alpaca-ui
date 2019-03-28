@@ -1,4 +1,4 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaInput from '../../02-elements/input/Input.vue'

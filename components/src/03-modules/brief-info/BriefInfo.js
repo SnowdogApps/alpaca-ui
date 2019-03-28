@@ -1,5 +1,5 @@
 import uniqueId from 'lodash.uniqueid'
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import Icon from '../../01-globals/icon/Icon.vue'
 
 export default {

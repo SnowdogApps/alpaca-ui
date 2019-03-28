@@ -1,4 +1,4 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaBanner from '../../02-elements/banner/Banner.vue'
 import AlpacaList from '../../02-elements/list/List.vue'
 import AlpacaListImageItem from '../../02-elements/list-image-item/ListImageItem.vue'

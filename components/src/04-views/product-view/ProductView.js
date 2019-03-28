@@ -1,5 +1,5 @@
 import AlpacaContainer from '../../atoms/container/Container.vue'
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaPrice from '../../02-elements/price/Price.vue'

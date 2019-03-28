@@ -1,4 +1,4 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 

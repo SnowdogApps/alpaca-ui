@@ -7,7 +7,7 @@ export default {
     },
     tag: {
       type: String,
-      default: null
+      required: true
     },
     page: {
       type: Boolean,
