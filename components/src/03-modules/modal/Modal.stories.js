@@ -1,10 +1,9 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaInput from '../../02-elements/input/Input.vue'
 import AlpacaModal from '../../03-modules/modal/Modal.vue'
-import AlpacaHeading from '../../atoms/heading/Heading.vue'
 
 storiesOf('Modules/Modal', module)
   .add('Default', () => ({
