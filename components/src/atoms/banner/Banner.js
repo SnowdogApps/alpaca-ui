@@ -1,11 +1,22 @@
+import ASource from '../source/Source.vue'
+import AImage from '../image/Image.vue'
+
 export default {
+  components: {
+    ASource,
+    AImage
+  },
   props: {
     link: {
-      type: String,
+      type: Object,
       required: true
     },
-    ariaLabel: {
-      type: String,
+    image: {
+      type: Object,
+      required: true
+    },
+    sources: {
+      type: Array,
       default: null
     }
   }

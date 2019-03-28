@@ -1,9 +1,18 @@
 <a
-  :href="link"
-  :aria-label="ariaLabel"
+  :href="link.href"
+  :aria-label="link.ariaLabel"
   class="banner"
 >
   <picture class="image">
-    <slot/>
+    <a-source
+      v-for="item in sources"
+      :key="item.id"
+      :srcset="item.srcset"
+      :media="item.media"
+    />
+    <a-image
+      :src="image.src"
+      :alt="image.alt"
+    />
   </picture>
 </a>

@@ -1,9 +1,9 @@
 <main class="home">
   <alpaca-banner
+    class="home__banner-content"
     :link="mainBanner.link"
     :image="mainBanner.image"
-    class="home__banner-content"
-    aria-label="Banner"
+    :sources="mainBanner.sources"
   />
   <div class="container">
     <section class="home__banners-handler">
@@ -12,8 +12,8 @@
         :key="banner.id"
         class="home__banner-content"
         :link="banner.link"
-        :image="banner"
-        aria-label="Banner"
+        :image="banner.image"
+        :sources="banner.sources"
       />
     </section>
     <section class="home__banners-handler">
@@ -22,8 +22,8 @@
         :key="banner.id"
         class="home__banner-content"
         :link="banner.link"
-        :image="banner"
-        aria-label="Banner"
+        :image="banner.image"
+        :sources="banner.sources"
       />
     </section>
     <section class="home__brands">

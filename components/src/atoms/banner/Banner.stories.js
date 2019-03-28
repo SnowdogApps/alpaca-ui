@@ -1,10 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
 import ABanner from './Banner.vue'
-import ASource from '../source/Source.vue'
-import AImage from '../image/Image.vue'
-
-import banner from './mocks/banner.json'
 
 const info = `
   This component does not have any modifiers.
@@ -12,28 +8,47 @@ const info = `
 
 storiesOf('Atoms/Banner', module)
   .add('Default', () => ({
-    components: { ABanner, ASource, AImage },
+    components: { ABanner },
     data() {
       return {
-        banner
+        link: {
+          href: "#",
+          ariaLabel: "Banner"
+        },
+        image: {
+          src: "/images/banner/banner-320_176.jpg",
+          alt: "Banner image"
+        },
+        sources: [
+          {
+            "id": "image_1",
+            "srcset": "/images/banner/banner-320_176.jpg",
+            "media": "(max-width: 480px)"
+          },
+          {
+            "id": "image_2",
+            "srcset": "/images/banner/banner-768_416.jpg",
+            "media": "(max-width: 960px)"
+          },
+          {
+            "id": "image_3",
+            "srcset": "/images/banner/banner-1024_416.jpg",
+            "media": "(max-width: 1328px)"
+          },
+          {
+            "id": "image_4",
+            "srcset": "/images/banner/banner-1920_512.jpg",
+            "media": ""
+          }
+        ]
       }
     },
     template: `
         <a-banner
-          link="#"
-          aria-label="Banner"
-        >
-         <a-source
-           v-for="item in banner.sources"
-           :key="item.id"
-           :srcset="item.src"
-           :media="item.mediaQuery"
-         />
-         <a-image
-           :src="banner.defaultSrc"
-           alt="banner-image"
-         />
-        </a-banner>
+          :link="link"
+          :image="image"
+          :sources="sources"
+        />
     `
     }),
     { info }

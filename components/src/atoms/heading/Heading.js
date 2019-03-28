@@ -7,7 +7,7 @@ export default {
     },
     tag: {
       type: String,
-      required: true
+      default: null
     }
   },
   computed: {
