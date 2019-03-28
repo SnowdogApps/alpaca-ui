@@ -1,3 +1,3 @@
 import 'normalize.css'
 
- export default {}
+export default {}

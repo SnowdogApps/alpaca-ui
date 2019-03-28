@@ -38,6 +38,7 @@ storiesOf('Modules/Header', module)
       }
     }),
     template: `
+      <div>
         <alpaca-header
           :menu="menu"
           src="../../images/logo/alpaca.svg"
@@ -119,6 +120,7 @@ storiesOf('Modules/Header', module)
         >
           <alpaca-wishlist :products="products" />
         </alpaca-off-canvas-sidebar>
+      </div>
     `,
     methods: {
       showRegister() {
