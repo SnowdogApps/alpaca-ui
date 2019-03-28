@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import AlpacaHome from './Home.vue'
 
-import banner from '../../02-elements/banner/mocks/banner.json'
+import banner from '../../atoms/banner/mocks/banner.json'
 import smallBanners from './mocks/smallBanners.json'
 import mediumBanners from './mocks/mediumBanners.json'
 import imageListElements from './mocks/imageListElements.json'
