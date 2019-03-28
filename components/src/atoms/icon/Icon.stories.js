@@ -1,15 +1,21 @@
 import { storiesOf } from '@storybook/vue'
 import { withReadme } from 'storybook-readme'
 
+import AIcon from './Icon.vue'
+
 import iconsReadme from './README.md'
 import icons from './mocks/icons.json'
 
-import AlpacaIcon from './Icon.vue'
+const info = `
+  ------
+  #### This component does not have any modifiers.
+  ------
+`
 
-storiesOf('Global/Icon', module)
+storiesOf('Atoms/Icon', module)
   .addDecorator(withReadme(iconsReadme))
   .add('Default', () => ({
-    components: { AlpacaIcon },
+    components: { AIcon },
     data: () => ({ icons }),
     template: `
         <div style="display: flex; flex-wrap: wrap; padding: 10px;">
@@ -18,15 +24,18 @@ storiesOf('Global/Icon', module)
             :key="icon.iconId"
             style="margin: 20px; width: 100px;"
           >
-            <alpaca-icon
+            <a-icon
               :icon="icon.iconId"
-              :title="icon.iconTitle"
               style="margin: 0 auto;"
-            />
+            >
+              {{ icon.iconTitle }}
+            </a-icon>
             <span style="display: block; margin-top: 20px; text-align: center;">
               {{ icon.iconId }}
             </span>
           </div>
         </div>
     `
-  }))
+    }),
+    { info }
+  )

@@ -1,4 +1,4 @@
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../atoms/icon/Icon.vue'
 import AlpacaLink from '../../01-globals/link/Link.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 import AlpacaList from '../../02-elements/list/List.vue'

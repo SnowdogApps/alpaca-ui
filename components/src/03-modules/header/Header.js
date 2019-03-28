@@ -1,5 +1,5 @@
 import Container from '../../atoms/container/Container.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../atoms/icon/Icon.vue'
 import Logo from '../../02-elements/logo/Logo.vue'
 import MegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
 import HeaderButton from '../../03-modules/header-button/HeaderButton.vue'

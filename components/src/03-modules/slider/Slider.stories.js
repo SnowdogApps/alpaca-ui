@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 import data from './mocks/data'
 
 import AlpacaSlider from './Slider.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../atoms/icon/Icon.vue'
 import AlpacaImage from '../../02-elements/image/Image'
 import { Slide } from 'vue-carousel'
 

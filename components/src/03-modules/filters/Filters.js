@@ -1,5 +1,5 @@
 import AlpacaHeading from '../../atoms/heading/Heading.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../atoms/icon/Icon.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider.vue'
 import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
 import AlpacaDropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'

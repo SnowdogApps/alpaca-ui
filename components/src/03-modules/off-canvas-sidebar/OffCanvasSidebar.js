@@ -1,6 +1,6 @@
 import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaDivider from '../../02-elements/divider/Divider.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: {

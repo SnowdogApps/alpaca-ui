@@ -2,6 +2,8 @@
   class="icon"
   role="img"
 >
-  <title>{{ title }}</title>
+  <title>
+    <slot/>
+  </title>
   <use :xlink:href="url" />
 </svg>

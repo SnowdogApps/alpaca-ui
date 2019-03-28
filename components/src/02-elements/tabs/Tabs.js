@@ -1,5 +1,5 @@
 import uniqueId from 'lodash.uniqueid'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
+import AlpacaIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: {

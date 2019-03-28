@@ -3,10 +3,6 @@ export default {
     icon: {
       type: String,
       required: true
-    },
-    title: {
-      type: String,
-      default: null
     }
   },
   computed: {
