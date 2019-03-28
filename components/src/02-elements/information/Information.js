@@ -1,5 +1,5 @@
 import AlpacaHeading from '../../atoms/heading/Heading.vue'
-import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
+import AlpacaParagraph from '../../atoms/paragraph/Paragraph.vue'
 
 export default {
   components: {

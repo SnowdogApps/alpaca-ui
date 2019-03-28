@@ -1,4 +1,4 @@
-import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
+import AlpacaParagraph from '../../atoms/paragraph/Paragraph.vue'
 import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaImage from '../../02-elements/image/Image.vue'
