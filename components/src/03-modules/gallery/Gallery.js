@@ -1,6 +1,6 @@
 import uniqueId from 'lodash.uniqueid'
 
-import AlpacaBadge from '../../02-elements/badge/Badge.vue'
+import AlpacaBadge from '../../atoms/badge/Badge.vue'
 import AlpacaImage from '../../02-elements/image/Image.vue'
 import AlpacaIcon from '../../atoms/icon/Icon.vue'
 

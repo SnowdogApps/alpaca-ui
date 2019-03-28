@@ -1,6 +1,6 @@
 import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaImage from '../../02-elements/image/Image.vue'
-import AlpacaBadge from '../../02-elements/badge/Badge.vue'
+import AlpacaBadge from '../../atoms/badge/Badge.vue'
 import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
 import AlpacaPrice from '../../02-elements/price/Price.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
