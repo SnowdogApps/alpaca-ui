@@ -1,0 +1,13 @@
+<a
+  :class="[
+    'link',
+    {
+      'link--inverted': inverted,
+      'link--secondary': secondary
+    }
+  ]"
+  :href="href"
+  :aria-label="ariaLabel"
+>
+  <slot />
+</a>

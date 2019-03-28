@@ -1,0 +1,9 @@
+<component
+  :is="tag ? tag : 'h' + level"
+  :class="{
+    [`heading heading--${levelClassName}-level`]: level,
+    'heading--page': page
+  }"
+>
+  <slot />
+</component>

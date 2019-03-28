@@ -1,0 +1,22 @@
+[
+  {
+    "code": "subtotal",
+    "title": "Subtotal",
+    "value": "$34.00"
+  },
+  {
+    "code": "tax",
+    "title": "Tax",
+    "value": "$00.00"
+  },
+  {
+    "code": "long",
+    "title": "Next long row here",
+    "value": "$00.00"
+  },
+  {
+    "code": "grand_total",
+    "title": "Order Total",
+    "value": "$34.00"
+  }
+]

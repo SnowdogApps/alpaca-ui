@@ -1,0 +1,17 @@
+[
+  {
+    "src": "images/image/banner.jpg",
+    "max-width": "480px"
+  },
+  {
+    "src": "images/image/banner.jpg",
+    "max-width": "768px"
+  },
+  {
+    "src": "images/image/banner.jpg",
+    "max-width": "992px"
+  },
+  {
+    "src": "images/image/banner.jpg"
+  }
+]
