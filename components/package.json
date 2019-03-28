@@ -1,7 +1,7 @@
 {
   "name": "@snowdog/alpaca-components",
   "repository": "github:SnowdogApps/alpaca-storybook",
-  "version": "0.1.2-alpha.0",
+  "version": "0.2.0-alpha.0",
   "scripts": {
     "dev": "start-storybook -p 6006 -s ./public",
     "build": "build-storybook -o dist -s ./public",
