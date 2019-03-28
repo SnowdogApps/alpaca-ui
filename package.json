@@ -1,11 +1,8 @@
 {
-  "name": "alpaca",
+  "name": "@snowdog/alpaca",
   "private": true,
   "license": "MIT",
   "workspaces": [
     "components"
-  ],
-  "devDependencies": {
-    "lerna": "^3.13.1"
-  }
+  ]
 }
