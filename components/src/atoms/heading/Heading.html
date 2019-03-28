@@ -1,8 +1,7 @@
 <component
-  :is="tag"
+  :is="tag ? tag : 'h' + level"
   :class="{
-    [`heading heading--${levelClassName}-level`]: level,
-    'heading--page': page
+    [`heading heading--${levelClassName}-level`]: level
   }"
 >
   <slot />

@@ -8,10 +8,6 @@ export default {
     tag: {
       type: String,
       required: true
-    },
-    page: {
-      type: Boolean,
-      default: false
     }
   },
   computed: {

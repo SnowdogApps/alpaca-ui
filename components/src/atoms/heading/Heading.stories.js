@@ -4,9 +4,8 @@ import AHeading from './Heading.vue'
 
 const info = `
   ------
-  #### Available BEM modifiers for \`.label\` class:
-  - \`--inline\`
-  - \`--hidden\`
+  #### Available BEM modifiers for \`.Heading\` class:
+  - \`--page\`
   ------
 `
 
@@ -20,7 +19,9 @@ storiesOf('Atoms/Heading', module)
           Heading level 1
         </a-heading>
     `
-  }))
+    }),
+    { info }
+  )
   .add('Custom tag', () => ({
     components: { AHeading },
     template: `
@@ -31,12 +32,19 @@ storiesOf('Atoms/Heading', module)
           Span level 4
         </a-heading>
     `
-  }))
+    }),
+    { info }
+  )
   .add('Page heading', () => ({
     components: { AHeading },
     template: `
-        <a-heading tag="h1">
+        <a-heading 
+          :level="6" 
+          class="heading--page"
+        >
           Page level 6
         </a-heading>
     `
-  }))
+    }),
+    { info }
+  )
