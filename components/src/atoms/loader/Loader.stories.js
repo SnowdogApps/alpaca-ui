@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import Loader from './Loader.vue'
+import ALoader from './Loader.vue'
 
 const info = `
   ------
@@ -11,9 +11,9 @@ const info = `
 
 storiesOf('Atoms/Loader', module)
   .add('Default', () => ({
-    components: { Loader },
+    components: { ALoader },
     template: `
-      <Loader class="loader--visible"/>
+      <a-loader class="loader--visible"/>
     `
     }),
     { info }

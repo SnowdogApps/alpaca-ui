@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import PasswordStrength from './PasswordStrength.vue'
+import APasswordStrength from './PasswordStrength.vue'
 
 const info = `
   ------
@@ -15,51 +15,51 @@ const info = `
 
 storiesOf('Atoms/PasswordStrength', module)
   .add('No Password', () => ({
-    components: { PasswordStrength },
+    components: { APasswordStrength },
     template: `
-        <password-strength class="password-none">
+        <a-password-strength class="password-none">
           No password
-        </password-strength>
+        </a-password-strength>
     `
     }),
     { info }
   )
   .add('Weak', () => ({
-    components: { PasswordStrength },
+    components: { APasswordStrength },
     template: `
-      <password-strength class="password-weak">
+      <a-password-strength class="password-weak">
         Weak
-      </password-strength>
+      </a-password-strength>
     `
     }),
     { info }
   )
   .add('Medium', () => ({
-    components: { PasswordStrength },
+    components: { APasswordStrength },
     template: `
-      <password-strength class="password-medium">
+      <a-password-strength class="password-medium">
         Medium
-      </password-strength>
+      </a-password-strength>
     `
     }),
     { info }
   )
   .add('Strong', () => ({
-    components: { PasswordStrength },
+    components: { APasswordStrength },
     template: `
-      <password-strength class="password-strong">
+      <a-password-strength class="password-strong">
         Strong
-      </password-strength>
+      </a-password-strength>
     `
     }),
     { info }
   )
   .add('Very Strong', () => ({
-    components: { PasswordStrength },
+    components: { APasswordStrength },
     template: `
-      <password-strength class="password-very-strong">
+      <a-password-strength class="password-very-strong">
         Very strong
-      </password-strength>
+      </a-password-strength>
     `
     }),
     { info }

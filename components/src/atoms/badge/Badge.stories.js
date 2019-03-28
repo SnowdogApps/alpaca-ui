@@ -1,6 +1,6 @@
 import {storiesOf} from '@storybook/vue'
 
-import AlpacaBadge from './Badge.vue'
+import ABadge from './Badge.vue'
 
 const info = `
   ------
@@ -12,41 +12,41 @@ const info = `
 
 storiesOf('Atoms/Badge', module)
   .add('Default', () => ({
-    components: { AlpacaBadge },
+    components: { ABadge },
     template: `
-      <alpaca-badge>
+      <a-badge>
         Default badge
-      </alpaca-badge>
+      </a-badge>
     `
     }),
     { info }
   )
   .add('Custom tag', () => ({
-    components: { AlpacaBadge },
+    components: { ABadge },
     template: `
-      <alpaca-badge tag="span">
+      <a-badge tag="span">
         Custom tag
-      </alpaca-badge>
+      </a-badge>
     `
     }),
     { info }
   )
   .add('New', () => ({
-    components: { AlpacaBadge },
+    components: { ABadge },
     template: `
-      <alpaca-badge class="badge--new">
+      <a-badge class="badge--new">
         New badge
-      </alpaca-badge>
+      </a-badge>
     `
     }),
     { info }
   )
   .add('Sale', () => ({
-    components: { AlpacaBadge },
+    components: { ABadge },
     template: `
-      <alpaca-badge class="badge--sale">
+      <a-badge class="badge--sale">
         Sale badge
-      </alpaca-badge>
+      </a-badge>
     `
     }),
     { info }
