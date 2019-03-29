@@ -14,7 +14,7 @@ addDecorator(() => ({
     AApp
   },
   template: `
-    <a-app>
+    <a-app style="padding: 10px;">
       <story />
     </a-app>
   `
