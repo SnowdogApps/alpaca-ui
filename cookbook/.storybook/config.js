@@ -1,5 +1,5 @@
 // Storybook
-import { configure, addDecorator } from '@storybook/vue'
+import { configure, addDecorator, addParameters } from '@storybook/vue'
 
 // Info Addon
 import { withInfo } from 'storybook-addon-vue-info'
@@ -19,6 +19,12 @@ addDecorator(() => ({
     </a-app>
   `
 }))
+
+addParameters({
+  options: {
+    name: 'Alpaca cookbook'
+  }
+})
 
 function loadStories() {
   const req = require.context('../src', true, /.stories.js$/)
