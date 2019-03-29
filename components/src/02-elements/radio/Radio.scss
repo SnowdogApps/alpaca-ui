@@ -1,79 +1,55 @@
 @import '~styles/globals';
 
-$radio__size              : $spacer--medium !default;
-$radio__dot-size          : 6px !default;
-$radio__label-font-size   : $font-size-small !default;
-$radio__label-color       : $black !default;
-$radio__label-color-active: $color-primary !default;
-$radio__icon-border       : 1px solid $black !default;
-$radio__icon-background   : $color-primary !default;
-$radio__icon-transition   : $transition-base !default;
+$radio__margin         : 0 0 $spacer--medium 0 !default;
+$radio__size           : $spacer--medium !default;
+$radio__dot-size       : 6px !default;
+$radio__label-font-size: $font-size-small !default;
+$radio__label-color    : $black !default;
+$radio__color-active   : $color-primary !default;
+$radio__icon-border    : 1px solid $black !default;
+$radio__icon-background: $color-primary !default;
+$radio__icon-transition: $transition-base !default;
 
 .radio {
   position: relative;
-  margin-bottom: $spacer--medium;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: $radio__margin;
+  color: $radio__label-color;
+  cursor: pointer;
 
-  &__fieldset {
-    border: $reset;
-    padding: $reset;
-    margin: $reset;
-  }
+  &--selected {
+    color: $radio__color-active;
 
-  &__legend {
-    padding-bottom: $spacer--medium;
-  }
-
-  &__handler {
-    position: relative;
-  }
-
-  &__field {
-    position: absolute;
-    left: 0;
-    height: $radio__size;
-    width: $radio__size;
-    opacity: 0;
-    z-index: -1;
-
-    &:checked + .radio__label {
-      color: $radio__label-color-active;
-
-      .radio__icon {
-        &::before {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
+    .icon {
+      fill: $radio__color-active;
     }
+  }
+
+  &--selected &__icon::before {
+    opacity: 1;
+    transform: none;
   }
 
   &__label {
     position: relative;
-    height: $radio__size;
-    width: 100%;
-    vertical-align: top;
-    line-height: $radio__size;
-    cursor: pointer;
     font-size: $radio__label-font-size;
-    color: $radio__label-color;
+    line-height: $radio__size;
   }
 
   &__icon {
     position: relative;
-    display: inline-block;
-    border: $radio__icon-border;
-    border-radius: $radio__size;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: $radio__size;
     height: $radio__size;
+    border: $radio__icon-border;
+    border-radius: $radio__size;
     margin-right: $spacer;
-    vertical-align: top;
 
     &::before {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
       content: '';
       width: $radio__dot-size;
       height: $radio__dot-size;
@@ -84,5 +60,9 @@ $radio__icon-transition   : $transition-base !default;
       background-color: $radio__icon-background;
       transition: $radio__icon-transition;
     }
+  }
+
+  &__input {
+    @include visually-hidden();
   }
 }
