@@ -1,11 +1,11 @@
 import uniqueId from 'lodash.uniqueid'
 import AHeading from '../../atoms/heading/Heading.vue'
-import Icon from '../../atoms/icon/Icon.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: {
     AHeading,
-    Icon
+    AIcon
   },
   props: {
     items: {
