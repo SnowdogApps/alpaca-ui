@@ -1,7 +1,13 @@
 import { storiesOf } from '@storybook/vue'
 
 import ALabel from './Label.vue'
-import notes from './README.md'
+
+const info = `
+  ###### Use these modifiers with \`.label\` class.
+  - \`.label--inline\` - Selector for applying inline styles
+  - \`.label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
+  ---
+`
 
 storiesOf('Atoms/Label', module)
   .add(
@@ -14,7 +20,7 @@ storiesOf('Atoms/Label', module)
         </a-label>
       `
     }),
-    { notes }
+    { info }
   )
   .add(
     'Custom tag',
@@ -26,7 +32,7 @@ storiesOf('Atoms/Label', module)
         </a-label>
       `
     }),
-    { notes }
+    { info }
   )
   .add('Inline',
     () => ({
@@ -37,5 +43,5 @@ storiesOf('Atoms/Label', module)
         </a-label>
       `
     }),
-    { notes }
+    { info }
   )

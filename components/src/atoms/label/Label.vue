@@ -1,11 +1,5 @@
 <template src="./Label.html" />
 
-<script>
-  import instance from "./Label.js"
+<script src="./Label.js" />
 
-  export default {
-    ...instance
-  }
-</script>
-
-<style lang="scss" src="./Label.scss"/>
+<style lang="scss" src="./Label.scss" />
