@@ -7,7 +7,7 @@ import './preview/styles.css'
 
 storiesOf('Atoms/Grid', module)
   .addParameters({
-    info: {}
+    info: true
   })
   .add('Default', () => ({
     components: { AGrid },
