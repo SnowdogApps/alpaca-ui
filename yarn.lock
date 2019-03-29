@@ -781,6 +781,21 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
+"@storybook/addon-notes@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-5.0.5.tgz#eecf9a08b7ab3e31b6b5ec6a6b1b823715247fd3"
+  integrity sha512-rsIaFlI0jGoja5UlOcv7ldweX7E5qX0k3ejO9l1EfiTr3r7jO9oopiUAxGY675NN67DvAupQ0F2d31R2WT9OVA==
+  dependencies:
+    "@storybook/addons" "5.0.5"
+    "@storybook/client-logger" "5.0.5"
+    "@storybook/components" "5.0.5"
+    "@storybook/core-events" "5.0.5"
+    "@storybook/theming" "5.0.5"
+    core-js "^2.6.5"
+    markdown-to-jsx "^6.9.1"
+    prop-types "^15.6.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/addon-options@5.0.3":
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.3.tgz#0321f05504b6e0c23d064584706ed6f529bb7c59"
