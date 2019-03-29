@@ -6,25 +6,28 @@ import AGrid from './Grid.vue'
 import './preview/styles.css'
 
 storiesOf('Atoms/Grid', module)
+  .addParameters({
+    info: {}
+  })
   .add('Default', () => ({
     components: { AGrid },
     template: `
       <a-grid class="grid-preview"
-         :grids="[
-           [
-             'col-xs-12 col-sm-3 col-md-2 col-lg-1',
-             'col-xs-6 col-sm-6 col-md-8 col-lg-10',
-             'col-xs-6 col-sm-3 col-md-2 col-lg-1'
-           ],
-           [
-             'col-xs-12 col-sm-3 col-md-2 col-lg-1',
-             'col-xs-12 col-sm-9 col-md-10 col-lg-11'
-           ],
-           [
-             'col-xs-10 col-sm-6 col-md-8 col-lg-10',
-             'col-xs-2 col-sm-6 col-md-4 col-lg-2'
-           ]
-         ]"
+        :grids="[
+          [
+            'col-xs-12 col-sm-3 col-md-2 col-lg-1',
+            'col-xs-6 col-sm-6 col-md-8 col-lg-10',
+            'col-xs-6 col-sm-3 col-md-2 col-lg-1'
+          ],
+          [
+            'col-xs-12 col-sm-3 col-md-2 col-lg-1',
+            'col-xs-12 col-sm-9 col-md-10 col-lg-11'
+          ],
+          [
+            'col-xs-10 col-sm-6 col-md-8 col-lg-10',
+            'col-xs-2 col-sm-6 col-md-4 col-lg-2'
+          ]
+        ]"
       />
     `
   }))
