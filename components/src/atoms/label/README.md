@@ -4,10 +4,10 @@
 
 Use these modifiers with `.label` class.
 
-| Selector         | Description |
-| -----------------| ----------- |
-| `.label--inline` |             |
-| `.label--hidden` |             |
+| Selector         | Description                                                                 |
+| -----------------| --------------------------------------------------------------------------- |
+| `.label--inline` | Selector for applying inline styles                                         |
+| `.label--hidden` | Selector for applying hidden styles, mainly used for accessibility purposes |
 
 ## Using label with custom tag
 
