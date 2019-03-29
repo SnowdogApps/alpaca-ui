@@ -1,8 +1,8 @@
 @import '~styles/globals';
 
-$blockquote__margin     : 10px 0 !default;
-$blockquote__padding    : 10px 10px 10px 20px !default;
-$blockquote__border-left: 5px solid $gray-light !default;
+$blockquote__margin     : $spacer 0 !default;
+$blockquote__padding    : $spacer $spacer $spacer $spacer--medium !default;
+$blockquote__border-left: 5px $border-style-base $gray-light !default;
 
 .blockquote {
   display: block;
@@ -14,3 +14,4 @@ $blockquote__border-left: 5px solid $gray-light !default;
 blockquote {
   @extend .blockquote;
 }
+
