@@ -1,24 +1,24 @@
-import AlpacaIcon from '../../atoms/icon/Icon.vue'
-import AlpacaLink from '../../atoms/link/Link.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaList from '../../02-elements/list/List.vue'
-import AlpacaListItem from '../../02-elements/list-item/ListItem.vue'
-import AlpacaCookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
-import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
-import AlpacaDropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
-import AlpacaNewsletter from '../../03-modules/newsletter/Newsletter.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import ALink from '../../atoms/link/Link.vue'
+import AButton from '../../02-elements/button/Button.vue'
+import AList from '../../02-elements/list/List.vue'
+import AListItem from '../../02-elements/list-item/ListItem.vue'
+import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
+import ADropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
+import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
+import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
 
 export default {
   components: {
-    AlpacaButton,
-    AlpacaLink,
-    AlpacaIcon,
-    AlpacaList,
-    AlpacaListItem,
-    AlpacaCookieMessage,
-    AlpacaDropdownList,
-    AlpacaDropdownListItem,
-    AlpacaNewsletter
+    AButton,
+    ALink,
+    AIcon,
+    AList,
+    AListItem,
+    ACookieMessage,
+    ADropdownList,
+    ADropdownListItem,
+    ANewsletter
   },
   props: {
     copyrightText: {

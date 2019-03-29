@@ -1,39 +1,39 @@
-import AlpacaContainer from '../../atoms/container/Container.vue'
-import AlpacaHeading from '../../atoms/heading/Heading.vue'
-import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaPrice from '../../02-elements/price/Price.vue'
-import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
-import AlpacaTab from '../../02-elements/tabs/Tabs.vue'
-import AlpacaTabsContainer from '../../02-elements/tabs-container/TabsContainer.vue'
-import AlpacaTabContent from '../../02-elements/tab-content/TabContent.vue'
-import AlpacaAdditionalContent from '../../03-modules/additional-content/AdditionalContent.vue'
-import AlpacaCatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
-import AlpacaGallery from '../../03-modules/gallery/Gallery.vue'
-import AlpacaBriefInfo from '../../03-modules/brief-info/BriefInfo.vue'
-import AlpacaReviewSummary from '../../03-modules/review-summary/ReviewSummary.vue'
-import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
-import AlpacaSlider from '../../03-modules/slider/Slider.vue'
+import AContainer from '../../atoms/container/Container.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import ABreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
+import AButton from '../../02-elements/button/Button.vue'
+import APrice from '../../02-elements/price/Price.vue'
+import ASwatch from '../../02-elements/swatch/Swatch.vue'
+import ATab from '../../02-elements/tabs/Tabs.vue'
+import ATabsContainer from '../../02-elements/tabs-container/TabsContainer.vue'
+import ATabContent from '../../02-elements/tab-content/TabContent.vue'
+import AAdditionalContent from '../../03-modules/additional-content/AdditionalContent.vue'
+import ACatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import AGallery from '../../03-modules/gallery/Gallery.vue'
+import ABriefInfo from '../../03-modules/brief-info/BriefInfo.vue'
+import AReviewSummary from '../../03-modules/review-summary/ReviewSummary.vue'
+import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import ASlider from '../../03-modules/slider/Slider.vue'
 import { Slide } from 'vue-carousel'
 
 export default {
   components: {
-    AlpacaContainer,
-    AlpacaHeading,
-    AlpacaBreadcrumbs,
-    AlpacaButton,
-    AlpacaPrice,
-    AlpacaSwatch,
-    AlpacaTab,
-    AlpacaTabsContainer,
-    AlpacaTabContent,
-    AlpacaAdditionalContent,
-    AlpacaCatalogGridItem,
-    AlpacaGallery,
-    AlpacaBriefInfo,
-    AlpacaReviewSummary,
-    AlpacaQuantityUpdate,
-    AlpacaSlider,
+    AContainer,
+    AHeading,
+    ABreadcrumbs,
+    AButton,
+    APrice,
+    ASwatch,
+    ATab,
+    ATabsContainer,
+    ATabContent,
+    AAdditionalContent,
+    ACatalogGridItem,
+    AGallery,
+    ABriefInfo,
+    AReviewSummary,
+    AQuantityUpdate,
+    ASlider,
     Slide
   },
   props: {

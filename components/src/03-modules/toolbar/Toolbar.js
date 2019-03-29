@@ -1,12 +1,12 @@
-import AlpacaSelect from '../../02-elements/select/Select.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaPager from '../../03-modules/pager/Pager.vue'
+import ASelect from '../../02-elements/select/Select.vue'
+import AButton from '../../02-elements/button/Button.vue'
+import APager from '../../03-modules/pager/Pager.vue'
 
 export default {
   components: {
-    AlpacaSelect,
-    AlpacaButton,
-    AlpacaPager
+    ASelect,
+    AButton,
+    APager
   },
   props: {
     showMode: {

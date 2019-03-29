@@ -1,20 +1,20 @@
-<alpaca-container>
+<a-container>
   <div class="product-view">
-    <alpaca-breadcrumbs :breadcrumbs="breadcrumbs"/>
+    <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
     <div class="product-view__wrapper">
       <div class="product-view__gallery">
-        <alpaca-gallery :images="gallery.images"/>
+        <a-gallery :images="gallery.images"/>
       </div>
       <div class="product-view__main-details">
         <div class="product-view__heading">
-          <alpaca-heading
+          <a-heading
             :level="1"
             class="product-view__title"
           >
             {{ product.name }}
-          </alpaca-heading>
+           </a-heading>
           <!-- TODO: Use click event to open tab with reviews instead of links -->
-          <alpaca-review-summary
+          <a-review-summary
             :reviews-qty="product.reviews.length"
             add-review-link="#"
             amount-link="#"
@@ -24,13 +24,13 @@
           {{ product.sku }}
         </div>
         <div class="product-view__stock-line">
-          <alpaca-price
+          <a-price
             v-if="product.price.old && product.price.special"
             large
             :old-price="product.price.old"
             :special-price="product.price.special"
           />
-          <alpaca-price
+          <a-price
             v-else
             large
             :price="product.price.regular"
@@ -65,21 +65,21 @@
           v-if="product.swatches"
           class="product-view__options"
         >
-          <alpaca-swatch
+          <a-swatch
             color
             v-if="product.swatches.color"
             :options="product.swatches.color.options"
             :label="product.swatches.color.label"
             label-class="product-view__swatch-option-title"
           />
-          <alpaca-swatch
+          <a-swatch
             image
             v-else-if="product.swatches.image"
             :options="product.swatches.image.options"
             :label="product.swatches.image.label"
             label-class="product-view__swatch-option-title"
           />
-          <alpaca-swatch
+          <a-swatch
             v-if="product.swatches.text"
             :options="product.swatches.text.options"
             :label="product.swatches.text.label"
@@ -89,17 +89,17 @@
         <div class="product-view__main-actions">
           <div class="product-view__qty">
             <!-- TODO: Add method for price update -->
-            <alpaca-quantity-update/>
+            <a-quantity-update/>
           </div>
           <div class="product-view__action-elements">
             <div class="product-view__add-to-cart">
               <!-- TODO: Add methods for action buttons -->
-              <alpaca-button class="product-view__add-to-cart-btn">
+              <a-button class="product-view__add-to-cart-btn">
                 {{ addToCartText }}
-              </alpaca-button>
+               </a-button>
             </div>
             <div class="product-view__extra-actions">
-              <alpaca-button
+              <a-button
                 icon="heart"
                 :default-class="false"
                 class="
@@ -108,7 +108,7 @@
                   product-view__action--wishlist
                 "
               />
-              <alpaca-button
+              <a-button
                 icon="compare"
                 :default-class="false"
                 class="
@@ -117,7 +117,7 @@
                   product-view__action--compare
                 "
               />
-              <alpaca-button
+              <a-button
                 icon="envelope"
                 :default-class="false"
                 class="
@@ -131,7 +131,7 @@
         </div>
         <div class="product-view__information">
           <!-- TODO: Remove mock from brief-info component -->
-          <alpaca-brief-info
+          <a-brief-info
             :items="briefInfo.items"
             :level="3"
             :heading="briefInfo.heading.text"
@@ -141,9 +141,9 @@
     </div>
     <div class="product-view__tabs">
       <!-- TODO: Remove mock from tabs component (leave content), add reviews -->
-      <alpaca-tabs-container>
+      <a-tabs-container>
         <template v-for="tab in tabs">
-          <alpaca-tab
+          <a-tab
             :key="tab.tabId"
             :tab-id="tab.tabId"
             :title="tab.title"
@@ -151,53 +151,53 @@
             icon="angle-down"
             @click="setActiveTab(tab.tabId)"
           />
-          <alpaca-tab-content
+          <a-tab-content
             :tab-id="tab.tabId"
             :title-id="tab.titleId"
             :active-tab="activeTab"
           >
             {{ tab.content }}
-          </alpaca-tab-content>
+           </a-tab-content>
         </template>
-      </alpaca-tabs-container>
+       </a-tabs-container>
     </div>
     <div
       v-if="product.relatedProducts && product.relatedProducts.length"
       class="product-view__slider"
     >
-      <alpaca-heading tag="h3" :level="3">
+      <a-heading tag="h3" :level="3">
         {{ relatedProductsLabel }}
-      </alpaca-heading>
-      <alpaca-slider>
+       </a-heading>
+      <a-slider>
         <slide
           class="slider__item product-view__slide-item"
           v-for="(product, index) in product.relatedProducts"
           :key="index"
         >
-          <alpaca-catalog-grid-item
+          <a-catalog-grid-item
             :product="product"
           />
         </slide>
-      </alpaca-slider>
+       </a-slider>
     </div>
     <div
       v-if="product.featuredProducts && product.featuredProducts.length"
       class="product-view__slider"
     >
-      <alpaca-heading tag="h3" :level="3">
+      <a-heading tag="h3" :level="3">
         {{ featuredProductsLabel }}
-      </alpaca-heading>
-      <alpaca-slider>
+       </a-heading>
+      <a-slider>
         <slide
           class="slider__item product-view__slide-item"
           v-for="(product, index) in product.featuredProducts"
           :key="index"
         >
-          <alpaca-catalog-grid-item :product="product"/>
+          <a-catalog-grid-item :product="product"/>
         </slide>
-      </alpaca-slider>
+       </a-slider>
     </div>
-    <alpaca-additional-content
+    <a-additional-content
       class="product-view__additional-content"
       v-if="banner.length"
       :picture="banner"
@@ -207,4 +207,4 @@
     />
     </div>
   </div>
-</alpaca-container>
+ </a-container>

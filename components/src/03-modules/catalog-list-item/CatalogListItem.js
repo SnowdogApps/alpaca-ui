@@ -1,18 +1,18 @@
-import AlpacaLink from '../../atoms/link/Link.vue'
-import AlpacaImage from '../../atoms/image/Image.vue'
-import AlpacaBadge from '../../atoms/badge/Badge.vue'
-import AlpacaSwatch from '../../02-elements/swatch/Swatch.vue'
-import AlpacaPrice from '../../02-elements/price/Price.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
+import ALink from '../../atoms/link/Link.vue'
+import AImage from '../../atoms/image/Image.vue'
+import ABadge from '../../atoms/badge/Badge.vue'
+import ASwatch from '../../02-elements/swatch/Swatch.vue'
+import APrice from '../../02-elements/price/Price.vue'
+import AButton from '../../02-elements/button/Button.vue'
 
 export default {
   components: {
-    AlpacaLink,
-    AlpacaImage,
-    AlpacaBadge,
-    AlpacaSwatch,
-    AlpacaPrice,
-    AlpacaButton
+    ALink,
+    AImage,
+    ABadge,
+    ASwatch,
+    APrice,
+    AButton
   },
   props: {
     tag: {

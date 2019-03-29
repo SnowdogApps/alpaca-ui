@@ -1,13 +1,13 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaHome from './Home.vue'
+import AHome from './Home.vue'
 
 import imageListElements from './mocks/imageListElements.json'
 import text from './mocks/text.json'
 
 storiesOf('Views/Home', module)
   .add('Default', () => ({
-    components: { AlpacaHome},
+    components: { AHome},
     data() {
       return {
         imageListElements,
@@ -196,7 +196,7 @@ storiesOf('Views/Home', module)
       }
     },
     template: `
-        <alpaca-home
+        <a-home
           :text="text.text"
           :headingLevel="2"
           heading="BRANDS"

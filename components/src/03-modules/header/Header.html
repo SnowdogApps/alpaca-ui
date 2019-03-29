@@ -1,31 +1,31 @@
 <div>
   <header class="header">
-    <alpaca-container>
+    <a-container>
       <div class="header__wrapper">
         <div class="header__buttons">
-          <alpaca-header-button
+          <a-header-button
             icon="heart"
             @click.native="toggleWishlist()"
           >
             Wishlist
-          </alpaca-header-button>
-          <alpaca-header-button icon="phone">
+           </a-header-button>
+          <a-header-button icon="phone">
             Contact
-          </alpaca-header-button>
-          <alpaca-header-button
+           </a-header-button>
+          <a-header-button
             icon="account"
             @click.native="goToAccount()"
           >
             Account
-          </alpaca-header-button>
+           </a-header-button>
           <div class="header__minicart">
-            <alpaca-button
+            <a-button
               :default-class="false"
               class="header-button popup-trigger"
               data-popuptrigger="popup-minicart"
               @click="toggleMicrocart()"
             >
-              <alpaca-icon
+              <a-icon
                 icon="shopping-cart"
                 class="header-button__icon"
               />
@@ -35,19 +35,19 @@
               <span class="header-button__counter">
                 <span class="header-button__counter-dot" />
               </span>
-            </alpaca-button>
+             </a-button>
           </div>
         </div>
-        <alpaca-logo
+        <a-logo
           :src="src"
           :to="link"
           class="header__logo"
         />
         <div class="header__search-wrapper">
-          <alpaca-header-search />
+          <a-header-search />
         </div>
       </div>
-    </alpaca-container>
+     </a-container>
   </header>
-  <alpaca-mega-menu :menu="menu" />
+  <a-mega-menu :menu="menu" />
 </div>

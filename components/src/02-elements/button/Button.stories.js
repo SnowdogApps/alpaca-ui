@@ -1,83 +1,83 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaButton from './Button.vue'
+import AButton from './Button.vue'
 
 storiesOf('Elements/Button', module)
   .add('Default', () => ({
-    components: { AlpacaButton },
+    components: { AButton },
     template: `
-        <alpaca-button
+        <a-button
           @click="exampleMethod"
         >
           Default button
-        </alpaca-button>
+         </a-button>
     `,
     methods: {
       exampleMethod: action('Clicked button')
     }
   }))
   .add('Secondary', () => ({
-    components: { AlpacaButton },
+    components: { AButton },
     template: `
-        <alpaca-button
+        <a-button
           secondary
           @click="exampleMethod"
         >
           Secondary button
-        </alpaca-button>
+         </a-button>
     `,
     methods: {
       exampleMethod: action('Clicked button')
     }
   }))
   .add('Blank', () => ({
-    components: { AlpacaButton },
+    components: { AButton },
     template: `
-        <alpaca-button
+        <a-button
           blank
           @click="exampleMethod"
         >
           Blank button
-        </alpaca-button>
+         </a-button>
     `,
     methods: {
       exampleMethod: action('Clicked button')
     }
   }))
   .add('Fluid', () => ({
-    components: { AlpacaButton },
+    components: { AButton },
     template: `
-        <alpaca-button
+        <a-button
           fluid
           @click="exampleMethod"
         >
           Fluid button
-        </alpaca-button>
+         </a-button>
     `,
     methods: {
       exampleMethod: action('Clicked button')
     }
   }))
   .add('Link', () => ({
-    components: { AlpacaButton },
+    components: { AButton },
     template: `
-        <alpaca-button
+        <a-button
           tag="a"
           link="#"
           @click="exampleMethod"
         >
           Link button
-        </alpaca-button>
+         </a-button>
     `,
     methods: {
       exampleMethod: action('Clicked button')
     }
   }))
   .add('Icon', () => ({
-    components: { AlpacaButton },
+    components: { AButton },
     template: `
-        <alpaca-button
+        <a-button
           icon="search"
           @click="exampleMethod"
         />
@@ -87,14 +87,14 @@ storiesOf('Elements/Button', module)
     }
   }))
   .add('Icon and text', () => ({
-    components: { AlpacaButton },
+    components: { AButton },
     template: `
-        <alpaca-button
+        <a-button
           icon="search"
           @click="exampleMethod"
         >
           Search
-        </alpaca-button>
+         </a-button>
     `,
     methods: {
       exampleMethod: action('Clicked button')

@@ -1,7 +1,7 @@
-import AlpacaIcon from '../../atoms/icon/Icon.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
-  components: { AlpacaIcon },
+  components: { AIcon },
   model: {
     prop: 'selectedValue',
     event: 'change'

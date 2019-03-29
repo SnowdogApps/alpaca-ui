@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from "@storybook/addon-actions"
 
-import AlpacaRange from './Range.vue'
+import ARange from './Range.vue'
 
 storiesOf('Modules/Range', module).add('Default', () => ({
-  components: { AlpacaRange },
+  components: { ARange },
   template: `
-      <alpaca-range
+      <a-range
         v-model="value"
         :min="min"
         :max="max"

@@ -1,14 +1,14 @@
 import uniqueId from 'lodash.uniqueid'
 
-import AlpacaBadge from '../../atoms/badge/Badge.vue'
-import AlpacaImage from '../../atoms/image/Image.vue'
-import AlpacaIcon from '../../atoms/icon/Icon.vue'
+import ABadge from '../../atoms/badge/Badge.vue'
+import AImage from '../../atoms/image/Image.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: {
-    AlpacaBadge,
-    AlpacaImage,
-    AlpacaIcon
+    ABadge,
+    AImage,
+    AIcon
   },
   props: {
     images: {

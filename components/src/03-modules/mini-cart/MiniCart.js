@@ -1,14 +1,14 @@
-import AlpacaHeading from '../../atoms/heading/Heading.vue'
-import AlpacaList from "../../02-elements/list/List.vue"
-import AlpacaButton from "../../02-elements/button/Button.vue"
-import AlpacaProductItem from "../../03-modules/product-item/ProductItem.vue"
+import AHeading from '../../atoms/heading/Heading.vue'
+import AList from "../../02-elements/list/List.vue"
+import AButton from "../../02-elements/button/Button.vue"
+import AProductItem from "../../03-modules/product-item/ProductItem.vue"
 
 export default {
   components: {
-    AlpacaHeading,
-    AlpacaList,
-    AlpacaButton,
-    AlpacaProductItem
+    AHeading,
+    AList,
+    AButton,
+    AProductItem
   },
   props: {
     totals: {

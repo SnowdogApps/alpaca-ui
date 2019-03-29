@@ -1,12 +1,12 @@
-import AlpacaHeading from '../../atoms/heading/Heading.vue'
-import AlpacaDivider from '../../02-elements/divider/Divider.vue'
-import AlpacaIcon from '../../atoms/icon/Icon.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import ADivider from '../../02-elements/divider/Divider.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: {
-    AlpacaIcon,
-    AlpacaDivider,
-    AlpacaHeading
+    AIcon,
+    ADivider,
+    AHeading
   },
   data() {
     return {

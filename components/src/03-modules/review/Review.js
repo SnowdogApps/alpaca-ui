@@ -1,10 +1,10 @@
-import AlpacaHeading from '../../atoms/heading/Heading.vue'
-import AlpacaParagraph from '../../atoms/paragraph/Paragraph.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 
 export default {
   components: {
-    AlpacaHeading,
-    AlpacaParagraph
+    AHeading,
+    AParagraph
   },
   props: {
     author: {

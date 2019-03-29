@@ -1,9 +1,9 @@
 import uniqueId from 'lodash.uniqueid'
-import AlpacaIcon from '../../atoms/icon/Icon.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: {
-    AlpacaIcon
+    AIcon
   },
   props: {
     tabId: {

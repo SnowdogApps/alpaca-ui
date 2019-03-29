@@ -1,15 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaGrid from './Grid.vue'
+import AGrid from './Grid.vue'
 
 // Preview styles
 import './preview/styles.css'
 
 storiesOf('Global/Grid', module)
   .add('Default', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
          :grids="[
            [
              'col-xs-12 col-sm-3 col-md-2 col-lg-1',
@@ -29,9 +29,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Fluid', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         :grids="[
           [
             'col-xs-12'
@@ -65,9 +65,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Auto width', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         :grids="[
           [
             'col-xs',
@@ -91,9 +91,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Reordering', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         :grids="[
           [
             'col-xs-2',
@@ -116,9 +116,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Distribution around', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="around-xs"
         :grids="[
           [
@@ -131,9 +131,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Distribution between', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="between-xs"
         :grids="[
           [
@@ -146,9 +146,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Alignment start', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="start-xs"
         :grids="[
           ['col-xs-6']
@@ -157,9 +157,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Alignment center', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="center-xs"
         :grids="[
           ['col-xs-6']
@@ -168,9 +168,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Alignment end', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="end-xs"
         :grids="[
           ['col-xs-6']
@@ -179,9 +179,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Alignment top', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="top-xs"
         :grids="[
           [
@@ -193,9 +193,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Alignment middle', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="middle-xs"
         :grids="[
           [
@@ -207,9 +207,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Alignment bottom', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="bottom-xs"
         :grids="[
           [
@@ -221,9 +221,9 @@ storiesOf('Global/Grid', module)
     `
   }))
   .add('Reversing', () => ({
-    components: { AlpacaGrid },
+    components: { AGrid },
     template: `
-      <alpaca-grid class="grid-preview"
+      <a-grid class="grid-preview"
         row-class="reverse"
         :grids="[
           [

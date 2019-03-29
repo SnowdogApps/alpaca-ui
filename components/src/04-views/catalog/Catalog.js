@@ -1,16 +1,16 @@
-import AlpacaContainer from '../../atoms/container/Container.vue'
-import AlpacaFilters from '../../03-modules/filters/Filters.vue'
-import AlpacaGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
-import AlpacaBreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
-import AlpacaToolbar from '../../03-modules/toolbar/Toolbar.vue'
+import AContainer from '../../atoms/container/Container.vue'
+import AFilters from '../../03-modules/filters/Filters.vue'
+import AGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
+import ABreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
+import AToolbar from '../../03-modules/toolbar/Toolbar.vue'
 
 export default {
   components: {
-    AlpacaContainer,
-    AlpacaFilters,
-    AlpacaGridItem,
-    AlpacaBreadcrumbs,
-    AlpacaToolbar
+    AContainer,
+    AFilters,
+    AGridItem,
+    ABreadcrumbs,
+    AToolbar
   },
   props: {
     products: {

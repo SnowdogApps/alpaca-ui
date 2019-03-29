@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaCatalogListItem from './CatalogListItem.vue'
+import ACatalogListItem from './CatalogListItem.vue'
 
 import data from './mocks/catalogListItem'
 import textSwatch from '../../02-elements/swatch/mocks/text-swatch'
@@ -9,14 +9,14 @@ import iconSwatch from '../../02-elements/swatch/mocks/icon-swatch'
 
 storiesOf('Modules/Catalog list item', module)
   .add('Default', () => ({
-    components: { AlpacaCatalogListItem },
+    components: { ACatalogListItem },
     data: () => ({
       data,
       textSwatch,
       iconSwatch
     }),
     template: `
-        <alpaca-catalog-list-item
+        <a-catalog-list-item
           href="#"
           :title="data.name"
           badgeText="New"
@@ -32,7 +32,7 @@ storiesOf('Modules/Catalog list item', module)
           @compare="compare"
         >
           Default link
-        </alpaca-catalog-list-item>
+         </a-catalog-list-item>
     `,
     methods: {
       addToCart: action('Added to cart'),
