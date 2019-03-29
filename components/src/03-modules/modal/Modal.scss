@@ -91,6 +91,8 @@ $modal__close-button-icon-transition : $transition-base !default;
   }
 
   &__header {
+    display: flex;
+    justify-content: space-between;
     margin: $modal__header-margin;
   }
 
