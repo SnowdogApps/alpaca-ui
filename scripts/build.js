@@ -57,10 +57,6 @@ files.forEach(file => {
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          /@import '~styles/gm,
-          `@import '@snowdog/alpaca-components/styles`
-        )
-        .replace(
           /@import '\.\.\/\.\.\/\.\.\/assets\/styles/gm,
           `@import '@snowdog/alpaca-components/styles`
         )
