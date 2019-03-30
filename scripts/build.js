@@ -46,7 +46,7 @@ files.forEach(file => {
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          /(import\s\w+\sfrom)\s\'..\/..\/\S+\/\S+\/(\S+)\'/gm,
+          /(import\s\w+\sfrom)\s(?:\'|\")..\/..\/\S+\/\S+\/(\S+)(?:\'|\")/gm,
           `$1 '@snowdog/alpaca-components/$2'`
         )
     )
