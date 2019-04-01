@@ -1,8 +1,8 @@
-import AlpacaButton from '../button/Button.vue'
+import AButton from '../button/Button.vue'
 
 export default {
   components: {
-    AlpacaButton
+    AButton
   },
   props: {
     labelText: {

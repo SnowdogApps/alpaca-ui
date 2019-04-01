@@ -1,5 +1,5 @@
-import AlpacaDropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
-import AlpacaDropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
+import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
+import ADropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
 
 export default {
   provide: {
@@ -11,8 +11,8 @@ export default {
     }
   },
   components: {
-    AlpacaDropdownListItem,
-    AlpacaDropdownListLink
+    ADropdownListItem,
+    ADropdownListLink
   },
   props: {
     items: {
@@ -41,7 +41,7 @@ export default {
     }
   },
   beforeCreate() {
-    this.$options.components.AlpacaDropdownList = require('./DropdownList.vue').default
+    this.$options.components.ADropdownList = require('./DropdownList.vue').default
   },
   methods: {
     isArray: Array.isArray

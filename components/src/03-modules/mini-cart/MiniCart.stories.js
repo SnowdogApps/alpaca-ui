@@ -2,9 +2,9 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
-import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
-import AlpacaProductItem from '../../03-modules/product-item/ProductItem.vue'
-import AlpacaMiniCart from './MiniCart.vue'
+import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import AProductItem from '../../03-modules/product-item/ProductItem.vue'
+import AMiniCart from './MiniCart.vue'
 
 import totals from '../../../mocks/totals'
 import products from '../../../mocks/products'
@@ -12,13 +12,13 @@ import products from '../../../mocks/products'
 storiesOf('Modules/Mini Cart', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { AlpacaMiniCart, AlpacaProductItem, AlpacaQuantityUpdate },
+    components: { AMiniCart, AProductItem, AQuantityUpdate },
     data: () => ({
       totals,
       products
     }),
     template: `
-        <alpaca-mini-cart
+        <a-mini-cart
           style="padding: 20px;"
           :totals="totals"
           summary-title="Shopping summary"
@@ -26,7 +26,7 @@ storiesOf('Modules/Mini Cart', module)
           return-to-shopping-button="Return to shopping"
         >
           <template #products>
-            <alpaca-product-item
+            <a-product-item
               v-for="product in products"
               :key="product.id"
               :id="product.id"
@@ -44,7 +44,7 @@ storiesOf('Modules/Mini Cart', module)
             >
               <template #quantity>
                 <span class="product-item__qty-text">Qty:</span>
-                <alpaca-quantity-update
+                <a-quantity-update
                   :input-id="'qty' + product.id"
                   input-aria-label="Change the quantity"
                   decrement-aria-label="Decrease the quantity"
@@ -55,9 +55,9 @@ storiesOf('Modules/Mini Cart', module)
                   @update="changeMethod"
                 />
               </template>
-            </alpaca-product-item>
+             </a-product-item>
           </template>
-        </alpaca-mini-cart>
+         </a-mini-cart>
     `,
     methods: {
       removeMethod: action('Remove'),

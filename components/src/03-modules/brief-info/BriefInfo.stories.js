@@ -1,16 +1,16 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaBriefInfo from './BriefInfo.vue'
+import ABriefInfo from './BriefInfo.vue'
 
 import briefInfo from './mocks/brief-info.json'
 
 storiesOf('Modules/Brief Info', module).add('Default', () => ({
-  components: { AlpacaBriefInfo },
+  components: { ABriefInfo },
   data: () => ({
     briefInfo
   }),
   template: `
-      <alpaca-brief-info
+      <a-brief-info
         :items="briefInfo.items"
         :level="3"
         :heading="briefInfo.heading.text"

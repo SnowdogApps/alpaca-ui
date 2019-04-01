@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import AlpacaProductView from './ProductView.vue'
-import AlpacaHeader from '../../03-modules/header/Header.vue'
+import AProductView from './ProductView.vue'
+import AHeader from '../../03-modules/header/Header.vue'
 
 import breadcrumbs from '../../02-elements/breadcrumbs/mocks/breadcrumbs.json'
 import tabs from '../../02-elements/tabs/mocks/tabs.json'
@@ -15,7 +15,7 @@ import product from './mocks/product.json'
 storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())
   .add('Configurable', () => ({
-    components: { AlpacaHeader, AlpacaProductView },
+    components: { AHeader, AProductView },
     data() {
       return {
         breadcrumbs,
@@ -29,12 +29,12 @@ storiesOf('Views/Product View', module)
     },
     template: `
       <div>
-        <alpaca-header
+        <a-header
           :menu="menu"
           src="./../images/logo/alpaca.svg"
           link="#"
         />
-        <alpaca-product-view
+        <a-product-view
           :breadcrumbs="breadcrumbs"
           :tabs="tabs"
           :brief-info="briefInfo"

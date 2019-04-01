@@ -1,18 +1,18 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaInput from '../../02-elements/input/Input.vue'
-import AlpacaFieldset from '../../02-elements/fieldset/Fieldset.vue'
-import AlpacaTextarea from '../../02-elements/textarea/Textarea.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import AParagraph from '../../atoms/paragraph/Paragraph.vue'
+import AButton from '../../02-elements/button/Button.vue'
+import AInput from '../../02-elements/input/Input.vue'
+import AFieldset from '../../atoms/fieldset/Fieldset.vue'
+import ATextarea from '../../02-elements/textarea/Textarea.vue'
 
 export default {
   components: {
-    AlpacaHeading,
-    AlpacaParagraph,
-    AlpacaButton,
-    AlpacaInput,
-    AlpacaFieldset,
-    AlpacaTextarea
+    AHeading,
+    AParagraph,
+    AButton,
+    AInput,
+    AFieldset,
+    ATextarea
   },
   props: {
     productTitle: {

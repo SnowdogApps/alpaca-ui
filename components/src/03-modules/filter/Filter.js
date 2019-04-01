@@ -1,8 +1,8 @@
-import AlpacaDropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
+import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
 
 export default {
   components: {
-    AlpacaDropdownListItem
+    ADropdownListItem
   },
   props: {
     title: {

@@ -1,8 +1,8 @@
-import AlpacaPicture from '../../03-modules/picture/Picture.vue'
+import APicture from '../../03-modules/picture/Picture.vue'
 
 export default {
   components: {
-    AlpacaPicture
+    APicture
   },
   props: {
     picture: {

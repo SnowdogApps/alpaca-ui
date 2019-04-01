@@ -1,11 +1,11 @@
 <div class="brief-info">
-  <alpaca-heading
+  <a-heading
     v-if="level"
     :level="level"
     class="brief-info__heading"
   >
     {{ heading }}
-  </alpaca-heading>
+   </a-heading>
 
   <ul class="list brief-info__items-container">
     <li
@@ -17,7 +17,7 @@
         :class="['brief-info__icon-wrapper', iconWrapperClass]"
         :aria-label="item.iconLabel"
       >
-        <icon
+        <a-icon
           :icon="item.icon.iconId"
           :class="['brief-info__icon', iconClass]"
         />
