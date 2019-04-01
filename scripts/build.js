@@ -25,18 +25,22 @@ const files = glob.sync('src/*/*/*.{js,scss,html,vue}', {
   cwd: root
 })
 
+const components = []
+
 files.forEach(file => {
   const name = path.basename(file)
   fs.copyFileSync(`${root}/${file}`, `${dist}/${name}`)
 
   // Adjust import paths
   if (path.extname(file) === '.vue') {
+    components.push(name)
+
     fs.writeFileSync(
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
           /\"\.\//gm,
-          '"@snowdog/alpaca-components/'
+          '"@snowdog/alpaca-components/dist'
         )
     )
   }
@@ -47,7 +51,7 @@ files.forEach(file => {
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
           /(import\s\w+\sfrom)\s(?:\'|\")..\/..\/\S+\/\S+\/(\S+)(?:\'|\")/gm,
-          `$1 '@snowdog/alpaca-components/$2'`
+          `$1 '@snowdog/alpaca-components/dist/$2'`
         )
     )
   }
@@ -58,11 +62,27 @@ files.forEach(file => {
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
           /@import '\.\.\/\.\.\/\.\.\/assets\/styles/gm,
-          `@import '@snowdog/alpaca-components/styles`
+          `@import '@snowdog/alpaca-components/dist/styles`
         )
     )
   }
 })
 
-// Copy package.json
-fs.copyFileSync(`${root}/package.json`, `${dist}/package.json`)
+const imports = components.map(component => {
+  const name = component.replace(/\.\w+/, '')
+  return `import ${name} from './${component}'`
+}).join('\n')
+
+const names = components
+  .map(component => component.replace(/\.\w+/, ''))
+  .join(',\n  ')
+
+const file = `
+${imports}
+
+export default {
+  ${names}
+}
+`
+
+fs.writeFileSync(`${dist}/index.js`, file)
