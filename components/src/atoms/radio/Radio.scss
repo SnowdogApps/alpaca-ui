@@ -14,19 +14,6 @@ $radio__icon-transition   : $transition-base !default;
   margin-bottom: $spacer--medium;
   border: none;
 
-  &__fieldset {
-    padding: $reset;
-    margin: $reset;
-  }
-
-  &__legend {
-    padding-bottom: $spacer--medium;
-  }
-
-  &__handler {
-    position: relative;
-  }
-
   &__field {
     position: absolute;
     left: 0;
