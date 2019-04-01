@@ -9,7 +9,7 @@ storiesOf('Atoms/Fieldset', module)
       components: { AFieldset },
       template: `
       <a-fieldset legend-text="Legend text">
-        <span>Simple text</span>
+        <span>Fieldset content</span>
       </a-fieldset>
     `
     }),
