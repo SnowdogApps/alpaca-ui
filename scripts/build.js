@@ -30,17 +30,39 @@ files.forEach(file => {
   fs.copyFileSync(`${root}/${file}`, `${dist}/${name}`)
 
   // Adjust import paths
+  if (path.extname(file) === '.vue') {
+    fs.writeFileSync(
+      `${dist}/${name}`,
+      fs.readFileSync(`${dist}/${name}`, 'utf8')
+        .replace(
+          /\"\.\//gm,
+          '"@snowdog/alpaca-components/'
+        )
+    )
+  }
+
+  if (path.extname(file) === '.js') {
+    fs.writeFileSync(
+      `${dist}/${name}`,
+      fs.readFileSync(`${dist}/${name}`, 'utf8')
+        .replace(
+          /(import\s\w+\sfrom)\s\'..\/..\/\S+\/\S+\/(\S+)\'/gm,
+          `$1 '@snowdog/alpaca-components/$2'`
+        )
+    )
+  }
+
   if (path.extname(file) === '.scss') {
     fs.writeFileSync(
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          `@import '~styles`,
-          `@import './styles`
+          /@import '~styles/gm,
+          `@import '@snowdog/alpaca-components/styles`
         )
         .replace(
-          `@import '../../../assets/styles`,
-          `@import './styles`
+          /@import '\.\.\/\.\.\/\.\.\/assets\/styles/gm,
+          `@import '@snowdog/alpaca-components/styles`
         )
     )
   }
