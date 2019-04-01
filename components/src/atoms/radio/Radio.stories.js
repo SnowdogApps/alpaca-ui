@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaRadio from './Radio.vue'
+import ARadio from './Radio.vue'
 
 const info = {}
 
 storiesOf('Atoms/Radio', module)
   .add('Default', () => ({
-    components: { AlpacaRadio },
+    components: { ARadio },
     data() {
       return {
         options: [
@@ -29,7 +29,7 @@ storiesOf('Atoms/Radio', module)
       }
     },
     template: `
-        <alpaca-radio
+        <a-radio
           :options="options"
           name="radio1"
         />
