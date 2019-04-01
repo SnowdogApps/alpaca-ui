@@ -4,6 +4,18 @@ export default {
     event: 'change'
   },
   props: {
+    checkedValue: {
+      type: [String, Object, Number, Boolean],
+      default: null,
+    },
+    legendId: {
+      type: String,
+      required: true
+    },
+    legend: {
+      type: String,
+      required: true
+    },
     options: {
       type: Array,
       required: true
@@ -11,39 +23,6 @@ export default {
     name: {
       type: String,
       required: true
-    },
-    wrapperTag: {
-      type: String,
-      default: 'div'
-    },
-    optionTag: {
-      type: String,
-      default: 'label'
-    },
-    allowDeselect: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data () {
-    return {
-      radioOptions: this.options
-    }
-  },
-  methods: {
-    select (index) {
-      const isAlreadySelected = this.radioOptions[index].isSelected
-
-      if (isAlreadySelected && !this.allowDeselect) return
-
-      this.radioOptions = this.radioOptions.map((elem, idx) => {
-        if (this.allowDeselect) {
-          elem.isSelected = index === idx && !isAlreadySelected
-        } else {
-          elem.isSelected = index === idx
-        }
-        return elem
-      })
     }
   }
 }
