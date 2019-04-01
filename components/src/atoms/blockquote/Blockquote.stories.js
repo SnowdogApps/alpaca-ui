@@ -2,9 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import ABlockquote from './Blockquote.vue'
 
-const info = `
-  This component does not have any modifiers.
-`
+const info = {}
 
 storiesOf('Atoms/Blockquote', module)
   .add('Default', () => ({

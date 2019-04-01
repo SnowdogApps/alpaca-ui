@@ -1,11 +1,5 @@
 <template src="./Icon.html" />
 
-<script>
-  import instance from "./Icon.js"
-
-  export default {
-    ...instance
-  }
-</script>
+<script src="./Icon.js"/>
 
 <style lang="scss" src="./Icon.scss"/>

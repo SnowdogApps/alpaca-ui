@@ -1,12 +1,6 @@
 <template src="./Fieldset.html" />
 
-<script>
-  import instance from "./Fieldset.js"
-
-  export default {
-    ...instance
-  }
-</script>
+<script src="./Fieldset.js"/>
 
 <style lang="scss" src="./Fieldset.scss"/>
 

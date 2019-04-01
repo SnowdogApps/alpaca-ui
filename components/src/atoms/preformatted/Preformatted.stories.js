@@ -2,9 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import APreformatted from './Preformatted.vue'
 
-const info = `
-  This component does not have any modifiers.
-`
+const info = {}
 
 storiesOf('Atoms/Preformatted', module)
   .add('Default', () => ({

@@ -6,11 +6,7 @@ import AIcon from './Icon.vue'
 import iconsReadme from './README.md'
 import icons from './mocks/icons.json'
 
-const info = `
-  ------
-  #### This component does not have any modifiers.
-  ------
-`
+const info = {}
 
 storiesOf('Atoms/Icon', module)
   .addDecorator(withReadme(iconsReadme))

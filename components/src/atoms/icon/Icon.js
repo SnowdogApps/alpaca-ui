@@ -1,5 +1,8 @@
 export default {
   props: {
+    /**
+     * Icon
+     */
     icon: {
       type: String,
       required: true

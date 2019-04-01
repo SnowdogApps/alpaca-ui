@@ -2,9 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import AFieldset from './Fieldset.vue'
 
-const info = `
-  This component does not have any modifiers.
-`
+const info = {}
 
 storiesOf('Atoms/Fieldset', module)
   .add('Default', () => ({

@@ -1,12 +1,6 @@
 <template src="./Banner.html" />
 
-<script>
-  import instance from "./Banner.js"
-
-  export default {
-    ...instance
-  }
-</script>
+<script src="./Banner.js"/>
 
 <style lang="scss" src="./Banner.scss"/>
 

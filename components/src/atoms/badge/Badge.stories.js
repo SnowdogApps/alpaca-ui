@@ -3,11 +3,10 @@ import {storiesOf} from '@storybook/vue'
 import ABadge from './Badge.vue'
 
 const info = `
-  ------
-  #### Available BEM modifiers for \`.badge\` class:
-  - \`--new\`
-  - \`--sale\`
-  ------
+  ###### Available these modifiers with \`.badge\` class:
+  - \`.badge--new\` - Selector for applying styles for new badge
+  - \`.badge--sale\` - Selector for applying styles for sale badge
+  ---
 `
 
 storiesOf('Atoms/Badge', module)
@@ -24,9 +23,9 @@ storiesOf('Atoms/Badge', module)
   .add('Custom tag', () => ({
     components: { ABadge },
     template: `
-      <a-badge tag="span">
-        Custom tag
-      </a-badge>
+    <a-badge tag="span">
+      Custom tag
+    </a-badge>
     `
     }),
     { info }
@@ -34,9 +33,9 @@ storiesOf('Atoms/Badge', module)
   .add('New', () => ({
     components: { ABadge },
     template: `
-      <a-badge class="badge--new">
-        New badge
-      </a-badge>
+    <a-badge class="badge--new">
+      New badge
+    </a-badge>
     `
     }),
     { info }

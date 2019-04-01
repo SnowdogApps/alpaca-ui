@@ -1,11 +1,5 @@
 <template src="./Paragraph.html" />
 
-<script>
-  import instance from "./Paragraph.js"
-
-  export default {
-    ...instance
-  }
-</script>
+<script src="./Paragraph.js"/>
 
 <style lang="scss" src="./Paragraph.scss"/>

@@ -1,11 +1,5 @@
 <template src="./Badge.html" />
 
-<script>
-  import instance from "./Badge.js"
-
-  export default {
-    ...instance
-  }
-</script>
+<script src="./Badge.js"/>
 
 <style lang="scss" src="./Badge.scss"/>

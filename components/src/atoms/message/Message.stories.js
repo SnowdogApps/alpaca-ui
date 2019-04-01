@@ -5,9 +5,9 @@ import AMessage from './Message.vue'
 const info = `
   ------
   #### Available BEM modifiers for \`.message\` class:
-  - \`--success\`
-  - \`--error\`
-  - \`--warning\`
+  - \`.message--success\`
+  - \`.message--error\`
+  - \`.message--warning\`
   ------
 `
 

@@ -1,12 +1,6 @@
 <template src="./PasswordStrength.html" />
 
-<script>
-  import instance from "./PasswordStrength.js"
-
-  export default {
-    ...instance
-  }
-</script>
+<script src="./PasswordStrength.js"/>
 
 <style lang="scss" src="./PasswordStrength.scss"/>
 

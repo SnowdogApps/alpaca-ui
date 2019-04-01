@@ -2,9 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import AContainer from './Container.vue'
 
-const info = `
-  This component does not have any modifiers.
-`
+const info = {}
 
 storiesOf('Atoms/Container', module)
   .add('Default', () => ({

@@ -4,12 +4,12 @@ import APasswordStrength from './PasswordStrength.vue'
 
 const info = `
   ------
-  #### Available classes for \`Password Strength\` component:
-  - \`password-none\`
-  - \`password-weak\`
-  - \`password-medium\`
-  - \`password-strong\`
-  - \`password-very-strong\`
+  #### Use these classes for \`Password Strength\` component:
+  - \`.password-none\` - Class for applying none-password styles
+  - \`.password-weak\` - Class for applying weak-password styles
+  - \`.password-medium\` - Class for applying medium-password styles
+  - \`.password-strong\` - Class for applying strong-password styles
+  - \`.password-very-strong\` - Class for applying very-strong-password styles
   ------
 `
 

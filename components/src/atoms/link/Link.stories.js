@@ -4,9 +4,9 @@ import ALink from './Link.vue'
 
 const info = `
   ------
-  #### Available BEM modifiers for \`.link\` class:
-  - \`--inverted\`
-  - \`--secondary\`
+  #### Use these modifiers with \`.link\` class:
+  - \`.link--inverted\` - Selector for applying inverted styles
+  - \`.link--secondary\` Selector for applying secondary styles
   ------
 `
 

@@ -4,8 +4,8 @@ import ALoader from './Loader.vue'
 
 const info = `
   ------
-  #### Available BEM modifiers for \`.loader\` class:
-  - \`--visible\`
+  #### Use these modifiers with \`.loader\` class:
+  - \`.loader--visible\` - Selector to display the loader
   ------
 `
 

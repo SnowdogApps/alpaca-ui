@@ -2,9 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import AParagraph from './Paragraph.vue'
 
-const info = `
-  This component does not have any modifiers.
-`
+const info = {}
 
 storiesOf('Atoms/Paragraph', module)
   .add('Default', () => ({

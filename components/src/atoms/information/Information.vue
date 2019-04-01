@@ -1,12 +1,6 @@
 <template src="./Information.html" />
 
-<script>
-  import instance from "./Information.js"
-
-  export default {
-    ...instance
-  }
-</script>
+<script src="./Information.js"/>
 
 <style lang="scss" src="./Information.scss"/>
 

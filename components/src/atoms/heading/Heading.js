@@ -1,10 +1,16 @@
 export default {
   props: {
+    /**
+     * Heading level
+     */
     level: {
       type: Number,
       required: true,
       validator: level => level >= 1 && level <= 6
     },
+    /**
+     * To use another tag instead of `h`
+     */
     tag: {
       type: String,
       default: null

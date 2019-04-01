@@ -2,9 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import ABanner from './Banner.vue'
 
-const info = `
-  This component does not have any modifiers.
-`
+const info = {}
 
 storiesOf('Atoms/Banner', module)
   .add('Default', () => ({

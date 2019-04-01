@@ -2,9 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import AImage from './Image.vue'
 
-const info = `
-  This component does not have any modifiers.
-`
+const info = {}
 
 storiesOf('Atoms/Image', module)
   .add('Default', () => ({
