@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "sideEffects": false,
   "scripts": {
+    "postinstall": "node scripts/postinstall.js",
     "dev": "start-storybook -p 6006 -s ./public",
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",
