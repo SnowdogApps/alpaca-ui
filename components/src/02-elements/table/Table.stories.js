@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaTable from './Table.vue'
-import AlpacaTableRow from '../table-row/TableRow.vue'
-import AlpacaTableCell from '../table-cell/TableCell.vue'
+import ATable from './Table.vue'
+import ATableRow from '../table-row/TableRow.vue'
+import ATableCell from '../table-cell/TableCell.vue'
 
 import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'
@@ -10,103 +10,103 @@ import footCells from './mocks/footCells.json'
 
 storiesOf('Elements/Table', module)
   .add('Default', () => ({
-    components: { AlpacaTable, AlpacaTableRow, AlpacaTableCell },
+    components: { ATable, ATableRow, ATableCell },
     data: () => ({
       bodyRows,
       headCells,
       footCells
     }),
     template: `
-        <alpaca-table caption="This is a table">
+        <a-table caption="This is a table">
           <thead>
-            <alpaca-table-row>
-              <alpaca-table-cell
+            <a-table-row>
+              <a-table-cell
                 tag="th"
                 v-for="headCell in headCells"
                 :key="headCell.id"
                 :scope="headCell.scope"
               >
                 {{ headCell.text }}
-              </alpaca-table-cell>
-            </alpaca-table-row>
+               </a-table-cell>
+             </a-table-row>
           </thead>
           <tbody>
-            <alpaca-table-row
+            <a-table-row
               v-for="row in bodyRows"
               :key="row.id"
             >
-              <alpaca-table-cell
+              <a-table-cell
                 v-for="bodyCell in row"
                 :key="bodyCell.id"
                 :data-th="bodyCell.mobileHeading"
               >
                 {{ bodyCell.text }}
-              </alpaca-table-cell>
-            </alpaca-table-row>
+               </a-table-cell>
+             </a-table-row>
           </tbody>
           <tfoot>
-            <alpaca-table-row>
-              <alpaca-table-cell
+            <a-table-row>
+              <a-table-cell
                 v-for="footCell in footCells"
                 :key="footCell.id"
                 :colspan="footCell.colspan"
               >
                 {{ footCell.text }}
-              </alpaca-table-cell>
-            </alpaca-table-row>
+               </a-table-cell>
+             </a-table-row>
           </tfoot>
-        </alpaca-table>
+         </a-table>
     `
   }))
   .add('Odd Even', () => ({
-    components: { AlpacaTable, AlpacaTableRow, AlpacaTableCell },
+    components: { ATable, ATableRow, ATableCell },
     data: () => ({
       bodyRows,
       headCells,
       footCells
     }),
     template: `
-        <alpaca-table
+        <a-table
           caption="This is a table"
           class="table--odd-even"
         >
           <thead>
-            <alpaca-table-row>
-              <alpaca-table-cell
+            <a-table-row>
+              <a-table-cell
                 tag="th"
                 v-for="headCell in headCells"
                 :key="headCell.id"
                 :scope="headCell.scope"
               >
                 {{ headCell.text }}
-              </alpaca-table-cell>
-            </alpaca-table-row>
+               </a-table-cell>
+             </a-table-row>
           </thead>
           <tbody>
-            <alpaca-table-row
+            <a-table-row
               v-for="row in bodyRows"
               :key="row.id"
             >
-              <alpaca-table-cell
+              <a-table-cell
                 v-for="bodyCell in row"
                 :key="bodyCell.id"
                 :data-th="bodyCell.mobileHeading"
               >
                 {{ bodyCell.text }}
-              </alpaca-table-cell>
-            </alpaca-table-row>
+               </a-table-cell>
+             </a-table-row>
           </tbody>
           <tfoot>
-            <alpaca-table-row>
-              <alpaca-table-cell
+            <a-table-row>
+              <a-table-cell
                 v-for="footCell in footCells"
                 :key="footCell.id"
                 :colspan="footCell.colspan"
               >
                 {{ footCell.text }}
-              </alpaca-table-cell>
-            </alpaca-table-row>
+               </a-table-cell>
+             </a-table-row>
           </tfoot>
-        </alpaca-table>
+         </a-table>
     `
   }))

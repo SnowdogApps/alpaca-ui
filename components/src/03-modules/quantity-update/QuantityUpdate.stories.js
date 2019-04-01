@@ -1,13 +1,13 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaQuantityUpdate from './QuantityUpdate.vue'
+import AQuantityUpdate from './QuantityUpdate.vue'
 
 storiesOf('Modules/Quantity Update', module)
   .add('Default', () => ({
-    components: { AlpacaQuantityUpdate },
+    components: { AQuantityUpdate },
     template: `
-        <alpaca-quantity-update
+        <a-quantity-update
           :value="4"
           @update="updateVal"
         />

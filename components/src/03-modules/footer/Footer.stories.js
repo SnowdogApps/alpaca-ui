@@ -1,22 +1,22 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaFooter from './Footer.vue'
+import AFooter from './Footer.vue'
 
 import listElements from './mocks/listElements.json'
 import dropdownListElements from './mocks/dropdownListElements.json'
 import newsletter from './mocks/newsletter.json'
 
 storiesOf('Modules/Footer', module).add('Default', () => ({
-  components: { AlpacaFooter },
+  components: { AFooter },
   data: () => ({
     listElements,
     dropdownListElements,
     newsletter
   }),
   template: `
-      <alpaca-footer
-       copyright-text="Copyright © 2019 Alpaca. All rights reserved."
+      <a-footer
+       copyright-text="Copyright © 2019 A. All rights reserved."
        :input="newsletter.input"
        :checkboxes="newsletter.checkbox"
        social-list-subtitle="Find us on"
