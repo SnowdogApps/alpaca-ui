@@ -3,7 +3,8 @@ import { storiesOf } from '@storybook/vue'
 import AMessage from './Message.vue'
 
 const info = `
-  ###### Use these modifiers with \`.message\` class.
+  ---
+  #### Use these modifiers with \`.message\` class.
   - \`.message--success\` - Selector for applying styles for success message
   - \`.message--error\` - Selector for applying styles for error message
   ---
