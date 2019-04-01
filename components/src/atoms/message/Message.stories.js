@@ -40,7 +40,7 @@ storiesOf('Atoms/Message', module)
     components: { AMessage },
     template: `
         <a-message 
-          cancel-button="Ok" 
+          accept-button="Ok" 
           class="message--error"
         >
           Product has been added to the cart!
