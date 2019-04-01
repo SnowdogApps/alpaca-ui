@@ -4,17 +4,6 @@ export default {
     event: 'change'
   },
   props: {
-    checkedValue: {
-      type: [String, Object, Number, Boolean],
-      default: null,
-    },
-    /**
-     * Wrapper tag
-     */
-    wrapperTag: {
-      type: String,
-      default: 'div'
-    },
     /**
      * Array with radio options. Every object should have keys: id, value and label.
      */
@@ -28,6 +17,17 @@ export default {
     name: {
       type: String,
       required: true
+    },
+    checkedValue: {
+      type: [String, Object, Number, Boolean],
+      default: null,
+    },
+    /**
+     * Wrapper tag
+     */
+    wrapperTag: {
+      type: String,
+      default: 'div'
     }
   },
   methods: {
