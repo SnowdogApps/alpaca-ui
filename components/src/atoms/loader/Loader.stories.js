@@ -10,14 +10,16 @@ const info = `
 `
 
 storiesOf('Atoms/Loader', module)
-  .add('Default', () => ({
-    components: { ALoader },
-    template: `
-      <a-loader 
-        class="loader--visible"
-        aria-label="Do not refresh the page"
-      />
-    `
+  .add(
+    'Default',
+    () => ({
+      components: { ALoader },
+      template: `
+        <a-loader
+          class="loader--visible"
+          aria-label="Do not refresh the page"
+        />
+      `
     }),
     { info }
   )
