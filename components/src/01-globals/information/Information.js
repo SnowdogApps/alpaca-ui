@@ -1,5 +1,5 @@
-import AHeading from '../heading/Heading.vue'
-import AParagraph from '../paragraph/Paragraph.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 
 export default {
   components: {

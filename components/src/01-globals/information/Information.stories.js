@@ -4,7 +4,7 @@ import AInformation from './Information.vue'
 
 const info = {}
 
-storiesOf('Atoms/Information', module)
+storiesOf('Global/Information', module)
   .add('Default', () => ({
     components: { AInformation },
     template: `
