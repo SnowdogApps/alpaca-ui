@@ -22,19 +22,19 @@ $message__information-font-size     : 15px !default;
 .message {
   width: $message__width;
   height: auto;
-  padding: $message__padding;
   margin: $message__margin-base;
+  padding: $message__padding;
+  color: $message__color;
   background-color: $message__background;
   box-shadow: $message__box-shadow;
-  color: $message__color;
   font-size: $message__font-size;
   transition: $message__transition;
 
   &__information {
+    padding-bottom: $message__padding-bottom;
+    border-bottom: $message__border-bottom;
     font-size: $message__information-font-size;
     font-weight: $font-weight-bold;
-    border-bottom: $message__border-bottom;
-    padding-bottom: $message__padding-bottom;
   }
 
   &__actions {
@@ -42,12 +42,12 @@ $message__information-font-size     : 15px !default;
     padding: $message__actions-padding;
 
     &-btn {
-      background: $message__btn-background;
+      padding: $reset;
       color: white;
-      text-align: center;
+      background: $message__btn-background;
       border: none;
       font-size: $font-size-base;
-      padding: $reset;
+      text-align: center;
 
       &:hover {
         cursor: pointer;
@@ -64,8 +64,8 @@ $message__information-font-size     : 15px !default;
   }
 
   &--error {
-    background-color: $message__background--error;
     color: $message__color;
+    background-color: $message__background--error;
   }
 
   &--success {
