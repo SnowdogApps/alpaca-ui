@@ -2,16 +2,16 @@ import { storiesOf } from '@storybook/vue'
 
 import AFieldset from './Fieldset.vue'
 
-const info = {}
-
 storiesOf('Atoms/Fieldset', module)
-  .add('Default', () => ({
+  .add(
+    'Default',
+    () => ({
       components: { AFieldset },
       template: `
-      <a-fieldset legend-text="Legend text">
-        <span>Fieldset content</span>
-      </a-fieldset>
-    `
+        <a-fieldset legend-text="Legend text">
+          <span>Fieldset content</span>
+        </a-fieldset>
+      `
     }),
-    { info }
+    { info: {} }
   )
