@@ -8,13 +8,13 @@ export default {
       type: [String, Object, Number, Boolean],
       default: null,
     },
-    legendId: {
+    wrapperTag: {
       type: String,
-      required: true
+      default: 'div'
     },
-    legend: {
+    optionTag: {
       type: String,
-      required: true
+      default: 'div'
     },
     options: {
       type: Array,
