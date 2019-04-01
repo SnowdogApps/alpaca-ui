@@ -1,4 +1,4 @@
-import AIcon from '../icon/Icon.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: { AIcon },

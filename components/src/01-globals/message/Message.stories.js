@@ -11,7 +11,7 @@ const info = `
   ------
 `
 
-storiesOf('Atoms/Message', module)
+storiesOf('Global/Message', module)
   .add('Default', () => ({
     components: { AMessage },
     template: `
