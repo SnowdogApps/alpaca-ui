@@ -15,15 +15,3 @@ storiesOf('Atoms/Preformatted', module)
     }),
     { info }
   )
-  .add('Custom tag', () => ({
-    components: { APreformatted },
-    template: `
-      <a-preformatted
-        tag="div"
-      >
-        Cupidatat consequat irure veniam nulla elit veniam tempor labore ullamco Lorem. Aute do excepteur nulla labore. Velit qui ea nostrud veniam minim ex mollit laborum occaecat cillum nisi anim. Sint esse eu velit irure ad Lorem qui.
-      </a-preformatted>
-    `
-    }),
-    { info }
-  )
