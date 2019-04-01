@@ -1,13 +1,13 @@
 <div :class="['gallery', horizontal ? 'gallery--horizontal' : 'gallery--vertical']">
   <div :class="['gallery__stage', horizontal ? 'gallery__stage--horizontal' : 'gallery__stage--vertical']">
     <div class="gallery__frame">
-      <alpaca-badge
+      <a-badge
         v-if="productLabel"
         class="badge--new gallery__product-label"
       >
         {{ productLabel.text }}
-      </alpaca-badge>
-      <alpaca-image
+       </a-badge>
+      <a-image
         :src="selectedImage.originalSize"
         :alt="selectedImage.alt"
       />
@@ -18,7 +18,7 @@
       class="gallery__thumb-arr"
       @click="setCurrentImage(currentImage - 1)"
     >
-      <alpaca-icon
+      <a-icon
         icon="angle-up"
         :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
       />
@@ -29,7 +29,7 @@
       :class="['gallery__thumb', i === currentImage && 'gallery__thumb--active']"
       @click="setCurrentImage(i)"
     >
-      <alpaca-image
+      <a-image
         :src="image.thumbnail"
         :alt="image.alt"
       />
@@ -38,7 +38,7 @@
       class="gallery__thumb-arr"
       @click="setCurrentImage(currentImage + 1)"
     >
-      <alpaca-icon
+      <a-icon
         icon="angle-down"
         :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
       />

@@ -2,32 +2,32 @@
   :is="tag"
   class="catalog-list-item"
 >
-  <alpaca-link :href="href">
+  <a-link :href="href">
     <div class="lazyload-wrapper catalog-list-item__image-wrapper">
-      <alpaca-image
+      <a-image
         :src="imageSrc"
         :alt="imageAlt"
       />
     </div>
-  </alpaca-link>
+   </a-link>
 
   <div class="catalog-list-item__main">
-    <alpaca-badge
+    <a-badge
       v-if="badgeText"
       type="badge-type"
       class="catalog-list-item__badge"
     >
       {{ badgeText }}
-    </alpaca-badge>
+     </a-badge>
 
     <div class="catalog-list-item__details">
       <h2 class="catalog-list-item__name">
-        <alpaca-link
+        <a-link
           href="#"
           class="catalog-list-item__link"
         >
           {{ title }}
-        </alpaca-link>
+         </a-link>
       </h2>
 
       <div class="catalog-list-item__reviews">
@@ -36,16 +36,16 @@
     </div>
 
     <div class="catalog-list-item__price">
-      <alpaca-price :price="price" />
+      <a-price :price="price" />
     </div>
 
     <div class="catalog-grid-item__options">
-      <alpaca-swatch
+      <a-swatch
         v-if="textSwatch"
         :options="textSwatch"
       />
 
-      <alpaca-swatch
+      <a-swatch
         v-if="iconSwatch"
         :options="iconSwatch"
         image
@@ -54,20 +54,20 @@
 
     <div class="catalog-list-item__actions">
       <div class="catalog-list-item__actions-primary">
-        <alpaca-button
+        <a-button
           @click="addToCart"
         >
           {{ addToCartButton }}
-        </alpaca-button>
+         </a-button>
       </div>
 
       <div class="catalog-list-item__actions-secondary">
-        <alpaca-button
+        <a-button
           :icon="buttonWishlist"
           @click="addToWishList"
         />
 
-        <alpaca-button
+        <a-button
           :icon="buttonCompare"
           @click="compare"
         />

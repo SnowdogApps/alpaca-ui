@@ -2,13 +2,13 @@ import {storiesOf} from '@storybook/vue'
 
 import countries from './mocks/countries.json'
 
-import AlpacaSelect from './Select.vue'
+import ASelect from './Select.vue'
 
 storiesOf('Elements/Form/Select', module)
   .add('Default', () => ({
-    components: { AlpacaSelect },
+    components: { ASelect },
     template: `
-        <alpaca-select
+        <a-select
           :id="field.id"
           :name="field.name"
           :options="countryOptions"

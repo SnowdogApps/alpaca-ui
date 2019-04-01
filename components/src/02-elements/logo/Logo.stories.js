@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import AlpacaLogo from './Logo.vue'
+import ALogo from './Logo.vue'
 
 storiesOf('Elements/Logo', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { AlpacaLogo },
+    components: { ALogo },
     template: `
-        <alpaca-logo
+        <a-logo
           src="/images/logo/alpaca.svg"
           to="/"
         />

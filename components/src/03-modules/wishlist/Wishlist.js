@@ -1,10 +1,10 @@
-import AlpacaList from "../../02-elements/list/List.vue"
-import AlpacaProductItem from "../../03-modules/product-item/ProductItem.vue"
+import AList from "../../02-elements/list/List.vue"
+import AProductItem from "../../03-modules/product-item/ProductItem.vue"
 
 export default {
   components: {
-    AlpacaList,
-    AlpacaProductItem
+    AList,
+    AProductItem
   },
   props: {
     products: {

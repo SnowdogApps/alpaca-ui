@@ -1,10 +1,10 @@
-import AlpacaDropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
-import AlpacaCheckbox from '../../02-elements/checkbox/Checkbox.vue'
+import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
+import ACheckbox from '../../02-elements/checkbox/Checkbox.vue'
 
 export default {
   components: {
-    AlpacaDropdownListItem,
-    AlpacaCheckbox
+    ADropdownListItem,
+    ACheckbox
   },
   props: {
     items: {

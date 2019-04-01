@@ -3,14 +3,14 @@
     v-if="showMode"
     class="toolbar__mode"
   >
-    <alpaca-button
+    <a-button
       aria-label="Change to grid view"
       icon="grid"
       icon-class="toolbar__mode-icon toolbar__mode-icon--active"
       class="toolbar__mode-button"
       @click="gridView"
     />
-    <alpaca-button
+    <a-button
       aria-label="Change to list view"
       icon="list"
       icon-class="toolbar__mode-icon"
@@ -22,7 +22,7 @@
     v-if="showSorter"
     class="toolbar__sorter"
   >
-    <alpaca-select
+    <a-select
       :id="sortBy.id"
       :options="sortBy.options"
       :label="sortBy.text"
@@ -48,7 +48,7 @@
     v-if="showLimit"
     class="toolbar__limiter"
   >
-    <alpaca-select
+    <a-select
       :id="limiter.id"
       :options="limiter.options"
       :label="limiter.text"
@@ -67,7 +67,7 @@
     v-if="showPager"
     class="toolbar__pager"
   >
-    <alpaca-pager
+    <a-pager
       :page="currentPage"
       :limit="pager.limit"
       :total-size="pager.totalSize"

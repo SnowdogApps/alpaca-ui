@@ -1,22 +1,22 @@
-import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaImage from '../../02-elements/image/Image.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaPrice from '../../02-elements/price/Price.vue'
-import AlpacaList from '../../02-elements/list/List.vue'
-import AlpacaListItem from '../../02-elements/list-item/ListItem.vue'
+import AParagraph from '../../atoms/paragraph/Paragraph.vue'
+import ALink from '../../atoms/link/Link.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import AImage from '../../atoms/image/Image.vue'
+import AButton from '../../02-elements/button/Button.vue'
+import APrice from '../../02-elements/price/Price.vue'
+import AList from '../../02-elements/list/List.vue'
+import AListItem from '../../02-elements/list-item/ListItem.vue'
 
 export default {
   components: {
-    AlpacaParagraph,
-    AlpacaLink,
-    AlpacaHeading,
-    AlpacaImage,
-    AlpacaButton,
-    AlpacaPrice,
-    AlpacaList,
-    AlpacaListItem
+    AParagraph,
+    ALink,
+    AHeading,
+    AImage,
+    AButton,
+    APrice,
+    AList,
+    AListItem
   },
   props: {
     resultText: {

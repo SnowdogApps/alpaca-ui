@@ -1,9 +1,9 @@
-<alpaca-container>
-  <alpaca-breadcrumbs :breadcrumbs="breadcrumbs"/>
+<a-container>
+  <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
   <div class="catalog">
     <div class="catalog-list">
       <div class="catalog-list__products">
-        <alpaca-toolbar
+        <a-toolbar
           show-mode
           show-sorter
           show-limit
@@ -15,7 +15,7 @@
           @gridView="gridView"
         />
         <ul class="catalog-grid">
-          <alpaca-grid-item
+          <a-grid-item
             v-for="product in products"
             :key="product.sku"
             :product="product"
@@ -23,7 +23,7 @@
         </ul>
       </div>
       <div class="catalog-list__sidebar">
-        <alpaca-filters
+        <a-filters
           active-filters-heading="Now Shopping by"
           all-filters-heading="Shopping Options"
           :active-filter-items="activeFilterItems"
@@ -34,4 +34,4 @@
       </div>
     </div>
   </div>
-</alpaca-container>
+ </a-container>
