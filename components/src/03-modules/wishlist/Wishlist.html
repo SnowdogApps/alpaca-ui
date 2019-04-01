@@ -1,5 +1,5 @@
-<alpaca-list class="wishlist">
-  <alpaca-product-item
+<a-list class="wishlist">
+  <a-product-item
     v-for="product in products"
     :key="product.id"
     :id="product.id"
@@ -15,4 +15,4 @@
     class="wishlist__item"
     @remove="onRemove(product.id)"
   />
-</alpaca-list>
+ </a-list>

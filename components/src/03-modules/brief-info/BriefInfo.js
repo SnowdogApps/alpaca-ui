@@ -1,11 +1,11 @@
 import uniqueId from 'lodash.uniqueid'
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import Icon from '../../01-globals/icon/Icon.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
   components: {
-    AlpacaHeading,
-    Icon
+    AHeading,
+    AIcon
   },
   props: {
     items: {

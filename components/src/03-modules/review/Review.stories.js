@@ -1,20 +1,20 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaReview from './Review.vue'
-import AlpacaReviewSummary from '../review-summary/ReviewSummary.vue'
-import AlpacaReviewAdd from '../review-add/ReviewAdd.vue'
+import AReview from './Review.vue'
+import AReviewSummary from '../review-summary/ReviewSummary.vue'
+import AReviewAdd from '../review-add/ReviewAdd.vue'
 
 import reviews from './mocks/reviews.json'
 
 storiesOf('Modules/Review', module)
   .add('Default', () => ({
-    components: { AlpacaReview },
+    components: { AReview },
     data: () => ({
       reviews
     }),
     template: `
-      <alpaca-review
+      <a-review
         v-for="review in reviews"
         :key="review.id"
         :author="review.author"
@@ -25,9 +25,9 @@ storiesOf('Modules/Review', module)
   `
   }))
   .add('Summary', () => ({
-    components: { AlpacaReviewSummary },
+    components: { AReviewSummary },
     template: `
-      <alpaca-review-summary
+      <a-review-summary
         amountLink="#"
         addReviewLink="#"
         :reviewsQty="32"
@@ -35,9 +35,9 @@ storiesOf('Modules/Review', module)
   `
   }))
   .add('Add', () => ({
-    components: { AlpacaReviewAdd },
+    components: { AReviewAdd },
     template: `
-      <alpaca-review-add
+      <a-review-add
         product-title="Product name"
         heading-text="YOU'RE REVIEWING"
         legend-text=""

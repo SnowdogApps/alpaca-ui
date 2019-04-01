@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaSwatch from './Swatch.vue'
+import ASwatch from './Swatch.vue'
 
 import textSwatch from './mocks/text-swatch.json'
 import imageSwatch from './mocks/icon-swatch.json'
@@ -8,13 +8,13 @@ import colorSwatch from './mocks/color-swatch.json'
 
 storiesOf('Elements/Swatch', module)
   .add('Default', () => ({
-    components: { AlpacaSwatch },
+    components: { ASwatch },
     data: () => ({
       textSwatch,
       selected: null
     }),
     template: `
-        <alpaca-swatch
+        <a-swatch
           :options="textSwatch.options"
           v-model="selected"
         />
@@ -22,13 +22,13 @@ storiesOf('Elements/Swatch', module)
     `
   }))
   .add('With label', () => ({
-    components: { AlpacaSwatch },
+    components: { ASwatch },
     data: () => ({
       textSwatch,
       selected: null
     }),
     template: `
-        <alpaca-swatch
+        <a-swatch
           :options="textSwatch.options"
           v-model="selected"
           label="Label"
@@ -37,13 +37,13 @@ storiesOf('Elements/Swatch', module)
     `
   }))
   .add('Image', () => ({
-    components: { AlpacaSwatch },
+    components: { ASwatch },
     data: () => ({
       imageSwatch,
       selected: null
     }),
     template: `
-        <alpaca-swatch
+        <a-swatch
           :options="imageSwatch.options"
           v-model="selected"
           image
@@ -52,13 +52,13 @@ storiesOf('Elements/Swatch', module)
     `
   }))
   .add('Image with label', () => ({
-    components: { AlpacaSwatch },
+    components: { ASwatch },
     data: () => ({
       imageSwatch,
       selected: null
     }),
     template: `
-        <alpaca-swatch
+        <a-swatch
           :options="imageSwatch.options"
           v-model="selected"
           image
@@ -68,13 +68,13 @@ storiesOf('Elements/Swatch', module)
     `
   }))
   .add('Color', () => ({
-    components: { AlpacaSwatch },
+    components: { ASwatch },
     data: () => ({
       colorSwatch,
       selected: null
     }),
     template: `
-        <alpaca-swatch
+        <a-swatch
           :options="colorSwatch.options"
           v-model="selected"
           color
@@ -83,13 +83,13 @@ storiesOf('Elements/Swatch', module)
     `
   }))
   .add('Color with label', () => ({
-    components: { AlpacaSwatch },
+    components: { ASwatch },
     data: () => ({
       colorSwatch,
       selected: null
     }),
     template: `
-        <alpaca-swatch
+        <a-swatch
           :options="colorSwatch.options"
           v-model="selected"
           color

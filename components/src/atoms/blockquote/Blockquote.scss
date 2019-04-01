@@ -1,0 +1,17 @@
+@import '~styles/globals';
+
+$blockquote__margin     : $spacer 0 !default;
+$blockquote__padding    : $spacer $spacer $spacer $spacer--medium !default;
+$blockquote__border-left: 5px $border-style-base $gray-light !default;
+
+.blockquote {
+  display: block;
+  margin: $blockquote__margin;
+  padding: $blockquote__padding;
+  border-left: $blockquote__border-left;
+}
+
+blockquote {
+  @extend .blockquote;
+}
+

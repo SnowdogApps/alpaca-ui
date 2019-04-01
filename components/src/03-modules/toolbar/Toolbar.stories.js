@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 
 import toolbar from './mocks/toolbar.json'
 
-import AlpacaToolbar from './Toolbar.vue'
+import AToolbar from './Toolbar.vue'
 
 storiesOf('Modules/Toolbar', module)
   .add('Default', () => ({
@@ -12,9 +12,9 @@ storiesOf('Modules/Toolbar', module)
         toolbar
       }
     },
-    components: { AlpacaToolbar },
+    components: { AToolbar },
     template: `
-        <alpaca-toolbar
+        <a-toolbar
           show-mode
           show-sorter
           show-limit
@@ -37,9 +37,9 @@ storiesOf('Modules/Toolbar', module)
         toolbar
       }
     },
-    components: { AlpacaToolbar },
+    components: { AToolbar },
     template: `
-        <alpaca-toolbar
+        <a-toolbar
           show-mode
           show-sorter
           show-limit

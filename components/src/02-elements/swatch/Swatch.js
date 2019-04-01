@@ -1,8 +1,8 @@
-import AlpacaLabel from '../../atoms/label/Label.vue'
+import ALabel from '../../atoms/label/Label.vue'
 
 export default {
   components: {
-    AlpacaLabel
+    ALabel
   },
   model: {
     prop: 'selected',

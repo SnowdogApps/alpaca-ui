@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaPrice from './Price.vue'
+import APrice from './Price.vue'
 
 import price from './mocks/price.json'
 
@@ -9,60 +9,60 @@ storiesOf('Elements/Price', module)
     data: () => ({
       price
     }),
-    components: { AlpacaPrice },
+    components: { APrice },
     template: `
-        <alpaca-price :price="price.default"/>
+        <a-price :price="price.default"/>
     `
   }))
   .add('Default -- Large', () => ({
     data: () => ({
       price
     }),
-    components: { AlpacaPrice },
+    components: { APrice },
     template: `
-        <alpaca-price
+        <a-price
           :price="price.default"
           large
         />
     `
   }))
   .add('Special Price', () => ({
-    components: { AlpacaPrice },
+    components: { APrice },
     data: () => ({
       price
     }),
     template: `
-        <alpaca-price :specialPrice="price.special"/>
+        <a-price :specialPrice="price.special"/>
     `
   }))
   .add('Old price', () => ({
-    components: { AlpacaPrice },
+    components: { APrice },
     data: () => ({
       price
     }),
     template: `
-        <alpaca-price :oldPrice="price.old"/>
+        <a-price :oldPrice="price.old"/>
     `
   }))
   .add('With special price', () => ({
-    components: { AlpacaPrice },
+    components: { APrice },
     data: () => ({
       price
     }),
     template: `
-        <alpaca-price
+        <a-price
           :oldPrice="price.old"
           :specialPrice="price.special"
         />
     `
   }))
   .add('With special price -- Large', () => ({
-    components: { AlpacaPrice },
+    components: { APrice },
     data: () => ({
       price
     }),
     template: `
-        <alpaca-price
+        <a-price
           :oldPrice="price.old"
           :specialPrice="price.special"
           large
