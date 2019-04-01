@@ -1,0 +1,27 @@
+<div
+  class="message"
+  role="alert"
+>
+  <div class="message__information">
+    <!-- @slot Message content -->
+    <slot />
+  </div>
+  <div class="message__actions">
+    <a-button
+      class="message__actions-btn"
+      v-if="acceptButton"
+      :defaultClass="false"
+      @onClick="acceptAction"
+    >
+      {{ acceptButton }}
+    </a-button>
+    <a-button
+      class="message__actions-btn"
+      v-if="cancelButton"
+      :defaultClass="false"
+      @onClick="cancelAction"
+    >
+      {{ cancelButton }}
+    </a-button>
+  </div>
+</div>

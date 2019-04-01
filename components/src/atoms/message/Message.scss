@@ -1,0 +1,85 @@
+@import '~styles/globals';
+
+$message__width                     : 320px !default;
+$message__padding                   : 16px 25px 0 25px !default;
+$message__padding-bottom            : 10px !default;
+$message__margin-base               : $spacer--medium 0 0 0 !default;
+$message__font-size                 : $font-size-small !default;
+$message__transition                : $transition-base !default;
+$message__color                     : $white !default;
+$message__color-success             : $black !default;
+$message__background                : rgba(25, 118, 210, 1) !default;
+$message__btn-background            : rgba(255, 255, 255, 0) !default;
+$message__background--success       : rgba(105, 220, 161, 1) !default;
+$message__background--error         : rgba(211, 47, 47, 1) !default;
+$message__border-success            : 1px solid rgba(57, 50, 67, 0.4) !default;
+$message__border-bottom             : 1px solid rgba(255, 255, 255, 0.4) !default;
+$message__box-shadow                : 0 4px 6px 0 rgba(57, 50, 67, 0.4) !default;
+$message__actions-padding           : 18px 0 !default;
+$message__information-font-size     : 15px !default;
+
+
+.message {
+  width: $message__width;
+  height: auto;
+  padding: $message__padding;
+  margin: $message__margin-base;
+  background-color: $message__background;
+  box-shadow: $message__box-shadow;
+  color: $message__color;
+  font-size: $message__font-size;
+  transition: $message__transition;
+
+  &__information {
+    font-size: $message__information-font-size;
+    font-weight: $font-weight-bold;
+    border-bottom: $message__border-bottom;
+    padding-bottom: $message__padding-bottom;
+  }
+
+  &__actions {
+    display: flex;
+    padding: $message__actions-padding;
+
+    &-btn {
+      background: $message__btn-background;
+      color: white;
+      text-align: center;
+      border: none;
+      font-size: $font-size-base;
+      padding: $reset;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:last-child {
+        font-weight: $font-weight-bold;
+      }
+
+      &:nth-child(2) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &--error {
+    background-color: $message__background--error;
+    color: $message__color;
+  }
+
+  &--success {
+    color: $message__color-success;
+    background-color: $message__background--success;
+  }
+
+  &--success &__actions {
+    &-btn {
+      color: $message__color-success;
+    }
+  }
+
+  &--success &__information {
+    border-bottom: $message__border-success;
+  }
+}
