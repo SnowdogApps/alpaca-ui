@@ -40,7 +40,7 @@ files.forEach(file => {
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
           /\"\.\//gm,
-          '"@snowdog/alpaca-components/dist'
+          '"@snowdog/alpaca-components/dist/'
         )
     )
   }
