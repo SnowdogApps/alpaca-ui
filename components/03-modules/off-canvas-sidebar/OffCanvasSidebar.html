@@ -27,15 +27,16 @@
         tabindex="-1"
       >
         <div
+          v-if="!blank"
           :class="[
             'off-canvas-sidebar__header row',
-            { 'between-xs': !blank && heading },
-            { 'end-xs': !blank && !heading }
+            { 'between-xs': heading },
+            { 'end-xs': !heading }
           ]"
         >
           <slot name="heading">
             <alpaca-heading
-              v-if="!blank && heading"
+              v-if="heading"
               :level="1"
               class="off-canvas-sidebar__heading"
             >
