@@ -1,0 +1,74 @@
+<div class="register">
+  <form>
+    <a-fieldset
+      class="register__fieldset"
+      :legend-text="personalInformationLegend"
+      legend-class="register__legend"
+    >
+      <a-input
+        id="firstname"
+        v-model="firstname"
+        label="First name"
+        type="text"
+        name="firstname"
+        placeholder="First name"
+      />
+      <a-input
+        id="lastname"
+        v-model="lastname"
+        label="Last name"
+        type="text"
+        name="lastname"
+        placeholder="Last name"
+      />
+     </a-fieldset>
+    <a-fieldset
+      class="register__fieldset"
+      :legend-text="signInLegend"
+      legend-class="register__legend"
+    >
+      <a-input
+        id="email"
+        v-model="email"
+        label="Email"
+        type="email"
+        name="email"
+        placeholder="Email"
+      />
+      <a-input
+        id="password"
+        v-model="password"
+        label="Password"
+        type="password"
+        name="password"
+        placeholder="Password"
+      />
+      <a-input
+        id="passwordConfirmation"
+        v-model="passwordConfirmation"
+        label="Confirm password"
+        type="password"
+        name="passwordConfirmation"
+        placeholder="Confirm password"
+      />
+     </a-fieldset>
+    <div class="row row--no-margins center-xs">
+      <a-button
+        type="submit"
+        class="register__submit-button"
+        @click.stop.prevent="register"
+      >
+        {{ submitButton }}
+       </a-button>
+    </div>
+  </form>
+  <div class="register__login-wrapper row row--no-margins center-xs">
+    <a-button
+      class="register__register-button"
+      blank
+      @click="goToLogin"
+    >
+      {{ goToLoginButton }}
+     </a-button>
+  </div>
+</div>

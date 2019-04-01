@@ -1,0 +1,27 @@
+<div
+  :class="['input', {'input--inline': inline}]"
+>
+  <a-label
+    :for="id"
+    :hidden="hiddenLabel"
+    :class="labelClass"
+  >
+    {{ label }}
+   </a-label>
+
+  <textarea
+    :id="id"
+    :class="[
+      inputClass,
+      {
+        'input__field': inputDefaultClass,
+        'input__field--textarea': inputDefaultClass
+      }
+    ]"
+    :autocomplete="autocomplete"
+    :name="name"
+    :placeholder="placeholder"
+    :value="value"
+    @input="$emit('input', $event.target.value)"
+  />
+</div>

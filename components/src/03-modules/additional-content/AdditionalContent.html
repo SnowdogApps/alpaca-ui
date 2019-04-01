@@ -1,0 +1,20 @@
+<div class="additional-content">
+  <a-picture
+    v-if="picture.length"
+    class="additional-content__image"
+    :images="picture"
+    :alt="pictureAlt"
+  />
+  <div class="additional-content__info">
+    <div class="additional-content__section">
+      <p>
+        {{ firstColumnText }}
+      </p>
+    </div>
+    <div class="additional-content__section">
+      <p>
+        {{ secondColumnText }}
+      </p>
+    </div>
+  </div>
+</div>

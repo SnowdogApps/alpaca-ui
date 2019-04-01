@@ -1,0 +1,52 @@
+<div class="login">
+  <form>
+    <a-fieldset
+      class="login__fieldset"
+      :legend-text="legend"
+      legend-class="login__legend"
+    >
+      <a-input
+        id="email"
+        v-model="email"
+        :label="emailLabel"
+        :placeholder="emailPlaceholder"
+        type="email"
+        name="email"
+      />
+      <a-input
+        id="password"
+        v-model="password"
+        :label="passwordLabel"
+        :placeholder="passwordPlaceholder"
+        type="password"
+        name="password"
+      />
+     </a-fieldset>
+    <div class="row row--no-margins end-xs">
+      <a-button
+        class="login__forgot-password-button"
+        blank
+        @click="goToForgotPassword"
+      >
+        {{ goToForgotPasswordButton }}
+       </a-button>
+    </div>
+    <div class="login__submit-wrapper row row--no-margins center-xs">
+      <a-button
+        type="submit"
+        class="login__submit-button"
+        @click.stop.prevent="login"
+      >
+        {{ submitButton }}
+       </a-button>
+    </div>
+  </form>
+  <div class="login__register-wrapper row row--no-margins center-xs">
+    <a-button
+      blank
+      @click="goToRegister"
+    >
+      {{ goToRegisterButton }}
+     </a-button>
+  </div>
+</div>

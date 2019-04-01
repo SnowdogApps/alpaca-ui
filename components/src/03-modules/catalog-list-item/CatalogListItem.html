@@ -1,0 +1,77 @@
+<component
+  :is="tag"
+  class="catalog-list-item"
+>
+  <a-link :href="href">
+    <div class="lazyload-wrapper catalog-list-item__image-wrapper">
+      <a-image
+        :src="imageSrc"
+        :alt="imageAlt"
+      />
+    </div>
+   </a-link>
+
+  <div class="catalog-list-item__main">
+    <a-badge
+      v-if="badgeText"
+      type="badge-type"
+      class="catalog-list-item__badge"
+    >
+      {{ badgeText }}
+     </a-badge>
+
+    <div class="catalog-list-item__details">
+      <h2 class="catalog-list-item__name">
+        <a-link
+          href="#"
+          class="catalog-list-item__link"
+        >
+          {{ title }}
+         </a-link>
+      </h2>
+
+      <div class="catalog-list-item__reviews">
+        <!--TODO Add rating component-->
+      </div>
+    </div>
+
+    <div class="catalog-list-item__price">
+      <a-price :price="price" />
+    </div>
+
+    <div class="catalog-grid-item__options">
+      <a-swatch
+        v-if="textSwatch"
+        :options="textSwatch"
+      />
+
+      <a-swatch
+        v-if="iconSwatch"
+        :options="iconSwatch"
+        image
+      />
+    </div>
+
+    <div class="catalog-list-item__actions">
+      <div class="catalog-list-item__actions-primary">
+        <a-button
+          @click="addToCart"
+        >
+          {{ addToCartButton }}
+         </a-button>
+      </div>
+
+      <div class="catalog-list-item__actions-secondary">
+        <a-button
+          :icon="buttonWishlist"
+          @click="addToWishList"
+        />
+
+        <a-button
+          :icon="buttonCompare"
+          @click="compare"
+        />
+      </div>
+    </div>
+  </div>
+</component>

@@ -1,0 +1,36 @@
+<div class="brief-info">
+  <a-heading
+    v-if="level"
+    :level="level"
+    class="brief-info__heading"
+  >
+    {{ heading }}
+   </a-heading>
+
+  <ul class="list brief-info__items-container">
+    <li
+      v-for="{ key, item } in getItemsWithKey"
+      :key="key"
+      class="brief-info__item"
+    >
+      <span
+        :class="['brief-info__icon-wrapper', iconWrapperClass]"
+        :aria-label="item.iconLabel"
+      >
+        <a-icon
+          :icon="item.icon.iconId"
+          :class="['brief-info__icon', iconClass]"
+        />
+      </span>
+
+      <div class="brief-info__content">
+        <component
+          :is="titleTag"
+          class="brief-info__title"
+        >
+          {{ item.title.text }}
+        </component>
+      </div>
+    </li>
+  </ul>
+</div>

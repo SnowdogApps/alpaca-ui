@@ -1,0 +1,52 @@
+<main class="home">
+  <a-banner
+    class="home__banner-content"
+    :link="mainBanner.link"
+    :image="mainBanner.image"
+    :sources="mainBanner.sources"
+  />
+  <div class="container">
+    <section class="home__banners-handler">
+      <a-banner
+        v-for="banner in smallBanners"
+        :key="banner.id"
+        class="home__banner-content"
+        :link="banner.link"
+        :image="banner.image"
+        :sources="banner.sources"
+      />
+    </section>
+    <section class="home__banners-handler">
+      <a-banner
+        v-for="banner in mediumBanners"
+        :key="banner.id"
+        class="home__banner-content"
+        :link="banner.link"
+        :image="banner.image"
+        :sources="banner.sources"
+      />
+    </section>
+    <section class="home__brands">
+      <a-heading
+        :level="headingLevel"
+        class="home__cms-block-title"
+      >
+        {{ heading }}
+       </a-heading>
+      <a-list class="home__brands-list">
+        <a-list-image-item
+          v-for="item in imageListElements"
+          :key="item.id"
+          class="home__brands-list"
+          :src="item.image.src"
+          :alt="item.image.alt"
+        />
+       </a-list>
+    </section>
+    <section class="home__static-block">
+      <article class="home__static-text">
+        {{ text }}
+      </article>
+    </section>
+  </div>
+</main>

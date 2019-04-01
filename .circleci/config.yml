@@ -5,5 +5,5 @@ jobs:
     steps:
       - checkout
       - run: yarn
-      - run: yarn eslint
-      - run: yarn stylelint
+      - run: cd components && yarn eslint
+      - run: cd components && yarn stylelint

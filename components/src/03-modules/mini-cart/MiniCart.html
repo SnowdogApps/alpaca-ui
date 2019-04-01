@@ -1,0 +1,43 @@
+<div class="minicart">
+  <a-list class="minicart__list">
+    <slot name="products"/>
+   </a-list>
+  <section class="minicart__summary">
+    <a-heading
+      :level="3"
+      class="heading heading--first-level minicart__summary-heading"
+    >
+      {{ summaryTitle }}
+     </a-heading>
+    <div
+      v-for="total in totals"
+      :key="total.code"
+      :class="[
+        'row row--no-margins between-xs',
+        { 'minicart__grand-total-row': total.code === 'grand_total' }
+      ]"
+    >
+      <div class="col-xs-9">
+        {{ total.title }}
+      </div>
+      <div class="col-xs-3 end-xs">
+        {{ total.value }}
+      </div>
+    </div>
+  </section>
+  <div class="row row--no-margins center-xs between-md minicart__actions">
+    <a-button
+      class="col-xs-12 col-md-4 minicart__return-button"
+      blank
+      @click="returnToShopping"
+    >
+      {{ returnToShoppingButton }}
+     </a-button>
+    <a-button
+      class="col-xs-12 col-md-4 first-xs last-md minicart__checkout-button"
+      @click="goToCheckout"
+    >
+      {{ goToCheckoutButton }}
+     </a-button>
+  </div>
+</div>

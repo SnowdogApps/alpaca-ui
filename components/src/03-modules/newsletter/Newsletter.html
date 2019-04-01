@@ -1,0 +1,39 @@
+<form class="newsletter">
+  <div :class="['newsletter__heading', headingClass]">
+    {{ heading }}
+  </div>
+  <div class="newsletter__controls">
+    <a-input
+      :id="input.field.id"
+      v-model="value"
+      :label="input.label.text"
+      :placeholder="input.field.placeholder"
+      :name="input.field.name"
+      class="newsletter__input"
+      label-class="newsletter__label"
+      input-class="newsletter__field"
+      type="text"
+    />
+    <a-button
+      class="newsletter__button"
+      @click.stop.prevent="onSubmit"
+    >
+      {{ button }}
+     </a-button>
+  </div>
+  <div
+    v-if="checkboxes"
+    class="newsletter__agreements"
+  >
+    <a-checkbox
+      v-for="checkbox in checkboxes"
+      :id="checkbox.name"
+      :key="checkbox.name"
+      v-model="selected[checkbox.name]"
+      :value="true"
+      :unchecked-value="false"
+    >
+      <span v-html="checkbox.label" />
+     </a-checkbox>
+  </div>
+</form>

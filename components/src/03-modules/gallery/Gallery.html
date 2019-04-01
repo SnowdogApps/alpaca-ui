@@ -1,0 +1,47 @@
+<div :class="['gallery', horizontal ? 'gallery--horizontal' : 'gallery--vertical']">
+  <div :class="['gallery__stage', horizontal ? 'gallery__stage--horizontal' : 'gallery__stage--vertical']">
+    <div class="gallery__frame">
+      <a-badge
+        v-if="productLabel"
+        class="badge--new gallery__product-label"
+      >
+        {{ productLabel.text }}
+       </a-badge>
+      <a-image
+        :src="selectedImage.originalSize"
+        :alt="selectedImage.alt"
+      />
+    </div>
+  </div>
+  <div :class="['gallery__nav', horizontal ? 'gallery__nav--horizontal' : 'gallery__nav--vertical']">
+    <div
+      class="gallery__thumb-arr"
+      @click="setCurrentImage(currentImage - 1)"
+    >
+      <a-icon
+        icon="angle-up"
+        :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
+      />
+    </div>
+    <div
+      v-for="({ key, image }, i) in getThumbsWithKey"
+      :key="key"
+      :class="['gallery__thumb', i === currentImage && 'gallery__thumb--active']"
+      @click="setCurrentImage(i)"
+    >
+      <a-image
+        :src="image.thumbnail"
+        :alt="image.alt"
+      />
+    </div>
+    <div
+      class="gallery__thumb-arr"
+      @click="setCurrentImage(currentImage + 1)"
+    >
+      <a-icon
+        icon="angle-down"
+        :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
+      />
+    </div>
+  </div>
+</div>

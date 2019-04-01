@@ -1,0 +1,17 @@
+<div
+  v-if="isBarVisible"
+  class="marketing-bar"
+  :data-type="dataType"
+>
+  <div class="container marketing-bar__container">
+    <div class="marketing-bar__text">
+      <slot />
+    </div>
+    <a-button
+      class="marketing-bar__close"
+      icon="close"
+      icon-class="marketing-bar__close-icon"
+      @click="onButtonClose"
+    />
+  </div>
+</div>

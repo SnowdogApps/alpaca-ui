@@ -1,0 +1,73 @@
+<div class="range-filter">
+  <vue-slider
+    ref="slider"
+    :value="currentValue"
+    :height="slider.height"
+    :min="min"
+    :max="max"
+    :enable-cross="slider.enableCross"
+    :dot-size="slider.dotSize"
+    :tooltip="slider.tooltip"
+    :rail-style="slider.railStyle"
+    :dot-style="slider.dotStyle"
+    :process-style="slider.processStyle"
+    @change="syncValue"
+  />
+  <div class="range-filter__inputs-wrapper">
+    <label
+      class="label range-filter__label"
+      :for="lowerInput.field.id"
+    >
+      {{ lowerInput.label }}
+    </label>
+    <input
+      :id="lowerInput.field.id"
+      v-model.number.lazy="minInput"
+      class="input__field range-filter__input"
+      :label="lowerInput.label"
+      type="text"
+      :name="lowerInput.field.name"
+      :placeholder="lowerInput.field.placeholder"
+    >
+    <span
+      v-if="lowerInput.suffix"
+      class="range-filter__suffix"
+    >
+      {{ lowerInput.suffix }}
+    </span>
+    <span class="range-filter__dash">
+      -
+    </span>
+    <label
+      class="label range-filter__label"
+      :for="upperInput.field.id"
+    >
+      {{ upperInput.field.label }}
+    </label>
+    <input
+      :id="upperInput.field.id"
+      v-model.number.lazy="maxInput"
+      class="input__field range-filter__input"
+      :label="upperInput.label"
+      type="text"
+      :name="upperInput.field.name"
+      :placeholder="upperInput.field.placeholder"
+    >
+    <span
+      v-if="upperInput.suffix"
+      class="range-filter__suffix"
+    >
+      {{ upperInput.suffix }}
+    </span>
+  </div>
+  <a-button
+    v-if="applyLabel"
+    type="button"
+    class="button--secondary button--fluid range-filter__button"
+    :aria-label="applyLabel"
+    @click="apply"
+  >
+    {{ applyLabel }}
+   </a-button>
+</div>
+

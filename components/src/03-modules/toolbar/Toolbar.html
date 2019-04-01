@@ -1,0 +1,77 @@
+<div class="toolbar">
+  <div
+    v-if="showMode"
+    class="toolbar__mode"
+  >
+    <a-button
+      aria-label="Change to grid view"
+      icon="grid"
+      icon-class="toolbar__mode-icon toolbar__mode-icon--active"
+      class="toolbar__mode-button"
+      @click="gridView"
+    />
+    <a-button
+      aria-label="Change to list view"
+      icon="list"
+      icon-class="toolbar__mode-icon"
+      class="toolbar__mode-button"
+      @click="listView"
+    />
+  </div>
+  <div
+    v-if="showSorter"
+    class="toolbar__sorter"
+  >
+    <a-select
+      :id="sortBy.id"
+      :options="sortBy.options"
+      :label="sortBy.text"
+      :name="sortBy.name"
+      label-class="label toolbar__sorter-label"
+      select-class="toolbar__sorter-select select__field-item"
+      class="toolbar__sorter-wrapper"
+      :selected="sortBy.options[0].text"
+    />
+  </div>
+  <div
+    v-if="showAmount"
+    class="toolbar__amount"
+  >
+      <span class="toolbar__amount-content">
+        {{ amount.prefix }}
+        {{ amount.currentRange }}
+        {{ amount.preposition }}
+        {{ amount.total }}
+      </span>
+  </div>
+  <div
+    v-if="showLimit"
+    class="toolbar__limiter"
+  >
+    <a-select
+      :id="limiter.id"
+      :options="limiter.options"
+      :label="limiter.text"
+      :name="limiter.name"
+      label-class="toolbar__limiter-label"
+      select-class="toolbar__limiter-select select__field-item"
+      class="toolbar__limiter-wrapper"
+      inline-label
+      :selected="limiter.options[0].text"
+    />
+    <span class="toolbar__limiter-suffix">
+        {{ limiter.suffix }}
+      </span>
+  </div>
+  <div
+    v-if="showPager"
+    class="toolbar__pager"
+  >
+    <a-pager
+      :page="currentPage"
+      :limit="pager.limit"
+      :total-size="pager.totalSize"
+      @update:page="page => setCurrentPage(page)"
+    />
+  </div>
+</div>
