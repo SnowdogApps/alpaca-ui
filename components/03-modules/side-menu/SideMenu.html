@@ -1,48 +1,15 @@
-<ul class="side-menu">
-  <li
-    :class="[
-      'side-menu__item',
-      'side-menu__item--prev',
-      { 'side-menu__item--no-hover' : isRootPosition }
-    ]">
-    <alpaca-button
-      v-if="!isRootPosition"
-      class="side-menu__button side-menu__button--prev"
-      icon-class="side-menu__icon side-menu__icon--prev"
-      :icon="prevIcon"
-      @click="load(prevLevel)"
-    >
-      {{ currentItem.label }}
-    </alpaca-button>
-  </li>
-  <li class="side-menu__item side-menu__item--no-hover">
-    <transition-group
-      :name="transitionName"
-      tag="ul"
-      class="side-menu side-menu--nested"
-    >
-      <li
-        v-for="item in currentItem.nodes"
-        :key="item.level"
-        class="side-menu__item"
-      >
-        <router-link
-          v-if="item.href"
-          :to="item.href"
-          class="side-menu__link"
-        >
-          {{ item.label }}
-        </router-link>
-        <alpaca-button
-          v-if="item.nodes"
-          class="side-menu__button"
-          icon-class="side-menu__icon"
-          :icon="nextIcon"
-          @click="load(item.level)"
-        >
-          {{ item.label }}
-        </alpaca-button>
-      </li>
-    </transition-group>
-  </li>
-</ul>
+<div class="side-menu">
+  <alpaca-button
+    icon="mobile-menu"
+    class="side-menu__button"
+    @click="showSideMenu"
+  />
+  <alpaca-off-canvas-sidebar
+    name="side-menu"
+    side="left"
+    class="side-menu__sidebar"
+    compact
+  >
+    <alpaca-slide-menu :menu-items="menuItems"/>
+  </alpaca-off-canvas-sidebar>
+</div>

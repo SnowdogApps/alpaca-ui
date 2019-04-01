@@ -11,12 +11,11 @@ import AlpacaWishlist from '@alpaca-storybook/components/03-modules/wishlist/Wis
 import AlpacaQuantityUpdate from '@alpaca-storybook/components/03-modules/quantity-update/QuantityUpdate.vue'
 import AlpacaProductItem from '@alpaca-storybook/components/03-modules/product-item/ProductItem.vue'
 import AlpacaOffCanvasSidebar from '@alpaca-storybook/components/03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
-import AlpacaSideMenu from '@alpaca-storybook/components/03-modules/side-menu/SideMenu.vue'
 
 import EventBus from '@alpaca-storybook/eventBus'
 
 import menu from './mocks/menu'
-import sideMenu from '@alpaca-storybook/mocks/side-menu'
+import sideMenu from '@alpaca-storybook/mocks/slide-menu'
 import products from '@alpaca-storybook/mocks/products'
 import totals from '@alpaca-storybook/mocks/totals'
 
@@ -32,8 +31,7 @@ storiesOf('Modules/Header', module)
       AlpacaMiniCart,
       AlpacaWishlist,
       AlpacaQuantityUpdate,
-      AlpacaProductItem,
-      AlpacaSideMenu
+      AlpacaProductItem
     },
     data: () => ({
       menu,
@@ -49,11 +47,11 @@ storiesOf('Modules/Header', module)
       <app>
         <alpaca-header
           :menu="menu"
+          :side-menu="sideMenu"
           src="../../images/logo/alpaca.svg"
           link="#"
           @toggleMicrocart="showMiniCart"
           @toggleWishlist="toggleWishlist"
-          @toggleSideMenu="toggleSideMenu"
           @goToAccount="showRegister"
         />
         <alpaca-modal
@@ -126,14 +124,6 @@ storiesOf('Modules/Header', module)
         >
           <alpaca-wishlist :products="products" />
         </alpaca-off-canvas-sidebar>
-        <alpaca-off-canvas-sidebar
-          ref="sideMenu"
-          side="left"
-          class="header__side-menu"
-          compact
-        >
-          <alpaca-side-menu :menu-items="sideMenu"/>
-        </alpaca-off-canvas-sidebar>
       </app>
     `,
     methods: {
@@ -145,9 +135,6 @@ storiesOf('Modules/Header', module)
       },
       toggleWishlist() {
         EventBus.$emit('sidebar-show', 'wishlist')
-      },
-      toggleSideMenu() {
-        this.$refs.sideMenu.show()
       },
       login: action('Login'),
       removeMethod: action('Remove'),

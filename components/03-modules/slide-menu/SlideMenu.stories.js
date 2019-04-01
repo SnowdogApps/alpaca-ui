@@ -4,18 +4,18 @@ import StoryRouter from 'storybook-vue-router'
 import menu from '@alpaca-storybook/mocks/slide-menu'
 
 import App from '@alpaca-storybook/components/01-globals/app/App.vue'
-import AlpacaSideMenu from './SideMenu.vue'
+import AlpacaSlideMenu from './SlideMenu.vue'
 
-storiesOf('Modules/Side Menu', module)
+storiesOf('Modules/Slide Menu', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { App, AlpacaSideMenu },
+    components: { App, AlpacaSlideMenu },
     data: () => ({
       menu
     }),
     template: `
       <app>
-        <alpaca-side-menu :menu-items="menu"/>
+        <alpaca-slide-menu :menu-items="menu"/>
       </app>
     `
   }))

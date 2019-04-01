@@ -38,10 +38,9 @@
             </button>
           </div>
         </div>
-        <header-button
-          icon="mobile-menu"
+        <alpaca-side-menu
+          :menu-items="sideMenu"
           class="header__mobile-menu"
-          @click.native="toggleSideMenu()"
         />
         <logo
           :src="src"

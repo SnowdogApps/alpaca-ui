@@ -4,6 +4,7 @@ import Logo from '@alpaca-storybook/components/02-elements/logo/Logo.vue'
 import MegaMenu from '@alpaca-storybook/components/03-modules/mega-menu/MegaMenu.vue'
 import HeaderButton from '@alpaca-storybook/components/03-modules/header-button/HeaderButton.vue'
 import HeaderSearch from '@alpaca-storybook/components/03-modules/header-search/HeaderSearch.vue'
+import AlpacaSideMenu from '@alpaca-storybook/components/03-modules/side-menu/SideMenu.vue'
 
 export default {
   components: {
@@ -12,10 +13,15 @@ export default {
     Logo,
     MegaMenu,
     HeaderButton,
-    HeaderSearch
+    HeaderSearch,
+    AlpacaSideMenu
   },
   props: {
     menu: {
+      type: Array,
+      required: true
+    },
+    sideMenu: {
       type: Array,
       required: true
     },
@@ -34,9 +40,6 @@ export default {
     },
     toggleWishlist() {
       this.$emit('toggleWishlist')
-    },
-    toggleSideMenu() {
-      this.$emit('toggleSideMenu')
     },
     goToAccount() {
       this.$emit('goToAccount')
