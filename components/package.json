@@ -1,8 +1,12 @@
 {
   "name": "@snowdog/alpaca-components",
   "repository": "github:SnowdogApps/alpaca-storybook",
-  "version": "0.2.0-alpha.1",
+  "version": "0.3.0-alpha.5",
+  "files": ["dist/*", "scripts/*"],
+  "main": "dist/index.js",
+  "sideEffects": false,
   "scripts": {
+    "postinstall": "node scripts/postinstall.js",
     "dev": "start-storybook -p 6006 -s ./public",
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",

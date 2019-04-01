@@ -19,24 +19,35 @@ glob.sync('*', { cwd: root + '/assets' }).forEach(dir => {
   fs.copySync(`${root}/assets/${dir}`, `${dist}/${dir}`)
 })
 
+// Add SCSS import that allow customizations
+const globalsPath = `${dist}/styles/_globals.scss`
+const globals = fs.readFileSync(globalsPath, 'utf8')
+fs.writeFileSync(globalsPath, `@import '../../../../../alpaca';\n` + globals)
+
 // Copy components source files
 const files = glob.sync('src/*/*/*.{js,scss,html,vue}', {
   ignore: '**/*.stories.js',
   cwd: root
 })
 
+// List of Vue components
+const components = []
+
+// Adjust import paths to point to npm package
 files.forEach(file => {
   const name = path.basename(file)
   fs.copyFileSync(`${root}/${file}`, `${dist}/${name}`)
 
   // Adjust import paths
   if (path.extname(file) === '.vue') {
+    components.push(name)
+
     fs.writeFileSync(
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          /\"\.\//gm,
-          '"@snowdog/alpaca-components/'
+          /\"\S+\/(\S+)\"/gm,
+          '"@snowdog/alpaca-components/dist/$1"'
         )
     )
   }
@@ -46,8 +57,8 @@ files.forEach(file => {
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          /(import\s\w+\sfrom)\s\'..\/..\/\S+\/\S+\/(\S+)\'/gm,
-          `$1 '@snowdog/alpaca-components/$2'`
+          /(import\s\w+\sfrom)\s(?:\'|\")\S+\/(\S+)(?:\'|\")/gm,
+          `$1 '@snowdog/alpaca-components/dist/$2'`
         )
     )
   }
@@ -57,16 +68,18 @@ files.forEach(file => {
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          /@import '~styles/gm,
-          `@import '@snowdog/alpaca-components/styles`
-        )
-        .replace(
           /@import '\.\.\/\.\.\/\.\.\/assets\/styles/gm,
-          `@import '@snowdog/alpaca-components/styles`
+          `@import '@snowdog/alpaca-components/dist/styles`
         )
     )
   }
 })
 
-// Copy package.json
-fs.copyFileSync(`${root}/package.json`, `${dist}/package.json`)
+// Create main file with imports and exports of all components
+fs.writeFileSync(
+  `${dist}/index.js`,
+  components.map(component => {
+    const name = component.replace(/\.\w+/, '')
+    return `export { default as ${name} } from './${component}'`
+  }).join('\n')
+)
