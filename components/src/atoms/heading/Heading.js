@@ -1,7 +1,7 @@
 export default {
   props: {
     /**
-     * Heading level
+     * Heading level (1-6)
      */
     level: {
       type: Number,
@@ -9,7 +9,7 @@ export default {
       validator: level => level >= 1 && level <= 6
     },
     /**
-     * To use another tag instead of `h`
+     * To use another tag instead of `h{level}`
      */
     tag: {
       type: String,
