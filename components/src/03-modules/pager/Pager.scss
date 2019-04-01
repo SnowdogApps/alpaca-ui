@@ -1,0 +1,102 @@
+@import '~styles/globals';
+
+$pager__list-padding                        : $spacer !default;
+$pager__item-margin                         : 0 $spacer !default;
+$pager__item-after-height--current          : $spacer !default;
+$pager__item-after-background-color--current: $color-primary !default;
+$pager__item-after-transition--current      : $transition-base !default;
+$pager__item-size                           : 48px !default;
+$pager__icon-width                          : 24px !default;
+$pager__icon-height                         : 24px !default;
+$pager__link-fill-disabled                  : $gray !default;
+$pager__link-fill                           : $green !default;
+
+.pager {
+  width: 100%;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: $pager__list-padding;
+    margin: $reset;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: $pager__item-size;
+    height: $pager__item-size;
+    margin: $pager__item-margin;
+    padding: $reset;
+
+    &:first-child {
+      margin-left: $reset;
+    }
+
+    &:last-child {
+      margin-right: $reset;
+    }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        width: 100%;
+        height: $pager__item-after-height--current;
+        background-color: $pager__item-after-background-color--current;
+        z-index: -1;
+        transition: $pager__item-after-transition--current;
+        transform-origin: left;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: $pager__item-size;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      color: $color-primary;
+    }
+
+    &--prev,
+    &--next {
+      .icon {
+        fill: $pager__link-fill;
+        width: $pager__icon-width;
+        height: $pager__icon-height;
+      }
+
+      &:focus:not([disabled]),
+      &:hover:not([disabled]) {
+        background-color: $color-secondary;
+      }
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      cursor: default;
+
+      .icon {
+        fill: $pager__link-fill-disabled;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<component
+  :is="elementTag"
+  class="list__item"
+>
+  <div
+    v-if="src"
+    :class="[
+      'list__image',
+      imageWrapperClass
+    ]"
+  >
+    <div class="lazyload-wrapper">
+      <alpaca-image
+        :class="[
+          'lazyloaded',
+          imageClass
+        ]"
+        :src="src"
+        :alt="alt"
+      />
+    </div>
+  </div>
+
+  <div class="list__content">
+    <slot />
+  </div>
+</component>
