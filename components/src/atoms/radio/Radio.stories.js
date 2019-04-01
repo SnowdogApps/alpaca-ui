@@ -5,7 +5,7 @@ import options from "./mocks/radio"
 import AlpacaRadio from './Radio.vue'
 import AlpacaIcon from '../../01-globals/icon/Icon.vue'
 
-storiesOf('Elements/Form/Radio', module)
+storiesOf('Atoms/Radio', module)
   .add('Default', () => ({
     components: { AlpacaRadio },
     data() {
