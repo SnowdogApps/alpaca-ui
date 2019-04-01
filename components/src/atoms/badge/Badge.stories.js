@@ -3,7 +3,8 @@ import { storiesOf } from '@storybook/vue'
 import ABadge from './Badge.vue'
 
 const info = `
-  ###### Available these modifiers with \`.badge\` class:
+  ---
+  #### Available these modifiers with \`.badge\` class:
   - \`.badge--new\` - Selector for applying styles for new badge
   - \`.badge--sale\` - Selector for applying styles for sale badge
   ---
