@@ -1,4 +1,4 @@
-import {storiesOf} from '@storybook/vue'
+import { storiesOf } from '@storybook/vue'
 
 import ABadge from './Badge.vue'
 
@@ -10,13 +10,15 @@ const info = `
 `
 
 storiesOf('Atoms/Badge', module)
-  .add('Default', () => ({
-    components: { ABadge },
-    template: `
-      <a-badge>
-        Default badge
-      </a-badge>
-    `
+  .add(
+    'Default',
+    () => ({
+      components: { ABadge },
+      template: `
+        <a-badge>
+          Default badge
+        </a-badge>
+      `
     }),
     { info }
   )
@@ -40,13 +42,15 @@ storiesOf('Atoms/Badge', module)
     }),
     { info }
   )
-  .add('Sale', () => ({
-    components: { ABadge },
-    template: `
-      <a-badge class="badge--sale">
-        Sale badge
-      </a-badge>
-    `
+  .add(
+    'Sale',
+    () => ({
+      components: { ABadge },
+      template: `
+        <a-badge class="badge--sale">
+          Sale badge
+        </a-badge>
+      `
     }),
     { info }
   )
