@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaPicture from './Picture.vue'
+import APicture from './Picture.vue'
 import images from './mocks/images.json'
 
 storiesOf('Modules/Picture', module)
@@ -8,9 +8,9 @@ storiesOf('Modules/Picture', module)
     data: () => ({
       images
     }),
-    components: { AlpacaPicture },
+    components: { APicture },
     template: `
-        <alpaca-picture
+        <a-picture
           :images="images"
           alt="example alt text"
         />

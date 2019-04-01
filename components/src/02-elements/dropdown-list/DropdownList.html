@@ -8,7 +8,7 @@
   <ul :class="['dropdown-list__list', listClass]">
     <slot v-if="!items" />
     <template v-else v-for="element in items">
-      <alpaca-dropdown-list-item
+      <a-dropdown-list-item
         v-if="element.content"
         :title="element.title"
         :key="element.id"
@@ -18,9 +18,9 @@
         <template v-if="!isArray(element.content)">
           {{element.content}}
         </template>
-        <alpaca-dropdown-list v-else :items="element.content"/>
-      </alpaca-dropdown-list-item>
-      <alpaca-dropdown-list-link
+        <a-dropdown-list v-else :items="element.content"/>
+       </a-dropdown-list-item>
+      <a-dropdown-list-link
         v-else
         :key="element.id"
         :title="element.title"

@@ -1,7 +1,7 @@
 <nav class="pager">
   <ul class="pager__list">
     <li class="pager__item">
-      <alpaca-button
+      <a-button
         icon="arrow-left"
         class="pager__link pager__link--prev"
         aria-label="Go to previous page"
@@ -12,12 +12,12 @@
 
     <template v-if="showFirst">
       <li class="pager__item">
-        <alpaca-button
+        <a-button
           class="pager__link"
           @click="setCurrentPage(1)"
         >
           1
-        </alpaca-button>
+         </a-button>
       </li>
       <li class="pager__item">
         ...
@@ -32,12 +32,12 @@
         { 'pager__item--current': currentPage === number }
       ]"
     >
-      <alpaca-button
+      <a-button
         class="pager__link"
         @click="setCurrentPage(number)"
       >
         {{ number }}
-      </alpaca-button>
+       </a-button>
     </li>
 
     <template v-if="showLast">
@@ -45,17 +45,17 @@
         ...
       </li>
       <li class="pager__item">
-        <alpaca-button
+        <a-button
           class="pager__link"
           @click="setCurrentPage(numberOfPages)"
         >
           {{ numberOfPages }}
-        </alpaca-button>
+         </a-button>
       </li>
     </template>
 
     <li class="pager__item">
-      <alpaca-button
+      <a-button
         icon="arrow-right"
         class="pager__link pager__link--next"
         aria-label="Go to next page"

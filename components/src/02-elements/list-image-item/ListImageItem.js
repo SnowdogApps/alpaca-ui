@@ -1,7 +1,7 @@
-import AlpacaImage from '../image/Image.vue'
+import AImage from '../../atoms/image/Image.vue'
 export default {
   components: {
-    AlpacaImage
+    AImage
   },
   props: {
     src: {

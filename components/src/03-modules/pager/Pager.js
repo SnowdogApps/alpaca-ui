@@ -1,8 +1,8 @@
-import AlpacaButton from '../../02-elements/button/Button.vue'
+import AButton from '../../02-elements/button/Button.vue'
 
 export default {
   components: {
-    AlpacaButton
+    AButton
   },
   props: {
     page: {

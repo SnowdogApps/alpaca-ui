@@ -3,7 +3,8 @@ import { storiesOf } from '@storybook/vue'
 import ALabel from './Label.vue'
 
 const info = `
-  ###### Use these modifiers with \`.label\` class.
+  ---
+  #### Use these modifiers with \`.label\` class.
   - \`.label--inline\` - Selector for applying inline styles
   - \`.label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
   ---

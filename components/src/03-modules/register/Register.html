@@ -1,11 +1,11 @@
 <div class="register">
   <form>
-    <alpaca-fieldset
+    <a-fieldset
       class="register__fieldset"
       :legend-text="personalInformationLegend"
       legend-class="register__legend"
     >
-      <alpaca-input
+      <a-input
         id="firstname"
         v-model="firstname"
         label="First name"
@@ -13,7 +13,7 @@
         name="firstname"
         placeholder="First name"
       />
-      <alpaca-input
+      <a-input
         id="lastname"
         v-model="lastname"
         label="Last name"
@@ -21,13 +21,13 @@
         name="lastname"
         placeholder="Last name"
       />
-    </alpaca-fieldset>
-    <alpaca-fieldset
+     </a-fieldset>
+    <a-fieldset
       class="register__fieldset"
       :legend-text="signInLegend"
       legend-class="register__legend"
     >
-      <alpaca-input
+      <a-input
         id="email"
         v-model="email"
         label="Email"
@@ -35,7 +35,7 @@
         name="email"
         placeholder="Email"
       />
-      <alpaca-input
+      <a-input
         id="password"
         v-model="password"
         label="Password"
@@ -43,7 +43,7 @@
         name="password"
         placeholder="Password"
       />
-      <alpaca-input
+      <a-input
         id="passwordConfirmation"
         v-model="passwordConfirmation"
         label="Confirm password"
@@ -51,24 +51,24 @@
         name="passwordConfirmation"
         placeholder="Confirm password"
       />
-    </alpaca-fieldset>
+     </a-fieldset>
     <div class="row row--no-margins center-xs">
-      <alpaca-button
+      <a-button
         type="submit"
         class="register__submit-button"
         @click.stop.prevent="register"
       >
         {{ submitButton }}
-      </alpaca-button>
+       </a-button>
     </div>
   </form>
   <div class="register__login-wrapper row row--no-margins center-xs">
-    <alpaca-button
+    <a-button
       class="register__register-button"
       blank
       @click="goToLogin"
     >
       {{ goToLoginButton }}
-    </alpaca-button>
+     </a-button>
   </div>
 </div>

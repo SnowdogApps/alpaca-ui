@@ -1,15 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaNewsletter from './Newsletter.vue'
+import ANewsletter from './Newsletter.vue'
 
 import newsletter from './mocks/newsletter.json'
 
 storiesOf('Modules/Newsletter', module).add('Default', () => ({
-  components: { AlpacaNewsletter },
+  components: { ANewsletter },
   data: () => ({ newsletter }),
   template: `
-      <alpaca-newsletter
+      <a-newsletter
         :heading="newsletter.heading"
         :input="newsletter.input"
         button="Submit"

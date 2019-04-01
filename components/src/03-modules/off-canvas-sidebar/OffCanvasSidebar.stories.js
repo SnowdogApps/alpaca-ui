@@ -1,25 +1,25 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaInput from '../../02-elements/input/Input.vue'
-import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AButton from '../../02-elements/button/Button.vue'
+import AInput from '../../02-elements/input/Input.vue'
+import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 storiesOf('Modules/Off Canvas Sidebar', module)
   .add('Default', () => ({
-    components: { AlpacaButton, AlpacaInput, AlpacaOffCanvasSidebar },
+    components: { AButton, AInput, AOffCanvasSidebar },
     data: () => ({ value: null }),
     template: `
       <div>
-        <alpaca-button @click="showSidebar">
+        <a-button @click="showSidebar">
           Sidebar button
-        </alpaca-button>
-        <alpaca-off-canvas-sidebar
+         </a-button>
+        <a-off-canvas-sidebar
           name="default"
           ref="modalDefault"
           heading="Sidebar Heading"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <alpaca-input
+          <a-input
             label="Inline text"
             type="text"
             id="field_id"
@@ -28,7 +28,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
             inline
             v-model="value"
           />
-        </alpaca-off-canvas-sidebar>
+         </a-off-canvas-sidebar>
       </div>
     `,
     methods: {
@@ -38,20 +38,20 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     }
   }))
   .add('Blank', () => ({
-    components: { AlpacaButton, AlpacaOffCanvasSidebar },
+    components: { AButton, AOffCanvasSidebar },
     template: `
       <div>
-        <alpaca-button @click="showBlankSidebar">
+        <a-button @click="showBlankSidebar">
           Blank sidebar button
-        </alpaca-button>
-        <alpaca-off-canvas-sidebar
+         </a-button>
+        <a-off-canvas-sidebar
           name="blank"
           ref="modalBlank"
           blank
           :closeOnBackgroundClick="false"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </alpaca-off-canvas-sidebar>
+         </a-off-canvas-sidebar>
       </div>
     `,
     methods: {

@@ -1,5 +1,5 @@
 <div class="review review--add">
-  <alpaca-heading
+  <a-heading
     :level="3"
     class="review__title"
   >
@@ -7,14 +7,14 @@
     <span class="review__title-product">
       {{ productTitle }}
     </span>
-  </alpaca-heading>
+   </a-heading>
   <!--TODO Add rating component-->
-  <alpaca-fieldset
+  <a-fieldset
     :legendText="legendText"
     legend-class="rating-rate-legend review__rating-legend"
     class="review__fieldset"
   >
-    <alpaca-input
+    <a-input
       id="nickname"
       label="Nickname *"
       v-model="nickname"
@@ -22,7 +22,7 @@
       name="nickname"
       placeholder="Nickname"
     />
-    <alpaca-input
+    <a-input
       id="summary"
       label="Summary *"
       v-model="summary"
@@ -30,7 +30,7 @@
       name="summary"
       placeholder="Summary"
     />
-    <alpaca-textarea
+    <a-textarea
       id="review"
       label="Review *"
       v-model="review"
@@ -38,14 +38,14 @@
       placeholder="Review"
     />
 
-    <alpaca-button
+    <a-button
       @click="addReview()"
     >
       Add Your Review
-    </alpaca-button>
+     </a-button>
 
-    <alpaca-paragraph class="review__required-info">
+    <a-paragraph class="review__required-info">
       * Required fields
-    </alpaca-paragraph>
-  </alpaca-fieldset>
+     </a-paragraph>
+   </a-fieldset>
 </div>

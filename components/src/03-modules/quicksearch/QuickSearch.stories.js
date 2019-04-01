@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaQuickSearch from './QuickSearch.vue'
+import AQuickSearch from './QuickSearch.vue'
 
 import products from './mocks/products.json'
 import categories from './mocks/categories.json'
@@ -14,9 +14,9 @@ storiesOf('Modules/Quick search', module)
       categories,
       manufacturers
     }),
-    components: { AlpacaQuickSearch },
+    components: { AQuickSearch },
     template: `
-        <alpaca-quick-search
+        <a-quick-search
           resultText="Results for your request:"
           noResultText="No search results found."
           resultTyped="Ni"

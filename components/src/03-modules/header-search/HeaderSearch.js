@@ -1,9 +1,9 @@
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaInput from '../../02-elements/input/Input.vue'
+import AButton from '../../02-elements/button/Button.vue'
+import AInput from '../../02-elements/input/Input.vue'
 
 export default {
   components: {
-    AlpacaButton,
-    AlpacaInput
+    AButton,
+    AInput
   }
 }

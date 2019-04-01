@@ -7,7 +7,7 @@
     {{ label }}
   </label>
   <div class="quantity-update__qty">
-    <alpaca-button
+    <a-button
       :icon-title="decrementIconTitle"
       :aria-label="decrementAriaLabel"
       :class="[
@@ -19,7 +19,7 @@
       icon-class="button__icon quantity-update__icon"
       @click="changeValue(--currentValue)"
     />
-    <alpaca-input
+    <a-input
       v-model="currentValue"
       :id="inputId"
       :label="inputAriaLabel"
@@ -35,7 +35,7 @@
       hidden-label
       @input="changeValue"
     />
-    <alpaca-button
+    <a-button
       icon="plus"
       :icon-title="incrementIconTitle"
       :aria-label="incrementAriaLabel"
