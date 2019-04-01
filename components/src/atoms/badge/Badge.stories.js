@@ -26,9 +26,9 @@ storiesOf('Atoms/Badge', module)
   .add('Custom tag', () => ({
     components: { ABadge },
     template: `
-    <a-badge tag="span">
-      Custom tag
-    </a-badge>
+      <a-badge tag="span">
+        Custom tag
+      </a-badge>
     `
     }),
     { info }
@@ -36,9 +36,9 @@ storiesOf('Atoms/Badge', module)
   .add('New', () => ({
     components: { ABadge },
     template: `
-    <a-badge class="badge--new">
-      New badge
-    </a-badge>
+      <a-badge class="badge--new">
+        New badge
+      </a-badge>
     `
     }),
     { info }
