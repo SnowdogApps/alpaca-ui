@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import AlpacaCheckbox from './Checkbox.vue'
 
-storiesOf('Elements/Form/Checkbox', module)
+storiesOf('Atoms/Checkbox', module)
   .add('Default', () => ({
     components: { AlpacaCheckbox },
     template: `

@@ -1,5 +1,5 @@
 import AlpacaInput from '../../02-elements/input/Input.vue'
-import AlpacaCheckbox from '../../02-elements/checkbox/Checkbox.vue'
+import AlpacaCheckbox from '../../atoms/checkbox/Checkbox.vue'
 import AlpacaButton from '../../02-elements/button/Button.vue'
 
 export default {
