@@ -1,4 +1,7 @@
-<component :is="wrapperTag">
+<component
+  class="radio"
+  :is="wrapperTag"
+>
   <!-- @slot Wrapper content -->
   <slot name="wrapper"/>
   <template v-for="option in options">
