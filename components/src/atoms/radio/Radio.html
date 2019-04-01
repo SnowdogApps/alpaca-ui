@@ -1,19 +1,18 @@
 <component :is="wrapperTag">
+  <!-- @slot Wrapper content -->
   <slot name="wrapper"/>
-  <component
-    :is="optionTag"
-    v-for="option in options"
-    :key="option.id"
-  >
+  <template v-for="option in options">
     <input
+      :key="option.id"
       :id="option.id"
       :name="name"
       :value="option.value"
       :checked="checkedValue === option.value"
       type="radio"
       class="radio__field"
-      @change="$emit('change', $event.target.value)"
+      @change="change"
     >
+    <!-- @slot Options -->
     <slot
       name="option"
       :option="option"
@@ -26,5 +25,5 @@
         {{ option.label }}
       </label>
     </slot>
-  </component>
+  </template>
 </component>

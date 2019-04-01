@@ -2,8 +2,6 @@ import { storiesOf } from '@storybook/vue'
 
 import AlpacaRadio from './Radio.vue'
 
-import options from "./mocks/radio"
-
 const info = {}
 
 storiesOf('Atoms/Radio', module)
@@ -11,13 +9,29 @@ storiesOf('Atoms/Radio', module)
     components: { AlpacaRadio },
     data() {
       return {
-        options
+        options: [
+          {
+            "id": "id-1",
+            "label": "Option one",
+            "value": "option_one"
+          },
+          {
+            "id": "id-2",
+            "label": "Option two",
+            "value": "option_two"
+          },
+          {
+            "id": "id-3",
+            "label": "Options three",
+            "value": "option_three"
+          }
+        ]
       }
     },
     template: `
         <alpaca-radio
-          :options="options.options"
-          :name="options.name"
+          :options="options"
+          name="radio1"
         />
     `
     }),
