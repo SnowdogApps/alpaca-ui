@@ -68,21 +68,10 @@ files.forEach(file => {
   }
 })
 
-const imports = components.map(component => {
-  const name = component.replace(/\.\w+/, '')
-  return `import ${name} from './${component}'`
-}).join('\n')
-
-const names = components
-  .map(component => component.replace(/\.\w+/, ''))
-  .join(',\n  ')
-
-const file = `
-${imports}
-
-export default {
-  ${names}
-}
-`
-
-fs.writeFileSync(`${dist}/index.js`, file)
+fs.writeFileSync(
+  `${dist}/index.js`,
+  components.map(component => {
+    const name = component.replace(/\.\w+/, '')
+    return `export { default as ${name} } from './${component}'`
+  }).join('\n')
+)
