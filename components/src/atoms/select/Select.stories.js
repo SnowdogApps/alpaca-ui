@@ -5,23 +5,24 @@ import countries from './mocks/countries.json'
 import ASelect from './Select.vue'
 
 storiesOf('Atoms/Select', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { ASelect },
     template: `
-        <a-select
-          :id="field.id"
-          :name="field.name"
-          :options="countryOptions"
-          label="Label text"
-          selected="PL"
-        />
+      <a-select
+        :id="field.id"
+        :name="field.name"
+        :options="countryOptions"
+        label="Label text"
+        selected="PL"
+      />
     `,
     data() {
       return {
         field: {
           id: 'field-id',
           name: 'field-name',
-        },
+        }
       }
     },
     computed: {

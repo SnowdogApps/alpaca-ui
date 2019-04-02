@@ -7,23 +7,19 @@ export default {
   props: {
     id: {
       type: String,
-      required: true,
-      default: null
+      required: true
     },
     name: {
       type: String,
-      required: true,
-      default: null
+      required: true
     },
     options: {
       type: Array,
-      required: true,
-      default: () => []
+      required: true
     },
     label: {
       type: String,
-      required: true,
-      default: null
+      required: true
     },
     selected: {
       type: String,
