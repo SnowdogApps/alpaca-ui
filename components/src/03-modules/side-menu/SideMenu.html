@@ -1,0 +1,15 @@
+<div class="side-menu">
+  <a-button
+    icon="mobile-menu"
+    class="side-menu__button"
+    @click="showSideMenu"
+  />
+  <a-off-canvas-sidebar
+    ref="sideMenu"
+    name="side-menu"
+    side="left"
+    class="side-menu__sidebar"
+  >
+    <a-slide-menu :menu-items="menuItems"/>
+  </a-off-canvas-sidebar>
+</div>
