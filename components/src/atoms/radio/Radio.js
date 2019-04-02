@@ -27,7 +27,7 @@ export default {
     },
     checkedValue: {
       type: [String, Object, Number, Boolean],
-      default: null,
+      default: null
     }
   },
   methods: {
