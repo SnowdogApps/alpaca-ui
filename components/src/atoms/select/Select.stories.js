@@ -4,7 +4,7 @@ import countries from './mocks/countries.json'
 
 import ASelect from './Select.vue'
 
-storiesOf('Elements/Form/Select', module)
+storiesOf('Atoms/Select', module)
   .add('Default', () => ({
     components: { ASelect },
     template: `

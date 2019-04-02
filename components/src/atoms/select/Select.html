@@ -6,7 +6,7 @@
     :class="['select__label', labelClass]"
   >
     {{ label }}
-   </a-label>
+  </a-label>
   <div class="select__field">
     <select
       :id:="id"
@@ -29,11 +29,11 @@
   </div>
 
   <template v-if="validations">
-      <span
-        v-for="(validation, index) in currentValidations"
-        :key="index"
-      >
-        {{ validation.text }}
-      </span>
+    <span
+      v-for="(validation, index) in currentValidations"
+      :key="index"
+    >
+      {{ validation.text }}
+    </span>
   </template>
 </div>

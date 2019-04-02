@@ -1,10 +1,10 @@
 @import '../../../assets/styles/_globals.scss';
 
-$select__margin: $spacer !default;
-$select__padding: 0 $spacer--medium 0 $spacer--medium !default;
-$select__border: 1px solid $form-elements-border-color !default;
-$select__spacing: 40px !default;
-$select__arrow-color: $gray-dark transparent transparent transparent;
+$select__margin       : $spacer !default;
+$select__padding      : 0 $spacer--medium 0 $spacer--medium !default;
+$select__border       : 1px solid $form-elements-border-color !default;
+$select__spacing      : 40px !default;
+$select__arrow-color  : $gray-dark transparent transparent transparent;
 $select__border-radius: 20px !default;
 
 .select {
