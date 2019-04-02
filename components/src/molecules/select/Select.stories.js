@@ -1,4 +1,4 @@
-import {storiesOf} from '@storybook/vue'
+import { storiesOf } from '@storybook/vue'
 
 import countries from '../../../mocks/countries.json'
 
@@ -8,48 +8,38 @@ storiesOf('Molecules/Select', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ASelect },
+    data () {
+      return {
+        countries
+      }
+    },
     template: `
       <a-select
         id="field-id"
         name="field-name"
-        :options="countryOptions"
+        :options="countries"
         selected="PL"
       >
         Label text
       </a-select>
-    `,
-    computed: {
-      countryOptions() {
-        return countries.map((country) => {
-          return {
-            value: country.code,
-            text: country.name
-          }
-        })
-      }
-    }
+    `
   }))
   .add('Hidden label', () => ({
     components: { ASelect },
+    data () {
+      return {
+        countries
+      }
+    },
     template: `
       <a-select
         id="field-id"
         name="field-name"
         :options="countryOptions"
         selected="PL"
-        labelClass="label--hidden"
+        label-class="label--hidden"
       >
         Label text
       </a-select>
-    `,
-    computed: {
-      countryOptions() {
-        return countries.map((country) => {
-          return {
-            value: country.code,
-            text: country.name
-          }
-        })
-      }
-    }
+    `
   }))
