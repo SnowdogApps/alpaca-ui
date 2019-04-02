@@ -1,6 +1,6 @@
 import {storiesOf} from '@storybook/vue'
 
-import countries from './mocks/countries.json'
+import countries from '../../../mocks/countries.json'
 
 import ASelect from './Select.vue'
 
