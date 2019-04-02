@@ -12,6 +12,7 @@ import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu'
+import sideMenu from '../../../mocks/slide-menu'
 import products from '../../../mocks/products'
 import totals from '../../../mocks/totals'
 
@@ -30,6 +31,7 @@ storiesOf('Modules/Header', module)
     },
     data: () => ({
       menu,
+      sideMenu,
       products,
       totals,
       quantity: {
@@ -41,6 +43,7 @@ storiesOf('Modules/Header', module)
       <div>
         <a-header
           :menu="menu"
+          :side-menu="sideMenu"
           src="../../images/logo/alpaca.svg"
           link="#"
           @toggleMicrocart="showMiniCart"
