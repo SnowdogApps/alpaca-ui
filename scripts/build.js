@@ -19,14 +19,21 @@ glob.sync('*', { cwd: root + '/assets' }).forEach(dir => {
   fs.copySync(`${root}/assets/${dir}`, `${dist}/${dir}`)
 })
 
+// Add SCSS import that allow customizations
+const globalsPath = `${dist}/styles/_globals.scss`
+const globals = fs.readFileSync(globalsPath, 'utf8')
+fs.writeFileSync(globalsPath, `@import '../../../../../alpaca';\n` + globals)
+
 // Copy components source files
 const files = glob.sync('src/*/*/*.{js,scss,html,vue}', {
   ignore: '**/*.stories.js',
   cwd: root
 })
 
+// List of Vue components
 const components = []
 
+// Adjust import paths to point to npm package
 files.forEach(file => {
   const name = path.basename(file)
   fs.copyFileSync(`${root}/${file}`, `${dist}/${name}`)
@@ -68,6 +75,7 @@ files.forEach(file => {
   }
 })
 
+// Create main file with imports and exports of all components
 fs.writeFileSync(
   `${dist}/index.js`,
   components.map(component => {
