@@ -5,7 +5,7 @@ import { configure, addDecorator, addParameters } from '@storybook/vue'
 import { withInfo } from 'storybook-addon-vue-info'
 
 // Wrap every story in Alpaca App component
-import AApp from '../src/01-globals/app/App.vue'
+import AApp from '../src/app/App.vue'
 
 addDecorator(withInfo)
 
@@ -22,7 +22,7 @@ addDecorator(() => ({
 
 addParameters({
   options: {
-    name: 'Alpaca components'
+    name: 'Alpaca cookbook'
   }
 })
 
