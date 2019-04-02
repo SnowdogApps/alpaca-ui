@@ -4,7 +4,7 @@ import countries from './mocks/countries.json'
 
 import ASelect from './Select.vue'
 
-storiesOf('Atoms/Select', module)
+storiesOf('Molecules/Select', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ASelect },
