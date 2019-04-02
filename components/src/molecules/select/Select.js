@@ -35,14 +35,6 @@ export default {
       default: null
     },
     /**
-     * Array of validations
-     */
-    validations: {
-      type: Array,
-      required: false,
-      default: () => []
-    },
-    /**
      * Select custom class
      */
     selectClass: {
@@ -57,11 +49,6 @@ export default {
       type: String,
       required: false,
       default: null
-    }
-  },
-  computed: {
-    currentValidations() {
-      return this.validations.filter(validation => validation.condition)
     }
   }
 }
