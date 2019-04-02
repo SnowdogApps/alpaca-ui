@@ -10,21 +10,38 @@ storiesOf('Atoms/Select', module)
     components: { ASelect },
     template: `
       <a-select
-        :id="field.id"
-        :name="field.name"
+        id="field-id"
+        name="field-name"
         :options="countryOptions"
-        label="Label text"
         selected="PL"
-      />
+      >
+        Label text
+      </a-select>
     `,
-    data() {
-      return {
-        field: {
-          id: 'field-id',
-          name: 'field-name',
-        }
+    computed: {
+      countryOptions() {
+        return countries.map((country) => {
+          return {
+            value: country.code,
+            text: country.name
+          }
+        })
       }
-    },
+    }
+  }))
+  .add('Hidden label', () => ({
+    components: { ASelect },
+    template: `
+      <a-select
+        id="field-id"
+        name="field-name"
+        :options="countryOptions"
+        selected="PL"
+        labelClass="label--hidden"
+      >
+        Label text
+      </a-select>
+    `,
     computed: {
       countryOptions() {
         return countries.map((country) => {

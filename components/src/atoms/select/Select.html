@@ -1,15 +1,14 @@
 <div class="select">
   <a-label
     :for="id"
-    :hidden="hiddenLabel"
-    :inline="inlineLabel"
     :class="['select__label', labelClass]"
   >
-    {{ label }}
+    <!-- @slot Label text -->
+    <slot />
   </a-label>
   <div class="select__field">
     <select
-      :id:="id"
+      :id="id"
       :name="name"
       :class="['select__input', selectClass]"
       @focus="$emit('focus')"
