@@ -72,7 +72,6 @@ storiesOf('Atoms/Radio', module)
         <a-radio
           :options="options"
           name="radio1"
-          legend="test"
         >
           <template #label>
             <div :style="{ margin: '10px 0'}">
