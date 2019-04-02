@@ -1,9 +1,12 @@
-<component
+<fieldset
   class="radio"
-  :is="wrapperTag"
 >
-  <!-- @slot Wrapper content -->
-  <slot name="wrapper"/>
+  <!-- @slot Label content -->
+  <slot name="label">
+    <legend class="radio__legend">
+      {{ legend }}
+    </legend>
+  </slot>
   <template v-for="option in options">
     <input
       :key="option.id"
@@ -15,7 +18,7 @@
       class="radio__field"
       @change="change"
     >
-    <!-- @slot Options -->
+    <!-- @slot Scoped slots for options -->
     <slot
       name="option"
       :option="option"
@@ -29,4 +32,4 @@
       </label>
     </slot>
   </template>
-</component>
+</fieldset>

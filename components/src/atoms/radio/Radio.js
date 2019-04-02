@@ -18,16 +18,16 @@ export default {
       type: String,
       required: true
     },
+    /**
+     * Legend text
+     */
+    legend: {
+      type: String,
+      default: null
+    },
     checkedValue: {
       type: [String, Object, Number, Boolean],
       default: null,
-    },
-    /**
-     * Wrapper tag
-     */
-    wrapperTag: {
-      type: String,
-      default: 'div'
     }
   },
   methods: {
