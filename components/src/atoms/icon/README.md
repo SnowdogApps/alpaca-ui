@@ -31,6 +31,7 @@ Please check the usage and implement in your project.
 To make icons accessible we use `title` element as a first child of `svg` and `role="img"`. Title is provided in config file.
 
 If you need to implement description for the icon, use `<desc>` element for it and add id for both `title` and `desc` elements and bind those ids in `aria-labelledby` svg's attribute:
+
 ```html
 <svg class="header__icon" role="img" aria-labelledby="icon-title-id icon-desc-id">
     <title id="icon-title-id">Icon title</title>
