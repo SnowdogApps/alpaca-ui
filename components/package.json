@@ -1,7 +1,7 @@
 {
   "name": "@snowdog/alpaca-components",
   "repository": "github:SnowdogApps/alpaca-storybook",
-  "version": "0.3.0-alpha.5",
+  "version": "0.3.0-alpha.6",
   "license": "MIT",
   "files": ["dist/*", "scripts/*"],
   "main": "dist/index.js",
