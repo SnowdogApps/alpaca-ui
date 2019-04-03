@@ -61,7 +61,10 @@ storiesOf('Molecules/Radio', module)
           @change="onChange"
         >
           <template #legend>
-            <legend class="radio__legend" id="legend-radio1">
+            <legend
+              class="radio__legend"
+              id="legend-radio1"
+            >
               Please choose one:
             </legend>
           </template>
