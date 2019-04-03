@@ -1,4 +1,4 @@
-import AButton from '../../02-elements/button/Button.vue'
+import AButton from '../../molecules/button/Button.vue'
 import ASlideMenu from '../../03-modules/slide-menu/SlideMenu.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 

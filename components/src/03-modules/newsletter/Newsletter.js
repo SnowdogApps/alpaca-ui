@@ -1,6 +1,6 @@
 import AInput from '../../02-elements/input/Input.vue'
 import ACheckbox from '../../02-elements/checkbox/Checkbox.vue'
-import AButton from '../../02-elements/button/Button.vue'
+import AButton from '../../molecules/button/Button.vue'
 
 export default {
   components: {
