@@ -1,8 +1,14 @@
 <div class="radio">
-  <fieldset class="radio__fieldset" :aria-labelledby="`legend-${name}`">
+  <fieldset
+    :aria-labelledby="`legend-${name}`"
+    class="radio__fieldset"
+  >
     <!-- @slot Custom legend content (Named slots) -->
     <slot name="legend">
-      <legend class="radio__legend" :id="`legend-${name}`">
+      <legend
+        :id="`legend-${name}`"
+        class="radio__legend"
+      >
         {{ legend }}
       </legend>
     </slot>
