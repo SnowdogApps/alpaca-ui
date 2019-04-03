@@ -1,4 +1,4 @@
-@import '../../../assets/styles/_globals.scss';
+@import '../../../assets/styles/globals';
 
 $radio__size              : $spacer--medium !default;
 $radio__dot-size          : 6px !default;
@@ -14,16 +14,16 @@ $radio__icon-transition   : $transition-base !default;
   margin-bottom: $spacer--medium;
 
   &__fieldset {
-    border: $reset;
     padding: $reset;
     margin: $reset;
+    border: none;
   }
 
   &__legend {
     padding-bottom: $spacer--medium;
   }
 
-  &__handler {
+  &__item {
     position: relative;
   }
 
@@ -36,8 +36,6 @@ $radio__icon-transition   : $transition-base !default;
     z-index: -1;
 
     &:checked + .radio__label {
-      color: $radio__label-color-active;
-
       .radio__icon {
         &::before {
           opacity: 1;
