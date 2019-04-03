@@ -2,10 +2,11 @@ import { storiesOf } from '@storybook/vue'
 
 import ADivider from './Divider.vue'
 
-storiesOf('Elements/Divider', module)
+storiesOf('Atoms/Divider', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
-    components: { ADivider},
+    components: { ADivider },
     template: `
-        <a-divider/>
+      <a-divider/>
     `
   }))
