@@ -2,11 +2,10 @@ import { storiesOf } from '@storybook/vue'
 
 import ARadio from './Radio.vue'
 
-const info = {}
-
 import './preview/styles.css'
 
 storiesOf('Molecules/Radio', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { ARadio },
     data() {
@@ -44,9 +43,7 @@ storiesOf('Molecules/Radio', module)
           </div>
         </div>
     `
-    }),
-    { info }
-  )
+    }))
   .add('With slots', () => ({
       components: { ARadio },
       data() {
@@ -98,7 +95,5 @@ storiesOf('Molecules/Radio', module)
           </div>
         </div>
     `
-    }),
-    { info }
-  )
+    }))
 
