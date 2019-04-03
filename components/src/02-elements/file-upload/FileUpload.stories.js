@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaFileUpload from './FileUpload.vue'
+import AFileUpload from './FileUpload.vue'
 
 storiesOf('Elements/Form/File Upload', module)
   .add('Default', () => ({
-    components: { AlpacaFileUpload },
+    components: { AFileUpload },
     template: `
-        <alpaca-file-upload/>
+        <a-file-upload/>
     `
   }))

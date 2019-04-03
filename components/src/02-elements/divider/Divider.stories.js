@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaDivider from './Divider.vue'
+import ADivider from './Divider.vue'
 
 storiesOf('Elements/Divider', module)
   .add('Default', () => ({
-    components: { AlpacaDivider},
+    components: { ADivider},
     template: `
-        <alpaca-divider/>
+        <a-divider/>
     `
   }))

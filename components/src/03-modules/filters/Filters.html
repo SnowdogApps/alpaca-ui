@@ -1,13 +1,13 @@
 <div class="filters">
-  <alpaca-heading
+  <a-heading
     :level="2"
     class="filters__heading"
   >
     {{ activeFiltersHeading }}
-  </alpaca-heading>
-  <alpaca-divider class="filters__divider"/>
+   </a-heading>
+  <a-divider class="filters__divider"/>
   <div class="filters__active">
-    <alpaca-active-filters
+    <a-active-filters
       :items="activeFilterItems"
       clear-button="Clear all"
     />
@@ -17,38 +17,38 @@
     @click="showFilters"
   >
     Shopping Options
-    <alpaca-icon
+    <a-icon
       icon="angle-down"
       :class="['filters__switcher-icon', {'filters__switcher-icon--active': !isVisible}]"
     />
   </button>
   <div :class="['filters__list', 'dropdown-list', {'filters__list--mobile-hidden' : isVisible}]">
-    <alpaca-heading
+    <a-heading
       :level="2"
       class="filters__heading filters__heading--mobile-hidden"
     >
       {{ allFiltersHeading }}
-    </alpaca-heading>
-    <alpaca-divider class="filters__divider"/>
-    <alpaca-dropdown-list
+     </a-heading>
+    <a-divider class="filters__divider"/>
+    <a-dropdown-list
       secondary
     >
-      <alpaca-checkbox-filter
+      <a-checkbox-filter
         title="Checkbox"
         id="checkboxId"
         :items="checkboxItems"
       />
-      <alpaca-swatch-filter
+      <a-swatch-filter
         title="Swatch"
         id="swatchId"
         :items="swatchItems"
       />
-      <alpaca-color-filter
+      <a-color-filter
         title="Color"
         id="colorId"
         :items="colorItems"
       />
       <!--//TODO Add range component-->
-    </alpaca-dropdown-list>
+     </a-dropdown-list>
   </div>
 </div>

@@ -1,4 +1,3 @@
-const path = require('path')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = ({ config }) => {
@@ -39,11 +38,6 @@ module.exports = ({ config }) => {
     ],
     fix: true
   }))
-
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    'styles': path.resolve(__dirname, '../assets/styles')
-  }
 
   return config
 }

@@ -1,47 +1,47 @@
 <main class="home">
-  <alpaca-banner
+  <a-banner
+    class="home__banner-content"
     :link="mainBanner.link"
     :image="mainBanner.image"
-    class="home__banner-content"
-    aria-label="Banner"
+    :sources="mainBanner.sources"
   />
   <div class="container">
     <section class="home__banners-handler">
-      <alpaca-banner
+      <a-banner
         v-for="banner in smallBanners"
         :key="banner.id"
         class="home__banner-content"
         :link="banner.link"
-        :image="banner"
-        aria-label="Banner"
+        :image="banner.image"
+        :sources="banner.sources"
       />
     </section>
     <section class="home__banners-handler">
-      <alpaca-banner
+      <a-banner
         v-for="banner in mediumBanners"
         :key="banner.id"
         class="home__banner-content"
         :link="banner.link"
-        :image="banner"
-        aria-label="Banner"
+        :image="banner.image"
+        :sources="banner.sources"
       />
     </section>
     <section class="home__brands">
-      <alpaca-heading
+      <a-heading
         :level="headingLevel"
         class="home__cms-block-title"
       >
         {{ heading }}
-      </alpaca-heading>
-      <alpaca-list class="home__brands-list">
-        <alpaca-list-image-item
+       </a-heading>
+      <a-list class="home__brands-list">
+        <a-list-image-item
           v-for="item in imageListElements"
           :key="item.id"
           class="home__brands-list"
           :src="item.image.src"
           :alt="item.image.alt"
         />
-      </alpaca-list>
+       </a-list>
     </section>
     <section class="home__static-block">
       <article class="home__static-text">

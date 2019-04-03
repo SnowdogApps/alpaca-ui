@@ -1,14 +1,14 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaBanner from '../../02-elements/banner/Banner.vue'
-import AlpacaList from '../../02-elements/list/List.vue'
-import AlpacaListImageItem from '../../02-elements/list-image-item/ListImageItem.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import ABanner from '../../atoms/banner/Banner.vue'
+import AList from '../../02-elements/list/List.vue'
+import AListImageItem from '../../02-elements/list-image-item/ListImageItem.vue'
 
 export default {
   components: {
-    AlpacaHeading,
-    AlpacaBanner,
-    AlpacaList,
-    AlpacaListImageItem
+    AHeading,
+    ABanner,
+    AList,
+    AListImageItem
   },
   props: {
     mainBanner: {

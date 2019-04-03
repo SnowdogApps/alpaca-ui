@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $header__border-color                     : $gray-light !default;
 $header__wrapper-padding--mq-medium       : 12px 0 !default;
@@ -76,6 +76,26 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     }
   }
 
+  &__side-menu {
+    .off-canvas-sidebar__content {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .off-canvas-sidebar__header {
+      position: absolute;
+      z-index: 10;
+    }
+
+    .side-menu {
+      flex: 1;
+    }
+
+    .side-menu__item--prev {
+      padding-right: 30px;
+    }
+  }
+
   &__buttons {
     display: flex;
     order: 2;
@@ -94,6 +114,12 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     @include mq($screen-xl) {
       flex: 1 $header__buttons-width--mq-extra-large;
       max-width: $header__buttons-width--mq-extra-large;
+    }
+  }
+
+  &__mobile-menu {
+    @include mq($screen-xl) {
+      display: none;
     }
   }
 }

@@ -3,18 +3,18 @@ import StoryRouter from 'storybook-vue-router'
 
 import breadcrumbs from './mocks/breadcrumbs.json'
 
-import AlpacaBreadcrumbs from './Breadcrumbs.vue'
+import ABreadcrumbs from './Breadcrumbs.vue'
 
 storiesOf('Elements/Breadcrumbs', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { AlpacaBreadcrumbs },
+    components: { ABreadcrumbs },
     data() {
       return {
         breadcrumbs
       }
     },
     template: `
-        <alpaca-breadcrumbs :breadcrumbs="breadcrumbs"/>
+        <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
     `
   }))

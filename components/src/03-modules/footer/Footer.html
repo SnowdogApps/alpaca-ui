@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="footer__handler container">
-    <alpaca-button
+    <a-button
       icon="arrow-up"
       icon-class="footer__icon"
       class="footer__scroll-top"
@@ -8,7 +8,7 @@
       @click="scrollToTop()"
     />
     <section class="footer__newsletter col-xs-12 col-lg-3">
-      <alpaca-newsletter
+      <a-newsletter
         :heading="heading"
         :input="input"
         button="Submit"
@@ -17,31 +17,31 @@
       />
     </section>
     <section class="footer__links col-xs-12 col-lg-9">
-        <alpaca-dropdown-list
+        <a-dropdown-list
           dark
           screenM
         >
-          <alpaca-dropdown-list-item
+          <a-dropdown-list-item
             v-for="element in menu"
             :key="element.id"
             :title="element.title"
             :id="element.id"
           >
-            <alpaca-list>
-              <alpaca-list-item
+            <a-list>
+              <a-list-item
                 v-for="link in element.items"
                 :key="link.id"
               >
-                <alpaca-link
+                <a-link
                   class="footer__link"
                   :href="link.link"
                 >
                   {{ link.title }}
-                </alpaca-link>
-              </alpaca-list-item>
-            </alpaca-list>
-          </alpaca-dropdown-list-item>
-        </alpaca-dropdown-list>
+                 </a-link>
+               </a-list-item>
+             </a-list>
+           </a-dropdown-list-item>
+         </a-dropdown-list>
     </section>
   </div>
   <section class="footer__bottom-bar">
@@ -50,30 +50,30 @@
         <span class="footer__social-list-subtitle">
             {{ socialListSubtitle }}
         </span>
-        <alpaca-list class="list--with-icon list--horizontal footer__social-list">
-          <alpaca-list-item
+        <a-list class="list--with-icon list--horizontal footer__social-list">
+          <a-list-item
             v-for="element in socialMenu"
             :key="element.id"
             :aria-label="element.ariaLabel"
           >
-            <alpaca-link
+            <a-link
               class="list__icon-link"
               :href="element.link"
             >
-              <alpaca-icon
+              <a-icon
                 :icon="element.iconId"
                 class="footer__social-icon"
               />
-            </alpaca-link>
-          </alpaca-list-item>
-        </alpaca-list>
+             </a-link>
+           </a-list-item>
+         </a-list>
       </div>
       <small class="footer__copyright">
         {{ copyrightText }}
       </small>
     </div>
   </section>
-  <alpaca-cookie-message
+  <a-cookie-message
     :text="cookieText"
     closeIcon="close"
     dataType="cookie"

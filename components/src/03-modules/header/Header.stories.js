@@ -2,16 +2,17 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaHeader from './Header.vue'
-import AlpacaModal from '../../03-modules/modal/Modal.vue'
-import AlpacaLogin from '../../03-modules/login/Login.vue'
-import AlpacaMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
-import AlpacaWishlist from '../../03-modules/wishlist/Wishlist.vue'
-import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
-import AlpacaProductItem from '../../03-modules/product-item/ProductItem.vue'
-import AlpacaOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AHeader from './Header.vue'
+import AModal from '../../03-modules/modal/Modal.vue'
+import ALogin from '../../03-modules/login/Login.vue'
+import AMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
+import AWishlist from '../../03-modules/wishlist/Wishlist.vue'
+import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import AProductItem from '../../03-modules/product-item/ProductItem.vue'
+import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu'
+import sideMenu from '../../../mocks/slide-menu'
 import products from '../../../mocks/products'
 import totals from '../../../mocks/totals'
 
@@ -19,17 +20,18 @@ storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: {
-      AlpacaHeader,
-      AlpacaModal,
-      AlpacaLogin,
-      AlpacaOffCanvasSidebar,
-      AlpacaMiniCart,
-      AlpacaWishlist,
-      AlpacaQuantityUpdate,
-      AlpacaProductItem
+      AHeader,
+      AModal,
+      ALogin,
+      AOffCanvasSidebar,
+      AMiniCart,
+      AWishlist,
+      AQuantityUpdate,
+      AProductItem
     },
     data: () => ({
       menu,
+      sideMenu,
       products,
       totals,
       quantity: {
@@ -39,20 +41,21 @@ storiesOf('Modules/Header', module)
     }),
     template: `
       <div>
-        <alpaca-header
+        <a-header
           :menu="menu"
+          :side-menu="sideMenu"
           src="../../images/logo/alpaca.svg"
           link="#"
           @toggleMicrocart="showMiniCart"
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
-        <alpaca-modal
+        <a-modal
           name="register"
           ref="modalRegister"
           heading="Registred Customers"
         >
-          <alpaca-login
+          <a-login
             legend="Login form"
             forget-password-text="Forgot your password?"
             forget-password-link="#"
@@ -62,13 +65,13 @@ storiesOf('Modules/Header', module)
             @login="login"
             @goToRegister="goToRegister"
           />
-        </alpaca-modal>
-        <alpaca-off-canvas-sidebar
+         </a-modal>
+        <a-off-canvas-sidebar
           name="mini-cart"
           ref="modalMiniCart"
           heading="Shipping Cart"
         >
-          <alpaca-mini-cart
+          <a-mini-cart
             :products="products"
             :totals="totals"
             :quantity="quantity"
@@ -78,7 +81,7 @@ storiesOf('Modules/Header', module)
             return-to-shopping-button="Return to shopping"
           >
             <template #products>
-              <alpaca-product-item
+              <a-product-item
                 v-for="product in products"
                 :key="product.id"
                 :id="product.id"
@@ -95,7 +98,7 @@ storiesOf('Modules/Header', module)
                 @remove="removeMethod(product.id)"
               >
                 <template #quantity>
-                  <alpaca-quantity-update
+                  <a-quantity-update
                     :value="3"
                     :input-id="'qty' + product.id"
                     input-aria-label="Change the quantity"
@@ -109,17 +112,17 @@ storiesOf('Modules/Header', module)
                     @update="changeMethod"
                   />
                 </template>
-              </alpaca-product-item>
+               </a-product-item>
             </template>
-          </alpaca-mini-cart>
-        </alpaca-off-canvas-sidebar>
-        <alpaca-off-canvas-sidebar
+           </a-mini-cart>
+         </a-off-canvas-sidebar>
+        <a-off-canvas-sidebar
           name="wishlist"
           ref="modalWishlist"
           heading="Wishlist"
         >
-          <alpaca-wishlist :products="products" />
-        </alpaca-off-canvas-sidebar>
+          <a-wishlist :products="products" />
+         </a-off-canvas-sidebar>
       </div>
     `,
     methods: {
