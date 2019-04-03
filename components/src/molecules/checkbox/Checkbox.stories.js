@@ -5,7 +5,7 @@ import ACheckbox from './Checkbox.vue'
 // Preview styles
 import './preview/styles.css'
 
-storiesOf('Atoms/Checkbox', module)
+storiesOf('Molecules/Checkbox', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ACheckbox },

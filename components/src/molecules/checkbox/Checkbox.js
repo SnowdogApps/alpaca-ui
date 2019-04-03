@@ -7,10 +7,16 @@ export default {
     event: 'change'
   },
   props: {
+    /**
+     * Selected value
+     */
     selectedValue: {
       type: [String, Boolean, Number, Object],
       default: null
     },
+    /**
+     * Unselected value
+     */
     uncheckedValue: {
       type: [String, Boolean, Number, Object],
       default: null
