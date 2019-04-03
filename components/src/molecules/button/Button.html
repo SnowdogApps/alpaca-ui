@@ -3,13 +3,4 @@
   @click="onClick"
 >
   <slot />
-  <a-icon
-    v-if="icon"
-    :icon="icon"
-    :class="[
-      { 'button__icon': defaultIconClass },
-      iconClass
-    ]"
-    :title="iconTitle || icon"
-  />
 </button>

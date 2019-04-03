@@ -2,11 +2,13 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
 import AButton from './Button.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+
+import './preview/styles.css'
 
 const info = `
   ---
   #### Use these modifiers with \`.button\` class.
-  - \`.button--icon\` - Selector for applying icon styles
   - \`.button--secondary\` - Selector for applying secondary styles
   - \`.button--blank\` - Selector for applying blank styles
   - \`.button--fluid\` - Selector for applying fluid styles
@@ -74,21 +76,7 @@ storiesOf('Molecules/Button', module)
     }
   }))
   .add('Icon', () => ({
-    components: { AButton },
-    template: `
-        <a-button
-          class="button--icon"
-          icon="search"
-          @click="exampleMethod"
-          type="button"
-        />
-    `,
-    methods: {
-      exampleMethod: action('Clicked button')
-    }
-  }))
-  .add('Icon and text', () => ({
-    components: { AButton },
+    components: { AButton, AIcon },
     template: `
         <a-button
           class="button--icon"
@@ -96,7 +84,36 @@ storiesOf('Molecules/Button', module)
           @click="exampleMethod"
           type="button"
         >
-          Search
+          <template>
+            <a-icon
+              icon="search"
+              class="button__icon"
+              title="iconTitle"
+            />
+          </template>
+        </a-button>
+    `,
+    methods: {
+      exampleMethod: action('Clicked button')
+    }
+  }))
+  .add('Icon and text', () => ({
+    components: { AButton, AIcon },
+    template: `
+        <a-button
+          class="button--icon"
+          icon="search"
+          @click="exampleMethod"
+          type="button"
+        >
+          <template>
+            Search
+            <a-icon
+              icon="search"
+              class="button__icon"
+              title="iconTitle"
+            />
+          </template>
          </a-button>
     `,
     methods: {

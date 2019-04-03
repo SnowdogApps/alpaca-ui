@@ -1,0 +1,24 @@
+.button--icon {
+  align-items: center;
+  padding: 0;
+  border: 3px solid #31e37d;
+  background: #31e37d;
+}
+
+.button--icon:hover,
+.button--icon:focus {
+  border-color: #4c4555;
+  background: #4c4555;
+}
+
+.button--icon:hover .button__icon,
+.button--icon:focus .button__icon {
+  fill: #31e37d;
+}
+
+.button__icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  transition: all 0.3s ease-in-out;
+}

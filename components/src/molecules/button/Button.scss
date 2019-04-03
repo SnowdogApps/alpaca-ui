@@ -31,16 +31,6 @@ $button__font-color--blank          : $gray-darker !default;
 $button__font-color-hover--blank    : $gray-dark !default;
 $button__font-weight--blank         : $font-weight-base !default;
 
-// Icon
-$button__size--icon                 : 20px !default;
-$button__border-width--icon         : 3px !default;
-$button__border--icon               : $button__border-width--icon solid $color-primary !default;
-$button__border-hover--icon         : $gray-dark !default;
-$button__fill--icon                 : $white !default;
-$button__fill-hover--icon           : $color-primary !default;
-$button__background--icon           : $color-primary !default;
-$button__background-hover--icon     : $gray-dark !default;
-
 //fluid
 $button__width--fluid               : 100% !default;
 
@@ -93,32 +83,7 @@ $button__width--fluid               : 100% !default;
     }
   }
 
-  &--icon {
-    align-items: center;
-    padding: $reset;
-    border: $button__border--icon;
-    background: $button__background--icon;
-
-    &:hover,
-    &:focus {
-      border-color: $button__border-hover--icon;
-      background: $button__background-hover--icon;
-
-      .button__icon,
-      .icon {
-        fill: $button__fill-hover--icon;
-      }
-    }
-  }
-
   &--fluid {
     width: $button__width--fluid;
-  }
-
-  &__icon {
-    width: $button__size--icon;
-    height: $button__size--icon;
-    fill: $button__fill--icon;
-    transition: $button__transition;
   }
 }
