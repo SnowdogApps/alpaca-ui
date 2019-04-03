@@ -1,16 +1,7 @@
 <button
-  :class="[
-    {
-      button: tag && defaultClass,
-      'button--icon': icon && defaultButtonIconClass,
-      'button--secondary': secondary,
-      'button--blank': blank,
-      'button--link': tag === 'a',
-      'button--fluid': fluid
-    }
-  ]"
+  class="button"
   @click="onClick"
-  >
+>
   <slot />
   <a-icon
     v-if="icon"

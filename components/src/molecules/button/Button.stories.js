@@ -3,7 +3,18 @@ import { action } from '@storybook/addon-actions'
 
 import AButton from './Button.vue'
 
-storiesOf('Elements/Button', module)
+const info = `
+  ---
+  #### Use these modifiers with \`.button\` class.
+  - \`.button--icon\` - Selector for applying icon styles
+  - \`.button--secondary\` - Selector for applying secondary styles
+  - \`.button--blank\` - Selector for applying blank styles
+  - \`.button--link\` - Selector for applying link styles
+  - \`.button--fluid\` - Selector for applying fluid styles
+  ---
+`
+storiesOf('Molecules/Button', module)
+  .addParameters({ info })
   .add('Default', () => ({
     components: { AButton },
     template: `
@@ -22,7 +33,7 @@ storiesOf('Elements/Button', module)
     components: { AButton },
     template: `
         <a-button
-          secondary
+          class="button--secondary"
           @click="exampleMethod"
           type="button"
         >
@@ -37,7 +48,7 @@ storiesOf('Elements/Button', module)
     components: { AButton },
     template: `
         <a-button
-          blank
+          class="button--blank"
           @click="exampleMethod"
           type="button"
         >
@@ -52,7 +63,7 @@ storiesOf('Elements/Button', module)
     components: { AButton },
     template: `
         <a-button
-          fluid
+          class="button--fluid"
           @click="exampleMethod"
           type="button"
         >
@@ -67,8 +78,7 @@ storiesOf('Elements/Button', module)
     components: { AButton },
     template: `
         <a-button
-          tag="a"
-          link="#"
+          class="button--link"
           @click="exampleMethod"
           type="button"
         >
@@ -83,6 +93,7 @@ storiesOf('Elements/Button', module)
     components: { AButton },
     template: `
         <a-button
+          class="button--icon"
           icon="search"
           @click="exampleMethod"
           type="button"
@@ -96,6 +107,7 @@ storiesOf('Elements/Button', module)
     components: { AButton },
     template: `
         <a-button
+          class="button--icon"
           icon="search"
           @click="exampleMethod"
           type="button"
