@@ -2,10 +2,9 @@
   <input
     :id="id"
     :name="name"
-    :value="value"
-    :checked="selectedValue === value"
     type="checkbox"
     :class="['checkbox__field', inputClass]"
+    :checked="selectedValue === value"
     @change="change($event.target.checked)"
   >
   <!-- @slot Slot for label -->
