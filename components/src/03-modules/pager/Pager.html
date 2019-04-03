@@ -2,12 +2,15 @@
   <ul class="pager__list">
     <li class="pager__item">
       <a-button
-        icon="arrow-left"
         class="pager__link pager__link--prev"
         aria-label="Go to previous page"
         :disabled="currentPage < 2"
         @click="setCurrentPage(currentPage - 1)"
-      />
+      >
+        <a-icon
+          icon="arrow-left"
+        />
+      </a-button>
     </li>
 
     <template v-if="showFirst">
@@ -56,12 +59,15 @@
 
     <li class="pager__item">
       <a-button
-        icon="arrow-right"
         class="pager__link pager__link--next"
         aria-label="Go to next page"
         :disabled="currentPage > numberOfPages - 1"
         @click="setCurrentPage(currentPage + 1)"
-      />
+      >
+        <a-icon
+          icon="arrow-right"
+        />
+      </a-button>
     </li>
   </ul>
 </nav>

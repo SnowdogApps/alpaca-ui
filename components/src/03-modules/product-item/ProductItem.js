@@ -1,4 +1,5 @@
 import AImage from "../../atoms/image/Image.vue"
+import AIcon from "../../atoms/icon/Icon.vue"
 import APrice from "../../02-elements/price/Price.vue"
 import ADescriptionList from "../../02-elements/description-list/DescriptionList.vue"
 import AButton from "../../molecules/button/Button.vue"
@@ -7,6 +8,7 @@ import AQuantityUpdate from "../../03-modules/quantity-update/QuantityUpdate.vue
 export default {
   components: {
     AImage,
+    AIcon,
     APrice,
     ADescriptionList,
     AButton,

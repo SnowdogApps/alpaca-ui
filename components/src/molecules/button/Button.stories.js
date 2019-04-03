@@ -100,7 +100,7 @@ storiesOf('Molecules/Button', module)
     components: { AButton, AIcon },
     template: `
         <a-button
-          class="button--icon"
+          class="button--icon-custom"
           @click="exampleMethod"
           type="button"
         >
@@ -108,7 +108,7 @@ storiesOf('Molecules/Button', module)
             Search
             <a-icon
               icon="search"
-              class="button__icon"
+              class="button__icon-custom"
               title="iconTitle"
             />
           </template>

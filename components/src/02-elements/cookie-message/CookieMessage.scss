@@ -16,6 +16,8 @@ $cookie-message__close-padding--small  : 0 $spacer--medium 0 $spacer !default;
 $cookie-message__text-padding--small   : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
 $cookie-message__close-icon-size       : 14px !default;
 $cookie-message__close-icon-margin-left: $spacer !default;
+$cookie-message__close-icon-transition : $transition-base !default;
+
 
 .cookie-message {
   display: none;
@@ -91,6 +93,12 @@ $cookie-message__close-icon-margin-left: $spacer !default;
     width: $cookie-message__close-icon-size;
     height: $cookie-message__close-icon-size;
     margin-left: $cookie-message__close-icon-margin-left;
+
+    &:hover,
+    &:focus {
+      fill: $color-primary;
+      transition: $cookie-message__close-icon-transition;
+    }
   }
 
   &--open {

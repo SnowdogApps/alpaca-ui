@@ -1,4 +1,5 @@
 import ALink from '../../atoms/link/Link.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 import AImage from '../../atoms/image/Image.vue'
 import ABadge from '../../atoms/badge/Badge.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
@@ -8,6 +9,7 @@ import AButton from '../../molecules/button/Button.vue'
 export default {
   components: {
     ALink,
+    AIcon,
     AImage,
     ABadge,
     ASwatch,

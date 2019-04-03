@@ -1,7 +1,9 @@
+import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../molecules/button/Button.vue'
 
 export default {
   components: {
+    AIcon,
     AButton
   },
   props: {

@@ -19,6 +19,8 @@ $quantity-update__button-fill-hover--disabled      : $gray !default;
 // Icon
 $quantity-updater__icon-fill                       : $gray-dark !default;
 $quantity-updater__icon-spacing                    : 18px !default;
+$quantity-updater__icon-fill-hover                 : $color-primary !default;
+$quantity-updater__icon-transition                 : $transition-base !default;
 
 // Error
 $quantity-updater__error-margin                    : 0 0 0 $spacer !default;
@@ -92,6 +94,12 @@ $quantity-updater__error-max-width                 : 120px !default;
     fill: $quantity-updater__icon-fill;
     width: $quantity-updater__icon-spacing;
     height: $quantity-updater__icon-spacing;
+
+    &:hover,
+    &:focus {
+      fill: $quantity-updater__icon-fill-hover;
+      transition: $quantity-updater__icon-transition;
+    }
   }
 
   // Disable spin buttons in number input type

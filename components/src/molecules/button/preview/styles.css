@@ -1,22 +1,22 @@
-.button--icon {
+.button--icon-custom {
   align-items: center;
   padding: 0;
   border: 3px solid #31e37d;
   background: #31e37d;
 }
 
-.button--icon:hover,
-.button--icon:focus {
+.button--icon-custom:hover,
+.button--icon-custom:focus {
   border-color: #4c4555;
   background: #4c4555;
 }
 
-.button--icon:hover .button__icon,
-.button--icon:focus .button__icon {
+.button--icon-custom:hover .button__icon,
+.button--icon-custom:focus .button__icon {
   fill: #31e37d;
 }
 
-.button__icon {
+.button__icon-custom {
   width: 20px;
   height: 20px;
   fill: white;

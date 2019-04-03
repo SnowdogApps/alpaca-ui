@@ -16,6 +16,7 @@ $side-menu__sidebar-content-padding: $spacer--medium !default;
     }
 
     .button__icon {
+      background: none;
       fill: $side-menu__icon-fill-color;
     }
   }

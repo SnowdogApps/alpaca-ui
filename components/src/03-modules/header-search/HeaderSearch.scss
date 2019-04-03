@@ -64,10 +64,16 @@ $search-form__placeholder-color : $gray !default;
     }
   }
 
-  .button__icon {
+  &__icon {
     width: $search-form__button-size;
     height: $search-form__button-size;
     padding: $reset;
     fill: $search-form__button-icon-color;
+
+    &:focus,
+    &:hover {
+      fill: $color-primary;
+      transition: $transition-base;
+    }
   }
 }

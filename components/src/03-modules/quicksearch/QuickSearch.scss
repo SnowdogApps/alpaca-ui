@@ -40,6 +40,8 @@ $quicksearch__more-button-padding              : $spacer--medium 0 !default;
 $quicksearch__more-button-border-top           : 1px solid $gray-light !default;
 $quicksearch__more-button-text-align           : center !default;
 $quicksearch__more-button-font-weight          : $font-weight-bold !default;
+$quicksearch__close-fill-hover                 : $color-primary !default;
+$quicksearch__close-transition                 : $transition-base !default;
 
 .quicksearch {
   position: absolute;
@@ -103,6 +105,12 @@ $quicksearch__more-button-font-weight          : $font-weight-bold !default;
     width: $quicksearch__close-size;
     height: $quicksearch__close-size;
     fill: $quicksearch__close-fill;
+
+    &:hover,
+    &:focus {
+      fill: $quicksearch__close-fill-hover;
+      transition: $quicksearch__close-transition;
+    }
   }
 
   &__content {

@@ -1,9 +1,11 @@
 import ASelect from '../../02-elements/select/Select.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../molecules/button/Button.vue'
 import APager from '../../03-modules/pager/Pager.vue'
 
 export default {
   components: {
+    AIcon,
     ASelect,
     AButton,
     APager
