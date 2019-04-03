@@ -36,8 +36,6 @@ $radio__icon-transition   : $transition-base !default;
     z-index: -1;
 
     &:checked + .radio__label {
-      color: $radio__label-color-active;
-
       .radio__icon {
         &::before {
           opacity: 1;
