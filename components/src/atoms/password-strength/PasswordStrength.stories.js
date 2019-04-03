@@ -13,6 +13,7 @@ const info = `
 `
 
 storiesOf('Atoms/PasswordStrength', module)
+  .addParameters({ info })
   .add(
     'Default',
     () => ({
@@ -22,8 +23,7 @@ storiesOf('Atoms/PasswordStrength', module)
           No password
         </a-password-strength>
       `
-    }),
-    { info }
+    })
   )
   .add(
     'Visible Label',
@@ -34,8 +34,7 @@ storiesOf('Atoms/PasswordStrength', module)
           No password
         </a-password-strength>
       `
-    }),
-    { info }
+    })
   )
   .add(
     'Medium strength',
@@ -46,6 +45,5 @@ storiesOf('Atoms/PasswordStrength', module)
           Medium
         </a-password-strength>
       `
-    }),
-    { info }
+    })
   )

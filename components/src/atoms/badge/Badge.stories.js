@@ -11,6 +11,7 @@ const info = `
 `
 
 storiesOf('Atoms/Badge', module)
+  .addParameters({ info })
   .add(
     'Default',
     () => ({
@@ -20,8 +21,7 @@ storiesOf('Atoms/Badge', module)
           Default badge
         </a-badge>
       `
-    }),
-    { info }
+    })
   )
   .add('Custom tag', () => ({
     components: { ABadge },
@@ -30,8 +30,7 @@ storiesOf('Atoms/Badge', module)
         Custom tag
       </a-badge>
     `
-    }),
-    { info }
+    })
   )
   .add('New', () => ({
     components: { ABadge },
@@ -40,8 +39,7 @@ storiesOf('Atoms/Badge', module)
         New badge
       </a-badge>
     `
-    }),
-    { info }
+    })
   )
   .add(
     'Sale',
@@ -52,6 +50,5 @@ storiesOf('Atoms/Badge', module)
           Sale badge
         </a-badge>
       `
-    }),
-    { info }
+    })
   )

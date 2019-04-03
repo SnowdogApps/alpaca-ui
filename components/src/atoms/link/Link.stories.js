@@ -11,6 +11,7 @@ const info = `
 `
 
 storiesOf('Atoms/Link', module)
+  .addParameters({ info })
   .add(
     'Default',
     () => ({
@@ -20,8 +21,7 @@ storiesOf('Atoms/Link', module)
           Default link
         </a-link>
       `
-    }),
-    { info }
+    })
   )
   .add(
     'Inverted',
@@ -35,8 +35,7 @@ storiesOf('Atoms/Link', module)
           Inverted link
         </a-link>
       `
-    }),
-    { info }
+    })
   )
   .add(
     'Secondary',
@@ -50,6 +49,5 @@ storiesOf('Atoms/Link', module)
           Secondary link
         </a-link>
       `
-    }),
-    { info }
+    })
   )

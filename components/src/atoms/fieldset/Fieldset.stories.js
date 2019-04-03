@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/vue'
 import AFieldset from './Fieldset.vue'
 
 storiesOf('Atoms/Fieldset', module)
+  .addParameters({ info: true })
   .add(
     'Default',
     () => ({
@@ -12,6 +13,5 @@ storiesOf('Atoms/Fieldset', module)
           <span>Fieldset content</span>
         </a-fieldset>
       `
-    }),
-    { info: {} }
+    })
   )

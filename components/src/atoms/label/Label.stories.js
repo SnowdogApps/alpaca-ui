@@ -11,6 +11,7 @@ const info = `
 `
 
 storiesOf('Atoms/Label', module)
+  .addParameters({ info })
   .add(
     'Default',
     () => ({
@@ -20,8 +21,7 @@ storiesOf('Atoms/Label', module)
           Label
         </a-label>
       `
-    }),
-    { info }
+    })
   )
   .add(
     'Custom tag',
@@ -32,8 +32,7 @@ storiesOf('Atoms/Label', module)
           Custom tag label
         </a-label>
       `
-    }),
-    { info }
+    })
   )
   .add('Inline',
     () => ({
@@ -43,6 +42,5 @@ storiesOf('Atoms/Label', module)
           Inline label
         </a-label>
       `
-    }),
-    { info }
+    })
   )
