@@ -1,28 +1,35 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import ARadio from './Radio.vue'
 
-import './preview/styles.css'
-
-const data = {
-  options: [
-    {
-      "id": "id-1",
-      "label": "Option one",
-      "value": "option_one"
-    },
-    {
-      "id": "id-2",
-      "label": "Option two",
-      "value": "option_two"
-    },
-    {
-      "id": "id-3",
-      "label": "Options three",
-      "value": "option_three"
+const defaultData = {
+  components: { ARadio },
+  data () {
+    return {
+      options: [
+        {
+          "id": "id-1",
+          "label": "Option one",
+          "value": "option_one"
+        },
+        {
+          "id": "id-2",
+          "label": "Option two",
+          "value": "option_two"
+        },
+        {
+          "id": "id-3",
+          "label": "Options three",
+          "value": "option_three"
+        }
+      ],
+      selected: ''
     }
-  ],
-  selected: ''
+  },
+  methods: {
+    exampleMethod: action('Option changed')
+  }
 }
 
 storiesOf('Molecules/Radio', module)
@@ -30,16 +37,14 @@ storiesOf('Molecules/Radio', module)
   .add(
     'Default',
     () => ({
-      components: { ARadio },
-      data () {
-        return data
-      },
+      ...defaultData,
       template: `
         <a-radio
           :options="options"
           name="radio1"
           legend="Choose option"
           v-model="selected"
+          @change="exampleMethod"
         />
       `
     })
@@ -47,10 +52,7 @@ storiesOf('Molecules/Radio', module)
   .add(
     'With slots',
     () => ({
-      components: { ARadio },
-      data() {
-        return data
-      },
+      ...defaultData,
       template: `
         <a-radio
           :options="options"
