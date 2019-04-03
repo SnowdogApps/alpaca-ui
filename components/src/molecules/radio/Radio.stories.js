@@ -62,7 +62,7 @@ storiesOf('Molecules/Radio', module)
         >
           <template #legend>
             <legend class="radio__legend" id="legend-radio1">
-              Pleas choose one:
+              Please choose one:
             </legend>
           </template>
           <template #option="data">
