@@ -1,0 +1,20 @@
+@import '../../../../components/assets/styles/globals';
+
+$divider-height                 : $spacer !default;
+$divider-height-before          : 100% !default;
+$divider-width-before           : 30% !default;
+$divider-background-color       : $gray-lighter !default;
+$divider-background-color-before: $color-primary !default;
+
+.divider {
+  display: flex;
+  height: $divider-height;
+  background-color: $divider-background-color;
+
+  &::before {
+    content: '';
+    width: $divider-width-before;
+    height: $divider-height-before;
+    background-color: $divider-background-color-before;
+  }
+}
