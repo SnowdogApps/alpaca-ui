@@ -4,33 +4,37 @@ import ARadio from './Radio.vue'
 
 import './preview/styles.css'
 
+const data = {
+  options: [
+    {
+      "id": "id-1",
+      "label": "Option one",
+      "value": "option_one"
+    },
+    {
+      "id": "id-2",
+      "label": "Option two",
+      "value": "option_two"
+    },
+    {
+      "id": "id-3",
+      "label": "Options three",
+      "value": "option_three"
+    }
+  ],
+  selected: ''
+}
+
 storiesOf('Molecules/Radio', module)
   .addParameters({ info: true })
-  .add('Default', () => ({
-    components: { ARadio },
-    data() {
-      return {
-        options: [
-          {
-            "id": "id-1",
-            "label": "Option one",
-            "value": "option_one"
-          },
-          {
-            "id": "id-2",
-            "label": "Option two",
-            "value": "option_two"
-          },
-          {
-            "id": "id-3",
-            "label": "Options three",
-            "value": "option_three"
-          }
-        ],
-        selected: ''
-      }
-    },
-    template: `
+  .add(
+    'Default',
+    () => ({
+      components: { ARadio },
+      data() {
+        return data
+      },
+      template: `
         <div>
           <a-radio
             :options="options"
@@ -42,31 +46,15 @@ storiesOf('Molecules/Radio', module)
             Selected: {{ selected }}
           </div>
         </div>
-    `
-    }))
-  .add('With slots', () => ({
+      `
+    })
+  )
+  .add(
+    'With slots',
+    () => ({
       components: { ARadio },
       data() {
-        return {
-          options: [
-            {
-              "id": "id-1",
-              "label": "Option one",
-              "value": "option_one"
-            },
-            {
-              "id": "id-2",
-              "label": "Option two",
-              "value": "option_two"
-            },
-            {
-              "id": "id-3",
-              "label": "Options three",
-              "value": "option_three"
-            }
-          ],
-          selected: ''
-        }
+        return data
       },
       template: `
         <div>
@@ -82,7 +70,7 @@ storiesOf('Molecules/Radio', module)
               </div>
             </template>
             <template #option="data">
-              <label 
+              <label
                 class="radio__label-custom"
                 :for="data.option.id"
               >
@@ -94,6 +82,7 @@ storiesOf('Molecules/Radio', module)
             Selected: {{ selected }}
           </div>
         </div>
-    `
-    }))
+      `
+    })
+  )
 
