@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 
 import ACheckbox from './Checkbox.vue'
+import { action } from '@storybook/addon-actions'
 
 // Preview styles
 import './preview/styles.css'
@@ -11,22 +12,51 @@ storiesOf('Molecules/Checkbox', module)
     components: { ACheckbox },
     data: () => {
       return {
-        selected: null
+        status: true
       }
     },
     template: `
       <div>
         <a-checkbox
-          id="checkbox-label"
-          name="checkbox-label-name"
-          value="checkbox-label-value"
-          v-model="selected"
+          id="checkbox-default"
+          name="checkbox-default"
+          v-model="status"
+          @input="onChange"
         >
           Checkbox field
         </a-checkbox>
-        Selected: {{ selected }}
+        Selected: {{ status }}
       </div>
-    `
+    `,
+    methods: {
+      onChange: action('Option changed')
+    }
+  }))
+  .add('Custom Values', () => ({
+    components: { ACheckbox },
+    data: () => {
+      return {
+        status: 'not_accepted'
+      }
+    },
+    template: `
+      <div>
+        <a-checkbox
+          id="checkbox-default"
+          name="checkbox-default"
+          v-model="status"
+          value="accepted"
+          unchecked-value="not_accepted"
+          @input="onChange"
+        >
+          Checkbox field
+        </a-checkbox>
+        Selected: {{ status }}
+      </div>
+    `,
+    methods: {
+      onChange: action('Option changed')
+    }
   }))
   .add('Long label', () => ({
     data: () => {
@@ -66,15 +96,15 @@ storiesOf('Molecules/Checkbox', module)
           v-model="selected"
         >
           <template #label>
-            <label 
-              for="checkbox-slots" 
+            <label
+              for="checkbox-slots"
               class="checkbox__label-custom"
             >
               I hereby agree for processing my personal data.
             </label>
           </template>
-        </a-checkbox>     
-        Selected: {{ selected }}  
+        </a-checkbox>
+        Selected: {{ selected }}
       </div>
     `
   }))
