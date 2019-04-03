@@ -1,8 +1,4 @@
-<component
-  :is="link ? 'a' : 'div'"
-  :href="link ? href : null"
-  :class="['checkbox', { 'checkbox--link': link }]"
->
+<div class="checkbox">
   <input
     v-if="!link"
     :id="id"
@@ -20,11 +16,10 @@
       'checkbox__icon'
     ]"
   />
-  <component
-    :is="link ? 'span' : 'label'"
-    :for="link ? null : id"
+  <label
+    :for="id"
     :class="['checkbox__label', labelClass]"
   >
     <slot />
-  </component>
-</component>
+  </label>
+</div>

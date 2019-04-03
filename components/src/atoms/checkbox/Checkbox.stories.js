@@ -27,14 +27,3 @@ storiesOf('Atoms/Checkbox', module)
          </a-checkbox>
     `
   }))
-  .add('Link', () => ({
-    components: { ACheckbox },
-    template: `
-        <a-checkbox
-          link
-          href="#"
-        >
-          Checkbox link label
-         </a-checkbox>
-    `
-  }))

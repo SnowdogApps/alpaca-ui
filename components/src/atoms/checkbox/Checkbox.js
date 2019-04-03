@@ -35,14 +35,6 @@ export default {
       type: String,
       required: false,
       default: null
-    },
-    link: {
-      type: Boolean,
-      default: false
-    },
-    href: {
-      type: String,
-      default: null
     }
   },
   methods: {
