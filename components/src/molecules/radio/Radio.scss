@@ -67,7 +67,7 @@ $radio__dot-size          : 6px !default;
 
   &__icon {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     border: $radio__icon-border;
     border-radius: $radio__icon-size;
     width: $radio__icon-size;
