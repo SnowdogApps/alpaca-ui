@@ -14,7 +14,7 @@ const info = `
   - \`.button--fluid\` - Selector for applying fluid styles
   ---
 `
-storiesOf('Molecules/Button', module)
+storiesOf('Atoms/Button', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AButton },
