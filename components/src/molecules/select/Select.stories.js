@@ -1,8 +1,10 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import countries from '../../../mocks/countries.json'
 
 import ASelect from './Select.vue'
+
 
 storiesOf('Molecules/Select', module)
   .addParameters({ info: true })
@@ -10,15 +12,21 @@ storiesOf('Molecules/Select', module)
     components: { ASelect },
     data () {
       return {
-        countries
+        countries,
+        selectedCountry: 'PL'
       }
+    },
+    methods: {
+      showCountry: action('Selected country')
     },
     template: `
       <a-select
         id="field-id"
         name="field-name"
         :options="countries"
-        selected="PL"
+        :selected="selectedCountry"
+        v-model="selectedCountry"
+        @change="showCountry"
       >
         Label text
       </a-select>
@@ -28,15 +36,21 @@ storiesOf('Molecules/Select', module)
     components: { ASelect },
     data () {
       return {
-        countries
+        countries,
+        selectedCountry: 'PL'
       }
+    },
+    methods: {
+      showCountry: action('Selected country')
     },
     template: `
       <a-select
         id="field-id"
         name="field-name"
-        :options="countryOptions"
-        selected="PL"
+        :options="countries"
+        :selected="selectedCountry"
+        v-model="selectedCountry"
+        @change="showCountry"
         label-class="label--hidden"
       >
         Label text
