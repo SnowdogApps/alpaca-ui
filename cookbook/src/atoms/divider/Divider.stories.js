@@ -6,7 +6,5 @@ storiesOf('Atoms/Divider', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ADivider },
-    template: `
-      <a-divider/>
-    `
+    template: '<a-divider/>'
   }))
