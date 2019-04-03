@@ -70,7 +70,6 @@ export default {
        * Event for select/unselect
        * @type {Event}
        */
-      console.log(checked ? this.value : this.uncheckedValue)
       this.$emit('input', checked ? this.value : this.uncheckedValue)
     }
   }
