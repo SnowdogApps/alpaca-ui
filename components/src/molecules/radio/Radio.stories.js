@@ -31,7 +31,7 @@ storiesOf('Molecules/Radio', module)
     'Default',
     () => ({
       components: { ARadio },
-      data() {
+      data () {
         return data
       },
       template: `
