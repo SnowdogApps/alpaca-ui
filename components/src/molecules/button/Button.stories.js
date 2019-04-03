@@ -80,7 +80,6 @@ storiesOf('Molecules/Button', module)
     template: `
         <a-button
           class="button--icon"
-          icon="search"
           @click="exampleMethod"
           type="button"
         >
@@ -102,7 +101,6 @@ storiesOf('Molecules/Button', module)
     template: `
         <a-button
           class="button--icon"
-          icon="search"
           @click="exampleMethod"
           type="button"
         >

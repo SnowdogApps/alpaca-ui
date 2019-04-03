@@ -1,6 +1,7 @@
 <button
-  class="button"
+  :class="{'button': defaultClass}"
   @click="onClick"
 >
+  <!-- @slot Slot for button content -->
   <slot />
 </button>
