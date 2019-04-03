@@ -2,9 +2,8 @@ import { storiesOf } from '@storybook/vue'
 
 import AImage from './Image.vue'
 
-const info = {}
-
 storiesOf('Atoms/Image', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { AImage },
     template: `
@@ -13,6 +12,5 @@ storiesOf('Atoms/Image', module)
         alt="alt image text"
       />
     `
-    }),
-    { info }
+    })
   )

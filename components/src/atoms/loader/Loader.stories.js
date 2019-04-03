@@ -10,6 +10,7 @@ const info = `
 `
 
 storiesOf('Atoms/Loader', module)
+  .addParameters({ info })
   .add(
     'Default',
     () => ({
@@ -20,6 +21,5 @@ storiesOf('Atoms/Loader', module)
           aria-label="Do not refresh the page"
         />
       `
-    }),
-    { info }
+    })
   )
