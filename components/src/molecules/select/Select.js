@@ -27,10 +27,10 @@ export default {
       required: true
     },
     /**
-     * Value of selected option
+     * Value of selected option (used with v-model)
      */
-    selected: {
-      type: String,
+    value: {
+      type: [String, Number],
       required: false,
       default: null
     },

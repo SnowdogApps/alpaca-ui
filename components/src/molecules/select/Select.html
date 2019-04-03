@@ -4,7 +4,7 @@
     :class="['select__label', labelClass]"
   >
     <!-- @slot Label text -->
-    <slot />
+    <slot name="label"/>
   </a-label>
   <div class="select__field">
     <select
@@ -13,14 +13,17 @@
       :class="['select__input', selectClass]"
       @focus="$emit('focus')"
       @blur="$emit('blur')"
-      @change="$emit('change', $event.target.value)"
+      @change="$emit('input', $event.target.value)"
     >
-      <option v-if="!selected" />
+      <option disabled selected v-if="!value">
+        <!-- @slot Default option text -->
+        <slot name="option"/>
+      </option>
       <option
         v-for="(option, key) in options"
         :key="key"
         :value="option.value"
-        :selected="option.value === selected"
+        :selected="option.value === value"
       >
         {{ option.text }}
       </option>
