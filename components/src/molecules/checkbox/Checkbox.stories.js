@@ -61,12 +61,12 @@ storiesOf('Molecules/Checkbox', module)
   .add(
     'Long label',
     () => ({
+      components: { ACheckbox },
       data: () => {
         return {
           selected: null
         }
       },
-      components: { ACheckbox },
       template: `
         <a-checkbox
           id="checkbox-long-label"
