@@ -26,22 +26,6 @@ export default {
     defaultIconClass: {
       type: Boolean,
       default: true
-    },
-    secondary: {
-      type: Boolean,
-      default: false
-    },
-    blank: {
-      type: Boolean,
-      default: false
-    },
-    link: {
-      type: String,
-      default: null
-    },
-    fluid: {
-      type: Boolean,
-      default: false
     }
   },
   methods: {
