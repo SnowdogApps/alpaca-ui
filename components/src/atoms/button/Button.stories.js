@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
 import AButton from './Button.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
+import AIcon from '../icon/Icon.vue'
 
 import './preview/styles.css'
 

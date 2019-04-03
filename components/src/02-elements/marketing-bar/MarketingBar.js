@@ -1,5 +1,5 @@
 import AIcon from '../../atoms/icon/Icon.vue'
-import AButton from '../../molecules/button/Button.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 export default {
   components: {
