@@ -1,6 +1,6 @@
 import AHeading from '../../atoms/heading/Heading.vue'
 import AButton from '../../02-elements/button/Button.vue'
-import ADivider from '../../02-elements/divider/Divider.vue'
+import ADivider from '../../../../cookbook/src/atoms/divider/Divider.vue'
 import AList from '../../02-elements/list/List.vue'
 import AListItem from '../../02-elements/list-item/ListItem.vue'
 
