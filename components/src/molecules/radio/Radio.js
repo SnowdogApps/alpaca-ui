@@ -1,13 +1,7 @@
 import ALabel from '../../atoms/label/Label.vue'
 
 export default {
-  components: {
-    ALabel
-  },
-  model: {
-    prop: 'checkedValue',
-    event: 'change'
-  },
+  components: { ALabel },
   props: {
     /**
      * Array with radio options. Every object should have keys: id, value and label.
@@ -37,18 +31,21 @@ export default {
       type: String,
       default: null
     },
-    checkedValue: {
+    /**
+     * Default option to handle v-model
+     */
+    value: {
       type: [String, Object, Number, Boolean],
       default: null
     }
   },
   methods: {
-    change(ev) {
+    change(event) {
       /**
        * Event for change input
        * @type {Event}
        */
-      this.$emit('change', ev.target.value)
+      this.$emit('change', event.target.value)
     }
   }
 }

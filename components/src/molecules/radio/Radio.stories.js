@@ -28,7 +28,7 @@ const defaultData = {
     }
   },
   methods: {
-    exampleMethod: action('Option changed')
+    onChange: action('Option changed')
   }
 }
 
@@ -44,7 +44,7 @@ storiesOf('Molecules/Radio', module)
           name="radio1"
           legend="Choose option"
           v-model="selected"
-          @change="exampleMethod"
+          @change="onChange"
         />
       `
     })
@@ -58,19 +58,20 @@ storiesOf('Molecules/Radio', module)
           :options="options"
           name="radio1"
           v-model="selected"
-          input-class="radio__input-custom"
+          @change="onChange"
         >
-          <template #label>
-            <div class="radio__legend-custom">
-              Choose option
-            </div>
+          <template #legend>
+            <legend class="radio__legend" id="legend-radio1">
+              Pleas choose one:
+            </legend>
           </template>
           <template #option="data">
             <label
-              class="radio__label-custom"
               :for="data.option.id"
+              class="radio__label"
             >
-              {{ data.option.label }}
+              <span class="radio__icon" />
+              Prefix - {{ data.option.label }}
             </label>
           </template>
         </a-radio>

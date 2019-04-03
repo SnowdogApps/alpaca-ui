@@ -1,8 +1,8 @@
 <div class="radio">
-  <fieldset class="radio__fieldset">
-    <!-- @slot Label content -->
-    <slot name="label">
-      <legend class="radio__legend">
+  <fieldset class="radio__fieldset" :aria-labelledby="`legend-${name}`">
+    <!-- @slot Custom legend content (Named slots) -->
+    <slot name="legend">
+      <legend class="radio__legend" :id="`legend-${name}`">
         {{ legend }}
       </legend>
     </slot>
@@ -15,12 +15,12 @@
         :id="option.id"
         :name="name"
         :value="option.value"
-        :checked="checkedValue === option.value"
+        :checked="value"
         type="radio"
         :class="['radio__field', inputClass]"
         @change="change"
       >
-      <!-- @slot Scoped slots for options -->
+      <!-- @slot Custom option content (Scoped slots) -->
       <slot
         name="option"
         :option="option"
