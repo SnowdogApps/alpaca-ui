@@ -1,9 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 
 import ARadio from './Radio.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
 
 const info = {}
+
+import './preview/styles.css'
 
 storiesOf('Molecules/Radio', module)
   .add('Default', () => ({
@@ -35,17 +36,19 @@ storiesOf('Molecules/Radio', module)
           <a-radio
             :options="options"
             name="radio1"
-            legend="Radio"
+            legend="Choose option"
             v-model="selected"
           />
-          Selected: {{ selected }}
+          <div class="radio__results">
+            Selected: {{ selected }}
+          </div>
         </div>
     `
     }),
     { info }
   )
   .add('With slots', () => ({
-      components: { ARadio, AIcon },
+      components: { ARadio },
       data() {
         return {
           options: [
@@ -69,27 +72,31 @@ storiesOf('Molecules/Radio', module)
         }
       },
       template: `
-        <a-radio
-          :options="options"
-          name="radio1"
-        >
-          <template #label>
-            <div :style="{ margin: '10px 0'}">
-              Radio
-            </div>
-          </template>
-          <template #option="data">
-            <div>
-              <a-icon
-                icon="checked"
-                :style="{margin: '0 8px', display: 'inline-block'}"
-              />
-              <span :style="{verticalAlign: 'super'}">
+        <div>
+          <a-radio
+            :options="options"
+            name="radio1"
+            v-model="selected"
+            input-class="radio__input-custom"
+          >
+            <template #label>
+              <div class="radio__legend-custom">
+                Choose option
+              </div>
+            </template>
+            <template #option="data">
+              <label 
+                class="radio__label-custom"
+                :for="data.option.id"
+              >
                 {{ data.option.label }}
-              </span>
-            </div>
-          </template>
-        </a-radio>
+              </label>
+            </template>
+          </a-radio>
+          <div class="radio__results">
+            Selected: {{ selected }}
+          </div>
+        </div>
     `
     }),
     { info }

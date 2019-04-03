@@ -12,15 +12,19 @@ $radio__icon-transition   : $transition-base !default;
 .radio {
   position: relative;
   margin-bottom: $spacer--medium;
-  border: none;
 
   &__fieldset {
     padding: $reset;
     margin: $reset;
+    border: none;
   }
 
   &__legend {
     padding-bottom: $spacer--medium;
+  }
+
+  &__item {
+    position: relative;
   }
 
   &__field {

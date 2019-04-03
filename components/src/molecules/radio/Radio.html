@@ -1,35 +1,38 @@
-<fieldset
-  class="radio"
->
-  <!-- @slot Label content -->
-  <slot name="label">
-    <legend class="radio__legend">
-      {{ legend }}
-    </legend>
-  </slot>
-  <template v-for="option in options">
-    <input
-      :key="option.id"
-      :id="option.id"
-      :name="name"
-      :value="option.value"
-      :checked="checkedValue === option.value"
-      type="radio"
-      class="radio__field"
-      @change="change"
-    >
-    <!-- @slot Scoped slots for options -->
-    <slot
-      name="option"
-      :option="option"
-    >
-      <a-label
-        :for="option.id"
-        class="radio__label"
-      >
-        <span class="radio__icon" />
-        {{ option.label }}
-      </a-label>
+<div class="radio">
+  <fieldset class="radio__fieldset">
+    <!-- @slot Label content -->
+    <slot name="label">
+      <legend class="radio__legend">
+        {{ legend }}
+      </legend>
     </slot>
-  </template>
-</fieldset>
+    <div
+      v-for="option in options"
+      class="radio__item"
+    >
+      <input
+        :key="option.id"
+        :id="option.id"
+        :name="name"
+        :value="option.value"
+        :checked="checkedValue === option.value"
+        type="radio"
+        :class="['radio__field', inputClass]"
+        @change="change"
+      >
+      <!-- @slot Scoped slots for options -->
+      <slot
+        name="option"
+        :option="option"
+      >
+        <a-label
+          :for="option.id"
+          class="radio__label"
+        >
+          <span class="radio__icon" />
+          {{ option.label }}
+        </a-label>
+      </slot>
+    </div>
+  </fieldset>
+</div>

@@ -30,6 +30,13 @@ export default {
       type: String,
       default: null
     },
+    /**
+     * Class for input
+     */
+    inputClass: {
+      type: String,
+      default: null
+    },
     checkedValue: {
       type: [String, Object, Number, Boolean],
       default: null
