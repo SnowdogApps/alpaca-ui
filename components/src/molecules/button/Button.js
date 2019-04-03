@@ -3,14 +3,6 @@ import AIcon from '../../atoms/icon/Icon.vue'
 export default {
   components: { AIcon },
   props: {
-    tag: {
-      type: String,
-      default: 'button'
-    },
-    type: {
-      type: String,
-      default: 'button'
-    },
     defaultClass: {
       type: Boolean,
       default: true

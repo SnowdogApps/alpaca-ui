@@ -9,6 +9,7 @@ storiesOf('Elements/Button', module)
     template: `
         <a-button
           @click="exampleMethod"
+          type="button"
         >
           Default button
          </a-button>
@@ -23,6 +24,7 @@ storiesOf('Elements/Button', module)
         <a-button
           secondary
           @click="exampleMethod"
+          type="button"
         >
           Secondary button
          </a-button>
@@ -37,6 +39,7 @@ storiesOf('Elements/Button', module)
         <a-button
           blank
           @click="exampleMethod"
+          type="button"
         >
           Blank button
          </a-button>
@@ -51,6 +54,7 @@ storiesOf('Elements/Button', module)
         <a-button
           fluid
           @click="exampleMethod"
+          type="button"
         >
           Fluid button
          </a-button>
@@ -66,6 +70,7 @@ storiesOf('Elements/Button', module)
           tag="a"
           link="#"
           @click="exampleMethod"
+          type="button"
         >
           Link button
          </a-button>
@@ -80,6 +85,7 @@ storiesOf('Elements/Button', module)
         <a-button
           icon="search"
           @click="exampleMethod"
+          type="button"
         />
     `,
     methods: {
@@ -92,6 +98,7 @@ storiesOf('Elements/Button', module)
         <a-button
           icon="search"
           @click="exampleMethod"
+          type="button"
         >
           Search
          </a-button>

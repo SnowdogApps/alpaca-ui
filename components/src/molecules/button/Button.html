@@ -1,6 +1,4 @@
-<component
-  :is="tag"
-  :type="tag !== 'a' ? type : null"
+<button
   :class="[
     {
       button: tag && defaultClass,
@@ -11,7 +9,6 @@
       'button--fluid': fluid
     }
   ]"
-  :href="tag === 'a' && link"
   @click="onClick"
   >
   <slot />
@@ -24,4 +21,4 @@
     ]"
     :title="iconTitle || icon"
   />
-</component>
+</button>
