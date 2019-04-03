@@ -15,7 +15,9 @@ $checkbox__color--fake          : $gray-dark !default;
 
 .checkbox {
   position: relative;
+  padding: $reset;
   margin-bottom: $checkbox__margin;
+  border: none;
 
   &--link {
     display: block;

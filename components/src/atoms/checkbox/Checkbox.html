@@ -1,6 +1,5 @@
 <div class="checkbox">
   <input
-    v-if="!link"
     :id="id"
     :name="name"
     :value="value"
@@ -9,17 +8,19 @@
     class="checkbox__field"
     @change="change($event.target.checked)"
   >
-  <a-icon
-    icon="checked"
-    :class="[
+  <slot name="label">
+    <a-icon
+      icon="checked"
+      :class="[
       iconClass,
       'checkbox__icon'
     ]"
-  />
-  <label
-    :for="id"
-    :class="['checkbox__label', labelClass]"
-  >
-    <slot />
-  </label>
+    />
+    <label
+      :for="id"
+      :class="['checkbox__label', labelClass]"
+    >
+      <slot />
+    </label>
+  </slot>
 </div>
