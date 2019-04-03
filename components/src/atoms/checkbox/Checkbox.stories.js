@@ -2,6 +2,9 @@ import { storiesOf } from '@storybook/vue'
 
 import ACheckbox from './Checkbox.vue'
 
+// Preview styles
+import './preview/styles.css'
+
 storiesOf('Atoms/Checkbox', module)
   .add('Default', () => ({
     components: { ACheckbox },
@@ -34,9 +37,10 @@ storiesOf('Atoms/Checkbox', module)
           id="checkbox-slots"
           name="checkbox-slots"
           value="checkbox-slots"
+          input-class="checkbox__field-custom"
         >
           <template #label>
-            <span>I hereby agree for processing my personal data.</span>
+            <label for="checkbox-slots" class="checkbox__label-custom">I hereby agree for processing my personal data.</label>
           </template>
          </a-checkbox>
     `

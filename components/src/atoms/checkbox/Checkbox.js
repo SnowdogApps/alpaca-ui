@@ -33,7 +33,10 @@ export default {
     },
     labelClass: {
       type: String,
-      required: false,
+      default: null
+    },
+    inputClass: {
+      type: String,
       default: null
     }
   },

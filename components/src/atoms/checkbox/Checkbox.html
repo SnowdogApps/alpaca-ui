@@ -5,7 +5,7 @@
     :value="value"
     :checked="selectedValue === value"
     type="checkbox"
-    class="checkbox__field"
+    :class="['checkbox__field', inputClass]"
     @change="change($event.target.checked)"
   >
   <slot name="label">
