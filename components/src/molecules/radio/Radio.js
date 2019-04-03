@@ -1,4 +1,9 @@
+import ALabel from '../../atoms/label/Label.vue'
+
 export default {
+  components: {
+    ALabel
+  },
   model: {
     prop: 'checkedValue',
     event: 'change'

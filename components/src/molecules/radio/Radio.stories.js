@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 
 import ARadio from './Radio.vue'
-import AIcon from '../icon/Icon.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 const info = {}
 
-storiesOf('Atoms/Radio', module)
+storiesOf('Molecules/Radio', module)
   .add('Default', () => ({
     components: { ARadio },
     data() {
