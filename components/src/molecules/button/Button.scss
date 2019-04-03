@@ -68,17 +68,6 @@ $button__width--fluid               : 100% !default;
     color: $button__font-color-hover;
   }
 
-  &--link {
-    align-items: center;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: $button__font-color-hover;
-    }
-  }
-
   &--blank {
     background: $button__background--blank;
     color: $button__font-color--blank;

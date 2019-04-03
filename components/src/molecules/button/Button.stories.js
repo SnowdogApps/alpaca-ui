@@ -9,7 +9,6 @@ const info = `
   - \`.button--icon\` - Selector for applying icon styles
   - \`.button--secondary\` - Selector for applying secondary styles
   - \`.button--blank\` - Selector for applying blank styles
-  - \`.button--link\` - Selector for applying link styles
   - \`.button--fluid\` - Selector for applying fluid styles
   ---
 `
@@ -68,21 +67,6 @@ storiesOf('Molecules/Button', module)
           type="button"
         >
           Fluid button
-         </a-button>
-    `,
-    methods: {
-      exampleMethod: action('Clicked button')
-    }
-  }))
-  .add('Link', () => ({
-    components: { AButton },
-    template: `
-        <a-button
-          class="button--link"
-          @click="exampleMethod"
-          type="button"
-        >
-          Link button
          </a-button>
     `,
     methods: {
