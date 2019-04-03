@@ -6,6 +6,7 @@ import ACheckbox from './Checkbox.vue'
 import './preview/styles.css'
 
 storiesOf('Atoms/Checkbox', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { ACheckbox },
     template: `
