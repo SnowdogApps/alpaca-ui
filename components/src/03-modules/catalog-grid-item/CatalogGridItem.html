@@ -55,6 +55,7 @@
     <div class="catalog-grid-item__actions">
       <form class="catalog-grid-item__primary-form">
         <a-button
+          type="button"
           class="button--secondary catalog-grid-item__primary-action"
           @click.stop.prevent="addToCart"
         >
@@ -64,6 +65,7 @@
 
       <div class="catalog-grid-item__secondary-action">
         <a-button
+          type="button"
           :aria-label="wishListAriaLabel"
           @click="addToWishList"
         >
@@ -71,6 +73,7 @@
         </a-button>
 
         <a-button
+          type="button"
           :aria-label="compareAriaLabel"
           @click="addToCompare"
         >

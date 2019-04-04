@@ -8,6 +8,7 @@
   </label>
   <div class="quantity-update__qty">
     <a-button
+      type="button"
       :aria-label="decrementAriaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--minus',
@@ -39,6 +40,7 @@
       @input="changeValue"
     />
     <a-button
+      type="button"
       :aria-label="incrementAriaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--plus',

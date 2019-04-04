@@ -6,6 +6,7 @@
       { 'slide-menu__item--no-hover' : isRootPosition }
     ]">
     <a-button
+      type="button"
       v-if="!isRootPosition"
       class="slide-menu__button slide-menu__button--prev"
       @click="load(prevLevel)"
@@ -37,6 +38,7 @@
         </router-link>
         <a-button
           v-if="item.nodes"
+          type="button"
           class="slide-menu__button"
           @click="load(item.level)"
         >
