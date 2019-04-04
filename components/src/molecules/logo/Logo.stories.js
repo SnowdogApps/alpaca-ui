@@ -18,7 +18,8 @@ storiesOf('Molecules/Logo', module)
         />
     `
   }))
-  .add('With slots',
+  .add(
+    'With slots',
     () => ({
       components: { ALogo },
       template: `
