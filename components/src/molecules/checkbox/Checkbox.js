@@ -3,30 +3,23 @@ import AIcon from '../../atoms/icon/Icon.vue'
 export default {
   components: { AIcon },
   model: {
-    prop: 'finalValue',
+    prop: 'checked',
     event: 'input'
   },
   props: {
     /**
-     * Final value
+     * Prop to handle v-model
      */
-    finalValue: {
-      type: [String, Boolean, Number, Object],
-      default: false
-    },
-    /**
-     * Unchecked value
-     */
-    uncheckedValue: {
-      type: [String, Boolean, Number, Object],
+    checked: {
+      type: Boolean,
       default: false
     },
     /**
      * Input value
      */
     value: {
-      type: [String, Boolean, Number, Object],
-      default: true
+      type: String,
+      default: 0
     },
     /**
      * Input id
@@ -62,15 +55,6 @@ export default {
     inputClass: {
       type: String,
       default: null
-    }
-  },
-  methods: {
-    change(checked) {
-      /**
-       * Event for select/unselect
-       * @type {Event}
-       */
-      this.$emit('input', checked ? this.value : this.uncheckedValue)
     }
   }
 }
