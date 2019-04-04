@@ -2,8 +2,6 @@ import { storiesOf } from '@storybook/vue'
 
 import APrice from './Price.vue'
 
-import price from './mocks/price.json'
-
 const info = `
   ---
   #### Use these modifiers with \`.price\` class.
@@ -12,69 +10,62 @@ const info = `
   ---
 `
 
+const defaultData = {
+  components: { APrice },
+  data: () => {
+    return {
+      price: '$1 400.00',
+      special: '$1 299 00',
+      old: '$1 999.99'
+    }
+  }
+}
+
 storiesOf('Elements/Price', module)
   .addParameters({ info })
   .add('Default', () => ({
-    data: () => ({
-      price
-    }),
-    components: { APrice },
+    ...defaultData,
     template: `
         <a-price>
-          <span>{{ price.default }}</span>
+          <span>{{ price }}</span>
         </a-price>
     `
   }))
   .add('Default -- Large', () => ({
-    data: () => ({
-      price
-    }),
-    components: { APrice },
+    ...defaultData,
     template: `
         <a-price class="price--large">
-          <span>{{ price.default }}</span>
+          <span>{{ price }}</span>
         </a-price>
     `
   }))
   .add('Special Price', () => ({
-    components: { APrice },
-    data: () => ({
-      price
-    }),
+    ...defaultData,
     template: `
-        <a-price :specialPrice="price.special"/>
+        <a-price :specialPrice="special"/>
     `
   }))
   .add('Old price', () => ({
-    components: { APrice },
-    data: () => ({
-      price
-    }),
+    ...defaultData,
     template: `
-        <a-price :oldPrice="price.old"/>
+        <a-price :oldPrice="old"/>
     `
   }))
   .add('With special price', () => ({
-    components: { APrice },
-    data: () => ({
-      price
-    }),
+    ...defaultData,
     template: `
         <a-price
           :oldPrice="price.old"
-          :specialPrice="price.special"
+          :specialPrice="special"
         />
     `
   }))
   .add('With special price -- Large', () => ({
-    components: { APrice },
-    data: () => ({
-      price
-    }),
+    ...defaultData,
     template: `
         <a-price
-          :oldPrice="price.old"
-          :specialPrice="price.special"
+          :oldPrice="old"
+          :specialPrice="special"
           class="price--large"
         />
     `
