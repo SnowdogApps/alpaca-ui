@@ -20,7 +20,9 @@ storiesOf('Elements/Price', module)
     }),
     components: { APrice },
     template: `
-        <a-price :price="price.default"/>
+        <a-price>
+          <span>{{ price.default }}</span>
+        </a-price>
     `
   }))
   .add('Default -- Large', () => ({
@@ -29,10 +31,9 @@ storiesOf('Elements/Price', module)
     }),
     components: { APrice },
     template: `
-        <a-price
-          :price="price.default"
-          class="price--large"
-        />
+        <a-price class="price--large">
+          <span>{{ price.default }}</span>
+        </a-price>
     `
   }))
   .add('Special Price', () => ({

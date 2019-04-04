@@ -1,9 +1,5 @@
 export default {
   props: {
-    price: {
-      type: [String, Number],
-      default: null
-    },
     specialPrice: {
       type: [String, Number],
       default: null
@@ -12,10 +8,6 @@ export default {
       type: [String, Number],
       default: null
     },
-    regularPriceClass: {
-      type: String,
-      default: ''
-    },
     specialPriceClass: {
       type: String,
       default: ''
@@ -23,10 +15,6 @@ export default {
     oldPriceClass: {
       type: String,
       default: ''
-    },
-    ariaLabelPrice: {
-      type: String,
-      default: 'Price:'
     },
     ariaLabelSpecial: {
       type: String,

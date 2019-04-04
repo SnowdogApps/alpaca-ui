@@ -1,23 +1,24 @@
 <div class="price">
-  <del
-    v-if="oldPrice"
-    :aria-label="oldPriceAriaLabel"
-    :class="['price--old', oldPriceClass]"
-  >
-    {{ oldPrice }}
-  </del>
-  <ins
-    v-if="specialPrice"
-    :aria-label="specialPriceAriaLabel"
-    :class="['price--special', specialPriceClass]"
-  >
-    {{ specialPrice }}
-  </ins>
-  <span
-    v-if="price"
-    :aria-label="normalPriceAriaLabel"
-    :class="[regularPriceClass]"
-  >
-      {{ price }}
-    </span>
+  <!--@slot Custom old price slots (Named slots)-->
+  <slot name="oldPrice">
+    <del
+      v-if="oldPrice"
+      :aria-label="oldPriceAriaLabel"
+      :class="['price--old', oldPriceClass]"
+    >
+      {{ oldPrice }}
+    </del>
+  </slot>
+  <!--@slot Custom special price slots (Named slots)-->
+  <slot name="specialPrice">
+    <ins
+      v-if="specialPrice"
+      :aria-label="specialPriceAriaLabel"
+      :class="['price--special', specialPriceClass]"
+    >
+      {{ specialPrice }}
+    </ins>
+  </slot>
+  <!--@slot Default price slots-->
+  <slot/>
 </div>
