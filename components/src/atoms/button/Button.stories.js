@@ -10,7 +10,7 @@ const info = `
   #### Use these modifiers with \`.button\` class.
   - \`.button--secondary\` - Selector for applying secondary styles
   - \`.button--blank\` - Selector for applying blank styles
-  - \`.button--fluid\` - Selector for applying fluid styles
+  - \`.button--fluid\` - Selector for applying fluid styles (width: 100%)
   ---
 `
 
