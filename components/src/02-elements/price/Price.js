@@ -8,14 +8,6 @@ export default {
       type: [String, Number],
       default: null
     },
-    specialPriceClass: {
-      type: String,
-      default: ''
-    },
-    oldPriceClass: {
-      type: String,
-      default: ''
-    },
     ariaLabelSpecial: {
       type: String,
       default: 'Special price:'
@@ -31,9 +23,6 @@ export default {
     },
     oldPriceAriaLabel() {
       return `${this.ariaLabelOld} ${this.oldPrice}`
-    },
-    normalPriceAriaLabel() {
-      return `${this.ariaLabelPrice} ${this.price}`
     }
   }
 }

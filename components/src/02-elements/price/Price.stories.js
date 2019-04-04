@@ -55,18 +55,21 @@ storiesOf('Elements/Price', module)
     ...defaultData,
     template: `
         <a-price
-          :oldPrice="price.old"
+          :oldPrice="old"
           :specialPrice="special"
         />
     `
   }))
-  .add('With special price -- Large', () => ({
+  .add('With slots', () => ({
     ...defaultData,
     template: `
-        <a-price
-          :oldPrice="old"
-          :specialPrice="special"
-          class="price--large"
-        />
+      <a-price>
+        <template #oldPrice>
+          <span :style="{color: 'orange'}"> {{old}} </span>&nbsp;
+        </template> 
+        <template #specialPrice>
+          <span :style="{color: 'green'}"> {{special}} </span>
+        </template>
+      </a-price>
     `
   }))

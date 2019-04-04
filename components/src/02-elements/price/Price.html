@@ -4,7 +4,7 @@
     <del
       v-if="oldPrice"
       :aria-label="oldPriceAriaLabel"
-      :class="['price--old', oldPriceClass]"
+      class="price--old"
     >
       {{ oldPrice }}
     </del>
@@ -14,7 +14,7 @@
     <ins
       v-if="specialPrice"
       :aria-label="specialPriceAriaLabel"
-      :class="['price--special', specialPriceClass]"
+      class="price--special"
     >
       {{ specialPrice }}
     </ins>
