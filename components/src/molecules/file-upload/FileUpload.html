@@ -23,9 +23,9 @@
     ]"
     for="file"
   >
-      <span class="file-upload__label">
-        {{ labelText }}
-      </span>
+    <span class="file-upload__label">
+      {{ labelText }}
+    </span>
 
     <a-button
       class="button file-upload__button"
@@ -35,14 +35,14 @@
       @click.native="chooseFile"
     >
       {{ uploadButtonText }}
-     </a-button>
+    </a-button>
 
     <span
       ref="fileName"
       class="file-upload__name"
       tabindex="0"
     >
-        {{ fileName || emptyFileNameText }}
-      </span>
+      {{ fileName || emptyFileNameText }}
+    </span>
   </label>
 </div>
