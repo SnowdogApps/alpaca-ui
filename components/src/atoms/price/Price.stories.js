@@ -64,10 +64,10 @@ storiesOf('Atoms/Price', module)
     template: `
       <a-price>
         <template #oldPrice>
-          <span :style="{color: 'orange'}"> {{old}} </span>&nbsp;
+          <span :style="{color: '#ab5b1f'}"> {{old}} </span>&nbsp;
         </template> 
         <template #specialPrice>
-          <span :style="{color: 'green'}"> {{special}} </span>
+          <span :style="{color: '#008000'}"> {{special}} </span>
         </template>
       </a-price>
     `
