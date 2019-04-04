@@ -12,11 +12,11 @@ $file-upload__button-padding: 0 $spacer--large !default;
   margin-bottom: $file-upload__margin;
 
   &__wrapper {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    position: relative;
   }
 
   &__input {
@@ -31,21 +31,21 @@ $file-upload__button-padding: 0 $spacer--large !default;
   }
 
   &__name {
-    font-size: $file-upload__font-size;
     margin-top: $file-upload__margin;
+    font-size: $file-upload__font-size;
 
     @include mq($screen-s) {
-      margin-left: $file-upload__margin;
       margin-top: $reset;
+      margin-left: $file-upload__margin;
     }
   }
 
   &__button {
     display: flex;
     align-items: center;
+    width: 100%;
     margin-bottom: $reset;
     padding: $file-upload__button-padding;
-    width: 100%;
 
     @include mq($screen-s) {
       width: auto;

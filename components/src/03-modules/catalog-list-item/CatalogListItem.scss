@@ -91,10 +91,10 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
   }
 
   &__badge {
-    border-radius: 0;
     padding: $catalog-list-item__badge-padding;
     font-size: $catalog-list-item__badge-font-size;
     background-color: $catalog-list-item__badge-bg-color;
+    border-radius: 0;
 
     @include mq($screen-m) {
       position: absolute;
@@ -148,8 +148,8 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
   &__price {
     margin: $catalog-list-item__price-margin;
-    font-size: $catalog-list-item__font-size--main;
     font-weight: $catalog-list-item__price-font-weight;
+    font-size: $catalog-list-item__font-size--main;
     white-space: nowrap;
 
     @include mq($screen-m) {
@@ -174,13 +174,13 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
   }
 
   &__actions-primary-button {
-    height: $catalog-list-item__actions-primary-button-height;
     width: $catalog-list-item__actions-primary-button-width;
+    height: $catalog-list-item__actions-primary-button-height;
     font-size: $catalog-list-item__font-size;
 
     @include mq($screen-m) {
-      height: $catalog-list-item__actions-primary-button-height\@medium;
       width: $catalog-list-item__actions-primary-button-width\@medium;
+      height: $catalog-list-item__actions-primary-button-height\@medium;
       padding: $catalog-list-item__actions-primary-button-padding\@medium;
       font-size: $catalog-list-item__font-size\@medium;
     }
@@ -188,8 +188,8 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
   &__actions-secondary {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     margin: $reset;
 
     @include mq($screen-m) {
@@ -201,14 +201,14 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
       width: $catalog-list-item__actions-secondary-button-width;
       min-width: $catalog-list-item__actions-secondary-button-width;
       height: $catalog-list-item__actions-secondary-button-height;
+      background-color: transparent;
       border: none;
       border-radius: 0;
-      background-color: transparent;
 
       @include mq($screen-m) {
-        margin: $catalog-list-item__actions-secondary-button-margin\@medium;
         width: $catalog-list-item__actions-secondary-button-width\@medium;
         height: $catalog-list-item__actions-secondary-button-height\@medium;
+        margin: $catalog-list-item__actions-secondary-button-margin\@medium;
       }
 
       &:hover,

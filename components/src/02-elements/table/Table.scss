@@ -9,14 +9,14 @@ $table__border                   : 1px solid $gray-light !default;
 
 .table {
   width: 100%;
+  margin: 1em 0;
+  color: $table__color;
+  font-size: $table__font-size;
+  background: $table__background;
   border: $table__border;
   border-radius: $table__border-radius;
   border-collapse: separate;
   border-spacing: 0;
-  margin: 1em 0;
-  background: $table__background;
-  color: $table__color;
-  font-size: $table__font-size;
 
   &__caption {
     @include visually-hidden();

@@ -14,8 +14,8 @@ $slide-menu__nested-item-padding-left: calc(#{$slide-menu__icon-right-margin--pr
   position: relative;
   margin: 0;
   padding: 0;
-  list-style: none;
   overflow: hidden;
+  list-style: none;
 
   &--nested {
     overflow: visible;
@@ -51,14 +51,14 @@ $slide-menu__nested-item-padding-left: calc(#{$slide-menu__icon-right-margin--pr
 
   &__button {
     display: flex;
-    padding: $reset;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    border: none;
-    border-radius: 0;
+    padding: $reset;
     font-weight: $font-weight-bold;
     background: none;
+    border: none;
+    border-radius: 0;
     cursor: pointer;
 
     &:hover,
@@ -83,8 +83,8 @@ $slide-menu__nested-item-padding-left: calc(#{$slide-menu__icon-right-margin--pr
   &__item,
   &__link,
   &__button {
-    font-size: $font-size-base;
     color: $slide-menu__item-color;
+    font-size: $font-size-base;
 
     &:hover,
     &:active,
@@ -104,8 +104,8 @@ $slide-menu__nested-item-padding-left: calc(#{$slide-menu__icon-right-margin--pr
     fill: $slide-menu__item-icon-color;
 
     &--prev {
-      margin-right: $slide-menu__icon-right-margin--prev;
       order: -1;
+      margin-right: $slide-menu__icon-right-margin--prev;
     }
   }
 }

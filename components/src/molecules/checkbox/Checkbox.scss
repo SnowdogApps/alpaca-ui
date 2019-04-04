@@ -56,9 +56,9 @@ $checkbox__icon-transition   : $transition-base !default;
     width: $checkbox__icon-size;
     height: $checkbox__icon-size;
     padding: $reset;
-    fill: $checkbox__icon-fill;
     cursor: pointer;
     opacity: 0;
     transition: $checkbox__icon-transition;
+    fill: $checkbox__icon-fill;
   }
 }

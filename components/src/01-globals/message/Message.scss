@@ -26,13 +26,13 @@ $message__icon-fill--error   : $red !default;
   flex-wrap: nowrap;
   align-items: center;
   width: 100%;
-  padding: $message__padding;
   margin: $message__margin-base;
+  padding: $message__padding;
+  color: $message__color;
+  font-size: $message__font-size;
   background-color: $message__background;
   border: $message__border;
   border-radius: $message__border-radius;
-  color: $message__color;
-  font-size: $message__font-size;
   transition: $message__transition;
 
   &:first-child {
@@ -41,11 +41,11 @@ $message__icon-fill--error   : $red !default;
 
   &__icon {
     position: absolute;
-    left: $message__icon-spacer;
     top: 0;
     bottom: 0;
-    height: $message__icon-spacer;
+    left: $message__icon-spacer;
     width: $message__icon-spacer;
+    height: $message__icon-spacer;
     margin: auto;
     fill: $message__icon-fill;
 
@@ -59,14 +59,14 @@ $message__icon-fill--error   : $red !default;
   }
 
   &--success {
+    color: $message__color--success;
     background-color: $message__background--success;
     border: $message__border--success;
-    color: $message__color--success;
   }
 
   &--error {
+    color: $message__color--error;
     background-color: $message__background--error;
     border: $message__border--error;
-    color: $message__color--error;
   }
 }

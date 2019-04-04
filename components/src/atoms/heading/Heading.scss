@@ -15,10 +15,10 @@ $heading-font-size--sixth-level : 12px !default;
 
 .heading {
   margin: $headings-margin;
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
   color: $headings-color;
+  font-weight: $headings-font-weight;
+  font-family: $headings-font-family;
+  line-height: $headings-line-height;
   text-transform: $headings-text-transform;
 
   &--first-level {
