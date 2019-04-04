@@ -18,23 +18,20 @@ $price__wrapper-font-size--old  : $font-size-small !default;
     font-size: $price__font-size--large;
   }
 
-  &__wrapper {
+  &--old {
+    color: $price__color--old;
+    font-weight: $price__wrapper-font-weight--old;
+    font-size: $price__wrapper-font-size--old;
+    text-decoration: line-through;
+  }
+
+  &--special {
+    color: $price__color--special;
     font-weight: $price__font-weight;
+    text-decoration: none;
+  }
 
-    &--old {
-      color: $price__color--old;
-      font-weight: $price__wrapper-font-weight--old;
-      font-size: $price__wrapper-font-size--old;
-      text-decoration: line-through;
-    }
-
-    &--special {
-      color: $price__color--special;
-      text-decoration: none;
-    }
-
-    &--old + &--special {
-      margin-left: $price__special-margin-left;
-    }
+  &--old + &--special {
+    margin-left: $price__special-margin-left;
   }
 }
