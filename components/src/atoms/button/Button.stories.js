@@ -22,7 +22,7 @@ storiesOf('Atoms/Button', module)
         <a-button type="button">
           Default button
         </a-button>
-    `
+      `
     })
   )
   .add(
@@ -36,7 +36,7 @@ storiesOf('Atoms/Button', module)
         >
           Secondary button
         </a-button>
-    `
+      `
     })
   )
   .add(
@@ -50,7 +50,7 @@ storiesOf('Atoms/Button', module)
         >
           Blank button
         </a-button>
-    `
+      `
     })
   )
   .add(
@@ -64,7 +64,7 @@ storiesOf('Atoms/Button', module)
         >
           Fluid button
         </a-button>
-    `
+      `
     })
   )
   .add(
@@ -85,7 +85,7 @@ storiesOf('Atoms/Button', module)
             />
           </template>
         </a-button>
-    `
+     `
     })
   )
   .add(
@@ -109,6 +109,6 @@ storiesOf('Atoms/Button', module)
             />
           </template>
         </a-button>
-    `
+      `
     })
   )
