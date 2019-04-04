@@ -6,73 +6,78 @@ import ADescriptionList from '../description-list/DescriptionList.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import ALink from '../../atoms/link/Link.vue'
 
-import listElements from './mocks/listElements.json'
-import iconListElements from './mocks/iconListElements.json'
-import descListElements from './mocks/descListElements.json'
-import linkListElements from './mocks/linkListElements.json'
+const defaultListData = {
+  components: { AList, AListItem },
+  data () {
+    return {
+      items: [
+        {
+          "text": "Lorem Ipsum",
+          "id": "el1"
+        },
+        {
+          "text": "Lorem Ipsum",
+          "id": "el2"
+        },
+        {
+          "text": "Lorem Ipsum",
+          "id": "el3"
+        }
+      ]
+    }
+  },
+}
 
 storiesOf('Elements/List', module)
   .addParameters({ info: true })
   .add('Default', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list>
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
            >
-         {{ element.text }}
+         {{ item.text }}
          </a-list-item>
         </a-list>
     `
   }))
   .add('Native', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--native">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
           >
-           {{ element.text }}
+           {{ item.text }}
            </a-list-item>
          </a-list>
     `
   }))
   .add('Horizontal', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--horizontal">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
           >
-           {{ element.text }}
+           {{ item.text }}
            </a-list-item>
          </a-list>
     `
   }))
   .add('Horizontal Medium', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--horizontal@medium">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
           >
-          {{ element.text }}
+          {{ item.text }}
            </a-list-item>
          </a-list>
     `
@@ -80,97 +85,104 @@ storiesOf('Elements/List', module)
   .add('Icon', () => ({
     components: { AList, AListItem, AIcon },
     data: () => ({
-      iconListElements
+      items: [
+        {
+          "icon": {
+            "iconId": "facebook"
+          },
+          "linkHref": "#",
+          "wrapperClass": "list__icon-link"
+        },
+        {
+          "icon": {
+            "iconId": "twitter"
+          },
+          "linkHref": "#",
+          "wrapperClass": "list__icon-link"
+        },
+        {
+          "icon": {
+            "iconId": "linkedin"
+          },
+          "linkHref": "#",
+          "wrapperClass": "list__icon-link"
+        }
+      ]
     }),
     template: `
         <a-list class="list--with-icon">
           <a-list-item
-            v-for="element in iconListElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
           >
             <a-icon
-              :icon="element.icon.iconId"
+              :icon="item.icon.iconId"
             />
            </a-list-item>
          </a-list>
     `
   }))
   .add('Divided', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--divided">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
           >
-            {{ element.text }}
+            {{ item.text }}
            </a-list-item>
          </a-list>
     `
   }))
   .add('Center', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--center">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
            >
-            {{ element.text }}
+            {{ item.text }}
            </a-list-item>
          </a-list>
     `
   }))
   .add('Center Horizontal', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--center list--horizontal">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
           >
-            {{ element.text }}
+            {{ item.text }}
            </a-list-item>
          </a-list>
     `
   }))
   .add('Divided Horizontal', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--divided list--horizontal">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
            >
-            {{ element.text }}
+            {{ item.text }}
            </a-list-item>
          </a-list>
     `
   }))
   .add('Divided Horizontal Medium', () => ({
-    components: { AList, AListItem },
-    data: () => ({
-      listElements
-    }),
+    ...defaultListData,
     template: `
         <a-list class="list--divided list--horizontal@medium">
           <a-list-item
-            v-for="element in listElements"
-            :key="element.id"
+            v-for="item in items"
+            :key="item.id"
           >
-           {{ element.text }}
+           {{ item.text }}
            </a-list-item>
          </a-list>
     `
@@ -178,30 +190,59 @@ storiesOf('Elements/List', module)
   .add('Description', () => ({
     components: { ADescriptionList },
     data: () => ({
-      descListElements
+      items: [
+        {
+          "id": "desc_id_1",
+          "label": "Lorem",
+          "value": "ipsum"
+        },
+        {
+          "id": "desc_id_2",
+          "label": "Lorem",
+          "value": "ipsum"
+        },
+        {
+          "id": "desc_id_3",
+          "label": "Lorem",
+          "value": "ipsum"
+        }
+      ]
     }),
     template: `
         <a-description-list
           :listClass="'list--divided'"
           :title="'A description List'"
-          :elements="descListElements"
+          :elements="items"
         />
     `
   }))
   .add('Link', () => ({
     components: { AList, AListItem, ALink },
     data: () => ({
-      linkListElements
+      items: [
+        {
+          "text": "Lorem Ipsum",
+          "linkHref": "#"
+        },
+        {
+          "text": "Lorem Ipsum",
+          "linkHref": "#"
+        },
+        {
+          "text": "Lorem Ipsum",
+          "linkHref": "#"
+        }
+      ]
     }),
     template: `
         <a-list>
           <a-list-item
-            v-for="element in linkListElements"
-            :key="element.id"
-            elementTag="link"
+            v-for="item in items"
+            :key="item.id"
+            tag="link"
            >
             <a-link>
-              {{ element.text }}
+              {{ item.text }}
              </a-link>
            </a-list-item>
          </a-list>
