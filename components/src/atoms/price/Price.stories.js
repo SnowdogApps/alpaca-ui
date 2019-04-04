@@ -25,38 +25,38 @@ storiesOf('Atoms/Price', module)
   .add('Default', () => ({
     ...defaultData,
     template: `
-        <a-price>
-          <span>{{ price }}</span>
-        </a-price>
+      <a-price>
+        <span>{{ price }}</span>
+      </a-price>
     `
   }))
   .add('Default -- Large', () => ({
     ...defaultData,
     template: `
-        <a-price class="price--large">
-          <span>{{ price }}</span>
-        </a-price>
+      <a-price class="price--large">
+        <span>{{ price }}</span>
+      </a-price>
     `
   }))
   .add('Special Price', () => ({
     ...defaultData,
     template: `
-        <a-price :specialPrice="special"/>
+      <a-price :specialPrice="special"/>
     `
   }))
   .add('Old price', () => ({
     ...defaultData,
     template: `
-        <a-price :oldPrice="old"/>
+      <a-price :oldPrice="old"/>
     `
   }))
   .add('With special price', () => ({
     ...defaultData,
     template: `
-        <a-price
-          :oldPrice="old"
-          :specialPrice="special"
-        />
+      <a-price
+        :oldPrice="old"
+        :specialPrice="special"
+      />
     `
   }))
   .add('With slots', () => ({
