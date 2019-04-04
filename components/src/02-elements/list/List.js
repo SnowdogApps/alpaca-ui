@@ -1,6 +1,6 @@
 export default {
   props: {
-    listTag: {
+    tag: {
       type: String,
       default: 'ul'
     }

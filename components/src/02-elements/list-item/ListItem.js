@@ -1,13 +1,8 @@
 export default {
   props: {
-    elementTag: {
+    tag: {
       type: String,
       default: 'li'
-    },
-    defaultClass: {
-      type: Boolean,
-      required: false,
-      default: true
     }
   }
 }
