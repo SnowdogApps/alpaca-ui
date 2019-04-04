@@ -4,6 +4,6 @@
 }
 
 .checkbox__label-custom {
-  display: inline;
+  display: inline-flex;
   vertical-align: text-top;
 }

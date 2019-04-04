@@ -6,17 +6,24 @@ import { action } from '@storybook/addon-actions'
 // Preview styles
 import './preview/styles.css'
 
+const defaultData = {
+  components: { ACheckbox },
+  data: () => {
+    return {
+      status: true
+    }
+  },
+  methods: {
+    onChange: action('Option changed')
+  }
+}
+
 storiesOf('Molecules/Checkbox', module)
   .addParameters({ info: true })
   .add(
     'Default',
     () => ({
-      components: { ACheckbox },
-      data: () => {
-        return {
-          status: true
-        }
-      },
+      ...defaultData,
       template: `
         <a-checkbox
           id="checkbox-default"
@@ -27,20 +34,12 @@ storiesOf('Molecules/Checkbox', module)
           Checkbox field
         </a-checkbox>
       `,
-      methods: {
-        onChange: action('Option changed')
-      }
     })
   )
   .add(
     'Custom Values',
     () => ({
-      components: { ACheckbox },
-      data: () => {
-        return {
-          status: 'not_accepted'
-        }
-      },
+      ...defaultData,
       template: `
         <a-checkbox
           id="checkbox-values"
@@ -50,51 +49,22 @@ storiesOf('Molecules/Checkbox', module)
           unchecked-value="not_accepted"
           @input="onChange"
         >
-          Checkbox field
-        </a-checkbox>
-      `,
-      methods: {
-        onChange: action('Option changed')
-      }
-    })
-  )
-  .add(
-    'Long label',
-    () => ({
-      components: { ACheckbox },
-      data: () => {
-        return {
-          selected: null
-        }
-      },
-      template: `
-        <a-checkbox
-          id="checkbox-long-label"
-          name="checkbox-long-label-name"
-          value="checkbox-long-label-value"
-          v-model="selected"
-        >
           I hereby agree for processing my personal data, included in my job offer, for the purpose of recruitment (as defined in the Act of August 29, 1997 on the Protection of Personal Data (Journal of Laws No. 133, item 883).
         </a-checkbox>
-    `
+      `
     })
   )
   .add(
     'With slot',
     () => ({
-      components: { ACheckbox },
-      data: () => {
-        return {
-          selected: null
-        }
-      },
+      ...defaultData,
       template: `
         <a-checkbox
           id="checkbox-slots"
           name="checkbox-slots"
-          value="checkbox-slots"
           input-class="checkbox__field-custom"
           v-model="selected"
+          @input="onChange"
         >
           <template #label>
             <label
