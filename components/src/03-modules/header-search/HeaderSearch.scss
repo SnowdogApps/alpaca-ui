@@ -15,13 +15,13 @@ $search-form__placeholder-color : $gray !default;
 
 .search-form {
   position: relative;
+  z-index: 1;
+  align-self: $search-form__alignment;
   width: $search-form__width;
   height: $search-form__height;
   margin: $reset;
   border: 1px solid $search-form__border-color;
   border-radius: $search-form__height;
-  align-self: $search-form__alignment;
-  z-index: 1;
 
   @include mq($screen-m) {
     position: relative;
@@ -38,9 +38,9 @@ $search-form__placeholder-color : $gray !default;
   &__input {
     width: 100%;
     height: $search-form__input-height;
+    font-size: $search-form__font-size;
     border: none;
     border-radius: $search-form__height;
-    font-size: $search-form__font-size;
 
     &::placeholder {
       color: $search-form__placeholder-color;
@@ -54,9 +54,9 @@ $search-form__placeholder-color : $gray !default;
     right: 0;
     height: $search-form__input-height;
     margin: $reset;
+    background-color: $search-form__button-background;
     border: $search-form__button-border;
     border-radius: $search-form__height;
-    background-color: $search-form__button-background;
 
     &:focus,
     &:hover {

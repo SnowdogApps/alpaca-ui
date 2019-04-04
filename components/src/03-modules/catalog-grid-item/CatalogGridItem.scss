@@ -55,9 +55,9 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 .catalog-grid-item {
   position: relative;
   display: block;
-  border: $catalog-grid-item__border;
   padding: $reset;
   overflow: hidden;
+  border: $catalog-grid-item__border;
 
   @include mq($screen-m) {
     &:hover,
@@ -78,17 +78,17 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
     top: $catalog-grid-item__badge-top-position;
     left: $catalog-grid-item__badge-left-position;
     z-index: $catalog-grid-item__badge-z-index;
-    border-radius: $catalog-grid-item__badge-border-radius;
     padding: $catalog-grid-item__badge-padding;
     font-size: $catalog-grid-item__badge-font-size;
+    border-radius: $catalog-grid-item__badge-border-radius;
   }
 
   &__link {
     display: block;
 
     &--name {
-      color: $catalog-grid-item__name-color;
       overflow: $catalog-grid-item__link-overflow;
+      color: $catalog-grid-item__name-color;
       white-space: $catalog-grid-item__link-white-space;
       text-overflow: $catalog-grid-item__link-text-overflow;
     }
@@ -110,9 +110,9 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
   &__image-wrapper {
     .image {
-      margin: $reset;
       width: $catalog-grid-item__image-width;
       height: $catalog-grid-item__image-height;
+      margin: $reset;
     }
 
     .lazyload,
@@ -126,10 +126,10 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
   }
 
   &__name {
+    margin-bottom: $catalog-grid-item__name-margin-botttom;
     font-weight: $catalog-grid-item__name-font-weight;
     font-size: $catalog-grid-item__font-size;
     line-height: $catalog-grid-item__line-height;
-    margin-bottom: $catalog-grid-item__name-margin-botttom;
 
     @include mq($screen-xxl) {
       font-size: $catalog-grid-item__font-size\@large;
@@ -147,9 +147,9 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
   &__price {
     margin-bottom: $catalog-grid-item__price-margin-bottom;
     padding: $reset;
+    font-weight: $catalog-grid-item__font-weight;
     font-size: $catalog-grid-item__font-size;
     line-height: $catalog-grid-item__line-height;
-    font-weight: $catalog-grid-item__font-weight;
     white-space: nowrap;
 
     @include mq($screen-xxl) {
@@ -164,9 +164,9 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
     @include mq($screen-m) {
       position: absolute;
-      transform: $catalog-grid-item__content-translateY;
       width: $catalog-grid-item__content-width;
       border-top: $catalog-grid-item__border;
+      transform: $catalog-grid-item__content-translateY;
     }
 
     @include mq($screen-xxl) {
@@ -182,8 +182,8 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
   &__actions {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
   }
 
@@ -218,12 +218,12 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
   &__secondary-action {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     .button {
-      height: $catalog-grid-item__action-size;
       width: $catalog-grid-item__action-size;
+      height: $catalog-grid-item__action-size;
       padding: $reset;
       background: $catalog-grid-item__action-background;
       border: $catalog-grid-item__action-border;

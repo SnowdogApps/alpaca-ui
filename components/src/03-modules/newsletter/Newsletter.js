@@ -1,5 +1,5 @@
 import AInput from '../../02-elements/input/Input.vue'
-import ACheckbox from '../../02-elements/checkbox/Checkbox.vue'
+import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
 import AButton from '../../atoms/button/Button.vue'
 
 export default {

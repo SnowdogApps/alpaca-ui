@@ -23,9 +23,9 @@ $loader__circle-animation    : rotate 1s infinite linear !default;
   &__circle {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     width: $loader__circle-size;
     height: $loader__circle-size;
     margin: auto;

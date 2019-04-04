@@ -28,8 +28,8 @@ $quantity-updater__error-max-width                 : 120px !default;
 
 .quantity-update {
   &__label {
-    font-size: $quantity-update__label-font-size;
     font-weight: $quantity-update__label-font-weight;
+    font-size: $quantity-update__label-font-size;
   }
 
   &__qty {
@@ -41,15 +41,15 @@ $quantity-updater__error-max-width                 : 120px !default;
   }
 
   &__input {
-    border-top: $quantity-update__input-border;
-    border-bottom: $quantity-update__input-border;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 0;
     width: $quantity-update__input-width;
     height: $quantity-update__input-width;
     color: $quantity-update__input-color;
     text-align: center;
+    border-top: $quantity-update__input-border;
+    border-right: 0;
+    border-bottom: $quantity-update__input-border;
+    border-left: 0;
+    border-radius: 0;
     appearance: none;
 
     &:focus {
@@ -58,18 +58,18 @@ $quantity-updater__error-max-width                 : 120px !default;
   }
 
   &__button {
-    border: $quantity-update__button-border;
-    background: $quantity-update__button-background;
     margin: 0;
+    background: $quantity-update__button-background;
+    border: $quantity-update__button-border;
 
     &--plus {
-      border-radius: 0 100% 100% 0;
       border-left: 0;
+      border-radius: 0 100% 100% 0;
     }
 
     &--minus {
-      border-radius: 100% 0 0 100%;
       border-right: 0;
+      border-radius: 100% 0 0 100%;
     }
 
     &--disabled {
@@ -91,9 +91,9 @@ $quantity-updater__error-max-width                 : 120px !default;
   }
 
   &__icon {
-    fill: $quantity-updater__icon-fill;
     width: $quantity-updater__icon-spacing;
     height: $quantity-updater__icon-spacing;
+    fill: $quantity-updater__icon-fill;
 
     &:hover,
     &:focus {
@@ -105,8 +105,8 @@ $quantity-updater__error-max-width                 : 120px !default;
   // Disable spin buttons in number input type
   input[type="number"]::-webkit-outer-spin-button, // sass-lint:disable-line no-vendor-prefixes
   input[type="number"]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
-    -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
     margin: 0;
+    -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
   }
 
   input[type="number"] { // sass-lint:disable-line no-vendor-prefixes

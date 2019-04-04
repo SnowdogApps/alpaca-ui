@@ -26,12 +26,12 @@ $tab__icon-size                      : 48px !default;
 .tab {
   &__icon {
     position: absolute;
-    right: 15px;
     top: 0;
+    right: 15px;
     bottom: 0;
-    margin: auto;
     width: $tab__icon-size;
     height: $tab__icon-size;
+    margin: auto;
     padding: $tab__icon-padding;
 
     @include mq($screen-l) {
@@ -44,18 +44,18 @@ $tab__icon-size                      : 48px !default;
     display: block;
     width: 100%;
     padding: $tab__title-padding;
+    color: $tab__title-color;
+    font-weight: $tab__title-font-weight;
+    text-align: center;
+    background: $tab__title-background;
     border: $tab__title-border;
     border-width: $tab__border-width 0 0 0;
-    background: $tab__title-background;
-    text-align: center;
-    font-weight: $tab__title-font-weight;
-    color: $tab__title-color;
     cursor: pointer;
 
     &:nth-last-child(2) {
       @include mq($screen-l) {
-        border-bottom: $tab__title-border--large;
         width: auto;
+        border-bottom: $tab__title-border--large;
       }
     }
 
@@ -67,15 +67,15 @@ $tab__icon-size                      : 48px !default;
     }
 
     .tab__icon {
-      fill: $tab__icon-color;
       pointer-events: none;
+      fill: $tab__icon-color;
     }
 
     &--active {
+      color: $tab__title-color--active;
+      background: $tab__title-background--active;
       border-top: none;
       border-bottom: none;
-      background: $tab__title-background--active;
-      color: $tab__title-color--active;
 
       &:nth-last-child(2) {
         border: none;
@@ -86,10 +86,10 @@ $tab__icon-size                      : 48px !default;
       }
 
       @include mq($screen-l) {
-        border-bottom: $tab__title-border--large-active;
-        background-color: $tab__title-background--large-active;
-        font-weight: $tab__title-font-weight--large-active;
         z-index: 2;
+        font-weight: $tab__title-font-weight--large-active;
+        background-color: $tab__title-background--large-active;
+        border-bottom: $tab__title-border--large-active;
       }
 
       .tab__icon {

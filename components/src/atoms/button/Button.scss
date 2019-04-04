@@ -37,49 +37,49 @@ $button__width--fluid               : 100% !default;
 .button {
   display: inline-flex;
   justify-content: center;
-  cursor: pointer;
-  height: $button__height;
   min-width: $button__width;
+  height: $button__height;
   padding: $button__padding;
+  color: $button__font-color;
+  font-weight: $button__font-weight;
+  font-size: $button__font-size;
+  font-family: $button__font-family;
+  background: $button__background;
   border: $button__border;
   border-radius: $button__border-radius;
   outline: $button__outline;
-  background: $button__background;
-  font-family: $button__font-family;
-  font-size: $button__font-size;
-  color: $button__font-color;
+  cursor: pointer;
   transition: $button__transition;
-  font-weight: $button__font-weight;
 
   &:hover,
   &:focus {
+    color: $button__font-color-hover;
     background: $button__background-hover;
     border-color: $button__border-hover;
-    color: $button__font-color-hover;
   }
 
   &--blank {
-    background: $button__background--blank;
     color: $button__font-color--blank;
     font-weight: $button__font-weight--blank;
+    background: $button__background--blank;
 
     &:hover,
     &:focus {
-      background: $button__background-hover--blank;
       color: $button__font-color-hover;
+      background: $button__background-hover--blank;
     }
   }
 
   &--secondary {
-    border: $button__border--secondary;
     color: $button__font-color--secondary;
     background: $button__background--secondary;
+    border: $button__border--secondary;
 
     &:hover,
     &:focus {
-      border-color: $button__border-hover--secondary;
       color: $button__font-color-hover--secondary;
       background: $button__background-hover--secondary;
+      border-color: $button__border-hover--secondary;
     }
   }
 

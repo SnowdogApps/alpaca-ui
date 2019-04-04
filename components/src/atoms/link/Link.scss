@@ -12,11 +12,11 @@ $link__color-hover--inverted: $blue !default;
 
 .link {
   color: $link__color;
-  transition: $link__transition;
-  font-family: $link__font-family;
   font-weight: $link__font-weight;
+  font-family: $link__font-family;
   line-height: $link__line-height;
   text-decoration: none;
+  transition: $link__transition;
 
   &:hover,
   &:focus {

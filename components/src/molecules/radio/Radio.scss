@@ -24,8 +24,8 @@ $radio__dot-size          : 6px !default;
   margin: $radio__margin;
 
   &__fieldset {
-    padding: $reset;
     margin: $reset;
+    padding: $reset;
     border: none;
   }
 
@@ -41,14 +41,14 @@ $radio__dot-size          : 6px !default;
   &__field {
     position: absolute;
     left: 0;
-    opacity: 0;
     z-index: -1;
+    opacity: 0;
 
     &:checked + .radio__label {
       .radio__icon {
         &::before {
-          opacity: 1;
           transform: scale(1);
+          opacity: 1;
         }
       }
     }
@@ -58,38 +58,38 @@ $radio__dot-size          : 6px !default;
     position: relative;
     width: 100%;
     margin: $reset;
-    vertical-align: top;
-    line-height: $radio__label-line-height;
-    cursor: pointer;
-    font-size: $radio__label-font-size;
     color: $radio__label-color;
+    font-size: $radio__label-font-size;
+    line-height: $radio__label-line-height;
+    vertical-align: top;
+    cursor: pointer;
   }
 
   &__icon {
     position: relative;
     display: inline-flex;
-    border: $radio__icon-border;
-    border-radius: $radio__icon-size;
     width: $radio__icon-size;
     height: $radio__icon-size;
     margin: $radio__icon-margin;
     vertical-align: top;
+    border: $radio__icon-border;
+    border-radius: $radio__icon-size;
 
     &::before {
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
-      content: '';
       width: $radio__dot-size;
       height: $radio__dot-size;
-      border-radius: $radio__dot-size;
       margin: auto;
-      opacity: 0;
-      transform: scale(0);
       background-color: $radio__icon-background;
+      border-radius: $radio__dot-size;
+      transform: scale(0);
+      opacity: 0;
       transition: $radio__icon-transition;
+      content: '';
     }
   }
 }

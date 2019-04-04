@@ -26,13 +26,13 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
   background-color: #333;
 
   &__heading {
-    line-height: $newsletter__line-height;
-    color: $newsletter__heading-color;
     height: auto;
-    font-size: $newsletter__font-size;
-    font-weight: $font-weight-bold;
-    text-align: left;
     margin: $newsletter__heading-margin;
+    color: $newsletter__heading-color;
+    font-weight: $font-weight-bold;
+    font-size: $newsletter__font-size;
+    line-height: $newsletter__line-height;
+    text-align: left;
   }
 
   &__controls {
@@ -46,13 +46,13 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
     top: 0;
     right: 0;
     height: $newsletter__controls-height;
-    border-radius: $newsletter__field-border-radius;
     padding: 0 $newsletter__button-padding;
+    border-radius: $newsletter__field-border-radius;
 
     &:hover,
     &:focus {
-      cursor: pointer;
       outline: none;
+      cursor: pointer;
     }
   }
 
@@ -65,14 +65,14 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
   }
 
   &__field {
-    background: $newsletter__input-background;
-    padding: $newsletter__field-padding;
-    margin: 0;
-    border: none;
-    border-radius: $newsletter__field-border-radius;
     height: $newsletter__field-height;
+    margin: 0;
+    padding: $newsletter__field-padding;
     color: $newsletter__input-color;
     line-height: $newsletter__field-height;
+    background: $newsletter__input-background;
+    border: none;
+    border-radius: $newsletter__field-border-radius;
 
     &::placeholder {
       color: $newsletter__input-color--placeholder;
@@ -91,19 +91,19 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
 
   .checkbox__label {
     width: 100%;
-    opacity: 1;
+    padding-left: $newsletter__checkbox-label-padding-left;
+    color: $newsletter__checkbox-label-color;
     font-size: $newsletter__font-size--agreements;
     line-height: $newsletter__checkbox-label-line-height;
     text-align: left;
-    padding-left: $newsletter__checkbox-label-padding-left;
-    color: $newsletter__checkbox-label-color;
+    opacity: 1;
 
     &::before {
       top: $newsletter__checkbox-icon-position-top; // to align with label, depends on line-height of label
       width: $newsletter__checkbox-icon-size;
       height: $newsletter__checkbox-icon-size;
-      border: none;
       background: $newsletter__checkbox-bg-color;
+      border: none;
     }
 
     & > a {

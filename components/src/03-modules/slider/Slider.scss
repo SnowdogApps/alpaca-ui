@@ -13,8 +13,8 @@ $slider__icon-fill                 : $color-primary !default;
 $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
 
 .slider {
-  margin-bottom: $slider__margin;
   position: relative;
+  margin-bottom: $slider__margin;
 
   &__handler {
     overflow: hidden;
@@ -37,9 +37,9 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
   &__icon {
     width: $slider__icon-size;
     height: $slider__icon-size;
-    fill: $slider__icon-fill;
-    transition: $slider__transition;
     cursor: pointer;
+    transition: $slider__transition;
+    fill: $slider__icon-fill;
   }
 
   .VueCarousel-navigation {
@@ -50,20 +50,20 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
 
     &-button {
       position: static;
+      top: unset;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: $slider__navigation-icon-size;
       width: $slider__navigation-icon-size;
+      height: $slider__navigation-icon-size;
       background-color: $slider__navigation-icon-background;
-      top: unset;
       transform: unset;
 
       &:hover,
       &:focus,
       &:active {
-        outline: none;
         background-color: $slider__navigation-icon-background;
+        outline: none;
 
         .slider__icon {
           fill: $slider__icon-fill-hover;
