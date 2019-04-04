@@ -48,6 +48,7 @@
     "storybook-readme": "^5.0.0",
     "storybook-vue-router": "^1.0.3",
     "stylelint": "^9.10.1",
+    "stylelint-config-rational-order": "^0.0.4",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.5.4",
     "stylelint-webpack-plugin": "^0.10.5",
