@@ -85,7 +85,7 @@ storiesOf('Atoms/Button', module)
             />
           </template>
         </a-button>
-     `
+      `
     })
   )
   .add(
