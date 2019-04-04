@@ -6,7 +6,6 @@ const info = `
   ---
   #### Use these modifiers with \`.price\` class.
   - \`.price--large\` - Selector for use large price
-  - \`.label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
   ---
 `
 
@@ -21,7 +20,7 @@ const defaultData = {
   }
 }
 
-storiesOf('Elements/Price', module)
+storiesOf('Atoms/Price', module)
   .addParameters({ info })
   .add('Default', () => ({
     ...defaultData,

@@ -1,5 +1,5 @@
 import AImage from "../../atoms/image/Image.vue"
-import APrice from "../../02-elements/price/Price.vue"
+import APrice from "../../atoms/price/Price.vue"
 import ADescriptionList from "../../02-elements/description-list/DescriptionList.vue"
 import AButton from "../../02-elements/button/Button.vue"
 import AQuantityUpdate from "../../03-modules/quantity-update/QuantityUpdate.vue"
