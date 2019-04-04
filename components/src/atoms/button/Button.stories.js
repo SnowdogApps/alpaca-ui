@@ -3,8 +3,6 @@ import { storiesOf } from '@storybook/vue'
 import AButton from './Button.vue'
 import AIcon from '../icon/Icon.vue'
 
-import './preview/styles.css'
-
 const info = `
   ---
   #### Use these modifiers with \`.button\` class.
@@ -77,6 +75,7 @@ storiesOf('Atoms/Button', module)
         <a-button
           class="button--icon"
           type="button"
+          :style="{padding: '0 12px'}"
         >
           <template>
             <a-icon
@@ -95,15 +94,18 @@ storiesOf('Atoms/Button', module)
       components: { AButton, AIcon },
       template: `
         <a-button 
-          class="button--icon-custom"
           type="button"
+          :style="{
+            justifyContent: 'center',
+            alignItems: 'center'
+          }"
         >
           <template>
             Search
             <a-icon
               icon="search"
-              class="button__icon-custom"
               title="iconTitle"
+              :style="{marginLeft: '8px'}"
             />
           </template>
         </a-button>
