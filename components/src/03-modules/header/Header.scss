@@ -47,17 +47,17 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
 
   &__search-wrapper {
     display: flex;
-    flex-flow: column nowrap;
     flex: 1 50%;
-    order: 5;
+    flex-flow: column nowrap;
     justify-content: center;
+    order: 5;
     padding: $header__search-wrapper-padding;
     border-top: 1px solid $header__border-color;
 
     @include mq($screen-m) {
-      order: 3;
       flex-direction: column;
       justify-content: center;
+      order: 3;
       padding: $header__search-wrapper-padding--mq-medium;
       border-top: none;
     }
@@ -98,16 +98,16 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
 
   &__buttons {
     display: flex;
-    order: 2;
     flex: 1 $header__buttons-width;
-    max-width: $header__buttons-width;
     flex-wrap: nowrap;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
+    order: 2;
+    max-width: $header__buttons-width;
 
     @include mq($screen-m) {
-      order: 4;
       flex: 1 $header__buttons-width--mq-medium;
+      order: 4;
       max-width: $header__buttons-width--mq-medium;
     }
 

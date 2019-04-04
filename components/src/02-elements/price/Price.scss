@@ -22,9 +22,9 @@ $price__wrapper-font-size--old  : $font-size-small !default;
     font-weight: $price__font-weight;
 
     &--old {
+      color: $price__color--old;
       font-weight: $price__wrapper-font-weight--old;
       font-size: $price__wrapper-font-size--old;
-      color: $price__color--old;
       text-decoration: line-through;
     }
 

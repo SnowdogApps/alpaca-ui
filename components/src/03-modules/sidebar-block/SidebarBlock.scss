@@ -22,8 +22,8 @@ $sidebar-block__action-margin-left    : $spacer !default;
 
 .sidebar-block {
   position: relative;
-  padding: $sidebar-block__padding;
   min-height: $sidebar-block__min-height;
+  padding: $sidebar-block__padding;
 
   &__heading {
     display: flex;
@@ -33,8 +33,8 @@ $sidebar-block__action-margin-left    : $spacer !default;
   }
 
   &__title {
-    font-weight: $sidebar-block__title-font-weight;
     margin-bottom: $sidebar-block__title-margin-bottom;
+    font-weight: $sidebar-block__title-font-weight;
   }
 
   &__divider {
@@ -51,17 +51,17 @@ $sidebar-block__action-margin-left    : $spacer !default;
     align-items: center;
 
     &::before {
-      content: counter(sidebarIndex) ".";
-      counter-increment: sidebarIndex;
-      margin: $sidebar-block__index-margin;
       min-width: $sidebar-block__index-min-width;
+      margin: $sidebar-block__index-margin;
       font-weight: $sidebar-block__index-font-weight;
+      counter-increment: sidebarIndex;
+      content: counter(sidebarIndex) ".";
     }
   }
 
   &__remove {
-    padding: $sidebar-block__remove-padding;
     margin-right: $sidebar-block__remove-margin-right;
+    padding: $sidebar-block__remove-padding;
     background-color: $sidebar-block__remove-background;
 
     &:hover,
@@ -75,9 +75,9 @@ $sidebar-block__action-margin-left    : $spacer !default;
   }
 
   &__remove-icon {
-    padding: $sidebar-block__remove-icon-padding;
     width: $sidebar-block__icon-size;
     height: $sidebar-block__icon-size;
+    padding: $sidebar-block__remove-icon-padding;
     transition: $sidebar-block__remove-icon-transition;
     fill: $sidebar-block__icon-fill;
   }

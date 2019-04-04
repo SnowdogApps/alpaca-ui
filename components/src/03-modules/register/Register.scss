@@ -16,8 +16,8 @@ $register__login-wrapper-margin       : $spacer 0 0 0 !default;
   &__legend {
     margin: $reset;
     padding: $register__legend-padding;
-    font-size: $register__legend-font-size;
     color: $register__legend-color;
+    font-size: $register__legend-font-size;
   }
 
   &__submit-button {

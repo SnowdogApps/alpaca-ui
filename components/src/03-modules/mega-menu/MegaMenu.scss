@@ -15,11 +15,11 @@ $mega-menu__link-color--active: $color-primary !default;
 $mega-menu__link-text-decoration: none !default;
 
 .mega-menu {
-  display: none;
-  background: $mega-menu__background-color;
-  color: $mega-menu__font-color;
   position: relative;
+  display: none;
   margin: $reset;
+  color: $mega-menu__font-color;
+  background: $mega-menu__background-color;
   border-bottom: $mega-menu__border-bottom;
 
   @include mq($screen-xl) {
@@ -40,15 +40,15 @@ $mega-menu__link-text-decoration: none !default;
     display: block;
     margin: $mega-menu__link-margin;
     padding: $mega-menu__link-padding;
-    font-size: $mega-menu__font-size--large;
-    font-weight: $mega-menu__font-weight;
     color: $mega-menu__link-color;
+    font-weight: $mega-menu__font-weight;
+    font-size: $mega-menu__font-size--large;
     text-decoration: $mega-menu__link-text-decoration;
 
     &:focus,
     &:hover {
-      text-decoration: $mega-menu__link-text-decoration;
       color: $mega-menu__link-color--active;
+      text-decoration: $mega-menu__link-text-decoration;
     }
   }
 }

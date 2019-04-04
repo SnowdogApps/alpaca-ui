@@ -17,30 +17,30 @@ $select__border-radius: 20px !default;
     border-radius: $select__border-radius;
 
     &::after {
-      content: "";
-      height: 0;
+      position: absolute;
+      top: 50%;
+      right: 11.5px;
       width: 0;
+      height: 0;
+      margin-top: -2.5px;
+      border-width: 5px;
       border-style: solid;
       border-color: $select__arrow-color;
-      border-width: 5px;
-      position: absolute;
-      right: 11.5px;
-      top: 50%;
-      margin-top: -2.5px;
       pointer-events: none;
+      content: "";
     }
   }
 
   &__input {
-    padding: $select__padding;
-    height: $select__spacing;
-    line-height: $select__spacing;
-    border: none;
     width: 100%;
+    height: $select__spacing;
+    padding: $select__padding;
+    line-height: $select__spacing;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     -moz-appearance: none;
     -webkit-appearance: none;
-    border-radius: 0;
-    background-color: transparent;
 
     &:hover,
     &:focus {
