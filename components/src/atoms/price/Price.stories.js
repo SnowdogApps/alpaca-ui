@@ -5,7 +5,7 @@ import APrice from './Price.vue'
 const info = `
   ---
   #### Use these modifiers with \`.price\` class.
-  - \`.price--large\` - Selector for use large price
+  - \`.price--large\` - Selector for use large size of price
   ---
 `
 
