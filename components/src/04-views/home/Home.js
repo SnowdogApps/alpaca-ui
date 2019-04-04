@@ -1,14 +1,16 @@
 import AHeading from '../../atoms/heading/Heading.vue'
+import AImage from '../../atoms/image/Image.vue'
 import ABanner from '../../atoms/banner/Banner.vue'
 import AList from '../../02-elements/list/List.vue'
-import AListImageItem from '../../02-elements/list-image-item/ListImageItem.vue'
+import AListItem from '../../02-elements/list-item/ListItem.vue'
 
 export default {
   components: {
+    AImage,
     AHeading,
     ABanner,
     AList,
-    AListImageItem
+    AListItem
   },
   props: {
     mainBanner: {

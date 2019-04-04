@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/vue'
 
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
-import AListImageItem from '../list-image-item/ListImageItem.vue'
 import ADescriptionList from '../description-list/DescriptionList.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import ALink from '../../atoms/link/Link.vue'
@@ -93,24 +92,6 @@ storiesOf('Elements/List', module)
               :icon="element.icon.iconId"
             />
            </a-list-item>
-         </a-list>
-    `
-  }))
-  .add('Image', () => ({
-    components: { AList, AListImageItem },
-    data: () => ({
-      imageListElements
-    }),
-    template: `
-        <a-list class="list--with-image">
-          <a-list-image-item
-           v-for="item in imageListElements"
-           :key="item.id"
-           :src="item.image.src"
-           :alt="item.image.alt"
-          >
-            {{ item.text }}
-           </a-list-image-item>
          </a-list>
     `
   }))
