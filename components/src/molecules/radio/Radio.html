@@ -3,7 +3,7 @@
     :aria-labelledby="`legend-${name}`"
     class="radio__fieldset"
   >
-    <!-- @slot Custom legend content (Named slots) -->
+    <!-- @slot Custom legend markup (Named slot) -->
     <slot name="legend">
       <legend
         :id="`legend-${name}`"
@@ -26,7 +26,7 @@
         :class="['radio__field', inputClass]"
         @change="change"
       >
-      <!-- @slot Custom option content (Scoped slots) -->
+      <!-- @slot Custom radio option (Scoped slot) -->
       <slot
         name="option"
         :option="option"
