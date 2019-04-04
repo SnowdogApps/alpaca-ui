@@ -22,7 +22,7 @@ addDecorator(() => ({
 
 addParameters({
   options: {
-    name: 'Alpaca cookbook'
+    brandTitle: 'Alpaca cookbook'
   }
 })
 
