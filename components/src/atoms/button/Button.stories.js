@@ -14,14 +14,10 @@ const info = `
   ---
 `
 
-const defaultData = {
-  components: { AButton, AIcon },
-}
-
 storiesOf('Atoms/Button', module)
   .addParameters({ info })
   .add('Default', () => ({
-    ...defaultData,
+    components: { AButton },
     template: `
       <a-button type="button">
         Default button
@@ -29,7 +25,7 @@ storiesOf('Atoms/Button', module)
     `
   }))
   .add('Secondary', () => ({
-    ...defaultData,
+    components: { AButton },
     template: `
       <a-button
         class="button--secondary"
@@ -40,7 +36,7 @@ storiesOf('Atoms/Button', module)
     `
   }))
   .add('Blank', () => ({
-    ...defaultData,
+    components: { AButton },
     template: `
       <a-button
         class="button--blank"
@@ -51,7 +47,7 @@ storiesOf('Atoms/Button', module)
     `
   }))
   .add('Fluid', () => ({
-    ...defaultData,
+    components: { AButton },
     template: `
       <a-button
         class="button--fluid"
@@ -62,7 +58,7 @@ storiesOf('Atoms/Button', module)
     `
   }))
   .add('Icon', () => ({
-    ...defaultData,
+    components: { AButton, AIcon },
     template: `
       <a-button
         class="button--icon"
@@ -79,7 +75,7 @@ storiesOf('Atoms/Button', module)
     `
   }))
   .add('Icon and text', () => ({
-    ...defaultData,
+    components: { AButton, AIcon },
     template: `
       <a-button
         class="button--icon-custom"
