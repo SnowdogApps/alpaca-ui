@@ -1,10 +1,10 @@
-import { storiesOf } from '@storybook/vue'
+import { addDecorator, storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
 import ALogo from './Logo.vue'
 
+addDecorator(StoryRouter())
 storiesOf('Molecules/Logo', module)
-  .addDecorator(StoryRouter())
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ALogo },
