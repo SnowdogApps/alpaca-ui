@@ -19,14 +19,14 @@ export default {
      */
     ariaLabelSpecial: {
       type: String,
-      default: 'Special price:'
+      default: null
     },
     /**
      * Aria label for old price
      */
     ariaLabelOld: {
       type: String,
-      default: 'Old price:'
+      default: null
     }
   },
   computed: {

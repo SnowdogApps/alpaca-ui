@@ -26,21 +26,29 @@ storiesOf('Atoms/Price', module)
   .add('Special Price', () => ({
     ...defaultData,
     template: `
-      <a-price :specialPrice="special"/>
+      <a-price 
+        :special-price="special"
+        aria-label-special="Special price:"
+      />
     `
   }))
   .add('Old price', () => ({
     ...defaultData,
     template: `
-      <a-price :oldPrice="old"/>
+      <a-price 
+        :old-price="old"
+        aria-label-old="Old price:"
+      />
     `
   }))
   .add('With special price', () => ({
     ...defaultData,
     template: `
       <a-price
-        :oldPrice="old"
-        :specialPrice="special"
+        :old-price="old"
+        :special-price="special"
+        aria-label-special="Special price:"
+        aria-label-old="Old price:"
       />
     `
   }))
