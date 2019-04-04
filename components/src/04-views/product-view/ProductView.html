@@ -26,15 +26,16 @@
         <div class="product-view__stock-line">
           <a-price
             v-if="product.price.old && product.price.special"
-            large
             :old-price="product.price.old"
             :special-price="product.price.special"
+            class="price--large"
           />
           <a-price
             v-else
-            large
-            :price="product.price.regular"
-          />
+            class="price--large"
+          >
+            {{ product.price.regular }}
+          </a-price>
           <span
             v-if="product.qty > 0 && product.qty <= stockAlertMaxQty"
             class="product-view__stock-status product-view__stock-status--alert"
