@@ -4,7 +4,16 @@ import APrice from './Price.vue'
 
 import price from './mocks/price.json'
 
+const info = `
+  ---
+  #### Use these modifiers with \`.price\` class.
+  - \`.price--large\` - Selector for use large price
+  - \`.label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
+  ---
+`
+
 storiesOf('Elements/Price', module)
+  .addParameters({ info })
   .add('Default', () => ({
     data: () => ({
       price
@@ -22,7 +31,7 @@ storiesOf('Elements/Price', module)
     template: `
         <a-price
           :price="price.default"
-          large
+          class="price--large"
         />
     `
   }))
@@ -65,7 +74,7 @@ storiesOf('Elements/Price', module)
         <a-price
           :oldPrice="price.old"
           :specialPrice="price.special"
-          large
+          class="price--large"
         />
     `
   }))
