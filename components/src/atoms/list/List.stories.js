@@ -253,7 +253,7 @@ storiesOf('Atoms/List', module)
       }),
       template: `
         <a-description-list
-          :listClass="'list--divided'"
+          class="list--divided"
           :title="'A description List'"
           :elements="items"
         />
