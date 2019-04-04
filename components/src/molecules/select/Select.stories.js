@@ -28,10 +28,10 @@ storiesOf('Molecules/Select', module)
           v-model="selectedCountry"
           @input="showCountry"
         >
-          <template v-slot:label>
+          <template #label>
             Label text
           </template>
-          <template v-slot:option>
+          <template #option>
             Please select an option
           </template>
         </a-select>
@@ -59,7 +59,7 @@ storiesOf('Molecules/Select', module)
           v-model="selectedCountry"
           @input="showCountry"
         >
-          <template v-slot:label>
+          <template #label>
             Label text
           </template>
         </a-select>
@@ -89,7 +89,7 @@ storiesOf('Molecules/Select', module)
           @change="showCountry"
           label-class="label--hidden"
         >
-          <template v-slot:label>
+          <template #label>
             Label text
           </template>
         </a-select>
