@@ -96,8 +96,8 @@ $cookie-message__close-icon-transition : $transition-base !default;
 
     &:hover,
     &:focus {
-      fill: $color-primary;
       transition: $cookie-message__close-icon-transition;
+      fill: $color-primary;
     }
   }
 

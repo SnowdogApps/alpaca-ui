@@ -97,8 +97,8 @@ $quantity-updater__error-max-width                 : 120px !default;
 
     &:hover,
     &:focus {
-      fill: $quantity-updater__icon-fill-hover;
       transition: $quantity-updater__icon-transition;
+      fill: $quantity-updater__icon-fill-hover;
     }
   }
 

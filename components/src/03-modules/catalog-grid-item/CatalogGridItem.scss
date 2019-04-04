@@ -231,8 +231,8 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
       &:hover,
       &:focus {
-        fill: $catalog-grid-item__action-icon-fill-hover;
         transition: $catalog-grid-item__action-icon-transition;
+        fill: $catalog-grid-item__action-icon-fill-hover;
       }
 
       .icon {

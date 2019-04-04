@@ -72,8 +72,8 @@ $search-form__placeholder-color : $gray !default;
 
     &:focus,
     &:hover {
-      fill: $color-primary;
       transition: $transition-base;
+      fill: $color-primary;
     }
   }
 }

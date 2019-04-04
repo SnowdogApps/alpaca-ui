@@ -229,8 +229,8 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
     &:hover,
     &:focus {
-      fill: $color-primary;
       transition: $transition-base;
+      fill: $color-primary;
     }
   }
 

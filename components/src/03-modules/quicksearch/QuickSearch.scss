@@ -108,8 +108,8 @@ $quicksearch__close-transition                 : $transition-base !default;
 
     &:hover,
     &:focus {
-      fill: $quicksearch__close-fill-hover;
       transition: $quicksearch__close-transition;
+      fill: $quicksearch__close-fill-hover;
     }
   }
 

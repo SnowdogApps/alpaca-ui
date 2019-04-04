@@ -131,14 +131,14 @@ $product-item__action-icon-transition      : $transition-base !default;
   }
 
   &__action-icon {
-    fill: $product-item__action-icon-fill-color;
     width: $product-item__action-icon-size;
     height: $product-item__action-icon-size;
+    fill: $product-item__action-icon-fill-color;
 
     &:hover,
     &:focus {
-      fill: $product-item__action-icon-fill-color-hover;
       transition: $product-item__action-icon-transition;
+      fill: $product-item__action-icon-fill-color-hover;
     }
   }
 
