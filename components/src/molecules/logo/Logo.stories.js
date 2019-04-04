@@ -3,7 +3,7 @@ import StoryRouter from 'storybook-vue-router'
 
 import ALogo from './Logo.vue'
 
-storiesOf('Elements/Logo', module)
+storiesOf('Molecules/Logo', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { ALogo },
