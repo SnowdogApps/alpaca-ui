@@ -1,4 +1,4 @@
-import AList from "../../02-elements/list/List.vue"
+import AList from "../../atoms/list/List.vue"
 import AProductItem from "../../03-modules/product-item/ProductItem.vue"
 
 export default {

@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/vue'
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
 import ADescriptionList from '../description-list/DescriptionList.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
-import ALink from '../../atoms/link/Link.vue'
+import AIcon from '../icon/Icon.vue'
+import ALink from '../link/Link.vue'
 
 const info = `
   ---
@@ -39,7 +39,7 @@ const defaultListData = {
   }
 }
 
-storiesOf('Elements/List', module)
+storiesOf('Atoms/List', module)
   .addParameters({ info })
   .add(
     'Default',
@@ -285,9 +285,10 @@ storiesOf('Elements/List', module)
           <a-list-item
             v-for="item in items"
             :key="item.id"
-            tag="link"
            >
-            <a-link>
+            <a-link
+              :href="item.linkHref"
+            >
               {{ item.text }}
             </a-link>
           </a-list-item>
