@@ -1,5 +1,21 @@
 @import '../../../assets/styles/_globals.scss';
+$list-padding: 0 5px 5px 0 !default;
 
-.list--description {
+.list-description {
   display: inline-block;
+
+  &__label {
+    float: left;
+    clear: left;
+    padding: $list-padding;
+
+    &::after {
+      content: ": ";
+    }
+  }
+
+  &__value {
+    float: left;
+    padding: $list-padding;
+  }
 }

@@ -9,10 +9,12 @@
     "url": "#",
     "options": [
       {
+        "id": "size_id_1",
         "label": "Size",
         "value": "XXL"
       },
       {
+        "id": "color_id_1",
         "label": "Color",
         "value": "Red"
       }

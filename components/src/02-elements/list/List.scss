@@ -3,7 +3,6 @@
 $list__style: none !default;
 $list__item-padding: 5px 0 !default;
 $list__content-padding: 10px !default;
-$list__label-padding: 0 5px 5px 0 !default;
 $list__icon-color: $white !default;
 
 // Horizontal
@@ -165,21 +164,6 @@ $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
     &:last-child {
       padding-bottom: $reset;
     }
-  }
-
-  &__label {
-    float: left;
-    clear: left;
-    padding: $list__label-padding;
-
-    &::after {
-      content: ": ";
-    }
-  }
-
-  &__value {
-    float: left;
-    padding: $list__label-padding;
   }
 
   &__content {
