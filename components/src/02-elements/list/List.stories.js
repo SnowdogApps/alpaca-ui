@@ -6,6 +6,17 @@ import ADescriptionList from '../description-list/DescriptionList.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import ALink from '../../atoms/link/Link.vue'
 
+const info = `
+  ---
+  #### Use these modifiers with \`.list\` class.
+  - \`.list--native\` - Selector for applying native styles
+  - \`.list--horizontal\` - Selector for applying horizontal styles
+  - \`.list--horizontal@medium\` - Selector for applying horizontal-medium styles
+  - \`.list--with-icon\` - Selector for applying styles for item with icon
+  - \`.list--divided\` - Selector for applying divided styles
+  ---
+`
+
 const defaultListData = {
   components: { AList, AListItem },
   data () {
@@ -29,7 +40,7 @@ const defaultListData = {
 }
 
 storiesOf('Elements/List', module)
-  .addParameters({ info: true })
+  .addParameters({ info })
   .add(
     'Default',
       () => ({
