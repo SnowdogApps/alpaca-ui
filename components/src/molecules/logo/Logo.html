@@ -2,8 +2,11 @@
   class="logo"
   :to="to"
 >
-  <a-image
-    class="logo__image"
-    :src="src"
-  />
+  <slot name="image">
+    <a-image
+      class="logo__image"
+      :src="src"
+      :alt="alt"
+    />
+  </slot>
 </router-link>
