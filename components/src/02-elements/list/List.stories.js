@@ -8,11 +8,11 @@ import ALink from '../../atoms/link/Link.vue'
 
 import listElements from './mocks/listElements.json'
 import iconListElements from './mocks/iconListElements.json'
-import imageListElements from './mocks/imageListElements.json'
 import descListElements from './mocks/descListElements.json'
 import linkListElements from './mocks/linkListElements.json'
 
 storiesOf('Elements/List', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { AList, AListItem },
     data: () => ({
