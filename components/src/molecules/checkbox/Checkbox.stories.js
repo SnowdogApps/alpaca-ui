@@ -63,7 +63,7 @@ storiesOf('Molecules/Checkbox', module)
           id="checkbox-slots"
           name="checkbox-slots"
           input-class="checkbox__field-custom"
-          v-model="selected"
+          v-model="status"
           @input="onChange"
         >
           <template #label>
