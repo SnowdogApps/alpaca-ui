@@ -7,7 +7,7 @@
     :checked="finalValue === value"
     @change="change($event.target.checked)"
   >
-  <!-- @slot Slot for label -->
+  <!-- @slot Custom checkbox markup (Named slot) -->
   <slot name="label">
     <a-icon
       icon="checked"
@@ -20,6 +20,7 @@
       :for="id"
       :class="['checkbox__label', labelClass]"
     >
+      <!-- @slot Custom label content (Default slot) -->
       <slot />
     </label>
   </slot>
