@@ -2,13 +2,6 @@ import { storiesOf } from '@storybook/vue'
 
 import APrice from './Price.vue'
 
-const info = `
-  ---
-  #### Use these modifiers with \`.price\` class.
-  - \`.price--large\` - Selector for use large size of price
-  ---
-`
-
 const defaultData = {
   components: { APrice },
   data: () => {
@@ -21,19 +14,11 @@ const defaultData = {
 }
 
 storiesOf('Atoms/Price', module)
-  .addParameters({ info })
+  .addParameters({ info: true })
   .add('Default', () => ({
     ...defaultData,
     template: `
       <a-price>
-        <span>{{ price }}</span>
-      </a-price>
-    `
-  }))
-  .add('Default -- Large', () => ({
-    ...defaultData,
-    template: `
-      <a-price class="price--large">
         <span>{{ price }}</span>
       </a-price>
     `

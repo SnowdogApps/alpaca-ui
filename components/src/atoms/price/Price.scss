@@ -13,11 +13,6 @@ $price__wrapper-font-size--old  : $font-size-small !default;
 .price {
   font-size: $price__font-size;
 
-  &--large,
-  &--large &__value--old {
-    font-size: $price__font-size--large;
-  }
-
   &--old {
     color: $price__color--old;
     font-weight: $price__wrapper-font-weight--old;
