@@ -3,7 +3,7 @@
     :for="id"
     :class="['select__label', labelClass]"
   >
-    <!-- @slot Label text -->
+    <!-- @slot Label content -->
     <slot name="label"/>
   </a-label>
   <div class="select__field">
@@ -20,8 +20,8 @@
         <slot name="option"/>
       </option>
       <option
-        v-for="(option, key) in options"
-        :key="key"
+        v-for="option in options"
+        :key="option.value"
         :value="option.value"
         :selected="option.value === value"
       >
