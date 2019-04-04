@@ -28,7 +28,7 @@ storiesOf('Molecules/Logo', module)
             <img 
               src="/images/logo/alpaca.svg" 
               alt="Logo"
-              :style="{width: '70%'}"
+              style="width: 70%;"
             />
           </template>
         </a-logo>
