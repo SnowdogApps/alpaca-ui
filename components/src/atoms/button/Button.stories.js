@@ -19,7 +19,7 @@ storiesOf('Atoms/Button', module)
     () => ({
       components: { AButton },
       template: `
-        <a-button type="button">
+        <a-button>
           Default button
         </a-button>
       `
@@ -32,7 +32,7 @@ storiesOf('Atoms/Button', module)
       template: `
         <a-button
           class="button--secondary"
-          type="button"
+          type="submit"
         >
           Secondary button
         </a-button>
@@ -44,10 +44,7 @@ storiesOf('Atoms/Button', module)
     () => ({
       components: { AButton },
       template: `
-        <a-button
-          class="button--blank"
-          type="button"
-        >
+        <a-button class="button--blank">
           Blank button
         </a-button>
       `
@@ -58,10 +55,7 @@ storiesOf('Atoms/Button', module)
     () => ({
       components: { AButton },
       template: `
-        <a-button
-          class="button--fluid"
-          type="button"
-        >
+        <a-button class="button--fluid">
           Fluid button
         </a-button>
       `
@@ -74,7 +68,6 @@ storiesOf('Atoms/Button', module)
       template: `
         <a-button
           class="button--icon"
-          type="button"
           :style="{padding: '0 12px'}"
         >
           <template>
@@ -93,8 +86,7 @@ storiesOf('Atoms/Button', module)
     () => ({
       components: { AButton, AIcon },
       template: `
-        <a-button 
-          type="button"
+        <a-button
           :style="{
             justifyContent: 'center',
             alignItems: 'center'
