@@ -23,7 +23,7 @@ addDecorator(() => ({
 
 addParameters({
   options: {
-    name: 'Alpaca components'
+    brandTitle: 'Alpaca components'
   }
 })
 

@@ -38,14 +38,5 @@ export default {
       type: [String, Object, Number, Boolean],
       default: null
     }
-  },
-  methods: {
-    change(event) {
-      /**
-       * Event for change input
-       * @type {Event}
-       */
-      this.$emit('change', event.target.value)
-    }
   }
 }
