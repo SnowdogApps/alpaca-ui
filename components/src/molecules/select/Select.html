@@ -1,39 +1,32 @@
 <div class="select">
   <a-label
     :for="id"
-    :hidden="hiddenLabel"
-    :inline="inlineLabel"
     :class="['select__label', labelClass]"
   >
-    {{ label }}
-   </a-label>
+    <!-- @slot Label content -->
+    <slot name="label"/>
+  </a-label>
   <div class="select__field">
     <select
-      :id:="id"
+      :id="id"
       :name="name"
       :class="['select__input', selectClass]"
       @focus="$emit('focus')"
       @blur="$emit('blur')"
       @change="$emit('input', $event.target.value)"
     >
-      <option v-if="!selected" />
+      <option disabled selected v-if="!value">
+        <!-- @slot Default option text -->
+        <slot name="option"/>
+      </option>
       <option
-        v-for="(option, key) in options"
-        :key="key"
+        v-for="option in options"
+        :key="option.value"
         :value="option.value"
-        :selected="option.value === selected"
+        :selected="option.value === value"
       >
         {{ option.text }}
       </option>
     </select>
   </div>
-
-  <template v-if="validations">
-      <span
-        v-for="(validation, index) in currentValidations"
-        :key="index"
-      >
-        {{ validation.text }}
-      </span>
-  </template>
 </div>
