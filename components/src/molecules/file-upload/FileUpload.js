@@ -9,13 +9,12 @@ export default {
       type: String,
       default: 'Your file (pdf, doc, max 1 MB)'
     },
+    /**
+     * List of accepted file types separated by a comma
+     */
     acceptedFormats: {
       type: String,
       default: '.pdf,.doc,.png'
-    },
-    dataSize: {
-      type: String,
-      default: '1024'
     },
     uploadButtonText: {
       type: String,

@@ -1,19 +1,11 @@
-<div
-  :class="[
-    'file-upload'
-  ]"
->
+<div class="file-upload">
   <input
     id="file"
     ref="fileInput"
-    :class="[
-      'file-upload__input',
-      fileUploadInputClass
-    ]"
+    :class="['file-upload__input', fileUploadInputClass]"
     type="file"
     name="file"
     :accept="acceptedFormats"
-    :data-size="dataSize"
     @change="updateFileName"
   >
   <label
@@ -30,8 +22,6 @@
     <a-button
       class="button file-upload__button"
       aria-controls="file"
-      type="button"
-      role="button"
       @click.native="chooseFile"
     >
       {{ uploadButtonText }}
