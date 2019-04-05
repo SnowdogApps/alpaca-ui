@@ -86,7 +86,7 @@ storiesOf('Molecules/Select', module)
           :options="countries"
           :selected="selectedCountry"
           v-model="selectedCountry"
-          @change="showCountry"
+          @input="showCountry"
           label-class="label--hidden"
         >
           <template #label>
