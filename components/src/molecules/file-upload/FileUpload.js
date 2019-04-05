@@ -6,11 +6,18 @@ export default {
   },
   props: {
     /**
-     * List of accepted file types separated by a comma
+     * File input id
      */
-    acceptedFormats: {
+    inputId: {
       type: String,
-      default: '.pdf,.doc,.png'
+      default: 'file'
+    },
+    /**
+     * File input name
+     */
+    inputName: {
+      type: String,
+      default: 'file'
     },
     /**
      * Custom input class
@@ -25,6 +32,13 @@ export default {
     labelClass: {
       type: String,
       default: null
+    },
+    /**
+     * List of accepted file types separated by a comma
+     */
+    acceptedFormats: {
+      type: String,
+      default: '.pdf,.doc,.png'
     }
   },
   data() {

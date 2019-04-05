@@ -1,18 +1,18 @@
 <div class="file-upload">
   <input
-    id="file"
-    ref="fileInput"
     :class="['file-upload__input', inputClass]"
+    :id="inputId"
+    :name="inputName"
     type="file"
-    name="file"
+    ref="fileInput"
     :accept="acceptedFormats"
     @change="updateFileName"
   >
   <label
-    class="file-upload__wrapper"
-    for="file"
+    :class="['file-upload__wrapper', labelClass]"
+    :for="inputId"
   >
-    <span :class="['file-upload__label', labelClass]">
+    <span class="file-upload__label">
       <!-- @slot Top title content -->
       <slot name="title"/>
     </span>
@@ -32,6 +32,7 @@
       tabindex="0"
     >
       {{ fileName }}
+      <!-- @slot File name placeholder - displayed when file isn't selected -->
       <slot v-if="!fileName" name="empty"/>
     </span>
   </label>
