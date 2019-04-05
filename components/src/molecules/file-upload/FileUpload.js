@@ -5,10 +5,6 @@ export default {
     AButton
   },
   props: {
-    labelText: {
-      type: String,
-      default: 'Your file (pdf, doc, max 1 MB)'
-    },
     /**
      * List of accepted file types separated by a comma
      */
@@ -16,19 +12,17 @@ export default {
       type: String,
       default: '.pdf,.doc,.png'
     },
-    uploadButtonText: {
-      type: String,
-      default: 'Upload a file'
-    },
-    emptyFileNameText: {
-      type: String,
-      default: 'File not choosen'
-    },
-    fileUploadLabelClass: {
+    /**
+     * Custom input class
+     */
+    inputClass: {
       type: String,
       default: null
     },
-    fileUploadInputClass: {
+    /**
+     * Custom label class
+     */
+    labelClass: {
       type: String,
       default: null
     }

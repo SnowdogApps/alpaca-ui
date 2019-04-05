@@ -8,6 +8,18 @@ storiesOf('Molecules/File Upload', module)
     'Default',
     () => ({
       components: { AFileUpload },
-      template: `<a-file-upload/>`
+      template: `
+        <a-file-upload>
+          <template #title>
+            Your file (pdf, doc, max 1 MB)
+          </template>
+          <template #button>
+            Upload a file
+          </template>
+          <template #empty>
+            File not choosen
+          </template>
+        </a-file-upload>
+      `
     }
   ))

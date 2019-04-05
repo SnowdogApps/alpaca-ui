@@ -2,29 +2,28 @@
   <input
     id="file"
     ref="fileInput"
-    :class="['file-upload__input', fileUploadInputClass]"
+    :class="['file-upload__input', inputClass]"
     type="file"
     name="file"
     :accept="acceptedFormats"
     @change="updateFileName"
   >
   <label
-    :class="[
-      'file-upload__wrapper',
-      fileUploadLabelClass
-    ]"
+    class="file-upload__wrapper"
     for="file"
   >
-    <span class="file-upload__label">
-      {{ labelText }}
+    <span :class="['file-upload__label', labelClass]">
+      <!-- @slot Top title content -->
+      <slot name="title"/>
     </span>
 
     <a-button
       class="button file-upload__button"
       aria-controls="file"
-      @click.native="chooseFile"
+      @click="chooseFile"
     >
-      {{ uploadButtonText }}
+      <!-- @slot Upload button text content -->
+      <slot name="button"/>
     </a-button>
 
     <span
@@ -32,7 +31,8 @@
       class="file-upload__name"
       tabindex="0"
     >
-      {{ fileName || emptyFileNameText }}
+      {{ fileName }}
+      <slot v-if="!fileName" name="empty"/>
     </span>
   </label>
 </div>
