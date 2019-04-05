@@ -11,10 +11,7 @@ storiesOf('Modules/Modal', module)
     data: () => ({ value: null }),
     template: `
       <div>
-        <a-button 
-          @click="showModal"
-          type="button"
-        >
+        <a-button @click="showModal">
           Modal button
          </a-button>
         <a-modal name="default" ref="modalDefault">
@@ -46,10 +43,7 @@ storiesOf('Modules/Modal', module)
     components: { AButton, AModal },
     template: `
       <div>
-        <a-button 
-          @click="showModal"
-           type="button"
-        >
+        <a-button @click="showModal">
           Open Modal
          </a-button>
         <a-modal

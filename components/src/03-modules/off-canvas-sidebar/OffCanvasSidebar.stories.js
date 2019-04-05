@@ -10,10 +10,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     data: () => ({ value: null }),
     template: `
       <div>
-        <a-button 
-          type="button"
-          @click="showSidebar"
-        >
+        <a-button @click="showSidebar">
           Sidebar button
          </a-button>
         <a-off-canvas-sidebar
@@ -44,10 +41,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     components: { AButton, AOffCanvasSidebar },
     template: `
       <div>
-        <a-button 
-          type="button"
-          @click="showBlankSidebar"
-        >
+        <a-button @click="showBlankSidebar">
           Blank sidebar button
         </a-button>
         <a-off-canvas-sidebar

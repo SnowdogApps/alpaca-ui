@@ -56,17 +56,13 @@
 
     <div class="catalog-list-item__actions">
       <div class="catalog-list-item__actions-primary">
-        <a-button
-          type="button"
-          @click="addToCart"
-        >
+        <a-button @click="addToCart">
           {{ addToCartButton }}
          </a-button>
       </div>
 
       <div class="catalog-list-item__actions-secondary">
         <a-button
-          type="button"
           @click="addToWishList"
           class="catalog-list-item__button"
         >
@@ -74,7 +70,6 @@
         </a-button>
 
         <a-button
-          type="button"
           @click="compare"
           class="catalog-list-item__button"
         >
