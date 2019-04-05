@@ -11,12 +11,14 @@
     />
     <a-button
       :aria-label="closeAriaLabel"
-      :icon="closeIcon"
       class="cookie-message__close"
-      icon-class="cookie-message__close-icon"
       @click="closeBar()"
     >
       {{ closeButton }}
+      <a-icon
+        :icon="closeIcon"
+        class="cookie-message__close-icon"
+      />
      </a-button>
   </div>
 </div>

@@ -231,16 +231,13 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
       &:hover,
       &:focus {
-        .button__icon {
-          fill: $catalog-grid-item__action-icon-fill-hover;
-        }
+        transition: $catalog-grid-item__action-icon-transition;
+        fill: $catalog-grid-item__action-icon-fill-hover;
       }
 
-      .button__icon {
+      .icon {
         width: $catalog-grid-item__action-icon-size;
         height: $catalog-grid-item__action-icon-size;
-        transition: $catalog-grid-item__action-icon-transition;
-        fill: $catalog-grid-item__action-icon-fill;
       }
     }
   }

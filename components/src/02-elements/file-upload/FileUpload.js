@@ -1,4 +1,4 @@
-import AButton from '../button/Button.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 export default {
   components: {

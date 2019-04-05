@@ -1,6 +1,6 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 import ALink from '../../atoms/link/Link.vue'
-import AButton from '../../02-elements/button/Button.vue'
+import AButton from '../../atoms/button/Button.vue'
 import AList from '../../02-elements/list/List.vue'
 import AListItem from '../../02-elements/list-item/ListItem.vue'
 import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
