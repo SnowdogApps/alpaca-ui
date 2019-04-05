@@ -1,7 +1,7 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ABadge from '../../atoms/badge/Badge.vue'
-import APrice from '../../02-elements/price/Price.vue'
+import APrice from '../../atoms/price/Price.vue'
 import AImage from '../../atoms/image/Image.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
 

@@ -4,8 +4,9 @@
     :name="name"
     type="checkbox"
     :class="['checkbox__field', inputClass]"
-    :checked="finalValue === value"
-    @change="change($event.target.checked)"
+    :value="value"
+    :checked="checked"
+    @change="$emit('input', $event.target.checked)"
   >
   <!-- @slot Custom checkbox markup (Named slot) -->
   <slot name="label">

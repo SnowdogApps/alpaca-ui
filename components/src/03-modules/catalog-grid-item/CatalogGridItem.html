@@ -33,10 +33,11 @@
 
     <div class="catalog-grid-item__price">
       <a-price
-        :price="product.price"
         :special-price="product.specialPrice"
         :old-price="product.oldPrice"
-      />
+      >
+        {{ product.price }}
+      </a-price>
     </div>
 
     <!--TODO Add rating component-->

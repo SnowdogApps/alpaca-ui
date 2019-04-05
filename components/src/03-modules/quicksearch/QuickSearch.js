@@ -4,7 +4,7 @@ import AIcon from '../../atoms/icon/Icon.vue'
 import AHeading from '../../atoms/heading/Heading.vue'
 import AImage from '../../atoms/image/Image.vue'
 import AButton from '../../atoms/button/Button.vue'
-import APrice from '../../02-elements/price/Price.vue'
+import APrice from '../../atoms/price/Price.vue'
 import AList from '../../02-elements/list/List.vue'
 import AListItem from '../../02-elements/list-item/ListItem.vue'
 
