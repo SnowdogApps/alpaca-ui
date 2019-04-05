@@ -24,7 +24,7 @@
         :checked="value"
         type="radio"
         :class="['radio__field', inputClass]"
-        @change="change"
+        @change="$emit('change', $event.target.value)"
       >
       <!-- @slot Custom radio option (Scoped slot) -->
       <slot
