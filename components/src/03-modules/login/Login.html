@@ -24,8 +24,7 @@
      </a-fieldset>
     <div class="row row--no-margins end-xs">
       <a-button
-        class="login__forgot-password-button"
-        blank
+        class="button--blank login__forgot-password-button"
         @click="goToForgotPassword"
       >
         {{ goToForgotPasswordButton }}
@@ -33,7 +32,6 @@
     </div>
     <div class="login__submit-wrapper row row--no-margins center-xs">
       <a-button
-        type="submit"
         class="login__submit-button"
         @click.stop.prevent="login"
       >
@@ -43,7 +41,7 @@
   </form>
   <div class="login__register-wrapper row row--no-margins center-xs">
     <a-button
-      blank
+      class="button--blank"
       @click="goToRegister"
     >
       {{ goToRegisterButton }}

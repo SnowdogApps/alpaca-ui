@@ -48,13 +48,16 @@
         class="product-item__action-buttons-wrapper"
       >
         <a-button
-          icon="remove"
           class="product-item__action-button"
-          icon-class="product-item__action-icon"
           :aria-label="removeButton || defaultRemoveBtnAriaLabel"
           custom-class="product-item__actions-item"
           @click="onRemove(id)"
-        />
+        >
+          <a-icon
+            icon="remove"
+            class="product-item__action-icon"
+          />
+        </a-button>
       </div>
     </div>
   </div>

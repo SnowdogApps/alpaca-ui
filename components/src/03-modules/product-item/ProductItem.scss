@@ -1,19 +1,22 @@
 @import '../../../assets/styles/_globals.scss';
 
-$product-item__padding                 : $spacer--large 0 !default;
-$product-item__border                  : 1px solid $gray-light !default;
-$product-item__image-width             : 160px !default;
-$product-item__image-padding           : 0 $spacer--medium 0 0 !default;
-$product-item__name-weight\@medium     : $font-weight-bold !default;
-$product-item__name-width              : 65% !default;
-$product-item__name-padding\@medium    : 0 $spacer--medium 0 0 !default;
-$product-item__attributes-margin       : 0 0 $spacer--medium 0 !default;
-$product-item__actions-item-margin     : 0 0 0 $spacer !default;
-$product-item__actions-item-padding    : 0 $spacer--medium 0 0 !default;
-$product-item__button-border           : none !default;
-$product-item__button-background       : none !default;
-$product-item__action-button-background: $gray-darker !default;
-$product-item__action-icon-fill-color  : $gray-darker !default;
+$product-item__padding                     : $spacer--large 0 !default;
+$product-item__border                      : 1px solid $gray-light !default;
+$product-item__image-width                 : 160px !default;
+$product-item__image-padding               : 0 $spacer--medium 0 0 !default;
+$product-item__name-weight\@medium         : $font-weight-bold !default;
+$product-item__name-width                  : 65% !default;
+$product-item__name-padding\@medium        : 0 $spacer--medium 0 0 !default;
+$product-item__attributes-margin           : 0 0 $spacer--medium 0 !default;
+$product-item__actions-item-margin         : 0 0 0 $spacer !default;
+$product-item__actions-item-padding        : 0 $spacer--medium 0 0 !default;
+$product-item__button-border               : none !default;
+$product-item__button-background           : none !default;
+$product-item__action-button-background    : $gray-darker !default;
+$product-item__action-icon-fill-color      : $gray-darker !default;
+$product-item__action-icon-size            : 20px !default;
+$product-item__action-icon-fill-color-hover: $color-primary !default;
+$product-item__action-icon-transition      : $transition-base !default;
 
 .product-item {
   display: flex;
@@ -128,7 +131,15 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
   }
 
   &__action-icon {
+    width: $product-item__action-icon-size;
+    height: $product-item__action-icon-size;
     fill: $product-item__action-icon-fill-color;
+
+    &:hover,
+    &:focus {
+      transition: $product-item__action-icon-transition;
+      fill: $product-item__action-icon-fill-color-hover;
+    }
   }
 
   &__actions-item {

@@ -1,6 +1,6 @@
 import AHeading from '../../atoms/heading/Heading.vue'
 import AList from "../../02-elements/list/List.vue"
-import AButton from "../../02-elements/button/Button.vue"
+import AButton from "../../atoms/button/Button.vue"
 import AProductItem from "../../03-modules/product-item/ProductItem.vue"
 
 export default {
