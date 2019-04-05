@@ -38,7 +38,7 @@ export default {
      */
     acceptedFormats: {
       type: String,
-      default: '.pdf,.doc,.png'
+      default: null
     },
     /**
      * Max file size in bytes
