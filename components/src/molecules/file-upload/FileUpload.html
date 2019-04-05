@@ -6,7 +6,7 @@
     type="file"
     ref="fileInput"
     :accept="acceptedFormats"
-    @change="updateFileName"
+    @change="updateFile"
   >
   <label
     :class="['file-upload__wrapper', labelClass]"
@@ -31,9 +31,17 @@
       class="file-upload__name"
       tabindex="0"
     >
-      {{ fileName }}
-      <!-- @slot File name placeholder - displayed when file isn't selected -->
-      <slot v-if="!fileName" name="empty"/>
+      <span v-if="fileName && !error">
+        {{ fileName }}
+      </span>
+      <span v-else-if="error" class="file-upload__error">
+        <!-- @slot Error message - displayed when file is too big -->
+        <slot name="error"/>
+      </span>
+      <span v-else>
+        <!-- @slot File name placeholder - displayed when file isn't selected -->
+        <slot name="empty"/>
+      </span>
     </span>
   </label>
 </div>

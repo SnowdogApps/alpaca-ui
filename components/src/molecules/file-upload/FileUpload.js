@@ -39,20 +39,33 @@ export default {
     acceptedFormats: {
       type: String,
       default: '.pdf,.doc,.png'
+    },
+    /**
+     * Max file size in bytes
+     */
+    maxSize: {
+      type: Number,
+      default: null
     }
   },
   data() {
     return {
-      fileName: ''
+      fileName: '',
+      error: false
     }
   },
   methods: {
     chooseFile() {
       this.$refs.fileInput.click()
     },
-    updateFileName() {
-      this.fileName = this.$refs.fileInput.value.split('\\').pop()
-
+    updateFile() {
+      const file = this.$refs.fileInput.files[0]
+      if (file && this.maxSize && file.size > this.maxSize) {
+        this.error = true
+        return false
+      }
+      this.error = false
+      this.fileName = file ? file.name : null
       if (this.fileName) {
         this.$refs.fileName.focus()
       }

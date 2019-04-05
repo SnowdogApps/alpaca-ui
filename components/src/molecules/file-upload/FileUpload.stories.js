@@ -9,12 +9,17 @@ storiesOf('Molecules/File Upload', module)
     () => ({
       components: { AFileUpload },
       template: `
-        <a-file-upload>
+        <a-file-upload
+          :max-size="1000000"
+        >
           <template #title>
             Your file (pdf, doc, max 1 MB)
           </template>
           <template #button>
             Upload a file
+          </template>
+          <template #error>
+            File is too big! Please upload < 1 MB file
           </template>
           <template #empty>
             File not choosen

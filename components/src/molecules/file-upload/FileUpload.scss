@@ -4,6 +4,7 @@ $file-upload__margin        : $spacer--medium !default;
 $file-upload__field-height  : 48px !default;
 $file-upload__font-size     : 14px !default;
 $file-upload__button-padding: 0 $spacer--large !default;
+$file-upload__error-color   : $color-danger !default;
 
 .file-upload {
   position: relative;
@@ -38,6 +39,10 @@ $file-upload__button-padding: 0 $spacer--large !default;
       margin-top: $reset;
       margin-left: $file-upload__margin;
     }
+  }
+
+  &__error {
+    color: $file-upload__error-color;
   }
 
   &__button {
