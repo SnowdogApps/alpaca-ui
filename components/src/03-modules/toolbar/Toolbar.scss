@@ -45,13 +45,13 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
   position: relative;
   display: flex;
   flex: 0 0 auto;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   border-bottom: $toolbar__border;
 
   @include mq($screen-m) {
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
   }
 
   &__mode,
@@ -70,16 +70,16 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     display: none;
 
     @include mq($screen-m) {
+      display: flex;
       flex: 1;
       justify-content: center;
-      display: flex;
     }
 
     &--visible {
       display: flex;
       flex: 0 0 auto;
-      align-items: center;
       justify-content: flex-start;
+      align-items: center;
       padding: $spacer 0;
 
       @include mq($screen-m) {
@@ -93,14 +93,14 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
   }
 
   &__sorter {
-    border-top: $toolbar__sorter-border-top;
-    padding: $toolbar__sorter-padding;
     width: 100%;
+    padding: $toolbar__sorter-padding;
+    border-top: $toolbar__sorter-border-top;
 
     @include mq($screen-m) {
       width: auto;
-      border-top: none;
       padding: 0;
+      border-top: none;
     }
   }
 
@@ -114,10 +114,10 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     display: block;
     width: $toolbar__mode-icon-size;
     height: $toolbar__mode-icon-size;
-    padding: $reset;
     margin: $toolbar__mode-icon-margin;
-    fill: $toolbar__icon-color;
+    padding: $reset;
     transition: $toolbar__mode-icon-transition;
+    fill: $toolbar__icon-color;
 
     &--active {
       fill: $toolbar__icon-color--active;
@@ -125,11 +125,11 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
   }
 
   &__mode-button {
-    height: $toolbar__mode-icon-area-size;
-    width: $toolbar__mode-icon-area-size;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: $toolbar__mode-icon-area-size;
+    height: $toolbar__mode-icon-area-size;
     background: $toolbar__mode-icon-background;
     border: $toolbar__mode-icon-border;
     cursor: $toolbar__mode-icon-cursor;
@@ -146,9 +146,9 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
   &__sorter-wrapper,
   &__limiter-wrapper {
-    margin: $reset;
     display: flex;
     align-items: center;
+    margin: $reset;
 
     .choices {
       flex-grow: 1;
@@ -163,9 +163,9 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
       &--single {
         height: $toolbar__select-field-list-height;
+        padding-right: $toolbar__select-padding-right;
         border: $toolbar__select-border;
         border-radius: $toolbar__select-border-radius;
-        padding-right: $toolbar__select-padding-right;
       }
     }
   }
@@ -181,8 +181,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
   .select__field-item {
     display: flex;
-    color: $toolbar__select-field-item-color;
     height: $toolbar__select-field-item-height;
+    color: $toolbar__select-field-item-color;
     line-height: $toolbar__select-field-item-height;
   }
 
@@ -204,9 +204,9 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
   &__sorter-label,
   &__limiter-label {
-    color: $toolbar__secondary-text-color;
-    margin-bottom: 0;
     margin-right: $toolbar__offset;
+    margin-bottom: 0;
+    color: $toolbar__secondary-text-color;
   }
 
   &__sorter-label {
@@ -229,11 +229,11 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
   &__limiter {
     position: absolute;
-    right: 0;
     top: 8px;
+    right: 0;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     width: 20%;
 
     @include mq($screen-m) {
@@ -247,8 +247,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     &--relative {
       display: flex;
       flex: 0 0 auto;
-      align-items: center;
       justify-content: flex-end;
+      align-items: center;
       padding: $spacer 0;
     }
   }
@@ -257,8 +257,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     display: none;
 
     @include mq($screen-m) {
-      color: $toolbar__secondary-text-color;
       display: block;
+      color: $toolbar__secondary-text-color;
     }
   }
 
@@ -280,11 +280,11 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
       width: $toolbar__dropdown-icon-area-size;
       height: $toolbar__dropdown-icon-area-size;
       margin: $reset;
-      border: $toolbar__dropdown-icon-area-border;
       background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M12 2L10.59.59 6 5.17 1.41.59 0 2l6 6z" fill="#{$toolbar__dropdown-icon-color}" /></svg>');
-      background-size: $toolbar__dropdown-icon-size;
       background-repeat: no-repeat;
       background-position: center center;
+      background-size: $toolbar__dropdown-icon-size;
+      border: $toolbar__dropdown-icon-area-border;
     }
   }
 

@@ -26,8 +26,8 @@ $login__register-wrapper-margin               : $spacer 0 0 0 !default;
   &__forgot-password-button {
     height: $login__forgot-password-button-height;
     padding: $reset;
-    text-decoration: $login__forgot-password-button-text-decoration;
     color: $login__forgot-password-button-color;
+    text-decoration: $login__forgot-password-button-text-decoration;
 
     &:hover,
     &:focus {

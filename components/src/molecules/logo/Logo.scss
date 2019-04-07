@@ -1,0 +1,22 @@
+@import '../../../assets/styles/globals';
+
+.logo {
+  display: flex;
+  flex: 1 84px;
+  justify-content: center;
+  align-items: center;
+  max-width: 84px;
+
+  @include mq($screen-m) {
+    flex: 1 112px;
+    max-width: 112px;
+  }
+
+  &__image {
+    height: 25px;
+
+    @include mq($screen-m) {
+      height: 34px;
+    }
+  }
+}

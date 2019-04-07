@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/vue'
 import AHeading from './Heading.vue'
 
 storiesOf('Atoms/Heading', module)
+  .addParameters({ info: true })
   .add(
     'Default',
     () => ({
@@ -12,8 +13,7 @@ storiesOf('Atoms/Heading', module)
           Heading level 1
         </a-heading>
       `
-    }),
-    { info: {} }
+    })
   )
   .add(
     'Custom tag',
@@ -27,6 +27,5 @@ storiesOf('Atoms/Heading', module)
           Span level 4
         </a-heading>
       `
-    }),
-    { info: {} }
+    })
   )

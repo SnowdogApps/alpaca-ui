@@ -17,8 +17,8 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
 
 .product-item {
   display: flex;
-  width: 100%;
   flex-flow: row nowrap;
+  width: 100%;
   padding: $product-item__padding;
   border-bottom: $product-item__border;
 
@@ -30,9 +30,9 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
 
   &__info {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__data {
@@ -91,9 +91,9 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
   }
 
   &__attributes {
+    flex: 100%;
     margin: $product-item__attributes-margin;
     margin-right: $spacer;
-    flex: 100%;
     font-size: $font-size-small;
 
     @include mq($screen-m) {
@@ -103,13 +103,13 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
 
   &__actions {
     display: flex;
-    padding: $product-item__actions-item-padding;
     flex-direction: column;
     justify-content: space-between;
+    padding: $product-item__actions-item-padding;
 
     @include mq($screen-m) {
-      padding: $reset;
       flex-direction: row;
+      padding: $reset;
     }
 
     &--to-right {
@@ -118,8 +118,8 @@ $product-item__action-icon-fill-color  : $gray-darker !default;
   }
 
   &__action-button {
-    border: $product-item__button-border;
     background: $product-item__button-background;
+    border: $product-item__button-border;
 
     &:hover,
     &:focus {

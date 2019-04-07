@@ -1,0 +1,43 @@
+@import '../../../assets/styles/_globals.scss';
+
+$side-menu__icon-fill-color        : $black !default;
+$side-menu__sidebar-content-padding: $spacer--medium !default;
+
+.side-menu {
+  position: relative;
+
+  &__button {
+    background: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+
+    .button__icon {
+      fill: $side-menu__icon-fill-color;
+    }
+  }
+
+  &__sidebar {
+    .off-canvas-sidebar__content {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: $side-menu__sidebar-content-padding;
+    }
+
+    .off-canvas-sidebar__header {
+      position: absolute;
+      z-index: 10;
+    }
+
+    .slide-menu {
+      flex: 1;
+    }
+
+    .slide-menu__item--prev {
+      padding-right: 30px;
+    }
+  }
+}

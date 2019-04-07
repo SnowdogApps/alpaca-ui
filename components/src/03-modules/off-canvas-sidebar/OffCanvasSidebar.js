@@ -1,5 +1,5 @@
 import AHeading from '../../atoms/heading/Heading.vue'
-import ADivider from '../../02-elements/divider/Divider.vue'
+import ADivider from '../../../../cookbook/src/atoms/divider/Divider.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {

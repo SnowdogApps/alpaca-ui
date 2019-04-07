@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/vue'
 import AContainer from './Container.vue'
 
 storiesOf('Atoms/Container', module)
+  .addParameters({ info: true })
   .add(
     'Default',
     () => ({
@@ -12,6 +13,5 @@ storiesOf('Atoms/Container', module)
           Container
         </a-container>
       `
-    }),
-    { info: {} }
+    })
   )

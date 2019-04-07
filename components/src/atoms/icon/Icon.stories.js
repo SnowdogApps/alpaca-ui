@@ -1,15 +1,17 @@
 import { storiesOf } from '@storybook/vue'
-import { withReadme } from 'storybook-readme'
 
 import AIcon from './Icon.vue'
 
-import iconsReadme from './README.md'
+import readme from './README.md'
 import icons from './mocks/icons.json'
 
-const info = {}
-
 storiesOf('Atoms/Icon', module)
-  .addDecorator(withReadme(iconsReadme))
+  .addParameters(
+    {
+      info: true,
+      notes: readme
+    }
+  )
   .add(
     'Default',
     () => ({
@@ -34,6 +36,5 @@ storiesOf('Atoms/Icon', module)
           </div>
         </div>
       `
-    }),
-    { info }
+    })
   )

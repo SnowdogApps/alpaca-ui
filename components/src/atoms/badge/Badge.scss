@@ -15,17 +15,17 @@ $badge__background--sale: $color-primary !default;
 .badge {
   display: inline-flex;
   padding: $badge__padding;
-  font-family: $badge__font-family;
-  font-size: $badge__font-size;
-  font-weight: $badge__font-weight;
-  text-transform: $badge__text-transform;
   color: $badge__color;
+  font-weight: $badge__font-weight;
+  font-size: $badge__font-size;
+  font-family: $badge__font-family;
+  text-transform: $badge__text-transform;
   background: $badge__background;
   border-radius: $badge__border-radius;
 
   &--new {
-    background: $badge__background--new;
     color: $badge__color--new;
+    background: $badge__background--new;
   }
 
   &--sale {
