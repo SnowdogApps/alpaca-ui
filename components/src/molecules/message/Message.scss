@@ -1,4 +1,4 @@
-@import '../../../assets/styles/_globals.scss';
+@import '../../../assets/styles/globals';
 
 $message__width                     : 320px !default;
 $message__padding                   : 16px 25px 0 25px !default;
@@ -25,16 +25,16 @@ $message__information-font-size     : 15px !default;
   margin: $message__margin-base;
   padding: $message__padding;
   color: $message__color;
+  font-size: $message__font-size;
   background-color: $message__background;
   box-shadow: $message__box-shadow;
-  font-size: $message__font-size;
   transition: $message__transition;
 
   &__information {
     padding-bottom: $message__padding-bottom;
-    border-bottom: $message__border-bottom;
-    font-size: $message__information-font-size;
     font-weight: $font-weight-bold;
+    font-size: $message__information-font-size;
+    border-bottom: $message__border-bottom;
   }
 
   &__actions {
@@ -44,10 +44,10 @@ $message__information-font-size     : 15px !default;
     &-btn {
       padding: $reset;
       color: white;
-      background: $message__btn-background;
-      border: none;
       font-size: $font-size-base;
       text-align: center;
+      background: $message__btn-background;
+      border: none;
 
       &:hover {
         cursor: pointer;
