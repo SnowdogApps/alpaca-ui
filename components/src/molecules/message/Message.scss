@@ -1,7 +1,7 @@
 @import '../../../assets/styles/globals';
 
 $message__width                     : 320px !default;
-$message__padding                   : 16px 25px 0 25px !default;
+$message__padding                   : $spacer--medium 25px 0 25px !default;
 $message__padding-bottom            : 10px !default;
 $message__margin-base               : $spacer--medium 0 0 0 !default;
 $message__font-size                 : $font-size-small !default;
