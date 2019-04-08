@@ -8,13 +8,22 @@ storiesOf('Molecules/File Upload', module)
     'Default',
     () => ({
       components: { AFileUpload },
+      template: `<a-file-upload />`
+    }
+  ))
+  .add(
+    'With slots',
+    () => ({
+      components: { AFileUpload },
       template: `
         <a-file-upload accepted-formats=".pdf,.doc">
           <template #title>
-            Your file (pdf, doc)
+            <span class="file-upload__label">
+              Your file (pdf, doc)
+            </span>
           </template>
           <template #button>
-            Upload a file
+            Upload new file
           </template>
           <template #empty>
             File not choosen
@@ -30,19 +39,23 @@ storiesOf('Molecules/File Upload', module)
       template: `
         <a-file-upload
           accepted-formats=".pdf,.doc"
-          :max-size="1000000"
+          :max-size="400000"
         >
           <template #title>
-            Your file (pdf, doc, max 1 MB)
+            <span class="file-upload__label">
+              Your file (pdf, doc, max 1 MB)
+            </span>
           </template>
           <template #button>
-            Upload a file
-          </template>
-          <template #error>
-            File is too big! Please upload < 1 MB file
+            Upload new file
           </template>
           <template #empty>
             File not choosen
+          </template>
+          <template #error>
+            <span class="file-upload__error">
+              File is too big! Please upload < 1 MB file
+            </span>
           </template>
         </a-file-upload>
       `

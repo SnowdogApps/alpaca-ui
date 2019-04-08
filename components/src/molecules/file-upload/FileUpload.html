@@ -12,18 +12,22 @@
     :class="['file-upload__wrapper', labelClass]"
     :for="inputId"
   >
-    <span class="file-upload__label">
-      <!-- @slot Top title content -->
-      <slot name="title"/>
-    </span>
+    <!-- @slot Top title content (Named slot) -->
+    <slot name="title">
+      <span class="file-upload__label">
+        {{ title }}
+      </span>
+    </slot>
 
     <a-button
       class="button file-upload__button"
       aria-controls="file"
       @click.native="chooseFile"
     >
-      <!-- @slot Upload button text content -->
-      <slot name="button"/>
+      <!-- @slot Upload button content (Named slot) -->
+      <slot name="button">
+        {{ buttonText }}
+      </slot>
     </a-button>
 
     <span
@@ -34,14 +38,16 @@
       <span v-if="fileName && !error">
         {{ fileName }}
       </span>
-      <span v-else-if="error" class="file-upload__error">
-        <!-- @slot Error message - displayed when file is too big -->
-        <slot name="error"/>
-      </span>
-      <span v-else>
-        <!-- @slot File name placeholder - displayed when file isn't selected -->
-        <slot name="empty"/>
-      </span>
+      <!-- @slot Error message - displayed when file is too big (Named slot) -->
+      <slot v-else-if="error" name="error">
+        <span class="file-upload__error">
+          {{ errorText }}
+        </span>
+      </slot>
+      <!-- @slot File name placeholder - displayed when file isn't selected (Named slot) -->
+      <slot v-else name="empty">
+        {{ emptyText }}
+      </slot>
     </span>
   </a-label>
 </div>
