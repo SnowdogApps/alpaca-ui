@@ -8,7 +8,7 @@
     :accept="acceptedFormats"
     @change="updateFile"
   >
-  <label
+  <a-label
     :class="['file-upload__wrapper', labelClass]"
     :for="inputId"
   >
@@ -43,5 +43,5 @@
         <slot name="empty"/>
       </span>
     </span>
-  </label>
+  </a-label>
 </div>
