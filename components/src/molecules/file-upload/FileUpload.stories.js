@@ -42,7 +42,7 @@ storiesOf('Molecules/File Upload', module)
       template: `
         <a-file-upload
           accepted-formats=".pdf,.doc"
-          :max-size="400000"
+          :max-size="1000000"
         >
           <template #title>
             <span class="file-upload__label">
