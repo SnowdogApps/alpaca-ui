@@ -15,7 +15,6 @@ $message__background--error         : rgba(211, 47, 47, 1) !default;
 $message__border-success            : 1px solid rgba(57, 50, 67, 0.4) !default;
 $message__border-bottom             : 1px solid rgba(255, 255, 255, 0.4) !default;
 $message__box-shadow                : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
-$message__actions-padding           : 18px 0 !default;
 $message__information-font-size     : 15px !default;
 
 
@@ -39,17 +38,18 @@ $message__information-font-size     : 15px !default;
 
   &__actions {
     display: flex;
-    padding: $message__actions-padding;
 
     &-btn {
       padding: $reset;
       color: white;
+      font-weight: $font-weight-normal;
       font-size: $font-size-base;
       text-align: center;
       background: $message__btn-background;
       border: none;
 
       &:hover {
+        background: none;
         cursor: pointer;
       }
 
