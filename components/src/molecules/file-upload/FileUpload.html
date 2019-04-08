@@ -38,16 +38,20 @@
       <span v-if="fileName && !error">
         {{ fileName }}
       </span>
-      <!-- @slot Error message - displayed when file is too big (Named slot) -->
-      <slot v-else-if="error" name="error">
-        <span class="file-upload__error">
-          {{ errorText }}
-        </span>
-      </slot>
-      <!-- @slot File name placeholder - displayed when file isn't selected (Named slot) -->
-      <slot v-else name="empty">
-        {{ emptyText }}
-      </slot>
+      <template v-else-if="error">
+        <!-- @slot Error message - displayed when file is too big (Named slot) -->
+        <slot name="error">
+          <span class="file-upload__error">
+            {{ errorText }}
+          </span>
+        </slot>
+      </template>
+      <template v-else>
+        <!-- @slot File name placeholder - displayed when file isn't selected (Named slot) -->
+        <slot name="empty">
+          {{ emptyText }}
+        </slot>
+      </template>
     </span>
   </a-label>
 </div>
