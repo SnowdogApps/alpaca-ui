@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 
 import AMessage from './Message.vue'
+import AButton from '../../../src/02-elements/button/Button.vue'
 
 const info = `
   ---
@@ -10,7 +11,7 @@ const info = `
   ---
 `
 
-storiesOf('Atoms/Message', module)
+storiesOf('Molecules/Message', module)
   .add('Default', () => ({
     components: { AMessage },
     template: `
@@ -45,6 +46,19 @@ storiesOf('Atoms/Message', module)
           class="message--error"
         >
           Product has been added to the cart!
+        </a-message>
+    `
+    }),
+    { info }
+  )
+  .add('With slot', () => ({
+      components: { AMessage, AButton },
+      template: `
+        <a-message class="message--error">
+          Product has been added to the cart!
+          <template #actions>
+            <a-button>Ok</a-button>
+          </template>
         </a-message>
     `
     }),
