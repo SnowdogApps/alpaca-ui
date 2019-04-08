@@ -12,21 +12,25 @@ const info = `
 `
 
 storiesOf('Molecules/Message', module)
-  .add('Default', () => ({
-    components: { AMessage },
-    template: `
+  .addParameters({ info })
+  .add(
+    'Default',
+    () => ({
+      components: { AMessage },
+      template: `
         <a-message 
           accept-button="Ok" 
         >
           Product has been added to the cart!
         </a-message>
-    `
-    }),
-    { info }
+      `
+    })
   )
-  .add('Success', () => ({
-    components: { AMessage },
-    template: `
+  .add(
+    'Success',
+    () => ({
+      components: { AMessage },
+      template: `
         <a-message 
           accept-button="Ok" 
           cancel-button="Proceed to checkout"
@@ -34,24 +38,26 @@ storiesOf('Molecules/Message', module)
         >
           Product has been added to the cart!
         </a-message>
-    `
-    }),
-    { info }
+      `
+    })
   )
-  .add('Error', () => ({
-    components: { AMessage },
-    template: `
+  .add(
+    'Error',
+    () => ({
+      components: { AMessage },
+      template: `
         <a-message 
           accept-button="Ok" 
           class="message--error"
         >
           Product has been added to the cart!
         </a-message>
-    `
-    }),
-    { info }
+      `
+    })
   )
-  .add('With slot', () => ({
+  .add(
+    'With slot',
+    () => ({
       components: { AMessage, AButton },
       template: `
         <a-message class="message--error">
@@ -60,7 +66,6 @@ storiesOf('Molecules/Message', module)
             <a-button>Ok</a-button>
           </template>
         </a-message>
-    `
-    }),
-    { info }
+      `
+    })
   )
