@@ -1,21 +1,21 @@
 @import '../../../assets/styles/globals';
 
-$message__width                : 320px !default;
-$message__padding              : 16px 25px 0 25px !default;
-$message__padding-bottom       : 10px !default;
-$message__margin-base          : $spacer--medium 0 0 0 !default;
-$message__font-size            : $font-size-small !default;
-$message__transition           : $transition-base !default;
-$message__color                : $white !default;
-$message__color-success        : $black !default;
-$message__background           : rgba(25, 118, 210, 1) !default;
-$message__btn-background       : rgba(255, 255, 255, 0) !default;
-$message__background--success  : rgba(105, 220, 161, 1) !default;
-$message__background--error    : rgba(211, 47, 47, 1) !default;
-$message__border-success       : 1px solid rgba(57, 50, 67, 0.4) !default;
-$message__border-bottom        : 1px solid rgba(255, 255, 255, 0.4) !default;
-$message__box-shadow           : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
-$message__information-font-size: 15px !default;
+$message__width                     : 320px !default;
+$message__padding                   : 16px 25px 0 25px !default;
+$message__padding-bottom            : 10px !default;
+$message__margin-base               : $spacer--medium 0 0 0 !default;
+$message__font-size                 : $font-size-small !default;
+$message__transition                : $transition-base !default;
+$message__color                     : $white !default;
+$message__color-success             : $black !default;
+$message__background                : #1976d2 !default;
+$message__background--success       : #69dca1 !default;
+$message__background--error         : #d32f2f !default;
+$message__btn-background-transparent: rgba(255, 255, 255, 0) !default;
+$message__border-success            : 1px solid rgba(57, 50, 67, 0.4) !default;
+$message__border-bottom             : 1px solid rgba(255, 255, 255, 0.4) !default;
+$message__box-shadow                : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
+$message__information-font-size     : 15px !default;
 
 
 .message {
@@ -45,7 +45,7 @@ $message__information-font-size: 15px !default;
       font-weight: $font-weight-normal;
       font-size: $font-size-base;
       text-align: center;
-      background: $message__btn-background;
+      background: $message__btn-background-transparent;
       border: none;
 
       &:hover {
