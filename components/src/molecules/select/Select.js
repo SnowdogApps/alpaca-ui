@@ -43,9 +43,17 @@ export default {
       default: null
     },
     /**
-     * Label custom class
+     * Label text
      */
-    labelClass: {
+    label: {
+      type: String,
+      required: false,
+      default: null
+    },
+    /**
+     * Default option text
+     */
+    defaultOption: {
       type: String,
       required: false,
       default: null

@@ -12,14 +12,11 @@
   <slot name="label">
     <a-icon
       icon="checked"
-      :class="[
-      iconClass,
-      'checkbox__icon'
-    ]"
+      class="checkbox__icon"
     />
     <label
       :for="id"
-      :class="['checkbox__label', labelClass]"
+      class="checkbox__label"
     >
       <!-- @slot Custom label content (Default slot) -->
       <slot />
