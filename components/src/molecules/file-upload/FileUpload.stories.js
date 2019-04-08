@@ -17,6 +17,9 @@ storiesOf('Molecules/File Upload', module)
       components: { AFileUpload },
       template: `
         <a-file-upload accepted-formats=".pdf,.doc">
+          <template #file="{ fileName }">
+            {{ fileName }}
+          </template>
           <template #title>
             <span class="file-upload__label">
               Your file (pdf, doc)

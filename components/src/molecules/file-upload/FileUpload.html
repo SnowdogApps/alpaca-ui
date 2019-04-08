@@ -35,9 +35,12 @@
       class="file-upload__name"
       tabindex="0"
     >
-      <span v-if="fileName && !error">
-        {{ fileName }}
-      </span>
+      <template v-if="fileName && !error">
+        <!-- @slot File name markup (Scoped slot) -->
+        <slot name="file" :fileName="fileName">
+          {{ fileName }}
+        </slot>
+      </template>
       <template v-else-if="error">
         <!-- @slot Error message - displayed when file is too big (Named slot) -->
         <slot name="error">
