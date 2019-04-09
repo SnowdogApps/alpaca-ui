@@ -73,7 +73,17 @@ storiesOf('Molecules/Message', module)
         <a-message class="message--error">
           Product has been added to the cart!
           <template #actions>
-            <button @click="onClick">Ok</button>
+            <button 
+              @click="onClick"
+              style="
+                margin: 15px 0; 
+                background: none; 
+                border: none; 
+                cursor: pointer;
+              "
+            >
+              Ok
+            </button>
           </template>
         </a-message>
       `
