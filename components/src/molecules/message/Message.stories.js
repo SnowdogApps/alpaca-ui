@@ -26,7 +26,7 @@ storiesOf('Molecules/Message', module)
       ...defaultData,
       template: `
         <a-message 
-          action1-title="Ok"
+          action1-text="Ok"
           @action1="onClick"
         >
           Product has been added to the cart!
@@ -40,8 +40,8 @@ storiesOf('Molecules/Message', module)
       ...defaultData,
       template: `
         <a-message 
-          action1-title="Ok" 
-          action2-title="Proceed to checkout"
+          action1-text="Ok" 
+          action2-text="Proceed to checkout"
           @action1="onClick"
           @action2="onClick"
           class="message--success"
@@ -57,7 +57,7 @@ storiesOf('Molecules/Message', module)
       ...defaultData,
       template: `
         <a-message 
-          action1-title="Cancel" 
+          action1-text="Cancel" 
           @action1="onClick"
           class="message--error"
         >

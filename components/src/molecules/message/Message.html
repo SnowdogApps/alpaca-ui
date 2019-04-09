@@ -11,17 +11,17 @@
     <slot name="actions">
       <a-button
         class="message__button button--blank"
-        v-if="action1Title"
+        v-if="action1Text"
         @click.native="action1"
       >
-        {{ action1Title }}
+        {{ action1Text }}
       </a-button>
       <a-button
         class="message__button message__button--secondary button--blank"
-        v-if="action2Title"
+        v-if="action2Text"
         @click.native="action2"
       >
-        {{ action2Title }}
+        {{ action2Text }}
       </a-button>
     </slot>
   </div>

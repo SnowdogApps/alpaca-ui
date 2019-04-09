@@ -6,14 +6,14 @@ export default {
     /**
      * Cancel button text
      */
-    action1Title: {
+    action1Text: {
       type: String,
       default: null
     },
     /**
      * Accept button text
      */
-    action2Title: {
+    action2Text: {
       type: String,
       default: null
     }
