@@ -22,18 +22,18 @@
       </span>
     </slot>
 
-    <a-button
-      class="file-upload__button"
-      aria-controls="file"
-      @click.native="chooseFile"
-    >
-      <!-- @slot Upload button content (Named slot) -->
-      <slot name="button">
+    <!-- @slot Upload button markup (Scoped slot) -->
+    <slot name="button" :chooseFile="chooseFile">
+      <a-button
+        class="file-upload__button"
+        aria-controls="file"
+        @click.native="chooseFile"
+      >
         <template v-if="buttonText">
           {{ buttonText }}
         </template>
-      </slot>
-    </a-button>
+      </a-button>
+    </slot>
 
     <span
       ref="fileName"

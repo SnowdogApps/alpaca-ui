@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
+import AButton from '../../atoms/button/Button.vue'
 import AFileUpload from './FileUpload.vue'
 
 storiesOf('Molecules/File Upload', module)
@@ -20,7 +21,10 @@ storiesOf('Molecules/File Upload', module)
   .add(
     'With slots',
     () => ({
-      components: { AFileUpload },
+      components: {
+        AButton,
+        AFileUpload
+      },
       template: `
         <a-file-upload accepted-formats=".pdf,.doc">
           <template #file="{ fileName }">
@@ -31,8 +35,14 @@ storiesOf('Molecules/File Upload', module)
               Your file (pdf, doc)
             </span>
           </template>
-          <template #button>
-            Upload new file
+          <template #button="{ chooseFile }">
+            <a-button
+              class="custom file-upload__button"
+              aria-controls="file"
+              @click.native="chooseFile"
+            >
+              Upload new file
+            </a-button>
           </template>
           <template #empty>
             File not choosen
@@ -48,18 +58,14 @@ storiesOf('Molecules/File Upload', module)
       template: `
         <a-file-upload
           accepted-formats=".pdf,.doc"
+          buttonText="Upload a file"
+          emptyText="File not choosen"
           :max-size="1000000"
         >
           <template #title>
             <span class="file-upload__label">
               Your file (pdf, doc, max 1 MB)
             </span>
-          </template>
-          <template #button>
-            Upload new file
-          </template>
-          <template #empty>
-            File not choosen
           </template>
           <template #error>
             <span class="file-upload__error">
