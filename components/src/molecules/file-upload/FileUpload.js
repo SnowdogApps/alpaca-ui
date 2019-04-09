@@ -22,6 +22,13 @@ export default {
       default: 'file'
     },
     /**
+     * Custom input class
+     */
+    inputClass: {
+      type: String,
+      default: null
+    },
+    /**
      * Top title
      */
     title: {
@@ -48,13 +55,6 @@ export default {
     emptyText: {
       type: String,
       default: 'File not choosen'
-    },
-    /**
-     * Custom input class
-     */
-    inputClass: {
-      type: String,
-      default: null
     },
     /**
      * Custom label class
