@@ -30,11 +30,10 @@
       <a-button
         class="file-upload__button"
         aria-controls="file"
+        v-if="buttonText"
         @click.native="chooseFile"
       >
-        <template v-if="buttonText">
-          {{ buttonText }}
-        </template>
+        {{ buttonText }}
       </a-button>
     </slot>
 
@@ -45,10 +44,11 @@
     >
       <template v-if="fileName && !error">
         <!-- @slot File name markup (Scoped slot) -->
-        <slot name="file" :fileName="fileName">
-          <template v-if="fileName">
-            {{ fileName }}
-          </template>
+        <slot
+          name="file"
+          :fileName="fileName"
+        >
+          {{ fileName }}
         </slot>
       </template>
       <template v-else-if="error">
@@ -65,9 +65,7 @@
       <template v-else>
         <!-- @slot File name placeholder - displayed when file isn't selected (Named slot) -->
         <slot name="empty">
-          <template v-if="emptyText">
-            {{ emptyText }}
-          </template>
+          {{ emptyText }}
         </slot>
       </template>
     </span>
