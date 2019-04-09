@@ -58,6 +58,7 @@ storiesOf('Molecules/Message', module)
       template: `
         <a-message 
           action1-title="Cancel" 
+          @action1="onClick"
           class="message--error"
         >
           Product has been added to the cart!
@@ -77,6 +78,7 @@ storiesOf('Molecules/Message', module)
               @click="onClick"
               style="
                 margin: 15px 0; 
+                color: white;
                 background: none; 
                 border: none; 
                 cursor: pointer;

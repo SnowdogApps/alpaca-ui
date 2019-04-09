@@ -11,14 +11,14 @@
       <a-button
         class="message__button button--blank"
         v-if="action1Title"
-        @click="action1"
+        @click.native="action1"
       >
         {{ action1Title }}
       </a-button>
       <a-button
         class="message__button message__button--secondary button--blank"
         v-if="action2Title"
-        @click="action2"
+        @click.native="action2"
       >
         {{ action2Title }}
       </a-button>
