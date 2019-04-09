@@ -5,7 +5,6 @@ $message__width                     : 100% !default;
 $message__content-max-width         : 496px !default;
 $message__padding                   : $spacer--medium 25px 0 25px !default;
 $message__padding-bottom            : $spacer !default;
-$message__margin-base               : $spacer--medium 0 0 0 !default;
 $message__auto                      : auto !default;
 $message__font-size                 : $font-size-small !default;
 $message__transition                : $transition-base !default;
@@ -32,7 +31,6 @@ $message__font-weight-bold          : $font-weight-bold !default;
 
   @include mq($screen-m) {
     width: $message__max-width;
-    margin: $message__margin-base;
   }
 
   &--error {
@@ -67,6 +65,7 @@ $message__font-weight-bold          : $font-weight-bold !default;
 
   &__actions {
     display: flex;
+    justify-content: space-between;
   }
 
   &__information,
@@ -88,10 +87,6 @@ $message__font-weight-bold          : $font-weight-bold !default;
 
     &:last-child {
       font-weight: $message__font-weight-bold;
-    }
-
-    &--secondary {
-      margin-left: $message__auto;
     }
   }
 }
