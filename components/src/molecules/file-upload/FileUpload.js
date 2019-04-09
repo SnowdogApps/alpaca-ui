@@ -22,6 +22,13 @@ export default {
       default: 'file'
     },
     /**
+     * Custom input class
+     */
+    inputClass: {
+      type: String,
+      default: null
+    },
+    /**
      * Top title
      */
     title: {
@@ -46,13 +53,6 @@ export default {
      * File name placeholder text
      */
     emptyText: {
-      type: String,
-      default: null
-    },
-    /**
-     * Custom input class
-     */
-    inputClass: {
       type: String,
       default: null
     },
