@@ -14,19 +14,24 @@
   >
     <!-- @slot Top title content (Named slot) -->
     <slot name="title">
-      <span class="file-upload__label">
+      <span
+        v-if="title"
+        class="file-upload__label"
+      >
         {{ title }}
       </span>
     </slot>
 
     <a-button
-      class="button file-upload__button"
+      class="file-upload__button"
       aria-controls="file"
       @click.native="chooseFile"
     >
       <!-- @slot Upload button content (Named slot) -->
       <slot name="button">
-        {{ buttonText }}
+        <template v-if="buttonText">
+          {{ buttonText }}
+        </template>
       </slot>
     </a-button>
 
@@ -38,13 +43,18 @@
       <template v-if="fileName && !error">
         <!-- @slot File name markup (Scoped slot) -->
         <slot name="file" :fileName="fileName">
-          {{ fileName }}
+          <template v-if="fileName">
+            {{ fileName }}
+          </template>
         </slot>
       </template>
       <template v-else-if="error">
         <!-- @slot Error message - displayed when file is too big (Named slot) -->
         <slot name="error">
-          <span class="file-upload__error">
+          <span
+            v-if="errorText"
+            class="file-upload__error"
+          >
             {{ errorText }}
           </span>
         </slot>
@@ -52,7 +62,9 @@
       <template v-else>
         <!-- @slot File name placeholder - displayed when file isn't selected (Named slot) -->
         <slot name="empty">
-          {{ emptyText }}
+          <template v-if="emptyText">
+            {{ emptyText }}
+          </template>
         </slot>
       </template>
     </span>
