@@ -8,10 +8,12 @@
     <a-button
       v-if="!isRootPosition"
       class="slide-menu__button slide-menu__button--prev"
-      icon-class="slide-menu__icon slide-menu__icon--prev"
-      :icon="prevIcon"
       @click="load(prevLevel)"
     >
+      <a-icon
+        :icon="prevIcon"
+        class="slide-menu__icon slide-menu__icon--prev"
+      />
       {{ currentItem.label }}
     </a-button>
   </li>
@@ -36,11 +38,13 @@
         <a-button
           v-if="item.nodes"
           class="slide-menu__button"
-          icon-class="slide-menu__icon"
-          :icon="nextIcon"
           @click="load(item.level)"
         >
           {{ item.label }}
+          <a-icon
+            :icon="nextIcon"
+            class="slide-menu__icon"
+          />
         </a-button>
       </li>
     </transition-group>

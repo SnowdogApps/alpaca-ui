@@ -1,12 +1,14 @@
 import AImage from "../../atoms/image/Image.vue"
-import APrice from "../../02-elements/price/Price.vue"
+import AIcon from "../../atoms/icon/Icon.vue"
+import APrice from "../../atoms/price/Price.vue"
 import ADescriptionList from "../../atoms/description-list/DescriptionList.vue"
-import AButton from "../../02-elements/button/Button.vue"
+import AButton from "../../atoms/button/Button.vue"
 import AQuantityUpdate from "../../03-modules/quantity-update/QuantityUpdate.vue"
 
 export default {
   components: {
     AImage,
+    AIcon,
     APrice,
     ADescriptionList,
     AButton,

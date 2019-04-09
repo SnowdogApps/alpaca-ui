@@ -2,10 +2,13 @@
   <div class="quicksearch quicksearch--visible">
     <a-button
       class="quicksearch__close-button"
-      icon-class="quicksearch__close-icon"
       aria-label="Close quicksearch"
-      icon="close"
-    />
+    >
+      <a-icon
+        class="quicksearch__close-icon"
+        icon="close"
+      />
+    </a-button>
 
     <a-paragraph class="quicksearch__results">
       {{ resultText }}

@@ -1,5 +1,6 @@
 import AHeading from '../../atoms/heading/Heading.vue'
-import AButton from '../../02-elements/button/Button.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AButton from '../../atoms/button/Button.vue'
 import ADivider from '../../../../cookbook/src/atoms/divider/Divider.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
@@ -7,6 +8,7 @@ import AListItem from '../../atoms/list-item/ListItem.vue'
 export default {
   components: {
     AHeading,
+    AIcon,
     AButton,
     ADivider,
     AList,

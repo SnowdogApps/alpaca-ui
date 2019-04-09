@@ -1,9 +1,10 @@
 import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 import ALink from '../../atoms/link/Link.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 import AHeading from '../../atoms/heading/Heading.vue'
 import AImage from '../../atoms/image/Image.vue'
-import AButton from '../../02-elements/button/Button.vue'
-import APrice from '../../02-elements/price/Price.vue'
+import AButton from '../../atoms/button/Button.vue'
+import APrice from '../../atoms/price/Price.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 
@@ -11,6 +12,7 @@ export default {
   components: {
     AParagraph,
     ALink,
+    AIcon,
     AHeading,
     AImage,
     AButton,

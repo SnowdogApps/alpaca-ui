@@ -216,16 +216,21 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         background-color: transparent;
       }
     }
+  }
 
-    .button__icon {
-      width: $catalog-list-item__actions-secondary-button-icon-width;
-      height: $catalog-list-item__actions-secondary-button-icon-height;
-      fill: $catalog-list-item__actions-secondary-button-icon-fill;
+  &__button {
+    width: $catalog-list-item__actions-secondary-button-icon-width;
+    height: $catalog-list-item__actions-secondary-button-icon-height;
 
-      @include mq($screen-m) {
-        width: $catalog-list-item__actions-secondary-button-icon-width\@medium;
-        height: $catalog-list-item__actions-secondary-button-icon-height\@medium;
-      }
+    @include mq($screen-m) {
+      width: $catalog-list-item__actions-secondary-button-icon-width\@medium;
+      height: $catalog-list-item__actions-secondary-button-icon-height\@medium;
+    }
+
+    &:hover,
+    &:focus {
+      transition: $transition-base;
+      fill: $color-primary;
     }
   }
 

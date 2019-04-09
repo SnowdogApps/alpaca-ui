@@ -1,5 +1,5 @@
 import ALink from '../../atoms/link/Link.vue'
-import AButton from '../../02-elements/button/Button.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 export default {
   components: {
