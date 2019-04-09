@@ -4,14 +4,14 @@ export default {
   components: { AButton },
   props: {
     /**
-     * Cancel button text
+     * Action1 text
      */
     action1Text: {
       type: String,
       default: null
     },
     /**
-     * Accept button text
+     * Action2 text
      */
     action2Text: {
       type: String,
