@@ -29,6 +29,26 @@ $message__font-weight-bold          : $font-weight-bold !default;
   box-shadow: $message__box-shadow;
   transition: $message__transition;
 
+  &--error {
+    color: $message__color;
+    background-color: $message__background--error;
+  }
+
+  &--success {
+    color: $message__color-success;
+    background-color: $message__background--success;
+  }
+
+  &--success &__actions {
+    &-btn {
+      color: $message__color-success;
+    }
+  }
+
+  &--success &__information {
+    border-bottom: $message__border-success;
+  }
+
   &__information {
     padding-bottom: $message__padding-bottom;
     font-weight: $message__font-weight-bold;
@@ -58,25 +78,5 @@ $message__font-weight-bold          : $font-weight-bold !default;
         margin-left: $message__margin-left;
       }
     }
-  }
-
-  &--error {
-    color: $message__color;
-    background-color: $message__background--error;
-  }
-
-  &--success {
-    color: $message__color-success;
-    background-color: $message__background--success;
-  }
-
-  &--success &__actions {
-    &-btn {
-      color: $message__color-success;
-    }
-  }
-
-  &--success &__information {
-    border-bottom: $message__border-success;
   }
 }
