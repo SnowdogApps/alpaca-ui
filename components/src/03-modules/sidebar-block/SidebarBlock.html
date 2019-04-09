@@ -24,13 +24,14 @@
       >
         <a-button
           class="sidebar-block__remove"
-          :default-button-icon-class="false"
-          icon="close"
-          icon-class="sidebar-block__remove-icon"
-          :default-icon-class="false"
           aria-label="Remove product from compare"
           @click="removeFromCompare"
-        />
+        >
+          <a-icon
+            icon="close"
+            class="sidebar-block__remove-icon"
+          />
+        </a-button>
         <router-link
           class="link sidebar-block__link"
           :to="product.link"

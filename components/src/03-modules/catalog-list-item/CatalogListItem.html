@@ -56,23 +56,25 @@
 
     <div class="catalog-list-item__actions">
       <div class="catalog-list-item__actions-primary">
-        <a-button
-          @click="addToCart"
-        >
+        <a-button @click="addToCart">
           {{ addToCartButton }}
          </a-button>
       </div>
 
       <div class="catalog-list-item__actions-secondary">
         <a-button
-          :icon="buttonWishlist"
           @click="addToWishList"
-        />
+          class="catalog-list-item__button"
+        >
+          <a-icon :icon="buttonWishlist"/>
+        </a-button>
 
         <a-button
-          :icon="buttonCompare"
           @click="compare"
-        />
+          class="catalog-list-item__button"
+        >
+          <a-icon :icon="buttonCompare"/>
+        </a-button>
       </div>
     </div>
   </div>

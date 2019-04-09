@@ -8,17 +8,20 @@
   </label>
   <div class="quantity-update__qty">
     <a-button
-      :icon-title="decrementIconTitle"
       :aria-label="decrementAriaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--minus',
         {'quantity-update__button--disabled': currentValue === 0},
         decrementButtonClass
       ]"
-      icon="minus"
-      icon-class="button__icon quantity-update__icon"
       @click="changeValue(--currentValue)"
-    />
+    >
+      <a-icon
+        :title="decrementIconTitle"
+        icon="minus"
+        class="button__icon quantity-update__icon"
+      />
+    </a-button>
     <a-input
       v-model="currentValue"
       :id="inputId"
@@ -36,15 +39,18 @@
       @input="changeValue"
     />
     <a-button
-      icon="plus"
-      :icon-title="incrementIconTitle"
       :aria-label="incrementAriaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--plus',
         incrementButtonClass
       ]"
-      icon-class="button__icon quantity-update__icon"
       @click="changeValue(++currentValue)"
-    />
+    >
+      <a-icon
+        :title="incrementIconTitle"
+        icon="plus"
+        class="button__icon quantity-update__icon"
+      />
+    </a-button>
   </div>
 </div>

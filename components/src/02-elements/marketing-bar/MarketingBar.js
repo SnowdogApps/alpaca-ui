@@ -1,7 +1,9 @@
-import AButton from '../../02-elements/button/Button.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 export default {
   components: {
+    AIcon,
     AButton
   },
   props: {

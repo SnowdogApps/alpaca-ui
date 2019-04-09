@@ -5,18 +5,24 @@
   >
     <a-button
       aria-label="Change to grid view"
-      icon="grid"
-      icon-class="toolbar__mode-icon toolbar__mode-icon--active"
       class="toolbar__mode-button"
       @click="gridView"
-    />
+    >
+      <a-icon
+        icon="grid"
+        class="toolbar__mode-icon toolbar__mode-icon--active"
+      />
+    </a-button>
     <a-button
       aria-label="Change to list view"
-      icon="list"
-      icon-class="toolbar__mode-icon"
       class="toolbar__mode-button"
       @click="listView"
-    />
+    >
+      <a-icon
+        icon="list"
+        class="toolbar__mode-icon"
+      />
+    </a-button>
   </div>
   <div
     v-if="showSorter"

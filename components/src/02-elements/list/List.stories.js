@@ -89,9 +89,7 @@ storiesOf('Elements/List', module)
             v-for="element in iconListElements"
             :key="element.id"
           >
-            <a-icon
-              :icon="element.icon.iconId"
-            />
+            <a-icon :icon="element.icon.iconId"/>
            </a-list-item>
          </a-list>
     `

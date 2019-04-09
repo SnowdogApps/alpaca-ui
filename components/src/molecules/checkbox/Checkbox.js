@@ -36,20 +36,6 @@ export default {
       default: null
     },
     /**
-     * Class for icon
-     */
-    iconClass: {
-      type: String,
-      default: null
-    },
-    /**
-     * Class for label
-     */
-    labelClass: {
-      type: String,
-      default: null
-    },
-    /**
      * Class for input
      */
     inputClass: {

@@ -1,5 +1,5 @@
 import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
-import AButton from '../../02-elements/button/Button.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 export default {
   components: {
