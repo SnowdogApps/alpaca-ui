@@ -26,28 +26,28 @@ export default {
      */
     title: {
       type: String,
-      default: 'Your file'
+      default: null
     },
     /**
      * Button text
      */
     buttonText: {
       type: String,
-      default: 'Upload a file'
+      default: null
     },
     /**
      * Error text
      */
     errorText: {
       type: String,
-      default: 'File is too big!'
+      default: null
     },
     /**
      * File name placeholder text
      */
     emptyText: {
       type: String,
-      default: 'File not choosen'
+      default: null
     },
     /**
      * Custom input class
