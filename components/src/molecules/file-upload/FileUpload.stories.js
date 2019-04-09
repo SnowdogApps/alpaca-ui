@@ -12,8 +12,8 @@ storiesOf('Molecules/File Upload', module)
       template: `
         <a-file-upload
           title="Your file"
-          buttonText="Upload a file"
-          emptyText="File not choosen"
+          button-text="Upload a file"
+          empty-text="File not choosen"
         />
       `
     }
@@ -58,8 +58,8 @@ storiesOf('Molecules/File Upload', module)
       template: `
         <a-file-upload
           accepted-formats=".pdf,.doc"
-          buttonText="Upload a file"
-          emptyText="File not choosen"
+          button-text="Upload a file"
+          empty-text="File not choosen"
           :max-size="1000000"
         >
           <template #title>

@@ -23,7 +23,10 @@
     </slot>
 
     <!-- @slot Upload button markup (Scoped slot) -->
-    <slot name="button" :chooseFile="chooseFile">
+    <slot
+      name="button"
+      :chooseFile="chooseFile"
+    >
       <a-button
         class="file-upload__button"
         aria-controls="file"
