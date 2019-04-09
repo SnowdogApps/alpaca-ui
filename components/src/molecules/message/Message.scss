@@ -1,10 +1,12 @@
 @import '../../../assets/styles/globals';
 
-$message__width                     : 320px !default;
+$message__max-width                 : 320px !default;
+$message__width                     : 100% !default;
+$message__content-max-width         : 496px !default;
 $message__padding                   : $spacer--medium 25px 0 25px !default;
 $message__padding-bottom            : $spacer !default;
 $message__margin-base               : $spacer--medium 0 0 0 !default;
-$message__margin-left               : auto !default;
+$message__auto                      : auto !default;
 $message__font-size                 : $font-size-small !default;
 $message__transition                : $transition-base !default;
 $message__color                     : $white !default;
@@ -20,14 +22,18 @@ $message__font-weight-bold          : $font-weight-bold !default;
 
 .message {
   width: $message__width;
-  height: auto;
-  margin: $message__margin-base;
+  height: $message__auto;
   padding: $message__padding;
   color: $message__color;
   font-size: $message__font-size;
   background-color: $message__background;
   box-shadow: $message__box-shadow;
   transition: $message__transition;
+
+  @include mq($screen-m) {
+    width: $message__max-width;
+    margin: $message__margin-base;
+  }
 
   &--error {
     color: $message__color;
@@ -63,6 +69,12 @@ $message__font-weight-bold          : $font-weight-bold !default;
     display: flex;
   }
 
+  &__information,
+  &__actions {
+    max-width: $message__content-max-width;
+    margin: 0 $message__auto;
+  }
+
   &__button {
     padding: $reset;
     color: $message__color;
@@ -79,7 +91,7 @@ $message__font-weight-bold          : $font-weight-bold !default;
     }
 
     &--secondary {
-      margin-left: $message__margin-left;
+      margin-left: $message__auto;
     }
   }
 }

@@ -57,7 +57,7 @@ storiesOf('Molecules/Message', module)
       ...defaultData,
       template: `
         <a-message 
-          action1-title="Ok" 
+          action1-title="Cancel" 
           class="message--error"
         >
           Product has been added to the cart!
