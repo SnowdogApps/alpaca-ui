@@ -6,32 +6,32 @@ export default {
     /**
      * Cancel button text
      */
-    cancelButton: {
+    action1: {
       type: String,
       default: null
     },
     /**
      * Accept button text
      */
-    acceptButton: {
+    action2: {
       type: String,
       default: null
     }
   },
   methods: {
-    acceptAction(event) {
+    action1Event(event) {
       /**
-       * Event for accept action
+       * Event for action1
        * @type {Event}
        */
-      this.$emit('accept', event)
+      this.$emit('action1', event)
     },
-    cancelAction(event) {
+    action2Event(event) {
       /**
-       * Event for cancel action
+       * Event for action2
        * @type {Event}
        */
-      this.$emit('cancel', event)
+      this.$emit('action2', event)
     },
   }
 }

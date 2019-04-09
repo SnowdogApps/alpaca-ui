@@ -18,7 +18,7 @@ storiesOf('Molecules/Message', module)
     () => ({
       components: { AMessage },
       template: `
-        <a-message accept-button="Ok">
+        <a-message action1="Ok">
           Product has been added to the cart!
         </a-message>
       `
@@ -30,8 +30,8 @@ storiesOf('Molecules/Message', module)
       components: { AMessage },
       template: `
         <a-message 
-          accept-button="Ok" 
-          cancel-button="Proceed to checkout"
+          action1="Ok" 
+          action2="Proceed to checkout"
           class="message--success"
         >
           Product has been added to the cart!
@@ -45,7 +45,7 @@ storiesOf('Molecules/Message', module)
       components: { AMessage },
       template: `
         <a-message 
-          accept-button="Ok" 
+          action1="Ok" 
           class="message--error"
         >
           Product has been added to the cart!

@@ -10,17 +10,17 @@
     <slot name="actions">
       <a-button
         class="message__actions-btn button--blank"
-        v-if="acceptButton"
-        @onClick="acceptAction"
+        v-if="action1"
+        @onClick="action1Event"
       >
-        {{ acceptButton }}
+        {{ action1 }}
       </a-button>
       <a-button
         class="message__actions-btn button--blank"
-        v-if="cancelButton"
-        @onClick="cancelAction"
+        v-if="action2"
+        @onClick="action2Event"
       >
-        {{ cancelButton }}
+        {{ action2 }}
       </a-button>
     </slot>
   </div>
