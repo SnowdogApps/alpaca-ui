@@ -9,14 +9,14 @@
   <div class="message__actions">
     <slot name="actions">
       <a-button
-        class="message__actions-btn button--blank"
+        class="message__button button--blank"
         v-if="action1Title"
         @click="action1"
       >
         {{ action1Title }}
       </a-button>
       <a-button
-        class="message__actions-btn button--blank"
+        class="message__button message__button--secondary button--blank"
         v-if="action2Title"
         @click="action2"
       >

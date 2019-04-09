@@ -37,16 +37,19 @@ $message__font-weight-bold          : $font-weight-bold !default;
   &--success {
     color: $message__color-success;
     background-color: $message__background--success;
-  }
 
-  &--success &__actions {
-    &-btn {
-      color: $message__color-success;
+    .message__information {
+      border-bottom: $message__border-success;
     }
-  }
 
-  &--success &__information {
-    border-bottom: $message__border-success;
+    .message__button {
+      color: $message__color-success;
+
+      &:hover,
+      &:focus {
+        color: $message__color-success;
+      }
+    }
   }
 
   &__information {
@@ -58,25 +61,25 @@ $message__font-weight-bold          : $font-weight-bold !default;
 
   &__actions {
     display: flex;
+  }
 
-    &-btn {
-      padding: $reset;
+  &__button {
+    padding: $reset;
+    color: $message__color;
+    background: none;
+
+    &:hover,
+    &:focus {
       color: $message__color;
       background: none;
+    }
 
-      &:hover,
-      &:focus {
-        color: $message__color;
-        background: none;
-      }
+    &:last-child {
+      font-weight: $message__font-weight-bold;
+    }
 
-      &:last-child {
-        font-weight: $message__font-weight-bold;
-      }
-
-      &:nth-child(2) {
-        margin-left: $message__margin-left;
-      }
+    &--secondary {
+      margin-left: $message__margin-left;
     }
   }
 }
