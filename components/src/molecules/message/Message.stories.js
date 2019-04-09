@@ -18,9 +18,7 @@ storiesOf('Molecules/Message', module)
     () => ({
       components: { AMessage },
       template: `
-        <a-message 
-          accept-button="Ok" 
-        >
+        <a-message accept-button="Ok">
           Product has been added to the cart!
         </a-message>
       `

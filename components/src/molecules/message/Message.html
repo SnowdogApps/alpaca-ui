@@ -9,14 +9,14 @@
   <div class="message__actions">
     <slot name="actions">
       <a-button
-        class="message__actions-btn"
+        class="message__actions-btn button--blank"
         v-if="acceptButton"
         @onClick="acceptAction"
       >
         {{ acceptButton }}
       </a-button>
       <a-button
-        class="message__actions-btn"
+        class="message__actions-btn button--blank"
         v-if="cancelButton"
         @onClick="cancelAction"
       >
