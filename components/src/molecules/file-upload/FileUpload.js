@@ -57,13 +57,6 @@ export default {
       default: null
     },
     /**
-     * Custom label class
-     */
-    labelClass: {
-      type: String,
-      default: null
-    },
-    /**
      * List of accepted file types separated by a comma
      */
     acceptedFormats: {

@@ -17,6 +17,7 @@ $file-upload__error-color   : $color-danger !default;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin: $reset;
   }
 
   &__input {
