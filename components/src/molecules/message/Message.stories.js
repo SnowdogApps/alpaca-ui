@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import AMessage from './Message.vue'
-import AButton from '../../../src/02-elements/button/Button.vue'
 
 const info = `
   ---
@@ -11,14 +11,24 @@ const info = `
   ---
 `
 
+const defaultData = {
+  components: { AMessage },
+  methods: {
+    onClick: action('Action clicked')
+  }
+}
+
 storiesOf('Molecules/Message', module)
   .addParameters({ info })
   .add(
     'Default',
     () => ({
-      components: { AMessage },
+      ...defaultData,
       template: `
-        <a-message action1="Ok">
+        <a-message 
+          action1-title="Ok"
+          @action1="onClick"
+        >
           Product has been added to the cart!
         </a-message>
       `
@@ -27,11 +37,13 @@ storiesOf('Molecules/Message', module)
   .add(
     'Success',
     () => ({
-      components: { AMessage },
+      ...defaultData,
       template: `
         <a-message 
-          action1="Ok" 
-          action2="Proceed to checkout"
+          action1-title="Ok" 
+          action2-title="Proceed to checkout"
+          @action1="onClick"
+          @action2="onClick"
           class="message--success"
         >
           Product has been added to the cart!
@@ -42,10 +54,10 @@ storiesOf('Molecules/Message', module)
   .add(
     'Error',
     () => ({
-      components: { AMessage },
+      ...defaultData,
       template: `
         <a-message 
-          action1="Ok" 
+          action1-title="Ok" 
           class="message--error"
         >
           Product has been added to the cart!
@@ -56,12 +68,12 @@ storiesOf('Molecules/Message', module)
   .add(
     'With slot',
     () => ({
-      components: { AMessage, AButton },
+      ...defaultData,
       template: `
         <a-message class="message--error">
           Product has been added to the cart!
           <template #actions>
-            <a-button>Ok</a-button>
+            <button @click="onClick">Ok</button>
           </template>
         </a-message>
       `

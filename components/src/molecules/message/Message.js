@@ -6,27 +6,27 @@ export default {
     /**
      * Cancel button text
      */
-    action1: {
+    action1Title: {
       type: String,
       default: null
     },
     /**
      * Accept button text
      */
-    action2: {
+    action2Title: {
       type: String,
       default: null
     }
   },
   methods: {
-    action1Event(event) {
+    action1(event) {
       /**
        * Event for action1
        * @type {Event}
        */
       this.$emit('action1', event)
     },
-    action2Event(event) {
+    action2(event) {
       /**
        * Event for action2
        * @type {Event}
