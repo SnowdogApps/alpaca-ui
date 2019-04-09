@@ -12,5 +12,5 @@ storiesOf('Atoms/Image', module)
         alt="alt image text"
       />
     `
-    })
+  })
   )

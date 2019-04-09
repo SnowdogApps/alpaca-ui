@@ -9,7 +9,7 @@ storiesOf('Elements/Breadcrumbs', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
     components: { ABreadcrumbs },
-    data() {
+    data () {
       return {
         breadcrumbs
       }

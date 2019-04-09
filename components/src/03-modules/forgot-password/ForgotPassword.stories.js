@@ -18,6 +18,6 @@ storiesOf('Modules/Forgot Password', module)
     `,
     methods: {
       resetPassword: action('Reset password'),
-      goToLogin: action('Login view'),
+      goToLogin: action('Login view')
     }
   }))

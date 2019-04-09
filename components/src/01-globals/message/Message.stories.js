@@ -22,8 +22,8 @@ storiesOf('Global/Message', module)
         You added Jacket to your shopping cart.
       </a-message>
     `
-    }),
-    { info }
+  }),
+  { info }
   )
   .add('Warning', () => ({
     components: { AMessage },
@@ -35,8 +35,8 @@ storiesOf('Global/Message', module)
         You added Jacket to your shopping cart.
       </a-message>
     `
-    }),
-    { info }
+  }),
+  { info }
   )
   .add('Error', () => ({
     components: { AMessage },
@@ -48,6 +48,6 @@ storiesOf('Global/Message', module)
         You added Jacket to your shopping cart.
       </a-message>
     `
-    }),
-    { info }
+  }),
+  { info }
   )

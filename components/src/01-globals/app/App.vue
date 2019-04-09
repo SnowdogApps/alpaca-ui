@@ -1,11 +1,11 @@
 <template src="./App.html" />
 
 <script>
-  import instance from "./App.js"
+import instance from './App.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style lang="scss" src="./App.scss"/>

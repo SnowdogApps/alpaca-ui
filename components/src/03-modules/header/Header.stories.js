@@ -126,13 +126,13 @@ storiesOf('Modules/Header', module)
       </div>
     `,
     methods: {
-      showRegister() {
+      showRegister () {
         this.$refs.modalRegister.show('register')
       },
-      showMiniCart() {
+      showMiniCart () {
         this.$refs.modalMiniCart.show('mini-cart')
       },
-      toggleWishlist() {
+      toggleWishlist () {
         this.$refs.modalWishlist.show('wishlist')
       },
       login: action('Login'),

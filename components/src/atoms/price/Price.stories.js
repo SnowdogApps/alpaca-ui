@@ -82,5 +82,5 @@ storiesOf('Atoms/Price', module)
           </template>
         </a-price>
       `
-   })
+    })
   )

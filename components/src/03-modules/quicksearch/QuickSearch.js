@@ -8,6 +8,7 @@ import APrice from '../../atoms/price/Price.vue'
 import AList from '../../02-elements/list/List.vue'
 import AListItem from '../../02-elements/list-item/ListItem.vue'
 
+// @vue/component
 export default {
   components: {
     AParagraph,
@@ -51,10 +52,10 @@ export default {
     }
   },
   methods: {
-    seeAll() {
+    seeAll () {
       this.$emit('seeAll')
     },
-    showItems(items) {
+    showItems (items) {
       return items + ' item(s)'
     }
   }

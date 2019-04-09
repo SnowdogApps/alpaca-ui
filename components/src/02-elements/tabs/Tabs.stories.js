@@ -33,20 +33,20 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
        </a-tabs-container>
   `,
   methods: {
-    setActiveTab(tab) {
+    setActiveTab (tab) {
       this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]
     }
   }
 }))
-.add('With icon', () => ({
-  components: { ATab, ATabsContainer, ATabContent },
-  data: () => ({
-    tabs,
-    activeTab: tabs[0].tabId
-  }),
-  template: `
+  .add('With icon', () => ({
+    components: { ATab, ATabsContainer, ATabContent },
+    data: () => ({
+      tabs,
+      activeTab: tabs[0].tabId
+    }),
+    template: `
       <a-tabs-container>
         <template v-for="tab in tabs">
           <a-tab
@@ -67,11 +67,11 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
         </template>
        </a-tabs-container>
   `,
-  methods: {
-    setActiveTab(tab) {
-      this.activeTab = this.tabs
-        .filter(el => el.tabId === tab)
-        .map(el => el.tabId)[0]
+    methods: {
+      setActiveTab (tab) {
+        this.activeTab = this.tabs
+          .filter(el => el.tabId === tab)
+          .map(el => el.tabId)[0]
+      }
     }
-  }
-}))
+  }))

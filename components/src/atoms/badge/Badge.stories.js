@@ -30,7 +30,7 @@ storiesOf('Atoms/Badge', module)
         Custom tag
       </a-badge>
     `
-    })
+  })
   )
   .add('New', () => ({
     components: { ABadge },
@@ -39,7 +39,7 @@ storiesOf('Atoms/Badge', module)
         New badge
       </a-badge>
     `
-    })
+  })
   )
   .add(
     'Sale',

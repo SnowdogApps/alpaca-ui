@@ -5,6 +5,7 @@ import ADivider from '../../../../cookbook/src/atoms/divider/Divider.vue'
 import AList from '../../02-elements/list/List.vue'
 import AListItem from '../../02-elements/list-item/ListItem.vue'
 
+// @vue/component
 export default {
   components: {
     AHeading,
@@ -46,15 +47,15 @@ export default {
     }
   },
   computed: {
-    productsCount() {
+    productsCount () {
       return this.products.length
     }
   },
   methods: {
-    removeFromCompare() {
+    removeFromCompare () {
       this.$emit('removeFromCompare')
     },
-    clearCompareList() {
+    clearCompareList () {
       this.$emit('clearCompareList')
     }
   }

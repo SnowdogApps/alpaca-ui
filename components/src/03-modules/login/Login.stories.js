@@ -23,6 +23,6 @@ storiesOf('Modules/Login', module)
     methods: {
       login: action('Login'),
       goToRegister: action('Register view'),
-      goToForgotPassword: action('Forgot password view'),
+      goToForgotPassword: action('Forgot password view')
     }
   }))

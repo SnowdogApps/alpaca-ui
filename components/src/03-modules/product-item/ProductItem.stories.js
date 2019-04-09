@@ -29,7 +29,7 @@ storiesOf('Modules/Product item', module)
         />
     `,
     methods: {
-      removeMethod: action('Remove'),
+      removeMethod: action('Remove')
     }
   }))
   .add('With Qty', () => ({

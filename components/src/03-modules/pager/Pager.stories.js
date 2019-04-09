@@ -23,7 +23,7 @@ storiesOf('Modules/Pager', module).add('Default', () => ({
       />
   `,
   methods: {
-    setCurrentPage(page) {
+    setCurrentPage (page) {
       this.pagination.page = page
     }
   }

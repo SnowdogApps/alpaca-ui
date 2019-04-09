@@ -11,7 +11,7 @@ storiesOf('Modules/Slider', module)
     components: { ASlider, Slide, AImage, AIcon },
     data: () => {
       return {
-        ...data,
+        ...data
       }
     },
     template: `
@@ -31,13 +31,13 @@ storiesOf('Modules/Slider', module)
          </a-slider>
     `
   })).add('With dots', () => ({
-  components: { ASlider, Slide, AImage, AIcon },
-  data: () => {
-    return {
-      ...data,
-    }
-  },
-  template: `
+    components: { ASlider, Slide, AImage, AIcon },
+    data: () => {
+      return {
+        ...data
+      }
+    },
+    template: `
         <a-slider :paginationEnabled="true">
           <slide
             class="slider__item"
@@ -53,4 +53,4 @@ storiesOf('Modules/Slider', module)
           </slide>
          </a-slider>
     `
-}))
+  }))

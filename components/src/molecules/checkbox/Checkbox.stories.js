@@ -32,7 +32,7 @@ storiesOf('Molecules/Checkbox', module)
         >
           Checkbox field
         </a-checkbox>
-      `,
+      `
     })
   )
   .add(

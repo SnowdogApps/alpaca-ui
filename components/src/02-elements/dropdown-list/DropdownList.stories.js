@@ -1,16 +1,16 @@
-import { storiesOf } from "@storybook/vue"
+import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import ADropdownList from "./DropdownList.vue"
-import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
-import ADropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
+import ADropdownList from './DropdownList.vue'
+import ADropdownListItem from '../dropdown-list-item/DropdownListItem.vue'
+import ADropdownListLink from '../dropdown-list-link/DropdownListLink.vue'
 
-import dropdownListItemsNested from "./mocks/dropdownListItemsNested.json"
-import dropdownListItems from "./mocks/dropdownListItems.json"
+import dropdownListItemsNested from './mocks/dropdownListItemsNested.json'
+import dropdownListItems from './mocks/dropdownListItems.json'
 
-storiesOf("Elements/Dropdown List", module)
+storiesOf('Elements/Dropdown List', module)
   .addDecorator(StoryRouter())
-  .add("Default", () => ({
+  .add('Default', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
@@ -37,7 +37,7 @@ storiesOf("Elements/Dropdown List", module)
          </a-dropdown-list>
     `
   }))
-  .add("Nested with items as props", () => ({
+  .add('Nested with items as props', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItemsNested
@@ -46,7 +46,7 @@ storiesOf("Elements/Dropdown List", module)
         <a-dropdown-list :items="dropdownListItemsNested" />
     `
   }))
-  .add("Screen M", () => ({
+  .add('Screen M', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
@@ -58,7 +58,7 @@ storiesOf("Elements/Dropdown List", module)
         />
     `
   }))
-  .add("Dark", () => ({
+  .add('Dark', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
@@ -70,7 +70,7 @@ storiesOf("Elements/Dropdown List", module)
         />
     `
   }))
-  .add("Secondary", () => ({
+  .add('Secondary', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
@@ -82,7 +82,7 @@ storiesOf("Elements/Dropdown List", module)
         />
     `
   }))
-  .add("Inner", () => ({
+  .add('Inner', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems

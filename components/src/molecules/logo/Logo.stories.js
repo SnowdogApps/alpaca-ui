@@ -17,7 +17,7 @@ storiesOf('Molecules/Logo', module)
           alt="Logo"
         />
     `
-  }))
+    }))
   .add(
     'With slots',
     () => ({
@@ -33,4 +33,4 @@ storiesOf('Molecules/Logo', module)
           </template>
         </a-logo>
     `
-  }))
+    }))

@@ -3,4 +3,3 @@
 <script src="./Checkbox.js"/>
 
 <style lang="scss" src="./Checkbox.scss"/>
-

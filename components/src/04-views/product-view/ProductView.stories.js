@@ -16,7 +16,7 @@ storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())
   .add('Configurable', () => ({
     components: { AHeader, AProductView },
-    data() {
+    data () {
       return {
         breadcrumbs,
         tabs,

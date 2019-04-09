@@ -22,6 +22,6 @@ storiesOf('Modules/Wishlist', module)
         />
     `,
     methods: {
-      removeMethod: action('Remove'),
+      removeMethod: action('Remove')
     }
   }))

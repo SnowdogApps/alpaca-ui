@@ -13,6 +13,6 @@ storiesOf('Global/Information', module)
           text="Your balance is: $0.00"
         />
     `
-    }),
-    { info }
+  }),
+  { info }
   )

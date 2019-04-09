@@ -1,5 +1,6 @@
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     AButton
@@ -34,16 +35,16 @@ export default {
       default: null
     }
   },
-  data() {
+  data () {
     return {
       fileName: ''
     }
   },
   methods: {
-    chooseFile() {
+    chooseFile () {
       this.$refs.fileInput.click()
     },
-    updateFileName() {
+    updateFileName () {
       this.fileName = this.$refs.fileInput.value.split('\\').pop()
 
       if (this.fileName) {

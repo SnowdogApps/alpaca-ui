@@ -27,7 +27,7 @@ storiesOf('Modules/Filter', module)
          </a-dropdown-list>
     `,
     methods: {
-      click: action('Clicked'),
+      click: action('Clicked')
     }
   }))
   .add('Color', () => ({
@@ -46,7 +46,7 @@ storiesOf('Modules/Filter', module)
          </a-dropdown-list>
     `,
     methods: {
-      click: action('Clicked'),
+      click: action('Clicked')
     }
   }))
   .add('Checkbox', () => ({
