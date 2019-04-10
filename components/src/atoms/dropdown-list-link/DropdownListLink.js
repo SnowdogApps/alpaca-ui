@@ -3,10 +3,6 @@ export default {
     href: {
       type: String,
       required: null
-    },
-    linkClass: {
-      type: String,
-      default: null
     }
   }
 }
