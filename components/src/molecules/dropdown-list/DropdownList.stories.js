@@ -5,9 +5,6 @@ import ADropdownList from "./DropdownList.vue"
 import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
 import ADropdownListLink from "../../atoms/dropdown-list-link/DropdownListLink.vue"
 
-import dropdownListItemsNested from "./mocks/dropdownListItemsNested.json"
-import dropdownListItems from "./mocks/dropdownListItems.json"
-
 const info = `
   ---
   #### Use these modifiers with \`..dropdown-list\` class.
@@ -17,6 +14,83 @@ const info = `
   - \`.dropdown-list@screen-m dropdown-list--is-open@screen-m\` - Selector for applying mobile styles
   ---
 `
+
+const dropdownListItems = [
+  {
+    "title": "dropdown title",
+    "id": "dropdown-1",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore " +
+      "et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
+  },
+  {
+    "title": "some longer longer and longer dropdown title",
+    "id": "dropdown-2",
+    "href": "#"
+  }
+]
+
+const dropdownListItemsNested = [
+  {
+    "title": "All",
+    "href": "#"
+  },
+  {
+    "title": "dropdown title",
+    "id": "dropdown-1",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" +
+      " et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
+  },
+  {
+    "title": "some longer longer and longer dropdown title",
+    "id": "dropdown-2",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" +
+      " et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
+  },
+  {
+    "title": "dropdown title",
+    "id": "dropdown-link-3",
+    "href": "#"
+  },
+  {
+    "title": "dropdown title",
+    "id": "dropdown-link-4",
+    "href": "#"
+  },
+  {
+    "title": "some longer longer and longer dropdown title",
+    "id": "dropdown-7",
+    "content": [
+      {
+        "title": "dropdown title",
+        "id": "dropdown-1",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore" +
+          " et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
+      },
+      {
+        "title": "some longer longer and longer dropdown title",
+        "id": "dropdown-2",
+        "href": "#"
+      },
+      {
+        "title": "some longer longer and longer dropdown title",
+        "id": "dropdown-8",
+        "content": [
+          {
+            "title": "dropdown title",
+            "id": "dropdown-link-9",
+            "href": "#"
+          },
+          {
+            "title": "dropdown title",
+            "id": "dropdown-link-10",
+            "href": "#"
+          }
+        ]
+      }
+    ]
+  }
+]
+
 addDecorator(StoryRouter())
 storiesOf("Elements/Dropdown List", module)
   .addParameters({ info })
