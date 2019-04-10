@@ -92,7 +92,7 @@ const dropdownListItemsNested = [
 ]
 
 addDecorator(StoryRouter())
-storiesOf("Elements/Dropdown List", module)
+storiesOf("Molecules/Dropdown List", module)
   .addParameters({ info })
   .add(
     "Default",
