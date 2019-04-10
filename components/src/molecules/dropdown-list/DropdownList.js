@@ -15,14 +15,16 @@ export default {
     ADropdownListLink
   },
   props: {
+    /**
+     * Array with items. Every item should has keys: title, id, content/href
+     */
     items: {
       type: Array,
       default: null
     },
-    inner: {
-      type: Boolean,
-      default() { return this.nested }
-    },
+    /**
+     * Custom class for list
+     */
     listClass: {
       type: String,
       default: null
