@@ -18,13 +18,13 @@ const info = `
 const dropdownListItems = [
   {
     "title": "dropdown title",
-    "id": "dropdown-1",
+    "id": "dropdown-it-1",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore " +
       "et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
   },
   {
     "title": "some longer longer and longer dropdown title",
-    "id": "dropdown-2",
+    "id": "dropdown-it-2",
     "href": "#"
   }
 ]
@@ -62,13 +62,13 @@ const dropdownListItemsNested = [
     "content": [
       {
         "title": "dropdown title",
-        "id": "dropdown-1",
+        "id": "dropdown-n-1",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore" +
           " et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
       },
       {
         "title": "some longer longer and longer dropdown title",
-        "id": "dropdown-2",
+        "id": "dropdown-n-2",
         "href": "#"
       },
       {
