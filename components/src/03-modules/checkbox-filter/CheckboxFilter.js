@@ -1,4 +1,4 @@
-import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
+import ADropdownListItem from '../../molecules/dropdown-list-item/DropdownListItem.vue'
 import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
 
 export default {

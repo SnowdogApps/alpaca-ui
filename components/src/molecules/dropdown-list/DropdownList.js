@@ -1,5 +1,5 @@
 import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
-import ADropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
+import ADropdownListLink from "../../atoms/dropdown-list-link/DropdownListLink.vue"
 
 export default {
   provide: {

@@ -3,7 +3,7 @@ import StoryRouter from 'storybook-vue-router'
 
 import ADropdownList from "./DropdownList.vue"
 import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
-import ADropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
+import ADropdownListLink from "../../atoms/dropdown-list-link/DropdownListLink.vue"
 
 import dropdownListItemsNested from "./mocks/dropdownListItemsNested.json"
 import dropdownListItems from "./mocks/dropdownListItems.json"

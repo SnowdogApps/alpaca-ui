@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import ADropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
+import ADropdownList from '../../molecules/dropdown-list/DropdownList.vue'
 import ACheckboxFilter from '../checkbox-filter/CheckboxFilter.vue'
 import AColorFilter from '../color-filter/ColorFilter.vue'
 import ASwatchFilter from '../swatch-filter/SwatchFilter.vue'

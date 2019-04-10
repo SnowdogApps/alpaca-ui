@@ -4,8 +4,8 @@ import AButton from '../../atoms/button/Button.vue'
 import AList from '../../02-elements/list/List.vue'
 import AListItem from '../../02-elements/list-item/ListItem.vue'
 import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
-import ADropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
-import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
+import ADropdownList from '../../molecules/dropdown-list/DropdownList.vue'
+import ADropdownListItem from '../../molecules/dropdown-list-item/DropdownListItem.vue'
 import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
 
 export default {
