@@ -1,11 +1,11 @@
 <li :class="['dropdown-list__item', {'dropdown-list__item--collapse': collapseLocal}]">
-  <!--@slot Custom title (Named slots)-->
   <button
     :class="['dropdown-list__label', labelClass]"
     :aria-controls="collapseLocal && id"
     @click="toggle"
     :aria-expanded="!collapseLocal"
   >
+    <!--@slot Custom title slots (Named slot)-->
     <slot name="title">
       {{ title }}
       <a-icon
