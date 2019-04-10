@@ -1,4 +1,4 @@
-import { storiesOf } from "@storybook/vue"
+import {addDecorator, storiesOf} from "@storybook/vue"
 import StoryRouter from 'storybook-vue-router'
 
 import ADropdownList from "./DropdownList.vue"
@@ -8,8 +8,18 @@ import ADropdownListLink from "../dropdown-list-link/DropdownListLink.vue"
 import dropdownListItemsNested from "./mocks/dropdownListItemsNested.json"
 import dropdownListItems from "./mocks/dropdownListItems.json"
 
+const info = `
+  ---
+  #### Use these modifiers with \`..dropdown-list\` class.
+  - \`.dropdown-list--dark\` - Selector for applying dark styles
+  - \`.dropdown-list--secondary\` - Selector for applying secondary styles
+  - \`.dropdown-list--inner\` - Selector for applying inner styles
+  - \`.dropdown-list@screen-m dropdown-list--is-open@screen-m\` - Selector for applying mobile styles
+  ---
+`
+addDecorator(StoryRouter())
 storiesOf("Elements/Dropdown List", module)
-  .addDecorator(StoryRouter())
+  .addParameters({ info })
   .add("Default", () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
@@ -23,16 +33,17 @@ storiesOf("Elements/Dropdown List", module)
               :title="element.title"
               :key="element.id"
               :collapse="true"
-              id="element.id"
+              :id="element.id"
             >
               {{element.content}}
              </a-dropdown-list-item>
             <a-dropdown-list-link
               v-else
               :key="element.id"
-              :title="element.title"
               :href="element.href"
-            />
+            >
+              {{ element.title }}
+            </a-dropdown-list-link>
           </template>
          </a-dropdown-list>
     `
@@ -53,7 +64,7 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
         <a-dropdown-list
-          screenM
+          class="dropdown-list@screen-m dropdown-list--is-open@screen-m"
           :items="dropdownListItems"
         />
     `
@@ -65,7 +76,7 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
         <a-dropdown-list
-          dark
+          class="dropdown-list--dark"
           :items="dropdownListItems"
         />
     `
@@ -77,7 +88,7 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
         <a-dropdown-list
-          secondary
+          class="dropdown-list--secondary"
           :items="dropdownListItems"
         />
     `
@@ -89,8 +100,46 @@ storiesOf("Elements/Dropdown List", module)
     }),
     template: `
         <a-dropdown-list
-          inner
+          class="dropdown-list--inner"
           :items="dropdownListItems"
         />
+    `
+  }))
+  .add("With slots", () => ({
+    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+    data: () => ({
+      dropdownListItems
+    }),
+    template: `
+        <a-dropdown-list>
+          <template v-for="element in dropdownListItems">
+            <a-dropdown-list-item
+              v-if="element.content"
+              :key="element.id"
+              :collapse="true"
+              :id="element.id"
+            >
+              <template #title>
+                <span style="color: #613d7c"> 
+                  {{ element.title}} 
+                </span>
+              </template>
+              {{element.content}}
+             </a-dropdown-list-item>
+            <a-dropdown-list-link
+              v-else
+              :key="element.id"
+            >
+              <template #content>
+                <a 
+                  style="marginLeft: 15px;" 
+                  :href="element.href"
+                >
+                  {{ element.title }}
+                </a>
+              </template>
+            </a-dropdown-list-link>
+          </template>
+         </a-dropdown-list>
     `
   }))

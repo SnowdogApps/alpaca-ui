@@ -7,15 +7,15 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: null
     },
     id: {
       type: String,
-      required: true
+      required: null
     },
     collapse: {
       type: Boolean,
-      default: true
+      default: null
     },
     labelClass: {
       type: String,

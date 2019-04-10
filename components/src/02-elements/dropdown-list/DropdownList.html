@@ -1,12 +1,11 @@
 <div :class="['dropdown-list', {
-  'dropdown-list--inner': inner,
-  'dropdown-list--secondary': secondary,
-  'dropdown-list--dark': dark,
-  'dropdown-list@screen-m dropdown-list--is-open@screen-m': screenM
+  'dropdown-list--inner': inner
   }]"
 >
   <ul :class="['dropdown-list__list', listClass]">
+    <!--@slot Default content-->
     <slot v-if="!items" />
+    <!--Default content passed with props-->
     <template v-else v-for="element in items">
       <a-dropdown-list-item
         v-if="element.content"
@@ -23,9 +22,10 @@
       <a-dropdown-list-link
         v-else
         :key="element.id"
-        :title="element.title"
         :href="element.href"
-      />
+      >
+        {{ element.title }}
+      </a-dropdown-list-link>
     </template>
   </ul>
 </div>

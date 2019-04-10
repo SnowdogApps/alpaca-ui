@@ -19,21 +19,9 @@ export default {
       type: Array,
       default: null
     },
-    secondary: {
-      type: Boolean,
-      default: false
-    },
-    dark: {
-      type: Boolean,
-      default: false
-    },
     inner: {
       type: Boolean,
       default() { return this.nested }
-    },
-    screenM: {
-      type: Boolean,
-      default: false
     },
     listClass: {
       type: String,

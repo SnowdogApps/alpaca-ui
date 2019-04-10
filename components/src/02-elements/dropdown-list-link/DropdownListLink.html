@@ -1,8 +1,12 @@
 <li class="dropdown-list__item">
-  <router-link
-    :class="['dropdown-list__label', linkClass]"
-    :to="href"
-  >
-    {{ title }}
-  </router-link>
+  <!--@slot Custom content (Named slots)-->
+  <slot name="content">
+    <router-link
+      :class="['dropdown-list__label', linkClass]"
+      :to="href"
+    >
+      <!--@slot Default content-->
+      <slot />
+    </router-link>
+  </slot>
 </li>
