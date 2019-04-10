@@ -20,12 +20,14 @@ const info = `
 addDecorator(StoryRouter())
 storiesOf("Elements/Dropdown List", module)
   .addParameters({ info })
-  .add("Default", () => ({
-    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
-    data: () => ({
-      dropdownListItems
-    }),
-    template: `
+  .add(
+    "Default",
+    () => ({
+      components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+      data: () => ({
+        dropdownListItems
+      }),
+      template: `
         <a-dropdown-list>
           <template v-for="element in dropdownListItems">
             <a-dropdown-list-item
@@ -45,72 +47,90 @@ storiesOf("Elements/Dropdown List", module)
               {{ element.title }}
             </a-dropdown-list-link>
           </template>
-         </a-dropdown-list>
-    `
-  }))
-  .add("Nested with items as props", () => ({
-    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
-    data: () => ({
-      dropdownListItemsNested
-    }),
-    template: `
+           </a-dropdown-list>
+      `
+    })
+  )
+  .add(
+    "Nested with items as props",
+    () => ({
+      components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+      data: () => ({
+        dropdownListItemsNested
+      }),
+      template: `
         <a-dropdown-list :items="dropdownListItemsNested" />
-    `
-  }))
-  .add("Screen M", () => ({
-    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
-    data: () => ({
-      dropdownListItems
-    }),
-    template: `
+      `
+    })
+  )
+  .add(
+    "Screen M",
+    () => ({
+      components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+      data: () => ({
+        dropdownListItems
+      }),
+      template: `
         <a-dropdown-list
           class="dropdown-list@screen-m dropdown-list--is-open@screen-m"
           :items="dropdownListItems"
         />
-    `
-  }))
-  .add("Dark", () => ({
-    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
-    data: () => ({
-      dropdownListItems
-    }),
-    template: `
+      `
+    })
+  )
+  .add(
+    "Dark",
+    () => ({
+      components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+      data: () => ({
+        dropdownListItems
+      }),
+      template: `
         <a-dropdown-list
           class="dropdown-list--dark"
           :items="dropdownListItems"
         />
-    `
-  }))
-  .add("Secondary", () => ({
-    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
-    data: () => ({
-      dropdownListItems
-    }),
-    template: `
+      `
+    })
+  )
+  .add(
+    "Secondary",
+    () => ({
+      components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+      data: () => ({
+        dropdownListItems
+      }),
+      template: `
         <a-dropdown-list
           class="dropdown-list--secondary"
           :items="dropdownListItems"
         />
-    `
-  }))
-  .add("Inner", () => ({
-    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
-    data: () => ({
-      dropdownListItems
-    }),
-    template: `
+      `
+    })
+  )
+  .add(
+    "Inner",
+    () => ({
+      components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+      data: () => ({
+        dropdownListItems
+      }),
+      template: `
         <a-dropdown-list
           class="dropdown-list--inner"
           :items="dropdownListItems"
         />
-    `
-  }))
-  .add("With slots", () => ({
-    components: { ADropdownList, ADropdownListItem, ADropdownListLink },
-    data: () => ({
-      dropdownListItems
-    }),
-    template: `
+      `
+    })
+  )
+  .add(
+    "With slots",
+    () => ({
+      components: { ADropdownList, ADropdownListItem, ADropdownListLink },
+      data: () => ({
+        dropdownListItems
+      }),
+      template: `
         <a-dropdown-list>
           <template v-for="element in dropdownListItems">
             <a-dropdown-list-item
@@ -140,6 +160,7 @@ storiesOf("Elements/Dropdown List", module)
               </template>
             </a-dropdown-list-link>
           </template>
-         </a-dropdown-list>
-    `
-  }))
+        </a-dropdown-list>
+      `
+    })
+  )
