@@ -7,11 +7,11 @@ import ADropdownListLink from "../../atoms/dropdown-list-link/DropdownListLink.v
 
 const info = `
   ---
-  #### Use these modifiers with \`..dropdown-list\` class.
+  #### Use these modifiers with \`.dropdown-list\` class.
   - \`.dropdown-list--dark\` - Selector for applying dark styles
   - \`.dropdown-list--secondary\` - Selector for applying secondary styles
   - \`.dropdown-list--inner\` - Selector for applying inner styles
-  - \`.dropdown-list@screen-m dropdown-list--is-open@screen-m\` - Selector for applying mobile styles
+  - \`.dropdown-list@screen-m dropdown-list--is-open@screen-m\` - Selector for applying styles for smaller resolution
   ---
 `
 
@@ -121,7 +121,7 @@ storiesOf("Molecules/Dropdown List", module)
               {{ element.title }}
             </a-dropdown-list-link>
           </template>
-           </a-dropdown-list>
+        </a-dropdown-list>
       `
     })
   )
