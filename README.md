@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/logo.svg" alt="Alpaca logo" height="100" />
+  <img src="components/public/assets/icons/alpaca.svg" alt="Alpaca logo" height="100" />
 </p>
 
 <h1 align="center">Alpaca UI</h1>
