@@ -34,7 +34,8 @@ storiesOf('Atoms/Label', module)
       `
     })
   )
-  .add('Inline',
+  .add(
+    'Inline',
     () => ({
       components: { ALabel },
       template: `
