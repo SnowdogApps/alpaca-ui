@@ -40,11 +40,11 @@ storiesOf('Molecules/Message', module)
       ...defaultData,
       template: `
         <a-message 
+          class="message--success"
           action1-text="Ok" 
           action2-text="Proceed to checkout"
           @action1="onClick"
           @action2="onClick"
-          class="message--success"
         >
           Product has been added to the cart!
         </a-message>
@@ -57,9 +57,9 @@ storiesOf('Molecules/Message', module)
       ...defaultData,
       template: `
         <a-message 
+          class="message--error"
           action1-text="Cancel" 
           @action1="onClick"
-          class="message--error"
         >
           Product has been added to the cart!
         </a-message>
@@ -75,7 +75,6 @@ storiesOf('Molecules/Message', module)
           Product has been added to the cart!
           <template #actions>
             <button 
-              @click="onClick"
               style="
                 margin: 15px 0; 
                 color: white;
@@ -83,6 +82,7 @@ storiesOf('Molecules/Message', module)
                 border: none; 
                 cursor: pointer;
               "
+              @click="onClick"
             >
               Ok
             </button>
