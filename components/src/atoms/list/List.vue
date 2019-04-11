@@ -3,4 +3,3 @@
 <script src="./List.js"/>
 
 <style lang="scss" src="./List.scss"/>
-

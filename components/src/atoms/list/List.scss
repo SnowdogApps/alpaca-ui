@@ -1,28 +1,17 @@
 @import '../../../assets/styles/globals';
 
-$list__style: none !default;
-$list-padding: 0 5px 5px 0 !default;
-$list__item-padding: 5px 0 !default;
-$list__content-padding: 10px !default;
-$list__icon-color: $white !default;
-
-// Horizontal
-$list__padding--horizontal: 10px !default;
-
-// Horizontal\@medium
+$list__style                      : none !default;
+$list-padding                     : 0 5px 5px 0 !default;
+$list__item-padding               : 5px 0 !default;
+$list__content-padding            : 10px !default;
+$list__icon-color                 : $white !default;
+$list__padding--horizontal        : 10px !default;
 $list__padding--horizontal\@medium: 10px !default;
-
-// With icon
-$list__padding--with-icon: 12px !default;
-
-// Divided
-$list__border--divider: 1px solid $gray-dark !default;
-
-$list__item-padding--native: 0 0 $spacer--medium $spacer--large !default;
-
-// Nested
-$list__margin-nested: 0 0 0 $spacer--large !default;
-$list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
+$list__padding--with-icon         : 12px !default;
+$list__border--divider            : 1px solid $gray-dark !default;
+$list__item-padding--native       : 0 0 $spacer--medium $spacer--large !default;
+$list__margin-nested              : 0 0 0 $spacer--large !default;
+$list__margin-nested-second-level : 0 0 0 #{$spacer--large * 2} !default;
 
 .list {
   margin: $reset;
