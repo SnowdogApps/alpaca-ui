@@ -1,11 +1,10 @@
 @import '../../../assets/styles/globals';
 
-$message__max-width                 : 320px !default;
+$message__max-width\@medium         : 320px !default;
 $message__width                     : 100% !default;
-$message__content-max-width         : 496px !default;
-$message__padding                   : $spacer--medium 25px 0 25px !default;
-$message__padding-bottom            : $spacer !default;
-$message__auto                      : auto !default;
+$message__content-width             : 90% !default;
+$message__padding                   : $spacer--medium 24px 0 24px !default;
+$message__information-padding       : 0 0 $spacer--medium 0 !default;
 $message__font-size                 : $font-size-small !default;
 $message__transition                : $transition-base !default;
 $message__color                     : $white !default;
@@ -21,7 +20,6 @@ $message__font-weight-bold          : $font-weight-bold !default;
 
 .message {
   width: $message__width;
-  height: $message__auto;
   padding: $message__padding;
   color: $message__color;
   font-size: $message__font-size;
@@ -30,7 +28,7 @@ $message__font-weight-bold          : $font-weight-bold !default;
   transition: $message__transition;
 
   @include mq($screen-m) {
-    width: $message__max-width;
+    width: $message__max-width\@medium;
   }
 
   &--error {
@@ -57,7 +55,7 @@ $message__font-weight-bold          : $font-weight-bold !default;
   }
 
   &__information {
-    padding-bottom: $message__padding-bottom;
+    padding: $message__information-padding;
     font-weight: $message__font-weight-bold;
     font-size: $message__information-font-size;
     border-bottom: $message__border-bottom;
@@ -70,8 +68,12 @@ $message__font-weight-bold          : $font-weight-bold !default;
 
   &__information,
   &__actions {
-    max-width: $message__content-max-width;
-    margin: 0 $message__auto;
+    width: $message__content-width;
+    margin: $reset auto;
+
+    @include mq($screen-m) {
+      width: auto;
+    }
   }
 
   &__button {
