@@ -5,7 +5,7 @@
 
 ## Alpaca UI
 
-[![CircleCI](https://circleci.com/gh/SnowdogApps/alpaca-storybook/tree/develop.svg?style=svg)](https://circleci.com/gh/SnowdogApps/alpaca-storybook/tree/develop)
+[![CircleCI](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop.svg?style=svg)](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop)
 
 Highly customizable library of responsive UI components crafted for e-commerce. It is based on Vue.js and Alpaca design system.
 
@@ -26,7 +26,7 @@ Recent versions of Firefox, Chrome, Edge, Opera, Safari and IE11+.
 ## Contributing
 
 Read our contributing guide and let's build a better components together.
-We welcome all contributions. Please read our CONTRIBUTING.md first. You can submit any ideas as GitHub issues.
+We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/SnowdogApps/alpaca-ui/blob/develop/CONTRIBUTING.md) first. You can submit any ideas as GitHub issues.
 
 ## Development
 
