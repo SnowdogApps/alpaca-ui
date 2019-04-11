@@ -3,7 +3,15 @@ import { action } from '@storybook/addon-actions'
 
 import AlpacaRate from './Rate.vue'
 
-storiesOf('Elements/Rate', module)
+const info = `
+  ---
+  #### Use these modifiers with \`.radio\` class.
+  - \`.rating--large\` - Selector for applying large styles
+  ---
+`
+
+storiesOf('Molecules/Rate', module)
+  .addParameters({ info })
   .add('Default', () => ({
     components: { AlpacaRate },
     data: () => ({
@@ -49,10 +57,10 @@ storiesOf('Elements/Rate', module)
     }),
     template: `
       <alpaca-rate 
+       class="rating--large"
        v-model="rating"
        :rating-items="ratingItems"
        disabled
-       large
        legend="Your rating"
       />
     `

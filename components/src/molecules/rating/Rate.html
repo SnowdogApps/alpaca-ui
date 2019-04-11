@@ -1,4 +1,4 @@
-<alpaca-fieldset :class="['rating', {'rating--large': large}]">
+<alpaca-fieldset class="rating">
   <div
     v-if="!disabled"
     class=" rating--rate"
@@ -14,14 +14,17 @@
       role="option"
       :aria-selected="rating === item"
     >
-      <label
-        class="rating__star rating__star--rate"
-        :for="item"
-        :aria-label="ariaLabelRate"
-        @click="selectValue(item)"
-      >
-        <span class="rating__indicator" />
-      </label>
+      <!-- @slot Custom label (Named slot)-->
+      <slot name="label">
+        <label
+          class="rating__star rating__star--rate"
+          :for="item"
+          :aria-label="ariaLabelRate"
+          @click="selectValue(item)"
+        >
+          <span class="rating__indicator" />
+        </label>
+      </slot>
     </div>
   </div>
   <div
@@ -30,11 +33,14 @@
     :title="disabledRateTitle"
     tabindex="0"
   >
-    <div
-      class="rating__star"
-      :style="{'width': `${setScores}%`}"
-    >
-      <span class="rating__indicator" />
-    </div>
+    <!-- @slot Custom slot for disabled ratings (Named slot)-->
+    <slot name="disabled">
+      <div
+        class="rating__star"
+        :style="{'width': `${setScores}%`}"
+      >
+        <span class="rating__indicator" />
+      </div>
+    </slot>
   </div>
 </alpaca-fieldset>
