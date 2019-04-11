@@ -1,123 +1,126 @@
 <div class="quicksearch__wrapper">
   <div class="quicksearch quicksearch--visible">
-    <alpaca-button
+    <a-button
       class="quicksearch__close-button"
-      icon-class="quicksearch__close-icon"
       aria-label="Close quicksearch"
-      icon="close"
-    />
+    >
+      <a-icon
+        class="quicksearch__close-icon"
+        icon="close"
+      />
+    </a-button>
 
-    <alpaca-paragraph class="quicksearch__results">
+    <a-paragraph class="quicksearch__results">
       {{ resultText }}
       <span class="quicksearch__typed">
         {{ resultTyped }}
       </span>
-    </alpaca-paragraph>
+     </a-paragraph>
 
     <div class="quicksearch__content">
-      <alpaca-paragraph
+      <a-paragraph
         v-if="isNoResult"
         class="quicksearch__empty"
       >
         {{ noResultText }}
-      </alpaca-paragraph>
+       </a-paragraph>
 
-      <alpaca-list class="quicksearch__list quicksearch__list--column">
-        <alpaca-list-item
+      <a-list class="quicksearch__list quicksearch__list--column">
+        <a-list-item
           v-for="product in products"
           :key="product.id"
           :element="product"
           class="quicksearch__product"
         >
-          <alpaca-link
+          <a-link
             :href="product.href"
             class="quicksearch__product-image-wrapper"
           >
-            <alpaca-image
+            <a-image
               :alt="product.alt"
               :src="product.src"
               class="quicksearch__product-image"
             />
-          </alpaca-link>
+           </a-link>
 
           <div class="quicksearch__product-details">
-            <alpaca-link
+            <a-link
               :href="product.href"
               class="quicksearch__link"
               inverted
             >
-              <alpaca-heading
+              <a-heading
                 :level="3"
                 class="quicksearch__name quicksearch__name--thin"
               >
                 {{ product.text }}
-              </alpaca-heading>
-            </alpaca-link>
+               </a-heading>
+             </a-link>
 
-            <alpaca-price
+            <a-price
               :special-price="product.specialPrice"
               :old-price="product.oldPrice"
             />
           </div>
-        </alpaca-list-item>
-      </alpaca-list>
+         </a-list-item>
+       </a-list>
 
       <div class="quicksearch__categories-column">
-        <alpaca-list class="quicksearch__list">
-          <alpaca-list-item
+        <a-list class="quicksearch__list">
+          <a-list-item
             v-for="category in categories"
             :key="category.id"
             class="quicksearch__list"
             :element="category"
           >
-            <alpaca-link
+            <a-link
               class="quicksearch__link"
               :href="category.href"
               inverted
             >
-              <alpaca-heading
+              <a-heading
                 :level="3"
                 class="quicksearch__name"
               >
                 {{ category.title }}
-              </alpaca-heading>
-            </alpaca-link>
+               </a-heading>
+             </a-link>
 
             {{ showItems(category.items) }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
 
-        <alpaca-list class="quicksearch__list quicksearch__list--below">
-          <alpaca-list-item
+        <a-list class="quicksearch__list quicksearch__list--below">
+          <a-list-item
             v-for="manufacturer in manufacturers"
             :key="manufacturer.id"
             class="quicksearch__manufacturer"
             :element="manufacturer"
           >
-            <alpaca-link
+            <a-link
               class="quicksearch__link"
               :href="manufacturer.href"
               inverted
             >
-              <alpaca-heading
+              <a-heading
                 :level="3"
                 class="quicksearch__name"
               >
                 {{ manufacturer.title }}
-              </alpaca-heading>
-            </alpaca-link>
+               </a-heading>
+             </a-link>
 
             {{ showItems(manufacturer.items) }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
       </div>
     </div>
 
-    <alpaca-button
+    <a-button
       class="quicksearch__more-button"
       @click="seeAll"
     >
       {{ 'See All' }}
-    </alpaca-button>
+     </a-button>
   </div>
 </div>

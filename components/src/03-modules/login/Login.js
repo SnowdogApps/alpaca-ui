@@ -1,12 +1,12 @@
-import AlpacaFieldset from '../../02-elements/fieldset/Fieldset.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaInput from '../../02-elements/input/Input.vue'
+import AFieldset from '../../atoms/fieldset/Fieldset.vue'
+import AButton from '../../atoms/button/Button.vue'
+import AInput from '../../02-elements/input/Input.vue'
 
 export default {
   components: {
-    AlpacaFieldset,
-    AlpacaButton,
-    AlpacaInput
+    AFieldset,
+    AButton,
+    AInput
   },
   props: {
     legend: {

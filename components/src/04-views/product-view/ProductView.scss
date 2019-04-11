@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $product-view__action-elements-margin-top\@small       : 28px !default;
 $product-view__action-elements-margin-top\@large       : 0 !default;
@@ -169,31 +169,31 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   &__gallery {
     order: $product-view__order-gallery;
     width: 100%;
-    border-bottom: $product-view__gallery-bottom-border;
-    padding-bottom: $product-view__gallery-padding-bottom;
     margin-bottom: $product-view__gallery-margin-bottom;
+    padding-bottom: $product-view__gallery-padding-bottom;
+    border-bottom: $product-view__gallery-bottom-border;
 
     @include mq($screen-m) {
-      border-bottom: $product-view__gallery-bottom-border\@medium;
-      padding-bottom: $product-view__gallery-padding-bottom\@medium;
-      margin-bottom: $product-view__gallery-margin-bottom\@medium;
       float: left;
       width: $product-view__col-left-width;
+      margin-bottom: $product-view__gallery-margin-bottom\@medium;
+      padding-bottom: $product-view__gallery-padding-bottom\@medium;
+      border-bottom: $product-view__gallery-bottom-border\@medium;
     }
   }
 
   &__main-details {
-    width: 100%;
-    order: $product-view__order-main-details;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    order: $product-view__order-main-details;
+    width: 100%;
 
     @include mq($screen-m) {
-      display: block;
       position: relative;
-      width: $product-view__col-right-width;
+      display: block;
       float: right;
+      width: $product-view__col-right-width;
       margin-bottom: $product-view__main-details-bottom-spacing;
     }
   }
@@ -206,24 +206,24 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
     @include mq($screen-m) {
       display: block;
-      width: $product-view__col-right-width;
       float: right;
+      width: $product-view__col-right-width;
     }
   }
 
   &__description {
     order: 2;
-    margin: $product-view__description-margin;
-    color: $product-view__description-color;
     width: 100%;
+    margin: $product-view__description-margin;
     padding: $product-view__description-padding;
+    color: $product-view__description-color;
+    line-height: $product-view__description-line-height;
     border-top: $product-view__description-border-top;
     border-bottom: $product-view__description-border-bottom;
-    line-height: $product-view__description-line-height;
 
     @include mq($screen-m) {
-      padding: $product-view__description-padding\@medium;
       margin: $product-view__description-margin\@medium;
+      padding: $product-view__description-padding\@medium;
     }
   }
 
@@ -246,14 +246,14 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__summary {
     width: 100%;
-    padding: $product-view__summary-padding;
     margin: $product-view__summary-margin;
-    border-bottom: $product-view__summary-border;
+    padding: $product-view__summary-padding;
     border-top: $product-view__summary-border;
+    border-bottom: $product-view__summary-border;
 
     @include mq($screen-m) {
-      border-bottom: 0;
       margin: 0;
+      border-bottom: 0;
     }
   }
 
@@ -271,8 +271,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   }
 
   &__summary-title {
-    font-weight: $product-view__summary-title-font-weight;
     margin-bottom: $product-view__summary-item-space;
+    font-weight: $product-view__summary-title-font-weight;
   }
 
   &__summary-list {
@@ -297,8 +297,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   }
 
   &__swatch-option-title {
-    font-size: $product-view__swatch-option-title-font-size;
     font-weight: $product-view__swatch-option-title-font-weight;
+    font-size: $product-view__swatch-option-title-font-size;
   }
 
   &__tabs {
@@ -327,14 +327,14 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__heading {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: $product-view__heading-margin-bottom;
   }
 
   &__title {
-    margin-bottom: $product-view__title-margin-bottom;
     margin-right: $product-view__title-margin-right;
+    margin-bottom: $product-view__title-margin-bottom;
   }
 
   &__stock-line {
@@ -363,21 +363,21 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   }
 
   &__rating-rates {
-    width: 50%;
     display: flex;
     flex: 1 0 auto;
     align-items: center;
+    width: 50%;
     font-size: $product-view__rating-value-font-size;
 
     @include mq($screen-m) {
-      width: auto;
       justify-content: flex-end;
+      width: auto;
     }
   }
 
   &__rating-actions {
-    width: 50%;
     flex: 1 0 auto;
+    width: 50%;
     text-align: right;
 
     @include mq($screen-m) {
@@ -387,11 +387,11 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__main-actions {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
     margin-bottom: $product-view__main-actions-margin-bottom;
-    flex-wrap: wrap;
 
     @include mq($screen-l) {
       flex-wrap: nowrap;
@@ -405,9 +405,9 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__extra-actions {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
     padding: $product-view__extra-actions-padding;
 
     @include mq($screen-l) {
@@ -431,8 +431,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   }
 
   &__grouped-qty {
-    margin: $product-view__grouped-qty-margin;
     max-width: $product-view__grouped-qty-max-width;
+    margin: $product-view__grouped-qty-margin;
   }
 
   &__grouped-table {
@@ -445,8 +445,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__grouped-product-name {
     display: block;
-    font-weight: $product-view__grouped-product-name-font-weight;
     margin: $product-view__grouped-product-name-margin;
+    font-weight: $product-view__grouped-product-name-font-weight;
 
     @include mq($screen-m) {
       margin: $product-view__grouped-product-name-margin\@medium;
@@ -454,19 +454,19 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   }
 
   &__action-elements {
-    flex-flow: column;
-    flex: 1 0 auto;
-    justify-content: space-between;
     display: flex;
+    flex: 1 0 auto;
+    flex-flow: column;
+    justify-content: space-between;
 
     @include mq($screen-s) {
       margin-top: $product-view__action-elements-margin-top\@small;
     }
 
     @include mq($screen-l) {
-      margin-top: $product-view__action-elements-margin-top\@large;
       flex-flow: row nowrap;
       justify-content: flex-start;
+      margin-top: $product-view__action-elements-margin-top\@large;
     }
   }
 
@@ -487,8 +487,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
     margin: $product-view__add-to-cart-margin;
 
     @include mq($screen-l) {
-      width: auto;
       flex: 0 0 auto;
+      width: auto;
       margin: $product-view__add-to-cart-margin\@large;
     }
   }
@@ -498,9 +498,9 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   }
 
   &__action {
-    margin-right: $product-view__action-item-spacing;
     width: $product-view__action-item-size;
     height: $product-view__action-item-size;
+    margin-right: $product-view__action-item-spacing;
     padding: 0;
 
     &:hover {
@@ -516,14 +516,14 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
     }
 
     &--button {
-      box-shadow: none;
       background: transparent;
       border: none;
+      box-shadow: none;
     }
 
     .icon {
-      fill: $product-view__action-icon-color;
       transition: $product-view__action-icon-transition;
+      fill: $product-view__action-icon-color;
     }
 
     &--wishlist {
@@ -556,8 +556,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__link {
     &--rating {
-      text-decoration: none;
       color: $product-view__rating-link-color;
+      text-decoration: none;
 
       &:hover {
         cursor: pointer;
@@ -565,8 +565,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
     }
 
     &--add-review {
-      text-decoration: none;
       font-size: $product-view__add-review-link-font-size;
+      text-decoration: none;
 
       @include mq($screen-m) {
         font-size: $product-view__add-review-link-font-size\@medium;
@@ -575,8 +575,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   }
 
   &__sku {
-    color: $product-view__sku-color;
     margin-bottom: $product-view__sku-margin-bottom;
+    color: $product-view__sku-color;
   }
 
   &__review {
@@ -613,8 +613,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__review-date {
     margin-bottom: $product-view__review-date-margin-bottom;
-    font-size: $product-view__review-date-font-size;
     color: $product-view__review-date-color;
+    font-size: $product-view__review-date-font-size;
   }
 
   &__review-content-title {
@@ -649,8 +649,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
     }
 
     .heading {
-      font-size: $product-view__slider-heading-font-size;
       font-weight: $product-view__slider-heading-font-size-weight;
+      font-size: $product-view__slider-heading-font-size;
       text-transform: $product-view__slider-heading-text-transform;
     }
 

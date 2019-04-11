@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $table__padding      : $spacer--medium !default;
 $table__cell__padding: $spacer $table__padding !default;
@@ -20,9 +20,9 @@ $table__th-background: $gray-lightest !default;
     @include mq($screen-m) {
       display: table-cell;
       padding: $table__padding;
-      border-bottom: $table__border;
-      border-right: $table__border;
       background: $table__th-background;
+      border-right: $table__border;
+      border-bottom: $table__border;
     }
   }
 
@@ -32,12 +32,12 @@ $table__th-background: $gray-lightest !default;
     background: $table__background;
 
     &::before {
-      content: attr(data-th);
       display: block;
-      max-width: 25%;
       width: 25%;
+      max-width: 25%;
       margin-right: 10px;
       font-weight: bold;
+      content: attr(data-th);
 
       @include mq($screen-m) {
         display: none;
@@ -53,9 +53,9 @@ $table__th-background: $gray-lightest !default;
     @include mq($screen-m) {
       display: table-cell;
       padding: $table__padding;
-      border-bottom: $table__border;
-      border-right: $table__border;
       background: $table__background;
+      border-right: $table__border;
+      border-bottom: $table__border;
     }
   }
 
@@ -88,8 +88,8 @@ $table__th-background: $gray-lightest !default;
       @include mq($screen-m) {
         display: table-cell;
         padding: $table__padding;
-        border-right: $table__border;
         background: $table__th-background;
+        border-right: $table__border;
       }
     }
 

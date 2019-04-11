@@ -1,0 +1,111 @@
+@import '../../../assets/styles/_globals.scss';
+
+$slide-menu__item-hover-bg-color     : #f6f6fa !default;
+$slide-menu__item-color              : $gray-darker !default;
+$slide-menu__item-icon-color         : $slide-menu__item-color !default;
+$slide-menu__item-min-height         : 48px !default;
+$slide-menu__item-border             : $border-width-base $border-style-base $gray-light !default;
+$slide-menu__item-element-padding    : $spacer--medium !default;
+$slide-menu__icon-size               : 16px !default;
+$slide-menu__icon-right-margin--prev : $spacer--medium !default;
+$slide-menu__nested-item-padding-left: calc(#{$slide-menu__icon-right-margin--prev} + #{$slide-menu__item-element-padding}) !default;
+
+.slide-menu {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+
+  &--nested {
+    overflow: visible;
+  }
+
+  &__item {
+    min-height: $slide-menu__item-min-height;
+
+    &:hover,
+    &:focus {
+      background: $slide-menu__item-hover-bg-color;
+    }
+
+    &--prev {
+      border-bottom: $slide-menu__item-border;
+
+      &:empty {
+        height: calc(#{$slide-menu__item-min-height} + #{$border-width-base});
+      }
+    }
+
+    &--prev ~ & & {
+      padding-left: $slide-menu__nested-item-padding-left;
+    }
+
+    &--no-hover {
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: $reset;
+    font-weight: $font-weight-bold;
+    background: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+
+      .slide-menu__icon {
+        fill: $slide-menu__item-icon-color;
+      }
+    }
+
+    &--prev {
+      justify-content: left;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__item,
+  &__link,
+  &__button {
+    color: $slide-menu__item-color;
+    font-size: $font-size-base;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $slide-menu__item-color;
+    }
+  }
+
+  &__link,
+  &__button {
+    padding: $slide-menu__item-element-padding;
+  }
+
+  &__icon {
+    width: $slide-menu__icon-size;
+    height: $slide-menu__icon-size;
+    fill: $slide-menu__item-icon-color;
+
+    &--prev {
+      order: -1;
+      margin-right: $slide-menu__icon-right-margin--prev;
+    }
+  }
+}

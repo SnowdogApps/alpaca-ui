@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaFilters from './Filters.vue'
+import AFilters from './Filters.vue'
 
 import swatchItems from '../../03-modules/filter/mocks/swatchItems'
 import colorItems from '../../03-modules/filter/mocks/colorItems'
@@ -9,7 +9,7 @@ import activeFilterItems from '../../03-modules/active-filters/mocks/active-filt
 
 storiesOf('Modules/Filters', module)
   .add('Default', () => ({
-    components: { AlpacaFilters },
+    components: { AFilters },
     data: () => ({
       swatchItems,
       colorItems,
@@ -17,7 +17,7 @@ storiesOf('Modules/Filters', module)
       checkboxItems
     }),
     template: `
-        <alpaca-filters
+        <a-filters
           active-filters-heading="Now Shopping by"
           all-filters-heading="Shopping Options"
           :active-filter-items="activeFilterItems"

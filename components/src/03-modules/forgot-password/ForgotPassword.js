@@ -1,12 +1,12 @@
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaInput from '../../02-elements/input/Input.vue'
-import AlpacaParagraph from '../../01-globals/paragraph/Paragraph.vue'
+import AButton from '../../atoms/button/Button.vue'
+import AInput from '../../02-elements/input/Input.vue'
+import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 
 export default {
   components: {
-    AlpacaButton,
-    AlpacaInput,
-    AlpacaParagraph
+    AButton,
+    AInput,
+    AParagraph
   },
   props: {
     info: {

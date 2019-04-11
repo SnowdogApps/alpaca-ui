@@ -1,0 +1,50 @@
+@import '../../../assets/styles/_globals.scss';
+
+$select__margin       : $spacer !default;
+$select__padding      : 0 $spacer--medium 0 $spacer--medium !default;
+$select__border       : 1px solid $form-elements-border-color !default;
+$select__spacing      : 40px !default;
+$select__arrow-color  : $gray-dark transparent transparent transparent !default;
+$select__border-radius: 20px !default;
+
+.select {
+  margin-bottom: $select__margin;
+
+  &__field {
+    position: relative;
+    padding: $reset;
+    border: $select__border;
+    border-radius: $select__border-radius;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 11.5px;
+      width: 0;
+      height: 0;
+      margin-top: -2.5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: $select__arrow-color;
+      pointer-events: none;
+      content: "";
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: $select__spacing;
+    padding: $select__padding;
+    line-height: $select__spacing;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}

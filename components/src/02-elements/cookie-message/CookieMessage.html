@@ -9,14 +9,16 @@
       class="cookie-message__text"
       v-html="text"
     />
-    <alpaca-button
+    <a-button
       :aria-label="closeAriaLabel"
-      :icon="closeIcon"
       class="cookie-message__close"
-      icon-class="cookie-message__close-icon"
       @click="closeBar()"
     >
       {{ closeButton }}
-    </alpaca-button>
+      <a-icon
+        :icon="closeIcon"
+        class="cookie-message__close-icon"
+      />
+     </a-button>
   </div>
 </div>

@@ -7,11 +7,14 @@
     <div class="marketing-bar__text">
       <slot />
     </div>
-    <alpaca-button
+    <a-button
       class="marketing-bar__close"
-      icon="close"
-      icon-class="marketing-bar__close-icon"
       @click="onButtonClose"
-    />
+    >
+      <a-icon
+        icon="close"
+        class="marketing-bar__close-icon"
+      />
+    </a-button>
   </div>
 </div>

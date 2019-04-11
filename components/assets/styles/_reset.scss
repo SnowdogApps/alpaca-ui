@@ -10,13 +10,13 @@
 
 html,
 body {
-  height: 100%;
   min-width: 320px;
+  height: 100%;
   margin: $reset;
-  font-family: $font-family-base;
+  color: $font-color-base;
   font-weight: $font-weight-base;
   font-size: $font-size-base;
-  color: $font-color-base;
+  font-family: $font-family-base;
 }
 
 body {

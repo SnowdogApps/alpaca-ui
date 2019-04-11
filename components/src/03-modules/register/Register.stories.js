@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaRegister from './Register.vue'
+import ARegister from './Register.vue'
 
 storiesOf('Modules/Register', module).add('Default', () => ({
-  components: { AlpacaRegister },
+  components: { ARegister },
   template: `
-      <alpaca-register
+      <a-register
         style="padding: 20px;"
         personal-information-legend="Personal information"
         sign-in-legend="Sign-In information"

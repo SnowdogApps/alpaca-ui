@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $active-filters__remove-size         : 48px !default;
 $active-filters__remove-padding      : 0 !default;
@@ -32,26 +32,26 @@ $active-filters__clear-color\@medium : $color-secondary !default;
     min-width: $active-filters__remove-size;
     min-height: $active-filters__remove-size;
     padding: $active-filters__remove-padding;
+    word-break: break-all;
+    background: $active-filters__remove-background;
     border: $active-filters__remove-border;
     outline: none;
-    background: $active-filters__remove-background;
     cursor: pointer;
-    word-break: break-all;
 
     &-icon {
       display: block;
-      padding: $active-filters__remove-icon-padding;
-      margin: $active-filters__remove-icon-margin;
       width: $active-filters__icon-size;
       height: $active-filters__icon-size;
+      margin: $active-filters__remove-icon-margin;
+      padding: $active-filters__remove-icon-padding;
       fill: $active-filters__icon-fill;
     }
   }
 
   &__label {
     max-width: calc(100% - #{$active-filters__remove-size});
-    word-break: break-all;
     font-weight: $active-filters__label-font-weight;
+    word-break: break-all;
   }
 
   &__value {
@@ -61,34 +61,34 @@ $active-filters__clear-color\@medium : $color-secondary !default;
 
   &__clear-all {
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
     min-width: 100%;
     min-height: $active-filters__clear-height;
     color: $active-filters__clear-color;
-    border: $active-filters__clear-border;
-    border-radius: $active-filters__clear-border-radius;
-    font-size: $active-filters__clear-font-size;
     font-weight: $active-filters__clear-font-weight;
+    font-size: $active-filters__clear-font-size;
     line-height: $active-filters__clear-line-height;
+    text-align: center;
     text-decoration: none;
     background: none;
+    border: $active-filters__clear-border;
+    border-radius: $active-filters__clear-border-radius;
 
     &:hover,
     &:focus {
+      color: $active-filters__clear-color;
       text-decoration: none;
       background: none;
-      color: $active-filters__clear-color;
     }
 
     @include mq($screen-m) {
       display: inline-flex;
-      margin: $active-filters__clear-margin;
       justify-content: flex-start;
       min-width: 0;
-      border: none;
+      margin: $active-filters__clear-margin;
       text-decoration: none;
+      border: none;
 
       &:hover,
       &:focus {

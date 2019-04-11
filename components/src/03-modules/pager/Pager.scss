@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $pager__list-padding                        : $spacer !default;
 $pager__item-margin                         : 0 $spacer !default;
@@ -17,18 +17,18 @@ $pager__link-fill                           : $green !default;
 
   &__list {
     display: flex;
-    align-items: center;
     justify-content: center;
-    list-style-type: none;
-    padding: $pager__list-padding;
+    align-items: center;
     margin: $reset;
+    padding: $pager__list-padding;
+    list-style-type: none;
   }
 
   &__item {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-basis: $pager__item-size;
+    justify-content: center;
+    align-items: center;
     height: $pager__item-size;
     margin: $pager__item-margin;
     padding: $reset;
@@ -45,43 +45,43 @@ $pager__link-fill                           : $green !default;
       position: relative;
 
       &::after {
-        content: '';
         position: absolute;
         bottom: 14px;
         left: 0;
+        z-index: -1;
         width: 100%;
         height: $pager__item-after-height--current;
         background-color: $pager__item-after-background-color--current;
-        z-index: -1;
-        transition: $pager__item-after-transition--current;
         transform-origin: left;
+        transition: $pager__item-after-transition--current;
+        content: '';
       }
     }
   }
 
   &__link {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: $pager__item-size;
-    border-radius: 0;
-    border: none;
-    background-color: transparent;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
 
     &:focus,
     &:hover {
-      background-color: transparent;
       color: $color-primary;
+      background-color: transparent;
     }
 
     &--prev,
     &--next {
       .icon {
-        fill: $pager__link-fill;
         width: $pager__icon-width;
         height: $pager__icon-height;
+        fill: $pager__link-fill;
       }
 
       &:focus:not([disabled]),
@@ -91,8 +91,8 @@ $pager__link-fill                           : $green !default;
     }
 
     &[disabled] {
-      pointer-events: none;
       cursor: default;
+      pointer-events: none;
 
       .icon {
         fill: $pager__link-fill-disabled;

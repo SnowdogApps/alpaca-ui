@@ -1,0 +1,23 @@
+@import '../../../assets/styles/_globals.scss';
+
+$paragraph-color      : $color-secondary !default;
+$paragraph-font-family: $font-family-base !default;
+$paragraph-font-weight: $font-weight-normal !default;
+$paragraph-line-height: $font-line-height !default;
+$paragraph-font-size  : $font-size-base !default;
+$paragraph-margin     : 0 0 $spacer--medium 0 !default;
+$paragraph-transition : none !default;
+
+.paragraph {
+  margin: $paragraph-margin;
+  color: $paragraph-color;
+  font-weight: $paragraph-font-weight;
+  font-size: $paragraph-font-size;
+  font-family: $paragraph-font-family;
+  line-height: $paragraph-line-height;
+  transition: $paragraph-transition;
+}
+
+p {
+  @extend .paragraph;
+}

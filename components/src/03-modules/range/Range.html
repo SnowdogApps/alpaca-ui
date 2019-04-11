@@ -60,14 +60,13 @@
       {{ upperInput.suffix }}
     </span>
   </div>
-  <alpaca-button
+  <a-button
     v-if="applyLabel"
-    type="button"
     class="button--secondary button--fluid range-filter__button"
     :aria-label="applyLabel"
     @click="apply"
   >
     {{ applyLabel }}
-  </alpaca-button>
+   </a-button>
 </div>
 

@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $register__fieldset-margin            : 0 0 $spacer--medium !default;
 $register__legend-font-size           : $font-size-large !default;
@@ -16,8 +16,8 @@ $register__login-wrapper-margin       : $spacer 0 0 0 !default;
   &__legend {
     margin: $reset;
     padding: $register__legend-padding;
-    font-size: $register__legend-font-size;
     color: $register__legend-color;
+    font-size: $register__legend-font-size;
   }
 
   &__submit-button {

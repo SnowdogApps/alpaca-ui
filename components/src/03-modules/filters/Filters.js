@@ -1,24 +1,24 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-import AlpacaDivider from '../../02-elements/divider/Divider.vue'
-import AlpacaDropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
-import AlpacaDropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
-import AlpacaActiveFilters from '../../03-modules/active-filters/ActiveFilters.vue'
-import AlpacaSwatchFilter from '../swatch-filter/SwatchFilter.vue'
-import AlpacaCheckboxFilter from '../checkbox-filter/CheckboxFilter.vue'
-import AlpacaColorFilter from '../color-filter/ColorFilter.vue'
+import AHeading from '../../atoms/heading/Heading.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import ADivider from '../../../../cookbook/src/atoms/divider/Divider.vue'
+import ADropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
+import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
+import AActiveFilters from '../../03-modules/active-filters/ActiveFilters.vue'
+import ASwatchFilter from '../swatch-filter/SwatchFilter.vue'
+import ACheckboxFilter from '../checkbox-filter/CheckboxFilter.vue'
+import AColorFilter from '../color-filter/ColorFilter.vue'
 
 export default {
   components: {
-    AlpacaHeading,
-    AlpacaIcon,
-    AlpacaDivider,
-    AlpacaDropdownList,
-    AlpacaDropdownListItem,
-    AlpacaActiveFilters,
-    AlpacaColorFilter,
-    AlpacaSwatchFilter,
-    AlpacaCheckboxFilter
+    AHeading,
+    AIcon,
+    ADivider,
+    ADropdownList,
+    ADropdownListItem,
+    AActiveFilters,
+    AColorFilter,
+    ASwatchFilter,
+    ACheckboxFilter
   },
   props: {
     activeFiltersHeading: {

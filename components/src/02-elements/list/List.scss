@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $list__style: none !default;
 $list__item-padding: 5px 0 !default;
@@ -103,8 +103,8 @@ $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
 
     &.list--horizontal {
       .list__item {
-        border-bottom: none;
         border-right: $list__border--divider;
+        border-bottom: none;
 
         &:last-child {
           border-right: none;
@@ -115,8 +115,8 @@ $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
     &.list--horizontal\@medium {
       .list__item {
         @include mq($screen-m) {
-          border-bottom: none;
           border-right: $list__border--divider;
+          border-bottom: none;
         }
 
         &:last-child {
@@ -168,8 +168,8 @@ $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
   }
 
   &__label {
-    clear: left;
     float: left;
+    clear: left;
     padding: $list__label-padding;
 
     &::after {

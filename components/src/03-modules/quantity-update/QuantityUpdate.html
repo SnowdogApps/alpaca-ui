@@ -7,19 +7,22 @@
     {{ label }}
   </label>
   <div class="quantity-update__qty">
-    <alpaca-button
-      :icon-title="decrementIconTitle"
+    <a-button
       :aria-label="decrementAriaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--minus',
         {'quantity-update__button--disabled': currentValue === 0},
         decrementButtonClass
       ]"
-      icon="minus"
-      icon-class="button__icon quantity-update__icon"
       @click="changeValue(--currentValue)"
-    />
-    <alpaca-input
+    >
+      <a-icon
+        :title="decrementIconTitle"
+        icon="minus"
+        class="button__icon quantity-update__icon"
+      />
+    </a-button>
+    <a-input
       v-model="currentValue"
       :id="inputId"
       :label="inputAriaLabel"
@@ -35,16 +38,19 @@
       hidden-label
       @input="changeValue"
     />
-    <alpaca-button
-      icon="plus"
-      :icon-title="incrementIconTitle"
+    <a-button
       :aria-label="incrementAriaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--plus',
         incrementButtonClass
       ]"
-      icon-class="button__icon quantity-update__icon"
       @click="changeValue(++currentValue)"
-    />
+    >
+      <a-icon
+        :title="incrementIconTitle"
+        icon="plus"
+        class="button__icon quantity-update__icon"
+      />
+    </a-button>
   </div>
 </div>

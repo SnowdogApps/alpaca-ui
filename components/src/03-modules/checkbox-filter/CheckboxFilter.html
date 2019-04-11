@@ -1,4 +1,4 @@
-<alpaca-dropdown-list-item
+<a-dropdown-list-item
   class="filter"
   label-class="filter__label"
   content-class="filter__content"
@@ -7,7 +7,7 @@
   :id="id"
   :data-dropdown="id"
 >
-  <alpaca-checkbox
+  <a-checkbox
     v-for="item in items"
     :key="item.id"
     :id="item.id"
@@ -15,6 +15,6 @@
     :value="item.value"
   >
     {{ item.name }}
-  </alpaca-checkbox>
+   </a-checkbox>
   <div class="filter__divider"></div>
-</alpaca-dropdown-list-item>
+ </a-dropdown-list-item>

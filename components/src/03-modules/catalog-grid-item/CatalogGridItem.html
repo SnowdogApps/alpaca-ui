@@ -2,19 +2,19 @@
   :is="tag"
   class="catalog-grid-item"
   >
-  <alpaca-badge
+  <a-badge
     v-if="product.badge"
     :type="product.badge"
     class="catalog-grid-item__badge"
   >
     {{ product.badge }}
-  </alpaca-badge>
+   </a-badge>
 
   <router-link
     :to="product.url"
     class="catalog-grid-item__link"
   >
-    <alpaca-image
+    <a-image
       :src="product.image"
       :alt="product.name"
       class="catalog-grid-item__image"
@@ -32,20 +32,21 @@
     </h2>
 
     <div class="catalog-grid-item__price">
-      <alpaca-price
-        :price="product.price"
+      <a-price
         :special-price="product.specialPrice"
         :old-price="product.oldPrice"
-      />
+      >
+        {{ product.price }}
+      </a-price>
     </div>
 
     <!--TODO Add rating component-->
     <div class="catalog-grid-item__options">
-      <!-- <alpaca-swatch
+      <!-- <a-swatch
         v-if="textSwatch"
         :options="textSwatch"
       />
-      <alpaca-swatch
+      <a-swatch
         v-if="iconSwatch"
         :options="iconSwatch"
         image
@@ -54,27 +55,28 @@
 
     <div class="catalog-grid-item__actions">
       <form class="catalog-grid-item__primary-form">
-        <alpaca-button
-          secondary
-          class="catalog-grid-item__primary-action"
+        <a-button
+          class="button--secondary catalog-grid-item__primary-action"
           @click.stop.prevent="addToCart"
         >
           Add to cart
-        </alpaca-button>
+         </a-button>
       </form>
 
       <div class="catalog-grid-item__secondary-action">
-        <alpaca-button
-          :icon="wishListIcon"
+        <a-button
           :aria-label="wishListAriaLabel"
           @click="addToWishList"
-        />
+        >
+          <a-icon :icon="wishListIcon"/>
+        </a-button>
 
-        <alpaca-button
-          :icon="compareIcon"
+        <a-button
           :aria-label="compareAriaLabel"
           @click="addToCompare"
-        />
+        >
+          <a-icon :icon="compareIcon"/>
+        </a-button>
       </div>
     </div>
   </section>

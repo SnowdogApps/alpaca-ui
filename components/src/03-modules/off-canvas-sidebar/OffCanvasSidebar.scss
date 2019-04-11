@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $off-canvas-sidebar__padding                      : 0 !default;
 $off-canvas-sidebar__background-color\@small      : rgba(57, 50, 67, 0.6) !default;
@@ -13,10 +13,12 @@ $off-canvas-sidebar__content-width                : 100% !default;
 $off-canvas-sidebar__content-width\@medium        : 712px !default;
 $off-canvas-sidebar__content-width\@extra-large   : 880px !default;
 $off-canvas-sidebar__content-min-width            : 320px !default;
+$off-canvas-sidebar__content-max-width--compact   : 385px !default;
 $off-canvas-sidebar__content-height               : 100vh !default;
 $off-canvas-sidebar__content-padding              : 24px $spacer--medium !default;
-$off-canvas-sidebar__content-padding\@medium       : 56px 88px !default;
+$off-canvas-sidebar__content-padding\@medium      : 56px 88px !default;
 $off-canvas-sidebar__content-padding\@large       : 56px 112px !default;
+$off-canvas-sidebar__content-padding--compact     : $spacer--medium !default;
 $off-canvas-sidebar__content-background-color     : $white !default;
 $off-canvas-sidebar__content-border               : none !default;
 $off-canvas-sidebar__content-box-shadow           : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
@@ -29,8 +31,8 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
 
 .off-canvas-sidebar {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -42,9 +44,9 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 100;
       width: 100%;
       height: 100%;
-      z-index: 100;
       background-color: $off-canvas-sidebar__background-color\@small;
     }
   }
@@ -55,15 +57,15 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
     right: 0;
     z-index: 101;
     display: block;
-    height: $off-canvas-sidebar__content-height;
-    min-width: $off-canvas-sidebar__content-min-width;
     width: $off-canvas-sidebar__content-width;
+    min-width: $off-canvas-sidebar__content-min-width;
+    height: $off-canvas-sidebar__content-height;
     padding: $off-canvas-sidebar__content-padding;
-    border: $off-canvas-sidebar__content-border;
-    animation-duration: 400ms;
-    background-color: $off-canvas-sidebar__content-background-color;
-    box-shadow: $off-canvas-sidebar__content-box-shadow;
     overflow: auto;
+    background-color: $off-canvas-sidebar__content-background-color;
+    border: $off-canvas-sidebar__content-border;
+    box-shadow: $off-canvas-sidebar__content-box-shadow;
+    animation-duration: 400ms;
 
     @include mq($screen-m) {
       width: $off-canvas-sidebar__content-width\@medium;
@@ -85,6 +87,12 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
     &--left {
       left: 0;
     }
+
+    &--compact {
+      max-width: $off-canvas-sidebar__content-max-width--compact;
+      padding-right: $off-canvas-sidebar__content-padding--compact;
+      padding-left: $off-canvas-sidebar__content-padding--compact;
+    }
   }
 
   &__header {
@@ -102,8 +110,8 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
   }
 
   &__close-button {
-    border: $off-canvas-sidebar__close-button-border;
     background-color: $off-canvas-sidebar__close-button-background-color;
+    border: $off-canvas-sidebar__close-button-border;
 
     &:hover,
     &:focus {

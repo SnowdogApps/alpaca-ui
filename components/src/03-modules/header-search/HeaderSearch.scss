@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $search-form__height            : 34px !default;
 $search-form__width             : 100% !default;
@@ -14,13 +14,14 @@ $search-form__button-icon-color : $gray-dark !default;
 $search-form__placeholder-color : $gray !default;
 
 .search-form {
+  position: relative;
+  z-index: 1;
+  align-self: $search-form__alignment;
   width: $search-form__width;
   height: $search-form__height;
-  align-self: $search-form__alignment;
   margin: $reset;
   border: 1px solid $search-form__border-color;
   border-radius: $search-form__height;
-  z-index: 1;
 
   @include mq($screen-m) {
     position: relative;
@@ -37,9 +38,9 @@ $search-form__placeholder-color : $gray !default;
   &__input {
     width: 100%;
     height: $search-form__input-height;
+    font-size: $search-form__font-size;
     border: none;
     border-radius: $search-form__height;
-    font-size: $search-form__font-size;
 
     &::placeholder {
       color: $search-form__placeholder-color;
@@ -53,9 +54,9 @@ $search-form__placeholder-color : $gray !default;
     right: 0;
     height: $search-form__input-height;
     margin: $reset;
+    background-color: $search-form__button-background;
     border: $search-form__button-border;
     border-radius: $search-form__height;
-    background-color: $search-form__button-background;
 
     &:focus,
     &:hover {
@@ -63,9 +64,16 @@ $search-form__placeholder-color : $gray !default;
     }
   }
 
-  .button__icon {
+  &__icon {
     width: $search-form__button-size;
     height: $search-form__button-size;
+    padding: $reset;
     fill: $search-form__button-icon-color;
+
+    &:focus,
+    &:hover {
+      transition: $transition-base;
+      fill: $color-primary;
+    }
   }
 }

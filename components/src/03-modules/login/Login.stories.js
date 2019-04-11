@@ -2,14 +2,14 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
-import AlpacaLogin from './Login.vue'
+import ALogin from './Login.vue'
 
 storiesOf('Modules/Login', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { AlpacaLogin },
+    components: { ALogin },
     template: `
-        <alpaca-login
+        <a-login
           style="padding: 20px;"
           legend="Login form"
           go-to-forget-password-button="Forgot Your Password?"

@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $tab__border-width          : 1px !default;
 $tab__content-padding       : $spacer--medium !default;
@@ -8,23 +8,23 @@ $tab__title-border          : $tab__border-width solid $gray-light !default;
 .tab {
   &__content {
     position: relative;
+    z-index: -1;
     display: none;
     width: 100%;
     padding: $tab__content-padding;
-    z-index: -1;
-    opacity: 0;
     overflow: hidden;
+    opacity: 0;
 
     @include mq($screen-l) {
-      padding: $tab__content-padding--large;
-      flex-basis: 100%;
       z-index: 1;
+      flex-basis: 100%;
+      padding: $tab__content-padding--large;
     }
 
     &--active {
+      z-index: 1;
       display: block;
       opacity: 1;
-      z-index: 1;
 
       &:nth-last-child(1) {
         border-bottom: $tab__title-border;

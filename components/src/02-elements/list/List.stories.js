@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaList from './List.vue'
-import AlpacaListItem from '../list-item/ListItem.vue'
-import AlpacaListImageItem from '../list-image-item/ListImageItem.vue'
-import AlpacaDescriptionList from '../description-list/DescriptionList.vue'
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AList from './List.vue'
+import AListItem from '../list-item/ListItem.vue'
+import AListImageItem from '../list-image-item/ListImageItem.vue'
+import ADescriptionList from '../description-list/DescriptionList.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import ALink from '../../atoms/link/Link.vue'
 
 import listElements from './mocks/listElements.json'
 import iconListElements from './mocks/iconListElements.json'
@@ -15,214 +15,212 @@ import linkListElements from './mocks/linkListElements.json'
 
 storiesOf('Elements/List', module)
   .add('Default', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list>
-          <alpaca-list-item
+        <a-list>
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
            >
          {{ element.text }}
-        </alpaca-list-item>
-       </alpaca-list>
+         </a-list-item>
+        </a-list>
     `
   }))
   .add('Native', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--native">
-          <alpaca-list-item
+        <a-list class="list--native">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
           >
            {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Horizontal', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--horizontal">
-          <alpaca-list-item
+        <a-list class="list--horizontal">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
           >
            {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Horizontal Medium', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--horizontal@medium">
-          <alpaca-list-item
+        <a-list class="list--horizontal@medium">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
           >
           {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Icon', () => ({
-    components: { AlpacaList, AlpacaListItem, AlpacaIcon },
+    components: { AList, AListItem, AIcon },
     data: () => ({
       iconListElements
     }),
     template: `
-        <alpaca-list class="list--with-icon">
-          <alpaca-list-item
+        <a-list class="list--with-icon">
+          <a-list-item
             v-for="element in iconListElements"
             :key="element.id"
           >
-            <alpaca-icon
-              :icon="element.icon.iconId"
-            />
-          </alpaca-list-item>
-        </alpaca-list>
+            <a-icon :icon="element.icon.iconId"/>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Image', () => ({
-    components: { AlpacaList, AlpacaListImageItem },
+    components: { AList, AListImageItem },
     data: () => ({
       imageListElements
     }),
     template: `
-        <alpaca-list class="list--with-image">
-          <alpaca-list-image-item
+        <a-list class="list--with-image">
+          <a-list-image-item
            v-for="item in imageListElements"
            :key="item.id"
            :src="item.image.src"
            :alt="item.image.alt"
           >
             {{ item.text }}
-          </alpaca-list-image-item>
-        </alpaca-list>
+           </a-list-image-item>
+         </a-list>
     `
   }))
   .add('Divided', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--divided">
-          <alpaca-list-item
+        <a-list class="list--divided">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
           >
             {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Center', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--center">
-          <alpaca-list-item
+        <a-list class="list--center">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
            >
             {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Center Horizontal', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--center list--horizontal">
-          <alpaca-list-item
+        <a-list class="list--center list--horizontal">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
           >
             {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Divided Horizontal', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--divided list--horizontal">
-          <alpaca-list-item
+        <a-list class="list--divided list--horizontal">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
            >
             {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Divided Horizontal Medium', () => ({
-    components: { AlpacaList, AlpacaListItem },
+    components: { AList, AListItem },
     data: () => ({
       listElements
     }),
     template: `
-        <alpaca-list class="list--divided list--horizontal@medium">
-          <alpaca-list-item
+        <a-list class="list--divided list--horizontal@medium">
+          <a-list-item
             v-for="element in listElements"
             :key="element.id"
           >
            {{ element.text }}
-          </alpaca-list-item>
-        </alpaca-list>
+           </a-list-item>
+         </a-list>
     `
   }))
   .add('Description', () => ({
-    components: { AlpacaDescriptionList },
+    components: { ADescriptionList },
     data: () => ({
       descListElements
     }),
     template: `
-        <alpaca-description-list
+        <a-description-list
           :listClass="'list--divided'"
-          :title="'Alpaca description List'"
+          :title="'A description List'"
           :elements="descListElements"
         />
     `
   }))
   .add('Link', () => ({
-    components: { AlpacaList, AlpacaListItem, AlpacaLink },
+    components: { AList, AListItem, ALink },
     data: () => ({
       linkListElements
     }),
     template: `
-        <alpaca-list>
-          <alpaca-list-item
+        <a-list>
+          <a-list-item
             v-for="element in linkListElements"
             :key="element.id"
             elementTag="link"
            >
-            <alpaca-link>
+            <a-link>
               {{ element.text }}
-            </alpaca-link>
-          </alpaca-list-item>
-        </alpaca-list>
+             </a-link>
+           </a-list-item>
+         </a-list>
     `
   }))

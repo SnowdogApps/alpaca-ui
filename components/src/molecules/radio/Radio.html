@@ -1,0 +1,44 @@
+<div class="radio">
+  <fieldset
+    :aria-labelledby="`legend-${name}`"
+    class="radio__fieldset"
+  >
+    <!-- @slot Custom legend markup (Named slot) -->
+    <slot name="legend">
+      <legend
+        :id="`legend-${name}`"
+        class="radio__legend"
+      >
+        {{ legend }}
+      </legend>
+    </slot>
+    <div
+      v-for="option in options"
+      class="radio__item"
+    >
+      <input
+        :key="option.id"
+        :id="option.id"
+        :name="name"
+        :value="option.value"
+        :checked="value"
+        type="radio"
+        :class="['radio__field', inputClass]"
+        @change="$emit('change', $event.target.value)"
+      >
+      <!-- @slot Custom radio option (Scoped slot) -->
+      <slot
+        name="option"
+        :option="option"
+      >
+        <a-label
+          :for="option.id"
+          class="radio__label"
+        >
+          <span class="radio__icon" />
+          {{ option.label }}
+        </a-label>
+      </slot>
+    </div>
+  </fieldset>
+</div>

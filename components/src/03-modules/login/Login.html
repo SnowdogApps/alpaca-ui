@@ -1,11 +1,11 @@
 <div class="login">
   <form>
-    <alpaca-fieldset
+    <a-fieldset
       class="login__fieldset"
       :legend-text="legend"
       legend-class="login__legend"
     >
-      <alpaca-input
+      <a-input
         id="email"
         v-model="email"
         :label="emailLabel"
@@ -13,7 +13,7 @@
         type="email"
         name="email"
       />
-      <alpaca-input
+      <a-input
         id="password"
         v-model="password"
         :label="passwordLabel"
@@ -21,32 +21,30 @@
         type="password"
         name="password"
       />
-    </alpaca-fieldset>
+     </a-fieldset>
     <div class="row row--no-margins end-xs">
-      <alpaca-button
-        class="login__forgot-password-button"
-        blank
+      <a-button
+        class="button--blank login__forgot-password-button"
         @click="goToForgotPassword"
       >
         {{ goToForgotPasswordButton }}
-      </alpaca-button>
+       </a-button>
     </div>
     <div class="login__submit-wrapper row row--no-margins center-xs">
-      <alpaca-button
-        type="submit"
+      <a-button
         class="login__submit-button"
         @click.stop.prevent="login"
       >
         {{ submitButton }}
-      </alpaca-button>
+       </a-button>
     </div>
   </form>
   <div class="login__register-wrapper row row--no-margins center-xs">
-    <alpaca-button
-      blank
+    <a-button
+      class="button--blank"
       @click="goToRegister"
     >
       {{ goToRegisterButton }}
-    </alpaca-button>
+     </a-button>
   </div>
 </div>

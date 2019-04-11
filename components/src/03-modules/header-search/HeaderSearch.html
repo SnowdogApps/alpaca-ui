@@ -1,15 +1,19 @@
 <form class="search-form">
-  <alpaca-input
+  <a-input
     id="header-search"
     :hidden-label="true"
     name="search"
     type="search"
     label="Search entire store here..."
+    label-class="label--hidden"
     placeholder="Search entire store here..."
     input-class="search-form__input"
+    class="search-form__input-wrapper"
   />
-  <alpaca-button
-    icon="search"
-    class="search-form__button"
-  />
+  <a-button class="search-form__button">
+    <a-icon
+      icon="search"
+      class="search-form__icon"
+    />
+  </a-button>
 </form>

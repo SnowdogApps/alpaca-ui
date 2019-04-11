@@ -1,14 +1,14 @@
-import AlpacaIcon from '../../01-globals/icon/Icon.vue'
-import AlpacaList from '../../02-elements/list/List.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
-import AlpacaListItem from '../../02-elements/list-item/ListItem.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AList from '../../02-elements/list/List.vue'
+import AButton from '../../atoms/button/Button.vue'
+import AListItem from '../../02-elements/list-item/ListItem.vue'
 
 export default {
   components: {
-    AlpacaIcon,
-    AlpacaList,
-    AlpacaButton,
-    AlpacaListItem
+    AIcon,
+    AList,
+    AButton,
+    AListItem
   },
   props: {
     items: {

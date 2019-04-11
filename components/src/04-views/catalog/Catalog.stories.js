@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import AlpacaHeader from '../../03-modules/header/Header.vue'
-import AlpacaCatalog from './Catalog.vue'
+import AHeader from '../../03-modules/header/Header.vue'
+import ACatalog from './Catalog.vue'
 
 import data from './mocks/catalog.json'
 import menu from '../../03-modules/header/mocks/menu.json'
@@ -16,7 +16,7 @@ import checkboxItems from "../../03-modules/filter/mocks/checkboxItems"
 storiesOf('Views/Catalog', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-  components: { AlpacaHeader, AlpacaCatalog },
+  components: { AHeader, ACatalog },
   data() {
     return {
       ...data,
@@ -31,12 +31,12 @@ storiesOf('Views/Catalog', module)
   },
   template: `
     <div>
-      <alpaca-header
+      <a-header
         :menu="menu"
         src="./../images/logo/alpaca.svg"
         link="#"
       />
-      <alpaca-catalog
+      <a-catalog
         :products="products.items"
         :swatchItems="swatchItems"
         :colorItems="colorItems"

@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $home__banner-spacer            : $spacer--medium !default;
 $home__banner-spacer-medium     : $spacer--medium !default;
@@ -49,11 +49,11 @@ $home__brand-width--small       : 33.33% !default;
     }
 
     .list__item {
-      margin-bottom: $home__banner-spacer;
       width: $home__brand-width--small;
+      margin-bottom: $home__banner-spacer;
       padding: $home__banner-spacer;
-      border-right: $home__block-border;
       text-align: center;
+      border-right: $home__block-border;
 
       &:nth-child(3n) {
         border-right: 0;
@@ -93,9 +93,9 @@ $home__brand-width--small       : 33.33% !default;
 
   &__static-text {
     @include mq($screen-m) {
+      text-align: justify;
       column-count: 2;
       column-gap: $home__text-column-gap;
-      text-align: justify;
     }
   }
 }
