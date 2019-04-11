@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/globals';
 
 $rating__size                   : 120px !default;
 $rating__item-size              : $rating__size / 5 !default;
@@ -36,24 +36,24 @@ $rating__error-color            : $red !default;
 
   &__star {
     position: relative;
-    height: $rating__item-size;
     width: $rating__size;
+    height: $rating__item-size;
 
     &::before { // inactive
-      content: '';
       position: absolute;
-      display: block;
-      bottom: 0;
-      left: 0;
       top: 0;
       right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
       width: $rating__size;
       height: $rating__item-size;
+      text-indent: 10000px;
       background-image: url(../../../assets/images/rate/star.svg);
       background-repeat: repeat-x;
       background-position: left center;
       background-size: $rating__item-size;
-      text-indent: 10000px;
+      content: '';
 
       @include isIE() {
         height: 100%;
@@ -67,29 +67,29 @@ $rating__error-color            : $red !default;
   }
 
   &__indicator {
-    left: 0;
     top: 0;
+    left: 0;
     display: block;
-    height: $rating__item-size;
     width: $rating__size;
+    height: $rating__item-size;
     overflow: hidden;
     text-indent: -10000px;
 
     &::before { // active
-      content: '';
       position: absolute;
-      display: block;
-      left: 0;
-      right: 0;
       top: 0;
+      right: 0;
       bottom: 0;
+      left: 0;
+      display: block;
       width: auto;
       height: $rating__item-size;
+      text-indent: 10000px;
       background-image: url(../../../assets/images/rate/active-star.svg);
       background-repeat: repeat-x;
       background-position: left center;
       background-size: $rating__item-size;
-      text-indent: 10000px;
+      content: '';
 
       @include isIE() {
         width: 100%;
@@ -109,18 +109,18 @@ $rating__error-color            : $red !default;
     }
 
     &::after { //active star with border
-      content: '';
       position: absolute;
-      display: block;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
+      display: block;
       height: $rating__item-size;
       background-image: url(../../../assets/images/rate/active-star.svg);
       background-repeat: repeat-x;
-      background-size: $rating__item-size;
       background-position: left center;
+      background-size: $rating__item-size;
+      content: '';
 
       @include isIE() {
         width: 100%;
@@ -137,8 +137,8 @@ $rating__error-color            : $red !default;
 
   &__error {
     display: none;
-    color: $rating__error-color;
     margin-bottom: $rating__error-margin-bottom;
+    color: $rating__error-color;
 
     &--visible {
       display: block;
@@ -166,8 +166,8 @@ $rating__error-color            : $red !default;
       }
 
       &__star {
-        height: $rating__item-size--large;
         width: $rating__size--large;
+        height: $rating__item-size--large;
 
         &::before { // inactive
           width: $rating__size--large;
@@ -185,8 +185,8 @@ $rating__error-color            : $red !default;
       }
 
       &__indicator {
-        height: $rating__item-size--large;
         width: $rating__size--large;
+        height: $rating__item-size--large;
 
 
         &::before { // active
@@ -213,8 +213,8 @@ $rating__error-color            : $red !default;
         width: $rating__size--large;
 
         .rating__indicator {
-          height: $rating__item-size--large;
           width: $rating__item-size--large;
+          height: $rating__item-size--large;
 
           &::before {
             height: $rating__item-size--large;

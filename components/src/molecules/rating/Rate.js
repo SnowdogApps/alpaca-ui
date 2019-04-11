@@ -1,4 +1,4 @@
-import AlpacaFieldset from '../../02-elements/fieldset/Fieldset.vue'
+import AlpacaFieldset from '../../atoms/fieldset/Fieldset.vue'
 
 export default {
   components: {
