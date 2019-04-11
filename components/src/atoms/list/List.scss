@@ -1,6 +1,7 @@
 @import '../../../assets/styles/globals';
 
 $list__style: none !default;
+$list-padding: 0 5px 5px 0 !default;
 $list__item-padding: 5px 0 !default;
 $list__content-padding: 10px !default;
 $list__icon-color: $white !default;
@@ -163,6 +164,25 @@ $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
 
     &:last-child {
       padding-bottom: $reset;
+    }
+  }
+
+  &--description {
+    display: inline-block;
+
+    &__label {
+      float: left;
+      clear: left;
+      padding: $list-padding;
+
+      &::after {
+        content: ": ";
+      }
+    }
+
+    &__value {
+      float: left;
+      padding: $list-padding;
     }
   }
 

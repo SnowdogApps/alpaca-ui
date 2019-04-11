@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/vue'
 
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
-import ADescriptionList from '../description-list/DescriptionList.vue'
 import AIcon from '../icon/Icon.vue'
 import ALink from '../link/Link.vue'
 
@@ -14,6 +13,7 @@ const info = `
   - \`.list--horizontal@medium\` - Selector for applying horizontal-medium styles
   - \`.list--with-icon\` - Selector for applying styles for item with icon
   - \`.list--divided\` - Selector for applying divided styles
+  - \`.list--description\` - Selector for applying divided styles
   ---
 `
 
@@ -231,7 +231,7 @@ storiesOf('Atoms/List', module)
   .add(
     'Description',
     () => ({
-      components: { ADescriptionList },
+      components: { AList, AListItem },
       data: () => ({
         items: [
           {
@@ -252,11 +252,25 @@ storiesOf('Atoms/List', module)
         ]
       }),
       template: `
-        <a-description-list
-          class="list--divided"
-          :title="'A description List'"
-          :elements="items"
-        />
+        <a-list
+          tag="dl"
+          class="list--description"
+        >
+          <template v-for="item in items">
+            <a-list-item
+              tag="dt"
+              class="list--description__label"
+            >
+              {{ item.label }}
+            </a-list-item>
+            <a-list-item
+              tag="dd"
+              class="list--description__value"
+            >
+              {{ item.value }}
+            </a-list-item>
+          </template>
+        </a-list>
       `
     })
   )
