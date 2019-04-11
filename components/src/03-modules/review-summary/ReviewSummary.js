@@ -1,10 +1,10 @@
-import AlpacaLink from '../../01-globals/link/Link.vue'
-import AlpacaButton from '../../02-elements/button/Button.vue'
+import ALink from '../../atoms/link/Link.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 export default {
   components: {
-    AlpacaLink,
-    AlpacaButton
+    ALink,
+    AButton
   },
   props: {
     reviewsQty: {

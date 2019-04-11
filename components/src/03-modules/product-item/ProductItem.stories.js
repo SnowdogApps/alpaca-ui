@@ -2,20 +2,20 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
-import AlpacaQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
-import AlpacaProductItem from './ProductItem.vue'
+import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import AProductItem from './ProductItem.vue'
 
 import products from '../../../mocks/products'
 
 storiesOf('Modules/Product item', module)
   .addDecorator(StoryRouter())
   .add('Default', () => ({
-    components: { AlpacaProductItem },
+    components: { AProductItem },
     data: () => ({
       product: products[0]
     }),
     template: `
-        <alpaca-product-item
+        <a-product-item
           :id="product.id"
           :name="product.name"
           :url="product.url"
@@ -33,12 +33,12 @@ storiesOf('Modules/Product item', module)
     }
   }))
   .add('With Qty', () => ({
-    components: { AlpacaProductItem, AlpacaQuantityUpdate },
+    components: { AProductItem, AQuantityUpdate },
     data: () => ({
       product: products[0]
     }),
     template: `
-        <alpaca-product-item
+        <a-product-item
           :id="product.id"
           :name="product.name"
           :url="product.url"
@@ -51,7 +51,7 @@ storiesOf('Modules/Product item', module)
           @remove="removeMethod"
         >
           <template #quantity>
-            <alpaca-quantity-update
+            <a-quantity-update
               :input-id="'qty' + product.id"
               input-aria-label="Change the quantity"
               decrement-aria-label="Decrease the quantity"
@@ -64,7 +64,7 @@ storiesOf('Modules/Product item', module)
               @update="changeMethod"
             />
           </template>
-        </alpaca-product-item>
+         </a-product-item>
     `,
     methods: {
       removeMethod: action('Remove'),

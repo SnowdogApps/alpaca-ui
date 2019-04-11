@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $marketing-bar__padding: $spacer !default;
 $marketing-bar__background-color: $color-primary !default;
@@ -32,9 +32,9 @@ $marketing-bar__button-icon-padding: 2px !default;
 
   &__text {
     padding: $marketing-bar__text-padding;
-    font-size: $marketing-bar__text-font-size;
-    font-weight: $marketing-bar__text-font-weight;
     color: $marketing-bar__text-font-color;
+    font-weight: $marketing-bar__text-font-weight;
+    font-size: $marketing-bar__text-font-size;
 
     @include mq($screen-m) {
       padding: $reset;
@@ -44,13 +44,13 @@ $marketing-bar__button-icon-padding: 2px !default;
   &__close {
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
-    height: $marketing-bar__button-size;
+    bottom: 0;
     min-width: $marketing-bar__button-size;
+    height: $marketing-bar__button-size;
     margin: auto;
-    border: none;
     background-color: transparent;
+    border: none;
 
     &:focus,
     &:hover {

@@ -1,0 +1,19 @@
+@import '../../../assets/styles/_globals.scss';
+
+.banner {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

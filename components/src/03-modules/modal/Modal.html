@@ -21,16 +21,16 @@
         @keydown="handleKeydown"
       >
         <div
-          class="modal__header row between-xs"
+          class="modal__header"
           v-if="!blank"
         >
           <slot name="heading">
-            <alpaca-heading
+            <a-heading
               :level="1"
               class="modal__heading"
             >
               {{ heading }}
-            </alpaca-heading>
+             </a-heading>
           </slot>
           <button
             v-if="closeButton && !blank"
@@ -38,13 +38,13 @@
             class="button button--icon modal__close-button"
             type="button"
           >
-            <alpaca-icon
+            <a-icon
               icon="close"
               class="modal__close-button-icon"
             />
           </button>
         </div>
-        <alpaca-divider
+        <a-divider
           v-if="!blank"
           class="modal__divider"
         />

@@ -1,14 +1,14 @@
 <div class="minicart">
-  <alpaca-list class="minicart__list">
+  <a-list class="minicart__list">
     <slot name="products"/>
-  </alpaca-list>
+   </a-list>
   <section class="minicart__summary">
-    <alpaca-heading
+    <a-heading
       :level="3"
       class="heading heading--first-level minicart__summary-heading"
     >
       {{ summaryTitle }}
-    </alpaca-heading>
+     </a-heading>
     <div
       v-for="total in totals"
       :key="total.code"
@@ -26,18 +26,17 @@
     </div>
   </section>
   <div class="row row--no-margins center-xs between-md minicart__actions">
-    <alpaca-button
-      class="col-xs-12 col-md-4 minicart__return-button"
-      blank
+    <a-button
+      class="button--blank col-xs-12 col-md-4 minicart__return-button button--blank"
       @click="returnToShopping"
     >
       {{ returnToShoppingButton }}
-    </alpaca-button>
-    <alpaca-button
+     </a-button>
+    <a-button
       class="col-xs-12 col-md-4 first-xs last-md minicart__checkout-button"
       @click="goToCheckout"
     >
       {{ goToCheckoutButton }}
-    </alpaca-button>
+     </a-button>
   </div>
 </div>

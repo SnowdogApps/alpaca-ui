@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $swatch__transition                  : $transition-base !default;
 
@@ -30,13 +30,13 @@ $swatch__option-border-color--active : $color-primary !default;
     align-items: center;
     min-width: $swatch__option-size;
     min-height: $swatch__option-size;
-    background-color: $swatch__option-background;
     color: $swatch__option-color;
+    background-color: $swatch__option-background;
 
     &--image {
       min-height: $swatch__option-size--image;
-      background-size: cover;
       background-position: top center;
+      background-size: cover;
     }
 
     &--white {
@@ -46,10 +46,10 @@ $swatch__option-border-color--active : $color-primary !default;
 
   &__option-container {
     box-sizing: border-box;
-    border: $swatch__option-border;
     margin-right: $swatch__option-margin;
-    transition: $swatch__transition;
+    border: $swatch__option-border;
     cursor: pointer;
+    transition: $swatch__transition;
 
     &--selected,
     &:hover,

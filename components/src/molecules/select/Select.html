@@ -1,0 +1,37 @@
+<div class="select">
+  <!-- @slot Label content (Named slot) -->
+  <slot name="label">
+    <a-label
+      :for="id"
+      class="select__label"
+      v-if="label"
+    >
+      {{ label }}
+    </a-label>
+  </slot>
+  <div class="select__field">
+    <select
+      :id="id"
+      :name="name"
+      :class="['select__input', selectClass]"
+      @focus="$emit('focus')"
+      @blur="$emit('blur')"
+      @change="$emit('input', $event.target.value)"
+    >
+      <!-- @slot Default option content (Named slot) -->
+      <slot name="defaultOption">
+        <option v-if="defaultOption">
+          {{ defaultOption}}
+        </option>
+      </slot>
+      <option
+        v-for="option in options"
+        :key="option.value"
+        :value="option.value"
+        :selected="option.value === value"
+      >
+        {{ option.text }}
+      </option>
+    </select>
+  </div>
+</div>

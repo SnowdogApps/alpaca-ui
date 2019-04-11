@@ -1,40 +1,40 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaGallery from './Gallery.vue'
+import AGallery from './Gallery.vue'
 
 import gallery from './mocks/gallery.json'
 
 storiesOf('Modules/Gallery', module)
   .add('Default', () => ({
-    components: { AlpacaGallery },
+    components: { AGallery },
     data: () => ({
       gallery
     }),
     template: `
-        <alpaca-gallery
+        <a-gallery
           :images="gallery.images"
         />
     `
   }))
   .add('Horizontal', () => ({
-    components: { AlpacaGallery },
+    components: { AGallery },
     data: () => ({
       gallery
     }),
     template: `
-        <alpaca-gallery
+        <a-gallery
           :images="gallery.images"
           horizontal
         />
     `
   }))
   .add('With label', () => ({
-    components: { AlpacaGallery },
+    components: { AGallery },
     data: () => ({
       gallery
     }),
     template: `
-        <alpaca-gallery
+        <a-gallery
           :productLabel="gallery.productLabel"
           :images="gallery.images"
         />

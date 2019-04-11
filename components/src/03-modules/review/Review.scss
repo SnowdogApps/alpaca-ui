@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $rating__margin                  : $spacer--medium !default;
 $review__info-column-width       : 20% !default;
@@ -55,16 +55,16 @@ $review__summary-max-width\@large: 300px !default;
   }
 
   &__title {
-    font-size: $font-size-base;
     font-weight: $font-weight-base;
+    font-size: $font-size-base;
     text-transform: uppercase;
   }
 
   &__title-product {
     display: block;
     margin: $spacer 0;
-    text-transform: none;
     font-weight: bold;
+    text-transform: none;
   }
 
   &__author {
@@ -112,10 +112,10 @@ $review__summary-max-width\@large: 300px !default;
   }
 
   &__amount {
-    font-size: $font-size-small;
-    text-decoration: underline;
-    letter-spacing: 2px;
     margin-right: $spacer;
+    font-size: $font-size-small;
+    letter-spacing: 2px;
+    text-decoration: underline;
 
     @include mq($screen-m) {
       margin-right: 0;
@@ -127,9 +127,9 @@ $review__summary-max-width\@large: 300px !default;
   }
 
   &__summary-add {
-    text-decoration: underline;
     flex-grow: 1;
     text-align: right;
+    text-decoration: underline;
 
     @include mq($screen-m) {
       flex-basis: 100%;

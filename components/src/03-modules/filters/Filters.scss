@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $filters__heading-font-weight        : $font-weight-bold !default;
 $filters__heading-font-weight\@medium: $font-weight-normal !default;
@@ -25,12 +25,12 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 
 .filters {
   &__heading {
-    font-weight: $filters__heading-font-weight;
     margin: $reset;
+    font-weight: $filters__heading-font-weight;
 
     @include mq($screen-l) {
-      font-weight: $filters__heading-font-weight\@medium;
       margin: $filters__heading-margin\@medium;
+      font-weight: $filters__heading-font-weight\@medium;
     }
 
     &--mobile-hidden {
@@ -45,19 +45,19 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
   &__switcher {
     display: flex;
     align-items: center;
-    height: $filters__switcher-size;
     min-width: 100%;
+    height: $filters__switcher-size;
     margin: $filters__switcher-margin;
     padding: $reset;
-    border: none;
-    border-top: $filters__switcher-border;
-    border-radius: $filters__switcher-border-radius;
-    background-color: $filters__switcher-background-color;
     color: $filters__switcher-color;
     font-size: $filters__switcher-font-size;
     font-family: $filters__switcher-font-family;
-    text-decoration: none;
     text-align: left;
+    text-decoration: none;
+    background-color: $filters__switcher-background-color;
+    border: none;
+    border-top: $filters__switcher-border;
+    border-radius: $filters__switcher-border-radius;
 
     &:hover,
     &:focus {
@@ -77,8 +77,8 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
     transition: $filters__switcher-transition;
 
     &--active {
-      fill: $filters__switcher-fill;
       transform: rotate(180deg);
+      fill: $filters__switcher-fill;
     }
   }
 

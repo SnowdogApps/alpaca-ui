@@ -3,7 +3,7 @@
     {{ heading }}
   </div>
   <div class="newsletter__controls">
-    <alpaca-input
+    <a-input
       :id="input.field.id"
       v-model="value"
       :label="input.label.text"
@@ -14,18 +14,18 @@
       input-class="newsletter__field"
       type="text"
     />
-    <alpaca-button
+    <a-button
       class="newsletter__button"
       @click.stop.prevent="onSubmit"
     >
       {{ button }}
-    </alpaca-button>
+     </a-button>
   </div>
   <div
     v-if="checkboxes"
     class="newsletter__agreements"
   >
-    <alpaca-checkbox
+    <a-checkbox
       v-for="checkbox in checkboxes"
       :id="checkbox.name"
       :key="checkbox.name"
@@ -34,6 +34,6 @@
       :unchecked-value="false"
     >
       <span v-html="checkbox.label" />
-    </alpaca-checkbox>
+     </a-checkbox>
   </div>
 </form>

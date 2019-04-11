@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 
-import AlpacaInput from './Input.vue'
-import AlpacaTextarea from '../textarea/Textarea.vue'
+import AInput from './Input.vue'
+import ATextarea from '../textarea/Textarea.vue'
 
 storiesOf('Elements/Form/Input', module)
   .add('Default', () => ({
-    components: { AlpacaInput },
+    components: { AInput },
     data: () => ({ value: null }),
     template: `
-        <alpaca-input
+        <a-input
           label="Default label"
           type="text"
           id="field_id"
@@ -20,10 +20,10 @@ storiesOf('Elements/Form/Input', module)
     `
   }))
   .add('Textarea', () => ({
-    components: { AlpacaTextarea },
+    components: { ATextarea },
     data: () => ({ value: null }),
     template: `
-        <alpaca-textarea
+        <a-textarea
           label="Textarea"
           id="field_id"
           name="textarea"
@@ -34,10 +34,10 @@ storiesOf('Elements/Form/Input', module)
     `
   }))
   .add('Hidden label', () => ({
-    components: { AlpacaInput },
+    components: { AInput },
     data: () => ({ value: null }),
     template: `
-        <alpaca-input
+        <a-input
           label="Hidden label"
           type="text"
           id="field_id"
@@ -50,10 +50,10 @@ storiesOf('Elements/Form/Input', module)
     `
   }))
   .add('Inline label', () => ({
-    components: { AlpacaInput },
+    components: { AInput },
     data: () => ({ value: null }),
     template: `
-        <alpaca-input
+        <a-input
           label="Inline text"
           type="text"
           id="field_id"

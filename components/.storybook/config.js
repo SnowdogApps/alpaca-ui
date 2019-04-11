@@ -1,24 +1,31 @@
 // Storybook
-import { configure, addDecorator } from '@storybook/vue'
+import { configure, addDecorator, addParameters } from '@storybook/vue'
 
-// Info Addon
+// Addons
 import { withInfo } from 'storybook-addon-vue-info'
+import { withA11y } from '@storybook/addon-a11y'
 
 // Wrap every story in Alpaca App component
 import AApp from '../src/01-globals/app/App.vue'
 
 addDecorator(withInfo)
-
+addDecorator(withA11y)
 addDecorator(() => ({
   components: {
     AApp
   },
   template: `
-    <a-app>
+    <a-app style="padding: 10px;">
       <story />
     </a-app>
   `
 }))
+
+addParameters({
+  options: {
+    brandTitle: 'Alpaca components'
+  }
+})
 
 function loadStories() {
   const req = require.context('../src', true, /.stories.js$/)

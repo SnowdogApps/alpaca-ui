@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $breadcrumbs__margin             : $spacer !default;
 $breadcrumbs__padding            : $spacer--medium $spacer !default;
@@ -20,9 +20,9 @@ $breadcrumbs__font-size          : $font-size-small !default;
     display: flex;
     align-items: center;
     padding: $breadcrumbs__padding;
+    color: $gray-darker;
     font-family: $breadcrumbs__font-family;
     text-decoration: none;
-    color: $gray-darker;
 
     &:hover {
       color: $blue;
@@ -53,8 +53,8 @@ $breadcrumbs__font-size          : $font-size-small !default;
       &:not(:first-child) {
         align-items: center;
         padding: $breadcrumbs__padding;
-        font-family: $breadcrumbs__font-family--active;
         color: $breadcrumbs__color--active;
+        font-family: $breadcrumbs__font-family--active;
       }
 
       &::after {

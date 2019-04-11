@@ -1,44 +1,45 @@
 <div class="sidebar-block">
   <div class="sidebar-block__heading">
-    <alpaca-heading
+    <a-heading
       class="sidebar-block__title"
       :level="2"
     >
       {{ heading }}
-    </alpaca-heading>
+     </a-heading>
     <span class="sidebar-block__counter">
       {{ productsCount }} items
     </span>
   </div>
-  <alpaca-divider class="sidebar-block__divider" />
+  <a-divider class="sidebar-block__divider" />
   <template v-if="productsCount">
-    <alpaca-list
+    <a-list
       list-tag="ol"
       class="sidebar-block__list"
     >
-      <alpaca-list-item
+      <a-list-item
         v-for="product in products"
         :key="product.id"
         :default-class="false"
         class="sidebar-block__item"
       >
-        <alpaca-button
+        <a-button
           class="sidebar-block__remove"
-          :default-button-icon-class="false"
-          icon="close"
-          icon-class="sidebar-block__remove-icon"
-          :default-icon-class="false"
           aria-label="Remove product from compare"
           @click="removeFromCompare"
-        />
+        >
+          <a-icon
+            icon="close"
+            class="sidebar-block__remove-icon"
+          />
+        </a-button>
         <router-link
           class="link sidebar-block__link"
           :to="product.link"
         >
           {{ product.name }}
         </router-link>
-      </alpaca-list-item>
-    </alpaca-list>
+       </a-list-item>
+     </a-list>
     <div>
       <router-link
         class="button button--link sidebar-block__action"
@@ -46,12 +47,12 @@
       >
         {{ compareButton }}
       </router-link>
-      <alpaca-button
+      <a-button
         class="sidebar-block__action"
         @click="clearCompareList"
       >
         {{ clearAllButton }}
-      </alpaca-button>
+       </a-button>
     </div>
   </template>
   <p v-else>

@@ -31,12 +31,12 @@
           v-if="!blank"
         >
           <slot name="heading">
-            <alpaca-heading
+            <a-heading
               :level="1"
               class="off-canvas-sidebar__heading"
             >
               {{ heading }}
-            </alpaca-heading>
+             </a-heading>
           </slot>
           <button
             v-if="closeButton && !blank"
@@ -44,13 +44,13 @@
             class="button button--icon off-canvas-sidebar__close-button"
             type="button"
           >
-            <alpaca-icon
+            <a-icon
               icon="close"
               class="off-canvas-sidebar__close-button-icon"
             />
           </button>
         </div>
-        <alpaca-divider
+        <a-divider
           v-if="!blank"
           class="off-canvas-sidebar__divider"
         />

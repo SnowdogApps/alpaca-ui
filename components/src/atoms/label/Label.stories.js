@@ -3,14 +3,15 @@ import { storiesOf } from '@storybook/vue'
 import ALabel from './Label.vue'
 
 const info = `
-  ------
-  #### Available BEM modifiers for \`.label\` class:
-  - \`--inline\`
-  - \`--hidden\`
-  ------
+  ---
+  #### Use these modifiers with \`.label\` class.
+  - \`.label--inline\` - Selector for applying inline styles
+  - \`.label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
+  ---
 `
 
 storiesOf('Atoms/Label', module)
+  .addParameters({ info })
   .add(
     'Default',
     () => ({
@@ -20,8 +21,7 @@ storiesOf('Atoms/Label', module)
           Label
         </a-label>
       `
-    }),
-    { info }
+    })
   )
   .add(
     'Custom tag',
@@ -32,10 +32,10 @@ storiesOf('Atoms/Label', module)
           Custom tag label
         </a-label>
       `
-    }),
-    { info }
+    })
   )
-  .add('Inline',
+  .add(
+    'Inline',
     () => ({
       components: { ALabel },
       template: `
@@ -43,6 +43,5 @@ storiesOf('Atoms/Label', module)
           Inline label
         </a-label>
       `
-    }),
-    { info }
+    })
   )

@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $range__padding       : $spacer 0 0 0 !default;
 $range__input-margin  : $reset !default;
@@ -13,13 +13,13 @@ $range__button-margin : 0 0 $spacer--medium 0 !default;
 
   &__inputs-wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__dash {
-    text-align: center;
     padding: $range__dash-padding;
+    text-align: center;
   }
 
   &__suffix {
@@ -31,8 +31,8 @@ $range__button-margin : 0 0 $spacer--medium 0 !default;
   }
 
   &__input {
-    width: auto;
     flex-grow: 1;
+    width: auto;
     margin: $range__input-margin;
   }
 

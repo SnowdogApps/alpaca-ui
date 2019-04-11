@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $brief-info__padding\@medium                 : $spacer--large 0 $spacer--large !default;
 $brief-info__border                          : 1px $gray-light solid !default;
@@ -21,8 +21,8 @@ $brief-info__title-text-transform            : uppercase !default;
 
 .brief-info {
   @include mq($screen-m) {
-    border-top: $brief-info__border;
     padding: $brief-info__padding\@medium;
+    border-top: $brief-info__border;
     border-bottom: $brief-info__border;
   }
 
@@ -43,19 +43,19 @@ $brief-info__title-text-transform            : uppercase !default;
 
   &__item {
     display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
     padding: $brief-info__icon-padding;
-    flex: 1 0 0;
 
     @include mq($screen-m) {
       align-items: flex-start;
     }
 
     @include mq($screen-l) {
-      align-items: center;
       flex-flow: row nowrap;
+      align-items: center;
     }
 
     &:first-child,
@@ -67,12 +67,12 @@ $brief-info__title-text-transform            : uppercase !default;
   }
 
   &__icon-wrapper {
+    flex-shrink: 0;
+    width: $brief-info__icon-size;
+    height: $brief-info__icon-size;
     margin-bottom: $brief-info__icon-margin-bottom;
     background-color: $brief-info__icon-bg-color;
     border-radius: $brief-info__icon-border-radius;
-    width: $brief-info__icon-size;
-    height: $brief-info__icon-size;
-    flex-shrink: 0;
 
     @include mq($screen-l) {
       margin-bottom: $reset;
@@ -87,20 +87,20 @@ $brief-info__title-text-transform            : uppercase !default;
 
   &__title {
     margin-bottom: $reset;
-    font-size: $brief-info__title-font-size;
-    text-transform: $brief-info__title-text-transform;
-    line-height: $brief-info__title-line-height;
     font-weight: $brief-info__title-font-weight;
+    font-size: $brief-info__title-font-size;
+    line-height: $brief-info__title-line-height;
+    text-transform: $brief-info__title-text-transform;
 
     @include mq($screen-l) {
-      font-size: $brief-info__title-font-size\@large;
       margin: 0 0 0 10px;
+      font-size: $brief-info__title-font-size\@large;
     }
   }
 
   &__link {
-    font-size: $brief-info__link-font-size;
     font-weight: $brief-info__link-font-weight;
+    font-size: $brief-info__link-font-size;
     text-decoration: $brief-info__link-text-decoration;
   }
 
