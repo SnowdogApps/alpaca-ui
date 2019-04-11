@@ -69,6 +69,10 @@ export default {
   methods: {
     selectValue(selectedIndex) {
       this.active = selectedIndex
+      /**
+       * Change event
+       * @type {Event}
+       */
       this.$emit('change', selectedIndex)
     }
   }

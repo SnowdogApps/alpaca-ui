@@ -12,56 +12,65 @@ const info = `
 
 storiesOf('Molecules/Rate', module)
   .addParameters({ info })
-  .add('Default', () => ({
-    components: { AlpacaRate },
-    data: () => ({
-      rating: 2.4,
-      ratingItems: 5
-    }),
-    template: `
-      <alpaca-rate 
-       v-model="rating"
-       :rating-items="ratingItems"
-       disabled
-       legend="Your rating"
-      />
-    `
-  }))
-  .add('Rate', () => ({
-    components: { AlpacaRate },
-    data: () => ({
-      rating: 3,
-      ratingItems: 5
-    }),
-    template: `
-      <alpaca-rate 
-       v-model="rating"
-       :rating-items="ratingItems"
-       :aria-label-rate="ariaLabelRate()"
-       legend="Your rating"
-       @change="select"
-      />
-    `,
-    methods: {
-      select: action('Selected'),
-      ariaLabelRate() {
-        return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
+  .add(
+    'Default',
+    () => ({
+      components: { AlpacaRate },
+      data: () => ({
+        rating: 2.4,
+        ratingItems: 5
+      }),
+      template: `
+        <alpaca-rate 
+         v-model="rating"
+         :rating-items="ratingItems"
+         disabled
+         legend="Your rating"
+        />
+      `
+    })
+  )
+  .add(
+    'Rate',
+    () => ({
+      components: { AlpacaRate },
+      data: () => ({
+        rating: 3,
+        ratingItems: 5
+      }),
+      template: `
+        <alpaca-rate 
+         v-model="rating"
+         :rating-items="ratingItems"
+         :aria-label-rate="ariaLabelRate()"
+         legend="Your rating"
+         @change="select"
+        />
+      `,
+      methods: {
+        select: action('Selected'),
+        ariaLabelRate() {
+          return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
+        }
       }
-    }
-  }))
-  .add('Large', () => ({
-    components: { AlpacaRate },
-    data: () => ({
-      rating: 2.4,
-      ratingItems: 5
-    }),
-    template: `
-      <alpaca-rate 
-       class="rating--large"
-       v-model="rating"
-       :rating-items="ratingItems"
-       disabled
-       legend="Your rating"
-      />
-    `
-  }))
+    })
+  )
+  .add(
+    'Large',
+    () => ({
+      components: { AlpacaRate },
+      data: () => ({
+        rating: 2.4,
+        ratingItems: 5
+      }),
+      template: `
+        <alpaca-rate 
+         class="rating--large"
+         v-model="rating"
+         :rating-items="ratingItems"
+         disabled
+         legend="Your rating"
+        />
+      `
+    })
+  )
