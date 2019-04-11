@@ -7,7 +7,7 @@
 
 [![CircleCI](https://circleci.com/gh/SnowdogApps/alpaca-storybook/tree/develop.svg?style=svg)](https://circleci.com/gh/SnowdogApps/alpaca-storybook/tree/develop)
 
-Highly customizable library of responsive UI components crafted for ecommerce based on Vue.js and Alpaca design system.
+Highly customizable library of responsive UI components crafted for ecommerce. It is based on Vue.js and Alpaca design system.
 
 > ⚠️ This library is currently in an early stage. Expect things to be broken or APIs to change as this project matures. DO NOT USE IN PRODUCTION!
 
