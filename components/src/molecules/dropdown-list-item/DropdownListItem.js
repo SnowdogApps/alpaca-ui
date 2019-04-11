@@ -24,7 +24,7 @@ export default {
      */
     collapse: {
       type: Boolean,
-      default: null
+      default: false
     },
     /**
      * Custom class for label
