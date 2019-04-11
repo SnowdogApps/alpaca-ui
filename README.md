@@ -17,6 +17,10 @@ Highly customizable library of responsive UI components crafted for ecommerce ba
 - Semantic and accessible code output
 - Ready to use with Vue CLI, Vue Storefornt and Nuxt.js
 
+## Browser support
+
+Recent versions of Firefox, Chrome, Edge, Opera, Safari and IE11+.
+
 ## Contributing
 
 Read our contributing guide and let's build a better components together.
