@@ -25,8 +25,8 @@ We welcome all contributions. Please read our CONTRIBUTING.md first. You can sub
 ## Development
 
 ```bash
-$ git clone git@github.com:SnowdogApps/alpaca-storybook.git
-$ cd alpaca-storybook
+$ git clone git@github.com:SnowdogApps/alpaca-ui.git
+$ cd alpaca-ui
 $ yarn
 $ cd components
 $ yarn storybook
