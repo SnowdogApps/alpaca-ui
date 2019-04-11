@@ -13,7 +13,6 @@ Highly customizable library of responsive UI components crafted for ecommerce. I
 
 ## Features
 
-- Very lightweight
 - High customization and performance
 - Possibility to override global variables
 - Possibility to override components from partials (HTML/JS/SCSS)
@@ -32,11 +31,11 @@ We welcome all contributions. Please read our CONTRIBUTING.md first. You can sub
 ## Development
 
 ```bash
-$ git clone git@github.com:SnowdogApps/alpaca-ui.git
-$ cd alpaca-ui
-$ yarn
-$ cd components
-$ yarn storybook
+git clone git@github.com:SnowdogApps/alpaca-ui.git
+cd alpaca-ui
+yarn
+cd components
+yarn dev
 ```
 
 Open your browser, visit http://127.0.0.1:6006 and have fun.
