@@ -1,6 +1,6 @@
 <div :class="['dropdown-list', { 'dropdown-list--inner': nested }]">
   <ul :class="['dropdown-list__list', listClass]">
-    <!--@slot Default content-->
+    <!-- @slot Default content -->
     <slot v-if="!items" />
     <!--Default content passed with props-->
     <template v-else v-for="element in items">

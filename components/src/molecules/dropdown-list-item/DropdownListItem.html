@@ -5,7 +5,7 @@
     @click="toggle"
     :aria-expanded="!collapseLocal"
   >
-    <!--@slot Custom title slots (Named slot)-->
+    <!-- @slot Custom title slots (Named slot) -->
     <slot name="title">
       {{ title }}
       <a-icon
@@ -20,7 +20,7 @@
     :data-content="id"
     :aria-hidden="collapseLocal"
   >
-    <!--@slot Default content-->
+    <!-- @slot Default content -->
     <slot />
   </div>
 </li>
