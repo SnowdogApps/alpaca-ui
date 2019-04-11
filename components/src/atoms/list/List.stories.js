@@ -13,7 +13,7 @@ const info = `
   - \`.list--horizontal@medium\` - Selector for applying horizontal-medium styles
   - \`.list--with-icon\` - Selector for applying styles for item with icon
   - \`.list--divided\` - Selector for applying divided styles
-  - \`.list--description\` - Selector for applying divided styles
+  - \`.list--description\` - Selector for applying styles for description list
   ---
 `
 
