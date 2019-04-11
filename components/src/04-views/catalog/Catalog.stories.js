@@ -15,6 +15,7 @@ import checkboxItems from '../../03-modules/filter/mocks/checkboxItems'
 
 storiesOf('Views/Catalog', module)
   .addDecorator(StoryRouter())
+  // @vue/component
   .add('Default', () => ({
     components: { AHeader, ACatalog },
     data () {
@@ -30,21 +31,21 @@ storiesOf('Views/Catalog', module)
       }
     },
     template: `
-    <div>
-      <a-header
-        :menu="menu"
-        src="./../images/logo/alpaca.svg"
-        link="#"
-      />
-      <a-catalog
-        :products="products.items"
-        :swatchItems="swatchItems"
-        :colorItems="colorItems"
-        :activeFilterItems="activeFilterItems"
-        :checkboxItems="checkboxItems"
-        :toolbar="toolbar"
-        :breadcrumbs="breadcrumbs"
-      />
-    </div>
-  `
+      <div>
+        <a-header
+          :menu="menu"
+          src="./../images/logo/alpaca.svg"
+          link="#"
+        />
+        <a-catalog
+          :products="products.items"
+          :swatchItems="swatchItems"
+          :colorItems="colorItems"
+          :activeFilterItems="activeFilterItems"
+          :checkboxItems="checkboxItems"
+          :toolbar="toolbar"
+          :breadcrumbs="breadcrumbs"
+        />
+      </div>
+    `
   }))

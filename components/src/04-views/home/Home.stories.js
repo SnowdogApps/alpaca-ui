@@ -6,6 +6,7 @@ import imageListElements from './mocks/imageListElements.json'
 import text from './mocks/text.json'
 
 storiesOf('Views/Home', module)
+  // @vue/component
   .add('Default', () => ({
     components: { AHome },
     data () {
@@ -196,14 +197,14 @@ storiesOf('Views/Home', module)
       }
     },
     template: `
-        <a-home
-          :text="text.text"
-          :headingLevel="2"
-          heading="BRANDS"
-          :image-list-elements="imageListElements"
-          :main-banner="mainBanner"
-          :small-banners="smallBanners"
-          :medium-banners="mediumBanners"
-        />
+      <a-home
+        :text="text.text"
+        :headingLevel="2"
+        heading="BRANDS"
+        :image-list-elements="imageListElements"
+        :main-banner="mainBanner"
+        :small-banners="smallBanners"
+        :medium-banners="mediumBanners"
+      />
     `
   }))

@@ -12,10 +12,11 @@ const info = `
 `
 
 storiesOf('Global/Message', module)
+  // @vue/component
   .add('Default', () => ({
     components: { AMessage },
     template: `
-      <a-message 
+      <a-message
         class="message--success"
         icon="check"
       >
@@ -25,6 +26,7 @@ storiesOf('Global/Message', module)
   }),
   { info }
   )
+  // @vue/component
   .add('Warning', () => ({
     components: { AMessage },
     template: `
@@ -38,6 +40,7 @@ storiesOf('Global/Message', module)
   }),
   { info }
   )
+  // @vue/component
   .add('Error', () => ({
     components: { AMessage },
     template: `

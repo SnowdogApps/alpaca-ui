@@ -10,33 +10,35 @@ import dropdownListItems from './mocks/dropdownListItems.json'
 
 storiesOf('Elements/Dropdown List', module)
   .addDecorator(StoryRouter())
+  // @vue/component
   .add('Default', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-        <a-dropdown-list>
-          <template v-for="element in dropdownListItems">
-            <a-dropdown-list-item
-              v-if="element.content"
-              :title="element.title"
-              :key="element.id"
-              :collapse="true"
-              id="element.id"
-            >
-              {{element.content}}
-             </a-dropdown-list-item>
-            <a-dropdown-list-link
-              v-else
-              :key="element.id"
-              :title="element.title"
-              :href="element.href"
-            />
-          </template>
-         </a-dropdown-list>
+      <a-dropdown-list>
+        <template v-for="element in dropdownListItems">
+          <a-dropdown-list-item
+            v-if="element.content"
+            :title="element.title"
+            :key="element.id"
+            :collapse="true"
+            id="element.id"
+          >
+            {{element.content}}
+          </a-dropdown-list-item>
+          <a-dropdown-list-link
+            v-else
+            :key="element.id"
+            :title="element.title"
+            :href="element.href"
+          />
+        </template>
+      </a-dropdown-list>
     `
   }))
+  // @vue/component
   .add('Nested with items as props', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
@@ -46,51 +48,55 @@ storiesOf('Elements/Dropdown List', module)
         <a-dropdown-list :items="dropdownListItemsNested" />
     `
   }))
+  // @vue/component
   .add('Screen M', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-        <a-dropdown-list
-          screenM
-          :items="dropdownListItems"
-        />
+      <a-dropdown-list
+        screenM
+        :items="dropdownListItems"
+      />
     `
   }))
+  // @vue/component
   .add('Dark', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-        <a-dropdown-list
-          dark
-          :items="dropdownListItems"
-        />
+      <a-dropdown-list
+        dark
+        :items="dropdownListItems"
+      />
     `
   }))
+  // @vue/component
   .add('Secondary', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-        <a-dropdown-list
-          secondary
-          :items="dropdownListItems"
-        />
+      <a-dropdown-list
+        secondary
+        :items="dropdownListItems"
+      />
     `
   }))
+  // @vue/component
   .add('Inner', () => ({
     components: { ADropdownList, ADropdownListItem, ADropdownListLink },
     data: () => ({
       dropdownListItems
     }),
     template: `
-        <a-dropdown-list
-          inner
-          :items="dropdownListItems"
-        />
+      <a-dropdown-list
+        inner
+        :items="dropdownListItems"
+      />
     `
   }))

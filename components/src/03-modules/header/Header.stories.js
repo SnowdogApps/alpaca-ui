@@ -18,6 +18,7 @@ import totals from '../../../mocks/totals'
 
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
+  // @vue/component
   .add('Default', () => ({
     components: {
       AHeader,
@@ -39,6 +40,21 @@ storiesOf('Modules/Header', module)
         label: ''
       }
     }),
+    methods: {
+      showRegister () {
+        this.$refs.modalRegister.show('register')
+      },
+      showMiniCart () {
+        this.$refs.modalMiniCart.show('mini-cart')
+      },
+      toggleWishlist () {
+        this.$refs.modalWishlist.show('wishlist')
+      },
+      login: action('Login'),
+      removeMethod: action('Remove'),
+      changeMethod: action('Change'),
+      goToRegister: action('Go to Register')
+    },
     template: `
       <div>
         <a-header
@@ -124,20 +140,5 @@ storiesOf('Modules/Header', module)
           <a-wishlist :products="products" />
          </a-off-canvas-sidebar>
       </div>
-    `,
-    methods: {
-      showRegister () {
-        this.$refs.modalRegister.show('register')
-      },
-      showMiniCart () {
-        this.$refs.modalMiniCart.show('mini-cart')
-      },
-      toggleWishlist () {
-        this.$refs.modalWishlist.show('wishlist')
-      },
-      login: action('Login'),
-      removeMethod: action('Remove'),
-      changeMethod: action('Change'),
-      goToRegister: action('Go to Register')
-    }
+    `
   }))

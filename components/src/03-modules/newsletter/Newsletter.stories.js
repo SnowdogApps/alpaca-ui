@@ -5,10 +5,15 @@ import ANewsletter from './Newsletter.vue'
 
 import newsletter from './mocks/newsletter.json'
 
-storiesOf('Modules/Newsletter', module).add('Default', () => ({
-  components: { ANewsletter },
-  data: () => ({ newsletter }),
-  template: `
+storiesOf('Modules/Newsletter', module)
+  // @vue/component
+  .add('Default', () => ({
+    components: { ANewsletter },
+    data: () => ({ newsletter }),
+    methods: {
+      exampleMethod: action('Clicked button')
+    },
+    template: `
       <a-newsletter
         :heading="newsletter.heading"
         :input="newsletter.input"
@@ -16,8 +21,5 @@ storiesOf('Modules/Newsletter', module).add('Default', () => ({
         :checkboxes="newsletter.checkboxes"
         @submit="exampleMethod"
       />
-  `,
-  methods: {
-    exampleMethod: action('Clicked button')
-  }
-}))
+    `
+  }))

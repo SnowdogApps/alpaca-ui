@@ -5,13 +5,14 @@ import AInformation from './Information.vue'
 const info = {}
 
 storiesOf('Global/Information', module)
+  // @vue/component
   .add('Default', () => ({
     components: { AInformation },
     template: `
-        <a-information
-          title="Balance"
-          text="Your balance is: $0.00"
-        />
+      <a-information
+        title="Balance"
+        text="Your balance is: $0.00"
+      />
     `
   }),
   { info }

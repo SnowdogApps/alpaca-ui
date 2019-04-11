@@ -14,6 +14,7 @@ import product from './mocks/product.json'
 
 storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())
+  // @vue/component
   .add('Configurable', () => ({
     components: { AHeader, AProductView },
     data () {
