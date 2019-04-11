@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $dashboard-nav-padding: 15px !default;
 $dashboard-nav-margin : 15px !default;
@@ -7,12 +7,12 @@ $dashboard-nav-margin : 15px !default;
   margin-bottom: $dashboard-nav-margin;
 
   &__mobile {
-    display: block;
     position: relative;
-    border-width: 1px 0;
-    border-color: $gray-dark;
-    border-style: solid;
+    display: block;
     padding: $dashboard-nav-padding 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: $gray-dark;
     cursor: pointer;
 
     @include mq($screen-m) {
@@ -20,14 +20,14 @@ $dashboard-nav-margin : 15px !default;
     }
 
     &::after {
-      content: '\25bc';
       position: absolute;
+      top: 0;
+      right: 15px;
+      bottom: 0;
       width: 15px;
       height: 15px;
-      right: 15px;
-      top: 0;
-      bottom: 0;
       margin: auto;
+      content: '\25bc';
     }
 
     &--active {
@@ -39,9 +39,9 @@ $dashboard-nav-margin : 15px !default;
 
   &__content {
     display: none;
-    background-color: $gray-lighter;
-    padding: $dashboard-nav-padding;
     margin-bottom: $dashboard-nav-margin;
+    padding: $dashboard-nav-padding;
+    background-color: $gray-lighter;
 
     &--visible {
       display: block;

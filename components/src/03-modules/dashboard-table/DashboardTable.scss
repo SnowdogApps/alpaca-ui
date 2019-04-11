@@ -1,4 +1,4 @@
-@import '~styles/globals';
+@import '../../../assets/styles/_globals.scss';
 
 $dashboard-table-margin: 30px !default;
 
@@ -6,8 +6,8 @@ $dashboard-table-margin: 30px !default;
   overflow: hidden;
 
   &--tab {
-    padding: 10px;
     margin-bottom: $dashboard-table-margin;
+    padding: 10px;
     border: 1px solid $gray;
 
     .dashboard-table__content {
@@ -42,7 +42,7 @@ $dashboard-table-margin: 30px !default;
   }
 
   &__title {
-    margin-bottom: 0;
     margin-right: $dashboard-table-margin;
+    margin-bottom: 0;
   }
 }

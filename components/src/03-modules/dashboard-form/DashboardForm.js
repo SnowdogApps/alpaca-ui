@@ -1,7 +1,7 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
 import AlpacaInput from '../../02-elements/input/Input.vue'
-import AlpacaSelect from '../../02-elements/select/Select.vue'
-import AlpacaCheckbox from '../../02-elements/checkbox/Checkbox.vue'
+import AlpacaSelect from '../../molecules/select/Select.vue'
+import AlpacaCheckbox from '../../molecules/checkbox/Checkbox.vue'
 
 export default {
   components: {

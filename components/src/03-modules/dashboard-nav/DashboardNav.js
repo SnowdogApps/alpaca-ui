@@ -1,5 +1,5 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
+import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaList from '../../02-elements/list/List.vue'
 import AlpacaListItem from '../../02-elements/list-item/ListItem.vue'
 

@@ -11,9 +11,12 @@
       :key="element.id"
       class="dashboard-items__item grid__column grid__column--1-4"
     >
-      <h5 class="heading heading--sixth-level">
+      <alpaca-heading
+        :level="4"
+        class="heading--sixth-level"
+      >
         {{ element.title }}
-      </h5>
+      </alpaca-heading>
       <div class="dashboard-items__address">
         {{ element.information }}
       </div>

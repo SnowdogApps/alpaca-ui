@@ -1,5 +1,5 @@
-import AlpacaHeading from '../../01-globals/heading/Heading.vue'
-import AlpacaLink from '../../01-globals/link/Link.vue'
+import AlpacaHeading from '../../atoms/heading/Heading.vue'
+import AlpacaLink from '../../atoms/link/Link.vue'
 import AlpacaTable from '../../02-elements/table/Table.vue'
 import AlpacaTableRow from '../../02-elements/table-row/TableRow.vue'
 import AlpacaTableCell from '../../02-elements/table-cell/TableCell.vue'
