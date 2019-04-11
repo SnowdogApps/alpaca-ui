@@ -5,6 +5,8 @@ import ADropdownList from "./DropdownList.vue"
 import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
 import ADropdownListLink from "../../atoms/dropdown-list-link/DropdownListLink.vue"
 
+import items from './mocks/dropdownListItems.json'
+
 const info = `
   ---
   #### Use these modifiers with \`.dropdown-list\` class.
@@ -14,83 +16,6 @@ const info = `
   - \`.dropdown-list@screen-m dropdown-list--is-open@screen-m\` - Selector for applying styles for smaller resolution
   ---
 `
-
-const dropdownListItems = [
-  {
-    "title": "dropdown title",
-    "id": "dropdown-it-1",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore " +
-      "et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
-  },
-  {
-    "title": "some longer longer and longer dropdown title",
-    "id": "dropdown-it-2",
-    "href": "#"
-  }
-]
-
-const dropdownListItemsNested = [
-  {
-    "title": "All",
-    "href": "#"
-  },
-  {
-    "title": "dropdown title",
-    "id": "dropdown-1",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" +
-      " et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
-  },
-  {
-    "title": "some longer longer and longer dropdown title",
-    "id": "dropdown-2",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" +
-      " et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
-  },
-  {
-    "title": "dropdown title",
-    "id": "dropdown-link-3",
-    "href": "#"
-  },
-  {
-    "title": "dropdown title",
-    "id": "dropdown-link-4",
-    "href": "#"
-  },
-  {
-    "title": "some longer longer and longer dropdown title",
-    "id": "dropdown-7",
-    "content": [
-      {
-        "title": "dropdown title",
-        "id": "dropdown-n-1",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore" +
-          " et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio"
-      },
-      {
-        "title": "some longer longer and longer dropdown title",
-        "id": "dropdown-n-2",
-        "href": "#"
-      },
-      {
-        "title": "some longer longer and longer dropdown title",
-        "id": "dropdown-8",
-        "content": [
-          {
-            "title": "dropdown title",
-            "id": "dropdown-link-9",
-            "href": "#"
-          },
-          {
-            "title": "dropdown title",
-            "id": "dropdown-link-10",
-            "href": "#"
-          }
-        ]
-      }
-    ]
-  }
-]
-
 addDecorator(StoryRouter())
 storiesOf("Molecules/Dropdown List", module)
   .addParameters({ info })
@@ -99,7 +24,7 @@ storiesOf("Molecules/Dropdown List", module)
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
-        dropdownListItems
+        ...items
       }),
       template: `
         <a-dropdown-list>
@@ -130,7 +55,7 @@ storiesOf("Molecules/Dropdown List", module)
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
-        dropdownListItemsNested
+        ...items
       }),
       template: `
         <a-dropdown-list :items="dropdownListItemsNested" />
@@ -142,7 +67,7 @@ storiesOf("Molecules/Dropdown List", module)
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
-        dropdownListItems
+        ...items
       }),
       template: `
         <a-dropdown-list
@@ -157,7 +82,7 @@ storiesOf("Molecules/Dropdown List", module)
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
-        dropdownListItems
+        ...items
       }),
       template: `
         <a-dropdown-list
@@ -172,7 +97,7 @@ storiesOf("Molecules/Dropdown List", module)
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
-        dropdownListItems
+        ...items
       }),
       template: `
         <a-dropdown-list
@@ -187,7 +112,7 @@ storiesOf("Molecules/Dropdown List", module)
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
-        dropdownListItems
+        ...items
       }),
       template: `
         <a-dropdown-list
@@ -202,7 +127,7 @@ storiesOf("Molecules/Dropdown List", module)
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
-        dropdownListItems
+        ...items
       }),
       template: `
         <a-dropdown-list>
