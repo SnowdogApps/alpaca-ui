@@ -3,12 +3,16 @@
   tabindex="0"
   role="table"
 >
-  <caption
-    v-if="caption"
-    class="table__caption"
-  >
-    {{ caption }}
-  </caption>
+  <!-- @slot Custom caption (Named slot) -->
+  <slot name="caption">
+    <caption
+      v-if="caption"
+      class="table__caption"
+    >
+      {{ caption }}
+    </caption>
 
+  </slot>
+  <!-- @slot Custom table content -->
   <slot />
 </table>
