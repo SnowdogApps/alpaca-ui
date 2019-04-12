@@ -32,7 +32,6 @@ export default {
      */
     value: {
       type: [String, Number],
-      required: false,
       default: null
     },
     /**
@@ -40,7 +39,6 @@ export default {
      */
     selectClass: {
       type: String,
-      required: false,
       default: null
     },
     /**
@@ -48,7 +46,6 @@ export default {
      */
     label: {
       type: String,
-      required: false,
       default: null
     },
     /**
@@ -56,7 +53,6 @@ export default {
      */
     defaultOption: {
       type: String,
-      required: false,
       default: null
     }
   }
