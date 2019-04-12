@@ -8,14 +8,19 @@ import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'
 import footCells from './mocks/footCells.json'
 
+const defaultData = {
+  components: { ATable, ATableRow, ATableCell },
+  data: () => ({
+    bodyRows,
+    headCells,
+    footCells
+  }),
+}
+
 storiesOf('Elements/Table', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
-    components: { ATable, ATableRow, ATableCell },
-    data: () => ({
-      bodyRows,
-      headCells,
-      footCells
-    }),
+    ...defaultData,
     template: `
         <a-table caption="This is a table">
           <thead>
@@ -59,12 +64,7 @@ storiesOf('Elements/Table', module)
     `
   }))
   .add('Odd Even', () => ({
-    components: { ATable, ATableRow, ATableCell },
-    data: () => ({
-      bodyRows,
-      headCells,
-      footCells
-    }),
+    ...defaultData,
     template: `
         <a-table
           caption="This is a table"
