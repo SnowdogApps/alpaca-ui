@@ -8,6 +8,13 @@ import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'
 import footCells from './mocks/footCells.json'
 
+const info = `
+  ---
+  #### Use these modifiers with \`.table\` class.
+  - \`.table--odd-even\` - Selector for applying odd-even styles
+  ---
+`
+
 const defaultData = {
   components: { ATable, ATableRow, ATableCell },
   data: () => ({
@@ -18,7 +25,7 @@ const defaultData = {
 }
 
 storiesOf('Atoms/Table', module)
-  .addParameters({ info: true })
+  .addParameters({ info })
   .add(
     'Default',
     () => ({
@@ -34,8 +41,8 @@ storiesOf('Atoms/Table', module)
                 :scope="headCell.scope"
               >
                 {{ headCell.text }}
-               </a-table-cell>
-             </a-table-row>
+              </a-table-cell>
+            </a-table-row>
           </thead>
           <tbody>
             <a-table-row
@@ -48,8 +55,8 @@ storiesOf('Atoms/Table', module)
                 :data-th="bodyCell.mobileHeading"
               >
                 {{ bodyCell.text }}
-               </a-table-cell>
-             </a-table-row>
+              </a-table-cell>
+            </a-table-row>
           </tbody>
           <tfoot>
             <a-table-row>
@@ -59,8 +66,8 @@ storiesOf('Atoms/Table', module)
                 :colspan="footCell.colspan"
               >
                 {{ footCell.text }}
-               </a-table-cell>
-             </a-table-row>
+              </a-table-cell>
+            </a-table-row>
           </tfoot>
         </a-table>
       `
@@ -84,8 +91,8 @@ storiesOf('Atoms/Table', module)
                 :scope="headCell.scope"
               >
                 {{ headCell.text }}
-               </a-table-cell>
-             </a-table-row>
+              </a-table-cell>
+            </a-table-row>
           </thead>
           <tbody>
             <a-table-row
@@ -98,8 +105,8 @@ storiesOf('Atoms/Table', module)
                 :data-th="bodyCell.mobileHeading"
               >
                 {{ bodyCell.text }}
-               </a-table-cell>
-             </a-table-row>
+              </a-table-cell>
+            </a-table-row>
           </tbody>
           <tfoot>
             <a-table-row>
@@ -109,8 +116,8 @@ storiesOf('Atoms/Table', module)
                 :colspan="footCell.colspan"
               >
                 {{ footCell.text }}
-               </a-table-cell>
-             </a-table-row>
+              </a-table-cell>
+            </a-table-row>
           </tfoot>
         </a-table>
       `
