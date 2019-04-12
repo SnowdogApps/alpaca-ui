@@ -17,11 +17,13 @@ const defaultData = {
   }),
 }
 
-storiesOf('Elements/Table', module)
+storiesOf('Atoms/Table', module)
   .addParameters({ info: true })
-  .add('Default', () => ({
-    ...defaultData,
-    template: `
+  .add(
+    'Default',
+    () => ({
+      ...defaultData,
+      template: `
         <a-table caption="This is a table">
           <thead>
             <a-table-row>
@@ -60,12 +62,15 @@ storiesOf('Elements/Table', module)
                </a-table-cell>
              </a-table-row>
           </tfoot>
-         </a-table>
-    `
-  }))
-  .add('Odd Even', () => ({
+        </a-table>
+      `
+    })
+  )
+  .add(
+      'Odd Even',
+    () => ({
     ...defaultData,
-    template: `
+      template: `
         <a-table
           caption="This is a table"
           class="table--odd-even"
@@ -107,6 +112,7 @@ storiesOf('Elements/Table', module)
                </a-table-cell>
              </a-table-row>
           </tfoot>
-         </a-table>
-    `
-  }))
+        </a-table>
+      `
+    })
+  )
