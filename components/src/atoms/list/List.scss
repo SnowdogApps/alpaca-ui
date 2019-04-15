@@ -1,27 +1,14 @@
 @import '../../../assets/styles/globals';
 
-$list__style                      : none !default;
-$list-padding                     : 0 5px 5px 0 !default;
-$list__item-padding               : 5px 0 !default;
-$list__content-padding            : 10px !default;
-$list__icon-color                 : $white !default;
-$list__padding--horizontal        : 10px !default;
-$list__padding--horizontal\@medium: 10px !default;
-$list__padding--with-icon         : 12px !default;
-$list__border--divider            : 1px solid $gray-dark !default;
-$list__item-padding--native       : 0 0 $spacer--medium $spacer--large !default;
-$list__margin-nested              : 0 0 0 $spacer--large !default;
-$list__margin-nested-second-level : 0 0 0 #{$spacer--large * 2} !default;
+$list__style              : none !default;
+$list__item-padding       : $spacer 0 !default;
+$list__padding--horizontal: $spacer !default;
+$list__padding--native    : 0 0 $spacer--medium $spacer--large !default;
 
 .list {
   margin: $reset;
   padding: $reset;
   list-style: $list__style;
-
-  &--center {
-    justify-content: center;
-    text-align: center;
-  }
 
   &--horizontal {
     display: flex;
@@ -40,87 +27,10 @@ $list__margin-nested-second-level : 0 0 0 #{$spacer--large * 2} !default;
     }
   }
 
-  &--horizontal\@medium {
-    @include mq($screen-m) {
-      display: flex;
-      flex-flow: row nowrap;
-
-      .list__item {
-        padding: $list__padding--horizontal\@medium;
-
-        &:first-child {
-          padding-top: $list__padding--horizontal\@medium;
-        }
-
-        &:last-child {
-          padding-bottom: $list__padding--horizontal\@medium;
-        }
-      }
-    }
-  }
-
-  &--with-icon {
-    justify-content: center;
-
-    .list__item {
-      display: flex;
-      align-items: center;
-      padding: $reset;
-
-      &:first-child {
-        padding-top: $reset;
-      }
-
-      &:last-child {
-        padding-bottom: $reset;
-      }
-    }
-
-    .list__icon-link {
-      padding: $list__padding--with-icon;
-    }
-  }
-
-  &--divided {
-    .list__item {
-      border-bottom: $list__border--divider;
-
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-
-    &.list--horizontal {
-      .list__item {
-        border-right: $list__border--divider;
-        border-bottom: none;
-
-        &:last-child {
-          border-right: none;
-        }
-      }
-    }
-
-    &.list--horizontal\@medium {
-      .list__item {
-        @include mq($screen-m) {
-          border-right: $list__border--divider;
-          border-bottom: none;
-        }
-
-        &:last-child {
-          @include mq($screen-m) {
-            border-right: none;
-          }
-        }
-      }
-    }
-  }
-
   &--native {
     .list__item {
       position: relative;
-      padding: $list__item-padding--native;
+      padding: $list__padding--native;
 
       &::before {
         content: "";
@@ -135,14 +45,6 @@ $list__margin-nested-second-level : 0 0 0 #{$spacer--large * 2} !default;
     }
   }
 
-  &--nested {
-    margin: $list__margin-nested;
-  }
-
-  &--nested-second-level {
-    margin: $list__margin-nested-second-level;
-  }
-
   &__item {
     display: list-item;
     padding: $list__item-padding;
@@ -154,28 +56,5 @@ $list__margin-nested-second-level : 0 0 0 #{$spacer--large * 2} !default;
     &:last-child {
       padding-bottom: $reset;
     }
-  }
-
-  &--description {
-    display: inline-block;
-
-    &__label {
-      float: left;
-      clear: left;
-      padding: $list-padding;
-
-      &::after {
-        content: ": ";
-      }
-    }
-
-    &__value {
-      float: left;
-      padding: $list-padding;
-    }
-  }
-
-  &__content {
-    padding-left: $list__content-padding;
   }
 }
