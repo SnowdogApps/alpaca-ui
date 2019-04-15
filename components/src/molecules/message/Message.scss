@@ -82,12 +82,10 @@ $message__button-font-weight--last-child    : $font-weight-bold !default;
   &__button {
     padding: $reset;
     color: $message__button-color;
-    background: none;
 
     &:hover,
     &:focus {
       color: $message__button-color;
-      background: none;
     }
 
     &:last-child {
