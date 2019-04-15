@@ -1,14 +1,25 @@
-import { shallow } from 'vue-test-utils'
-import Badge from './Button.vue'
+import { mount } from 'vue-test-utils'
+import AButton from './Button.vue'
 
- describe('App.test.js', () => {
-  let cmp
+ describe('Button.spec.js', () => {
+  it('has default structure', () => {
+    const wrapper = mount(AButton)
 
-   beforeEach(() => {
-    cmp = shallow(Badge)
+    expect(wrapper.is("button")).toBe(true)
+    expect(wrapper.attributes().type).toBeDefined()
+    expect(wrapper.attributes().type).toBe('button')
+    expect(wrapper.classes()).toContain('button')
   })
 
-   it('has the expected html structure', () => {
-    expect(cmp.element).toMatchSnapshot()
+  it("renders slot text when passed", () => {
+    const wrapper = mount(AButton, {
+      slots: {
+        default: `
+          <span>Alpaca UI</span>
+        `
+      }
+    })
+    expect(wrapper.find('.button span').exists()).toBe(true)
+    expect(wrapper.find(".button span").text()).toEqual('Alpaca UI')
   })
 })
