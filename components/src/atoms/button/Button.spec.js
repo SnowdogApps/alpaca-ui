@@ -8,7 +8,7 @@ import AButton from './Button.vue'
     expect(wrapper.is("button")).toBe(true)
     expect(wrapper.attributes().type).toBeDefined()
     expect(wrapper.attributes().type).toBe('button')
-    expect(wrapper.classes()).toContain('button')
+    expect(wrapper.classes()).toContain('button1')
   })
 
   it("renders slot text when passed", () => {
