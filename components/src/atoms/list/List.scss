@@ -1,9 +1,9 @@
 @import '../../../assets/styles/globals';
 
-$list__style              : none !default;
-$list__item-padding       : $spacer 0 !default;
-$list__padding--horizontal: $spacer !default;
-$list__padding--native    : 0 0 $spacer--medium $spacer--large !default;
+$list__style                   : none !default;
+$list__item-padding            : $spacer 0 !default;
+$list__item-padding--horizontal: $spacer !default;
+$list__item-padding--native    : 0 0 $spacer--medium $spacer--large !default;
 
 .list {
   margin: $reset;
@@ -15,14 +15,14 @@ $list__padding--native    : 0 0 $spacer--medium $spacer--large !default;
     flex-flow: row wrap;
 
     .list__item {
-      padding: $list__padding--horizontal;
+      padding: $list__item-padding--horizontal;
 
       &:first-child {
-        padding-top: $list__padding--horizontal;
+        padding-top: $list__item-padding--horizontal;
       }
 
       &:last-child {
-        padding-bottom: $list__padding--horizontal;
+        padding-bottom: $list__item-padding--horizontal;
       }
     }
   }
@@ -30,7 +30,7 @@ $list__padding--native    : 0 0 $spacer--medium $spacer--large !default;
   &--native {
     .list__item {
       position: relative;
-      padding: $list__padding--native;
+      padding: $list__item-padding--native;
 
       &::before {
         content: "";
@@ -40,7 +40,7 @@ $list__padding--native    : 0 0 $spacer--medium $spacer--large !default;
         width: $spacer;
         height: $spacer;
         background-color: $color-primary;
-        border-radius: 4px;
+        border-radius: $border-radius;
       }
     }
   }
