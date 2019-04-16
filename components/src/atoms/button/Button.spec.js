@@ -1,17 +1,17 @@
 import { mount } from 'vue-test-utils'
 import AButton from './Button.vue'
 
- describe('Button.spec.js', () => {
+describe('Button.spec.js', () => {
   it('has default structure', () => {
     const wrapper = mount(AButton)
 
-    expect(wrapper.is("button")).toBe(true)
+    expect(wrapper.is('button')).toBe(true)
     expect(wrapper.attributes().type).toBeDefined()
     expect(wrapper.attributes().type).toBe('button')
     expect(wrapper.classes()).toContain('button')
   })
 
-  it("renders slot text when passed", () => {
+  it('renders slot text when passed', () => {
     const wrapper = mount(AButton, {
       slots: {
         default: `
@@ -20,6 +20,6 @@ import AButton from './Button.vue'
       }
     })
     expect(wrapper.find('.button span').exists()).toBe(true)
-    expect(wrapper.find(".button span").text()).toEqual('Alpaca UI')
+    expect(wrapper.find('.button span').text()).toEqual('Alpaca UI')
   })
 })
