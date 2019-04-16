@@ -63,8 +63,8 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
       .dropdown-list__label {
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: flex-start;
+        align-items: center;
         color: $dropdown-list__item-color--secondary;
         font-weight: $dropdown-list__font-weight--secondary;
         font-size: $dropdown-list__font-size;

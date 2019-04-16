@@ -27,8 +27,8 @@ $sidebar-block__action-margin-left    : $spacer !default;
 
   &__heading {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: $sidebar-block__heading-margin-bottom;
   }
 

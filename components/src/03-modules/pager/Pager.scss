@@ -17,8 +17,8 @@ $pager__link-fill                           : $green !default;
 
   &__list {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin: $reset;
     padding: $pager__list-padding;
     list-style-type: none;
@@ -27,8 +27,8 @@ $pager__link-fill                           : $green !default;
   &__item {
     display: flex;
     flex-basis: $pager__item-size;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: $pager__item-size;
     margin: $pager__item-margin;
     padding: $reset;
@@ -61,8 +61,8 @@ $pager__link-fill                           : $green !default;
 
   &__link {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: $pager__item-size;
     text-decoration: none;

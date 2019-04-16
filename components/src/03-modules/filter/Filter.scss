@@ -52,8 +52,8 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
 
   &__swatch-option {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-width: $filter__swatch-option-size;
     min-height: $filter__swatch-option-size;
     margin-right: $filter__swatch-option-margin;
@@ -92,8 +92,8 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
     width: $filter__color-option-width;
     max-width: $filter__color-option-width;
     height: $filter__color-option-height;

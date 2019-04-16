@@ -61,8 +61,8 @@ $active-filters__clear-color\@medium : $color-secondary !default;
 
   &__clear-all {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-width: 100%;
     min-height: $active-filters__clear-height;
     color: $active-filters__clear-color;

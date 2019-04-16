@@ -188,8 +188,8 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
   &__actions-secondary {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     margin: $reset;
 
     @include mq($screen-m) {

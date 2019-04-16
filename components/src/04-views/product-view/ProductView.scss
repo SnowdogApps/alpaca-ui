@@ -327,8 +327,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__heading {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: $product-view__heading-margin-bottom;
   }
 
@@ -339,8 +339,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
   &__stock-line {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: $product-view__stock-line-width;
     margin-bottom: $product-view__stock-line-margin-bottom;
 
@@ -388,8 +388,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   &__main-actions {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
     margin-bottom: $product-view__main-actions-margin-bottom;
 
@@ -406,8 +406,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
   &__extra-actions {
     display: flex;
     flex: 0 0 auto;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: $product-view__extra-actions-padding;
 
     @include mq($screen-l) {

@@ -100,8 +100,8 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     display: flex;
     flex: 1 $header__buttons-width;
     flex-wrap: nowrap;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     order: 2;
     max-width: $header__buttons-width;
 

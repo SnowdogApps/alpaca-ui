@@ -182,8 +182,8 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
   &__actions {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
   }
 
@@ -218,8 +218,8 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
   &__secondary-action {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     .button {
       width: $catalog-grid-item__action-size;
