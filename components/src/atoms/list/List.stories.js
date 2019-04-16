@@ -18,16 +18,16 @@ const defaultData = {
     return {
       items: [
         {
-          "text": "Lorem Ipsum",
-          "id": "el1"
+          'text': 'Lorem Ipsum',
+          'id': 'el1'
         },
         {
-          "text": "Lorem Ipsum",
-          "id": "el2"
+          'text': 'Lorem Ipsum',
+          'id': 'el2'
         },
         {
-          "text": "Lorem Ipsum",
-          "id": "el3"
+          'text': 'Lorem Ipsum',
+          'id': 'el3'
         }
       ]
     }
@@ -91,19 +91,19 @@ storiesOf('Atoms/List', module)
       data: () => ({
         items: [
           {
-            "id": "desc_id_1",
-            "label": "Lorem",
-            "value": "ipsum"
+            'id': 'desc_id_1',
+            'label': 'Lorem',
+            'value': 'ipsum'
           },
           {
-            "id": "desc_id_2",
-            "label": "Lorem",
-            "value": "ipsum"
+            'id': 'desc_id_2',
+            'label': 'Lorem',
+            'value': 'ipsum'
           },
           {
-            "id": "desc_id_3",
-            "label": "Lorem",
-            "value": "ipsum"
+            'id': 'desc_id_3',
+            'label': 'Lorem',
+            'value': 'ipsum'
           }
         ]
       }),
@@ -137,16 +137,16 @@ storiesOf('Atoms/List', module)
       data: () => ({
         items: [
           {
-            "id": "el1",
-            "icon": "facebook"
+            'id': 'el1',
+            'icon': 'facebook'
           },
           {
-            "id": "el2",
-            "icon": "twitter"
+            'id': 'el2',
+            'icon': 'twitter'
           },
           {
-            "id": "el3",
-            "icon": "linkedin"
+            'id': 'el3',
+            'icon': 'linkedin'
           }
         ]
       }),
