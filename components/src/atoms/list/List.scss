@@ -1,7 +1,7 @@
 @import '../../../assets/styles/globals';
 
-$list__style                   : none !default;
-$list__item-padding            : $spacer $spacer--medium !default;
+$list__style       : none !default;
+$list__item-padding: $spacer $spacer--medium !default;
 
 .list {
   margin: $reset;
