@@ -1,11 +1,11 @@
 <template src="./Catalog.html" />
 
 <script>
-  import instance from "./Catalog.js"
+import instance from './Catalog.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style

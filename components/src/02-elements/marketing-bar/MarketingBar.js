@@ -1,6 +1,7 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon,
@@ -12,19 +13,19 @@ export default {
       default: 'marketing-bar'
     }
   },
-  data() {
+  data () {
     return {
       isBarVisible: true
     }
   },
-  mounted() {
+  mounted () {
     // Display message if it wasn't closed before
     if (localStorage.getItem(this.dataType) !== 'closed') {
       this.isBarVisible = true
     }
   },
   methods: {
-    onButtonClose() {
+    onButtonClose () {
       localStorage.setItem(this.dataType, 'closed')
       this.isBarVisible = false
     }

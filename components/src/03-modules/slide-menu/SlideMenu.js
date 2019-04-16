@@ -1,6 +1,7 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon,
@@ -31,34 +32,34 @@ export default {
       direction: 'ltr'
     }
   },
-  mounted() {
-    this.items = this.prepareData(this.menuItems)
-  },
   computed: {
-    currentItem() {
+    currentItem () {
       const item = this.getDataByLevelPath(this.currentLevel)
       return {
         label: item.label,
         nodes: item.nodes
       }
     },
-    prevLevel() {
+    prevLevel () {
       return this.currentLevel.slice(0, -1)
     },
-    isRootPosition() {
+    isRootPosition () {
       return this.currentLevel === this.prevLevel
     },
-    transitionName() {
+    transitionName () {
       return `slide-${this.direction}`
     }
   },
   watch: {
-    currentLevel(newVal, oldVal) {
+    currentLevel (newVal, oldVal) {
       this.direction = newVal.length > oldVal.length ? 'ltr' : 'rtl'
     }
   },
+  mounted () {
+    this.items = this.prepareData(this.menuItems)
+  },
   methods: {
-    prepareData(items, parentLevel) {
+    prepareData (items, parentLevel) {
       return items.map((item, idx) => {
         const level = parentLevel ? `${parentLevel}${idx}` : `${idx}`
 
@@ -71,7 +72,7 @@ export default {
         return item
       })
     },
-    getDataByLevelPath(levelPath) {
+    getDataByLevelPath (levelPath) {
       let data
 
       String(levelPath).split('').forEach(level => {
@@ -80,7 +81,7 @@ export default {
 
       return data || { nodes: this.items }
     },
-    load(levelPath) {
+    load (levelPath) {
       this.currentLevel = levelPath
     }
   }

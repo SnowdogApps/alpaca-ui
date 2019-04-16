@@ -12,36 +12,30 @@ const info = `
 
 storiesOf('Atoms/Label', module)
   .addParameters({ info })
-  .add(
-    'Default',
-    () => ({
-      components: { ALabel },
-      template: `
-        <a-label>
-          Label
-        </a-label>
-      `
-    })
-  )
-  .add(
-    'Custom tag',
-    () => ({
-      components: { ALabel },
-      template: `
-        <a-label tag="span">
-          Custom tag label
-        </a-label>
-      `
-    })
-  )
-  .add(
-    'Inline',
-    () => ({
-      components: { ALabel },
-      template: `
-        <a-label class="label--inline">
-          Inline label
-        </a-label>
-      `
-    })
-  )
+  // @vue/component
+  .add('Default', () => ({
+    components: { ALabel },
+    template: `
+      <a-label>
+        Label
+      </a-label>
+    `
+  }))
+  // @vue/component
+  .add('Custom tag', () => ({
+    components: { ALabel },
+    template: `
+      <a-label tag="span">
+        Custom tag label
+      </a-label>
+    `
+  }))
+  // @vue/component
+  .add('Inline', () => ({
+    components: { ALabel },
+    template: `
+      <a-label class="label--inline">
+        Inline label
+      </a-label>
+    `
+  }))

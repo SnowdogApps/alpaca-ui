@@ -23,7 +23,8 @@ module.exports = ({ config }) => {
   })
 
   config.module.rules.push({
-    test: /\.vue$/,
+    enforce: 'pre',
+    test: /\.(js|vue)$/,
     loader: 'eslint-loader',
     options: {
       fix: true

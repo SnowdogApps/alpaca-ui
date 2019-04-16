@@ -11,15 +11,13 @@ const info = `
 
 storiesOf('Atoms/Loader', module)
   .addParameters({ info })
-  .add(
-    'Default',
-    () => ({
-      components: { ALoader },
-      template: `
-        <a-loader
-          class="loader--visible"
-          aria-label="Do not refresh the page"
-        />
-      `
-    })
-  )
+  // @vue/component
+  .add('Default', () => ({
+    components: { ALoader },
+    template: `
+      <a-loader
+        class="loader--visible"
+        aria-label="Do not refresh the page"
+      />
+    `
+  }))

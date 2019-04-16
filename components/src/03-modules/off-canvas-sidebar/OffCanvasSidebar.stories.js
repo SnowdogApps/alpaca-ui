@@ -5,14 +5,20 @@ import AInput from '../../02-elements/input/Input.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 storiesOf('Modules/Off Canvas Sidebar', module)
+  // @vue/component
   .add('Default', () => ({
     components: { AButton, AInput, AOffCanvasSidebar },
     data: () => ({ value: null }),
+    methods: {
+      showSidebar () {
+        this.$refs.modalDefault.show('default')
+      }
+    },
     template: `
       <div>
         <a-button @click="showSidebar">
           Sidebar button
-         </a-button>
+        </a-button>
         <a-off-canvas-sidebar
           name="default"
           ref="modalDefault"
@@ -30,15 +36,16 @@ storiesOf('Modules/Off Canvas Sidebar', module)
           />
          </a-off-canvas-sidebar>
       </div>
-    `,
-    methods: {
-      showSidebar () {
-        this.$refs.modalDefault.show('default')
-      }
-    }
+    `
   }))
+  // @vue/component
   .add('Blank', () => ({
     components: { AButton, AOffCanvasSidebar },
+    methods: {
+      showBlankSidebar () {
+        this.$refs.modalBlank.show('blank')
+      }
+    },
     template: `
       <div>
         <a-button @click="showBlankSidebar">
@@ -51,12 +58,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
           :closeOnBackgroundClick="false"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         </a-off-canvas-sidebar>
+        </a-off-canvas-sidebar>
       </div>
-    `,
-    methods: {
-      showBlankSidebar () {
-        this.$refs.modalBlank.show('blank')
-      }
-    }
+    `
   }))
