@@ -69,8 +69,8 @@ $product-item__action-icon-transition      : $transition-base !default;
 
     @include mq($screen-m) {
       flex-direction: row;
-      justify-content: flex-end;
       align-items: baseline;
+      justify-content: flex-end;
     }
 
     &--special,

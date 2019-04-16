@@ -41,11 +41,11 @@ $checkbox__icon-transition   : $transition-base !default;
       position: absolute;
       top: 0;
       left: 0;
-      content: '';
       width: $checkbox__icon-size;
       height: $checkbox__icon-size;
       border: $checkbox__border;
       border-radius: $checkbox__icon-border-radius;
+      content: '';
     }
   }
 
