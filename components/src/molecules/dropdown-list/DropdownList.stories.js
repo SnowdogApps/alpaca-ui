@@ -1,9 +1,9 @@
-import {addDecorator, storiesOf} from "@storybook/vue"
+import { addDecorator, storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import ADropdownList from "./DropdownList.vue"
-import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
-import ADropdownListLink from "../../atoms/dropdown-list-link/DropdownListLink.vue"
+import ADropdownList from './DropdownList.vue'
+import ADropdownListItem from '../dropdown-list-item/DropdownListItem.vue'
+import ADropdownListLink from '../../atoms/dropdown-list-link/DropdownListLink.vue'
 
 import items from './mocks/dropdownListItems.json'
 
@@ -17,10 +17,10 @@ const info = `
   ---
 `
 addDecorator(StoryRouter())
-storiesOf("Molecules/Dropdown List", module)
+storiesOf('Molecules/Dropdown List', module)
   .addParameters({ info })
   .add(
-    "Default",
+    'Default',
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
@@ -51,7 +51,7 @@ storiesOf("Molecules/Dropdown List", module)
     })
   )
   .add(
-    "Nested with items as props",
+    'Nested with items as props',
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
@@ -63,7 +63,7 @@ storiesOf("Molecules/Dropdown List", module)
     })
   )
   .add(
-    "Screen M",
+    'Screen M',
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
@@ -78,7 +78,7 @@ storiesOf("Molecules/Dropdown List", module)
     })
   )
   .add(
-    "Dark",
+    'Dark',
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
@@ -93,7 +93,7 @@ storiesOf("Molecules/Dropdown List", module)
     })
   )
   .add(
-    "Secondary",
+    'Secondary',
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
@@ -108,7 +108,7 @@ storiesOf("Molecules/Dropdown List", module)
     })
   )
   .add(
-    "Inner",
+    'Inner',
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
@@ -123,7 +123,7 @@ storiesOf("Molecules/Dropdown List", module)
     })
   )
   .add(
-    "With slots",
+    'With slots',
     () => ({
       components: { ADropdownList, ADropdownListItem, ADropdownListLink },
       data: () => ({
