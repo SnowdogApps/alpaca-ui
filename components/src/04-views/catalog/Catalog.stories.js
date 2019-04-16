@@ -7,7 +7,7 @@ import ACatalog from './Catalog.vue'
 import data from './mocks/catalog.json'
 import menu from '../../03-modules/header/mocks/menu.json'
 import toolbar from '../../03-modules/toolbar/mocks/toolbar.json'
-import breadcrumbs from "../../02-elements/breadcrumbs/mocks/breadcrumbs"
+import breadcrumbs from "../../atoms/breadcrumbs/mocks/breadcrumbs"
 import swatchItems from "../../03-modules/filter/mocks/swatchItems"
 import colorItems from "../../03-modules/filter/mocks/colorItems"
 import activeFilterItems from "../../03-modules/active-filters/mocks/active-filters"

@@ -1,6 +1,6 @@
 import AContainer from '../../atoms/container/Container.vue'
 import AHeading from '../../atoms/heading/Heading.vue'
-import ABreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
+import ABreadcrumbs from '../../atoms/breadcrumbs/Breadcrumbs.vue'
 import AButton from '../../atoms/button/Button.vue'
 import APrice from '../../atoms/price/Price.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
