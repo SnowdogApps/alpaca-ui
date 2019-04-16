@@ -36,11 +36,11 @@ $breadcrumbs__font-size          : $font-size-small !default;
     font-size: $breadcrumbs__font-size;
 
     &::after {
-      content: '/';
       display: flex;
       align-items: center;
       margin: 0 $breadcrumbs__margin;
       color: $breadcrumbs__color;
+      content: '/';
     }
 
     &:first-of-type {

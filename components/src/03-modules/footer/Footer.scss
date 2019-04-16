@@ -102,8 +102,8 @@ $footer__icon-fill-hover             : $color-primary !default;
   &__bottom-bar-handler {
     @include mq($screen-m) {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
   }
 

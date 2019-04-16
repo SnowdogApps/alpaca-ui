@@ -13,8 +13,8 @@ $range__button-margin : 0 0 $spacer--medium 0 !default;
 
   &__inputs-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__dash {

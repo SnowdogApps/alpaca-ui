@@ -44,16 +44,16 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
 
   .VueCarousel-navigation {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin-top: $slider__navigation-margin;
 
     &-button {
       position: static;
       top: unset;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       width: $slider__navigation-icon-size;
       height: $slider__navigation-icon-size;
       background-color: $slider__navigation-icon-background;
