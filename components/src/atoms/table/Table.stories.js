@@ -25,8 +25,8 @@ const defaultData = {
 }
 
 storiesOf('Atoms/Table', module)
-  // @vue/component
   .addParameters({ info })
+  // @vue/component
   .add(
     'Default',
     () => ({
@@ -76,9 +76,9 @@ storiesOf('Atoms/Table', module)
   )
   // @vue/component
   .add(
-      'Odd Even',
+    'Odd Even',
     () => ({
-    ...defaultData,
+      ...defaultData,
       template: `
         <a-table
           caption="This is a table"
