@@ -24,8 +24,8 @@
       />
     </div>
     <div
-      v-for="({ key, image }, i) in getThumbsWithKey"
-      :key="key"
+      v-for="(image, i) in images"
+      :key="i"
       :class="['gallery__thumb', i === currentImage && 'gallery__thumb--active']"
       @click="setCurrentImage(i)"
     >

@@ -1,5 +1,3 @@
-import uniqueId from 'lodash.uniqueid'
-
 import ABadge from '../../atoms/badge/Badge.vue'
 import AImage from '../../atoms/image/Image.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
@@ -38,9 +36,6 @@ export default {
     }
   },
   computed: {
-    getThumbsWithKey() {
-      return this.images.map(image => ({ key: uniqueId("image"), image }))
-    },
     selectedImage() {
       return this.images[this.currentImage]
     }
