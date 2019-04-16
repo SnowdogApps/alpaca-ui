@@ -6,18 +6,28 @@ import ATabContent from '../tab-content/TabContent.vue'
 
 import tabs from './mocks/tabs.json'
 
-storiesOf('Elements/Tabs', module).add('Default', () => ({
-  components: { ATab, ATabsContainer, ATabContent },
-  data: () => ({
-    tabs,
-    activeTab: tabs[0].tabId
-  }),
-  template: `
+storiesOf('Elements/Tabs', module)
+  // @vue/component
+  .add('Default', () => ({
+    components: { ATab, ATabsContainer, ATabContent },
+    data: () => ({
+      tabs,
+      activeTab: tabs[0].tabId
+    }),
+    methods: {
+      setActiveTab (tab) {
+        this.activeTab = this.tabs
+          .filter(el => el.tabId === tab)
+          .map(el => el.tabId)[0]
+      }
+    },
+    template: `
       <a-tabs-container>
         <template v-for="tab in tabs">
           <a-tab
             :key="tab.tabId"
-            :tab-id="tab.tabId"
+            :tab-id="tab.tabId"}))
+          }))
             :title="tab.title"
             :active-tab="activeTab"
             @click="setActiveTab(tab.tabId)"
@@ -31,22 +41,23 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
            </a-tab-content>
         </template>
        </a-tabs-container>
-  `,
-  methods: {
-    setActiveTab(tab) {
-      this.activeTab = this.tabs
-        .filter(el => el.tabId === tab)
-        .map(el => el.tabId)[0]
-    }
-  }
-}))
-.add('With icon', () => ({
-  components: { ATab, ATabsContainer, ATabContent },
-  data: () => ({
-    tabs,
-    activeTab: tabs[0].tabId
-  }),
-  template: `
+  `
+  }))
+  // @vue/component
+  .add('With icon', () => ({
+    components: { ATab, ATabsContainer, ATabContent },
+    data: () => ({
+      tabs,
+      activeTab: tabs[0].tabId
+    }),
+    methods: {
+      setActiveTab (tab) {
+        this.activeTab = this.tabs
+          .filter(el => el.tabId === tab)
+          .map(el => el.tabId)[0]
+      }
+    },
+    template: `
       <a-tabs-container>
         <template v-for="tab in tabs">
           <a-tab
@@ -66,12 +77,5 @@ storiesOf('Elements/Tabs', module).add('Default', () => ({
            </a-tab-content>
         </template>
        </a-tabs-container>
-  `,
-  methods: {
-    setActiveTab(tab) {
-      this.activeTab = this.tabs
-        .filter(el => el.tabId === tab)
-        .map(el => el.tabId)[0]
-    }
-  }
-}))
+  `
+  }))

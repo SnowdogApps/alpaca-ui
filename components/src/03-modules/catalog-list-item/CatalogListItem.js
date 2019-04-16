@@ -6,6 +6,7 @@ import ASwatch from '../../02-elements/swatch/Swatch.vue'
 import APrice from '../../atoms/price/Price.vue'
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     ALink,
@@ -79,13 +80,13 @@ export default {
     }
   },
   methods: {
-    addToCart(event) {
+    addToCart (event) {
       this.$emit('addToCart', event)
     },
-    addToWishList(event) {
+    addToWishList (event) {
       this.$emit('addToWishList', event)
     },
-    compare(event) {
+    compare (event) {
       this.$emit('compare', event)
     }
   }

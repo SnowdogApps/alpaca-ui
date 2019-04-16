@@ -2,6 +2,7 @@ import AInput from '../../02-elements/input/Input.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     AInput,
@@ -70,17 +71,17 @@ export default {
       default: 'Plus mark'
     }
   },
-  data() {
+  data () {
     return {
       currentValue: null
     }
+  },
+  created () {
+    this.currentValue = this.value
   },
   methods: {
     changeValue () {
       this.$emit('update', parseInt(this.currentValue, 10))
     }
-  },
-  created () {
-    this.currentValue = this.value
   }
 }

@@ -1,6 +1,7 @@
 import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     ADropdownListItem,
@@ -21,7 +22,7 @@ export default {
     }
   },
   methods: {
-    click(val) {
+    click (val) {
       this.$emit('click', val)
     }
   }

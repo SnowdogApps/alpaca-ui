@@ -1,11 +1,11 @@
 <template src="./Toolbar.html" />
 
 <script>
-  import instance from "./Toolbar.js"
+import instance from './Toolbar.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 
 </script>
 

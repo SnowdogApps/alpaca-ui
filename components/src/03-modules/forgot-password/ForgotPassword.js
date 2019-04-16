@@ -2,6 +2,7 @@ import AButton from '../../atoms/button/Button.vue'
 import AInput from '../../02-elements/input/Input.vue'
 import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 
+// @vue/component
 export default {
   components: {
     AButton,
@@ -22,16 +23,16 @@ export default {
       required: true
     }
   },
-  data() {
+  data () {
     return {
       email: null
     }
   },
   methods: {
-    submit() {
+    submit () {
       this.$emit('submit', { email: this.email })
     },
-    goToLogin() {
+    goToLogin () {
       this.$emit('goToLogin')
     }
   }

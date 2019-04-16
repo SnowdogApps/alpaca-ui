@@ -3,6 +3,7 @@ import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 import APager from '../../03-modules/pager/Pager.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon,
@@ -54,13 +55,13 @@ export default {
     }
   },
   methods: {
-    setCurrentPage(page) {
+    setCurrentPage (page) {
       this.pager.page = page
     },
-    listView(event){
+    listView (event) {
       this.$emit('listView', event)
     },
-    gridView(event){
+    gridView (event) {
       this.$emit('gridView', event)
     }
   }

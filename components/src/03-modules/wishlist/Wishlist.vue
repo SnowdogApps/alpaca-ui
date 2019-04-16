@@ -1,11 +1,11 @@
 <template src="./Wishlist.html" />
 
 <script>
-  import instance from "./Wishlist.js"
+import instance from './Wishlist.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style

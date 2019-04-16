@@ -1,11 +1,11 @@
 <template src="./SlideMenu.html" />
 
 <script>
-  import instance from "./SlideMenu.js"
+import instance from './SlideMenu.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style

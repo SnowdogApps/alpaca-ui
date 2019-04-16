@@ -1,11 +1,11 @@
 <template src="./ReviewSummary.html" />
 
 <script>
-  import instance from "./ReviewSummary.js"
+import instance from './ReviewSummary.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style

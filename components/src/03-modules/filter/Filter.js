@@ -1,5 +1,6 @@
 import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
 
+// @vue/component
 export default {
   components: {
     ADropdownListItem
