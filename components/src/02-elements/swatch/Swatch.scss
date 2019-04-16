@@ -26,8 +26,8 @@ $swatch__option-border-color--active : $color-primary !default;
 
   &__option {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     min-width: $swatch__option-size;
     min-height: $swatch__option-size;
     color: $swatch__option-color;

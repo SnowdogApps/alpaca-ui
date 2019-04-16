@@ -1,0 +1,28 @@
+<div
+  class="message"
+  role="alert"
+>
+  <div class="message__information">
+    <!-- @slot Message content -->
+    <slot />
+  </div>
+  <div class="message__actions">
+    <!-- @slot Custom actions (Named slot) -->
+    <slot name="actions">
+      <a-button
+        class="message__button button--blank"
+        v-if="action1Text"
+        @click.native="action1"
+      >
+        {{ action1Text }}
+      </a-button>
+      <a-button
+        class="message__button message__button--secondary button--blank"
+        v-if="action2Text"
+        @click.native="action2"
+      >
+        {{ action2Text }}
+      </a-button>
+    </slot>
+  </div>
+</div>

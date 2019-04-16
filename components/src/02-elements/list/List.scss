@@ -134,7 +134,6 @@ $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
       padding: $list__item-padding--native;
 
       &::before {
-        content: "";
         position: absolute;
         top: 5px;
         left: 12px;
@@ -142,6 +141,7 @@ $list__margin-nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
         height: $spacer;
         background-color: $color-primary;
         border-radius: 4px;
+        content: "";
       }
     }
   }

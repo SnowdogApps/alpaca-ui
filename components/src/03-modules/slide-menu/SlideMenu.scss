@@ -51,8 +51,8 @@ $slide-menu__nested-item-padding-left: calc(#{$slide-menu__icon-right-margin--pr
 
   &__button {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding: $reset;
     font-weight: $font-weight-bold;
