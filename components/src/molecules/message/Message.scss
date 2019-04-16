@@ -1,0 +1,94 @@
+@import '../../../assets/styles/globals';
+
+$message__width                             : 100% !default;
+$message__max-width\@medium                 : 320px !default;
+$message__padding                           : $spacer--medium 24px 0 24px !default;
+$message__color                             : $white !default;
+$message__color--success                    : $black !default;
+$message__background                        : #1976d2 !default;
+$message__background--success               : #69dca1 !default;
+$message__background--error                 : #d32f2f !default;
+$message__font-size                         : $font-size-small !default;
+$message__box-shadow                        : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
+$message__transition                        : $transition-base !default;
+$message__content-width                     : 90% !default;
+$message__information-padding               : 0 0 $spacer--medium 0 !default;
+$message__information-border-bottom         : 1px solid rgba(255, 255, 255, 0.4) !default;
+$message__information-border-bottom--success: 1px solid rgba(57, 50, 67, 0.4) !default;
+$message__information-font-size             : $font-size-base !default;
+$message__information-font-weight           : $font-weight-bold !default;
+$message__button-color                      : $white !default;
+$message__button-color--success             : $black !default;
+$message__button-font-weight--last-child    : $font-weight-bold !default;
+
+.message {
+  width: $message__width;
+  padding: $message__padding;
+  color: $message__color;
+  font-size: $message__font-size;
+  background-color: $message__background;
+  box-shadow: $message__box-shadow;
+  transition: $message__transition;
+
+  @include mq($screen-m) {
+    width: $message__max-width\@medium;
+  }
+
+  &--success {
+    color: $message__color--success;
+    background-color: $message__background--success;
+
+    .message__information {
+      border-bottom: $message__information-border-bottom--success;
+    }
+
+    .message__button {
+      color: $message__button-color--success;
+
+      &:hover,
+      &:focus {
+        color: $message__button-color--success;
+      }
+    }
+  }
+
+  &--error {
+    background-color: $message__background--error;
+  }
+
+  &__information {
+    padding: $message__information-padding;
+    font-weight: $message__information-font-weight;
+    font-size: $message__information-font-size;
+    border-bottom: $message__information-border-bottom;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__information,
+  &__actions {
+    width: $message__content-width;
+    margin: $reset auto;
+
+    @include mq($screen-m) {
+      width: auto;
+    }
+  }
+
+  &__button {
+    padding: $reset;
+    color: $message__button-color;
+
+    &:hover,
+    &:focus {
+      color: $message__button-color;
+    }
+
+    &:last-child {
+      font-weight: $message__button-font-weight--last-child;
+    }
+  }
+}

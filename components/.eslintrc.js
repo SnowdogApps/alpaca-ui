@@ -9,7 +9,8 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
-    node: true
+    node: true,
+    'jest': true
   },
   rules: {
     'vue/html-closing-bracket-newline': ['error', {
