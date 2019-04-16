@@ -1,9 +1,7 @@
 @import '../../../assets/styles/globals';
 
 $list__style                   : none !default;
-$list__item-padding            : $spacer 0 !default;
-$list__item-padding--horizontal: $spacer !default;
-$list__item-padding--native    : 0 0 $spacer--medium $spacer--large !default;
+$list__item-padding            : $spacer $spacer--medium !default;
 
 .list {
   margin: $reset;
@@ -13,30 +11,17 @@ $list__item-padding--native    : 0 0 $spacer--medium $spacer--large !default;
   &--horizontal {
     display: flex;
     flex-flow: row wrap;
-
-    .list__item {
-      padding: $list__item-padding--horizontal;
-
-      &:first-child {
-        padding-top: $list__item-padding--horizontal;
-      }
-
-      &:last-child {
-        padding-bottom: $list__item-padding--horizontal;
-      }
-    }
   }
 
   &--native {
     .list__item {
       position: relative;
-      padding: $list__item-padding--native;
 
       &::before {
         content: "";
         position: absolute;
-        top: 5px;
-        left: 12px;
+        top: 12px;
+        left: 0;
         width: $spacer;
         height: $spacer;
         background-color: $color-primary;
@@ -48,13 +33,5 @@ $list__item-padding--native    : 0 0 $spacer--medium $spacer--large !default;
   &__item {
     display: list-item;
     padding: $list__item-padding;
-
-    &:first-child {
-      padding-top: $reset;
-    }
-
-    &:last-child {
-      padding-bottom: $reset;
-    }
   }
 }

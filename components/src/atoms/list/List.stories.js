@@ -85,44 +85,78 @@ storiesOf('Atoms/List', module)
     })
   )
   .add(
-    'With slot',
+    'Description',
     () => ({
-      components: { AList, AListItem, AIcon },
+      components: { AList, AListItem },
       data: () => ({
         items: [
           {
-            "icon": {
-              "iconId": "facebook"
-            },
-            "linkHref": "#",
-            "wrapperClass": "list__icon-link"
+            "id": "desc_id_1",
+            "label": "Lorem",
+            "value": "ipsum"
           },
           {
-            "icon": {
-              "iconId": "twitter"
-            },
-            "linkHref": "#",
-            "wrapperClass": "list__icon-link"
+            "id": "desc_id_2",
+            "label": "Lorem",
+            "value": "ipsum"
           },
           {
-            "icon": {
-              "iconId": "linkedin"
-            },
-            "linkHref": "#",
-            "wrapperClass": "list__icon-link"
+            "id": "desc_id_3",
+            "label": "Lorem",
+            "value": "ipsum"
           }
         ]
       }),
       template: `
-        <a-list>
-          <a-list-item
-            v-for="item in items"
-            :key="item.id"
-          >
+        <a-list 
+          tag-list="dl"
+          style="display: inline-block;"
+        >
+          <template v-for="item in items">
+            <a-list-item
+              tag="dt"
+              style="float: left; clear: left; padding: 5px;"
+            >
+              {{ item.label }}
+            </a-list-item>
+            <a-list-item
+              tag="dd"
+              style="padding: 5px; float: left;"
+            >
+              {{ item.value }}
+            </a-list-item>
+          </template>
+        </a-list>
+      `
+    })
+  )
+  .add(
+    'With slots, and items as a props',
+    () => ({
+      components: { AList, AIcon },
+      data: () => ({
+        items: [
+          {
+            "id": "el1",
+            "iconId": "facebook"
+          },
+          {
+            "id": "el2",
+            "iconId": "twitter"
+          },
+          {
+            "id": "el3",
+            "iconId": "linkedin"
+          }
+        ]
+      }),
+      template: `
+        <a-list :items="items">
+          <template #item="data">
             <a-icon
-              :icon="item.icon.iconId"
+              :icon="data.item.iconId"
             />
-          </a-list-item>
+          </template>
         </a-list>
       `
     })
