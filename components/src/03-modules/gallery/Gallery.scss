@@ -104,8 +104,8 @@ $gallery__thumb-width--large               : 80px !default;
 
   &__thumb-arr {
     display: flex !important; // sass-lint:disable-line no-important
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: $gallery__thumb-arrow-width;
     height: $gallery__thumb-arrow-height;
     margin: 0 auto;

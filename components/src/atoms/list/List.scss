@@ -18,7 +18,6 @@ $list__item-padding: $spacer $spacer--medium !default;
       position: relative;
 
       &::before {
-        content: "";
         position: absolute;
         top: 12px;
         left: 0;
@@ -26,6 +25,7 @@ $list__item-padding: $spacer $spacer--medium !default;
         height: $spacer;
         background-color: $color-primary;
         border-radius: $border-radius;
+        content: "";
       }
     }
   }
