@@ -7,13 +7,12 @@ import AIcon from '../icon/Icon.vue'
 const info = `
   ---
   #### Use these modifiers with \`.list\` class.
-  - \`.list--native\` - Selector for applying native styles
   - \`.list--horizontal\` - Selector for applying horizontal styles
   ---
 `
 
 const defaultData = {
-  components: { AList, AListItem },
+  components: { AList },
   data () {
     return {
       items: [
@@ -36,104 +35,30 @@ const defaultData = {
 
 storiesOf('Atoms/List', module)
   .addParameters({ info })
-  .add(
-    'Default',
+  // @vue/component
+  .add('Default',
     () => ({
       ...defaultData,
-      template: `
-        <a-list>
-          <a-list-item
-            v-for="item in items"
-            :key="item.id"
-          >
-            {{ item.text }}
-         </a-list-item>
-        </a-list>
-      `
+      template: `<a-list :items="items"/>`
     })
   )
-  .add(
-    'Native',
-    () => ({
-      ...defaultData,
-      template: `
-        <a-list class="list--native">
-          <a-list-item
-            v-for="item in items"
-            :key="item.id"
-          >
-            {{ item.text }}
-          </a-list-item>
-        </a-list>
-      `
-    })
-  )
+  // @vue/component
   .add(
     'Horizontal',
     () => ({
       ...defaultData,
       template: `
-        <a-list class="list--horizontal">
-          <a-list-item
-            v-for="item in items"
-            :key="item.id"
-          >
-            {{ item.text }}
-          </a-list-item>
-        </a-list>
+        <a-list
+          :items="items"
+          class="list--horizontal"
+        />
       `
     })
   )
+  // @vue/component
   .add(
-    'Description',
+    'With slots',
     () => ({
-      components: { AList, AListItem },
-      data: () => ({
-        items: [
-          {
-            'id': 'desc_id_1',
-            'label': 'Lorem',
-            'value': 'ipsum'
-          },
-          {
-            'id': 'desc_id_2',
-            'label': 'Lorem',
-            'value': 'ipsum'
-          },
-          {
-            'id': 'desc_id_3',
-            'label': 'Lorem',
-            'value': 'ipsum'
-          }
-        ]
-      }),
-      template: `
-        <a-list 
-          tag-list="dl"
-          style="display: inline-block;"
-        >
-          <template v-for="item in items">
-            <a-list-item
-              tag="dt"
-              style="float: left; clear: left; padding: 5px;"
-            >
-              {{ item.label }}
-            </a-list-item>
-            <a-list-item
-              tag="dd"
-              style="padding: 5px; float: left;"
-            >
-              {{ item.value }}
-            </a-list-item>
-          </template>
-        </a-list>
-      `
-    })
-  )
-  .add(
-    'With slots, and items as a props',
-    () => ({
-      components: { AList, AIcon },
       data: () => ({
         items: [
           {
@@ -152,12 +77,18 @@ storiesOf('Atoms/List', module)
       }),
       template: `
         <a-list :items="items">
-          <template #item="data">
-            <a-icon
-              :icon="data.item.icon"
-            />
-          </template>
+          <a-list-item
+            v-for="item in items"
+            :key="item.id"
+          >
+            <a-icon :icon="item.icon"/>
+          </a-list-item>
         </a-list>
-      `
+      `,
+      components: {
+        AList,
+        AListItem,
+        AIcon
+      }
     })
   )

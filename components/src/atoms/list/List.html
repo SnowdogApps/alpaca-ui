@@ -1,22 +1,15 @@
 <component
-  :is="tagList"
+  :is="tag"
   class="list"
 >
-  <!-- @slot Slot for list content -->
+  <!-- @slot Custom list items -->
   <slot>
     <template v-if="items">
       <a-list-item
         v-for="item in items"
         :key="item.id"
-        :tag="tagItem"
       >
-        <!-- @slot Custom list item (Scoped slot) -->
-        <slot
-          name="item"
-          :item="item"
-        >
-          {{ item.text }}
-        </slot>
+        {{ item.text }}
       </a-list-item>
     </template>
   </slot>

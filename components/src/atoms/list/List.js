@@ -4,18 +4,11 @@ export default {
   components: { AListItem },
   props: {
     /**
-     * List tag
+     *  Tag
      */
-    tagList: {
+    tag: {
       type: String,
       default: 'ul'
-    },
-    /**
-     * List item tag
-     */
-    tagItem: {
-      type: String,
-      default: 'li'
     },
     /**
      * Array with list items

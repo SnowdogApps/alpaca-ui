@@ -1,7 +1,7 @@
 @import '../../../assets/styles/globals';
 
 $list__style       : none !default;
-$list__item-padding: $spacer $spacer--medium !default;
+$list__item-padding: $spacer !default;
 
 .list {
   margin: $reset;
@@ -13,25 +13,7 @@ $list__item-padding: $spacer $spacer--medium !default;
     flex-flow: row wrap;
   }
 
-  &--native {
-    .list__item {
-      position: relative;
-
-      &::before {
-        position: absolute;
-        top: 12px;
-        left: 0;
-        width: $spacer;
-        height: $spacer;
-        background-color: $color-primary;
-        border-radius: $border-radius;
-        content: "";
-      }
-    }
-  }
-
   &__item {
-    display: list-item;
     padding: $list__item-padding;
   }
 }
