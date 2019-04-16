@@ -16,6 +16,7 @@ import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue
 import ASlider from '../../03-modules/slider/Slider.vue'
 import { Slide } from 'vue-carousel'
 
+// @vue/component
 export default {
   components: {
     AContainer,
@@ -112,7 +113,7 @@ export default {
     }
   },
   methods: {
-    setActiveTab(tab) {
+    setActiveTab (tab) {
       this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]

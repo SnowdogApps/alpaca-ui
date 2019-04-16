@@ -1,6 +1,7 @@
 import ASource from '../source/Source.vue'
 import AImage from '../image/Image.vue'
 
+// @vue/component
 export default {
   components: {
     ASource,

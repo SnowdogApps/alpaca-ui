@@ -1,5 +1,6 @@
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: { AButton },
   props: {
@@ -19,19 +20,19 @@ export default {
     }
   },
   methods: {
-    action1(event) {
+    action1 (event) {
       /**
        * Event for action1
        * @type {Event}
        */
       this.$emit('action1', event)
     },
-    action2(event) {
+    action2 (event) {
       /**
        * Event for action2
        * @type {Event}
        */
       this.$emit('action2', event)
-    },
+    }
   }
 }

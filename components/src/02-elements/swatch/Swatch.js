@@ -1,5 +1,6 @@
 import ALabel from '../../atoms/label/Label.vue'
 
+// @vue/component
 export default {
   components: {
     ALabel
@@ -43,7 +44,7 @@ export default {
     }
   },
   methods: {
-    setActiveValue(value){
+    setActiveValue (value) {
       this.$emit('change', value)
     }
   }

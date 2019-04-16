@@ -1,11 +1,11 @@
 <template src="./ActiveFilters.html" />
 
 <script>
-  import instance from "./ActiveFilters.js"
+import instance from './ActiveFilters.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style lang="scss" src="./ActiveFilters.scss"/>

@@ -4,6 +4,7 @@ import AImage from './Image.vue'
 
 storiesOf('Atoms/Image', module)
   .addParameters({ info: true })
+  // @vue/component
   .add('Default', () => ({
     components: { AImage },
     template: `
@@ -12,5 +13,5 @@ storiesOf('Atoms/Image', module)
         alt="alt image text"
       />
     `
-    })
+  })
   )

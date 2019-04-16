@@ -7,6 +7,7 @@ import AHeaderButton from '../../03-modules/header-button/HeaderButton.vue'
 import AHeaderSearch from '../../03-modules/header-search/HeaderSearch.vue'
 import ASideMenu from '../../03-modules/side-menu/SideMenu.vue'
 
+// @vue/component
 export default {
   components: {
     AContainer,
@@ -37,13 +38,13 @@ export default {
     }
   },
   methods: {
-    toggleMicrocart() {
+    toggleMicrocart () {
       this.$emit('toggleMicrocart')
     },
-    toggleWishlist() {
+    toggleWishlist () {
       this.$emit('toggleWishlist')
     },
-    goToAccount() {
+    goToAccount () {
       this.$emit('goToAccount')
     }
   }
