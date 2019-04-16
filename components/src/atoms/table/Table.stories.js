@@ -21,7 +21,7 @@ const defaultData = {
     bodyRows,
     headCells,
     footCells
-  }),
+  })
 }
 
 storiesOf('Atoms/Table', module)
