@@ -11,14 +11,14 @@ export default {
       default: 'ul'
     },
     /**
-     * List tag
+     * List item tag
      */
     tagItem: {
       type: String,
       default: 'li'
     },
     /**
-     * Array with list items. Every item should have key: id, text
+     * Array with list items
      */
     items: {
       type: Array,
