@@ -12,7 +12,7 @@ const info = `
   ---
 `
 
-const defaultListData = {
+const defaultData = {
   components: { AList, AListItem },
   data () {
     return {
@@ -39,7 +39,7 @@ storiesOf('Atoms/List', module)
   .add(
     'Default',
     () => ({
-      ...defaultListData,
+      ...defaultData,
       template: `
         <a-list>
           <a-list-item
@@ -55,7 +55,7 @@ storiesOf('Atoms/List', module)
   .add(
     'Native',
     () => ({
-      ...defaultListData,
+      ...defaultData,
       template: `
         <a-list class="list--native">
           <a-list-item
@@ -71,7 +71,7 @@ storiesOf('Atoms/List', module)
   .add(
     'Horizontal',
     () => ({
-      ...defaultListData,
+      ...defaultData,
       template: `
         <a-list class="list--horizontal">
           <a-list-item
@@ -138,15 +138,15 @@ storiesOf('Atoms/List', module)
         items: [
           {
             "id": "el1",
-            "iconId": "facebook"
+            "icon": "facebook"
           },
           {
             "id": "el2",
-            "iconId": "twitter"
+            "icon": "twitter"
           },
           {
             "id": "el3",
-            "iconId": "linkedin"
+            "icon": "linkedin"
           }
         ]
       }),
@@ -154,7 +154,7 @@ storiesOf('Atoms/List', module)
         <a-list :items="items">
           <template #item="data">
             <a-icon
-              :icon="data.item.iconId"
+              :icon="data.item.icon"
             />
           </template>
         </a-list>
