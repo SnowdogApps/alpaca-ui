@@ -8,6 +8,7 @@ import AReviewAdd from '../review-add/ReviewAdd.vue'
 import reviews from './mocks/reviews.json'
 
 storiesOf('Modules/Review', module)
+  // @vue/component
   .add('Default', () => ({
     components: { AReview },
     data: () => ({
@@ -24,6 +25,7 @@ storiesOf('Modules/Review', module)
       />
   `
   }))
+  // @vue/component
   .add('Summary', () => ({
     components: { AReviewSummary },
     template: `
@@ -34,8 +36,12 @@ storiesOf('Modules/Review', module)
       />
   `
   }))
+  // @vue/component
   .add('Add', () => ({
     components: { AReviewAdd },
+    methods: {
+      addReview: action('Added')
+    },
     template: `
       <a-review-add
         product-title="Product name"
@@ -43,8 +49,5 @@ storiesOf('Modules/Review', module)
         legend-text=""
         @addReview="addReview"
       />
-  `,
-    methods: {
-      addReview: action('Added')
-    }
+  `
   }))

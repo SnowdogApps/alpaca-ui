@@ -3,12 +3,13 @@ import AButton from '../../atoms/button/Button.vue'
 import ASlideMenu from '../../03-modules/slide-menu/SlideMenu.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon,
     AButton,
     ASlideMenu,
-    AOffCanvasSidebar,
+    AOffCanvasSidebar
   },
   props: {
     menuItems: {

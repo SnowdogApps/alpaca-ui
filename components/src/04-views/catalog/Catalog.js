@@ -4,6 +4,7 @@ import AGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 import ABreadcrumbs from '../../atoms/breadcrumbs/Breadcrumbs.vue'
 import AToolbar from '../../03-modules/toolbar/Toolbar.vue'
 
+// @vue/component
 export default {
   components: {
     AContainer,
@@ -43,10 +44,10 @@ export default {
     }
   },
   methods: {
-    listView(){
+    listView () {
       this.$emit('listView')
     },
-    gridView(){
+    gridView () {
       this.$emit('gridView')
     }
   }

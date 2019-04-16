@@ -8,6 +8,7 @@ import ADropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
 import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
 import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
 
+// @vue/component
 export default {
   components: {
     AButton,
@@ -55,10 +56,10 @@ export default {
     }
   },
   methods: {
-    scrollToTop() {
+    scrollToTop () {
       window.scrollTo(0, 0)
     },
-    submitNewsletter(payload) {
+    submitNewsletter (payload) {
       this.$emit('submitNewsletter', payload)
     }
   }

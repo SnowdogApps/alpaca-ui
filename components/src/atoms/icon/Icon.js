@@ -1,3 +1,4 @@
+// @vue/component
 export default {
   props: {
     /**
@@ -9,7 +10,7 @@ export default {
     }
   },
   computed: {
-    url() {
+    url () {
       return `/assets/icons/sprite.svg#${this.icon}`
     }
   }

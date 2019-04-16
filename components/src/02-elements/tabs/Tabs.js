@@ -1,6 +1,7 @@
 import uniqueId from 'lodash.uniqueid'
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon
@@ -21,15 +22,15 @@ export default {
     icon: {
       type: String,
       default: null
-    },
+    }
   },
   computed: {
-    getTabsWithId() {
-      return uniqueId("tab")
+    getTabsWithId () {
+      return uniqueId('tab')
     }
   },
   methods: {
-    setActiveTab() {
+    setActiveTab () {
       this.$emit('click', event)
     }
   }

@@ -12,17 +12,16 @@ const info = `
 
 storiesOf('Atoms/Badge', module)
   .addParameters({ info })
-  .add(
-    'Default',
-    () => ({
-      components: { ABadge },
-      template: `
-        <a-badge>
-          Default badge
-        </a-badge>
-      `
-    })
-  )
+  // @vue/component
+  .add('Default', () => ({
+    components: { ABadge },
+    template: `
+      <a-badge>
+        Default badge
+      </a-badge>
+    `
+  }))
+  // @vue/component
   .add('Custom tag', () => ({
     components: { ABadge },
     template: `
@@ -30,8 +29,8 @@ storiesOf('Atoms/Badge', module)
         Custom tag
       </a-badge>
     `
-    })
-  )
+  }))
+  // @vue/component
   .add('New', () => ({
     components: { ABadge },
     template: `
@@ -39,16 +38,13 @@ storiesOf('Atoms/Badge', module)
         New badge
       </a-badge>
     `
-    })
-  )
-  .add(
-    'Sale',
-    () => ({
-      components: { ABadge },
-      template: `
-        <a-badge class="badge--sale">
-          Sale badge
-        </a-badge>
-      `
-    })
-  )
+  }))
+  // @vue/component
+  .add('Sale', () => ({
+    components: { ABadge },
+    template: `
+      <a-badge class="badge--sale">
+        Sale badge
+      </a-badge>
+    `
+  }))

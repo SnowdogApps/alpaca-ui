@@ -3,4 +3,3 @@
 <script src="./PasswordStrength.js"/>
 
 <style lang="scss" src="./PasswordStrength.scss"/>
-

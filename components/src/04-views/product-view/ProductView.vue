@@ -1,11 +1,11 @@
 <template src="./ProductView.html" />
 
 <script>
-  import instance from "./ProductView.js"
+import instance from './ProductView.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style

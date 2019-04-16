@@ -8,6 +8,7 @@ import ASwatchFilter from '../swatch-filter/SwatchFilter.vue'
 import ACheckboxFilter from '../checkbox-filter/CheckboxFilter.vue'
 import AColorFilter from '../color-filter/ColorFilter.vue'
 
+// @vue/component
 export default {
   components: {
     AHeading,
@@ -46,13 +47,13 @@ export default {
       required: true
     }
   },
-  data() {
+  data () {
     return {
       isVisible: true
     }
   },
   methods: {
-    showFilters() {
+    showFilters () {
       this.isVisible = !this.isVisible
     }
   }

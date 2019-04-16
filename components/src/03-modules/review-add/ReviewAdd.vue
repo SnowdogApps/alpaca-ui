@@ -1,11 +1,11 @@
 <template src="./ReviewAdd.html" />
 
 <script>
-  import instance from "./ReviewAdd.js"
+import instance from './ReviewAdd.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style

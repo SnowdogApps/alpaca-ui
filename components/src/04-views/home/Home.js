@@ -3,6 +3,7 @@ import ABanner from '../../atoms/banner/Banner.vue'
 import AList from '../../02-elements/list/List.vue'
 import AListImageItem from '../../02-elements/list-image-item/ListImageItem.vue'
 
+// @vue/component
 export default {
   components: {
     AHeading,

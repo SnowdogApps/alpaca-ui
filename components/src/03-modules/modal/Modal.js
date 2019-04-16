@@ -2,18 +2,12 @@ import AHeading from '../../atoms/heading/Heading.vue'
 import ADivider from '../../../../cookbook/src/atoms/divider/Divider.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon,
     ADivider,
     AHeading
-  },
-  data() {
-    return {
-      visibility: false,
-      trigger: null,
-      ariaHidden: 'true'
-    }
   },
   props: {
     name: {
@@ -53,6 +47,18 @@ export default {
       default: false
     }
   },
+  data () {
+    return {
+      visibility: false,
+      trigger: null,
+      ariaHidden: 'true'
+    }
+  },
+  computed: {
+    getMaxWidth () {
+      return this.maxWidth !== null ? `max-width: ${this.maxWidth}px;` : null
+    }
+  },
   methods: {
     show (name) {
       if (name === this.name) {
@@ -76,22 +82,22 @@ export default {
         this.hide(this.name)
       }
     },
-    handleKeydown(event) {
+    handleKeydown (event) {
       if (this.visibility) {
         switch (event.key) {
-          case "Esc": // IE/Edge specific value
-          case "Escape":
+          case 'Esc': // IE/Edge specific value
+          case 'Escape':
             if (this.closeOnEsc) {
               this.hide(this.name)
             }
             break
-          case "Tab":
+          case 'Tab':
             this.setFocusTrap(event)
             break
         }
       }
     },
-    setFocusTrap(event) {
+    setFocusTrap (event) {
       const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
       const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
 
@@ -104,18 +110,12 @@ export default {
           event.preventDefault()
           focusableChildren[totalOfFocusable - 1].focus()
         }
-      }
-      else {
+      } else {
         if (focusedIndex === totalOfFocusable - 1) {
           event.preventDefault()
           focusableChildren[0].focus()
         }
       }
-    }
-  },
-  computed: {
-    getMaxWidth () {
-      return this.maxWidth !== null ? `max-width: ${this.maxWidth}px;`: null
     }
   }
 }

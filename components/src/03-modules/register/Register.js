@@ -2,6 +2,7 @@ import AFieldset from '../../atoms/fieldset/Fieldset.vue'
 import AButton from '../../atoms/button/Button.vue'
 import AInput from '../../02-elements/input/Input.vue'
 
+// @vue/component
 export default {
   components: {
     AFieldset,
@@ -24,9 +25,9 @@ export default {
     goToLoginButton: {
       type: String,
       required: true
-    },
+    }
   },
-  data() {
+  data () {
     return {
       firstname: null,
       lastname: null,
@@ -37,7 +38,7 @@ export default {
     }
   },
   methods: {
-    register() {
+    register () {
       this.$emit('register', {
         firstname: this.firstname,
         lastname: this.lastname,
@@ -46,7 +47,7 @@ export default {
         newsletter: this.newsletter
       })
     },
-    goToLogin() {
+    goToLogin () {
       this.$emit('goToLogin')
     }
   }

@@ -7,14 +7,15 @@ import ABreadcrumbs from './Breadcrumbs.vue'
 
 storiesOf('Elements/Breadcrumbs', module)
   .addDecorator(StoryRouter())
+  // @vue/component
   .add('Default', () => ({
     components: { ABreadcrumbs },
-    data() {
+    data () {
       return {
         breadcrumbs
       }
     },
     template: `
-        <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
+      <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
     `
   }))
