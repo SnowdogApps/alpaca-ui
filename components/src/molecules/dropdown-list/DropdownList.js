@@ -1,6 +1,7 @@
-import ADropdownListItem from "../dropdown-list-item/DropdownListItem.vue"
-import ADropdownListLink from "../../atoms/dropdown-list-link/DropdownListLink.vue"
+import ADropdownListItem from '../dropdown-list-item/DropdownListItem.vue'
+import ADropdownListLink from '../../atoms/dropdown-list-link/DropdownListLink.vue'
 
+// @vue/component
 export default {
   provide: {
     nested: true
@@ -30,7 +31,7 @@ export default {
       default: null
     }
   },
-  beforeCreate() {
+  beforeCreate () {
     this.$options.components.ADropdownList = require('./DropdownList.vue').default
   },
   methods: {

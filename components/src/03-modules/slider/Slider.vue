@@ -1,12 +1,11 @@
 <template src="./Slider.html" />
 
 <script>
-  import instance from "./Slider.js"
+import instance from './Slider.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style lang="scss" src="./Slider.scss"/>
-

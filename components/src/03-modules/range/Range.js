@@ -1,6 +1,7 @@
 import vueSlider from 'vue-slider-component'
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     vueSlider,
@@ -32,18 +33,18 @@ export default {
           tooltip: null,
           enableCross: false,
           railStyle: {
-            "background-color": "#73739c"
+            'background-color': '#73739c'
           },
           processStyle: {
-            "background-color": "#31e37d",
-            "box-shadow": "inset 0 0 3px rgba(51, 51, 51, 0.45)"
+            'background-color': '#31e37d',
+            'box-shadow': 'inset 0 0 3px rgba(51, 51, 51, 0.45)'
           },
           dotStyle: {
-            "box-shadow": "0 2px 4px 0 rgba(51, 51, 51, 0.5)",
-            "width": "24px",
-            "height": "24px",
-            "border-radius": "50%",
-            "background-color": "#fff"
+            'box-shadow': '0 2px 4px 0 rgba(51, 51, 51, 0.5)',
+            'width': '24px',
+            'height': '24px',
+            'border-radius': '50%',
+            'background-color': '#fff'
           }
         }
       }
@@ -56,7 +57,7 @@ export default {
           field: {
             id: 'range-filter-min',
             name: 'range-filter-min',
-            placeholder: '',
+            placeholder: ''
           },
           suffix: '$'
         }
@@ -70,7 +71,7 @@ export default {
           field: {
             id: 'range-filter-max',
             name: 'range-filter-max',
-            placeholder: '',
+            placeholder: ''
           },
           suffix: '$'
         }
@@ -81,17 +82,17 @@ export default {
       default: 'Apply'
     }
   },
-  data() {
+  data () {
     return {
       currentValue: this.value
     }
   },
   computed: {
     minInput: {
-      get: function() {
+      get: function () {
         return this.currentValue[0]
       },
-      set: function(minValue) {
+      set: function (minValue) {
         minValue = this.limitValue(minValue) || this.min
         if (minValue > this.currentValue[1]) {
           this.currentValue = [minValue, minValue]
@@ -102,10 +103,10 @@ export default {
       }
     },
     maxInput: {
-      get: function() {
+      get: function () {
         return this.currentValue[1]
       },
-      set: function(maxValue) {
+      set: function (maxValue) {
         maxValue = this.limitValue(maxValue) || this.max
         if (maxValue < this.currentValue[0]) {
           this.currentValue = [maxValue, maxValue]
@@ -117,7 +118,7 @@ export default {
     }
   },
   methods: {
-    limitValue(value) {
+    limitValue (value) {
       if (value > this.max) {
         value = this.max
       }
@@ -126,13 +127,13 @@ export default {
       }
       return value
     },
-    syncValue(value) {
+    syncValue (value) {
       if (value) {
         this.currentValue = value
       }
       this.$emit('input', this.currentValue)
     },
-    apply() {
+    apply () {
       this.$emit('apply', this.currentValue)
     }
   }

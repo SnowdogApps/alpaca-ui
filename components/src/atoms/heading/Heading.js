@@ -1,3 +1,4 @@
+// @vue/component
 export default {
   props: {
     /**
@@ -17,7 +18,7 @@ export default {
     }
   },
   computed: {
-    levelClassName() {
+    levelClassName () {
       switch (this.level) {
         case 1:
           return 'first'

@@ -2,6 +2,7 @@ import uniqueId from 'lodash.uniqueid'
 import AHeading from '../../atoms/heading/Heading.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     AHeading,
@@ -34,8 +35,8 @@ export default {
     }
   },
   computed: {
-    getItemsWithKey() {
-      return this.items.map(item => ({ key: uniqueId("item"), item }))
+    getItemsWithKey () {
+      return this.items.map(item => ({ key: uniqueId('item'), item }))
     }
-  },
+  }
 }

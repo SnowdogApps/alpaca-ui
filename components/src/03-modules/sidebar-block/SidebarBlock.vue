@@ -1,11 +1,11 @@
 <template src="./SidebarBlock.html" />
 
 <script>
-  import instance from "./SidebarBlock.js"
+import instance from './SidebarBlock.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style

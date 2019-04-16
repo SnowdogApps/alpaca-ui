@@ -1,5 +1,6 @@
 import ADropdownListItem from '../../molecules/dropdown-list-item/DropdownListItem.vue'
 
+// @vue/component
 export default {
   components: {
     ADropdownListItem

@@ -5,6 +5,7 @@ import AInput from '../../02-elements/input/Input.vue'
 import AFieldset from '../../atoms/fieldset/Fieldset.vue'
 import ATextarea from '../../02-elements/textarea/Textarea.vue'
 
+// @vue/component
 export default {
   components: {
     AHeading,
@@ -28,7 +29,7 @@ export default {
       default: null
     }
   },
-  data() {
+  data () {
     return {
       nickname: null,
       summary: null,
@@ -36,7 +37,7 @@ export default {
     }
   },
   methods: {
-    addReview() {
+    addReview () {
       this.$emit('addReview', {
         nickname: this.nickname,
         summary: this.summary,

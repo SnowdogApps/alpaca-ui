@@ -1,12 +1,11 @@
 <template src="./Register.html" />
 
 <script>
-  import instance from "./Register.js"
+import instance from './Register.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style lang="scss" src="./Register.scss"/>
-

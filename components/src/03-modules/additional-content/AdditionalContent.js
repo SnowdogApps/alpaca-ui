@@ -1,5 +1,6 @@
 import APicture from '../../03-modules/picture/Picture.vue'
 
+// @vue/component
 export default {
   components: {
     APicture

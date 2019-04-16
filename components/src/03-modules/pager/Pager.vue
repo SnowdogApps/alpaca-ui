@@ -1,12 +1,11 @@
 <template src="./Pager.html" />
 
 <script>
-  import instance from "./Pager.js"
+import instance from './Pager.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style lang="scss" src="./Pager.scss"/>
-

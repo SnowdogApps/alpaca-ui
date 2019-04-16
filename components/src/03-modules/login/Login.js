@@ -2,6 +2,7 @@ import AFieldset from '../../atoms/fieldset/Fieldset.vue'
 import AButton from '../../atoms/button/Button.vue'
 import AInput from '../../02-elements/input/Input.vue'
 
+// @vue/component
 export default {
   components: {
     AFieldset,
@@ -42,20 +43,20 @@ export default {
       required: true
     }
   },
-  data() {
+  data () {
     return {
       email: null,
       password: null
     }
   },
   methods: {
-    login() {
+    login () {
       this.$emit('login', { email: this.email, password: this.password })
     },
-    goToRegister() {
+    goToRegister () {
       this.$emit('goToRegister')
     },
-    goToForgotPassword() {
+    goToForgotPassword () {
       this.$emit('goToForgotPassword')
     }
   }
