@@ -3,9 +3,9 @@
 $table__padding      : $spacer--medium !default;
 $table__cell__padding: $spacer $table__padding !default;
 $table__background   : $white !default;
+$table__th-background: $gray-lightest !default;
 $table__border       : 1px solid $gray-light !default;
 $table__border-radius: $border-radius !default;
-$table__th-background: $gray-lightest !default;
 
 .table {
   th {
@@ -59,26 +59,6 @@ $table__th-background: $gray-lightest !default;
     }
   }
 
-  tbody {
-    tr {
-      &:last-child {
-        td {
-          &:first-child {
-            @include mq($screen-m) {
-              border-bottom-left-radius: $table__border-radius;
-            }
-          }
-
-          &:last-child {
-            @include mq($screen-m) {
-              border-bottom-right-radius: $table__border-radius;
-            }
-          }
-        }
-      }
-    }
-  }
-
   tfoot {
     td {
       display: block;
@@ -112,34 +92,6 @@ $table__th-background: $gray-lightest !default;
             }
           }
         }
-      }
-    }
-  }
-
-  &--odd-even {
-    tbody {
-      tr {
-        &:nth-child(odd) {
-          background: $table__background;
-        }
-
-        &:nth-child(even) {
-          background: $table__th-background;
-        }
-
-        &:first-child {
-          border-top-left-radius: $table__border-radius;
-          border-top-right-radius: $table__border-radius;
-
-          @include mq($screen-m) {
-            border-top-left-radius: $reset;
-            border-top-right-radius: $reset;
-          }
-        }
-      }
-
-      td {
-        background-color: transparent;
       }
     }
   }

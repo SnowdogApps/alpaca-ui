@@ -50,8 +50,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
   border-bottom: $toolbar__border;
 
   @include mq($screen-m) {
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
   }
 
   &__mode,
@@ -78,8 +78,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     &--visible {
       display: flex;
       flex: 0 0 auto;
-      justify-content: flex-start;
       align-items: center;
+      justify-content: flex-start;
       padding: $spacer 0;
 
       @include mq($screen-m) {
@@ -126,8 +126,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
   &__mode-button {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: $toolbar__mode-icon-area-size;
     height: $toolbar__mode-icon-area-size;
     background: $toolbar__mode-icon-background;
@@ -232,8 +232,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     top: 8px;
     right: 0;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
     width: 20%;
 
     @include mq($screen-m) {
@@ -247,8 +247,8 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     &--relative {
       display: flex;
       flex: 0 0 auto;
-      justify-content: flex-end;
       align-items: center;
+      justify-content: flex-end;
       padding: $spacer 0;
     }
   }

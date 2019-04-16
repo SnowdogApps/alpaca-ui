@@ -3,8 +3,8 @@
 .logo {
   display: flex;
   flex: 1 84px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   max-width: 84px;
 
   @include mq($screen-m) {

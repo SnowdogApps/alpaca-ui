@@ -1,11 +1,40 @@
 @import '../../../assets/styles/globals';
 
-$table__padding      : $spacer--medium !default;
-$table__row__padding : $table__padding 0 !default;
-$table__border-radius: $border-radius !default;
-$table__border       : 1px solid $gray-light !default;
+$table__row__padding    : $spacer--medium 0 !default;
+$table__background--odd : $white !default;
+$table__background--even: $gray-lightest !default;
+$table__border          : 1px solid $gray-light !default;
+$table__border-radius   : $border-radius !default;
 
 .table {
+  &--odd-even {
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background: $table__background--odd;
+        }
+
+        &:nth-child(even) {
+          background: $table__background--even;
+        }
+
+        &:first-child {
+          border-top-left-radius: $table__border-radius;
+          border-top-right-radius: $table__border-radius;
+
+          @include mq($screen-m) {
+            border-top-left-radius: $reset;
+            border-top-right-radius: $reset;
+          }
+        }
+      }
+
+      td {
+        background-color: transparent;
+      }
+    }
+  }
+
   tr {
     display: block;
     padding: $table__row__padding;
