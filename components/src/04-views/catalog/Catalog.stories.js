@@ -7,7 +7,6 @@ import ACatalog from './Catalog.vue'
 import data from './mocks/catalog.json'
 import menu from '../../03-modules/header/mocks/menu.json'
 import toolbar from '../../03-modules/toolbar/mocks/toolbar.json'
-import breadcrumbs from '../../atoms/breadcrumbs/mocks/breadcrumbs'
 import swatchItems from '../../03-modules/filter/mocks/swatchItems'
 import colorItems from '../../03-modules/filter/mocks/colorItems'
 import activeFilterItems from '../../03-modules/active-filters/mocks/active-filters'
@@ -27,7 +26,28 @@ storiesOf('Views/Catalog', module)
         activeFilterItems,
         checkboxItems,
         toolbar,
-        breadcrumbs
+        breadcrumbs: [
+          {
+            'name': 'Home',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb Home'
+          },
+          {
+            'name': 'category2',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb category2'
+          },
+          {
+            'name': 'category3',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb category3'
+          },
+          {
+            'name': 'category4',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb category4, you are on the page: category4'
+          }
+        ]
       }
     },
     template: `

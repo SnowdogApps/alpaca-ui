@@ -1,21 +1,67 @@
 import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
-import breadcrumbs from './mocks/breadcrumbs.json'
-
 import ABreadcrumbs from './Breadcrumbs.vue'
+import ALink from '../link/Link.vue'
 
-storiesOf('Elements/Breadcrumbs', module)
+// @vue/component
+const defaultData = {
+  data () {
+    return {
+      breadcrumbs: [
+        {
+          'text': 'Home',
+          'href': '#'
+        },
+        {
+          'text': 'category2',
+          'href': '#'
+        },
+        {
+          'text': 'category3',
+          'href': '#'
+        },
+        {
+          'text': 'category4',
+          'href': '#'
+        }
+      ]
+    }
+  }
+}
+
+storiesOf('Atoms/Breadcrumbs', module)
   .addDecorator(StoryRouter())
   // @vue/component
   .add('Default', () => ({
     components: { ABreadcrumbs },
-    data () {
-      return {
-        breadcrumbs
-      }
-    },
+    ...defaultData,
     template: `
-      <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
+      <a-breadcrumbs :breadcrumbs='breadcrumbs'/>
+    `
+  }))
+  // @vue/component
+  .add('With named slot', () => ({
+    components: { ABreadcrumbs, ALink },
+    ...defaultData,
+    template: `
+      <a-breadcrumbs :breadcrumbs='breadcrumbs'>
+        <template #previous='data'>
+          <a-link 
+            :href="data.breadcrumb.href"
+            style="padding: 0 10px; color: #333"
+          >
+            {{ data.breadcrumb.text }}
+          </a-link>
+          <span style="padding-top: 3px;">
+            {{ '>' }}
+          </span>
+        </template>
+        <template #current='data'>
+          <span style="padding: 0 10px; color: #2962ff; line-height: 1.5;">
+            {{ data.breadcrumb.text }}
+          </span>
+        </template>
+      </a-breadcrumbs>
     `
   }))

@@ -4,7 +4,6 @@ import StoryRouter from 'storybook-vue-router'
 import AProductView from './ProductView.vue'
 import AHeader from '../../03-modules/header/Header.vue'
 
-import breadcrumbs from '../../atoms/breadcrumbs/mocks/breadcrumbs.json'
 import tabs from '../../02-elements/tabs/mocks/tabs.json'
 import menu from '../../03-modules/header/mocks/menu.json'
 import banner from '../../03-modules/additional-content/mocks/picture.json'
@@ -19,7 +18,28 @@ storiesOf('Views/Product View', module)
     components: { AHeader, AProductView },
     data () {
       return {
-        breadcrumbs,
+        breadcrumbs: [
+          {
+            'name': 'Home',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb Home'
+          },
+          {
+            'name': 'category2',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb category2'
+          },
+          {
+            'name': 'category3',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb category3'
+          },
+          {
+            'name': 'category4',
+            'href': '#',
+            'ariaLabel': 'Breadcrumb category4, you are on the page: category4'
+          }
+        ],
         tabs,
         menu,
         banner,
