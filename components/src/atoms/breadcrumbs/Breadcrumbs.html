@@ -7,7 +7,7 @@
         :breadcrumb="breadcrumb"
       >
         <span
-          :key="breadcrumb.text"
+          :key="`breadcrumb-${i}`"
           :aria-label="breadcrumb.text"
           class="breadcrumbs__item"
           tabindex="0"

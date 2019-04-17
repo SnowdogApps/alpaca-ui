@@ -4,30 +4,11 @@ import StoryRouter from 'storybook-vue-router'
 import ABreadcrumbs from './Breadcrumbs.vue'
 import ALink from '../link/Link.vue'
 
+import breadcrumbs from './mocks/breadcrumbs.json'
+
 // @vue/component
 const defaultData = {
-  data () {
-    return {
-      breadcrumbs: [
-        {
-          'text': 'Home',
-          'href': '#'
-        },
-        {
-          'text': 'category2',
-          'href': '#'
-        },
-        {
-          'text': 'category3',
-          'href': '#'
-        },
-        {
-          'text': 'category4',
-          'href': '#'
-        }
-      ]
-    }
-  }
+  data: () => ({ breadcrumbs })
 }
 
 addDecorator(StoryRouter())

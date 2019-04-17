@@ -10,6 +10,7 @@ import banner from '../../03-modules/additional-content/mocks/picture.json'
 import briefInfo from '../../03-modules/brief-info/mocks/brief-info.json'
 import gallery from '../../03-modules/gallery/mocks/gallery.json'
 import product from './mocks/product.json'
+import breadcrumbs from '../../atoms/breadcrumbs/mocks/breadcrumbs.json'
 
 storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())
@@ -18,24 +19,7 @@ storiesOf('Views/Product View', module)
     components: { AHeader, AProductView },
     data () {
       return {
-        breadcrumbs: [
-          {
-            'text': 'Home',
-            'href': '#'
-          },
-          {
-            'text': 'category2',
-            'href': '#'
-          },
-          {
-            'text': 'category3',
-            'href': '#'
-          },
-          {
-            'text': 'category4',
-            'href': '#'
-          }
-        ],
+        breadcrumbs,
         tabs,
         menu,
         banner,
