@@ -20,24 +20,20 @@ storiesOf('Views/Product View', module)
       return {
         breadcrumbs: [
           {
-            'name': 'Home',
-            'href': '#',
-            'ariaLabel': 'Breadcrumb Home'
+            'text': 'Home',
+            'href': '#'
           },
           {
-            'name': 'category2',
-            'href': '#',
-            'ariaLabel': 'Breadcrumb category2'
+            'text': 'category2',
+            'href': '#'
           },
           {
-            'name': 'category3',
-            'href': '#',
-            'ariaLabel': 'Breadcrumb category3'
+            'text': 'category3',
+            'href': '#'
           },
           {
-            'name': 'category4',
-            'href': '#',
-            'ariaLabel': 'Breadcrumb category4, you are on the page: category4'
+            'text': 'category4',
+            'href': '#'
           }
         ],
         tabs,
