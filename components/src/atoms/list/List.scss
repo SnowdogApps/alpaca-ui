@@ -1,0 +1,14 @@
+@import '../../../assets/styles/globals';
+
+$list__style       : none !default;
+
+.list {
+  margin: $reset;
+  padding: $reset;
+  list-style: $list__style;
+
+  &--horizontal {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
