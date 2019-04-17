@@ -11,47 +11,59 @@ const info = `
   ---
 `
 
-const defaultData = {
-  components: { AList },
-  data () {
-    return {
-      items: [
-        {
-          'text': 'Lorem Ipsum',
-          'id': 'el1'
-        },
-        {
-          'text': 'Lorem Ipsum',
-          'id': 'el2'
-        },
-        {
-          'text': 'Lorem Ipsum',
-          'id': 'el3'
-        }
-      ]
-    }
-  }
-}
-
 storiesOf('Atoms/List', module)
   .addParameters({ info })
   // @vue/component
   .add('Default',
     () => ({
-      ...defaultData,
-      template: `<a-list :items="items"/>`
+      components: { AList, AListItem },
+      template: `
+        <a-list>
+          <a-list-item>
+            Lorem ipsum
+          </a-list-item>
+          <a-list-item>
+            Lorem ipsum
+          </a-list-item>
+          <a-list-item>
+            Lorem ipsum
+          </a-list-item>
+        </a-list>
+      `
     })
   )
   // @vue/component
   .add(
     'Horizontal',
     () => ({
-      ...defaultData,
+      components: { AList, AListItem },
+      data () {
+        return {
+          items: [
+            {
+              'text': 'Lorem Ipsum',
+              'id': 'el1'
+            },
+            {
+              'text': 'Lorem Ipsum',
+              'id': 'el2'
+            },
+            {
+              'text': 'Lorem Ipsum',
+              'id': 'el3'
+            }
+          ]
+        }
+      },
       template: `
-        <a-list
-          :items="items"
-          class="list--horizontal"
-        />
+        <a-list class="list--horizontal">
+          <a-list-item
+            v-for="item in items"
+            :key="item.id"
+          >
+            {{ item.text }}
+          </a-list-item>          
+        </a-list>
       `
     })
   )
@@ -59,6 +71,7 @@ storiesOf('Atoms/List', module)
   .add(
     'With slots',
     () => ({
+      components: { AList, AListItem, AIcon },
       data: () => ({
         items: [
           {
@@ -76,7 +89,7 @@ storiesOf('Atoms/List', module)
         ]
       }),
       template: `
-        <a-list :items="items">
+        <a-list>
           <a-list-item
             v-for="item in items"
             :key="item.id"
@@ -84,11 +97,6 @@ storiesOf('Atoms/List', module)
             <a-icon :icon="item.icon"/>
           </a-list-item>
         </a-list>
-      `,
-      components: {
-        AList,
-        AListItem,
-        AIcon
-      }
+      `
     })
   )

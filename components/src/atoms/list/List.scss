@@ -1,7 +1,6 @@
 @import '../../../assets/styles/globals';
 
 $list__style       : none !default;
-$list__item-padding: $spacer !default;
 
 .list {
   margin: $reset;
@@ -11,9 +10,5 @@ $list__item-padding: $spacer !default;
   &--horizontal {
     display: flex;
     flex-flow: row wrap;
-  }
-
-  &__item {
-    padding: $list__item-padding;
   }
 }

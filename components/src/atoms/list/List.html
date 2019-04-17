@@ -2,15 +2,6 @@
   :is="tag"
   class="list"
 >
-  <!-- @slot Custom list items -->
-  <slot>
-    <template v-if="items">
-      <a-list-item
-        v-for="item in items"
-        :key="item.id"
-      >
-        {{ item.text }}
-      </a-list-item>
-    </template>
-  </slot>
+  <!-- @slot List item -->
+  <slot />
 </component>
