@@ -1,6 +1,7 @@
 <div class="breadcrumbs">
   <template v-for="(breadcrumb, i) in breadcrumbs">
     <template v-if="breadcrumbs.length === i + 1">
+      <!-- @slot Current page (Scoped slot) -->
       <slot
         name="current"
         :breadcrumb="breadcrumb"
@@ -16,6 +17,7 @@
       </slot>
     </template>
     <template v-else>
+      <!-- @slot Previous pages (Scoped slot) -->
       <slot
         name="previous"
         :breadcrumb="breadcrumb"

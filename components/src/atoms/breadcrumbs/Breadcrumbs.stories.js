@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/vue'
+import { addDecorator, storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
 import ABreadcrumbs from './Breadcrumbs.vue'
@@ -30,8 +30,9 @@ const defaultData = {
   }
 }
 
+addDecorator(StoryRouter())
 storiesOf('Atoms/Breadcrumbs', module)
-  .addDecorator(StoryRouter())
+  .addParameters({ info: true })
   // @vue/component
   .add('Default', () => ({
     components: { ABreadcrumbs },
@@ -41,7 +42,7 @@ storiesOf('Atoms/Breadcrumbs', module)
     `
   }))
   // @vue/component
-  .add('With named slot', () => ({
+  .add('With slots', () => ({
     components: { ABreadcrumbs, ALink },
     ...defaultData,
     template: `
@@ -53,8 +54,8 @@ storiesOf('Atoms/Breadcrumbs', module)
           >
             {{ data.breadcrumb.text }}
           </a-link>
-          <span style="padding-top: 3px;">
-            {{ '>' }}
+          <span style="padding-top: 2px;">
+            -
           </span>
         </template>
         <template #current='data'>
