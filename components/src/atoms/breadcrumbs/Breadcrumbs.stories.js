@@ -4,7 +4,7 @@ import StoryRouter from 'storybook-vue-router'
 import ABreadcrumbs from './Breadcrumbs.vue'
 import ALink from '../link/Link.vue'
 
-import breadcrumbs from './mocks/breadcrumbs.json'
+import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
 // @vue/component
 const defaultData = {

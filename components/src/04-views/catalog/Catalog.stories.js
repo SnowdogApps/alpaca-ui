@@ -11,7 +11,7 @@ import swatchItems from '../../03-modules/filter/mocks/swatchItems.json'
 import colorItems from '../../03-modules/filter/mocks/colorItems.json'
 import activeFilterItems from '../../03-modules/active-filters/mocks/active-filters.json'
 import checkboxItems from '../../03-modules/filter/mocks/checkboxItems.json'
-import breadcrumbs from '../../atoms/breadcrumbs/mocks/breadcrumbs.json'
+import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
 storiesOf('Views/Catalog', module)
   .addDecorator(StoryRouter())
