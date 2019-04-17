@@ -14,93 +14,81 @@ const info = `
 
 storiesOf('Atoms/Button', module)
   .addParameters({ info })
-  .add(
-    'Default',
-    () => ({
-      components: { AButton },
-      template: `
-        <a-button>
-          Default button
-        </a-button>
-      `
-    })
-  )
-  .add(
-    'Secondary',
-    () => ({
-      components: { AButton },
-      template: `
-        <a-button
-          class="button--secondary"
-          type="submit"
-        >
-          Secondary button
-        </a-button>
-      `
-    })
-  )
-  .add(
-    'Blank',
-    () => ({
-      components: { AButton },
-      template: `
-        <a-button class="button--blank">
-          Blank button
-        </a-button>
-      `
-    })
-  )
-  .add(
-    'Fluid',
-    () => ({
-      components: { AButton },
-      template: `
-        <a-button class="button--fluid">
-          Fluid button
-        </a-button>
-      `
-    })
-  )
-  .add(
-    'Icon',
-    () => ({
-      components: { AButton, AIcon },
-      template: `
-        <a-button
-          class="button--icon"
-          :style="{padding: '0 12px'}"
-        >
-          <template>
-            <a-icon
-              icon="search"
-              class="button__icon"
-              title="iconTitle"
-            />
-          </template>
-        </a-button>
-      `
-    })
-  )
-  .add(
-    'Icon and text',
-    () => ({
-      components: { AButton, AIcon },
-      template: `
-        <a-button
-          :style="{
-            justifyContent: 'center',
-            alignItems: 'center'
-          }"
-        >
-          <template>
-            Search
-            <a-icon
-              icon="search"
-              title="iconTitle"
-              :style="{marginLeft: '8px'}"
-            />
-          </template>
-        </a-button>
-      `
-    })
-  )
+  // @vue/component
+  .add('Default', () => ({
+    components: { AButton },
+    template: `
+      <a-button>
+        Default button
+      </a-button>
+    `
+  }))
+  // @vue/component
+  .add('Secondary', () => ({
+    components: { AButton },
+    template: `
+      <a-button
+        class="button--secondary"
+        type="submit"
+      >
+        Secondary button
+      </a-button>
+    `
+  }))
+  // @vue/component
+  .add('Blank', () => ({
+    components: { AButton },
+    template: `
+      <a-button class="button--blank">
+        Blank button
+      </a-button>
+    `
+  }))
+  // @vue/component
+  .add('Fluid', () => ({
+    components: { AButton },
+    template: `
+      <a-button class="button--fluid">
+        Fluid button
+      </a-button>
+    `
+  }))
+  // @vue/component
+  .add('Icon', () => ({
+    components: { AButton, AIcon },
+    template: `
+      <a-button
+        class="button--icon"
+        :style="{padding: '0 12px'}"
+      >
+        <template>
+          <a-icon
+            icon="search"
+            class="button__icon"
+            title="iconTitle"
+          />
+        </template>
+      </a-button>
+    `
+  }))
+  // @vue/component
+  .add('Icon and text', () => ({
+    components: { AButton, AIcon },
+    template: `
+      <a-button
+        :style="{
+          justifyContent: 'center',
+          alignItems: 'center'
+        }"
+      >
+        <template>
+          Search
+          <a-icon
+            icon="search"
+            title="iconTitle"
+            :style="{marginLeft: '8px'}"
+          />
+        </template>
+      </a-button>
+    `
+  }))

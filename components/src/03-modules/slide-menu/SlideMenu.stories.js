@@ -6,6 +6,7 @@ import menu from '../../../mocks/slide-menu.json'
 
 storiesOf('Modules/Slide Menu', module)
   .addDecorator(StoryRouter())
+  // @vue/component
   .add('Default', () => ({
     components: { ASlideMenu },
     data: () => ({

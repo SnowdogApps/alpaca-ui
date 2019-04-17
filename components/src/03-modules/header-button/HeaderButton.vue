@@ -1,11 +1,11 @@
 <template src="./HeaderButton.html" />
 
 <script>
-  import instance from "./HeaderButton.js"
+import instance from './HeaderButton.js'
 
-  export default {
-    ...instance
-  }
+export default {
+  ...instance
+}
 </script>
 
 <style lang="scss" src="./HeaderButton.scss"/>

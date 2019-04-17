@@ -2,6 +2,7 @@ import ABadge from '../../atoms/badge/Badge.vue'
 import AImage from '../../atoms/image/Image.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     ABadge,
@@ -26,23 +27,23 @@ export default {
       default: 1
     }
   },
-  data(){
+  data () {
     return {
       currentImage: this.mainImage === 0
         ? this.mainImage
         : this.mainImage >= this.images.length
           ? this.images.length - 1
-          : this.mainImage -1
+          : this.mainImage - 1
     }
   },
   computed: {
-    selectedImage() {
+    selectedImage () {
       return this.images[this.currentImage]
     }
   },
   methods: {
     setCurrentImage (val) {
-      if(this.images[val]){
+      if (this.images[val]) {
         this.currentImage = val
       }
     }

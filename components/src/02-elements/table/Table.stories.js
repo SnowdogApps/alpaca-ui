@@ -9,6 +9,7 @@ import headCells from './mocks/headCells.json'
 import footCells from './mocks/footCells.json'
 
 storiesOf('Elements/Table', module)
+  // @vue/component
   .add('Default', () => ({
     components: { ATable, ATableRow, ATableCell },
     data: () => ({
@@ -17,47 +18,48 @@ storiesOf('Elements/Table', module)
       footCells
     }),
     template: `
-        <a-table caption="This is a table">
-          <thead>
-            <a-table-row>
-              <a-table-cell
-                tag="th"
-                v-for="headCell in headCells"
-                :key="headCell.id"
-                :scope="headCell.scope"
-              >
-                {{ headCell.text }}
-               </a-table-cell>
-             </a-table-row>
-          </thead>
-          <tbody>
-            <a-table-row
-              v-for="row in bodyRows"
-              :key="row.id"
+      <a-table caption="This is a table">
+        <thead>
+          <a-table-row>
+            <a-table-cell
+              tag="th"
+              v-for="headCell in headCells"
+              :key="headCell.id"
+              :scope="headCell.scope"
             >
-              <a-table-cell
-                v-for="bodyCell in row"
-                :key="bodyCell.id"
-                :data-th="bodyCell.mobileHeading"
-              >
-                {{ bodyCell.text }}
-               </a-table-cell>
-             </a-table-row>
-          </tbody>
-          <tfoot>
-            <a-table-row>
-              <a-table-cell
-                v-for="footCell in footCells"
-                :key="footCell.id"
-                :colspan="footCell.colspan"
-              >
-                {{ footCell.text }}
-               </a-table-cell>
-             </a-table-row>
-          </tfoot>
-         </a-table>
+              {{ headCell.text }}
+              </a-table-cell>
+            </a-table-row>
+        </thead>
+        <tbody>
+          <a-table-row
+            v-for="row in bodyRows"
+            :key="row.id"
+          >
+            <a-table-cell
+              v-for="bodyCell in row"
+              :key="bodyCell.id"
+              :data-th="bodyCell.mobileHeading"
+            >
+              {{ bodyCell.text }}
+              </a-table-cell>
+            </a-table-row>
+        </tbody>
+        <tfoot>
+          <a-table-row>
+            <a-table-cell
+              v-for="footCell in footCells"
+              :key="footCell.id"
+              :colspan="footCell.colspan"
+            >
+              {{ footCell.text }}
+              </a-table-cell>
+            </a-table-row>
+        </tfoot>
+        </a-table>
     `
   }))
+  // @vue/component
   .add('Odd Even', () => ({
     components: { ATable, ATableRow, ATableCell },
     data: () => ({
@@ -66,47 +68,47 @@ storiesOf('Elements/Table', module)
       footCells
     }),
     template: `
-        <a-table
-          caption="This is a table"
-          class="table--odd-even"
-        >
-          <thead>
-            <a-table-row>
-              <a-table-cell
-                tag="th"
-                v-for="headCell in headCells"
-                :key="headCell.id"
-                :scope="headCell.scope"
-              >
-                {{ headCell.text }}
-               </a-table-cell>
-             </a-table-row>
-          </thead>
-          <tbody>
-            <a-table-row
-              v-for="row in bodyRows"
-              :key="row.id"
+      <a-table
+        caption="This is a table"
+        class="table--odd-even"
+      >
+        <thead>
+          <a-table-row>
+            <a-table-cell
+              tag="th"
+              v-for="headCell in headCells"
+              :key="headCell.id"
+              :scope="headCell.scope"
             >
-              <a-table-cell
-                v-for="bodyCell in row"
-                :key="bodyCell.id"
-                :data-th="bodyCell.mobileHeading"
-              >
-                {{ bodyCell.text }}
-               </a-table-cell>
-             </a-table-row>
-          </tbody>
-          <tfoot>
-            <a-table-row>
-              <a-table-cell
-                v-for="footCell in footCells"
-                :key="footCell.id"
-                :colspan="footCell.colspan"
-              >
-                {{ footCell.text }}
-               </a-table-cell>
-             </a-table-row>
-          </tfoot>
-         </a-table>
+              {{ headCell.text }}
+              </a-table-cell>
+            </a-table-row>
+        </thead>
+        <tbody>
+          <a-table-row
+            v-for="row in bodyRows"
+            :key="row.id"
+          >
+            <a-table-cell
+              v-for="bodyCell in row"
+              :key="bodyCell.id"
+              :data-th="bodyCell.mobileHeading"
+            >
+              {{ bodyCell.text }}
+              </a-table-cell>
+            </a-table-row>
+        </tbody>
+        <tfoot>
+          <a-table-row>
+            <a-table-cell
+              v-for="footCell in footCells"
+              :key="footCell.id"
+              :colspan="footCell.colspan"
+            >
+              {{ footCell.text }}
+              </a-table-cell>
+            </a-table-row>
+        </tfoot>
+        </a-table>
     `
   }))

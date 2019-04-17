@@ -1,5 +1,6 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon
@@ -20,10 +21,10 @@ export default {
     icon: {
       type: String,
       default: null
-    },
+    }
   },
   methods: {
-    setActiveTab() {
+    setActiveTab () {
       this.$emit('click', event)
     }
   }

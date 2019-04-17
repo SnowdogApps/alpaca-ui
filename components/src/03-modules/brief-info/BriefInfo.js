@@ -1,6 +1,7 @@
 import AHeading from '../../atoms/heading/Heading.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     AHeading,
