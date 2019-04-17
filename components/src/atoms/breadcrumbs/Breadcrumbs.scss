@@ -22,6 +22,7 @@ $breadcrumbs__link-color-hover : $blue !default;
     &::after {
       display: flex;
       margin: $breadcrumbs__link-margin-after;
+      color: $breadcrumbs__link-color;
       content: '/';
     }
 
@@ -32,7 +33,6 @@ $breadcrumbs__link-color-hover : $blue !default;
 
   &__item {
     display: flex;
-    align-items: stretch;
     color: $breadcrumbs__item-color;
     line-height: 1.5;
   }
