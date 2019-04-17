@@ -7,6 +7,7 @@ $breadcrumbs__link-color-hover : $blue !default;
 $breadcrumbs__link-margin-after: 0 $spacer--medium !default;
 
 .breadcrumbs {
+  display: none;
   font-size: $breadcrumbs__font-size;
 
   @include mq($screen-m) {
