@@ -4,13 +4,13 @@ import StoryRouter from 'storybook-vue-router'
 import AProductView from './ProductView.vue'
 import AHeader from '../../03-modules/header/Header.vue'
 
-import breadcrumbs from '../../02-elements/breadcrumbs/mocks/breadcrumbs.json'
 import tabs from '../../02-elements/tabs/mocks/tabs.json'
 import menu from '../../03-modules/header/mocks/menu.json'
 import banner from '../../03-modules/additional-content/mocks/picture.json'
 import briefInfo from '../../03-modules/brief-info/mocks/brief-info.json'
 import gallery from '../../03-modules/gallery/mocks/gallery.json'
 import product from './mocks/product.json'
+import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
 storiesOf('Views/Product View', module)
   .addDecorator(StoryRouter())
