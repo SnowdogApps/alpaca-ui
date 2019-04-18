@@ -1,7 +1,9 @@
-// @vue/component
 export default {
   props: {
-    listTag: {
+    /**
+     *  Tag
+     */
+    tag: {
       type: String,
       default: 'ul'
     }
