@@ -37,6 +37,14 @@ export default {
       default: 0
     }
   },
+  computed: {
+    filteredTotals () {
+      return this.totals.filter(total => total.code !== 'grand_total')
+    },
+    grandTotal () {
+      return this.totals.find(total => total.code === 'grand_total')
+    }
+  },
   methods: {
     returnToShopping () {
       this.$emit('returnToShopping')

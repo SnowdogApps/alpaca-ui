@@ -8,20 +8,28 @@
       class="heading heading--first-level minicart__summary-heading"
     >
       {{ summaryTitle }}
-     </a-heading>
+    </a-heading>
     <div
-      v-for="total in totals"
+      v-for="total in filteredTotals"
       :key="total.code"
-      :class="[
-        'row row--no-margins between-xs',
-        { 'minicart__grand-total-row': total.code === 'grand_total' }
-      ]"
+      class="row row--no-margins between-xs"
     >
       <div class="col-xs-9">
         {{ total.title }}
       </div>
       <div class="col-xs-3 end-xs">
         {{ total.value }}
+      </div>
+    </div>
+    <div
+      v-if="grandTotal"
+      class="row row--no-margins between-xs minicart__grand-total-row"
+    >
+      <div class="col-xs-9">
+        {{ grandTotal.title }}
+      </div>
+      <div class="col-xs-3 end-xs">
+        {{ grandTotal.value }}
       </div>
     </div>
   </section>
