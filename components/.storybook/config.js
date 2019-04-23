@@ -25,6 +25,7 @@ addParameters({
   options: {
     theme: {
       brandTitle: 'Alpaca UI',
+      brandImage: 'assets/icons/alpaca.svg',
       brandUrl: "https://github.com/SnowdogApps/alpaca-ui"
     }
   }
