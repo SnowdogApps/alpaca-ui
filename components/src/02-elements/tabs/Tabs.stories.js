@@ -26,8 +26,7 @@ storiesOf('Elements/Tabs', module)
         <template v-for="tab in tabs">
           <a-tab
             :key="tab.tabId"
-            :tab-id="tab.tabId"}))
-          }))
+            :tab-id="tab.tabId"
             :title="tab.title"
             :active-tab="activeTab"
             @click="setActiveTab(tab.tabId)"
