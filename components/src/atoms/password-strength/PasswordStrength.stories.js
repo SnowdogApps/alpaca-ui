@@ -14,36 +14,30 @@ const info = `
 
 storiesOf('Atoms/PasswordStrength', module)
   .addParameters({ info })
-  .add(
-    'Default',
-    () => ({
-      components: { APasswordStrength },
-      template: `
-        <a-password-strength>
-          No password
-        </a-password-strength>
-      `
-    })
-  )
-  .add(
-    'Visible Label',
-    () => ({
-      components: { APasswordStrength },
-      template: `
-        <a-password-strength label="Passworf strength">
-          No password
-        </a-password-strength>
-      `
-    })
-  )
-  .add(
-    'Medium strength',
-    () => ({
-      components: { APasswordStrength },
-      template: `
-        <a-password-strength class="password-strength--medium">
-          Medium
-        </a-password-strength>
-      `
-    })
-  )
+  // @vue/component
+  .add('Default', () => ({
+    components: { APasswordStrength },
+    template: `
+      <a-password-strength>
+        No password
+      </a-password-strength>
+    `
+  }))
+  // @vue/component
+  .add('Visible Label', () => ({
+    components: { APasswordStrength },
+    template: `
+      <a-password-strength label="Passworf strength">
+        No password
+      </a-password-strength>
+    `
+  }))
+  // @vue/component
+  .add('Medium strength', () => ({
+    components: { APasswordStrength },
+    template: `
+      <a-password-strength class="password-strength--medium">
+        Medium
+      </a-password-strength>
+    `
+  }))
