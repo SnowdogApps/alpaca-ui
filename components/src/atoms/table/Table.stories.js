@@ -85,7 +85,7 @@ storiesOf('Atoms/Table', module)
               tag="th"
               v-for="headCell in headCells"
               :key="headCell.id"
-              :scope="headCell.scope"
+              scope="col"
             >
               {{ headCell.text }}
             </a-table-cell>
