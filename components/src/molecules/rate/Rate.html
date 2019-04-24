@@ -1,4 +1,7 @@
-<a-fieldset class="rating__wrapper">
+<a-fieldset
+  :legend-text="legend"
+  class="rating__wrapper"
+>
   <div
     v-if="!disabled"
     class="rating rating--rate"

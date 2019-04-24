@@ -10,6 +10,13 @@ export default {
   },
   props: {
     /**
+     * Legend for fieldset
+     */
+    legend: {
+      type: String,
+      default: null
+    },
+    /**
      * Current average of rate
      */
     rating: {
