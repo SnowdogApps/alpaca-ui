@@ -1,16 +1,16 @@
 <alpaca-fieldset class="rating">
-  <div
+<div
     v-if="!disabled"
-    class=" rating--rate"
     role="listbox"
     aria-required="true"
     aria-labelledby="rating-field-label"
+    class="rating__content"
   >
     <div
       v-for="item in ratingItems"
       :id="item"
       :key="item"
-      :class="['rating__rate-item', active >= item ? 'rating__rate-item--active' : '']"
+      :class="['rating__item', active >= item ? 'rating__item--active' : '']"
       role="option"
       :aria-selected="rating === item"
     >

@@ -16,19 +16,27 @@ $rating__error-color            : $red !default;
 
   &:hover,
   &:focus {
-    .rating__rate-item span::before {
+    .rating__item span::before {
       display: block;
     }
   }
 
-  &__rate-item {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $rating__size;
+    margin-bottom: $rating__margin--rate;
+  }
+
+  &__item {
     position: relative;
     flex: 1 0 $rating__item-size;
     overflow: hidden;
 
     &:hover,
     &:focus {
-      ~ .rating__rate-item span::before {
+      ~ .rating__item span::before {
         display: none;
       }
     }
@@ -59,10 +67,6 @@ $rating__error-color            : $red !default;
         height: 100%;
         background-size: $rating__item-size 100%;
       }
-    }
-
-    &--single {
-      width: $rating__item-size;
     }
   }
 
@@ -103,7 +107,7 @@ $rating__error-color            : $red !default;
 
       .rating__star--rate:hover &,
       .rating__star--rate:focus &,
-      .rating__rate-item--active & {
+      .rating__item--active & {
         display: block;
       }
     }
@@ -135,33 +139,13 @@ $rating__error-color            : $red !default;
     }
   }
 
-  &__error {
-    display: none;
-    margin-bottom: $rating__error-margin-bottom;
-    color: $rating__error-color;
-
-    &--visible {
-      display: block;
-    }
-  }
-
-  &--rate {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $rating__size;
-    margin-bottom: $rating__margin--rate;
-
-    .rating__rate-item {
-      flex: 1 0 $rating__item-size;
-    }
-  }
-
   &--large {
     .rating {
-      width: $rating__size--large;
+      &__content {
+        width: $rating__size--large;
+      }
 
-      &__rate-item {
+      &__item {
         flex: 1 0 $rating__item-size--large;
       }
 
@@ -169,7 +153,7 @@ $rating__error-color            : $red !default;
         width: $rating__size--large;
         height: $rating__item-size--large;
 
-        &::before { // inactive
+        &::before {
           width: $rating__size--large;
           height: $rating__item-size--large;
           background-size: $rating__item-size--large;
@@ -205,25 +189,6 @@ $rating__error-color            : $red !default;
 
           @include isIE() {
             background-size: $rating__item-size--large 100%;
-          }
-        }
-      }
-
-      &--rate {
-        width: $rating__size--large;
-
-        .rating__indicator {
-          width: $rating__item-size--large;
-          height: $rating__item-size--large;
-
-          &::before {
-            height: $rating__item-size--large;
-            background-size: $rating__item-size--large;
-          }
-
-          &::after {
-            height: $rating__item-size--large;
-            background-size: $rating__item-size--large;
           }
         }
       }
