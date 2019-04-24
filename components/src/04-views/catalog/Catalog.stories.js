@@ -7,11 +7,11 @@ import ACatalog from './Catalog.vue'
 import data from './mocks/catalog.json'
 import menu from '../../03-modules/header/mocks/menu.json'
 import toolbar from '../../03-modules/toolbar/mocks/toolbar.json'
-import breadcrumbs from '../../02-elements/breadcrumbs/mocks/breadcrumbs'
-import swatchItems from '../../03-modules/filter/mocks/swatchItems'
-import colorItems from '../../03-modules/filter/mocks/colorItems'
-import activeFilterItems from '../../03-modules/active-filters/mocks/active-filters'
-import checkboxItems from '../../03-modules/filter/mocks/checkboxItems'
+import swatchItems from '../../03-modules/filter/mocks/swatchItems.json'
+import colorItems from '../../03-modules/filter/mocks/colorItems.json'
+import activeFilterItems from '../../03-modules/active-filters/mocks/active-filters.json'
+import checkboxItems from '../../03-modules/filter/mocks/checkboxItems.json'
+import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
 storiesOf('Views/Catalog', module)
   .addDecorator(StoryRouter())

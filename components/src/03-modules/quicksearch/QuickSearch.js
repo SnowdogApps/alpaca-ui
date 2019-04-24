@@ -5,8 +5,8 @@ import AHeading from '../../atoms/heading/Heading.vue'
 import AImage from '../../atoms/image/Image.vue'
 import AButton from '../../atoms/button/Button.vue'
 import APrice from '../../atoms/price/Price.vue'
-import AList from '../../02-elements/list/List.vue'
-import AListItem from '../../02-elements/list-item/ListItem.vue'
+import AList from '../../atoms/list/List.vue'
+import AListItem from '../../atoms/list-item/ListItem.vue'
 
 // @vue/component
 export default {
