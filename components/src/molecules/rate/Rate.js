@@ -17,7 +17,7 @@ export default {
       default: null
     },
     /**
-     * Current average of rate
+     * Current average of rating
      */
     rating: {
       type: Number,
@@ -31,14 +31,14 @@ export default {
       required: true
     },
     /**
-     * Aria label of rate
+     * Aria label of rating
      */
     ariaLabelRate: {
       type: String,
       default: null
     },
     /**
-     * Aria label of disabled rate
+     * Aria label of disabled rating
      */
     disabledRateAriaLabel: {
       type: String,
@@ -47,7 +47,7 @@ export default {
       }
     },
     /**
-     * Title of disabled rate
+     * Title of disabled rating
      */
     disabledRateTitle: {
       type: String,
@@ -56,7 +56,7 @@ export default {
       }
     },
     /**
-     * Allows to block the rate
+     * Allows to block the rating
      */
     disabled: {
       type: Boolean,
