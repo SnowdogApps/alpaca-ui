@@ -62,6 +62,13 @@ $quantity-updater__error-max-width                 : 120px !default;
     background: $quantity-update__button-background;
     border: $quantity-update__button-border;
 
+    &:hover,
+    &:focus {
+      .quantity-update__icon {
+        fill: $quantity-updater__icon-fill-hover;
+      }
+    }
+
     &--plus {
       border-left: 0;
       border-radius: 0 100% 100% 0;
@@ -93,13 +100,8 @@ $quantity-updater__error-max-width                 : 120px !default;
   &__icon {
     width: $quantity-updater__icon-spacing;
     height: $quantity-updater__icon-spacing;
+    transition: $quantity-updater__icon-transition;
     fill: $quantity-updater__icon-fill;
-
-    &:hover,
-    &:focus {
-      transition: $quantity-updater__icon-transition;
-      fill: $quantity-updater__icon-fill-hover;
-    }
   }
 
   // Disable spin buttons in number input type
