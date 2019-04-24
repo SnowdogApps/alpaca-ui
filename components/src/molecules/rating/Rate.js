@@ -1,8 +1,8 @@
-import AlpacaFieldset from '../../atoms/fieldset/Fieldset.vue'
+import AFieldset from '../../atoms/fieldset/Fieldset.vue'
 
 export default {
   components: {
-    AlpacaFieldset
+    AFieldset
   },
   model: {
     prop: 'rating',

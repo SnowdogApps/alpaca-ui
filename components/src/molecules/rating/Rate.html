@@ -1,4 +1,4 @@
-<alpaca-fieldset class="rating">
+<a-fieldset class="rating">
 <div
     v-if="!disabled"
     role="listbox"
@@ -8,7 +8,6 @@
   >
     <div
       v-for="item in ratingItems"
-      :id="item"
       :key="item"
       :class="['rating__item', active >= item ? 'rating__item--active' : '']"
       role="option"
@@ -16,14 +15,14 @@
     >
       <!-- @slot Custom label (Named slot)-->
       <slot name="label">
-        <label
-          class="rating__star rating__star--rate"
-          :for="item"
+        <div
+          class="button--blank rating__star rating__star--rate"
           :aria-label="ariaLabelRate"
+          tabindex="0"
           @click="selectValue(item)"
         >
           <span class="rating__indicator" />
-        </label>
+        </div>
       </slot>
     </div>
   </div>
@@ -43,4 +42,4 @@
       </div>
     </slot>
   </div>
-</alpaca-fieldset>
+</a-fieldset>
