@@ -11,9 +11,7 @@ storiesOf('Elements/Form/Input', module)
     template: `
       <a-input
         label="Default label"
-        type="text"
         id="field_id"
-        name="default"
         placeholder="First and last name"
         v-model="value"
       />
@@ -28,7 +26,6 @@ storiesOf('Elements/Form/Input', module)
       <a-textarea
         label="Textarea"
         id="field_id"
-        name="textarea"
         placeholder="First and last name"
         v-model="value"
       />
@@ -42,9 +39,7 @@ storiesOf('Elements/Form/Input', module)
     template: `
       <a-input
         label="Hidden label"
-        type="text"
         id="field_id"
-        name="hidden"
         placeholder="Hidden label"
         hidden-label
         v-model="value"
@@ -59,9 +54,7 @@ storiesOf('Elements/Form/Input', module)
     template: `
       <a-input
         label="Inline text"
-        type="text"
         id="field_id"
-        name="inline"
         placeholder="First and last name"
         inline
         v-model="value"
