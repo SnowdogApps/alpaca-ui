@@ -1,6 +1,7 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon,
@@ -37,13 +38,13 @@ export default {
       isOpen: false
     }
   },
-  mounted() {
+  mounted () {
     if (localStorage.getItem(this.dataType) !== 'closed') {
       this.isOpen = true
     }
   },
   methods: {
-    closeBar() {
+    closeBar () {
       const focusable = document.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]')
 
       this.isOpen = false

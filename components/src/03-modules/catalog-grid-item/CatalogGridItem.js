@@ -5,6 +5,7 @@ import APrice from '../../atoms/price/Price.vue'
 import AImage from '../../atoms/image/Image.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon,
@@ -41,13 +42,13 @@ export default {
     }
   },
   methods: {
-    addToCart(event) {
+    addToCart (event) {
       this.$emit('addToCart', event)
     },
-    addToWishList(event) {
+    addToWishList (event) {
       this.$emit('addToWishList', event)
     },
-    addToCompare(event) {
+    addToCompare (event) {
       this.$emit('addToCompare', event)
     }
   }

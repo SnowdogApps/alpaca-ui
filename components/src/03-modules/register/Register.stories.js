@@ -3,9 +3,15 @@ import { action } from '@storybook/addon-actions'
 
 import ARegister from './Register.vue'
 
-storiesOf('Modules/Register', module).add('Default', () => ({
-  components: { ARegister },
-  template: `
+storiesOf('Modules/Register', module)
+  // @vue/component
+  .add('Default', () => ({
+    components: { ARegister },
+    methods: {
+      register: action('Register'),
+      goToLogin: action('Login view')
+    },
+    template: `
       <a-register
         style="padding: 20px;"
         personal-information-legend="Personal information"
@@ -15,9 +21,5 @@ storiesOf('Modules/Register', module).add('Default', () => ({
         @goToLogin="goToLogin"
         @register="register"
       />
-  `,
-  methods: {
-    register: action('Register'),
-    goToLogin: action('Login view')
-  }
-}))
+    `
+  }))

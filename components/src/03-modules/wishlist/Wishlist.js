@@ -1,6 +1,7 @@
-import AList from "../../02-elements/list/List.vue"
-import AProductItem from "../../03-modules/product-item/ProductItem.vue"
+import AList from '../../atoms/list/List.vue'
+import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 
+// @vue/component
 export default {
   components: {
     AList,
@@ -17,8 +18,8 @@ export default {
     }
   },
   methods: {
-    onRemove(val) {
-      this.$emit("remove", val)
-    },
+    onRemove (val) {
+      this.$emit('remove', val)
+    }
   }
 }

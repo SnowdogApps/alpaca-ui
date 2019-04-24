@@ -27,8 +27,8 @@ $sidebar-block__action-margin-left    : $spacer !default;
 
   &__heading {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: $sidebar-block__heading-margin-bottom;
   }
 
@@ -54,8 +54,8 @@ $sidebar-block__action-margin-left    : $spacer !default;
       min-width: $sidebar-block__index-min-width;
       margin: $sidebar-block__index-margin;
       font-weight: $sidebar-block__index-font-weight;
-      counter-increment: sidebarIndex;
       content: counter(sidebarIndex) ".";
+      counter-increment: sidebarIndex;
     }
   }
 

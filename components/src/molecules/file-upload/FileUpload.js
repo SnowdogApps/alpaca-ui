@@ -1,6 +1,7 @@
 import AButton from '../../atoms/button/Button.vue'
 import ALabel from '../../atoms/label/Label.vue'
 
+// @vue/component
 export default {
   components: {
     AButton,
@@ -71,17 +72,17 @@ export default {
       default: null
     }
   },
-  data() {
+  data () {
     return {
       fileName: '',
       error: false
     }
   },
   methods: {
-    chooseFile() {
+    chooseFile () {
       this.$refs.fileInput.click()
     },
-    updateFile() {
+    updateFile () {
       const file = this.$refs.fileInput.files[0]
       if (file && this.maxSize && file.size > this.maxSize) {
         this.error = true

@@ -1,22 +1,25 @@
-import AImage from "../../atoms/image/Image.vue"
-import AIcon from "../../atoms/icon/Icon.vue"
-import APrice from "../../atoms/price/Price.vue"
-import ADescriptionList from "../../02-elements/description-list/DescriptionList.vue"
-import AButton from "../../atoms/button/Button.vue"
-import AQuantityUpdate from "../../03-modules/quantity-update/QuantityUpdate.vue"
+import AImage from '../../atoms/image/Image.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import APrice from '../../atoms/price/Price.vue'
+import AList from '../../atoms/list/List.vue'
+import AListItem from '../../atoms/list-item/ListItem.vue'
+import AButton from '../../atoms/button/Button.vue'
+import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
 
+// @vue/component
 export default {
   components: {
     AImage,
     AIcon,
     APrice,
-    ADescriptionList,
+    AList,
+    AListItem,
     AButton,
     AQuantityUpdate
   },
   model: {
-    prop: "quantity",
-    event: "change"
+    prop: 'quantity',
+    event: 'change'
   },
   props: {
     id: {
@@ -62,15 +65,15 @@ export default {
   },
   data () {
     return {
-      defaultRemoveBtnAriaLabel: "Remove product"
+      defaultRemoveBtnAriaLabel: 'Remove product'
     }
   },
   methods: {
-    onRemove(val) {
-      this.$emit("remove", val)
+    onRemove (val) {
+      this.$emit('remove', val)
     },
-    onChange(val) {
-      this.$emit("change", val)
+    onChange (val) {
+      this.$emit('change', val)
     }
   }
 }

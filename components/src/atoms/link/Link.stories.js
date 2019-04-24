@@ -12,42 +12,36 @@ const info = `
 
 storiesOf('Atoms/Link', module)
   .addParameters({ info })
-  .add(
-    'Default',
-    () => ({
-      components: { ALink },
-      template: `
-        <a-link href="#">
-          Default link
+  // @vue/component
+  .add('Default', () => ({
+    components: { ALink },
+    template: `
+      <a-link href="#">
+        Default link
+      </a-link>
+    `
+  }))
+  // @vue/component
+  .add('Inverted', () => ({
+    components: { ALink },
+    template: `
+      <a-link
+        href="#"
+        class="link--inverted"
+      >
+        Inverted link
         </a-link>
       `
-    })
-  )
-  .add(
-    'Inverted',
-    () => ({
-      components: { ALink },
-      template: `
-        <a-link
-          href="#"
-          class="link--inverted"
-        >
-          Inverted link
+  }))
+  // @vue/component
+  .add('Secondary', () => ({
+    components: { ALink },
+    template: `
+      <a-link
+        href="#"
+        class="link--secondary"
+      >
+        Secondary link
         </a-link>
       `
-    })
-  )
-  .add(
-    'Secondary',
-    () => ({
-      components: { ALink },
-      template: `
-        <a-link
-          href="#"
-          class="link--secondary"
-        >
-          Secondary link
-        </a-link>
-      `
-    })
-  )
+  }))

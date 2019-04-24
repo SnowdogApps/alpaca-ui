@@ -1,8 +1,9 @@
 import AHeading from '../../atoms/heading/Heading.vue'
-import AList from "../../02-elements/list/List.vue"
-import AButton from "../../atoms/button/Button.vue"
-import AProductItem from "../../03-modules/product-item/ProductItem.vue"
+import AList from '../../atoms/list/List.vue'
+import AButton from '../../atoms/button/Button.vue'
+import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 
+// @vue/component
 export default {
   components: {
     AHeading,
@@ -37,11 +38,11 @@ export default {
     }
   },
   methods: {
-    returnToShopping() {
+    returnToShopping () {
       this.$emit('returnToShopping')
     },
-    goToCheckout() {
+    goToCheckout () {
       this.$emit('goToCheckout')
-    },
+    }
   }
 }

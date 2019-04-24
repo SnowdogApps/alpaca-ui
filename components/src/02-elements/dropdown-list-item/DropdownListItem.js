@@ -1,5 +1,6 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     AIcon
@@ -26,19 +27,19 @@ export default {
       default: null
     }
   },
-  data() {
+  data () {
     return {
       collapseLocal: this.collapse
     }
   },
-  methods: {
-    toggle() {
-      this.collapseLocal = !this.collapseLocal
+  watch: {
+    collapse (val) {
+      this.collapseLocal = val
     }
   },
-  watch: {
-    collapse(val) {
-      this.collapseLocal = val
+  methods: {
+    toggle () {
+      this.collapseLocal = !this.collapseLocal
     }
   }
 }

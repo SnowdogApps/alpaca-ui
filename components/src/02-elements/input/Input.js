@@ -1,4 +1,6 @@
 import ALabel from '../../atoms/label/Label.vue'
+
+// @vue/component
 export default {
   components: {
     ALabel

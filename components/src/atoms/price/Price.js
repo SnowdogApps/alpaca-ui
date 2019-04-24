@@ -1,3 +1,4 @@
+// @vue/component
 export default {
   props: {
     /**
@@ -30,10 +31,10 @@ export default {
     }
   },
   computed: {
-    specialPriceAriaLabel() {
+    specialPriceAriaLabel () {
       return `${this.ariaLabelSpecial} ${this.specialPrice}`
     },
-    oldPriceAriaLabel() {
+    oldPriceAriaLabel () {
       return `${this.ariaLabelOld} ${this.oldPrice}`
     }
   }

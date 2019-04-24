@@ -1,6 +1,6 @@
 import AContainer from '../../atoms/container/Container.vue'
 import AHeading from '../../atoms/heading/Heading.vue'
-import ABreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
+import ABreadcrumbs from '../../atoms/breadcrumbs/Breadcrumbs.vue'
 import AButton from '../../atoms/button/Button.vue'
 import APrice from '../../atoms/price/Price.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
@@ -16,6 +16,7 @@ import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue
 import ASlider from '../../03-modules/slider/Slider.vue'
 import { Slide } from 'vue-carousel'
 
+// @vue/component
 export default {
   components: {
     AContainer,
@@ -112,7 +113,7 @@ export default {
     }
   },
   methods: {
-    setActiveTab(tab) {
+    setActiveTab (tab) {
       this.activeTab = this.tabs
         .filter(el => el.tabId === tab)
         .map(el => el.tabId)[0]
