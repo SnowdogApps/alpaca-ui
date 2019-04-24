@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
-import AlpacaRate from './Rate.vue'
+import ARate from './Rate.vue'
 
 const info = `
   ---
@@ -15,13 +15,13 @@ storiesOf('Molecules/Rate', module)
   .add(
     'Default',
     () => ({
-      components: { AlpacaRate },
+      components: { ARate },
       data: () => ({
         rating: 2.4,
         ratingItems: 5
       }),
       template: `
-        <alpaca-rate 
+        <a-rate 
          v-model="rating"
          :rating-items="ratingItems"
          disabled
@@ -33,13 +33,13 @@ storiesOf('Molecules/Rate', module)
   .add(
     'Rate',
     () => ({
-      components: { AlpacaRate },
+      components: { ARate },
       data: () => ({
-        rating: 3,
-        ratingItems: 5
+        rating: 1,
+        ratingItems: 4
       }),
       template: `
-        <alpaca-rate 
+        <a-rate 
          v-model="rating"
          :rating-items="ratingItems"
          :aria-label-rate="ariaLabelRate()"
@@ -58,13 +58,13 @@ storiesOf('Molecules/Rate', module)
   .add(
     'Large',
     () => ({
-      components: { AlpacaRate },
+      components: { ARate },
       data: () => ({
         rating: 2.4,
         ratingItems: 5
       }),
       template: `
-        <alpaca-rate 
+        <a-rate 
          class="rating--large"
          v-model="rating"
          :rating-items="ratingItems"
@@ -72,5 +72,32 @@ storiesOf('Molecules/Rate', module)
          legend="Your rating"
         />
       `
+    })
+  )
+  .add(
+    'With slot',
+    () => ({
+      components: { ARate },
+      data: () => ({
+        rating: 3,
+        ratingItems: 3
+      }),
+      template: `
+        <a-rate 
+         v-model="rating"
+         :rating-items="ratingItems"
+         :aria-label-rate="ariaLabelRate()"
+         legend="Your rating"
+        >
+          <template #item="data">
+            <span>{{ data.item }}</span>
+          </template>
+        </a-rate>
+      `,
+      methods: {
+        ariaLabelRate () {
+          return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
+        }
+      }
     })
   )

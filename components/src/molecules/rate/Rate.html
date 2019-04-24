@@ -1,22 +1,25 @@
-<a-fieldset class="rating">
-<div
+<a-fieldset class="rating__wrapper">
+  <div
     v-if="!disabled"
+    class="rating rating--rate"
     role="listbox"
     aria-required="true"
     aria-labelledby="rating-field-label"
-    class="rating__content"
   >
     <div
       v-for="item in ratingItems"
       :key="item"
-      :class="['rating__item', active >= item ? 'rating__item--active' : '']"
+      :class="['rating__rate-item', active >= item ? 'rating__rate-item--active' : '']"
       role="option"
       :aria-selected="rating === item"
     >
-      <!-- @slot Custom label (Named slot)-->
-      <slot name="label">
+      <!-- @slot Custom item (Scoped slot)-->
+      <slot
+        name="item"
+        :item="item"
+      >
         <div
-          class="button--blank rating__star rating__star--rate"
+          class="rating__star rating__star--rate"
           :aria-label="ariaLabelRate"
           tabindex="0"
           @click="selectValue(item)"
@@ -28,6 +31,7 @@
   </div>
   <div
     v-else
+    class="rating"
     :aria-label="disabledRateAriaLabel"
     :title="disabledRateTitle"
     tabindex="0"
@@ -43,3 +47,4 @@
     </slot>
   </div>
 </a-fieldset>
+

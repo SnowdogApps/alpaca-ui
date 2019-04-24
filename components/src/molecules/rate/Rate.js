@@ -10,7 +10,7 @@ export default {
   },
   props: {
     /**
-     * Current average of rating
+     * Current average of rate
      */
     rating: {
       type: Number,
@@ -49,7 +49,7 @@ export default {
       }
     },
     /**
-     * Allows to block the rating
+     * Allows to block the rate
      */
     disabled: {
       type: Boolean,
