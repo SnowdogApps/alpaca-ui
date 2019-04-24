@@ -49,7 +49,7 @@ storiesOf('Molecules/Rate', module)
       `,
       methods: {
         select: action('Selected'),
-        ariaLabelRate() {
+        ariaLabelRate () {
           return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
         }
       }

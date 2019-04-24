@@ -147,8 +147,8 @@ $rating__error-color            : $red !default;
 
   &--rate {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: $rating__size;
     margin-bottom: $rating__margin--rate;
 

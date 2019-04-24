@@ -35,7 +35,7 @@ export default {
      */
     disabledRateAriaLabel: {
       type: String,
-      default() {
+      default () {
         return `Average rating: ${this.rating}`
       }
     },
@@ -44,7 +44,7 @@ export default {
      */
     disabledRateTitle: {
       type: String,
-      default() {
+      default () {
         return `Average rating: ${this.rating}`
       }
     },
@@ -56,18 +56,18 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       active: this.rating
     }
   },
   computed: {
-    setScores() {
+    setScores () {
       return this.rating / this.ratingItems * 100
     }
   },
   methods: {
-    selectValue(selectedIndex) {
+    selectValue (selectedIndex) {
       this.active = selectedIndex
       /**
        * Change event
