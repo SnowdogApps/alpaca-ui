@@ -10,14 +10,14 @@
     <!-- @slot Custom actions (Named slot) -->
     <slot name="actions">
       <a-button
-        class="message__button button--blank"
+        class="message__button button--blank action1"
         v-if="action1Text"
         @click.native="action1"
       >
         {{ action1Text }}
       </a-button>
       <a-button
-        class="message__button message__button--secondary button--blank"
+        class="message__button message__button--secondary button--blank action2"
         v-if="action2Text"
         @click.native="action2"
       >
