@@ -5,6 +5,7 @@ $table__cell__padding: $spacer $table__padding !default;
 $table__background   : $white !default;
 $table__th-background: $gray-lightest !default;
 $table__border       : 1px solid $gray-light !default;
+$table__border-bottom: none !default;
 $table__border-radius: $border-radius !default;
 
 .table {
@@ -23,6 +24,30 @@ $table__border-radius: $border-radius !default;
       background: $table__th-background;
       border-right: $table__border;
       border-bottom: $table__border;
+    }
+  }
+
+  tr {
+    &:last-child {
+      border-bottom: $table__border-bottom;
+
+      td {
+        @include mq($screen-m) {
+          border-bottom: $table__border-bottom;
+        }
+
+        &:first-child {
+          @include mq($screen-m) {
+            border-bottom-left-radius: $table__border-radius;
+          }
+        }
+
+        &:last-child {
+          @include mq($screen-m) {
+            border-bottom-right-radius: $table__border-radius;
+          }
+        }
+      }
     }
   }
 
@@ -60,38 +85,24 @@ $table__border-radius: $border-radius !default;
   }
 
   tfoot {
-    td {
-      display: block;
-      padding: $table__cell__padding;
-      background: $table__background;
-
-      @include mq($screen-m) {
-        display: table-cell;
-        padding: $table__padding;
-        background: $table__th-background;
-        border-right: $table__border;
-      }
-    }
-
     tr {
-      &:last-child {
-        border-bottom: $reset;
+      td {
+        display: block;
+        padding: $table__cell__padding;
+        background: $table__background;
+        border-bottom: $table__border-bottom;
 
-        td {
-          border-bottom: $reset;
-
-          &:first-child {
-            @include mq($screen-m) {
-              border-bottom-left-radius: $table__border-radius;
-            }
-          }
-
-          &:last-child {
-            @include mq($screen-m) {
-              border-bottom-right-radius: $table__border-radius;
-            }
-          }
+        @include mq($screen-m) {
+          display: table-cell;
+          padding: $table__padding;
+          background: $table__th-background;
+          border-top: $table__border;
+          border-right: $table__border;
         }
+      }
+
+      &:first-child {
+        border-top: $table__border;
       }
     }
   }
