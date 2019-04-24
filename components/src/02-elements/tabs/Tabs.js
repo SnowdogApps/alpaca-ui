@@ -1,4 +1,3 @@
-import uniqueId from 'lodash.uniqueid'
 import AIcon from '../../atoms/icon/Icon.vue'
 
 // @vue/component
@@ -22,11 +21,6 @@ export default {
     icon: {
       type: String,
       default: null
-    }
-  },
-  computed: {
-    getTabsWithId () {
-      return uniqueId('tab')
     }
   },
   methods: {
