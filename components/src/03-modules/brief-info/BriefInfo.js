@@ -1,4 +1,3 @@
-import uniqueId from 'lodash.uniqueid'
 import AHeading from '../../atoms/heading/Heading.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
@@ -32,11 +31,6 @@ export default {
     iconWrapperClass: {
       type: String,
       default: null
-    }
-  },
-  computed: {
-    getItemsWithKey () {
-      return this.items.map(item => ({ key: uniqueId('item'), item }))
     }
   }
 }

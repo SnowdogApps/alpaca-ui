@@ -21,7 +21,7 @@ storiesOf('Atoms/Price', module)
     ...defaultData,
     template: `
       <a-price>
-        <span>{{ price }}</span>
+        {{ price }}
       </a-price>
     `
   })
@@ -65,12 +65,12 @@ storiesOf('Atoms/Price', module)
       <a-price>
         <template #oldPrice>
           <span :style="{color: '#73739c'}">
-            {{old}}
+            {{ old }}
           </span>&nbsp;
           </template>
           <template #specialPrice>
             <span :style="{color: '#e32926'}">
-              {{special}}
+              {{ special }}
             </span>
           </template>
         </a-price>
