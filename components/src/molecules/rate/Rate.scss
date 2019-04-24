@@ -1,15 +1,12 @@
 @import '../../../assets/styles/globals';
 
-$rating__size                   : 120px !default;
-$rating__item-size              : $rating__size / 5 !default;
-$rating__size--rate             : $rating__size !default;
-$rating__size--large            : 250px !default;
-$rating__item-size--large       : $rating__size--large / 5 !default;
-$rating__margin--rate           : $spacer--medium !default;
-$rating__item-size--rate        : $rating__size--rate / 5 !default;
-$icon__active-color             : $orange !default;
-$icon__active-color--with-border: $orange !default;
-$icon__inactive-color           : $gray-light !default;
+$rating__size            : 120px !default;
+$rating__size--rate      : $rating__size !default;
+$rating__size--large     : 250px !default;
+$rating__item-size       : $rating__size / 5 !default;
+$rating__item-size--rate : $rating__size--rate / 5 !default;
+$rating__item-size--large: $rating__size--large / 5 !default;
+$rating__margin--rate    : $spacer--medium !default;
 
 .rating {
   width: $rating__size;
@@ -20,7 +17,6 @@ $icon__inactive-color           : $gray-light !default;
       display: block;
     }
   }
-
 
   &--rate {
     display: flex;
