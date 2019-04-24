@@ -1,7 +1,7 @@
 import { mount } from 'vue-test-utils'
 import AButton from './Button.vue'
 
-describe('Button.spec.js', () => {
+describe('Button', () => {
   it('has default structure', () => {
     const wrapper = mount(AButton)
 
@@ -9,6 +9,7 @@ describe('Button.spec.js', () => {
     expect(wrapper.attributes().type).toBeDefined()
     expect(wrapper.attributes().type).toBe('button')
     expect(wrapper.classes()).toContain('button')
+    expect(wrapper.classes().length).toBe(1)
   })
 
   it('renders slot text when passed', () => {
@@ -22,4 +23,8 @@ describe('Button.spec.js', () => {
     expect(wrapper.find('.button span').exists()).toBe(true)
     expect(wrapper.find('.button span').text()).toEqual('Alpaca UI')
   })
+
+  // it('should emit click event when clicked', () => {
+  //  TODO Should emit click event when clicked
+  // })
 })
