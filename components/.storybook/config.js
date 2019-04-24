@@ -23,7 +23,11 @@ addDecorator(() => ({
 
 addParameters({
   options: {
-    brandTitle: 'Alpaca components'
+    theme: {
+      brandTitle: 'Alpaca UI',
+      brandImage: 'assets/icons/alpaca.svg',
+      brandUrl: "https://github.com/SnowdogApps/alpaca-ui"
+    }
   }
 })
 

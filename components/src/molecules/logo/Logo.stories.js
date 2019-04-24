@@ -15,7 +15,7 @@ storiesOf('Molecules/Logo', module)
         src="/images/logo/alpaca.svg"
         alt="Logo"
       />
-  `
+    `
   }))
   // @vue/component
   .add('With slots', () => ({
@@ -30,5 +30,5 @@ storiesOf('Molecules/Logo', module)
           />
         </template>
       </a-logo>
-  `
+    `
   }))
