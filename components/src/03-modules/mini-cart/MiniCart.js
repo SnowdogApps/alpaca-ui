@@ -37,6 +37,19 @@ export default {
     taxAmount: {
       type: [String, Number],
       default: 0
+    },
+    discountLabel: {
+      type: String,
+      default: 'Discount code'
+    },
+    discountButton: {
+      type: String,
+      default: 'Apply'
+    }
+  },
+  data () {
+    return {
+      discountCode: null
     }
   },
   computed: {
@@ -53,6 +66,9 @@ export default {
     },
     goToCheckout () {
       this.$emit('goToCheckout')
+    },
+    applyDiscount () {
+      this.$emit('applyDiscount', this.discountCode)
     }
   }
 }

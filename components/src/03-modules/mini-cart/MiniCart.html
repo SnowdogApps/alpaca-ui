@@ -21,8 +21,20 @@
         {{ total.value }}
       </div>
     </div>
-    <div>
-      Discount code
+    <div class="minicart__discount">
+      <a-input
+        class="minicart__discount-input"
+        input-class="minicart__discount-input-field"
+        :label="discountLabel"
+        id="discount-code"
+        v-model="discountCode"
+      />
+      <a-button
+        class="button--secondary minicart__discount-button"
+        @click.native="applyDiscount"
+      >
+        {{ discountButton }}
+      </a-button>
     </div>
     <div
       v-if="grandTotal"

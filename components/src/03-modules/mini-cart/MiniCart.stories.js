@@ -20,7 +20,8 @@ storiesOf('Modules/Mini Cart', module)
     }),
     methods: {
       removeMethod: action('Remove'),
-      changeMethod: action('Change')
+      changeMethod: action('Change'),
+      discountMethod: action('Discount code')
     },
     template: `
       <a-mini-cart
@@ -29,6 +30,7 @@ storiesOf('Modules/Mini Cart', module)
         summary-title="Shopping summary"
         go-to-checkout-button="Go to Checkout"
         return-to-shopping-button="Return to shopping"
+        @applyDiscount="discountMethod"
       >
         <template #products>
           <a-product-item
