@@ -1,94 +1,60 @@
 import { storiesOf } from '@storybook/vue'
+import { select, text } from '@storybook/addon-knobs'
 
 import AButton from './Button.vue'
 import AIcon from '../icon/Icon.vue'
 
 const info = `
   ---
-  #### Use these modifiers with \`.button\` class.
+  ###### Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
   - \`.button--secondary\` - Selector for applying secondary styles
   - \`.button--blank\` - Selector for applying blank styles
   - \`.button--fluid\` - Selector for applying fluid styles (width: 100%)
   ---
 `
 
+const bemModifiers = [
+  'null',
+  'button--secondary',
+  'button--blank',
+  'button--fluid'
+]
+
 storiesOf('Atoms/Button', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     components: { AButton },
+    props: {
+      customClass: {
+        default: select('BEM Modifier', bemModifiers, 'null')
+      },
+      text: {
+        default: text('Text', 'Button text')
+      }
+    },
     template: `
-      <a-button>
-        Default button
+      <a-button :class="customClass">
+        {{ text }}
       </a-button>
     `
   }))
-  // @vue/component
-  .add('Secondary', () => ({
-    components: { AButton },
-    template: `
-      <a-button
-        class="button--secondary"
-        type="submit"
-      >
-        Secondary button
-      </a-button>
-    `
-  }))
-  // @vue/component
-  .add('Blank', () => ({
-    components: { AButton },
-    template: `
-      <a-button class="button--blank">
-        Blank button
-      </a-button>
-    `
-  }))
-  // @vue/component
-  .add('Fluid', () => ({
-    components: { AButton },
-    template: `
-      <a-button class="button--fluid">
-        Fluid button
-      </a-button>
-    `
-  }))
-  // @vue/component
-  .add('Icon', () => ({
+  .add('With slot', () => ({
     components: { AButton, AIcon },
+    props: {
+      customClass: {
+        default: select('BEM Modifier', bemModifiers, 'null')
+      }
+    },
     template: `
       <a-button
-        class="button--icon"
-        :style="{padding: '0 12px'}"
+        :class="customClass"
+        style="padding: 0;"
       >
-        <template>
-          <a-icon
-            icon="search"
-            class="button__icon"
-            title="iconTitle"
-          />
-        </template>
-      </a-button>
-    `
-  }))
-  // @vue/component
-  .add('Icon and text', () => ({
-    components: { AButton, AIcon },
-    template: `
-      <a-button
-        :style="{
-          justifyContent: 'center',
-          alignItems: 'center'
-        }"
-      >
-        <template>
-          Search
-          <a-icon
-            icon="search"
-            title="iconTitle"
-            :style="{marginLeft: '8px'}"
-          />
-        </template>
+        <a-icon
+          icon="search"
+          class="button__icon"
+          title="iconTitle"
+        />
       </a-button>
     `
   }))
