@@ -19,7 +19,7 @@ storiesOf('Atoms/Breadcrumbs', module)
     components: { ABreadcrumbs },
     ...defaultData,
     template: `
-      <a-breadcrumbs :breadcrumbs='breadcrumbs'/>
+      <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
     `
   }))
   // @vue/component
@@ -27,19 +27,21 @@ storiesOf('Atoms/Breadcrumbs', module)
     components: { ABreadcrumbs, ALink },
     ...defaultData,
     template: `
-      <a-breadcrumbs :breadcrumbs='breadcrumbs'>
-        <template #previous='data'>
-          <a-link 
+      <a-breadcrumbs :breadcrumbs="breadcrumbs">
+        <template #previous="data">
+          <a-link
             :href="data.breadcrumb.href"
             style="padding: 0 10px; color: #333"
           >
             {{ data.breadcrumb.text }}
           </a-link>
-          <span style="padding-top: 2px;">
+        </template>
+        <template #separator>
+          <span class="breadcrumbs__separator">
             -
           </span>
         </template>
-        <template #current='data'>
+        <template #current="data">
           <span style="padding: 0 10px; color: #2962ff; line-height: 1.5;">
             {{ data.breadcrumb.text }}
           </span>
