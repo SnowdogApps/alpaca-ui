@@ -5,7 +5,7 @@
         class="pager__link pager__link--prev"
         aria-label="Go to previous page"
         :disabled="currentPage < 2"
-        @click="setCurrentPage(currentPage - 1)"
+        @click.native="setCurrentPage(currentPage - 1)"
       >
         <a-icon icon="arrow-left"/>
       </a-button>
@@ -15,7 +15,7 @@
       <li class="pager__item">
         <a-button
           class="pager__link"
-          @click="setCurrentPage(1)"
+          @click.native="setCurrentPage(1)"
         >
           1
          </a-button>
@@ -35,7 +35,7 @@
     >
       <a-button
         class="pager__link"
-        @click="setCurrentPage(number)"
+        @click.native="setCurrentPage(number)"
       >
         {{ number }}
        </a-button>
@@ -48,7 +48,7 @@
       <li class="pager__item">
         <a-button
           class="pager__link"
-          @click="setCurrentPage(numberOfPages)"
+          @click.native="setCurrentPage(numberOfPages)"
         >
           {{ numberOfPages }}
          </a-button>
@@ -60,7 +60,7 @@
         class="pager__link pager__link--next"
         aria-label="Go to next page"
         :disabled="currentPage > numberOfPages - 1"
-        @click="setCurrentPage(currentPage + 1)"
+        @click.native="setCurrentPage(currentPage + 1)"
       >
         <a-icon icon="arrow-right"/>
       </a-button>

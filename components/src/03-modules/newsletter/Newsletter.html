@@ -12,11 +12,10 @@
       class="newsletter__input"
       label-class="newsletter__label"
       input-class="newsletter__field"
-      type="text"
     />
     <a-button
       class="newsletter__button"
-      @click.stop.prevent="onSubmit"
+      @click.native.stop.prevent="onSubmit"
     >
       {{ button }}
      </a-button>

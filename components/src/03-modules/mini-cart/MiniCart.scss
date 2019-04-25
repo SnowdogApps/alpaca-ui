@@ -1,6 +1,12 @@
 @import '../../../assets/styles/_globals.scss';
 
-$minicart__row-margin-bottom: $spacer--medium !default;
+$minicart__row-margin-bottom           : $spacer--medium !default;
+$minicart__discard-input-height        : 48px !default;
+$minicart__discard-input-margin        : 0 0 $spacer 0 !default;
+$minicart__discard-input-margin\@small : 0 $spacer $spacer--medium 0 !default;
+$minicart__discard-button-margin-bottom: $spacer--medium !default;
+$minicart__discard-button-width        : 100% !default;
+$minicart__discard-button-width\@small : 176px !default;
 
 .minicart {
   &__product-item {
@@ -27,6 +33,35 @@ $minicart__row-margin-bottom: $spacer--medium !default;
       margin-bottom: $minicart__row-margin-bottom;
       background: $gray-light;
       content: '';
+    }
+  }
+
+  &__discount {
+    @include mq($screen-s) {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &__discount-input {
+    flex-grow: 1;
+    margin: $minicart__discard-input-margin;
+
+    @include mq($screen-s) {
+      margin: $minicart__discard-input-margin\@small;
+    }
+  }
+
+  &__discount-input-field {
+    height: $minicart__discard-input-height;
+  }
+
+  &__discount-button {
+    width: $minicart__discard-button-width;
+    margin-bottom: $minicart__discard-button-margin-bottom;
+
+    @include mq($screen-s) {
+      width: $minicart__discard-button-width\@small;
     }
   }
 

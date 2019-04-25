@@ -57,7 +57,7 @@
       <form class="catalog-grid-item__primary-form">
         <a-button
           class="button--secondary catalog-grid-item__primary-action"
-          @click.stop.prevent="addToCart"
+          @click.native.stop.prevent="addToCart"
         >
           Add to cart
          </a-button>
@@ -66,14 +66,14 @@
       <div class="catalog-grid-item__secondary-action">
         <a-button
           :aria-label="wishListAriaLabel"
-          @click="addToWishList"
+          @click.native="addToWishList"
         >
           <a-icon :icon="wishListIcon"/>
         </a-button>
 
         <a-button
           :aria-label="compareAriaLabel"
-          @click="addToCompare"
+          @click.native="addToCompare"
         >
           <a-icon :icon="compareIcon"/>
         </a-button>
