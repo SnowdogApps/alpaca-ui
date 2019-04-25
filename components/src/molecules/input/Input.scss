@@ -16,8 +16,14 @@ $input__label-margin-right : $spacer--medium !default;
     flex-flow: row nowrap;
     align-items: center;
 
-    .input__label {
+    .label {
       margin-right: $input__label-margin-right;
+    }
+  }
+
+  &--hidden-label {
+    .label {
+      @include visually-hidden;
     }
   }
 

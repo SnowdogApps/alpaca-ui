@@ -1,20 +1,12 @@
-<div
-  :class="['input', {'input--inline': inline}]"
->
-  <a-label
-    :for="id"
-    :hidden="hiddenLabel"
-    :class="labelClass"
-  >
-    {{ label }}
+<div class="input">
+  <a-label :for="id">
+    <!-- @slot Custom label content (Default slot) -->
+    <slot/>
   </a-label>
 
   <input
     :id="id"
-    :class="[
-      inputClass,
-      {'input__field': inputDefaultClass}
-    ]"
+    :class="[inputClass, {'input__field': inputDefaultClass}]"
     :autocomplete="autocomplete"
     :name="name"
     :type="type"
