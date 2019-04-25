@@ -1,7 +1,7 @@
 <div class="input">
   <!-- @slot Custom label markup (Default slot) -->
   <slot>
-    <a-label :for="id">
+    <a-label :for="id" v-if="label">
       {{ label }}
     </a-label>
   </slot>

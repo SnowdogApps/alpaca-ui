@@ -1,13 +1,15 @@
 import AInput from '../../molecules/input/Input.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
+import ALabel from '../../atoms/label/Label.vue'
 
 // @vue/component
 export default {
   components: {
     AInput,
     AIcon,
-    AButton
+    AButton,
+    ALabel
   },
   props: {
     value: {
@@ -41,10 +43,6 @@ export default {
     inputPlaceholder: {
       type: String,
       default: '0'
-    },
-    inputAriaLabel: {
-      type: String,
-      default: 'Change the quantity'
     },
     decrementButtonClass: {
       type: String,
