@@ -21,24 +21,53 @@ storiesOf('Molecules/Input', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AInput },
+    data: () => ({ value: null }),
     props: {
+      customClass: {
+        default: select('BEM modifier', bemModifiers)
+      },
       label: {
         default: text('Label text', 'Default label')
       },
-      customClass: {
-        default: select('BEM modifier', bemModifiers)
+      placeholder: {
+        default: text('Placeholder', 'First and last name')
       }
     },
-    data: () => ({ value: null }),
     template: `
       <a-input
         :class="customClass"
-        label="Default label"
         id="field_id"
-        placeholder="First and last name"
+        :placeholder="placeholder"
         v-model="value"
       >
         {{ label }}
+      </a-input>
+    `
+  }))
+  .add('With slot', () => ({
+    components: { AInput },
+    data: () => ({ value: null }),
+    props: {
+      customClass: {
+        default: select('BEM modifier', bemModifiers)
+      },
+      label: {
+        default: text('Label text', 'Default label')
+      },
+      placeholder: {
+        default: text('Placeholder', 'First and last name')
+      }
+    },
+    template: `
+      <a-input
+        :class="customClass"
+        id="field_id"
+        :placeholder="placeholder"
+        v-model="value"
+      >
+        <span style="color: red">
+          {{ label }}
+        </span>
       </a-input>
     `
   }))
