@@ -18,10 +18,6 @@ export default {
       type: Array[Object],
       required: true
     },
-    removeButton: {
-      type: String,
-      default: ''
-    },
     summaryTitle: {
       type: String,
       required: true
@@ -33,6 +29,10 @@ export default {
     goToCheckoutButton: {
       type: String,
       required: true
+    },
+    removeButton: {
+      type: String,
+      default: ''
     },
     taxAmount: {
       type: [String, Number],
