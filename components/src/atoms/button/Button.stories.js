@@ -6,7 +6,7 @@ import AIcon from '../icon/Icon.vue'
 
 const info = `
   ---
-  ###### Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
+  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
   - \`.button--secondary\` - Selector for applying secondary styles
   - \`.button--blank\` - Selector for applying blank styles
   - \`.button--fluid\` - Selector for applying fluid styles (width: 100%)
@@ -14,7 +14,7 @@ const info = `
 `
 
 const bemModifiers = [
-  'null',
+  null,
   'button--secondary',
   'button--blank',
   'button--fluid'
@@ -26,7 +26,7 @@ storiesOf('Atoms/Button', module)
     components: { AButton },
     props: {
       customClass: {
-        default: select('BEM Modifier', bemModifiers, 'null')
+        default: select('BEM Modifier', bemModifiers)
       },
       text: {
         default: text('Text', 'Button text')
@@ -42,7 +42,7 @@ storiesOf('Atoms/Button', module)
     components: { AButton, AIcon },
     props: {
       customClass: {
-        default: select('BEM Modifier', bemModifiers, 'null')
+        default: select('BEM Modifier', bemModifiers)
       }
     },
     template: `
