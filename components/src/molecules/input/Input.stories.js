@@ -11,7 +11,7 @@ const info = `
   - \`.label--hidden\` - Label selector for applying hidden styles (slot)
   ---
 `
-const bemModifiers = [null, 'input--inline']
+const inputClasses = [null, 'input--inline']
 
 storiesOf('Molecules/Input', module)
   .addParameters({ info })
@@ -20,9 +20,9 @@ storiesOf('Molecules/Input', module)
     data: () => ({ value: null }),
     props: {
       customClass: {
-        default: select('Input class', bemModifiers)
+        default: select('Input class', inputClasses)
       },
-      label: {
+      labelText: {
         default: text('Label text', 'Default label')
       },
       placeholder: {
@@ -32,7 +32,7 @@ storiesOf('Molecules/Input', module)
     template: `
       <a-input
         :class="customClass"
-        :label="label"
+        :label="labelText"
         id="field_id"
         :placeholder="placeholder"
         v-model="value"
@@ -44,13 +44,13 @@ storiesOf('Molecules/Input', module)
     data: () => ({ value: null }),
     props: {
       customClass: {
-        default: select('BEM modifier', bemModifiers)
-      },
-      label: {
-        default: text('Label text', 'Default label')
+        default: select('Input class', inputClasses)
       },
       labelClass: {
         default: select('Label class', [null, 'label--hidden'])
+      },
+      labelText: {
+        default: text('Label text', 'Default label')
       },
       placeholder: {
         default: text('Placeholder', 'First and last name')
@@ -66,9 +66,9 @@ storiesOf('Molecules/Input', module)
         <a-label
           for="field_id"
           :class="labelClass"
-          style="color: red"
+          style="font-weight: bold"
         >
-          {{ label }}
+          {{ labelText }}
         </a-label>
       </a-input>
     `
