@@ -1,27 +1,17 @@
-<div
-  :class="['textarea', {'textarea--inline': inline}]"
->
-  <a-label
-    :for="id"
-    :hidden="hiddenLabel"
-    :class="labelClass"
-  >
-    {{ label }}
-   </a-label>
-
+<div class="textarea">
+  <!-- @slot Custom label markup (Default slot) -->
+  <slot>
+    <a-label :for="id">
+      {{ label }}
+    </a-label>
+  </slot>
   <textarea
     :id="id"
-    :class="[
-      textareaClass,
-      {
-        'textarea__field': textareaDefaultClass,
-        'textarea__field--textarea': textareaDefaultClass
-      }
-    ]"
+    :class="[textareaClass, {'textarea__field': textareaDefaultClass}]"
     :autocomplete="autocomplete"
     :name="name"
     :placeholder="placeholder"
     :value="value"
-    @textarea="$emit('input', $event.target.value)"
+    @input="$emit('input', $event.target.value)"
   />
 </div>

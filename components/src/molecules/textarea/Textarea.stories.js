@@ -1,49 +1,77 @@
 import { storiesOf } from '@storybook/vue'
+import { select, text } from '@storybook/addon-knobs'
 
 import ATextarea from './Textarea.vue'
+import ALabel from '../../atoms/label/Label.vue'
+
+const info = `
+  ---
+  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
+  - \`.textarea--inline\` - Selector for applying inline styles
+  - \`.label--hidden\` - Label selector for applying hidden styles (slot)
+  ---
+`
+const textareaClasses = [null, 'textarea--inline']
+const labelClasses = [null, 'label--hidden']
 
 storiesOf('Molecules/Textarea', module)
-  // @vue/component
+  .addParameters({ info })
   .add('Default', () => ({
     components: { ATextarea },
+    props: {
+      customClass: {
+        default: select('Textarea class', textareaClasses)
+      },
+      labelText: {
+        default: text('Label text', 'Default label')
+      },
+      placeholder: {
+        default: text('Placeholder', 'Comment')
+      }
+    },
     data: () => ({ value: null }),
     template: `
       <a-textarea
-        label="Default label"
+        :class="customClass"
+        :label="labelText"
         id="field_id"
-        placeholder="First and last name"
+        :placeholder="placeholder"
         v-model="value"
       />
-      Text: {{ value }}
     `
   }))
-  // @vue/component
-  .add('Hidden label', () => ({
-    components: { ATextarea },
+  .add('With slot', () => ({
+    components: { ATextarea, ALabel },
+    props: {
+      customClass: {
+        default: select('Textarea class', textareaClasses)
+      },
+      labelClass: {
+        default: select('Label class', labelClasses)
+      },
+      labelText: {
+        default: text('Label text', 'Default label')
+      },
+      placeholder: {
+        default: text('Placeholder', 'Comment')
+      }
+    },
     data: () => ({ value: null }),
     template: `
       <a-textarea
-        label="Hidden label"
+        :class="customClass"
+        :label="labelText"
         id="field_id"
-        placeholder="Hidden label"
-        hidden-label
+        :placeholder="placeholder"
         v-model="value"
-      />
-      Text: {{ value }}
-    `
-  }))
-  // @vue/component
-  .add('Inline label', () => ({
-    components: { ATextarea },
-    data: () => ({ value: null }),
-    template: `
-      <a-textarea
-        label="Inline text"
-        id="field_id"
-        placeholder="First and last name"
-        inline
-        v-model="value"
-      />
-      Text: {{ value }}
+      >
+        <a-label
+          for="field_id"
+          :class="labelClass"
+          style="font-weight: bold"
+        >
+          {{ labelText }}
+        </a-label>
+      </a-textarea>
     `
   }))

@@ -10,46 +10,58 @@ export default {
     event: 'input'
   },
   props: {
-    label: {
-      type: String,
-      required: true
-    },
+    /**
+     * Textarea id
+     */
     id: {
       type: String,
       required: true
     },
-    name: {
-      type: String,
-      required: true
-    },
-    placeholder: {
-      type: String,
-      required: true
-    },
-    hiddenLabel: {
-      type: Boolean,
-      default: false
-    },
-    inline: {
-      type: Boolean,
-      default: false
-    },
-    labelClass: {
+    /**
+     * Label text for default slot
+     */
+    label: {
       type: String,
       default: null
     },
+    /**
+     * Use default input class 'input__field'
+     */
     textareaDefaultClass: {
       type: Boolean,
       default: true
     },
+    /**
+     * Textarea custom class
+     */
     textareaClass: {
       type: String,
       default: null
     },
+    /**
+     * Textarea value (used with v-model)
+     */
     value: {
       type: [String, Number],
       default: null
     },
+    /**
+     * Textarea name
+     */
+    name: {
+      type: String,
+      default: null
+    },
+    /**
+     * Textarea placeholder
+     */
+    placeholder: {
+      type: String,
+      required: true
+    },
+    /**
+     * Textarea autocomplete attribute
+     */
     autocomplete: {
       type: String,
       default: 'on'

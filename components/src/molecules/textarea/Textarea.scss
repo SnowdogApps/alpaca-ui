@@ -1,25 +1,25 @@
 @import '../../../assets/styles/_globals.scss';
 
 $textarea__margin-bottom      : $spacer--medium !default;
-$textarea__label-margin-right : $spacer--medium !default;
+$textarea__placeholder-color  : $gray !default;
+$textarea__min-height         : 100px !default;
+$textarea__label-margin       : 0 $spacer--medium 0 0 !default;
 $textarea__field-width        : 100% !default;
 $textarea__field-padding      : $spacer--medium !default;
 $textarea__field-border       : 1px solid $form-elements-border-color !default;
 $textarea__field-border-radius: $form-elements-radius--small !default;
 $textarea__field-line-height  : $font-line-height !default;
-$textarea__placeholder-color  : $gray !default;
-$textarea__min-height         : 100px !default;
 
 .textarea {
   margin-bottom: $textarea__margin-bottom;
 
   &--inline {
     display: flex;
-    flex-flow: row nowrap;
     align-items: center;
 
-    .textarea__label {
-      margin-right: $textarea__label-margin-right;
+    .label {
+      flex-shrink: 0;
+      margin: $textarea__label-margin;
     }
   }
 

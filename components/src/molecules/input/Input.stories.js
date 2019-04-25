@@ -18,7 +18,6 @@ storiesOf('Molecules/Input', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AInput },
-    data: () => ({ value: null }),
     props: {
       customClass: {
         default: select('Input class', inputClasses)
@@ -30,6 +29,7 @@ storiesOf('Molecules/Input', module)
         default: text('Placeholder', 'First and last name')
       }
     },
+    data: () => ({ value: null }),
     template: `
       <a-input
         :class="customClass"
@@ -42,7 +42,6 @@ storiesOf('Molecules/Input', module)
   }))
   .add('With slot', () => ({
     components: { AInput, ALabel },
-    data: () => ({ value: null }),
     props: {
       customClass: {
         default: select('Input class', inputClasses)
@@ -57,6 +56,7 @@ storiesOf('Molecules/Input', module)
         default: text('Placeholder', 'First and last name')
       }
     },
+    data: () => ({ value: null }),
     template: `
       <a-input
         :class="customClass"
