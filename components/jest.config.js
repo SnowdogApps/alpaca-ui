@@ -4,10 +4,14 @@ module.exports = {
   },
   'moduleFileExtensions': [
     'js',
-    'vue'
+    'vue',
+    'json'
   ],
   'transform': {
     '^.+\\.js$': '<rootDir>/../node_modules/babel-jest',
     '.*\\.(vue)$': '<rootDir>/../node_modules/jest-vue-preprocessor'
-  }
+  },
+  'setupFiles': [
+    './.storybook/jest_setup.js'
+  ]
 }
