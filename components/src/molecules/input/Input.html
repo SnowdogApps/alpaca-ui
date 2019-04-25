@@ -1,9 +1,10 @@
 <div class="input">
-  <a-label :for="id">
-    <!-- @slot Custom label content (Default slot) -->
-    <slot/>
-  </a-label>
-
+  <!-- @slot Custom label markup (Scoped slot) -->
+  <slot :id="id">
+    <a-label :for="id">
+      {{ label }}
+    </a-label>
+  </slot>
   <input
     :id="id"
     :class="[inputClass, {'input__field': inputDefaultClass}]"

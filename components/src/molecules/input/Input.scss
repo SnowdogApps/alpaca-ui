@@ -21,12 +21,6 @@ $input__label-margin-right : $spacer--medium !default;
     }
   }
 
-  &--hidden-label {
-    .label {
-      @include visually-hidden;
-    }
-  }
-
   &__field {
     width: 100%;
     height: $input__field-spacing;

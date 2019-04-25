@@ -18,6 +18,13 @@ export default {
       required: true
     },
     /**
+     * Label text for default slot
+     */
+    label: {
+      type: String,
+      default: null
+    },
+    /**
      * Use default input class 'input__field'
      */
     inputDefaultClass: {

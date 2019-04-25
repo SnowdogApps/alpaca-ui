@@ -2,20 +2,17 @@ import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
 import AInput from './Input.vue'
+import ALabel from '../../atoms/label/Label.vue'
 
 const info = `
   ---
   Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
   - \`.input--inline\` - Selector for applying inline styles
-  - \`.input--hidden-label\` - Selector for applying hidden-label styles
+  - \`.label--hidden\` - Label selector for applying hidden styles (slot)
   ---
 `
 
-const bemModifiers = [
-  null,
-  'input--inline',
-  'input--hidden-label'
-]
+const bemModifiers = [null, 'input--inline']
 
 storiesOf('Molecules/Input', module)
   .addParameters({ info })
@@ -24,7 +21,7 @@ storiesOf('Molecules/Input', module)
     data: () => ({ value: null }),
     props: {
       customClass: {
-        default: select('BEM modifier', bemModifiers)
+        default: select('Input class', bemModifiers)
       },
       label: {
         default: text('Label text', 'Default label')
@@ -36,16 +33,15 @@ storiesOf('Molecules/Input', module)
     template: `
       <a-input
         :class="customClass"
+        :label="label"
         id="field_id"
         :placeholder="placeholder"
         v-model="value"
-      >
-        {{ label }}
-      </a-input>
+      />
     `
   }))
   .add('With slot', () => ({
-    components: { AInput },
+    components: { AInput, ALabel },
     data: () => ({ value: null }),
     props: {
       customClass: {
@@ -54,6 +50,9 @@ storiesOf('Molecules/Input', module)
       label: {
         default: text('Label text', 'Default label')
       },
+      labelClass: {
+        default: select('Label class', [null, 'label--hidden'])
+      },
       placeholder: {
         default: text('Placeholder', 'First and last name')
       }
@@ -65,9 +64,15 @@ storiesOf('Molecules/Input', module)
         :placeholder="placeholder"
         v-model="value"
       >
-        <span style="color: red">
-          {{ label }}
-        </span>
+        <template v-slot="{ id }">
+          <a-label
+            :class="labelClass"
+            :for="id"
+            style="color: red"
+          >
+            {{ label }}
+          </a-label>
+        </template>
       </a-input>
     `
   }))
