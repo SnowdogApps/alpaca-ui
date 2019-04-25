@@ -20,6 +20,7 @@ describe('Button', () => {
         `
       }
     })
+
     expect(wrapper.find('.button span').exists()).toBe(true)
     expect(wrapper.find('.button span').text()).toEqual('Alpaca UI')
   })
