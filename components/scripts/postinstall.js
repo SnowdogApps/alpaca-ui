@@ -5,8 +5,8 @@ const currentDir = path.dirname(__dirname)
 const stylesPath = path.resolve('../../../_alpaca.scss')
 
 if (
-  currentDir.includes('node_modules')
-  && !fs.existsSync(stylesPath)
+  currentDir.includes('node_modules') &&
+  !fs.existsSync(stylesPath)
 ) {
   fs.writeFileSync(
     stylesPath,
