@@ -64,15 +64,13 @@ storiesOf('Molecules/Input', module)
         :placeholder="placeholder"
         v-model="value"
       >
-        <template v-slot="{ id }">
-          <a-label
-            :class="labelClass"
-            :for="id"
-            style="color: red"
-          >
-            {{ label }}
-          </a-label>
-        </template>
+        <a-label
+          for="field_id"
+          :class="labelClass"
+          style="color: red"
+        >
+          {{ label }}
+        </a-label>
       </a-input>
     `
   }))
