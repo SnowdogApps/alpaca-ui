@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import AHeading from '../../atoms/heading/Heading.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../02-elements/input/Input.vue'
+import AInput from '../../molecules/input/Input.vue'
 import AModal from '../../03-modules/modal/Modal.vue'
 
 storiesOf('Modules/Modal', module)

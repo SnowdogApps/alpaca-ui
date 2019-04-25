@@ -1,4 +1,4 @@
-import AInput from '../../02-elements/input/Input.vue'
+import AInput from '../../molecules/input/Input.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 

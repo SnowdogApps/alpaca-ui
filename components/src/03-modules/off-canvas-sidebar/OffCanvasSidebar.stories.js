@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 
 import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../02-elements/input/Input.vue'
+import AInput from '../../molecules/input/Input.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 storiesOf('Modules/Off Canvas Sidebar', module)

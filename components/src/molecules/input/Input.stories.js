@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/vue'
 import AInput from './Input.vue'
 import ATextarea from '../textarea/Textarea.vue'
 
-storiesOf('Elements/Form/Input', module)
+storiesOf('Molecules/Input', module)
   // @vue/component
   .add('Default', () => ({
     components: { AInput },
