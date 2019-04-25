@@ -12,6 +12,7 @@ const info = `
   ---
 `
 const inputClasses = [null, 'input--inline']
+const labelClasses = [null, 'label--hidden']
 
 storiesOf('Molecules/Input', module)
   .addParameters({ info })
@@ -47,7 +48,7 @@ storiesOf('Molecules/Input', module)
         default: select('Input class', inputClasses)
       },
       labelClass: {
-        default: select('Label class', [null, 'label--hidden'])
+        default: select('Label class', labelClasses)
       },
       labelText: {
         default: text('Label text', 'Default label')
