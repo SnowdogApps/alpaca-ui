@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/vue'
 
-import AInput from './Input.vue'
+import ATextarea from './Textarea.vue'
 
-storiesOf('Molecules/Input', module)
+storiesOf('Molecules/Textarea', module)
   // @vue/component
   .add('Default', () => ({
-    components: { AInput },
+    components: { ATextarea },
     data: () => ({ value: null }),
     template: `
-      <a-input
+      <a-textarea
         label="Default label"
         id="field_id"
         placeholder="First and last name"
@@ -19,10 +19,10 @@ storiesOf('Molecules/Input', module)
   }))
   // @vue/component
   .add('Hidden label', () => ({
-    components: { AInput },
+    components: { ATextarea },
     data: () => ({ value: null }),
     template: `
-      <a-input
+      <a-textarea
         label="Hidden label"
         id="field_id"
         placeholder="Hidden label"
@@ -34,10 +34,10 @@ storiesOf('Molecules/Input', module)
   }))
   // @vue/component
   .add('Inline label', () => ({
-    components: { AInput },
+    components: { ATextarea },
     data: () => ({ value: null }),
     template: `
-      <a-input
+      <a-textarea
         label="Inline text"
         id="field_id"
         placeholder="First and last name"

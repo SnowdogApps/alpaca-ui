@@ -38,11 +38,11 @@ export default {
       type: String,
       default: null
     },
-    inputDefaultClass: {
+    textareaDefaultClass: {
       type: Boolean,
       default: true
     },
-    inputClass: {
+    textareaClass: {
       type: String,
       default: null
     },

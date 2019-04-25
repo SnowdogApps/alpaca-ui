@@ -2,4 +2,4 @@
 
 <script src="./Textarea.js"/>
 
-<style lang="scss" src="../input/Input.scss"/>
+<style lang="scss" src="./Textarea.scss"/>

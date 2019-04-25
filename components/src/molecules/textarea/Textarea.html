@@ -1,5 +1,5 @@
 <div
-  :class="['input', {'input--inline': inline}]"
+  :class="['textarea', {'textarea--inline': inline}]"
 >
   <a-label
     :for="id"
@@ -12,16 +12,16 @@
   <textarea
     :id="id"
     :class="[
-      inputClass,
+      textareaClass,
       {
-        'input__field': inputDefaultClass,
-        'input__field--textarea': inputDefaultClass
+        'textarea__field': textareaDefaultClass,
+        'textarea__field--textarea': textareaDefaultClass
       }
     ]"
     :autocomplete="autocomplete"
     :name="name"
     :placeholder="placeholder"
     :value="value"
-    @input="$emit('input', $event.target.value)"
+    @textarea="$emit('input', $event.target.value)"
   />
 </div>
