@@ -27,7 +27,3 @@ $label-transition    : none !default;
     @include visually-hidden();
   }
 }
-
-label {
-  @extend .label;
-}

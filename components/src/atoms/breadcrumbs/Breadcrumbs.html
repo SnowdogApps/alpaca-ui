@@ -30,6 +30,12 @@
           {{ breadcrumb.text }}
         </router-link>
       </slot>
+      <!-- @slot Separator (Named slot) -->
+      <slot name="separator">
+        <span class="breadcrumbs__separator">
+          /
+        </span>
+      </slot>
     </template>
   </template>
 </div>

@@ -1,31 +1,21 @@
 @import '../../../assets/styles/globals';
 
 $breadcrumbs__font-size        : $font-size-small !default;
+$breadcrumbs__line-height      : 1.5 !default;
 $breadcrumbs__item-color       : $blue !default;
 $breadcrumbs__link-color       : $gray-darker !default;
-$breadcrumbs__link-color--hover : $blue !default;
-$breadcrumbs__link-margin--after: 0 $spacer--medium !default;
+$breadcrumbs__link-color--hover: $blue !default;
+$breadcrumbs__separator-margin : 0 $spacer !default;
 
 .breadcrumbs {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
   font-size: $breadcrumbs__font-size;
-
-  @include mq($screen-m) {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   &__link {
     display: flex;
     color: $breadcrumbs__link-color;
     text-decoration: none;
-
-    &::after {
-      display: flex;
-      margin: $breadcrumbs__link-margin--after;
-      color: $breadcrumbs__link-color;
-      content: '/';
-    }
 
     &:hover {
       color: $breadcrumbs__link-color--hover;
@@ -35,6 +25,11 @@ $breadcrumbs__link-margin--after: 0 $spacer--medium !default;
   &__item {
     display: flex;
     color: $breadcrumbs__item-color;
-    line-height: 1.5;
+    line-height: $breadcrumbs__line-height;
+  }
+
+  &__separator {
+    margin: $breadcrumbs__separator-margin;
+    line-height: $breadcrumbs__line-height;
   }
 }
