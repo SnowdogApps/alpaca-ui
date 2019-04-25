@@ -51,13 +51,13 @@
   <div class="row row--no-margins center-xs between-md minicart__actions">
     <a-button
       class="button--blank col-xs-12 col-md-4 minicart__return-button button--blank"
-      @click="returnToShopping"
+      @click.native="returnToShopping"
     >
       {{ returnToShoppingButton }}
      </a-button>
     <a-button
       class="col-xs-12 col-md-4 first-xs last-md minicart__checkout-button"
-      @click="goToCheckout"
+      @click.native="goToCheckout"
     >
       {{ goToCheckoutButton }}
      </a-button>

@@ -53,7 +53,7 @@
     <div class="row row--no-margins center-xs">
       <a-button
         class="register__submit-button"
-        @click.stop.prevent="register"
+        @click.native.stop.prevent="register"
       >
         {{ submitButton }}
        </a-button>
@@ -62,7 +62,7 @@
   <div class="register__login-wrapper row row--no-margins center-xs">
     <a-button
       class="button--blank register__register-button"
-      @click="goToLogin"
+      @click.native="goToLogin"
     >
       {{ goToLoginButton }}
      </a-button>

@@ -16,7 +16,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     },
     template: `
       <div>
-        <a-button @click="showSidebar">
+        <a-button @click.native="showSidebar">
           Sidebar button
         </a-button>
         <a-off-canvas-sidebar
@@ -47,7 +47,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     },
     template: `
       <div>
-        <a-button @click="showBlankSidebar">
+        <a-button @click.native="showBlankSidebar">
           Blank sidebar button
         </a-button>
         <a-off-canvas-sidebar

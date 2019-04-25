@@ -17,7 +17,7 @@ storiesOf('Modules/Modal', module)
     },
     template: `
       <div>
-        <a-button @click="showModal">
+        <a-button @click.native="showModal">
           Modal button
         </a-button>
         <a-modal name="default" ref="modalDefault">
@@ -48,7 +48,7 @@ storiesOf('Modules/Modal', module)
     },
     template: `
       <div>
-        <a-button @click="showModal">
+        <a-button @click.native="showModal">
           Open Modal
         </a-button>
         <a-modal
