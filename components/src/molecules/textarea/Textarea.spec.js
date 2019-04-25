@@ -5,7 +5,8 @@ describe('Textarea', () => {
   it('has default structure', () => {
     const wrapper = mount(ATextarea, {
       propsData: {
-        id: 'textarea-id'
+        id: 'textarea-id',
+        label: 'Default label'
       }
     })
     expect(wrapper.is('div')).toBe(true)
@@ -14,6 +15,7 @@ describe('Textarea', () => {
     const label = wrapper.find('.textarea > label')
     expect(label.exists()).toBe(true)
     expect(label.attributes().for).toBe('textarea-id')
+    expect(label.text()).toEqual('Default label')
     const textarea = wrapper.find('.textarea > textarea')
     expect(textarea.exists()).toBe(true)
     expect(textarea.attributes().id).toBe('textarea-id')
