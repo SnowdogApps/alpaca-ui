@@ -11,7 +11,6 @@ const info = `
   - \`.label--hidden\` - Label selector for applying hidden styles (slot)
   ---
 `
-
 const bemModifiers = [null, 'input--inline']
 
 storiesOf('Molecules/Input', module)

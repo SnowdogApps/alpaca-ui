@@ -6,13 +6,18 @@
     <a-input
       :id="input.field.id"
       v-model="value"
-      :label="input.label.text"
       :placeholder="input.field.placeholder"
       :name="input.field.name"
       class="newsletter__input"
-      label-class="newsletter__label"
       input-class="newsletter__field"
-    />
+    >
+      <a-label
+        :for="input.field.id"
+        class="label--hidden"
+      >
+        {{ input.label.text }}
+      </a-label>
+    </a-input>
     <a-button
       class="newsletter__button"
       @click.native.stop.prevent="onSubmit"

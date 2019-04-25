@@ -26,11 +26,10 @@ storiesOf('Modules/Off Canvas Sidebar', module)
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <a-input
+            class="input--inline"
             label="Inline text"
             id="field_id"
-            name="inline"
             placeholder="Test focus trap"
-            inline
             v-model="value"
           />
          </a-off-canvas-sidebar>
