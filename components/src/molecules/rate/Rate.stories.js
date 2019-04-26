@@ -29,6 +29,23 @@ storiesOf('Molecules/Rate', module)
     `
   }))
   // @vue/component
+  .add('Large', () => ({
+    components: { ARate },
+    data: () => ({
+      rating: 2.4,
+      ratingItems: 5
+    }),
+    template: `
+      <a-rate 
+       class="rating--large"
+       v-model="rating"
+       :rating-items="ratingItems"
+       disabled
+       legend="Your rating"
+      />
+    `
+  }))
+  // @vue/component
   .add('Rate', () => ({
     components: { ARate },
     data: () => ({
@@ -52,24 +69,7 @@ storiesOf('Molecules/Rate', module)
     `
   }))
   // @vue/component
-  .add('Large', () => ({
-    components: { ARate },
-    data: () => ({
-      rating: 2.4,
-      ratingItems: 5
-    }),
-    template: `
-      <a-rate 
-       class="rating--large"
-       v-model="rating"
-       :rating-items="ratingItems"
-       disabled
-       legend="Your rating"
-      />
-    `
-  }))
-  // @vue/component
-  .add('With slot', () => ({
+  .add('Rate with slot', () => ({
     components: { ARate },
     data: () => ({
       rating: 3,
