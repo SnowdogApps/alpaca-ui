@@ -16,7 +16,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     },
     template: `
       <div>
-        <a-button @click="showSidebar">
+        <a-button @click.native="showSidebar">
           Sidebar button
         </a-button>
         <a-off-canvas-sidebar
@@ -27,7 +27,6 @@ storiesOf('Modules/Off Canvas Sidebar', module)
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <a-input
             label="Inline text"
-            type="text"
             id="field_id"
             name="inline"
             placeholder="Test focus trap"
@@ -48,7 +47,7 @@ storiesOf('Modules/Off Canvas Sidebar', module)
     },
     template: `
       <div>
-        <a-button @click="showBlankSidebar">
+        <a-button @click.native="showBlankSidebar">
           Blank sidebar button
         </a-button>
         <a-off-canvas-sidebar

@@ -14,21 +14,21 @@ export default {
       type: String,
       required: true
     },
-    type: {
-      type: String,
-      required: true
-    },
     id: {
       type: String,
       required: true
     },
+    type: {
+      type: String,
+      default: 'text'
+    },
     name: {
       type: String,
-      required: true
+      default: null
     },
     placeholder: {
       type: String,
-      required: true
+      default: null
     },
     hiddenLabel: {
       type: Boolean,
