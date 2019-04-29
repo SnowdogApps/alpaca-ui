@@ -53,16 +53,12 @@ storiesOf('Molecules/Rate', module)
       ratingItems: 4
     }),
     methods: {
-      select: action('Selected'),
-      ariaLabelRate () {
-        return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
-      }
+      select: action('Selected')
     },
     template: `
       <a-rate 
        v-model="rating"
        :rating-items="ratingItems"
-       :aria-label-rate="ariaLabelRate()"
        legend="Your rating"
        @change="select"
       />
@@ -76,16 +72,12 @@ storiesOf('Molecules/Rate', module)
       ratingItems: 3
     }),
     methods: {
-      click: action('Clicked'),
-      ariaLabelRate () {
-        return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
-      }
+      click: action('Clicked')
     },
     template: `
       <a-rate 
        v-model="rating"
        :rating-items="ratingItems"
-       :aria-label-rate="ariaLabelRate()"
        legend="Your rating"
       >
         <template #item="data">

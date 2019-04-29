@@ -35,7 +35,9 @@ export default {
      */
     ariaLabelRate: {
       type: String,
-      default: null
+      default () {
+        return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
+      }
     },
     /**
      * Aria label of disabled rating
