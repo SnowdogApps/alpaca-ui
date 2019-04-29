@@ -21,7 +21,6 @@ const defaultData = {
     bodyRows,
     headCells,
     footCells
-
   }),
   methods: {
     bodyContent () {
