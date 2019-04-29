@@ -26,7 +26,7 @@ const defaultData = {
     bodyContent () {
       return this.bodyRows.map((el, i) => {
         return {
-          items: { ...el },
+          items: [ ...el ],
           heading: this.headCells[i].text
         }
       })
