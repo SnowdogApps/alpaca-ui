@@ -5,7 +5,12 @@ import AInputWrapper from './InputWrapper.vue'
 import ALabel from '../label/Label.vue'
 import AInput from '../input/Input.vue'
 
-const info = 'Check **Knobs** tab to edit component properties dynamically'
+const info = `
+  ---
+  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
+  - \`.input-wrapper--inline\` - Selector for applying inline styles
+  ---
+`
 const inputClasses = [null, 'input-wrapper--inline']
 
 storiesOf('atoms/Input wrapper', module)
