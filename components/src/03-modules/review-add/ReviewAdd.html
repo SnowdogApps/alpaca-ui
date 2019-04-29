@@ -38,13 +38,17 @@
         placeholder="Summary"
       />
     </a-input-wrapper>
-    <a-textarea
-      id="review"
+    <a-input-wrapper
+      input-id="review"
       label="Review *"
-      v-model="review"
-      name="review"
-      placeholder="Review"
-    />
+    >
+      <a-textarea
+        id="review"
+        v-model="review"
+        name="review"
+        placeholder="Review"
+      />
+    </a-input-wrapper>
 
     <a-button @click.native="addReview()">
       Add Your Review
