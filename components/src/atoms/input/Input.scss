@@ -27,8 +27,4 @@ $input__placeholder-color: $gray !default;
   &::placeholder {
     color: $input__placeholder-color;
   }
-
-  &--inline {
-    width: $input__width--inline;
-  }
 }
