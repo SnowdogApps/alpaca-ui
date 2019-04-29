@@ -21,17 +21,7 @@ const defaultData = {
     bodyRows,
     headCells,
     footCells
-  }),
-  methods: {
-    bodyContent () {
-      return this.bodyRows.map((el, i) => {
-        return {
-          items: [ ...el ],
-          heading: this.headCells[i].text
-        }
-      })
-    }
-  }
+  })
 }
 
 storiesOf('Atoms/Table', module)
@@ -55,13 +45,13 @@ storiesOf('Atoms/Table', module)
         </thead>
         <tbody>
           <a-table-row
-            v-for="row in bodyContent()"
+            v-for="(row, i) in bodyRows"
             :key="row.id"
           >
             <a-table-cell
-              v-for="bodyCell in row.items"
+              v-for="bodyCell in row"
               :key="bodyCell.id"
-              :data-th="row.heading"
+              :data-th="headCells[i].text"
             >
               {{ bodyCell.text }}
             </a-table-cell>
@@ -103,13 +93,13 @@ storiesOf('Atoms/Table', module)
         </thead>
         <tbody>
           <a-table-row
-            v-for="row in bodyContent()"
+            v-for="(row, i) in bodyRows"
             :key="row.id"
           >
             <a-table-cell
-              v-for="bodyCell in row.items"
+              v-for="bodyCell in row"
               :key="bodyCell.id"
-              :data-th="row.heading"
+              :data-th="headCells[i].text"
             >
               {{ bodyCell.text }}
             </a-table-cell>
