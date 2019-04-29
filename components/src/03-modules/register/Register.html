@@ -9,7 +9,6 @@
         id="firstname"
         v-model="firstname"
         label="First name"
-        type="text"
         name="firstname"
         placeholder="First name"
       />
@@ -17,7 +16,6 @@
         id="lastname"
         v-model="lastname"
         label="Last name"
-        type="text"
         name="lastname"
         placeholder="Last name"
       />
@@ -55,7 +53,7 @@
     <div class="row row--no-margins center-xs">
       <a-button
         class="register__submit-button"
-        @click.stop.prevent="register"
+        @click.native.stop.prevent="register"
       >
         {{ submitButton }}
        </a-button>
@@ -64,7 +62,7 @@
   <div class="register__login-wrapper row row--no-margins center-xs">
     <a-button
       class="button--blank register__register-button"
-      @click="goToLogin"
+      @click.native="goToLogin"
     >
       {{ goToLoginButton }}
      </a-button>
