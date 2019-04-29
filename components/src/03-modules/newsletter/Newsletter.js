@@ -1,15 +1,17 @@
-import AInput from '../../molecules/input/Input.vue'
+import AInput from '../../atoms/input/Input.vue'
+import ALabel from '../../atoms/label/Label.vue'
+import AInputWrapper from '../../atoms/input-wrapper/InputWrapper.vue'
 import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
 import AButton from '../../atoms/button/Button.vue'
-import ALabel from '../../atoms/label/Label.vue'
 
 // @vue/component
 export default {
   components: {
     AInput,
+    ALabel,
+    AInputWrapper,
     ACheckbox,
-    AButton,
-    ALabel
+    AButton
   },
   props: {
     heading: {

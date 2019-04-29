@@ -5,50 +5,73 @@
       :legend-text="personalInformationLegend"
       legend-class="register__legend"
     >
-      <a-input
-        id="firstname"
-        v-model="firstname"
+      <a-input-wrapper
+        input-id="firstname"
         label="First name"
-        name="firstname"
-        placeholder="First name"
-      />
-      <a-input
-        id="lastname"
-        v-model="lastname"
+      >
+        <a-input
+          id="firstname"
+          type="text"
+          name="firstname"
+          placeholder="First name"
+          v-model="firstname"
+        />
+      </a-input-wrapper>
+
+      <a-input-wrapper
+        input-id="lastname"
         label="Last name"
-        name="lastname"
-        placeholder="Last name"
-      />
+      >
+        <a-input
+          id="lastname"
+          type="text"
+          v-model="lastname"
+          name="lastname"
+          placeholder="Last name"
+        />
+      </a-input-wrapper>
      </a-fieldset>
     <a-fieldset
       class="register__fieldset"
       :legend-text="signInLegend"
       legend-class="register__legend"
     >
-      <a-input
-        id="email"
-        v-model="email"
+      <a-input-wrapper
+        input-id="email"
         label="Email"
-        type="email"
-        name="email"
-        placeholder="Email"
-      />
-      <a-input
-        id="password"
-        v-model="password"
+      >
+        <a-input
+          id="email"
+          type="email"
+          v-model="email"
+          name="email"
+          placeholder="Email"
+        />
+      </a-input-wrapper>
+      <a-input-wrapper
+        input-id="password"
         label="Password"
-        type="password"
-        name="password"
-        placeholder="Password"
-      />
-      <a-input
-        id="passwordConfirmation"
-        v-model="passwordConfirmation"
+      >
+        <a-input
+          id="password"
+          type="password"
+          v-model="password"
+          name="password"
+          placeholder="Password"
+        />
+      </a-input-wrapper>
+      <a-input-wrapper
+        input-id="passwordConfirmation"
         label="Confirm password"
-        type="password"
-        name="passwordConfirmation"
-        placeholder="Confirm password"
-      />
+      >
+        <a-input
+          id="passwordConfirmation"
+          type="password"
+          v-model="passwordConfirmation"
+          name="passwordConfirmation"
+          placeholder="Confirm password"
+        />
+      </a-input-wrapper>
      </a-fieldset>
     <div class="row row--no-margins center-xs">
       <a-button

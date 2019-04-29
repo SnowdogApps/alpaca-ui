@@ -11,7 +11,7 @@ export default {
     /**
      * Input id
      */
-    id: {
+    inputId: {
       type: String,
       default: null
     },

@@ -22,13 +22,18 @@
       </div>
     </div>
     <div class="minicart__discount">
-      <a-input
+      <a-input-wrapper
+        input-id="discount-code"
         class="minicart__discount-input"
-        input-class="minicart__discount-input-field"
         :label="discountLabel"
-        id="discount-code"
-        v-model="discountCode"
-      />
+      >
+        <a-input
+          id="discount-code"
+          class="minicart__discount-input-field"
+          type="text"
+          v-model="discountCode"
+        />
+      </a-input-wrapper>
       <a-button
         class="button--secondary minicart__discount-button"
         @click.native="applyDiscount"

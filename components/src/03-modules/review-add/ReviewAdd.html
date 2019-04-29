@@ -14,20 +14,30 @@
     legend-class="rating-rate-legend review__rating-legend"
     class="review__fieldset"
   >
-    <a-input
-      id="nickname"
+    <a-input-wrapper
+      input-id="nickname"
       label="Nickname *"
-      v-model="nickname"
-      name="nickname"
-      placeholder="Nickname"
-    />
-    <a-input
-      id="summary"
+    >
+      <a-input
+        id="nickname"
+        type="text"
+        v-model="nickname"
+        name="nickname"
+        placeholder="Nickname"
+      />
+    </a-input-wrapper>
+    <a-input-wrapper
+      input-id="summary"
       label="Summary *"
-      v-model="summary"
-      name="summary"
-      placeholder="Summary"
-    />
+    >
+      <a-input
+        id="summary"
+        type="text"
+        v-model="summary"
+        name="summary"
+        placeholder="Summary"
+      />
+    </a-input-wrapper>
     <a-textarea
       id="review"
       label="Review *"

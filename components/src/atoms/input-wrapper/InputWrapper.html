@@ -3,7 +3,7 @@
   <slot name="label">
     <a-label
       v-if="label"
-      :for="id"
+      :for="inputId"
     >
       {{ label }}
     </a-label>
@@ -11,7 +11,7 @@
   <!-- @slot Input (Default slot) -->
   <slot>
     <a-input
-      :id="id"
+      :id="inputId"
       type="text"
     />
   </slot>

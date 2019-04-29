@@ -5,22 +5,30 @@
       :legend-text="legend"
       legend-class="login__legend"
     >
-      <a-input
-        id="email"
-        v-model="email"
+      <a-input-wrapper
         :label="emailLabel"
-        :placeholder="emailPlaceholder"
-        type="email"
-        name="email"
-      />
-      <a-input
-        id="password"
-        v-model="password"
+        input-id="email"
+      >
+        <a-input
+          id="email"
+          v-model="email"
+          type="email"
+          name="email"
+          :placeholder="emailPlaceholder"
+        />
+      </a-input-wrapper>
+      <a-input-wrapper
+        input-id="password"
         :label="passwordLabel"
-        :placeholder="passwordPlaceholder"
-        type="password"
-        name="password"
-      />
+      >
+        <a-input
+          id="password"
+          v-model="password"
+          type="password"
+          name="password"
+          :placeholder="passwordPlaceholder"
+        />
+      </a-input-wrapper>
      </a-fieldset>
     <div class="row row--no-margins end-xs">
       <a-button

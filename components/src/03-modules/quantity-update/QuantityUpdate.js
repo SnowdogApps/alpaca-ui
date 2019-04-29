@@ -1,4 +1,4 @@
-import AInput from '../../molecules/input/Input.vue'
+import AInputWrapper from '../../atoms/input-wrapper/InputWrapper.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ALabel from '../../atoms/label/Label.vue'
@@ -6,7 +6,7 @@ import ALabel from '../../atoms/label/Label.vue'
 // @vue/component
 export default {
   components: {
-    AInput,
+    AInputWrapper,
     AIcon,
     AButton,
     ALabel

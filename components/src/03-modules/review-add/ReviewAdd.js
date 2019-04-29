@@ -1,7 +1,8 @@
 import AHeading from '../../atoms/heading/Heading.vue'
 import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../molecules/input/Input.vue'
+import AInput from '../../atoms/input/Input.vue'
+import AInputWrapper from '../../atoms/input-wrapper/InputWrapper.vue'
 import AFieldset from '../../atoms/fieldset/Fieldset.vue'
 import ATextarea from '../../molecules/textarea/Textarea.vue'
 
@@ -12,6 +13,7 @@ export default {
     AParagraph,
     AButton,
     AInput,
+    AInputWrapper,
     AFieldset,
     ATextarea
   },

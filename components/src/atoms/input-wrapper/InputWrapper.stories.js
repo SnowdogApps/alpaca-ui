@@ -24,7 +24,7 @@ storiesOf('atoms/Input wrapper', module)
       <a-input-wrapper
         :class="classKnob"
         :label="labelKnob"
-        id="input-1"
+        input-id="input-1"
       />
     `
   }))

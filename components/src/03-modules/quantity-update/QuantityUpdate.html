@@ -22,20 +22,23 @@
         class="button__icon quantity-update__icon"
       />
     </a-button>
-    <a-input
-      :id="inputId"
+    <a-input-wrapper
+      :input-id="inputId"
       class="quantity-update__input-wrapper"
-      type="number"
-      v-model="currentValue"
-      :min="inputMin"
-      :max="inputMax"
-      :name="inputName"
-      :placeholder="inputPlaceholder"
-      :input-default-class="false"
-      input-class="quantity-update__input"
-      autocomplete="off"
-      @input="changeValue"
-    />
+    >
+      <input
+        :id="inputId"
+        class="quantity-update__input"
+        type="number"
+        :min="inputMin"
+        :max="inputMax"
+        :name="inputName"
+        v-model="currentValue"
+        :placeholder="inputPlaceholder"
+        autocomplete="off"
+        @input="changeValue"
+      />
+    </a-input-wrapper>
     <a-button
       :aria-label="incrementAriaLabel"
       :class="[
