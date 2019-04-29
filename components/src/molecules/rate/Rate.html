@@ -21,14 +21,13 @@
         name="item"
         :item="item"
       >
-        <div
-          class="rating__star rating__star--rate"
+        <a-button
+          class="button--blank rating__star rating__star--rate"
           :aria-label="ariaLabelRate"
-          tabindex="0"
-          @click="selectValue(item)"
+          @click.native="selectValue(item)"
         >
           <span class="rating__indicator" />
-        </div>
+        </a-button>
       </slot>
     </div>
   </div>

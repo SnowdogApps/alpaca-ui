@@ -52,6 +52,7 @@ $rating__margin--rate    : $spacer--medium !default;
       height: $rating__item-size--rate;
 
       &::before {
+        width: $rating__item-size--rate;
         height: $rating__item-size--rate;
         background-size: $rating__item-size--rate;
       }

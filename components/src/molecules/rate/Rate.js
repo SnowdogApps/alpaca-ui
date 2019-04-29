@@ -1,8 +1,10 @@
 import AFieldset from '../../atoms/fieldset/Fieldset.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 export default {
   components: {
-    AFieldset
+    AFieldset,
+    AButton
   },
   model: {
     prop: 'rating',
