@@ -76,6 +76,7 @@ storiesOf('Molecules/Rate', module)
       ratingItems: 3
     }),
     methods: {
+      click: action('Clicked'),
       ariaLabelRate () {
         return `Rate option, ${this.rating} of ${this.ratingItems}. Click to vote`
       }
@@ -88,7 +89,12 @@ storiesOf('Molecules/Rate', module)
        legend="Your rating"
       >
         <template #item="data">
-          <span>{{ data.item }}</span>
+          <button
+            style="background: none;"
+            @click="click"
+          >
+            {{ data.item }}
+          </button>
         </template>
       </a-rate>
     `
