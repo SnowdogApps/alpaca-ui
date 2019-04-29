@@ -1,51 +1,42 @@
 [
   [
     {
-      "mobileHeading": "Mobile heading 1",
       "text": "Example content 1",
       "id": "rowId1"
     },
     {
-      "mobileHeading": "Mobile heading 2",
       "text": "Example content 2",
       "id": "rowId2"
     },
     {
-      "mobileHeading": "Mobile heading 3",
       "text": "Example content 3",
       "id": "rowId3"
     }
   ],
   [
     {
-      "mobileHeading": "Mobile heading 4",
       "text": "Example content 4",
       "id": "rowId4"
     },
     {
-      "mobileHeading": "Mobile heading 5",
       "text": "Example content 5",
       "id": "rowId5"
     },
     {
-      "mobileHeading": "Mobile heading 6",
       "text": "Example content 6",
       "id": "rowId6"
     }
   ],
   [
     {
-      "mobileHeading": "Mobile heading 7",
       "text": "Example content 7",
       "id": "rowId7"
     },
     {
-      "mobileHeading": "Mobile heading 8",
       "text": "Example content 8",
       "id": "rowId8"
     },
     {
-      "mobileHeading": "Mobile heading 9",
       "text": "Example content 9",
       "id": "rowId9"
     }
