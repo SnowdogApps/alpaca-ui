@@ -65,7 +65,7 @@
           class="product-item__action-button"
           :aria-label="removeButton || defaultRemoveBtnAriaLabel"
           custom-class="product-item__actions-item"
-          @click="onRemove(id)"
+          @click.native="onRemove(id)"
         >
           <a-icon
             icon="remove"

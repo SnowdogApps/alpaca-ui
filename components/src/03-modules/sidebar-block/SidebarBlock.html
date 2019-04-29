@@ -24,7 +24,7 @@
         <a-button
           class="sidebar-block__remove"
           aria-label="Remove product from compare"
-          @click="removeFromCompare"
+          @click.native="removeFromCompare"
         >
           <a-icon
             icon="close"
@@ -48,7 +48,7 @@
       </router-link>
       <a-button
         class="sidebar-block__action"
-        @click="clearCompareList"
+        @click.native="clearCompareList"
       >
         {{ clearAllButton }}
        </a-button>

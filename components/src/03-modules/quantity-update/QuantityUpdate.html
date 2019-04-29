@@ -14,7 +14,7 @@
         {'quantity-update__button--disabled': currentValue === 0},
         decrementButtonClass
       ]"
-      @click="changeValue(--currentValue)"
+      @click.native="changeValue(--currentValue)"
     >
       <a-icon
         :title="decrementIconTitle"
@@ -34,8 +34,8 @@
       type="number"
       class="quantity-update__input-wrapper"
       input-class="quantity-update__input"
+      label-class="label--hidden"
       autocomplete="off"
-      hidden-label
       @input="changeValue"
     />
     <a-button
@@ -44,7 +44,7 @@
         'button--icon quantity-update__button quantity-update__button--plus',
         incrementButtonClass
       ]"
-      @click="changeValue(++currentValue)"
+      @click.native="changeValue(++currentValue)"
     >
       <a-icon
         :title="incrementIconTitle"

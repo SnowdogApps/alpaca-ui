@@ -56,21 +56,21 @@
 
     <div class="catalog-list-item__actions">
       <div class="catalog-list-item__actions-primary">
-        <a-button @click="addToCart">
+        <a-button @click.native="addToCart">
           {{ addToCartButton }}
          </a-button>
       </div>
 
       <div class="catalog-list-item__actions-secondary">
         <a-button
-          @click="addToWishList"
+          @click.native="addToWishList"
           class="catalog-list-item__button"
         >
           <a-icon :icon="buttonWishlist"/>
         </a-button>
 
         <a-button
-          @click="compare"
+          @click.native="compare"
           class="catalog-list-item__button"
         >
           <a-icon :icon="buttonCompare"/>

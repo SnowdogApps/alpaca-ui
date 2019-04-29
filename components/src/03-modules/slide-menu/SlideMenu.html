@@ -8,7 +8,7 @@
     <a-button
       v-if="!isRootPosition"
       class="slide-menu__button slide-menu__button--prev"
-      @click="load(prevLevel)"
+      @click.native="load(prevLevel)"
     >
       <a-icon
         :icon="prevIcon"
@@ -38,7 +38,7 @@
         <a-button
           v-if="item.nodes"
           class="slide-menu__button"
-          @click="load(item.level)"
+          @click.native="load(item.level)"
         >
           {{ item.label }}
           <a-icon
