@@ -83,7 +83,7 @@ storiesOf('Molecules/Rate', module)
         <template #item="data">
           <button
             style="background: none;"
-            @click="click"
+            @click="click(data.item)"
           >
             {{ data.item }}
           </button>
