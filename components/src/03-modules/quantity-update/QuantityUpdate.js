@@ -1,4 +1,4 @@
-import AInputWrapper from '../../atoms/input-wrapper/InputWrapper.vue'
+import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ALabel from '../../atoms/label/Label.vue'

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/vue'
 import AButton from '../../atoms/button/Button.vue'
 import AInput from '../../atoms/input/Input.vue'
 import ALabel from '../../atoms/label/Label.vue'
-import AInputWrapper from '../../atoms/input-wrapper/InputWrapper.vue'
+import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 storiesOf('Modules/Off Canvas Sidebar', module)

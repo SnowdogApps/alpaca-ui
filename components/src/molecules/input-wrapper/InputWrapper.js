@@ -1,6 +1,6 @@
 // @vue/component
-import ALabel from '../label/Label.vue'
-import AInput from '../input/Input.vue'
+import ALabel from '../../atoms/label/Label.vue'
+import AInput from '../../atoms/input/Input.vue'
 
 export default {
   components: {

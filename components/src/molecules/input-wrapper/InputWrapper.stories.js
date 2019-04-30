@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
 import AInputWrapper from './InputWrapper.vue'
-import ALabel from '../label/Label.vue'
-import AInput from '../input/Input.vue'
+import ALabel from '../../atoms/label/Label.vue'
+import AInput from '../../atoms/input/Input.vue'
 
 const info = `
   ---
@@ -13,7 +13,7 @@ const info = `
 `
 const inputClasses = [null, 'input-wrapper--inline']
 
-storiesOf('Atoms/Input wrapper', module)
+storiesOf('Molecules/Input wrapper', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AInputWrapper },
