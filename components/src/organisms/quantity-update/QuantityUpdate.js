@@ -13,7 +13,7 @@ export default {
   },
   props: {
     value: {
-      type: Number,
+      type: [Number, String],
       required: true
     },
     label: {
@@ -34,7 +34,7 @@ export default {
     },
     inputMin: {
       type: Number,
-      default: 1
+      default: 0
     },
     inputMax: {
       type: Number,
@@ -80,6 +80,14 @@ export default {
   methods: {
     changeValue () {
       this.$emit('update', parseInt(this.currentValue, 10))
+    },
+    inputEvent (event) {
+      if (event.target.value >= 0) {
+        this.currentValue = parseInt(event.target.value, 10)
+        this.$emit('update', this.currentValue)
+      } else {
+        this.currentValue = 0
+      }
     }
   }
 }

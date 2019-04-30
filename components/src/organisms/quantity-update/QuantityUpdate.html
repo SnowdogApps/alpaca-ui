@@ -1,57 +1,69 @@
 <div class="quantity-update">
-  <a-label
-    v-if="label"
-    :class="['quantity-update__label', labelClass]"
-    :for="inputId"
-  >
-    {{ label }}
-  </a-label>
+  <!-- @slot Label (Named slot) -->
+  <slot name="label">
+    <a-label
+      v-if="label"
+      :class="['quantity-update__label', labelClass]"
+      :for="inputId"
+    >
+      {{ label }}
+    </a-label>
+  </slot>
   <div class="quantity-update__qty">
-    <a-button
-      :aria-label="decrementAriaLabel"
-      :class="[
-        'button--icon quantity-update__button quantity-update__button--minus',
-        {'quantity-update__button--disabled': currentValue === 0},
-        decrementButtonClass
-      ]"
-      @click.native="changeValue(--currentValue)"
-    >
-      <a-icon
-        :title="decrementIconTitle"
-        icon="minus"
-        class="button__icon quantity-update__icon"
-      />
-    </a-button>
-    <a-input-wrapper
-      :input-id="inputId"
-      class="quantity-update__input-wrapper"
-    >
-      <input
-        :id="inputId"
-        class="quantity-update__input"
-        type="number"
-        :min="inputMin"
-        :max="inputMax"
-        :name="inputName"
-        v-model="currentValue"
-        :placeholder="inputPlaceholder"
-        autocomplete="off"
-        @input="changeValue"
-      />
-    </a-input-wrapper>
-    <a-button
-      :aria-label="incrementAriaLabel"
-      :class="[
-        'button--icon quantity-update__button quantity-update__button--plus',
-        incrementButtonClass
-      ]"
-      @click.native="changeValue(++currentValue)"
-    >
-      <a-icon
-        :title="incrementIconTitle"
-        icon="plus"
-        class="button__icon quantity-update__icon"
-      />
-    </a-button>
+    <!-- @slot Decrement qty button (Named slot) -->
+    <slot name="minus">
+      <a-button
+        :aria-label="decrementAriaLabel"
+        :class="[
+          'button--icon quantity-update__button quantity-update__button--minus',
+          {'quantity-update__button--disabled': currentValue === 0},
+          decrementButtonClass
+        ]"
+        @click.native="changeValue(--currentValue)"
+      >
+        <a-icon
+          :title="decrementIconTitle"
+          icon="minus"
+          class="button__icon quantity-update__icon"
+        />
+      </a-button>
+    </slot>
+    <!-- @slot Qty input (Named slot) -->
+    <slot name="input">
+      <a-input-wrapper
+        :input-id="inputId"
+        class="quantity-update__input-wrapper"
+      >
+        <input
+          :id="inputId"
+          class="quantity-update__input"
+          type="number"
+          :min="inputMin"
+          :max="inputMax"
+          :name="inputName"
+          :value="currentValue"
+          @input="inputEvent"
+          :placeholder="inputPlaceholder"
+          autocomplete="off"
+        />
+      </a-input-wrapper>
+    </slot>
+    <!-- @slot Increment qty button (Named slot) -->
+    <slot name="plus">
+      <a-button
+        :aria-label="incrementAriaLabel"
+        :class="[
+          'button--icon quantity-update__button quantity-update__button--plus',
+          incrementButtonClass
+        ]"
+        @click.native="changeValue(++currentValue)"
+      >
+        <a-icon
+          :title="incrementIconTitle"
+          icon="plus"
+          class="button__icon quantity-update__icon"
+        />
+      </a-button>
+    </slot>
   </div>
 </div>
