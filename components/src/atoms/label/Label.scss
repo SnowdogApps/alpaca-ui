@@ -9,7 +9,7 @@ $label-font-weight   : $font-weight-normal !default;
 $label-line-height   : $font-line-height !default;
 $label-transition    : none !default;
 
-.label {
+.a-label {
   display: block;
   margin: $label-margin;
   color: $label-color;

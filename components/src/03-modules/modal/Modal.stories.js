@@ -30,7 +30,7 @@ storiesOf('Modules/Modal', module)
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <a-input-wrapper
             input-id="field_id"
-            class="input-wrapper--inline"
+            class="a-input-wrapper--inline"
             label="Inline text"
           >
             <a-input

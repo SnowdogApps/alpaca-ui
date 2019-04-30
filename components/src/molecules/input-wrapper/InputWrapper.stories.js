@@ -8,10 +8,10 @@ import AInput from '../../atoms/input/Input.vue'
 const info = `
   ---
   Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.input-wrapper--inline\` - Selector for applying inline styles
+  - \`.a-input-wrapper--inline\` - Selector for applying inline styles
   ---
 `
-const inputClasses = [null, 'input-wrapper--inline']
+const inputClasses = [null, 'a-input-wrapper--inline']
 
 storiesOf('Molecules/Input wrapper', module)
   .addParameters({ info })
