@@ -5,7 +5,7 @@ import ATextarea from './Textarea.vue'
 
 const info = 'Check **Knobs** tab to edit component properties dynamically'
 
-storiesOf('atoms/Textarea', module)
+storiesOf('Atoms/Textarea', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { ATextarea },

@@ -13,7 +13,7 @@ const info = `
 `
 const inputClasses = [null, 'input-wrapper--inline']
 
-storiesOf('atoms/Input wrapper', module)
+storiesOf('Atoms/Input wrapper', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AInputWrapper },
