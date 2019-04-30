@@ -1,15 +1,20 @@
 import { storiesOf } from '@storybook/vue'
+import { text } from '@storybook/addon-knobs'
 
 import AContainer from './Container.vue'
 
 storiesOf('Atoms/Container', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { AContainer },
+    props: {
+      contentKnob: {
+        default: text('Container content', 'Container')
+      }
+    },
     template: `
       <a-container>
-        Container
+        {{ contentKnob }}
       </a-container>
     `
   }))

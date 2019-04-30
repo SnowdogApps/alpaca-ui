@@ -8,7 +8,7 @@ describe('Button', () => {
     expect(wrapper.is('button')).toBe(true)
     expect(wrapper.attributes().type).toBeDefined()
     expect(wrapper.attributes().type).toBe('button')
-    expect(wrapper.classes()).toContain('button')
+    expect(wrapper.classes()).toContain('a-button')
     expect(wrapper.classes().length).toBe(1)
   })
 
@@ -21,8 +21,8 @@ describe('Button', () => {
       }
     })
 
-    expect(wrapper.find('.button span').exists()).toBe(true)
-    expect(wrapper.find('.button span').text()).toEqual('Alpaca UI')
+    expect(wrapper.find('.a-button span').exists()).toBe(true)
+    expect(wrapper.find('.a-button span').text()).toEqual('Alpaca UI')
   })
 
   // it('should emit click event when clicked', () => {

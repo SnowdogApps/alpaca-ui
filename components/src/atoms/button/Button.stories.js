@@ -7,17 +7,17 @@ import AIcon from '../icon/Icon.vue'
 const info = `
   ---
   Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.button--secondary\` - Selector for applying secondary styles
-  - \`.button--blank\` - Selector for applying blank styles
-  - \`.button--fluid\` - Selector for applying fluid styles (width: 100%)
+  - \`.a-button--secondary\` - Selector for applying secondary styles
+  - \`.a-button--blank\` - Selector for applying blank styles
+  - \`.a-button--fluid\` - Selector for applying fluid styles (width: 100%)
   ---
 `
 
 const bemModifiers = [
   null,
-  'button--secondary',
-  'button--blank',
-  'button--fluid'
+  'a-button--secondary',
+  'a-button--blank',
+  'a-button--fluid'
 ]
 
 storiesOf('Atoms/Button', module)
@@ -25,29 +25,29 @@ storiesOf('Atoms/Button', module)
   .add('Default', () => ({
     components: { AButton },
     props: {
-      customClass: {
+      classKnobs: {
         default: select('BEM Modifier', bemModifiers)
       },
-      text: {
+      textKnobs: {
         default: text('Text', 'Button text')
       }
     },
     template: `
-      <a-button :class="customClass">
-        {{ text }}
+      <a-button :class="classKnobs">
+        {{ textKnobs }}
       </a-button>
     `
   }))
   .add('With slot', () => ({
     components: { AButton, AIcon },
     props: {
-      customClass: {
+      classKnobs: {
         default: select('BEM Modifier', bemModifiers)
       }
     },
     template: `
       <a-button
-        :class="customClass"
+        :class="classKnobs"
         style="padding: 0;"
       >
         <a-icon
