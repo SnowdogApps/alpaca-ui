@@ -1,50 +1,56 @@
 import { storiesOf } from '@storybook/vue'
+import { select, text } from '@storybook/addon-knobs'
 
 import ABadge from './Badge.vue'
 
 const info = `
   ---
-  #### Available these modifiers with \`.badge\` class:
-  - \`.badge--new\` - Selector for applying styles for new badge
-  - \`.badge--sale\` - Selector for applying styles for sale badge
+  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
+  - \`.a-badge--new\` - Selector for applying styles for new badge
+  - \`.a-badge--sale\` - Selector for applying styles for sale badge
   ---
 `
 
+const bemModifiers = [
+  null,
+  'a-badge--new',
+  'a-badge--sale'
+]
+
 storiesOf('Atoms/Badge', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     components: { ABadge },
+    props: {
+      textKnob: {
+        default: text('Badge text', 'Default badge')
+      },
+      classKnob: {
+        default: select('BEM Modifier', bemModifiers)
+      }
+    },
     template: `
-      <a-badge>
-        Default badge
+      <a-badge :class="classKnob">
+        {{ textKnob }}
       </a-badge>
     `
   }))
-  // @vue/component
   .add('Custom tag', () => ({
     components: { ABadge },
+    props: {
+      textKnob: {
+        default: text('Badge text', 'Custom tag')
+      },
+      classKnob: {
+        default: select('BEM Modifier', bemModifiers)
+      }
+    },
     template: `
-      <a-badge tag="span">
-        Custom tag
-      </a-badge>
-    `
-  }))
-  // @vue/component
-  .add('New', () => ({
-    components: { ABadge },
-    template: `
-      <a-badge class="badge--new">
-        New badge
-      </a-badge>
-    `
-  }))
-  // @vue/component
-  .add('Sale', () => ({
-    components: { ABadge },
-    template: `
-      <a-badge class="badge--sale">
-        Sale badge
+      <a-badge
+        tag="span"
+        :class="classKnob"
+      >
+        {{ textKnob }}
       </a-badge>
     `
   }))
