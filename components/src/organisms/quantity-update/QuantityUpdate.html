@@ -3,7 +3,7 @@
   <slot name="label">
     <a-label
       v-if="label"
-      :class="['quantity-update__label', labelClass]"
+      class="quantity-update__label"
       :for="inputId"
     >
       {{ label }}
@@ -19,7 +19,7 @@
           {'quantity-update__button--disabled': currentValue === 0},
           decrementButtonClass
         ]"
-        @click.native="changeValue(--currentValue)"
+        @click.native="updateQty(-1)"
       >
         <a-icon
           :title="decrementIconTitle"
@@ -38,9 +38,8 @@
           :id="inputId"
           class="quantity-update__input"
           type="number"
-          :min="inputMin"
-          :max="inputMax"
-          :name="inputName"
+          :min="minQty"
+          :max="maxQty"
           :value="currentValue"
           @input="inputEvent"
           :placeholder="inputPlaceholder"
@@ -56,7 +55,7 @@
           'button--icon quantity-update__button quantity-update__button--plus',
           incrementButtonClass
         ]"
-        @click.native="changeValue(++currentValue)"
+        @click.native="updateQty(1)"
       >
         <a-icon
           :title="incrementIconTitle"

@@ -16,6 +16,10 @@ storiesOf('Organisms/Quantity Update', module)
       <a-quantity-update
         :value="4"
         @update="updateVal"
+        label="Quantity"
+        input-id="qty-update"
+        :min-qty="0"
+        :max-qty="100"
       />
     `
   }))

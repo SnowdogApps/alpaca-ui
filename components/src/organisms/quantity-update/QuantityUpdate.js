@@ -12,31 +12,38 @@ export default {
     ALabel
   },
   props: {
+    /**
+     * Quantity
+     */
     value: {
       type: [Number, String],
       required: true
     },
+    /**
+     * Label text (Default label)
+     */
     label: {
       type: String,
-      default: 'Quantity'
+      default: null
     },
-    labelClass: {
-      type: String,
-      default: ''
-    },
+    /**
+     * Input id (Default input)
+     */
     inputId: {
       type: String,
-      default: 'qty'
+      default: null
     },
-    inputName: {
-      type: String,
-      default: 'qty'
-    },
-    inputMin: {
+    /**
+     * Min qty (Default input)
+     */
+    minQty: {
       type: Number,
       default: 0
     },
-    inputMax: {
+    /**
+     * Max qty (Default input)
+     */
+    maxQty: {
       type: Number,
       default: null
     },
@@ -71,23 +78,29 @@ export default {
   },
   data () {
     return {
-      currentValue: null
+      currentValue: this.value
     }
   },
-  created () {
-    this.currentValue = this.value
-  },
   methods: {
-    changeValue () {
-      this.$emit('update', parseInt(this.currentValue, 10))
+    updateQty (value) {
+      const newValue = this.currentValue + value
+      if (this.minQty <= newValue && (this.maxQty ? (newValue <= this.maxQty) : true)) {
+        this.currentValue = newValue
+        this.$emit('update', this.currentValue)
+      }
     },
     inputEvent (event) {
-      if (event.target.value >= 0) {
-        this.currentValue = parseInt(event.target.value, 10)
-        this.$emit('update', this.currentValue)
+      const newValue = parseInt(event.target.value, 10)
+      if (this.minQty <= newValue && (this.maxQty ? (newValue <= this.maxQty) : true)) {
+        this.currentValue = newValue
+      } else if (newValue > this.maxQty) {
+        this.currentValue = this.maxQty
+        event.target.value = this.maxQty
       } else {
-        this.currentValue = 0
+        this.currentValue = this.minQty
+        event.target.value = this.minQty
       }
+      this.$emit('update', this.currentValue)
     }
   }
 }
