@@ -12,20 +12,19 @@
   <div class="quantity-update__qty">
     <!-- @slot Decrement qty button (Named slot) -->
     <slot name="minus">
+      <!-- TODO: Replace disabled class with attirbute -->
       <a-button
-        :aria-label="decrementAriaLabel"
         :class="[
-          'button--icon quantity-update__button quantity-update__button--minus',
+          'quantity-update__button quantity-update__button--minus',
           {'quantity-update__button--disabled': currentValue === 0},
-          decrementButtonClass
         ]"
+        :aria-label="decrementAriaLabel"
         @click.native="updateQty(-1)"
       >
         <a-icon
-          :title="decrementIconTitle"
           icon="minus"
           class="button__icon quantity-update__icon"
-        />
+        >{{ decrementIconTitle }}</a-icon>
       </a-button>
     </slot>
     <!-- @slot Qty input (Named slot) -->
@@ -42,7 +41,6 @@
           :max="maxQty"
           :value="currentValue"
           @input="inputEvent"
-          :placeholder="inputPlaceholder"
           autocomplete="off"
         />
       </a-input-wrapper>
@@ -50,18 +48,14 @@
     <!-- @slot Increment qty button (Named slot) -->
     <slot name="plus">
       <a-button
+        class="quantity-update__button quantity-update__button--plus"
         :aria-label="incrementAriaLabel"
-        :class="[
-          'button--icon quantity-update__button quantity-update__button--plus',
-          incrementButtonClass
-        ]"
         @click.native="updateQty(1)"
       >
         <a-icon
-          :title="incrementIconTitle"
           icon="plus"
-          class="button__icon quantity-update__icon"
-        />
+          class="quantity-update__icon"
+        >{{ incrementIconTitle }}</a-icon>
       </a-button>
     </slot>
   </div>

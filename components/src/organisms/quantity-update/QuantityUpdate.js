@@ -47,30 +47,30 @@ export default {
       type: Number,
       default: null
     },
-    inputPlaceholder: {
-      type: String,
-      default: '0'
-    },
-    decrementButtonClass: {
-      type: String,
-      default: ''
-    },
+    /**
+     * Decrement button aria-label (Default button)
+     */
     decrementAriaLabel: {
       type: String,
       default: 'Decrease the quantity'
     },
+    /**
+     * Decrement button icon title (Default button)
+     */
     decrementIconTitle: {
       type: String,
       default: 'Minus mark'
     },
-    incrementButtonClass: {
-      type: String,
-      default: ''
-    },
+    /**
+     * Increment button aria-label (Default button)
+     */
     incrementAriaLabel: {
       type: String,
       default: 'Increase the quantity'
     },
+    /**
+     * Increment button icon title (Default button)
+     */
     incrementIconTitle: {
       type: String,
       default: 'Plus mark'
@@ -86,8 +86,8 @@ export default {
       const newValue = this.currentValue + value
       if (this.minQty <= newValue && (this.maxQty ? (newValue <= this.maxQty) : true)) {
         this.currentValue = newValue
-        this.$emit('update', this.currentValue)
       }
+      this.$emit('update', this.currentValue)
     },
     inputEvent (event) {
       const newValue = parseInt(event.target.value, 10)

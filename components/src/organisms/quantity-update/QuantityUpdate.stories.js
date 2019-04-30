@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions'
 import AQuantityUpdate from './QuantityUpdate.vue'
 
 const info = 'Check **Knobs** tab to edit component properties dynamically.'
+// TODO: Add knobs with label, minQty, maxQty
 
 storiesOf('Organisms/Quantity Update', module)
   .addParameters({ info })

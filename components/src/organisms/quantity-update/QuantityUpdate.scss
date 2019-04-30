@@ -26,6 +26,8 @@ $quantity-updater__icon-transition                 : $transition-base !default;
 $quantity-updater__error-margin                    : 0 0 0 $spacer !default;
 $quantity-updater__error-max-width                 : 120px !default;
 
+// TODO: Add 'a-' prefixes to classes, simplify styles
+
 .quantity-update {
   &__label {
     font-weight: $quantity-update__label-font-weight;
