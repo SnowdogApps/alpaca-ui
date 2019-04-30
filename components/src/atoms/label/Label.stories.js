@@ -5,8 +5,8 @@ import ALabel from './Label.vue'
 const info = `
   ---
   #### Use these modifiers with \`.label\` class.
-  - \`.label--inline\` - Selector for applying inline styles
-  - \`.label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
+  - \`.a-label--inline\` - Selector for applying inline styles
+  - \`.a-label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
   ---
 `
 
@@ -34,7 +34,7 @@ storiesOf('Atoms/Label', module)
   .add('Inline', () => ({
     components: { ALabel },
     template: `
-      <a-label class="label--inline">
+      <a-label class="a-label--inline">
         Inline label
       </a-label>
     `

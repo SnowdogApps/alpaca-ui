@@ -1,0 +1,24 @@
+@import '../../../assets/styles/_globals.scss';
+
+$textarea__placeholder-color: $gray !default;
+$textarea__min-height       : 100px !default;
+$textarea__label-margin     : 0 $spacer--medium 0 0 !default;
+$textarea__width            : 100% !default;
+$textarea__padding          : $spacer--medium !default;
+$textarea__border           : 1px solid $form-elements-border-color !default;
+$textarea__border-radius    : $form-elements-radius--small !default;
+$textarea__line-height      : $font-line-height !default;
+
+.textarea {
+  display: block;
+  width: $textarea__width;
+  min-height: $textarea__min-height;
+  padding: $textarea__padding;
+  line-height: $textarea__line-height;
+  border: $textarea__border;
+  border-radius: $textarea__border-radius;
+
+  &::placeholder {
+    color: $textarea__placeholder-color;
+  }
+}

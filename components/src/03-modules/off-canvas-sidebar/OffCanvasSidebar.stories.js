@@ -1,13 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 
 import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../02-elements/input/Input.vue'
+import AInput from '../../atoms/input/Input.vue'
+import ALabel from '../../atoms/label/Label.vue'
+import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 storiesOf('Modules/Off Canvas Sidebar', module)
   // @vue/component
   .add('Default', () => ({
-    components: { AButton, AInput, AOffCanvasSidebar },
+    components: { AButton, AInput, ALabel, AInputWrapper, AOffCanvasSidebar },
     data: () => ({ value: null }),
     methods: {
       showSidebar () {
@@ -25,14 +27,18 @@ storiesOf('Modules/Off Canvas Sidebar', module)
           heading="Sidebar Heading"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a-input
+          <a-input-wrapper
+            class="a-input-wrapper--inline"
             label="Inline text"
-            id="field_id"
-            name="inline"
-            placeholder="Test focus trap"
-            inline
-            v-model="value"
-          />
+            input-id="field_id"
+          >
+            <a-input
+              id="field_id"
+              type="text"
+              v-model="value"
+              placeholder="Test focus trap"
+            />
+          </a-input-wrapper>
          </a-off-canvas-sidebar>
       </div>
     `

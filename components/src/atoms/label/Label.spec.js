@@ -6,7 +6,7 @@ describe('Label', () => {
     const wrapper = mount(ALabel)
 
     expect(wrapper.is('label')).toBe(true)
-    expect(wrapper.classes()).toContain('label')
+    expect(wrapper.classes()).toContain('a-label')
     expect(wrapper.classes().length).toBe(1)
   })
 
@@ -18,7 +18,7 @@ describe('Label', () => {
     })
 
     expect(wrapper.is('span')).toBe(true)
-    expect(wrapper.classes()).toContain('label')
+    expect(wrapper.classes()).toContain('a-label')
     expect(wrapper.classes().length).toBe(1)
   })
 

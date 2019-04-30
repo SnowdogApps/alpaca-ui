@@ -14,34 +14,48 @@
     legend-class="rating-rate-legend review__rating-legend"
     class="review__fieldset"
   >
-    <a-input
-      id="nickname"
+    <a-input-wrapper
+      input-id="nickname"
       label="Nickname *"
-      v-model="nickname"
-      name="nickname"
-      placeholder="Nickname"
-    />
-    <a-input
-      id="summary"
+    >
+      <a-input
+        id="nickname"
+        type="text"
+        v-model="nickname"
+        name="nickname"
+        placeholder="Nickname"
+      />
+    </a-input-wrapper>
+    <a-input-wrapper
+      input-id="summary"
       label="Summary *"
-      v-model="summary"
-      name="summary"
-      placeholder="Summary"
-    />
-    <a-textarea
-      id="review"
+    >
+      <a-input
+        id="summary"
+        type="text"
+        v-model="summary"
+        name="summary"
+        placeholder="Summary"
+      />
+    </a-input-wrapper>
+    <a-input-wrapper
+      input-id="review"
       label="Review *"
-      v-model="review"
-      name="review"
-      placeholder="Review"
-    />
+    >
+      <a-textarea
+        id="review"
+        v-model="review"
+        name="review"
+        placeholder="Review"
+      />
+    </a-input-wrapper>
 
     <a-button @click.native="addReview()">
       Add Your Review
-     </a-button>
+    </a-button>
 
     <a-paragraph class="review__required-info">
       * Required fields
-     </a-paragraph>
+    </a-paragraph>
    </a-fieldset>
 </div>
