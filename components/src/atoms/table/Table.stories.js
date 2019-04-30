@@ -8,15 +8,26 @@ import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'
 import footCells from './mocks/footCells.json'
 
-storiesOf('Elements/Table', module)
-  // @vue/component
+const info = `
+  ---
+  #### Use these modifiers with \`.table\` class.
+  - \`.table--odd-even\` - Selector for applying odd-even styles
+  ---
+`
+
+const defaultData = {
+  components: { ATable, ATableRow, ATableCell },
+  data: () => ({
+    bodyRows,
+    headCells,
+    footCells
+  })
+}
+
+storiesOf('Atoms/Table', module)
+  .addParameters({ info })
   .add('Default', () => ({
-    components: { ATable, ATableRow, ATableCell },
-    data: () => ({
-      bodyRows,
-      headCells,
-      footCells
-    }),
+    ...defaultData,
     template: `
       <a-table caption="This is a table">
         <thead>
@@ -25,48 +36,42 @@ storiesOf('Elements/Table', module)
               tag="th"
               v-for="headCell in headCells"
               :key="headCell.id"
-              :scope="headCell.scope"
+              scope="col"
             >
               {{ headCell.text }}
-              </a-table-cell>
-            </a-table-row>
+            </a-table-cell>
+          </a-table-row>
         </thead>
         <tbody>
           <a-table-row
-            v-for="row in bodyRows"
+            v-for="(row, i) in bodyRows"
             :key="row.id"
           >
             <a-table-cell
               v-for="bodyCell in row"
               :key="bodyCell.id"
-              :data-th="bodyCell.mobileHeading"
+              :data-th="headCells[i].text"
             >
               {{ bodyCell.text }}
-              </a-table-cell>
-            </a-table-row>
+            </a-table-cell>
+          </a-table-row>
         </tbody>
         <tfoot>
           <a-table-row>
             <a-table-cell
               v-for="footCell in footCells"
               :key="footCell.id"
-              :colspan="footCell.colspan"
+              colspan="2"
             >
               {{ footCell.text }}
-              </a-table-cell>
-            </a-table-row>
+            </a-table-cell>
+          </a-table-row>
         </tfoot>
-        </a-table>
+      </a-table>
     `
   }))
-  // @vue/component
   .add('Odd Even', () => ({
-    components: { ATable, ATableRow, ATableCell },
-    data: () => ({
-      bodyRows,
-      headCells,
-      footCells
-    }),
+    ...defaultData,
     template: `
       <a-table
         caption="This is a table"
@@ -78,37 +83,42 @@ storiesOf('Elements/Table', module)
               tag="th"
               v-for="headCell in headCells"
               :key="headCell.id"
-              :scope="headCell.scope"
+              scope="col"
             >
               {{ headCell.text }}
-              </a-table-cell>
-            </a-table-row>
+            </a-table-cell>
+          </a-table-row>
         </thead>
         <tbody>
           <a-table-row
-            v-for="row in bodyRows"
+            v-for="(row, i) in bodyRows"
             :key="row.id"
           >
             <a-table-cell
               v-for="bodyCell in row"
               :key="bodyCell.id"
-              :data-th="bodyCell.mobileHeading"
+              :data-th="headCells[i].text"
             >
               {{ bodyCell.text }}
-              </a-table-cell>
-            </a-table-row>
+            </a-table-cell>
+          </a-table-row>
         </tbody>
         <tfoot>
           <a-table-row>
             <a-table-cell
-              v-for="footCell in footCells"
-              :key="footCell.id"
-              :colspan="footCell.colspan"
+              :key="footCells[0].id"
+              colspan="1"
             >
-              {{ footCell.text }}
-              </a-table-cell>
-            </a-table-row>
+              {{ footCells[0].text }}
+            </a-table-cell>
+            <a-table-cell
+              :key="footCells[1].id"
+              colspan="2"
+            >
+              {{ footCells[1].text }}
+            </a-table-cell>
+          </a-table-row>
         </tfoot>
-        </a-table>
+      </a-table>
     `
   }))

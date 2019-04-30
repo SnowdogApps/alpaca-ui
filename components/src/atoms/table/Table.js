@@ -1,9 +1,12 @@
 // @vue/component
 export default {
   props: {
-    tag: {
+    /**
+     * Caption for table
+     */
+    caption: {
       type: String,
-      default: 'td'
+      default: null
     }
   }
 }
