@@ -1,16 +1,13 @@
 [
   {
-    "scope": "col",
     "text": "Example heading 1",
     "id": "headId1"
   },
   {
-    "scope": "col",
     "text": "Example heading 2",
     "id": "headId2"
   },
   {
-    "scope": "col",
     "text": "Example heading 3",
     "id": "headId3"
   }
