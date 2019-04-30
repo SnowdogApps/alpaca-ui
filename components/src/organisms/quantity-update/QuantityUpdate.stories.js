@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 
 import AQuantityUpdate from './QuantityUpdate.vue'
 
-storiesOf('Modules/Quantity Update', module)
+storiesOf('Organisms/Quantity Update', module)
   // @vue/component
   .add('Default', () => ({
     components: { AQuantityUpdate },

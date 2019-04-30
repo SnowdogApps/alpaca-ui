@@ -7,7 +7,7 @@ import AModal from '../../03-modules/modal/Modal.vue'
 import ALogin from '../../03-modules/login/Login.vue'
 import AMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AWishlist from '../../03-modules/wishlist/Wishlist.vue'
-import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import AQuantityUpdate from '../../organisms/quantity-update/QuantityUpdate.vue'
 import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
