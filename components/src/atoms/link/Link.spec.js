@@ -17,8 +17,8 @@ describe('Link', () => {
       }
     })
 
-    expect(wrapper.find('.a-link span').exists()).toBe(true)
-    expect(wrapper.find('.a-link span').text()).toEqual('Alpaca UI')
+    expect(wrapper.find('.a-link').exists()).toBe(true)
+    expect(wrapper.find('.a-link').text()).toEqual('Link default text')
   })
 
   it('should be generated with the `href` passed as attributes', () => {
