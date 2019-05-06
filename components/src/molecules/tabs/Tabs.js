@@ -10,7 +10,6 @@ export default {
   },
   mounted () {
     this.tabs = this.$children
-    console.log(this.tabs)
   },
   methods: {
     selectTab (selectedTab) {
