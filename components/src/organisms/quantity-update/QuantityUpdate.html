@@ -12,12 +12,9 @@
   <div class="quantity-update__qty">
     <!-- @slot Decrement qty button (Named slot) -->
     <slot name="minus">
-      <!-- TODO: Replace disabled class with attirbute -->
       <a-button
-        :class="[
-          'quantity-update__button quantity-update__button--minus',
-          {'quantity-update__button--disabled': currentValue === 0},
-        ]"
+        class="quantity-update__button quantity-update__button--minus"
+        :disabled="currentValue === minQty"
         :aria-label="decrementAriaLabel"
         @click.native="updateQty(-1)"
       >
@@ -49,6 +46,7 @@
     <slot name="plus">
       <a-button
         class="quantity-update__button quantity-update__button--plus"
+        :disabled="currentValue === maxQty"
         :aria-label="incrementAriaLabel"
         @click.native="updateQty(1)"
       >

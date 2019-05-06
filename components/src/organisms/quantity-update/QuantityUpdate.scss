@@ -71,22 +71,11 @@ $quantity-updater__error-max-width                 : 120px !default;
       }
     }
 
-    &--plus {
-      border-left: 0;
-      border-radius: 0 100% 100% 0;
-    }
-
-    &--minus {
-      border-right: 0;
-      border-radius: 100% 0 0 100%;
-    }
-
-    &--disabled {
-      pointer-events: none;
-
+    &:disabled {
       &:hover,
       &:focus {
         background: $quantity-update__button-background-hover--disabled;
+        cursor: default;
 
         .quantity-update__icon {
           fill: $quantity-update__button-fill-hover--disabled;
@@ -96,6 +85,16 @@ $quantity-updater__error-max-width                 : 120px !default;
       .quantity-update__icon {
         fill: $quantity-update__button-fill-hover--disabled;
       }
+    }
+
+    &--plus {
+      border-left: 0;
+      border-radius: 0 100% 100% 0;
+    }
+
+    &--minus {
+      border-right: 0;
+      border-radius: 100% 0 0 100%;
     }
   }
 
