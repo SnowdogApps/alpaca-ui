@@ -5,8 +5,8 @@ import ALink from './Link.vue'
 const info = `
   ------
   #### Use these modifiers with \`.link\` class:
-  - \`.link--inverted\` - Selector for applying inverted styles
-  - \`.link--secondary\` Selector for applying secondary styles
+  - \`.a-link--inverted\` - Selector for applying inverted styles
+  - \`.a-link--secondary\` Selector for applying secondary styles
   ------
 `
 
@@ -27,7 +27,7 @@ storiesOf('Atoms/Link', module)
     template: `
       <a-link
         href="#"
-        class="link--inverted"
+        class="a-link--inverted"
       >
         Inverted link
         </a-link>
@@ -39,7 +39,7 @@ storiesOf('Atoms/Link', module)
     template: `
       <a-link
         href="#"
-        class="link--secondary"
+        class="a-link--secondary"
       >
         Secondary link
         </a-link>
