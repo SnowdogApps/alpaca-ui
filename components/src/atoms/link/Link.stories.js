@@ -12,7 +12,6 @@ const info = `
 
 storiesOf('Atoms/Link', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     components: { ALink },
     template: `
@@ -21,7 +20,6 @@ storiesOf('Atoms/Link', module)
       </a-link>
     `
   }))
-  // @vue/component
   .add('Inverted', () => ({
     components: { ALink },
     template: `
@@ -33,7 +31,6 @@ storiesOf('Atoms/Link', module)
         </a-link>
       `
   }))
-  // @vue/component
   .add('Secondary', () => ({
     components: { ALink },
     template: `
