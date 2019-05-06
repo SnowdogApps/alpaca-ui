@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
+import ALabel from '../../atoms/label/Label.vue'
 import AQuantityUpdate from '../../organisms/quantity-update/QuantityUpdate.vue'
 import AProductItem from './ProductItem.vue'
 
@@ -35,9 +36,10 @@ storiesOf('Modules/Product item', module)
   }))
   // @vue/component
   .add('With Qty', () => ({
-    components: { AProductItem, AQuantityUpdate },
+    components: { ALabel, AProductItem, AQuantityUpdate },
     data: () => ({
-      product: products[0]
+      product: products[0],
+      qty: 1
     }),
     methods: {
       removeMethod: action('Remove'),
@@ -58,17 +60,24 @@ storiesOf('Modules/Product item', module)
       >
         <template #quantity>
           <a-quantity-update
+            :value="qty"
             :input-id="'qty' + product.id"
-            input-aria-label="Change the quantity"
+            class="product-item__qty"
+            @update="changeMethod"
             decrement-aria-label="Decrease the quantity"
             decrement-icon-title="Minus mark"
             increment-aria-label="Increase the quantity"
             increment-icon-title="Plus mark"
-            class="product-item__qty"
-            label="Qty:"
-            label-class="product-item__qty-label"
-            @update="changeMethod"
-          />
+          >
+            <template #label>
+              <a-label
+                class="product-item__qty-label"
+                :for="'qty' + product.id"
+              >
+                Qty:
+              </a-label>
+            </template>
+          </a-quantity-update>
         </template>
       </a-product-item>
     `

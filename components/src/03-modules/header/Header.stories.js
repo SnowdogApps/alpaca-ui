@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 import { action } from '@storybook/addon-actions'
 
+import ALabel from '../../atoms/label/Label.vue'
 import AHeader from './Header.vue'
 import AModal from '../../03-modules/modal/Modal.vue'
 import ALogin from '../../03-modules/login/Login.vue'
@@ -21,6 +22,7 @@ storiesOf('Modules/Header', module)
   // @vue/component
   .add('Default', () => ({
     components: {
+      ALabel,
       AHeader,
       AModal,
       ALogin,
@@ -116,17 +118,23 @@ storiesOf('Modules/Header', module)
                 <template #quantity>
                   <a-quantity-update
                     :value="3"
+                    class="product-item__qty"
                     :input-id="'qty' + product.id"
-                    input-aria-label="Change the quantity"
                     decrement-aria-label="Decrease the quantity"
                     decrement-icon-title="Minus mark"
                     increment-aria-label="Increase the quantity"
                     increment-icon-title="Plus mark"
-                    class="product-item__qty"
-                    label="Qty:"
-                    label-class="product-item__qty-label"
                     @update="changeMethod"
-                  />
+                  >
+                    <template #label>
+                      <a-label
+                        class="product-item__qty-label"
+                        :for="'qty' + product.id"
+                      >
+                        Qty:
+                      </a-label>
+                    </template>
+                  </a-quantity-update>
                 </template>
                </a-product-item>
             </template>

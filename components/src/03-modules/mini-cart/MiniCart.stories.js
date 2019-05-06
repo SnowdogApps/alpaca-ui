@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
+import ALabel from '../../atoms/label/Label.vue'
 import AQuantityUpdate from '../../organisms/quantity-update/QuantityUpdate.vue'
 import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AMiniCart from './MiniCart.vue'
@@ -13,7 +14,7 @@ storiesOf('Modules/Mini Cart', module)
   .addDecorator(StoryRouter())
   // @vue/component
   .add('Default', () => ({
-    components: { AMiniCart, AProductItem, AQuantityUpdate },
+    components: { ALabel, AMiniCart, AProductItem, AQuantityUpdate },
     data: () => ({
       totals,
       products
@@ -50,17 +51,25 @@ storiesOf('Modules/Mini Cart', module)
             @remove="removeMethod(product.id)"
           >
             <template #quantity>
-              <span class="product-item__qty-text">Qty:</span>
               <a-quantity-update
+                :value="product.qty"
                 :input-id="'qty' + product.id"
-                input-aria-label="Change the quantity"
+                class="product-item__qty"
+                @update="changeMethod"
                 decrement-aria-label="Decrease the quantity"
                 decrement-icon-title="Minus mark"
                 increment-aria-label="Increase the quantity"
                 increment-icon-title="Plus mark"
-                label=""
-                @update="changeMethod"
-              />
+              >
+                <template #label>
+                  <a-label
+                    class="product-item__qty-label"
+                    :for="'qty' + product.id"
+                  >
+                    Qty:
+                  </a-label>
+                </template>
+              </a-quantity-update>
             </template>
           </a-product-item>
         </template>
