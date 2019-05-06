@@ -4,11 +4,11 @@ import { select, text } from '@storybook/addon-knobs'
 import ALink from './Link.vue'
 
 const info = `
-  ------
-  #### Use these modifiers with \`.link\` class:
+  ---
+  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
   - \`.a-link--inverted\` - Selector for applying inverted styles
   - \`.a-link--secondary\` -  Selector for applying secondary styles
-  ------
+  ---
 `
 const bemModifiers = [
   null,
