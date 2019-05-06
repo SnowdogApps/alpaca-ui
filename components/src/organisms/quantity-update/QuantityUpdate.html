@@ -1,26 +1,26 @@
-<div class="quantity-update">
+<div class="a-quantity-update">
   <!-- @slot Label (Named slot) -->
   <slot name="label">
     <a-label
       v-if="label"
-      class="quantity-update__label"
+      class="a-quantity-update__label"
       :for="inputId"
     >
       {{ label }}
     </a-label>
   </slot>
-  <div class="quantity-update__qty">
+  <div class="a-quantity-update__qty">
     <!-- @slot Decrement qty button (Named slot) -->
     <slot name="minus">
       <a-button
-        class="quantity-update__button quantity-update__button--minus"
+        class="a-quantity-update__button a-quantity-update__button--minus"
         :disabled="currentValue === minQty"
         :aria-label="decrementAriaLabel"
         @click.native="updateQty(-1)"
       >
         <a-icon
           icon="minus"
-          class="button__icon quantity-update__icon"
+          class="button__icon a-quantity-update__icon"
         >{{ decrementIconTitle }}</a-icon>
       </a-button>
     </slot>
@@ -28,11 +28,11 @@
     <slot name="input">
       <a-input-wrapper
         :input-id="inputId"
-        class="quantity-update__input-wrapper"
+        class="a-quantity-update__input-wrapper"
       >
         <input
           :id="inputId"
-          class="quantity-update__input"
+          class="a-quantity-update__input"
           type="number"
           :min="minQty"
           :max="maxQty"
@@ -45,14 +45,14 @@
     <!-- @slot Increment qty button (Named slot) -->
     <slot name="plus">
       <a-button
-        class="quantity-update__button quantity-update__button--plus"
+        class="a-quantity-update__button a-quantity-update__button--plus"
         :disabled="currentValue === maxQty"
         :aria-label="incrementAriaLabel"
         @click.native="updateQty(1)"
       >
         <a-icon
           icon="plus"
-          class="quantity-update__icon"
+          class="a-quantity-update__icon"
         >{{ incrementIconTitle }}</a-icon>
       </a-button>
     </slot>

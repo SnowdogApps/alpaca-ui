@@ -7,13 +7,14 @@ $quantity-update__label-font-weight                : $font-weight-bold !default;
 // Input
 $quantity-update__input-wrapper-margin             : 0 !default;
 $quantity-update__input-border                     : 1px solid $gray-dark !default;
-$quantity-update__input-width                      : 48px !default;
+$quantity-update__input-size                       : 48px !default;
 $quantity-update__input-color                      : $gray-dark !default;
 
 // Button
 $quantity-update__button-background                : $white !default;
 $quantity-update__button-border                    : 1px solid $gray-dark !default;
 $quantity-update__button-background-hover--disabled: $white !default;
+$quantity-update__button-cursor-hover--disabled    : default !default;
 $quantity-update__button-fill-hover--disabled      : $gray !default;
 
 // Icon
@@ -26,9 +27,7 @@ $quantity-updater__icon-transition                 : $transition-base !default;
 $quantity-updater__error-margin                    : 0 0 0 $spacer !default;
 $quantity-updater__error-max-width                 : 120px !default;
 
-// TODO: Add 'a-' prefixes to classes, simplify styles
-
-.quantity-update {
+.a-quantity-update {
   &__label {
     font-weight: $quantity-update__label-font-weight;
     font-size: $quantity-update__label-font-size;
@@ -43,8 +42,8 @@ $quantity-updater__error-max-width                 : 120px !default;
   }
 
   &__input {
-    width: $quantity-update__input-width;
-    height: $quantity-update__input-width;
+    width: $quantity-update__input-size;
+    height: $quantity-update__input-size;
     color: $quantity-update__input-color;
     text-align: center;
     border-top: $quantity-update__input-border;
@@ -66,7 +65,7 @@ $quantity-updater__error-max-width                 : 120px !default;
 
     &:hover,
     &:focus {
-      .quantity-update__icon {
+      .a-quantity-update__icon {
         fill: $quantity-updater__icon-fill-hover;
       }
     }
@@ -75,14 +74,14 @@ $quantity-updater__error-max-width                 : 120px !default;
       &:hover,
       &:focus {
         background: $quantity-update__button-background-hover--disabled;
-        cursor: default;
+        cursor: $quantity-update__button-cursor-hover--disabled;
 
-        .quantity-update__icon {
+        .a-quantity-update__icon {
           fill: $quantity-update__button-fill-hover--disabled;
         }
       }
 
-      .quantity-update__icon {
+      .a-quantity-update__icon {
         fill: $quantity-update__button-fill-hover--disabled;
       }
     }
@@ -106,13 +105,13 @@ $quantity-updater__error-max-width                 : 120px !default;
   }
 
   // Disable spin buttons in number input type
-  input[type="number"]::-webkit-outer-spin-button, // sass-lint:disable-line no-vendor-prefixes
-  input[type="number"]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
-    -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+    -webkit-appearance: none;
   }
 
-  input[type="number"] { // sass-lint:disable-line no-vendor-prefixes
-    -moz-appearance: textfield; // sass-lint:disable-line no-vendor-prefixes
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 }
