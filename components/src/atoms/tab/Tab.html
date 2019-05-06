@@ -1,0 +1,9 @@
+<div
+  v-show="isActive"
+  :aria-hidden="!isActive"
+  :aria-labelledby="id"
+  :id="id + '-tab'"
+  role="tabpanel"
+>
+  <slot></slot>
+</div>
