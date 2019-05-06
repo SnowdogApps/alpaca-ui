@@ -32,6 +32,10 @@ storiesOf('Organisms/Quantity Update', module)
         input-id="qty-update"
         :min-qty="minQtyKnob"
         :max-qty="maxQtyKnob"
+        decrement-aria-label="Decrease the quantity"
+        decrement-icon-title="Minus mark"
+        increment-aria-label="Increase the quantity"
+        increment-icon-title="Plus mark"
       />
     `
   }))

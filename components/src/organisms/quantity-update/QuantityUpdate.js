@@ -52,28 +52,28 @@ export default {
      */
     decrementAriaLabel: {
       type: String,
-      default: 'Decrease the quantity'
+      default: null
     },
     /**
      * Decrement button icon title (Default button)
      */
     decrementIconTitle: {
       type: String,
-      default: 'Minus mark'
+      default: null
     },
     /**
      * Increment button aria-label (Default button)
      */
     incrementAriaLabel: {
       type: String,
-      default: 'Increase the quantity'
+      default: null
     },
     /**
      * Increment button icon title (Default button)
      */
     incrementIconTitle: {
       type: String,
-      default: 'Plus mark'
+      default: null
     }
   },
   data () {
