@@ -26,7 +26,7 @@ storiesOf('Organisms/Quantity Update', module)
     },
     template: `
       <a-quantity-update
-        :value="4"
+        :value="1"
         @update="updateVal"
         :label="labelKnob"
         input-id="qty-update"
@@ -41,45 +41,54 @@ storiesOf('Organisms/Quantity Update', module)
   }))
   .add('With slots', () => ({
     components: { AQuantityUpdate },
+    props: {
+      labelKnob: {
+        default: text('Label', 'Quantity')
+      },
+      minQtyKnob: {
+        default: number('Min qty', 5)
+      },
+      maxQtyKnob: {
+        default: number('Max qty', 20)
+      }
+    },
     methods: {
       updateVal: action('Updated')
     },
     data () {
       return {
-        qty: 1
+        qty: 5
       }
     },
     template: `
       <a-quantity-update
         :value="qty"
         @update="updateVal"
+        :min-qty="minQtyKnob"
+        :max-qty="maxQtyKnob"
       >
         <template #label>
           <label
             for="qty-update"
             style="display: block; margin-bottom: 5px; color: blue;"
           >
-            Qty:
+            {{ labelKnob }}
           </label>
         </template>
-        <template #minus>
-          <button @click="qty > 0 ? qty-- : null">
-            -
-          </button>
+        <template #minus="{ updateQty }">
+          <button @click="updateQty(-1)">-</button>
         </template>
-        <template #input>
+        <template #input="{ currentValue, inputEvent }">
           <input
             id="qty-update"
             type="number"
-            v-model="qty"
-            min="0"
+            :value="currentValue"
+            @input="inputEvent"
             style="border: 0; text-align: center;"
           >
         </template>
-        <template #plus>
-          <button @click="qty++">
-            +
-          </button>
+        <template #plus="{ updateQty }">
+          <button @click="updateQty(1)">+</button>
         </template>
       </a-quantity-update>
     `

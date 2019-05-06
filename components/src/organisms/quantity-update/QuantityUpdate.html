@@ -10,8 +10,11 @@
     </a-label>
   </slot>
   <div class="a-quantity-update__qty">
-    <!-- @slot Decrement qty button (Named slot) -->
-    <slot name="minus">
+    <!-- @slot Decrement qty button (Scoped slot) -->
+    <slot
+      name="minus"
+      :update-qty="updateQty"
+    >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--minus"
         :disabled="currentValue === minQty"
@@ -24,8 +27,12 @@
         >{{ decrementIconTitle }}</a-icon>
       </a-button>
     </slot>
-    <!-- @slot Qty input (Named slot) -->
-    <slot name="input">
+    <!-- @slot Qty input (Scoped slot) -->
+    <slot
+      name="input"
+      :current-value="currentValue"
+      :input-event="inputEvent"
+    >
       <a-input-wrapper
         :input-id="inputId"
         class="a-quantity-update__input-wrapper"
@@ -42,8 +49,11 @@
         />
       </a-input-wrapper>
     </slot>
-    <!-- @slot Increment qty button (Named slot) -->
-    <slot name="plus">
+    <!-- @slot Increment qty button (Scoped slot) -->
+    <slot
+      name="plus"
+      :update-qty="updateQty"
+    >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--plus"
         :disabled="currentValue === maxQty"
