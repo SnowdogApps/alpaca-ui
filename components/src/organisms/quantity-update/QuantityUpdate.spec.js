@@ -50,5 +50,8 @@ describe('Quantity update', () => {
     input.element.value = '5'
     input.trigger('input')
     expect(wrapper.vm.currentValue).toBe(5)
+    input.element.value = '-10'
+    input.trigger('input')
+    expect(wrapper.vm.currentValue).toBe(0)
   })
 })
