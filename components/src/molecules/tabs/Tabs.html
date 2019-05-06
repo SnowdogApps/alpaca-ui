@@ -1,25 +1,23 @@
-<div class="tabs">
-  <div
-    class="tabs__nav"
-    role="tablist"
+<div
+  class="tabs"
+  role="tablist"
+>
+  <button
+    v-for="tab in tabs"
+    :key="tab.id"
+    :id="tab.id"
+    :aria-controls="tab.id + '-tab'"
+    :aria-selected="tab.isActive || 'false'"
+    :class="[
+      'tabs__nav-button',
+      { 'tabs__nav-button--active': tab.isActive }
+    ]"
+    type="button"
+    role="tab"
+    @click="selectTab(tab)"
   >
-    <button
-      v-for="tab in tabs"
-      :key="tab.id"
-      :id="tab.id"
-      :aria-controls="tab.id + '-tab'"
-      :aria-selected="tab.isActive || 'false'"
-      :class="[
-        'tabs__nav-button',
-        { 'tabs__nav-button--active': tab.isActive }
-      ]"
-      type="button"
-      role="tab"
-      @click="selectTab(tab)"
-    >
-      {{ tab.name }}
-    </button>
-  </div>
+    {{ tab.name }}
+  </button>
   <div class="tabs__content">
     <slot></slot>
   </div>

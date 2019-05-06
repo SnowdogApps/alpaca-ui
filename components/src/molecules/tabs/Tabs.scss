@@ -20,10 +20,8 @@ $tabs__content-padding                 : $spacer--medium !default;
 $tabs__content-padding\@large          : $spacer--large $spacer--extra-large !default;
 
 .tabs {
-  &__nav {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
 
   &__nav-button {
     position: relative;
