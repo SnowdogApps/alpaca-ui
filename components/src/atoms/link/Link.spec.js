@@ -13,9 +13,7 @@ describe('Link', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(ALink, {
       slots: {
-        default: `
-          <span>Alpaca UI</span>
-        `
+        default: 'Link default text'
       }
     })
 
