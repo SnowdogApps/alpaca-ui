@@ -1,63 +1,49 @@
 @import '../../../assets/styles/_globals.scss';
 
-$tabs__border-width                    : 1px !default;
-$tabs__border-width--large             : 8px !default;
+// common
+$tabs__border-width             : 8px !default;
 
-// title
-$tabs__title-padding                   : $spacer--medium !default;
-$tabs__title-border                    : $tabs__border-width solid $gray-light !default;
-$tabs__title-border\@large             : $tabs__border-width--large solid $gray-lightest !default;
-$tabs__title-border\@large--active     : $tabs__border-width--large solid $color-primary !default;
-$tabs__title-color                     : $gray !default;
-$tabs__title-color--active             : $gray-darker !default;
-$tabs__title-font-weight\@large        : $font-weight-normal !default;
-$tabs__title-font-weight\@large--active: $font-weight-bold !default;
-$tabs__title-font-weight               : $font-weight-bold !default;
-$tabs__title-background                : $bg-color-base !default;
-$tabs__title-background--active        : $gray-lightest !default;
-$tabs__title-background\@large-active  : $gray-lightest !default;
-$tabs__content-padding                 : $spacer--medium !default;
-$tabs__content-padding\@large          : $spacer--large $spacer--extra-large !default;
+// button
+$tabs__button-padding           : $spacer--medium !default;
+$tabs__button-border            : $tabs__border-width solid $gray-lightest !default;
+$tabs__button-border--active    : $tabs__border-width solid $color-primary !default;
+$tabs__button-color             : $gray !default;
+$tabs__button-color--active     : $gray-darker !default;
+$tabs__button-font-weight       : $font-weight-bold !default;
+$tabs__button-background        : $bg-color-base !default;
+$tabs__button-background--active: $gray-lightest !default;
+
+// content
+$tabs__content-padding          : $spacer--medium 0 !default;
+$tabs__content-padding\@large   : $spacer--large $spacer--extra-large !default;
 
 .tabs {
   display: flex;
   flex-wrap: wrap;
 
   &__nav-button {
-    position: relative;
     flex: 1;
-    padding: $tabs__title-padding;
-    color: $tabs__title-color;
-    font-weight: $tabs__title-font-weight\@large;
-    background: $tabs__title-background;
+    padding: $tabs__button-padding;
+    color: $tabs__button-color;
+    font-weight: $tabs__button-font-weight;
+    background: $tabs__button-background;
     border: none;
-    border-bottom: $tabs__title-border\@large;
+    border-bottom: $tabs__button-border;
     cursor: pointer;
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $tabs__title-color;
-      background: $tabs__title-background;
-    }
-
     &--active {
-      color: $tabs__title-color--active;
-      font-weight: $tabs__title-font-weight\@large--active;
-      background-color: $tabs__title-background\@large-active;
-      border-bottom: $tabs__title-border\@large--active;
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: $tabs__title-color--active;
-        background: $tabs__title-background--active;
-      }
+      color: $tabs__button-color--active;
+      background-color: $tabs__button-background--active;
+      border-bottom: $tabs__button-border--active;
     }
   }
 
   &__content {
     flex: 100%;
-    padding: $tabs__content-padding\@large;
+    padding: $tabs__content-padding;
+
+    @include mq($screen-l) {
+      padding: $tabs__content-padding\@large;
+    }
   }
 }

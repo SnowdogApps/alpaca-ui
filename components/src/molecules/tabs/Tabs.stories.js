@@ -20,7 +20,9 @@ storiesOf('Molecules/Tabs', module)
           </a-paragraph>
         </a-tab>
         <a-tab name="About Us">
-          <h1>Why we do it</h1>
+          <a-paragraph>
+            Sed do eiusmod tempor incididunt ut labo. Ut enim ad minim veniam, re et dolore magna aliqua. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </a-paragraph>
         </a-tab>
       </a-tabs>
     `
