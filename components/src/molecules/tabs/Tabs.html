@@ -18,9 +18,16 @@
     role="tab"
     @click="selectTab(tab)"
   >
-    {{ tab.name }}
+    <!-- @slot Custom tab button content (Scoped slot) -->
+    <slot
+      name="button"
+      :tab="tab"
+    >
+      {{ tab.name }}
+    </slot>
   </button>
   <div class="tabs__content">
+    <!-- @slot Tab components -->
     <slot></slot>
   </div>
 </div>

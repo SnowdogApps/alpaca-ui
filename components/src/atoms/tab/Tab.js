@@ -2,8 +2,8 @@
 export default {
   props: {
     name: {
-      required: true,
-      type: String
+      type: String,
+      required: true
     },
     selected: {
       default: false,
