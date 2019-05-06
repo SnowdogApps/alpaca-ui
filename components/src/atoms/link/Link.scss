@@ -10,7 +10,7 @@ $link__transition           : $transition-base !default;
 $link__color--inverted      : $gray-darker !default;
 $link__color-hover--inverted: $blue !default;
 
-.link {
+.a-link {
   color: $link__color;
   font-weight: $link__font-weight;
   font-family: $link__font-family;
