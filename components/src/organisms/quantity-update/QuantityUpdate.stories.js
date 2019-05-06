@@ -1,15 +1,26 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { number, text } from '@storybook/addon-knobs'
 
 import AQuantityUpdate from './QuantityUpdate.vue'
 
 const info = 'Check **Knobs** tab to edit component properties dynamically.'
-// TODO: Add knobs with label, minQty, maxQty
 
 storiesOf('Organisms/Quantity Update', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AQuantityUpdate },
+    props: {
+      labelKnob: {
+        default: text('Label', 'Quantity')
+      },
+      minQtyKnob: {
+        default: number('Min qty', 0)
+      },
+      maxQtyKnob: {
+        default: number('Max qty', 100)
+      }
+    },
     methods: {
       updateVal: action('Quantity')
     },
@@ -17,10 +28,10 @@ storiesOf('Organisms/Quantity Update', module)
       <a-quantity-update
         :value="4"
         @update="updateVal"
-        label="Quantity"
+        :label="labelKnob"
         input-id="qty-update"
-        :min-qty="0"
-        :max-qty="100"
+        :min-qty="minQtyKnob"
+        :max-qty="maxQtyKnob"
       />
     `
   }))
