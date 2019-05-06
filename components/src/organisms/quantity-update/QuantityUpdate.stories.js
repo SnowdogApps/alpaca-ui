@@ -62,9 +62,9 @@ storiesOf('Organisms/Quantity Update', module)
             Qty:
           </label>
         </template>
-        <template #plus>
-          <button @click="qty++">
-            +
+        <template #minus>
+          <button @click="qty > 0 ? qty-- : null">
+            -
           </button>
         </template>
         <template #input>
@@ -76,9 +76,9 @@ storiesOf('Organisms/Quantity Update', module)
             style="border: 0; text-align: center;"
           >
         </template>
-        <template #minus>
-          <button @click="qty > 0 ? qty-- : null">
-            -
+        <template #plus>
+          <button @click="qty++">
+            +
           </button>
         </template>
       </a-quantity-update>
