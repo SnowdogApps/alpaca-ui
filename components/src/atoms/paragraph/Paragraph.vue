@@ -1,5 +1,5 @@
 <template src="./Paragraph.html" />
 
-<script src="./Paragraph.js"/>
+<script src="./Paragraph.js" />
 
-<style lang="scss" src="./Paragraph.scss"/>
+<style lang="scss" src="./Paragraph.scss" />

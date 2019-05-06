@@ -8,14 +8,11 @@
       class="heading heading--first-level minicart__summary-heading"
     >
       {{ summaryTitle }}
-     </a-heading>
+    </a-heading>
     <div
-      v-for="total in totals"
+      v-for="total in filteredTotals"
       :key="total.code"
-      :class="[
-        'row row--no-margins between-xs',
-        { 'minicart__grand-total-row': total.code === 'grand_total' }
-      ]"
+      class="row row--no-margins between-xs"
     >
       <div class="col-xs-9">
         {{ total.title }}
@@ -24,17 +21,48 @@
         {{ total.value }}
       </div>
     </div>
+    <div class="minicart__discount">
+      <a-input-wrapper
+        input-id="discount-code"
+        class="minicart__discount-input"
+        :label="discountLabel"
+      >
+        <a-input
+          id="discount-code"
+          class="minicart__discount-input-field"
+          type="text"
+          v-model="discountCode"
+        />
+      </a-input-wrapper>
+      <a-button
+        class="button--secondary minicart__discount-button"
+        @click.native="applyDiscount"
+      >
+        {{ discountButton }}
+      </a-button>
+    </div>
+    <div
+      v-if="grandTotal"
+      class="row row--no-margins between-xs minicart__grand-total-row"
+    >
+      <div class="col-xs-9">
+        {{ grandTotal.title }}
+      </div>
+      <div class="col-xs-3 end-xs">
+        {{ grandTotal.value }}
+      </div>
+    </div>
   </section>
   <div class="row row--no-margins center-xs between-md minicart__actions">
     <a-button
       class="button--blank col-xs-12 col-md-4 minicart__return-button button--blank"
-      @click="returnToShopping"
+      @click.native="returnToShopping"
     >
       {{ returnToShoppingButton }}
      </a-button>
     <a-button
       class="col-xs-12 col-md-4 first-xs last-md minicart__checkout-button"
-      @click="goToCheckout"
+      @click.native="goToCheckout"
     >
       {{ goToCheckoutButton }}
      </a-button>

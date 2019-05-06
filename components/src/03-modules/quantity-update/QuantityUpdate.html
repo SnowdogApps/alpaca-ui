@@ -1,11 +1,11 @@
 <div class="quantity-update">
-  <label
-    v-if="label !== ''"
+  <a-label
+    v-if="label"
     :class="['quantity-update__label', labelClass]"
     :for="inputId"
   >
     {{ label }}
-  </label>
+  </a-label>
   <div class="quantity-update__qty">
     <a-button
       :aria-label="decrementAriaLabel"
@@ -14,7 +14,7 @@
         {'quantity-update__button--disabled': currentValue === 0},
         decrementButtonClass
       ]"
-      @click="changeValue(--currentValue)"
+      @click.native="changeValue(--currentValue)"
     >
       <a-icon
         :title="decrementIconTitle"
@@ -22,29 +22,30 @@
         class="button__icon quantity-update__icon"
       />
     </a-button>
-    <a-input
-      v-model="currentValue"
-      :id="inputId"
-      :label="inputAriaLabel"
-      :min="inputMin"
-      :max="inputMax"
-      :name="inputName"
-      :placeholder="inputPlaceholder"
-      :input-default-class="false"
-      type="number"
+    <a-input-wrapper
+      :input-id="inputId"
       class="quantity-update__input-wrapper"
-      input-class="quantity-update__input"
-      autocomplete="off"
-      hidden-label
-      @input="changeValue"
-    />
+    >
+      <input
+        :id="inputId"
+        class="quantity-update__input"
+        type="number"
+        :min="inputMin"
+        :max="inputMax"
+        :name="inputName"
+        v-model="currentValue"
+        :placeholder="inputPlaceholder"
+        autocomplete="off"
+        @input="changeValue"
+      />
+    </a-input-wrapper>
     <a-button
       :aria-label="incrementAriaLabel"
       :class="[
         'button--icon quantity-update__button quantity-update__button--plus',
         incrementButtonClass
       ]"
-      @click="changeValue(++currentValue)"
+      @click.native="changeValue(++currentValue)"
     >
       <a-icon
         :title="incrementIconTitle"

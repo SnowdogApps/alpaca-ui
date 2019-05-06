@@ -77,7 +77,7 @@ storiesOf('Molecules/Select', module)
       >
         <template #label>
           <label
-            class="label--hidden"
+            class="a-label--hidden"
             for="field-id"
           >
             Label text

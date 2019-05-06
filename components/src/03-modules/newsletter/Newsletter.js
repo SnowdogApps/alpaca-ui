@@ -1,4 +1,6 @@
-import AInput from '../../02-elements/input/Input.vue'
+import AInput from '../../atoms/input/Input.vue'
+import ALabel from '../../atoms/label/Label.vue'
+import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
 import AButton from '../../atoms/button/Button.vue'
 
@@ -6,6 +8,8 @@ import AButton from '../../atoms/button/Button.vue'
 export default {
   components: {
     AInput,
+    ALabel,
+    AInputWrapper,
     ACheckbox,
     AButton
   },

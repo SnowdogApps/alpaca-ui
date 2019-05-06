@@ -16,6 +16,7 @@ storiesOf('Molecules/File Upload', module)
       />
     `
   }))
+  // @vue/component
   .add('With slots', () => ({
     components: {
       AButton,

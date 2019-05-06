@@ -12,7 +12,7 @@
     <a-button
       :aria-label="closeAriaLabel"
       class="cookie-message__close"
-      @click="closeBar()"
+      @click.native="closeBar()"
     >
       {{ closeButton }}
       <a-icon

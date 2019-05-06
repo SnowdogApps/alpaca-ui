@@ -1,0 +1,35 @@
+@import '../../../assets/styles/globals';
+
+$breadcrumbs__font-size        : $font-size-small !default;
+$breadcrumbs__line-height      : 1.5 !default;
+$breadcrumbs__item-color       : $blue !default;
+$breadcrumbs__link-color       : $gray-darker !default;
+$breadcrumbs__link-color--hover: $blue !default;
+$breadcrumbs__separator-margin : 0 $spacer !default;
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: $breadcrumbs__font-size;
+
+  &__link {
+    display: flex;
+    color: $breadcrumbs__link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $breadcrumbs__link-color--hover;
+    }
+  }
+
+  &__item {
+    display: flex;
+    color: $breadcrumbs__item-color;
+    line-height: $breadcrumbs__line-height;
+  }
+
+  &__separator {
+    margin: $breadcrumbs__separator-margin;
+    line-height: $breadcrumbs__line-height;
+  }
+}
