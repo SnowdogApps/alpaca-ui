@@ -1,7 +1,7 @@
 import { mount } from 'vue-test-utils'
 import AListItem from './ListItem.vue'
 
-describe('List', () => {
+describe('ListItem', () => {
   it('has default structure', () => {
     const wrapper = mount(AListItem)
 
