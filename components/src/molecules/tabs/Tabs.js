@@ -5,11 +5,8 @@ export default {
   components: { AButton },
   data () {
     return {
-      tabs: []
+      tabs: this.$children
     }
-  },
-  mounted () {
-    this.tabs = this.$children
   },
   methods: {
     selectTab (selectedTab) {
