@@ -1,5 +1,5 @@
 <div
-  class="tabs"
+  class="a-tabs"
   role="tablist"
 >
   <button
@@ -9,9 +9,9 @@
     :aria-controls="tab.id + '-tab'"
     :aria-selected="tab.isActive || 'false'"
     :class="[
-      'tabs__nav-button',
+      'a-tabs__nav-button',
       {
-        'tabs__nav-button--active': tab.isActive
+        'a-tabs__nav-button--active': tab.isActive
       }
     ]"
     type="button"
@@ -26,7 +26,7 @@
       {{ tab.name }}
     </slot>
   </button>
-  <div class="tabs__content">
+  <div class="a-tabs__content">
     <!-- @slot Tab components -->
     <slot/>
   </div>
