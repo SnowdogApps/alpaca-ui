@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { select } from '@storybook/addon-knobs'
 
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
@@ -6,65 +7,46 @@ import AIcon from '../icon/Icon.vue'
 
 const info = `
   ---
-  #### Use these modifiers with \`.list\` class.
-  - \`.list--horizontal\` - Selector for applying horizontal styles
+  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
+  - \`.a-list--horizontal\` - Selector for applying horizontal styles
   ---
 `
 
+const bemModifiers = [
+  null,
+  'a-list--horizontal'
+]
+
 storiesOf('Atoms/List', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     components: { AList, AListItem },
-    template: `
-      <a-list>
-        <a-list-item>
-          Lorem ipsum
-        </a-list-item>
-        <a-list-item>
-          Lorem ipsum
-        </a-list-item>
-        <a-list-item>
-          Lorem ipsum
-        </a-list-item>
-      </a-list>
-    `
-  }))
-  // @vue/component
-  .add('Horizontal', () => ({
-    components: { AList, AListItem },
-    data () {
-      return {
-        items: [
-          {
-            'text': 'Lorem Ipsum',
-            'id': 'el1'
-          },
-          {
-            'text': 'Lorem Ipsum',
-            'id': 'el2'
-          },
-          {
-            'text': 'Lorem Ipsum',
-            'id': 'el3'
-          }
-        ]
+    props: {
+      classKnobs: {
+        default: select('BEM Modifier', bemModifiers)
       }
     },
     template: `
-      <a-list class="list--horizontal">
-        <a-list-item
-          v-for="item in items"
-          :key="item.id"
-        >
-          {{ item.text }}
+      <a-list :class="classKnobs">
+        <a-list-item>
+          Lorem ipsum
+        </a-list-item>
+        <a-list-item>
+          Lorem ipsum
+        </a-list-item>
+        <a-list-item>
+          Lorem ipsum
         </a-list-item>
       </a-list>
     `
   }))
-  // @vue/component
   .add('With slots', () => ({
     components: { AList, AListItem, AIcon },
+    props: {
+      classKnobs: {
+        default: select('BEM Modifier', bemModifiers)
+      }
+    },
     data: () => ({
       items: [
         {
@@ -82,7 +64,7 @@ storiesOf('Atoms/List', module)
       ]
     }),
     template: `
-      <a-list>
+      <a-list :class="classKnobs">
         <a-list-item
           v-for="item in items"
           :key="item.id"
