@@ -6,7 +6,7 @@ import AQuantityUpdate from './QuantityUpdate.vue'
 
 const info = 'Check **Knobs** tab to edit component properties dynamically.'
 
-storiesOf('Organisms/Quantity Update', module)
+storiesOf('Molecules/Quantity Update', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AQuantityUpdate },

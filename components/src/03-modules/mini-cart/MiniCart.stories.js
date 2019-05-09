@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
 import ALabel from '../../atoms/label/Label.vue'
-import AQuantityUpdate from '../../organisms/quantity-update/QuantityUpdate.vue'
+import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AMiniCart from './MiniCart.vue'
 
