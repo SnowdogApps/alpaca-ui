@@ -11,6 +11,9 @@ export default {
     AButton,
     ALabel
   },
+  model: {
+    event: 'update'
+  },
   props: {
     /**
      * Quantity

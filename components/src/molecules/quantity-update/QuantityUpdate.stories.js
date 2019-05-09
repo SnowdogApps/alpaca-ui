@@ -21,12 +21,17 @@ storiesOf('Molecules/Quantity Update', module)
         default: number('Max qty', 100)
       }
     },
+    data () {
+      return {
+        qty: 1
+      }
+    },
     methods: {
       updateVal: action('Quantity')
     },
     template: `
       <a-quantity-update
-        :value="1"
+        v-model="qty"
         @update="updateVal"
         :label="labelKnob"
         input-id="qty-update"
@@ -62,7 +67,7 @@ storiesOf('Molecules/Quantity Update', module)
     },
     template: `
       <a-quantity-update
-        :value="qty"
+        v-model="qty"
         @update="updateVal"
         :min-qty="minQtyKnob"
         :max-qty="maxQtyKnob"
