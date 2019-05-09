@@ -1,4 +1,4 @@
-import { mount } from 'vue-test-utils'
+import { mount } from '@vue/test-utils'
 import AQuantityUpdate from './QuantityUpdate.vue'
 
 describe('Quantity update', () => {
