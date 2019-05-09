@@ -24,7 +24,8 @@
         <a-icon
           icon="minus"
           class="button__icon a-quantity-update__icon"
-        >{{ decrementIconTitle }}</a-icon>
+          :title="decrementIconTitle"
+        />
       </a-button>
     </slot>
     <!-- @slot Qty input (Scoped slot) -->
@@ -63,7 +64,8 @@
         <a-icon
           icon="plus"
           class="a-quantity-update__icon"
-        >{{ incrementIconTitle }}</a-icon>
+          :title="incrementIconTitle"
+        />
       </a-button>
     </slot>
   </div>
