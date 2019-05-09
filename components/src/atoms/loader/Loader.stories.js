@@ -4,19 +4,18 @@ import ALoader from './Loader.vue'
 
 const info = `
   ------
-  #### Use these modifiers with \`.loader\` class:
-  - \`.loader--visible\` - Selector to display the loader
+  #### Use these modifiers with \`.a-loader\` class:
+  - \`.a-loader--visible\` - Selector to display the loader
   ------
 `
 
 storiesOf('Atoms/Loader', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     components: { ALoader },
     template: `
       <a-loader
-        class="loader--visible"
+        class="a-loader--visible"
         aria-label="Do not refresh the page"
       />
     `
