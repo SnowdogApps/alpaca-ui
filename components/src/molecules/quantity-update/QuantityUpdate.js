@@ -16,7 +16,7 @@ export default {
   },
   props: {
     /**
-     * Quantity
+     * Quantity value (used with v-model)
      */
     value: {
       type: [Number, String],
@@ -85,12 +85,19 @@ export default {
     }
   },
   methods: {
+    updateEmit (value) {
+      /**
+       * Triggered when value is changed
+       * @type {Event}
+       */
+      this.$emit('update', value)
+    },
     updateQty (value) {
       const newValue = this.currentValue + value
       if (this.minQty <= newValue && (this.maxQty ? (newValue <= this.maxQty) : true)) {
         this.currentValue = newValue
       }
-      this.$emit('update', this.currentValue)
+      this.updateEmit(this.currentValue)
     },
     inputEvent (event) {
       const newValue = parseInt(event.target.value, 10)
@@ -103,7 +110,7 @@ export default {
         this.currentValue = this.minQty
         event.target.value = this.minQty
       }
-      this.$emit('update', this.currentValue)
+      this.updateEmit(this.currentValue)
     }
   }
 }
