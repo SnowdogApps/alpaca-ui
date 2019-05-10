@@ -17,6 +17,7 @@
     type="button"
     role="tab"
     @click="selectTab(tab)"
+    @keydown="handleEvt(tab)"
   >
     <!-- @slot Custom tab button content (Scoped slot) -->
     <slot
