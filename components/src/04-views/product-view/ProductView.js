@@ -12,7 +12,7 @@ import ACatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem
 import AGallery from '../../03-modules/gallery/Gallery.vue'
 import ABriefInfo from '../../03-modules/brief-info/BriefInfo.vue'
 import AReviewSummary from '../../03-modules/review-summary/ReviewSummary.vue'
-import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 import ASlider from '../../03-modules/slider/Slider.vue'
 import { Slide } from 'vue-carousel'
 
