@@ -18,7 +18,8 @@
         "label": "Color",
         "value": "Red"
       }
-    ]
+    ],
+    "qty": 1
   },
   {
     "id": 2,
@@ -27,6 +28,7 @@
     "price": "$32,99",
     "specialPrice": "",
     "oldPrice": "",
-    "url": "#"
+    "url": "#",
+    "qty": 1
   }
 ]
