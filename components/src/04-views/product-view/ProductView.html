@@ -141,26 +141,7 @@
       </div>
     </div>
     <div class="product-view__tabs">
-      <!-- TODO: Remove mock from tabs component (leave content), add reviews -->
-      <a-tabs-container>
-        <template v-for="tab in tabs">
-          <a-tab
-            :key="tab.tabId"
-            :tab-id="tab.tabId"
-            :title="tab.title"
-            :active-tab="activeTab"
-            icon="angle-down"
-            @click="setActiveTab(tab.tabId)"
-          />
-          <a-tab-content
-            :tab-id="tab.tabId"
-            :title-id="tab.titleId"
-            :active-tab="activeTab"
-          >
-            {{ tab.content }}
-           </a-tab-content>
-        </template>
-       </a-tabs-container>
+      <!-- TODO: add tabs -->
     </div>
     <div
       v-if="product.relatedProducts && product.relatedProducts.length"
