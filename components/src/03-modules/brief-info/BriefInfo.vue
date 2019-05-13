@@ -1,11 +1,5 @@
 <template src="./BriefInfo.html" />
 
-<script>
-import instance from './BriefInfo.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./BriefInfo.js"/>
 
 <style lang="scss" src="./BriefInfo.scss"/>

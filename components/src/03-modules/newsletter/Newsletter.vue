@@ -1,11 +1,5 @@
 <template src="./Newsletter.html" />
 
-<script>
-import instance from './Newsletter.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./Newsletter.js"/>
 
 <style lang="scss" src="./Newsletter.scss"/>

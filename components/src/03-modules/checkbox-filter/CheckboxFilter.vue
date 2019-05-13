@@ -1,11 +1,5 @@
 <template src="./CheckboxFilter.html" />
 
-<script>
-import instance from './CheckboxFilter.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./CheckboxFilter.js"/>
 
 <style lang="scss" src="../filter/Filter.scss"/>

@@ -1,11 +1,5 @@
 <template src="./CookieMessage.html" />
 
-<script>
-import instance from './CookieMessage.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./CookieMessage.js"/>
 
 <style lang="scss" src="./CookieMessage.scss"/>

@@ -1,12 +1,6 @@
 <template src="./SideMenu.html" />
 
-<script>
-import instance from './SideMenu.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./SideMenu.js"/>
 
 <style
   lang="scss"

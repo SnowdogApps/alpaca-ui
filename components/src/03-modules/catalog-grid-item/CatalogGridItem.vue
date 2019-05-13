@@ -1,11 +1,5 @@
 <template src="./CatalogGridItem.html" />
 
-<script>
-import instance from './CatalogGridItem.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./CatalogGridItem.js"/>
 
 <style lang="scss" src="./CatalogGridItem.scss"/>

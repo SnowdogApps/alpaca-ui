@@ -1,11 +1,5 @@
 <template src="./Swatch.html" />
 
-<script>
-import instance from './Swatch.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./Swatch.js"/>
 
 <style lang="scss" src="./Swatch.scss"/>

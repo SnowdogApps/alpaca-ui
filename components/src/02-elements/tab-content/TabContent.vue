@@ -1,11 +1,5 @@
 <template src="./TabContent.html" />
 
-<script>
-import instance from './TabContent.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./TabContent.js"/>
 
 <style lang="scss" src="./TabContent.scss"/>

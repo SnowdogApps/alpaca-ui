@@ -1,11 +1,5 @@
 <template src="./Filters.html" />
 
-<script>
-import instance from './Filters.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./Filters.js"/>
 
 <style lang="scss" src="./Filters.scss"/>

@@ -1,12 +1,6 @@
 <template src="./Wishlist.html" />
 
-<script>
-import instance from './Wishlist.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./Wishlist.js"/>
 
 <style
   lang="scss"

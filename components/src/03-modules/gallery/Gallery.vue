@@ -1,11 +1,5 @@
 <template src="./Gallery.html" />
 
-<script>
-import instance from './Gallery.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./Gallery.js"/>
 
 <style lang="scss" src="./Gallery.scss"/>

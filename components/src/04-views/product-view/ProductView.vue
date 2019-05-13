@@ -1,12 +1,6 @@
 <template src="./ProductView.html" />
 
-<script>
-import instance from './ProductView.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./ProductView.js"/>
 
 <style
   lang="scss"

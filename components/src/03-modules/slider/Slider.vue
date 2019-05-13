@@ -1,11 +1,5 @@
 <template src="./Slider.html" />
 
-<script>
-import instance from './Slider.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./Slider.js"/>
 
 <style lang="scss" src="./Slider.scss"/>

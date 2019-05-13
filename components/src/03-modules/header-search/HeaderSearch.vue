@@ -1,11 +1,5 @@
 <template src="./HeaderSearch.html" />
 
-<script>
-import instance from './HeaderSearch.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./HeaderSearch.js"/>
 
 <style lang="scss" src="./HeaderSearch.scss"/>
