@@ -1,5 +1,5 @@
 <template src="./CookieMessage.html" />
 
-<script src="./CookieMessage.js"/>
+<script src="./CookieMessage.js" />
 
-<style lang="scss" src="./CookieMessage.scss"/>
+<style lang="scss" src="./CookieMessage.scss" />

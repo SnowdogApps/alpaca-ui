@@ -1,6 +1,6 @@
 <template src="./SlideMenu.html" />
 
-<script src="./SlideMenu.js"/>
+<script src="./SlideMenu.js" />
 
 <style
   lang="scss"

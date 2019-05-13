@@ -1,6 +1,6 @@
 <template src="./SidebarBlock.html" />
 
-<script src="./SidebarBlock.js"/>
+<script src="./SidebarBlock.js" />
 
 <style
   lang="scss"

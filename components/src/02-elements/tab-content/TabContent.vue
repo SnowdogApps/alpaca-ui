@@ -1,5 +1,5 @@
 <template src="./TabContent.html" />
 
-<script src="./TabContent.js"/>
+<script src="./TabContent.js" />
 
-<style lang="scss" src="./TabContent.scss"/>
+<style lang="scss" src="./TabContent.scss" />

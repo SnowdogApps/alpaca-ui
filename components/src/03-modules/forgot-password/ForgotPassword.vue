@@ -1,5 +1,5 @@
 <template src="./ForgotPassword.html" />
 
-<script src="./ForgotPassword.js"/>
+<script src="./ForgotPassword.js" />
 
-<style lang="scss" src="./ForgotPassword.scss"/>
+<style lang="scss" src="./ForgotPassword.scss" />

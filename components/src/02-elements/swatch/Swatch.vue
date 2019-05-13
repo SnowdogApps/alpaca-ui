@@ -1,5 +1,5 @@
 <template src="./Swatch.html" />
 
-<script src="./Swatch.js"/>
+<script src="./Swatch.js" />
 
-<style lang="scss" src="./Swatch.scss"/>
+<style lang="scss" src="./Swatch.scss" />

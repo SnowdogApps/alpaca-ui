@@ -1,5 +1,5 @@
 <template src="./MiniCart.html" />
 
-<script src="./MiniCart.js"/>
+<script src="./MiniCart.js" />
 
-<style lang="scss" src="./MiniCart.scss"/>
+<style lang="scss" src="./MiniCart.scss" />

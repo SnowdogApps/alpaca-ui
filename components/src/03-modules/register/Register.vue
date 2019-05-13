@@ -1,5 +1,5 @@
 <template src="./Register.html" />
 
-<script src="./Register.js"/>
+<script src="./Register.js" />
 
-<style lang="scss" src="./Register.scss"/>
+<style lang="scss" src="./Register.scss" />

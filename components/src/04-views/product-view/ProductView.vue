@@ -1,6 +1,6 @@
 <template src="./ProductView.html" />
 
-<script src="./ProductView.js"/>
+<script src="./ProductView.js" />
 
 <style
   lang="scss"

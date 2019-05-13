@@ -1,6 +1,6 @@
 <template src="./Wishlist.html" />
 
-<script src="./Wishlist.js"/>
+<script src="./Wishlist.js" />
 
 <style
   lang="scss"

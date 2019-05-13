@@ -1,5 +1,5 @@
 <template src="./ProductItem.html" />
 
-<script src="./ProductItem.js"/>
+<script src="./ProductItem.js" />
 
-<style lang="scss" src="./ProductItem.scss"/>
+<style lang="scss" src="./ProductItem.scss" />

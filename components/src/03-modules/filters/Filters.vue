@@ -1,5 +1,5 @@
 <template src="./Filters.html" />
 
-<script src="./Filters.js"/>
+<script src="./Filters.js" />
 
-<style lang="scss" src="./Filters.scss"/>
+<style lang="scss" src="./Filters.scss" />

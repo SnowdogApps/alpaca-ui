@@ -1,5 +1,5 @@
 <template src="./CatalogGridItem.html" />
 
-<script src="./CatalogGridItem.js"/>
+<script src="./CatalogGridItem.js" />
 
-<style lang="scss" src="./CatalogGridItem.scss"/>
+<style lang="scss" src="./CatalogGridItem.scss" />

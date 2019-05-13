@@ -1,3 +1,3 @@
 <template src="./TableRow.html" />
 
-<style lang="scss" src="./TableRow.scss"/>
+<style lang="scss" src="./TableRow.scss" />

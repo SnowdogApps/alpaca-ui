@@ -1,5 +1,5 @@
 <template src="./Home.html" />
 
-<script src="./Home.js"/>
+<script src="./Home.js" />
 
-<style lang="scss" src="./Home.scss"/>
+<style lang="scss" src="./Home.scss" />

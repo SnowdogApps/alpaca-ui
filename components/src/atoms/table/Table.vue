@@ -1,5 +1,5 @@
 <template src="./Table.html" />
 
-<script src="./Table.js"/>
+<script src="./Table.js" />
 
-<style lang="scss" src="./Table.scss"/>
+<style lang="scss" src="./Table.scss" />

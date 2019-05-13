@@ -1,6 +1,6 @@
 <template src="./Catalog.html" />
 
-<script src="./Catalog.js"/>
+<script src="./Catalog.js" />
 
 <style
   lang="scss"

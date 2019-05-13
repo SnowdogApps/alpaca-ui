@@ -1,6 +1,6 @@
 <template src="./Review.html" />
 
-<script src="./Review.js"/>
+<script src="./Review.js" />
 
 <style
   lang="scss"

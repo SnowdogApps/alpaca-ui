@@ -1,5 +1,5 @@
 <template src="./Gallery.html" />
 
-<script src="./Gallery.js"/>
+<script src="./Gallery.js" />
 
-<style lang="scss" src="./Gallery.scss"/>
+<style lang="scss" src="./Gallery.scss" />

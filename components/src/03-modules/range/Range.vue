@@ -1,5 +1,5 @@
 <template src="./Range.html" />
 
-<script src="./Range.js"/>
+<script src="./Range.js" />
 
-<style lang="scss" src="./Range.scss"/>
+<style lang="scss" src="./Range.scss" />

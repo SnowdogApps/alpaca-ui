@@ -1,5 +1,5 @@
 <template src="./Pager.html" />
 
-<script src="./Pager.js"/>
+<script src="./Pager.js" />
 
-<style lang="scss" src="./Pager.scss"/>
+<style lang="scss" src="./Pager.scss" />

@@ -1,5 +1,5 @@
 <template src="./QuickSearch.html" />
 
-<script src="./QuickSearch.js"/>
+<script src="./QuickSearch.js" />
 
-<style lang="scss" src="./QuickSearch.scss"/>
+<style lang="scss" src="./QuickSearch.scss" />

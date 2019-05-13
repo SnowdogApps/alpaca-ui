@@ -1,6 +1,6 @@
 <template src="./SideMenu.html" />
 
-<script src="./SideMenu.js"/>
+<script src="./SideMenu.js" />
 
 <style
   lang="scss"

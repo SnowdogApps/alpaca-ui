@@ -1,3 +1,3 @@
 <template src="./Tab.html" />
 
-<script src="./Tab.js"/>
+<script src="./Tab.js" />

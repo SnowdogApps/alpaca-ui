@@ -1,5 +1,5 @@
 <template src="./Slider.html" />
 
-<script src="./Slider.js"/>
+<script src="./Slider.js" />
 
-<style lang="scss" src="./Slider.scss"/>
+<style lang="scss" src="./Slider.scss" />

@@ -1,5 +1,5 @@
 <template src="./SwatchFilter.html" />
 
-<script src="./SwatchFilter.js"/>
+<script src="./SwatchFilter.js" />
 
-<style lang="scss" src="../filter/Filter.scss"/>
+<style lang="scss" src="../filter/Filter.scss" />

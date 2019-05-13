@@ -1,5 +1,5 @@
 <template src="./App.html" />
 
-<script src="./App.js"/>
+<script src="./App.js" />
 
-<style lang="scss" src="./App.scss"/>
+<style lang="scss" src="./App.scss" />

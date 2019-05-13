@@ -1,5 +1,5 @@
 <template src="./DropdownListLink.html" />
 
-<script src="./DropdownListLink.js"/>
+<script src="./DropdownListLink.js" />
 
-<style lang="scss" src="../dropdown-list/DropdownList.scss"/>
+<style lang="scss" src="../dropdown-list/DropdownList.scss" />

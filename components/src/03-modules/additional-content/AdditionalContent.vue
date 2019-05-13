@@ -1,5 +1,5 @@
 <template src="./AdditionalContent.html" />
 
-<script src="./AdditionalContent.js"/>
+<script src="./AdditionalContent.js" />
 
-<style lang="scss" src="./AdditionalContent.scss"/>
+<style lang="scss" src="./AdditionalContent.scss" />
