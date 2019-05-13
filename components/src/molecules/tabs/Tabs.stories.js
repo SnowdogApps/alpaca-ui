@@ -4,6 +4,7 @@ import ATabs from './Tabs.vue'
 import ATab from './../../atoms/tab/Tab.vue'
 import AButton from './../../atoms/button/Button.vue'
 import AParagraph from './../../atoms/paragraph/Paragraph.vue'
+import AIcon from './../../atoms/icon/Icon.vue'
 
 storiesOf('Molecules/Tabs', module)
   .addParameters({ info: true })
@@ -33,10 +34,14 @@ storiesOf('Molecules/Tabs', module)
     `
   }))
   .add('With slot', () => ({
-    components: { ATabs, ATab, AButton, AParagraph },
+    components: { ATabs, ATab, AButton, AParagraph, AIcon },
     template: `
       <a-tabs>
         <template #button="{ tab }">
+          <a-icon
+            title="Star"
+            icon="star-border"
+          />
           {{ tab.name }}
           <span
             v-if="tab.name === 'Reviews'"

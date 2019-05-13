@@ -5,8 +5,18 @@ export default {
   components: { AButton },
   data () {
     return {
-      tabs: this.$children
+      tabs: null
     }
+  },
+  computed: {
+    tabsChildren () {
+      return this.$children.filter(child => {
+        return child.$el.dataset.tab
+      })
+    }
+  },
+  mounted () {
+    this.tabs = this.tabsChildren
   },
   methods: {
     selectTab (selectedTab) {
