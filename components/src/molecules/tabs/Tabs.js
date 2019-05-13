@@ -6,50 +6,48 @@ export default {
   components: { AButton },
   data () {
     return {
-      tabs: this.$children
+      tabs: this.$children,
+      activeFocusedTab: 0
     }
   },
   methods: {
     selectTab (selectedTab) {
       this.tabs.forEach(tab => {
-        tab.isActive = (tab.name === selectedTab.name)
+        tab.isActive = selectedTab === this.activeFocusedTab
+          ? tab.name === this.tabs[this.activeFocusedTab].name
+          : tab.name === selectedTab.name
       })
     },
+    focus (el) {
+      this.$refs[el][0].focus()
+    },
     handleEvt (evt) {
-      function stop () {
+      const key = evt.keyCode
+
+      if (key === KeyCodes.TAB) {
         evt.preventDefault()
         evt.stopPropagation()
+        this.$refs.content.focus()
       }
-      const type = evt.type
-      const key = evt.keyCode
-      const shift = evt.shiftKey
-      console.log(type, key, shift)
 
-      if (type === 'click') {
-        stop()
-        this.$emit('click', evt)
-      } else if (type === 'keydown' && key === KeyCodes.SPACE) {
-        // In keynav mode, SPACE press will also trigger a click/select
-        stop()
-        this.$emit('click', evt)
-      } else if (type === 'keydown') {
-        // For keyboard navigation
-        if (key === KeyCodes.UP || key === KeyCodes.LEFT || key === KeyCodes.HOME) {
-          stop()
-          if (shift || key === KeyCodes.HOME) {
-            this.$emit('first', evt)
-          } else {
-            this.$emit('prev', evt)
-          }
-        } else if (key === KeyCodes.DOWN || key === KeyCodes.RIGHT || key === KeyCodes.END) {
-          stop()
-          if (shift || key === KeyCodes.END) {
-            this.$emit('last', evt)
-          } else {
-            this.$emit('next', evt)
-          }
+      if ((key === KeyCodes.LEFT || key === KeyCodes.UP || key === KeyCodes.HOME) && this.activeFocusedTab > 0) {
+        if (key === KeyCodes.HOME) {
+          this.focus('button_0')
+        } else {
+          this.activeFocusedTab = this.activeFocusedTab - 1
+          this.focus('button_' + this.activeFocusedTab)
         }
       }
+
+      if ((key === KeyCodes.RIGHT || key === KeyCodes.DOWN || key === KeyCodes.END) && this.activeFocusedTab < this.tabs.length - 1) {
+        if (key === KeyCodes.END) {
+          this.focus('button_' + (this.tabs.length - 1))
+        } else {
+          this.activeFocusedTab = this.activeFocusedTab + 1
+          this.focus('button_' + this.activeFocusedTab)
+        }
+      }
+      this.selectTab(this.activeFocusedTab)
     }
   }
 }
