@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import ATabs from './Tabs.vue'
 import ATab from './../../atoms/tab/Tab.vue'
@@ -10,8 +11,11 @@ storiesOf('Molecules/Tabs', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ATabs, ATab, AParagraph },
+    methods: {
+      tabClick: action('Clicked tab')
+    },
     template: `
-      <a-tabs>
+      <a-tabs @click="tabClick">
         <a-tab
           name="Services"
           selected
@@ -35,8 +39,11 @@ storiesOf('Molecules/Tabs', module)
   }))
   .add('With slot', () => ({
     components: { ATabs, ATab, AButton, AParagraph, AIcon },
+    methods: {
+      tabClick: action('Clicked tab')
+    },
     template: `
-      <a-tabs>
+      <a-tabs @click="tabClick">
         <template #button="{ tab }">
           <a-icon
             title="Star"
