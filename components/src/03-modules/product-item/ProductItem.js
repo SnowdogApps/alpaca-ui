@@ -4,7 +4,7 @@ import APrice from '../../atoms/price/Price.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 
 // @vue/component
 export default {

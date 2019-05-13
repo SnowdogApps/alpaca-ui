@@ -26,9 +26,8 @@ storiesOf('Atoms/Icon', module)
           <a-icon
             :icon="icon.iconId"
             style="margin: 0 auto;"
-          >
-            {{ icon.iconTitle }}
-          </a-icon>
+            :title="icon.iconTitle"
+          />
           <span style="display: block; margin-top: 20px; text-align: center;">
             {{ icon.iconId }}
           </span>
