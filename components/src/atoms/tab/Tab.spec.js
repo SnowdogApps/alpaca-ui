@@ -28,16 +28,15 @@ describe('Tab', () => {
     expect(wrapper.find('div > span').text()).toEqual('Tab default text')
   })
 
-  it('renders when passed name props', () => {
+  it('has correct id attribute', () => {
     const wrapper = mount(ATab, {
-      slots: {
-        default: `<span>Tab default text</span>`
-      },
       propsData: {
-        name: 'Tab'
+        name: 'Sample'
       }
     })
 
-    expect(wrapper.props().name).toBe('Tab')
+    expect(wrapper.props().name).toBe('Sample')
+    expect(wrapper.attributes().id).toBeDefined()
+    expect(wrapper.attributes().id).toEqual('sample-tab')
   })
 })
