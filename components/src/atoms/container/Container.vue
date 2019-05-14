@@ -1,3 +1,5 @@
 <template src="./Container.html" />
 
-<style lang="scss" src="./Container.scss"/>
+<script src="./Container.js" />
+
+<style lang="scss" src="./Container.scss" />

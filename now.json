@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": ["alpaca-storybook.now.sh"],
+  "alias": ["alpaca-ui.now.sh"],
   "builds": [
     { "src": "components/package.json", "use": "@now/static-build" }
   ],

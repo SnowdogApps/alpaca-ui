@@ -1,7 +1,7 @@
 import AIcon from '../../atoms/icon/Icon.vue'
-import AList from '../../02-elements/list/List.vue'
+import AList from '../../atoms/list/List.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AListItem from '../../02-elements/list-item/ListItem.vue'
+import AListItem from '../../atoms/list-item/ListItem.vue'
 
 // @vue/component
 export default {

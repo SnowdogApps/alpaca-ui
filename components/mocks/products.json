@@ -9,14 +9,17 @@
     "url": "#",
     "options": [
       {
+        "id": "size_id_1",
         "label": "Size",
         "value": "XXL"
       },
       {
+        "id": "color_id_1",
         "label": "Color",
         "value": "Red"
       }
-    ]
+    ],
+    "qty": 1
   },
   {
     "id": 2,
@@ -25,6 +28,7 @@
     "price": "$32,99",
     "specialPrice": "",
     "oldPrice": "",
-    "url": "#"
+    "url": "#",
+    "qty": 1
   }
 ]

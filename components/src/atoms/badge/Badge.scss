@@ -9,10 +9,10 @@ $badge__font-weight     : $font-weight-bold !default;
 $badge__text-transform  : uppercase !default;
 $badge__color           : $font-color-base !default;
 $badge__color--new      : $white !default;
-$badge__background--new : $color-primary !default;
+$badge__background--new : $color-secondary !default;
 $badge__background--sale: $color-primary !default;
 
-.badge {
+.a-badge {
   display: inline-flex;
   padding: $badge__padding;
   color: $badge__color;

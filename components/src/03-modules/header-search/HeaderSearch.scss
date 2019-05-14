@@ -68,11 +68,11 @@ $search-form__placeholder-color : $gray !default;
     width: $search-form__button-size;
     height: $search-form__button-size;
     padding: $reset;
+    transition: $transition-base;
     fill: $search-form__button-icon-color;
 
     &:focus,
     &:hover {
-      transition: $transition-base;
       fill: $color-primary;
     }
   }

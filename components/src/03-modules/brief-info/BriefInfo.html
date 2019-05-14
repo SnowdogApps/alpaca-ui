@@ -9,7 +9,7 @@
 
   <ul class="list brief-info__items-container">
     <li
-      v-for="{ key, item } in getItemsWithKey"
+      v-for="(item, key) in items"
       :key="key"
       class="brief-info__item"
     >

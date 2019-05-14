@@ -18,7 +18,7 @@ const defaultData = {
 
 storiesOf('Molecules/Checkbox', module)
   .addParameters({ info: true })
-// @vue/component
+  // @vue/component
   .add('Default', () => ({
     ...defaultData,
     components: { ACheckbox },

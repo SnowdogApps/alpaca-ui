@@ -34,13 +34,17 @@
         {{ heading }}
        </a-heading>
       <a-list class="home__brands-list">
-        <a-list-image-item
+        <a-list-item
           v-for="item in imageListElements"
           :key="item.id"
-          class="home__brands-list"
-          :src="item.image.src"
-          :alt="item.image.alt"
-        />
+          class="home__brands-list-item"
+        >
+          <a-image
+            v-if="item.image.src"
+            :src="item.image.src"
+            :alt="item.image.alt"
+          />
+        </a-list-item>
        </a-list>
     </section>
     <section class="home__static-block">

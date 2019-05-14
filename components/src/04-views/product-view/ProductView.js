@@ -1,18 +1,16 @@
 import AContainer from '../../atoms/container/Container.vue'
 import AHeading from '../../atoms/heading/Heading.vue'
-import ABreadcrumbs from '../../02-elements/breadcrumbs/Breadcrumbs.vue'
+import ABreadcrumbs from '../../atoms/breadcrumbs/Breadcrumbs.vue'
 import AButton from '../../atoms/button/Button.vue'
 import APrice from '../../atoms/price/Price.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
-import ATab from '../../02-elements/tabs/Tabs.vue'
-import ATabsContainer from '../../02-elements/tabs-container/TabsContainer.vue'
 import ATabContent from '../../02-elements/tab-content/TabContent.vue'
 import AAdditionalContent from '../../03-modules/additional-content/AdditionalContent.vue'
 import ACatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 import AGallery from '../../03-modules/gallery/Gallery.vue'
 import ABriefInfo from '../../03-modules/brief-info/BriefInfo.vue'
 import AReviewSummary from '../../03-modules/review-summary/ReviewSummary.vue'
-import AQuantityUpdate from '../../03-modules/quantity-update/QuantityUpdate.vue'
+import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 import ASlider from '../../03-modules/slider/Slider.vue'
 import { Slide } from 'vue-carousel'
 
@@ -25,8 +23,6 @@ export default {
     AButton,
     APrice,
     ASwatch,
-    ATab,
-    ATabsContainer,
     ATabContent,
     AAdditionalContent,
     ACatalogGridItem,
@@ -39,10 +35,6 @@ export default {
   },
   props: {
     breadcrumbs: {
-      type: Array,
-      required: true
-    },
-    tabs: {
       type: Array,
       required: true
     },
@@ -105,18 +97,6 @@ export default {
     secondColumnText: {
       type: String,
       default: ''
-    }
-  },
-  data () {
-    return {
-      activeTab: this.tabs[0].tabId
-    }
-  },
-  methods: {
-    setActiveTab (tab) {
-      this.activeTab = this.tabs
-        .filter(el => el.tabId === tab)
-        .map(el => el.tabId)[0]
     }
   }
 }

@@ -1,0 +1,30 @@
+@import '../../../assets/styles/_globals.scss';
+
+$input__padding          : 0 $spacer--medium !default;
+$input__width            : 100% !default;
+$input__width--inline    : auto !default;
+$input__height           : 40px !default;
+$input__border           : 1px solid $form-elements-border-color !default;
+$input__border-radius    : $form-elements-radius !default;
+$input__placeholder-color: $gray !default;
+
+.a-input {
+  width: $input__width;
+  height: $input__height;
+  padding: $input__padding;
+  border: $input__border;
+  border-radius: $input__border-radius;
+
+  &[type='search'] {
+    -webkit-appearance: textfield;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &::placeholder {
+    color: $input__placeholder-color;
+  }
+}

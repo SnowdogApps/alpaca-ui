@@ -1,6 +1,8 @@
 import AHeading from '../../atoms/heading/Heading.vue'
-import AList from '../../02-elements/list/List.vue'
+import AList from '../../atoms/list/List.vue'
 import AButton from '../../atoms/button/Button.vue'
+import AInput from '../../atoms/input/Input.vue'
+import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 
 // @vue/component
@@ -9,16 +11,14 @@ export default {
     AHeading,
     AList,
     AButton,
+    AInput,
+    AInputWrapper,
     AProductItem
   },
   props: {
     totals: {
       type: Array[Object],
       required: true
-    },
-    removeButton: {
-      type: String,
-      default: ''
     },
     summaryTitle: {
       type: String,
@@ -32,9 +32,34 @@ export default {
       type: String,
       required: true
     },
+    removeButton: {
+      type: String,
+      default: ''
+    },
     taxAmount: {
       type: [String, Number],
       default: 0
+    },
+    discountLabel: {
+      type: String,
+      default: 'Discount code'
+    },
+    discountButton: {
+      type: String,
+      default: 'Apply'
+    }
+  },
+  data () {
+    return {
+      discountCode: null
+    }
+  },
+  computed: {
+    filteredTotals () {
+      return this.totals.filter(total => total.code !== 'grand_total')
+    },
+    grandTotal () {
+      return this.totals.find(total => total.code === 'grand_total')
     }
   },
   methods: {
@@ -43,6 +68,9 @@ export default {
     },
     goToCheckout () {
       this.$emit('goToCheckout')
+    },
+    applyDiscount () {
+      this.$emit('applyDiscount', this.discountCode)
     }
   }
 }

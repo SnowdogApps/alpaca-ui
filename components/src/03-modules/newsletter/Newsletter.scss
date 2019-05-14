@@ -60,10 +60,6 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
     margin: 0;
   }
 
-  &__label {
-    @include visually-hidden;
-  }
-
   &__field {
     height: $newsletter__field-height;
     margin: 0;

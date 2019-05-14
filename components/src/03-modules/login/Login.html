@@ -5,27 +5,35 @@
       :legend-text="legend"
       legend-class="login__legend"
     >
-      <a-input
-        id="email"
-        v-model="email"
+      <a-input-wrapper
         :label="emailLabel"
-        :placeholder="emailPlaceholder"
-        type="email"
-        name="email"
-      />
-      <a-input
-        id="password"
-        v-model="password"
+        input-id="email"
+      >
+        <a-input
+          id="email"
+          v-model="email"
+          type="email"
+          name="email"
+          :placeholder="emailPlaceholder"
+        />
+      </a-input-wrapper>
+      <a-input-wrapper
+        input-id="password"
         :label="passwordLabel"
-        :placeholder="passwordPlaceholder"
-        type="password"
-        name="password"
-      />
+      >
+        <a-input
+          id="password"
+          v-model="password"
+          type="password"
+          name="password"
+          :placeholder="passwordPlaceholder"
+        />
+      </a-input-wrapper>
      </a-fieldset>
     <div class="row row--no-margins end-xs">
       <a-button
         class="button--blank login__forgot-password-button"
-        @click="goToForgotPassword"
+        @click.native="goToForgotPassword"
       >
         {{ goToForgotPasswordButton }}
        </a-button>
@@ -33,7 +41,7 @@
     <div class="login__submit-wrapper row row--no-margins center-xs">
       <a-button
         class="login__submit-button"
-        @click.stop.prevent="login"
+        @click.native.stop.prevent="login"
       >
         {{ submitButton }}
        </a-button>
@@ -42,7 +50,7 @@
   <div class="login__register-wrapper row row--no-margins center-xs">
     <a-button
       class="button--blank"
-      @click="goToRegister"
+      @click.native="goToRegister"
     >
       {{ goToRegisterButton }}
      </a-button>

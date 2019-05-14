@@ -25,11 +25,25 @@
         old-price-class="product-item__price-wrapper--old"
         special-price-class="product-item__price-wrapper--special"
       />
-      <a-description-list
-        v-if="options"
-        :elements="options"
-        class="product-item__attributes"
-      />
+      <a-list
+        tag="dl"
+        class="list--description product-item__attributes"
+      >
+        <template v-for="item in options">
+          <a-list-item
+            tag="dt"
+            class="list--description__label"
+          >
+            {{ item.label }}
+          </a-list-item>
+          <a-list-item
+            tag="dd"
+            class="list--description__value"
+          >
+            {{ item.value }}
+          </a-list-item>
+        </template>
+      </a-list>
     </div>
     <div
       :class="[
@@ -51,7 +65,7 @@
           class="product-item__action-button"
           :aria-label="removeButton || defaultRemoveBtnAriaLabel"
           custom-class="product-item__actions-item"
-          @click="onRemove(id)"
+          @click.native="onRemove(id)"
         >
           <a-icon
             icon="remove"
