@@ -1,6 +1,8 @@
 import { addDecorator, storiesOf } from '@storybook/vue'
 import StoryRouter from 'storybook-vue-router'
 
+import ADropdownList from './DropdownList.vue'
+
 import items from './mocks/dropdownListItems.json'
 
 const info = `
@@ -13,7 +15,7 @@ const info = `
   ---
 `
 addDecorator(StoryRouter())
-storiesOf('Molecules/Dropdown List', module)
+storiesOf('Atoms/Collapse', module)
   .addParameters({ info })
   .add(
     'Default',
@@ -21,8 +23,11 @@ storiesOf('Molecules/Dropdown List', module)
       data: () => ({
         ...items
       }),
+      components: {
+        ADropdownList
+      },
       template: `
-        <a-dropdown-list>
+        <a-dropdown-list title="xxx">
           <span>test</span>
         </a-dropdown-list>
       `
@@ -67,20 +72,22 @@ storiesOf('Molecules/Dropdown List', module)
   //     `
   //   })
   // )
-  // .add(
-  //   'Secondary',
-  //   () => ({
-  //     data: () => ({
-  //       ...items
-  //     }),
-  //     template: `
-  //       <a-dropdown-list
-  //         class="dropdown-list--secondary"
-  //         :items="dropdownListItems"
-  //       />
-  //     `
-  //   })
-  // )
+  .add(
+    'Secondary',
+    () => ({
+      components: {
+        ADropdownList
+      },
+      template: `
+        <a-dropdown-list
+          class="collapse--secondary"
+          title="Test"
+        >
+          <span>test</span>
+        </a-dropdown-list>
+      `
+    })
+  )
   // .add(
   //   'Inner',
   //   () => ({

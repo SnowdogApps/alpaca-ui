@@ -1,10 +1,8 @@
-import ADropdownListItem from '../../molecules/dropdown-list-item/DropdownListItem.vue'
 import AButton from '../../atoms/button/Button.vue'
 
 // @vue/component
 export default {
   components: {
-    ADropdownListItem,
     AButton
   },
   props: {

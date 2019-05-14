@@ -5,7 +5,6 @@ import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
 import ADropdownList from '../../molecules/dropdown-list/DropdownList.vue'
-import ADropdownListItem from '../../molecules/dropdown-list-item/DropdownListItem.vue'
 import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
 
 // @vue/component
@@ -18,7 +17,6 @@ export default {
     AListItem,
     ACookieMessage,
     ADropdownList,
-    ADropdownListItem,
     ANewsletter
   },
   props: {

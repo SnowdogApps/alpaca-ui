@@ -1,4 +1,24 @@
-<div :class="['dropdown-list']">
-    <!-- @slot Default content -->
+<div :class="['collapse']">
+  <button
+    :class="['collapse-button']"
+    :aria-controls="collapseLocal"
+    @click="toggle"
+    :aria-expanded="!collapseLocal"
+  >
+    <!-- @slot Custom title slots (Named slot) -->
+    <slot name="title">
+      {{ title }}
+      <a-icon
+        icon="angle-down"
+        class="collapse-button__icon"
+      />
+    </slot>
+  </button>
+  <div
+    :class="['collapse-content']"
+    :aria-hidden="collapseLocal"
+  >
+    <!-- @slot Default content for list item-->
     <slot />
+  </div>
 </div>
