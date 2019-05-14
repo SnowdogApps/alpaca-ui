@@ -21,7 +21,7 @@ $radio__dot-size          : 6px !default;
 
 .radio {
   position: relative;
-  margin: $radio__margin;
+  margin: $radio__item-margin;
 
   &__fieldset {
     margin: $reset;
@@ -31,11 +31,6 @@ $radio__dot-size          : 6px !default;
 
   &__legend {
     padding: $radio__legend-padding;
-  }
-
-  &__item {
-    position: relative;
-    margin: $radio__item-margin;
   }
 
   &__field {

@@ -1,0 +1,23 @@
+@import '../../../assets/styles/_globals.scss';
+
+$radio__margin       : 0 0 $spacer--medium 0 !default;
+$radio__legend-mergin: 0 0 $spacer--medium 0 !default;
+
+.radio-wrapper {
+  position: relative;
+  margin: $radio__margin;
+
+  &__fieldset {
+    margin: $reset;
+    padding: $reset;
+    border: none;
+  }
+
+  &__legend {
+    margin: $radio__legend-mergin;
+
+    &--hidden {
+      @include visually-hidden();
+    }
+  }
+}

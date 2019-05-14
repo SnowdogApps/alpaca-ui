@@ -1,0 +1,20 @@
+
+<div class="radio">
+  <input
+    :name="name"
+    :id="id"
+    :value="value"
+    :checked="checked === value ? true : false"
+    type="radio"
+    :class="['radio__field', inputClass]"
+    @change="$emit('change', $event.target.value)"
+  >
+  <!-- @slot Custom radio option (Scoped slot) -->
+  <a-label
+    :for="id"
+    class="radio__label"
+  >
+    <span class="radio__icon" />
+    <slot/>
+  </a-label>
+</div>

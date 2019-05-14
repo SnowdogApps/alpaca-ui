@@ -25,7 +25,7 @@ const defaultData = {
           'value': 'option_three'
         }
       ],
-      selected: ''
+      selected: 'option_two'
     }
   },
   methods: {
@@ -33,19 +33,31 @@ const defaultData = {
   }
 }
 
-storiesOf('Molecules/Radio', module)
+storiesOf('Atoms/Radio', module)
   .addParameters({ info: true })
   // @vue/component
   .add('Default', () => ({
     ...defaultData,
     template: `
-      <a-radio
-        :options="options"
-        name="radio1"
-        legend="Choose option"
-        v-model="selected"
-        @change="onChange"
-      />
+      <div role="radiogroup" aria-labelledby="dsds">
+        <a-radio
+          name="radio1"
+          v-model="selected"
+          id="option_one"
+          value="option_one"
+        >
+          Option one
+        </a-radio>
+        <a-radio
+          name="radio1"
+          v-model="selected"
+          id="option_two"
+          value="option_two"
+        >
+          Option two
+        </a-radio>
+        v-model {{ selected }}
+      </div>
     `
   }))
   // @vue/component
