@@ -1,30 +1,4 @@
-<div :class="['dropdown-list', { 'dropdown-list--inner': nested }]">
-  <ul :class="['dropdown-list__list', listClass]">
+<div :class="['dropdown-list']">
     <!-- @slot Default content -->
-    <slot v-if="!items" />
-    <!--Default content passed with props-->
-    <template v-else>
-      <template v-for="element in items">
-        <a-dropdown-list-item
-          v-if="element.content"
-          :title="element.title"
-          :key="element.id"
-          :collapse="true"
-          :id="element.id"
-        >
-          <template v-if="!isArray(element.content)">
-            {{element.content}}
-          </template>
-          <a-dropdown-list v-else :items="element.content"/>
-        </a-dropdown-list-item>
-        <a-dropdown-list-link
-          v-else
-          :key="element.id"
-          :href="element.href"
-        >
-          {{ element.title }}
-        </a-dropdown-list-link>
-      </template>
-    </template>
-  </ul>
+    <slot />
 </div>
