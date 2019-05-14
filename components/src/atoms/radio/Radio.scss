@@ -1,10 +1,6 @@
 @import '../../../assets/styles/globals';
 
-$radio__margin            : 0 0 $spacer--medium 0 !default;
-
-$radio__legend-padding    : 0 0 $spacer--medium 0 !default;
-
-$radio__item-margin       : 0 0 $spacer 0 !default;
+$radio__margin            : 0 0 $spacer 0 !default;
 
 $radio__label-line-height : 16px !default;
 $radio__label-font-size   : $font-size-small !default;
@@ -21,17 +17,7 @@ $radio__dot-size          : 6px !default;
 
 .radio {
   position: relative;
-  margin: $radio__item-margin;
-
-  &__fieldset {
-    margin: $reset;
-    padding: $reset;
-    border: none;
-  }
-
-  &__legend {
-    padding: $radio__legend-padding;
-  }
+  margin: $radio__margin;
 
   &__field {
     position: absolute;

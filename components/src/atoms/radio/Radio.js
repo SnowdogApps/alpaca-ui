@@ -1,6 +1,6 @@
+// @vue/component
 import ALabel from '../../atoms/label/Label.vue'
 
-// @vue/component
 export default {
   components: { ALabel },
   model: {
@@ -9,8 +9,8 @@ export default {
   },
   props: {
     checked: {
-      // v-model
-      type: [String, Object, Number, Boolean],
+      // Prop to handle v-model
+      type: [String, Number, Boolean],
       default: null
     },
     /**
@@ -21,28 +21,24 @@ export default {
       required: true
     },
     /**
-     * Legend text
+     * Input name
      */
-    legend: {
+    id: {
       type: String,
-      default: null
+      required: true
     },
     /**
-     * Class for input
+     * Input value
+     */
+    value: {
+      type: [String, Number, Boolean],
+      required: true
+    },
+    /**
+     * Custom input class
      */
     inputClass: {
       type: String,
-      default: null
-    },
-    id: {
-      type: String,
-      default: null
-    },
-    /**
-     * Default option to handle v-model
-     */
-    value: {
-      type: [String, Object, Number, Boolean],
       default: null
     }
   }
