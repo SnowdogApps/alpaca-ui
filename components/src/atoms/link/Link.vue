@@ -2,4 +2,4 @@
 
 <script src="./Link.js" />
 
-<style lang="scss" src="./Link.scss"/>
+<style lang="scss" src="./Link.scss" />

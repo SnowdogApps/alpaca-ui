@@ -1,12 +1,6 @@
 <template src="./SidebarBlock.html" />
 
-<script>
-import instance from './SidebarBlock.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./SidebarBlock.js" />
 
 <style
   lang="scss"

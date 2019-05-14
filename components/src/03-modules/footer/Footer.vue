@@ -1,11 +1,5 @@
 <template src="./Footer.html" />
 
-<script>
-import instance from './Footer.js'
+<script src="./Footer.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./Footer.scss"/>
+<style lang="scss" src="./Footer.scss" />

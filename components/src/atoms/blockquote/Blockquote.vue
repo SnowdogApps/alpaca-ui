@@ -2,4 +2,4 @@
 
 <script src="./Blockquote.js" />
 
-<style lang="scss" src="./Blockquote.scss"/>
+<style lang="scss" src="./Blockquote.scss" />
