@@ -1,66 +1,59 @@
 import { storiesOf } from '@storybook/vue'
+import { select } from '@storybook/addon-knobs'
 
 import ARadioWrapper from './RadioWrapper.vue'
-
 import ARadio from './../../atoms/radio/Radio.vue'
 
 const info = `
   ---
   Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-input-wrapper--inline\` - Selector for applying inline styles
+  - \`.a-radio-wrapper--legend-hidden\` - Selector for hidding legend
   ---
 `
-
-// @vue/component
-const defaultData = {
-  components: { ARadio, ARadioWrapper },
-  data () {
-    return {
-      options: [
-        {
-          'id': 'id-1',
-          'label': 'Option one',
-          'value': 'option_one'
-        },
-        {
-          'id': 'id-2',
-          'label': 'Option two',
-          'value': 'option_two'
-        },
-        {
-          'id': 'id-3',
-          'label': 'Options three',
-          'value': 'option_three'
-        }
-      ],
-      selected: ''
-    }
-  }
-}
 
 storiesOf('Molecules/Radio Wrapper', module)
   .addParameters({ info })
   .add('Default', () => ({
-    ...defaultData,
+    components: { ARadio, ARadioWrapper },
+    data () {
+      return {
+        selected: ''
+      }
+    },
+    props: {
+      classKnobs: {
+        default: select('BEM Modifier', [null, 'a-radio-wrapper--legend-hidden'])
+      }
+    },
     template: `
-      <a-radio-wrapper legend-text="Radio legend" legendHidden>
+      <a-radio-wrapper
+        legend-text="Radio legend"
+        :class="classKnobs"
+      >
         <a-radio
-          name="radio1"
-          v-model="selected"
-          id="option_one"
+          id="id-1"
           value="option_one"
+          name="radio"
+          v-model="selected"
         >
           Option one
         </a-radio>
         <a-radio
-          name="radio1"
-          v-model="selected"
-          id="option_two"
+          id="id-2"
           value="option_two"
+          name="radio"
+          v-model="selected"
         >
           Option two
         </a-radio>
-        v-model {{ selected }}
+        <a-radio
+          id="id-3"
+          value="option_three"
+          name="radio"
+          v-model="selected"
+        >
+          Option three
+        </a-radio>
       </a-radio-wrapper>
     `
   }))

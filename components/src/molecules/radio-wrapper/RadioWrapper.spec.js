@@ -1,25 +1,17 @@
 import { mount } from '@vue/test-utils'
-import AInputWrapper from './InputWrapper.vue'
+import ARadioWrapper from './RadioWrapper.vue'
 
-describe('Input wrapper', () => {
+describe('Radio wrapper', () => {
   it('has default structure', () => {
-    const wrapper = mount(AInputWrapper)
-    expect(wrapper.is('div')).toBe(true)
-    expect(wrapper.classes()).toContain('a-input-wrapper')
-    expect(wrapper.classes().length).toBe(1)
-  })
-
-  it('renders slots content when passed', () => {
-    const wrapper = mount(AInputWrapper, {
-      slots: {
-        label: `<label for="input-1">Alpaca UI</label>`,
-        default: `<input id="input-1">`
+    const wrapper = mount(ARadioWrapper, {
+      propsData: {
+        legendText: 'Legend text'
       }
     })
-    const label = wrapper.find('.a-input-wrapper > label')
-    expect(label.exists()).toBe(true)
-    expect(label.text()).toEqual('Alpaca UI')
-    const input = wrapper.find('.a-input-wrapper > input')
-    expect(input.exists()).toBe(true)
+
+    expect(wrapper.is('div')).toBe(true)
+    expect(wrapper.classes()).toContain('a-radio-wrapper')
+    expect(wrapper.classes().length).toBe(1)
+    expect(wrapper.contains('fieldset')).toBe(true)
   })
 })

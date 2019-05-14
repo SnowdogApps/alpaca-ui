@@ -3,9 +3,15 @@
 $radio__margin       : 0 0 $spacer--medium 0 !default;
 $radio__legend-mergin: 0 0 $spacer--medium 0 !default;
 
-.radio-wrapper {
+.a-radio-wrapper {
   position: relative;
   margin: $radio__margin;
+
+  &--legend-hidden {
+    .a-radio-wrapper__legend {
+      @include visually-hidden();
+    }
+  }
 
   &__fieldset {
     margin: $reset;
@@ -15,9 +21,5 @@ $radio__legend-mergin: 0 0 $spacer--medium 0 !default;
 
   &__legend {
     margin: $radio__legend-mergin;
-
-    &--hidden {
-      @include visually-hidden();
-    }
   }
 }

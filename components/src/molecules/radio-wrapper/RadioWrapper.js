@@ -7,18 +7,11 @@ export default {
   },
   props: {
     /**
-     * Input id
+     * Legend text in fieldset
      */
     legendText: {
       type: String,
       required: true
-    },
-    /**
-     * Set legend visually hidden
-     */
-    legendHidden: {
-      type: Boolean,
-      default: false
     }
   }
 }

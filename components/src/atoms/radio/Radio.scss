@@ -15,7 +15,7 @@ $radio__icon-transition   : $transition-base !default;
 
 $radio__dot-size          : 6px !default;
 
-.radio {
+.a-radio {
   position: relative;
   margin: $radio__margin;
 
@@ -25,8 +25,8 @@ $radio__dot-size          : 6px !default;
     z-index: -1;
     opacity: 0;
 
-    &:checked + .radio__label {
-      .radio__icon {
+    &:checked + .a-radio__label {
+      .a-radio__icon {
         &::before {
           transform: scale(1);
           opacity: 1;

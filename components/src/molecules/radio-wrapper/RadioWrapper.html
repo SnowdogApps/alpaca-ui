@@ -1,13 +1,10 @@
-<div class="radio-wrapper">
+<div class="a-radio-wrapper">
   <a-fieldset
     :legend-text="legendText"
-    :legend-class="`
-      radio-wrapper__legend
-      ${legendHidden ? 'radio-wrapper__legend--hidden' : ''}
-    `"
-    class="radio-wrapper__fieldset"
+    legend-class="a-radio-wrapper__legend"
+    class="a-radio-wrapper__fieldset"
   >
-    <!-- @slot Slot for radio-wrapper content (Default slot) -->
+    <!-- @slot Radio components (Default slot) -->
     <slot />
   </a-fieldset>
 </div>

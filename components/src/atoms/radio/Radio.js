@@ -8,8 +8,10 @@ export default {
     event: 'change'
   },
   props: {
+    /**
+     * To handle v-model
+     */
     checked: {
-      // Prop to handle v-model
       type: [String, Number, Boolean],
       default: null
     },
