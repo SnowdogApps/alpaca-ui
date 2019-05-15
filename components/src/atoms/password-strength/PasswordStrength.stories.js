@@ -5,7 +5,7 @@ import APasswordStrength from './PasswordStrength.vue'
 
 const info = `
   ------
-  #### Use these modifiers with \`.password-strength\` class:
+  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
   - \`.a-password-strength--weak\` - Class for applying weak password styles
   - \`.a-password-strength--medium\` - Class for applying medium password styles
   - \`.a-password-strength--strong\` - Class for applying strong password styles
