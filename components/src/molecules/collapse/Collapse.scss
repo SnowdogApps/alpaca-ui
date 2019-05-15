@@ -9,6 +9,7 @@ $collapse__button-padding             : $spacer--medium !default;
 $collapse__button-color-active        : $color-primary !default;
 $collapse__button-font-weight         : $font-weight-bold !default;
 $collapse__button-text-transform      : uppercase !default;
+$collapse__button-text-decoration     : underline !default;
 $collapse__button-background          : $white !default;
 $collapse__button-background-active   : $gray-darker !default;
 $collapse__button-outline             : none !default;
@@ -25,13 +26,13 @@ $collapse__icon-margin-left--secondary: $spacer--medium !default;
 $collapse__icon-inner                 : $color-primary !default;
 $collapse__content-padding            : $spacer !default;
 
-.collapse {
+.a-collapse {
   position: relative;
   width: $collapse__width;
   background-color: $collapse__background;
 
   &--secondary {
-    .collapse__button {
+    .a-collapse__button {
       color: $collapse__button-color;
       font-weight: $collapse__button-font-weight;
       text-transform: $collapse__button-text-transform;
@@ -44,14 +45,14 @@ $collapse__content-padding            : $spacer !default;
         color: $collapse__button-color;
         background-color: $collapse__button-background;
 
-        & > .collapse__icon {
+        & > .a-collapse__icon {
           fill: $collapse__icon-fill--secondary;
         }
       }
 
       &[aria-expanded="true"] {
         color: $collapse__button-color-active;
-        text-decoration: underline;
+        text-decoration: $collapse__button-text-decoration;
         background-color: $collapse__button-background;
 
         &:active,
@@ -60,14 +61,14 @@ $collapse__content-padding            : $spacer !default;
           color: $collapse__button-color-active;
           background-color: $collapse__button-background;
 
-          & > .collapse__icon {
+          & > .a-collapse__icon {
             fill: $collapse__icon-fill-active--secondary;
           }
         }
       }
     }
 
-    .collapse__icon {
+    .a-collapse__icon {
       position: relative;
       top: 3px;
       display: inline;
@@ -77,7 +78,7 @@ $collapse__content-padding            : $spacer !default;
   }
 
   &--inner {
-    .collapse__button {
+    .a-collapse__button {
       color: $collapse__button_color--inner;
       background-color: $collapse__button_background--inner;
 
@@ -87,7 +88,7 @@ $collapse__content-padding            : $spacer !default;
       }
     }
 
-    .collapse__icon {
+    .a-collapse__icon {
       fill: $collapse__icon-inner;
     }
   }
@@ -107,11 +108,11 @@ $collapse__content-padding            : $spacer !default;
     &:hover,
     &:focus {
       color: $collapse__button-color-active;
-      text-decoration: underline;
+      text-decoration: $collapse__button-text-decoration;
       background-color: $collapse__button-background-active;
       outline: $collapse__button-outline;
 
-      & > .collapse-button__icon {
+      & > .a-collapse-button__icon {
         fill: $collapse__icon-fill-active;
       }
     }
@@ -120,7 +121,7 @@ $collapse__content-padding            : $spacer !default;
       color: #fff;
       background-color: $collapse__button-background-active;
 
-      & > .collapse__icon {
+      & > .a-collapse__icon {
         transform: rotate(180deg);
         fill: $collapse__icon-fill-active;
       }

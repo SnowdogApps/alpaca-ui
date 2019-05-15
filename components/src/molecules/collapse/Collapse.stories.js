@@ -1,24 +1,22 @@
-import { addDecorator, storiesOf } from '@storybook/vue'
-import StoryRouter from 'storybook-vue-router'
+import { storiesOf } from '@storybook/vue'
+import { select, text } from '@storybook/addon-knobs'
 
 import ACollapse from './Collapse.vue'
-import { select, text } from '@storybook/addon-knobs'
 
 const info = `
   ---
   Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.collapse--secondary\` - Selector for applying secondary styles
-  - \`.collapse--inner\` - Selector for applying inner styles
+  - \`.a-collapse--secondary\` - Selector for applying secondary styles
+  - \`.a-collapse--inner\` - Selector for applying inner styles
   ---
 `
 
 const bemModifiers = [
   null,
-  'collapse--secondary',
-  'collapse--inner'
+  'a-collapse--secondary',
+  'a-collapse--inner'
 ]
 
-addDecorator(StoryRouter())
 storiesOf('Molecules/Collapse', module)
   .addParameters({ info })
   .add(
@@ -57,9 +55,9 @@ storiesOf('Molecules/Collapse', module)
       template: `
         <a-collapse>
           <template #title>
-            <span>tesciunio title</span>
+            <span>Title</span>
           </template>
-          <div>tesciunio</div>
+          <div>Content</div>
         </a-collapse>
       `
     })
