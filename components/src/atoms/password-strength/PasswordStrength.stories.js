@@ -1,43 +1,47 @@
 import { storiesOf } from '@storybook/vue'
+import { select, text } from '@storybook/addon-knobs'
 
 import APasswordStrength from './PasswordStrength.vue'
 
 const info = `
   ------
   #### Use these modifiers with \`.password-strength\` class:
-  - \`.password-strength--weak\` - Class for applying weak password styles
-  - \`.password-strength--medium\` - Class for applying medium password styles
-  - \`.password-strength--strong\` - Class for applying strong password styles
-  - \`.password-strength--very-strong\` - Class for applying very strong password styles
+  - \`.a-password-strength--weak\` - Class for applying weak password styles
+  - \`.a-password-strength--medium\` - Class for applying medium password styles
+  - \`.a-password-strength--strong\` - Class for applying strong password styles
+  - \`.a-password-strength--very-strong\` - Class for applying very strong password styles
   ------
 `
 
+const bemModifiers = [
+  null,
+  'a-password-strength--weak',
+  'a-password-strength--medium',
+  'a-password-strength--strong',
+  'a-password-strength--very-strong'
+]
+
 storiesOf('Atoms/PasswordStrength', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     components: { APasswordStrength },
+    props: {
+      classKnobs: {
+        default: select('BEM Modifier', bemModifiers)
+      },
+      textKnobs: {
+        default: text('Content', 'No password')
+      },
+      labelKnobs: {
+        default: text('Label', 'Passworf strength')
+      }
+    },
     template: `
-      <a-password-strength>
-        No password
-      </a-password-strength>
-    `
-  }))
-  // @vue/component
-  .add('Visible Label', () => ({
-    components: { APasswordStrength },
-    template: `
-      <a-password-strength label="Passworf strength">
-        No password
-      </a-password-strength>
-    `
-  }))
-  // @vue/component
-  .add('Medium strength', () => ({
-    components: { APasswordStrength },
-    template: `
-      <a-password-strength class="password-strength--medium">
-        Medium
+      <a-password-strength
+        :class="classKnobs"
+        :label="labelKnobs"
+      >
+        {{ textKnobs }}
       </a-password-strength>
     `
   }))
