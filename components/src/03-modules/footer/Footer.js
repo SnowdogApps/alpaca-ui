@@ -4,7 +4,7 @@ import AButton from '../../atoms/button/Button.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
-import ADropdownList from '../../molecules/dropdown-list/DropdownList.vue'
+import ADropdownList from '../../molecules/collapse/Collapse.vue'
 import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
 
 // @vue/component
