@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils'
 import ATabs from './Tabs.vue'
+import ATab from '../../atoms/tab/Tab.vue'
 
 describe('Tabs', () => {
   it('has default structure', () => {
@@ -11,13 +12,25 @@ describe('Tabs', () => {
   })
 
   it('renders slot text when passed', () => {
+
+    const TestComponent = {
+      template: `
+        <a-tab name="test1">
+          <span>hehe</span>
+        </a-tab>
+      `,
+      components: {
+        ATab
+      }
+    }
+
     const wrapper = mount(ATabs, {
       slots: {
-        default: `<span>Tabs default text</span>`
+        default: TestComponent
       }
     })
 
-    expect(wrapper.find('.a-tabs div').exists()).toBe(true)
-    expect(wrapper.find('.a-tabs div span').text()).toEqual('Tabs default text')
+    console.log(wrapper)
+    console.log(wrapper.find('a-tabs a-tabs__nav-button').exists())
   })
 })
