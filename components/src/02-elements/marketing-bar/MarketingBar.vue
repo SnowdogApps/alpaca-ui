@@ -1,11 +1,5 @@
 <template src="./MarketingBar.html" />
 
-<script>
-import instance from './MarketingBar.js'
+<script src="./MarketingBar.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./MarketingBar.scss"/>
+<style lang="scss" src="./MarketingBar.scss" />

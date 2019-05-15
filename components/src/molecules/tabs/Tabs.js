@@ -6,12 +6,23 @@ export default {
   components: { AButton },
   data () {
     return {
-      tabs: this.$children,
+      tabs: null,
       activeFocusedTab: 0
     }
   },
+  computed: {
+    tabsChildren () {
+      return this.$children.filter(child => {
+        return child.$el.dataset.tab
+      })
+    }
+  },
+  mounted () {
+    this.tabs = this.tabsChildren
+  },
   methods: {
     selectTab (selectedTab) {
+      this.$emit('click', selectedTab.name)
       this.tabs.forEach(tab => {
         tab.isActive = selectedTab === this.activeFocusedTab
           ? tab.name === this.tabs[this.activeFocusedTab].name

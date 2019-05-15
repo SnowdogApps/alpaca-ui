@@ -1,11 +1,5 @@
 <template src="./OffCanvasSidebar.html" />
 
-<script>
-import instance from './OffCanvasSidebar.js'
+<script src="./OffCanvasSidebar.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./OffCanvasSidebar.scss"/>
+<style lang="scss" src="./OffCanvasSidebar.scss" />
