@@ -1,5 +1,5 @@
 <template src="./List.html" />
 
-<script src="./List.js"/>
+<script src="./List.js" />
 
-<style lang="scss" src="./List.scss"/>
+<style lang="scss" src="./List.scss" />

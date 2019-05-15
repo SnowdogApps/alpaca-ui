@@ -1,11 +1,5 @@
 <template src="./SwatchFilter.html" />
 
-<script>
-import instance from './SwatchFilter.js'
+<script src="./SwatchFilter.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="../filter/Filter.scss"/>
+<style lang="scss" src="../filter/Filter.scss" />

@@ -1,11 +1,5 @@
 <template src="./ForgotPassword.html" />
 
-<script>
-import instance from './ForgotPassword.js'
+<script src="./ForgotPassword.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./ForgotPassword.scss"/>
+<style lang="scss" src="./ForgotPassword.scss" />

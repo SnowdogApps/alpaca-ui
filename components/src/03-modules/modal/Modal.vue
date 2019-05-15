@@ -1,11 +1,5 @@
 <template src="./Modal.html" />
 
-<script>
-import instance from './Modal.js'
+<script src="./Modal.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./Modal.scss"/>
+<style lang="scss" src="./Modal.scss" />

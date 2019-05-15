@@ -1,12 +1,6 @@
 <template src="./ReviewAdd.html" />
 
-<script>
-import instance from './ReviewAdd.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./ReviewAdd.js" />
 
 <style
   lang="scss"

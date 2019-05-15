@@ -1,5 +1,5 @@
 <template src="./Heading.html" />
 
-<script src="./Heading.js"/>
+<script src="./Heading.js" />
 
-<style lang="scss" src="./Heading.scss"/>
+<style lang="scss" src="./Heading.scss" />

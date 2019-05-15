@@ -2,4 +2,4 @@
 
 <script src="./Loader.js" />
 
-<style lang="scss" src="./Loader.scss"/>
+<style lang="scss" src="./Loader.scss" />

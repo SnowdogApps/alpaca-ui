@@ -1,11 +1,5 @@
 <template src="./MiniCart.html" />
 
-<script>
-import instance from './MiniCart.js'
+<script src="./MiniCart.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./MiniCart.scss"/>
+<style lang="scss" src="./MiniCart.scss" />
