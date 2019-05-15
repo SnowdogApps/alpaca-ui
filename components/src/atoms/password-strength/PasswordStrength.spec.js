@@ -41,7 +41,7 @@ describe('PasswordStrength', () => {
       }
     })
 
-    expect(wrapper.find('.a-password-strength .a-password-strength__indicator').exists()).toBe(true)
-    expect(wrapper.find('.a-password-strength .a-password-strength__indicator').text()).toEqual('Passworf strength')
+    expect(wrapper.find('.a-password-strength__indicator').exists()).toBe(true)
+    expect(wrapper.find('.a-password-strength__indicator').text()).toEqual('Passworf strength')
   })
 })
