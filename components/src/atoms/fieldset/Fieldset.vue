@@ -1,5 +1,5 @@
 <template src="./Fieldset.html" />
 
-<script src="./Fieldset.js"/>
+<script src="./Fieldset.js" />
 
-<style lang="scss" src="./Fieldset.scss"/>
+<style lang="scss" src="./Fieldset.scss" />

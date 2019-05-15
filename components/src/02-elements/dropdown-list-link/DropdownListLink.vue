@@ -1,11 +1,5 @@
 <template src="./DropdownListLink.html" />
 
-<script>
-import instance from './DropdownListLink.js'
+<script src="./DropdownListLink.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="../dropdown-list/DropdownList.scss"/>
+<style lang="scss" src="../dropdown-list/DropdownList.scss" />

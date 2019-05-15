@@ -1,13 +1,6 @@
 <template src="./Toolbar.html" />
 
-<script>
-import instance from './Toolbar.js'
-
-export default {
-  ...instance
-}
-
-</script>
+<script src="./Toolbar.js" />
 
 <style
   lang="scss"
