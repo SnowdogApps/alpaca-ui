@@ -1,7 +1,7 @@
 <div class="a-radio">
   <input
     :name="name"
-    :id="id"
+    :id="inputId"
     :value="value"
     :checked="checked === value"
     type="radio"
@@ -11,10 +11,10 @@
   <!-- @slot Custom radio option (Scoped slot) -->
   <slot
     name="option"
-    :id="id"
+    :id="inputId"
   >
     <a-label
-      :for="id"
+      :for="inputId"
       class="a-radio__label"
     >
       <span class="a-radio__icon" />

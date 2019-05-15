@@ -16,7 +16,6 @@ storiesOf('Atoms/Radio', module)
         <a-radio
           v-model="selected"
           name="radio1"
-          id="option_one"
           value="option_one"
         >
           Option one
@@ -24,7 +23,6 @@ storiesOf('Atoms/Radio', module)
         <a-radio
           v-model="selected"
           name="radio1"
-          id="option_two"
           value="option_two"
         >
           Option two
@@ -44,7 +42,7 @@ storiesOf('Atoms/Radio', module)
         <a-radio
           v-model="selected"
           name="radio1"
-          id="option_one"
+          id="id1"
           value="option_one"
         >
           <template #option="{ id }">
@@ -62,7 +60,7 @@ storiesOf('Atoms/Radio', module)
         <a-radio
           v-model="selected"
           name="radio1"
-          id="option_two"
+          id="id2"
           value="option_two"
         >
           Option two

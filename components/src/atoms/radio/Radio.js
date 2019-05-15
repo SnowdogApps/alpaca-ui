@@ -23,13 +23,6 @@ export default {
       required: true
     },
     /**
-     * Input name
-     */
-    id: {
-      type: String,
-      required: true
-    },
-    /**
      * Input value
      */
     value: {
@@ -37,11 +30,23 @@ export default {
       required: true
     },
     /**
+     * Input id
+     */
+    id: {
+      type: String,
+      default: null
+    },
+    /**
      * Custom input class
      */
     inputClass: {
       type: String,
       default: null
+    }
+  },
+  computed: {
+    inputId () {
+      return this.id || this.value.toLowerCase().replace(/[^a-z0-9]/g, '-')
     }
   }
 }
