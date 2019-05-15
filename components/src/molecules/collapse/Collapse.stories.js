@@ -19,7 +19,7 @@ const bemModifiers = [
 ]
 
 addDecorator(StoryRouter())
-storiesOf('Atoms/Collapse', module)
+storiesOf('Molecules/Collapse', module)
   .addParameters({ info })
   .add(
     'Default',
