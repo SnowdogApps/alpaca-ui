@@ -24,9 +24,11 @@ export default {
     selectTab (selectedTab) {
       this.$emit('click', selectedTab.name)
       this.tabs.forEach(tab => {
-        tab.isActive = selectedTab === this.activeFocusedTab
-          ? tab.name === this.tabs[this.activeFocusedTab].name
-          : tab.name === selectedTab.name
+        if (selectedTab === this.activeFocusedTab) {
+          tab.isActive = tab.name === this.tabs[this.activeFocusedTab].name
+        } else {
+          tab.isActive = tab.name === selectedTab.name
+        }
       })
     },
     focus (el) {
