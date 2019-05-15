@@ -11,7 +11,7 @@ export default {
      */
     title: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Item collapse
