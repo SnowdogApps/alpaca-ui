@@ -3,10 +3,10 @@ import { text } from '@storybook/addon-knobs'
 
 import APreformatted from './Preformatted.vue'
 
-const info = 'Check **Knobs** tab to edit component properties dynamically.'
-
 storiesOf('Atoms/Preformatted', module)
-  .addParameters({ info })
+  .addParameters({
+    info: 'Check **Knobs** tab to edit component properties dynamically.'
+  })
   .add('Default', () => ({
     components: { APreformatted },
     props: {
