@@ -13,14 +13,14 @@ describe('PasswordStrength', () => {
   it('renders label when label prop provided', () => {
     const wrapper = mount(APasswordStrength, {
       propsData: {
-        label: 'Passworf strength'
+        label: 'Password strength'
       }
     })
 
     expect(wrapper.contains('span')).toBe(true)
     expect(wrapper.findAll('span').length).toBe(2)
     expect(wrapper.find('.a-password-strength__label').exists()).toBe(true)
-    expect(wrapper.find('.a-password-strength__label').text()).toEqual('Passworf strength:')
+    expect(wrapper.find('.a-password-strength__label').text()).toEqual('Password strength:')
   })
 
   it('does not renders label when label prop empty', () => {
@@ -37,11 +37,11 @@ describe('PasswordStrength', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(APasswordStrength, {
       slots: {
-        default: 'Passworf strength'
+        default: 'Password strength'
       }
     })
 
     expect(wrapper.find('.a-password-strength__indicator').exists()).toBe(true)
-    expect(wrapper.find('.a-password-strength__indicator').text()).toEqual('Passworf strength')
+    expect(wrapper.find('.a-password-strength__indicator').text()).toEqual('Password strength')
   })
 })
