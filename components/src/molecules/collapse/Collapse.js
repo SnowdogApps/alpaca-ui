@@ -19,6 +19,20 @@ export default {
     collapse: {
       type: Boolean,
       default: true
+    },
+    /**
+     * Custom class for title
+     */
+    titleClass: {
+      type: String,
+      default: null
+    },
+    /**
+     * Custom class for content
+     */
+    contentClass: {
+      type: String,
+      default: null
     }
   },
   data () {

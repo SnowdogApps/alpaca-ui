@@ -1,6 +1,6 @@
 <div class="a-collapse">
   <button
-    class="a-collapse__button"
+    :class="['a-collapse__button', titleClass]"
     :aria-controls="collapseLocal"
     @click="toggle"
     :aria-expanded="!collapseLocal"
@@ -15,7 +15,7 @@
     </slot>
   </button>
   <div
-    class="a-collapse__content"
+    :class="['a-collapse__content', contentClass]"
     :aria-hidden="collapseLocal"
   >
     <!-- @slot Default content-->

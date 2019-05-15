@@ -35,4 +35,20 @@ describe('Button', () => {
     expect(wrapper.find('.a-collapse button > span').exists()).toBe(true)
     expect(wrapper.find('.a-collapse button > span').text()).toEqual('Alpaca UI')
   })
+
+  it('renders elements with custom classes', () => {
+    const wrapper = mount(ACollapse, {
+      propsData: {
+        titleClass: 'title-class',
+        contentClass: 'content-class'
+      }
+    })
+
+    expect(wrapper.props().titleClass).toBe('title-class')
+    expect(wrapper.find('.a-collapse button').classes()).toContain('title-class')
+    expect(wrapper.find('.a-collapse button').classes().length).toBe(2)
+    expect(wrapper.props().contentClass).toBe('content-class')
+    expect(wrapper.find('.a-collapse button').classes()).toContain('content-class')
+    expect(wrapper.find('.a-collapse button').classes().length).toBe(2)
+  })
 })
