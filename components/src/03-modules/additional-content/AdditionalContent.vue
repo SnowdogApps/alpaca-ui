@@ -1,11 +1,5 @@
 <template src="./AdditionalContent.html" />
 
-<script>
-import instance from './AdditionalContent.js'
+<script src="./AdditionalContent.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./AdditionalContent.scss"/>
+<style lang="scss" src="./AdditionalContent.scss" />

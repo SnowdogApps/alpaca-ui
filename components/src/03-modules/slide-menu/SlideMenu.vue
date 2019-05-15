@@ -1,12 +1,6 @@
 <template src="./SlideMenu.html" />
 
-<script>
-import instance from './SlideMenu.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./SlideMenu.js" />
 
 <style
   lang="scss"

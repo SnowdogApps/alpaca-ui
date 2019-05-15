@@ -1,11 +1,5 @@
 <template src="./CatalogListItem.html" />
 
-<script>
-import instance from './CatalogListItem.js'
+<script src="./CatalogListItem.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./CatalogListItem.scss"/>
+<style lang="scss" src="./CatalogListItem.scss" />

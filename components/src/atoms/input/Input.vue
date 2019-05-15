@@ -1,5 +1,5 @@
 <template src="./Input.html" />
 
-<script src="./Input.js"/>
+<script src="./Input.js" />
 
-<style lang="scss" src="./Input.scss"/>
+<style lang="scss" src="./Input.scss" />
