@@ -1,11 +1,5 @@
 <template src="./Login.html" />
 
-<script>
-import instance from './Login.js'
+<script src="./Login.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./Login.scss"/>
+<style lang="scss" src="./Login.scss" />

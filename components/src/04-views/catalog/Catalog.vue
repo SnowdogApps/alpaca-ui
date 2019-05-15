@@ -1,12 +1,6 @@
 <template src="./Catalog.html" />
 
-<script>
-import instance from './Catalog.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./Catalog.js" />
 
 <style
   lang="scss"

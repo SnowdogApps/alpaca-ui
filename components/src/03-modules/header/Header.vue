@@ -1,11 +1,5 @@
 <template src="./Header.html" />
 
-<script>
-import instance from './Header.js'
+<script src="./Header.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./Header.scss"/>
+<style lang="scss" src="./Header.scss" />

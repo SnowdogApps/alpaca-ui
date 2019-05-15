@@ -1,5 +1,5 @@
 <template src="./PasswordStrength.html" />
 
-<script src="./PasswordStrength.js"/>
+<script src="./PasswordStrength.js" />
 
-<style lang="scss" src="./PasswordStrength.scss"/>
+<style lang="scss" src="./PasswordStrength.scss" />

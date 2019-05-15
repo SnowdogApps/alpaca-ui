@@ -1,4 +1,4 @@
 <template src="./Divider.html" />
 
-<style lang="scss" src="./Divider.scss"/>
+<style lang="scss" src="./Divider.scss" />
 

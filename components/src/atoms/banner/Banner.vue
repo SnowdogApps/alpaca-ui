@@ -1,5 +1,5 @@
 <template src="./Banner.html" />
 
-<script src="./Banner.js"/>
+<script src="./Banner.js" />
 
-<style lang="scss" src="./Banner.scss"/>
+<style lang="scss" src="./Banner.scss" />

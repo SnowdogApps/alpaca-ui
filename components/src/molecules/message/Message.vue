@@ -1,5 +1,5 @@
 <template src="./Message.html" />
 
-<script src="./Message.js"/>
+<script src="./Message.js" />
 
-<style lang="scss" src="./Message.scss"/>
+<style lang="scss" src="./Message.scss" />

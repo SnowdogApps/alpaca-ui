@@ -1,11 +1,5 @@
 <template src="./QuickSearch.html" />
 
-<script>
-import instance from './QuickSearch.js'
+<script src="./QuickSearch.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./QuickSearch.scss"/>
+<style lang="scss" src="./QuickSearch.scss" />

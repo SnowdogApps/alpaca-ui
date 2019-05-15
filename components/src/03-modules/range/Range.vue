@@ -1,11 +1,5 @@
 <template src="./Range.html" />
 
-<script>
-import instance from './Range.js'
+<script src="./Range.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./Range.scss"/>
+<style lang="scss" src="./Range.scss" />

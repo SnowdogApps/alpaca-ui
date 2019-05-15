@@ -1,12 +1,6 @@
 <template src="./ReviewSummary.html" />
 
-<script>
-import instance from './ReviewSummary.js'
-
-export default {
-  ...instance
-}
-</script>
+<script src="./ReviewSummary.js" />
 
 <style
   lang="scss"

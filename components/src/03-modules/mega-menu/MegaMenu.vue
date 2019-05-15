@@ -1,11 +1,5 @@
 <template src="./MegaMenu.html" />
 
-<script>
-import instance from './MegaMenu.js'
+<script src="./MegaMenu.js" />
 
-export default {
-  ...instance
-}
-</script>
-
-<style lang="scss" src="./MegaMenu.scss"/>
+<style lang="scss" src="./MegaMenu.scss" />
