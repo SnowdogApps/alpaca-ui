@@ -57,16 +57,16 @@ export default {
       default: null
     },
     /**
+     * Aria label of rating
+     */
+    buttonAriaLabel: {
+      type: String,
+      default: null
+    },
+    /**
      * Is active icon props
      */
     isActive: {
-      type: Boolean,
-      default: false
-    },
-    /**
-     * Is average icon
-     */
-    averageIcon: {
       type: Boolean,
       default: false
     }

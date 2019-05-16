@@ -20,7 +20,7 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="4"
-        color="red"
+        active-color="red"
         active-icon="heart"
         @select="select"
       />
@@ -34,7 +34,7 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="6"
-        color="green"
+        active-color="green"
         unchecked-icon="star-border"
         :average="3.6"
       />

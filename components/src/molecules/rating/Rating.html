@@ -3,11 +3,13 @@
     v-for="item in localItems"
     :key="`item_${item.val}`"
     :class="['a-rating__button a-button--blank', buttonClass]"
+    :aria-label="buttonAriaLabel"
     @mouseover.native="setActive(item, true)"
     @mouseleave.native="setActive(item, false)"
     @click.native="select(item)"
     :disabled="!!average"
   >
+    <!-- @slot Rating item (Scoped slot) -->
     <slot
       name="item"
       :item="item"
