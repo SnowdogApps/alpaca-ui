@@ -30,6 +30,10 @@ export default {
     unselectColor: {
       type: String,
       default: '#c9c9c9'
+    },
+    average: {
+      type: Number,
+      default: null
     }
   },
   data () {
@@ -39,16 +43,17 @@ export default {
         .map(el => ({ val: el, isActive: false }))
     }
   },
+  computed: {
+    showAverage () {
+      const average = this.average / this.items * 100
+      return `polygon(0 0, ${average} 0, ${average} 100%, 0% 100%)`
+    }
+  },
   methods: {
-    setActive (item, isActive) {
+    setActive (item) {
       this.localItems.map(el => {
-        if (item.val >= el.val) {
-          el.isActive = true
-        } else {
-          el.isActive = false
-        }
+        el.isActive = item.val >= el.val
       })
-      console.log(this.localItems)
     },
     select (value, item) {
       this.isActiveLocal = value

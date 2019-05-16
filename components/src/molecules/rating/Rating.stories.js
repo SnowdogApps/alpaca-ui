@@ -33,3 +33,13 @@ storiesOf('Molecules/Rating', module)
       />
     `
   }))
+  .add('Disabled', () => ({
+    components: { ARating },
+    template: `
+      <a-rating
+        :items="4"
+        color="red"
+        :average="2.5"
+      />
+    `
+  }))

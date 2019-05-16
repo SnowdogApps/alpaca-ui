@@ -6,11 +6,19 @@
     @mousein.native="setActive(item)"
     @mouseout.native="setActive(item)"
     @click.native="select(item)"
+    :disabled="!!average"
   >
     <a-icon
+      v-if="!average"
       :style="{fill: item.isActive ? color : unselectColor}"
       :class="['a-rating__icon', item.isActive && 'a-rating__icon--active']"
       :icon="showIcon(item)"
+    />
+    <a-icon
+      v-if="!!average"
+      :style="{clipPath: showAverage}"
+      :class="['a-rating__icon', !!average && 'a-rating__icon--disabled']"
+      :icon="icon"
     />
   </a-button>
 </div>
