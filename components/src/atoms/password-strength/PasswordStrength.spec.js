@@ -4,10 +4,13 @@ import APasswordStrength from './PasswordStrength.vue'
 describe('PasswordStrength', () => {
   it('has default structure', () => {
     const wrapper = mount(APasswordStrength)
+    const $passwordIndicator = wrapper.find('.a-password-strength__indicator')
 
     expect(wrapper.is('div')).toBe(true)
     expect(wrapper.classes()).toContain('a-password-strength')
     expect(wrapper.classes().length).toBe(1)
+    expect($passwordIndicator.attributes('aria-live')).toBeDefined()
+    expect($passwordIndicator.attributes('aria-live')).toEqual('polite')
   })
 
   it('renders label when label prop provided', () => {
@@ -17,10 +20,12 @@ describe('PasswordStrength', () => {
       }
     })
 
+    const $passwordLabel = wrapper.find('.a-password-strength__label')
+
     expect(wrapper.contains('span')).toBe(true)
     expect(wrapper.findAll('span').length).toBe(2)
-    expect(wrapper.find('.a-password-strength__label').exists()).toBe(true)
-    expect(wrapper.find('.a-password-strength__label').text()).toEqual('Password strength:')
+    expect($passwordLabel.exists()).toBe(true)
+    expect($passwordLabel.text()).toEqual('Password strength:')
   })
 
   it('does not renders label when label prop empty', () => {
@@ -41,7 +46,9 @@ describe('PasswordStrength', () => {
       }
     })
 
-    expect(wrapper.find('.a-password-strength__indicator').exists()).toBe(true)
-    expect(wrapper.find('.a-password-strength__indicator').text()).toEqual('Password strength')
+    const $passwordIndicator = wrapper.find('.a-password-strength__indicator')
+
+    expect($passwordIndicator.exists()).toBe(true)
+    expect($passwordIndicator.text()).toEqual('Password strength')
   })
 })
