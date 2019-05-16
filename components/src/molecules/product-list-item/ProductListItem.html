@@ -1,0 +1,94 @@
+<a-list-item tag="div" class="product-list-item">
+  <div class="product-list-item__image">
+    <!--@slot Custom product image (Named slots)-->
+    <slot name="image">
+      <a-image
+        :src="imageUrl"
+        :alt="name"
+      />
+    </slot>
+  </div>
+  <div class="product-list-item__info">
+    <div class="product-list-item__data">
+      <!--@slot Custom product name (Named slots)-->
+      <slot name="name">
+        <router-link
+          :to="url"
+          class="link link--inverted product-list-item__name"
+        >
+          {{ name }}
+        </router-link>
+      </slot>
+      <!--@slot Custom product price (Named slots)-->
+      <slot name="price">
+        <a-price
+          :price="price"
+          :special-price="specialPrice"
+          :old-price="oldPrice"
+          class="product-list-item__price-wrapper"
+          old-price-class="product-list-item__price-wrapper--old"
+          special-price-class="product-list-item__price-wrapper--special"
+        />
+      </slot>
+
+      <a-list
+        v-if="options"
+        tag="dl"
+        class="list--description product-list-item__attributes"
+      >
+        <template v-for="item in options">
+          <!-- @slot Custom product item option (Scoped slot) -->
+          <slot
+            name="option"
+            :option="item"
+          >
+            <a-list-item
+              tag="dt"
+              class="list--description__label"
+            >
+              {{ item.label }}
+            </a-list-item>
+            <a-list-item
+              tag="dd"
+              class="list--description__value"
+            >
+              {{ item.value }}
+            </a-list-item>
+          </slot>
+        </template>
+      </a-list>
+    </div>
+
+    <div
+      :class="[
+        'product-list-item__actions',
+        { 'product-list-item__actions--to-right': !$slots.quantity }
+      ]"
+    >
+      <div
+        v-if="$slots.quantity"
+        class="product-list-item__qty-wrapper"
+      >
+        <!--@slot Custom product quantity (Named slots)-->
+        <slot name="quantity"/>
+      </div>
+
+      <div class="product-list-item__action-buttons-wrapper">
+        <!--@slot Custom product remove button (Named slots)-->
+        <slot name="removeAction">
+          <a-button
+            class="product-list-item__action-button"
+            aria-label="Remove this product from your shopping cart"
+            custom-class="product-list-item__actions-item"
+            @click.native="onRemove"
+          >
+            <a-icon
+              icon="remove"
+              class="product-list-item__action-icon"
+            />
+          </a-button>
+        </slot>
+      </div>
+    </div>
+  </div>
+</a-list-item>
