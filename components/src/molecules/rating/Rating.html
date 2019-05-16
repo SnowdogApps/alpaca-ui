@@ -1,13 +1,16 @@
 <div class="a-rating">
   <a-button
-    v-for="item in items"
-    :key="`item_${item}`"
-    class="a-rating__button button--blank"
+    v-for="item in localItems"
+    :key="`item_${item.val}`"
+    class="a-rating__button a-button--blank"
+    @mousein.native="setActive(item)"
+    @mouseout.native="setActive(item)"
+    @click.native="select(item)"
   >
     <a-icon
-      class="a-rating__icon"
-      :icon="icon"
-    >
+      :style="{fill: item.isActive ? color : unselectColor}"
+      :class="['a-rating__icon', item.isActive && 'a-rating__icon--active']"
+      :icon="showIcon(item)"
+    />
   </a-button>
 </div>
-

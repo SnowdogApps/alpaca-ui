@@ -1,0 +1,17 @@
+@import '../../../assets/styles/_globals.scss';
+
+.a-rating {
+  &__icon {
+    width: 40px;
+    height: 40px;
+    fill: $gray-lighter;
+    //
+    //&:hover {
+    //  fill: $orange;
+    //}
+    //
+    &--active {
+      fill: $orange;
+    }
+  }
+}
