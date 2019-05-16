@@ -95,7 +95,7 @@ export default {
         el.isActive = (item.val >= el.val || item.val === el.val) && val
       })
     },
-    isTotalNumber (item) {
+    showAverageIcon (item) {
       return (item.val - 1 < this.average && item.val > this.average) || (item.val === this.average)
     },
     showIcon (item) {

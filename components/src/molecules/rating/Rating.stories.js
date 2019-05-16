@@ -8,15 +8,22 @@ storiesOf('Molecules/Rating', module)
   // @vue/component
   .add('Default', () => ({
     components: { ARating },
+    methods: {
+      select: action('Selected')
+    },
     template: `
       <a-rating
         :items="5"
         unchecked-icon="star-border"
+        @select="select"
       />
     `
   }))
-  .add('With custom ikon and no border', () => ({
+  .add('With custom elements', () => ({
     components: { ARating },
+    methods: {
+      select: action('Selected')
+    },
     template: `
       <a-rating
         :items="4"
@@ -24,10 +31,7 @@ storiesOf('Molecules/Rating', module)
         active-icon="heart"
         @select="select"
       />
-    `,
-    methods: {
-      select: action('Selected')
-    }
+    `
   }))
   .add('Read only', () => ({
     components: { ARating },
@@ -42,6 +46,9 @@ storiesOf('Molecules/Rating', module)
   }))
   .add('With slot', () => ({
     components: { ARating },
+    methods: {
+      click: action('Clicked')
+    },
     template: `
       <a-rating
         :items="3"
@@ -55,8 +62,5 @@ storiesOf('Molecules/Rating', module)
           </button>
         </template>
       </a-rating>
-    `,
-    methods: {
-      click: action('Clicked')
-    }
+    `
   }))

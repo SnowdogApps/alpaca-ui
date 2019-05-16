@@ -20,7 +20,7 @@
         :icon="showIcon(item)"
       />
       <a-icon
-        v-if="isTotalNumber(item)"
+        v-if="showAverageIcon(item)"
         :style="{clipPath: showAverage, fill : !item.isActive && activeColor}"
         :class="['a-rating__icon', 'a-rating__icon--disabled']"
         :icon="activeIcon"
