@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 
 import ARating from './Rating.vue'
 
@@ -9,18 +10,8 @@ storiesOf('Molecules/Rating', module)
     components: { ARating },
     template: `
       <a-rating
-        :items="4"
-        icon-border="star-border"
-      />
-    `
-  }))
-  .add('With custom ikon and color', () => ({
-    components: { ARating },
-    template: `
-      <a-rating
-        :items="4"
-        icon="heart"
-        color="red"
+        :items="5"
+        unchecked-icon="star-border"
       />
     `
   }))
@@ -30,16 +21,42 @@ storiesOf('Molecules/Rating', module)
       <a-rating
         :items="4"
         color="red"
+        active-icon="heart"
+        @select="select"
       />
-    `
+    `,
+    methods: {
+      select: action('Selected')
+    }
   }))
-  .add('Disabled', () => ({
+  .add('Read only', () => ({
     components: { ARating },
     template: `
       <a-rating
-        :items="4"
-        color="red"
-        :average="2.5"
+        :items="6"
+        color="green"
+        unchecked-icon="star-border"
+        :average="3.6"
       />
     `
+  }))
+  .add('With slot', () => ({
+    components: { ARating },
+    template: `
+      <a-rating
+        :items="3"
+      >
+        <template #item="data">
+          <button
+            style="background: none;"
+            @click="click(data.item)"
+          >
+            {{ data.item.val }}
+          </button>
+        </template>
+      </a-rating>
+    `,
+    methods: {
+      click: action('Clicked')
+    }
   }))

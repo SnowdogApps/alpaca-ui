@@ -1,17 +1,20 @@
 @import '../../../assets/styles/_globals.scss';
 
+$rating__button-padding: $reset;
+$rating__icon-width: 40px;
+$rating__icon-height: 40px;
+
 .a-rating {
+  &__button {
+    padding: $rating__button-padding;
+  }
+
   &__icon {
-    width: 40px;
-    height: 40px;
-    fill: $gray-lighter;
-    //
-    //&:hover {
-    //  fill: $orange;
-    //}
-    //
-    &--active {
-      fill: $orange;
+    width: $rating__icon-width;
+    height: $rating__icon-height;
+
+    &--disabled {
+      position: absolute;
     }
   }
 }

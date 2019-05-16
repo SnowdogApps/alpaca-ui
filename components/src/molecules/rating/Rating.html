@@ -2,23 +2,27 @@
   <a-button
     v-for="item in localItems"
     :key="`item_${item.val}`"
-    class="a-rating__button a-button--blank"
-    @mousein.native="setActive(item)"
-    @mouseout.native="setActive(item)"
+    :class="['a-rating__button a-button--blank', buttonClass]"
+    @mouseover.native="setActive(item, true)"
+    @mouseleave.native="setActive(item, false)"
     @click.native="select(item)"
     :disabled="!!average"
   >
-    <a-icon
-      v-if="!average"
-      :style="{fill: item.isActive ? color : unselectColor}"
-      :class="['a-rating__icon', item.isActive && 'a-rating__icon--active']"
-      :icon="showIcon(item)"
-    />
-    <a-icon
-      v-if="!!average"
-      :style="{clipPath: showAverage}"
-      :class="['a-rating__icon', !!average && 'a-rating__icon--disabled']"
-      :icon="icon"
-    />
+    <slot
+      name="item"
+      :item="item"
+    >
+      <a-icon
+        :style="{fill: item.isActive || item.selected ? activeColor : uncheckedColor}"
+        :class="['a-rating__icon', item.isActive && 'a-rating__icon--active']"
+        :icon="showIcon(item)"
+      />
+      <a-icon
+        v-if="isTotalNumber(item)"
+        :style="{clipPath: showAverage, fill : !item.isActive && activeColor}"
+        :class="['a-rating__icon', 'a-rating__icon--disabled']"
+        :icon="activeIcon"
+      />
+    </slot>
   </a-button>
 </div>
