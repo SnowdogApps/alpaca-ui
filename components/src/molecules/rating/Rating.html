@@ -1,0 +1,13 @@
+<div class="a-rating">
+  <a-button
+    v-for="item in items"
+    :key="`item_${item}`"
+    class="a-rating__button button--blank"
+  >
+    <a-icon
+      class="a-rating__icon"
+      :icon="icon"
+    >
+  </a-button>
+</div>
+
