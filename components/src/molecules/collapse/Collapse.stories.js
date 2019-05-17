@@ -53,7 +53,7 @@ storiesOf('Molecules/Collapse', module)
         ACollapse
       },
       template: `
-        <a-collapse title="Simple content">
+        <a-collapse title="Sample content">
           <template #button="{ toggle, collapseLocal, ariaControls }">
             <button 
               :aria-expanded="!collapseLocal"

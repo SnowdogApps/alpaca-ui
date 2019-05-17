@@ -3,7 +3,11 @@ import ACollapse from './Collapse.vue'
 
 describe('Collapse', () => {
   it('has default structure', () => {
-    const wrapper = mount(ACollapse)
+    const wrapper = mount(ACollapse, {
+      propsData: {
+        title: 'Sample title'
+      }
+    })
 
     expect(wrapper.is('div')).toBe(true)
     expect(wrapper.classes()).toContain('a-collapse')
@@ -12,6 +16,9 @@ describe('Collapse', () => {
 
   it('renders slot text when passed', () => {
     const wrapper = mount(ACollapse, {
+      propsData: {
+        title: 'Sample title'
+      },
       slots: {
         default: `
           <p>Alpaca UI</p>
@@ -25,26 +32,30 @@ describe('Collapse', () => {
 
   it('renders named slot text when passed', () => {
     const wrapper = mount(ACollapse, {
+      propsData: {
+        title: 'Sample title'
+      },
       slots: {
-        title: `
-          <span>Alpaca UI</span>
+        button: `
+          <div>Alpaca UI</div>
         `
       }
     })
 
-    expect(wrapper.find('.a-collapse button > span').exists()).toBe(true)
-    expect(wrapper.find('.a-collapse button > span').text()).toEqual('Alpaca UI')
+    expect(wrapper.find('.a-collapse div').exists()).toBe(true)
+    expect(wrapper.find('.a-collapse div').text()).toEqual('Alpaca UI')
   })
 
   it('renders elements with custom class', () => {
     const wrapper = mount(ACollapse, {
       propsData: {
-        titleClass: 'title-class'
+        title: 'Sample title',
+        contentClass: 'content-class'
       }
     })
 
-    expect(wrapper.props().titleClass).toBe('title-class')
-    expect(wrapper.find('.a-collapse button').classes()).toContain('title-class')
-    expect(wrapper.find('.a-collapse button').classes().length).toBe(2)
+    expect(wrapper.props().contentClass).toBe('content-class')
+    expect(wrapper.find('.a-collapse div').classes()).toContain('content-class')
+    expect(wrapper.find('.a-collapse div').classes().length).toBe(2)
   })
 })
