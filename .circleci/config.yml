@@ -8,3 +8,4 @@ jobs:
       - run: cd components && yarn eslint
       - run: cd components && yarn stylelint
       - run: cd components && yarn test
+      - run: cd components && yarn chromatic

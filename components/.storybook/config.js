@@ -1,5 +1,6 @@
 // Storybook
 import { configure, addDecorator, addParameters } from '@storybook/vue'
+import 'storybook-chromatic'
 
 // Addons
 import { withInfo } from 'storybook-addon-vue-info'
