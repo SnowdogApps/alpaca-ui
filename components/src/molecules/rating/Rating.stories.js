@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { number, text } from '@storybook/addon-knobs'
+import { number, text, color } from '@storybook/addon-knobs'
 
 import ARating from './Rating.vue'
 
@@ -13,10 +13,10 @@ storiesOf('Molecules/Rating', module)
     },
     props: {
       activeColor: {
-        default: text('Active color', 'orange')
+        default: color('Active color', '#fab216')
       },
       uncheckedColor: {
-        default: text('Unchecked color', 'lightgray')
+        default: color('Unchecked color', '#c9c9c9')
       },
       activeIcon: {
         default: text('Active icon', 'star')
