@@ -1,34 +1,40 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { number, text } from '@storybook/addon-knobs'
 
 import ARating from './Rating.vue'
 
 storiesOf('Molecules/Rating', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { ARating },
     methods: {
       select: action('Selected')
     },
-    template: `
-      <a-rating
-        :items="5"
-        unchecked-icon="star-border"
-        @select="select"
-      />
-    `
-  }))
-  .add('With custom elements', () => ({
-    components: { ARating },
-    methods: {
-      select: action('Selected')
+    props: {
+      activeColor: {
+        default: text('Active color', 'orange')
+      },
+      uncheckedColor: {
+        default: text('Unchecked color', 'lightgray')
+      },
+      activeIcon: {
+        default: text('Active icon', 'star')
+      },
+      uncheckedIcon: {
+        default: text('Unchecked icon', 'star-border')
+      },
+      numberOfRatingKnob: {
+        default: number('Number of rating', 5)
+      }
     },
     template: `
       <a-rating
-        :items="4"
-        active-color="red"
-        active-icon="heart"
+        :items="numberOfRatingKnob"
+        :active-icon="activeIcon"
+        :unchecked-icon="uncheckedIcon"
+        :active-color="activeColor"
+        :uncheckedColor="uncheckedColor"
         @select="select"
       />
     `

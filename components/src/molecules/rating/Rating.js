@@ -1,6 +1,7 @@
 import AButton from '../../atoms/button/Button.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
+// @vue/component
 export default {
   components: {
     AButton,
@@ -77,9 +78,9 @@ export default {
         el.isActive = el.val < this.average
       })
 
-      if (!Number.isInteger(this.average)) {
-        return `polygon(0 0, ${average}% 0, ${average}% 100%, 0% 100%)`
-      }
+      return !Number.isInteger(this.average)
+        ? `polygon(0 0, ${average}% 0, ${average}% 100%, 0% 100%)`
+        : ''
     }
   },
   methods: {
