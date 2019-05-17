@@ -18,6 +18,7 @@ $product-list-item__action-icon-fill-color      : $gray-darker !default;
 $product-list-item__action-icon-size            : 20px !default;
 $product-list-item__action-icon-fill-color-hover: $color-primary !default;
 $product-list-item__action-icon-transition      : $transition-base !default;
+$product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
 
 .a-product-list-item {
   display: flex;
@@ -85,7 +86,7 @@ $product-list-item__action-icon-transition      : $transition-base !default;
 
   &__qty-label {
     align-self: center;
-    margin: 0 $spacer 0 0;
+    margin: $product-list-item__qty-label-margin;
     font-weight: normal;
   }
 
