@@ -1,4 +1,4 @@
-<div class="breadcrumbs">
+<div class="a-breadcrumbs">
   <template v-for="(breadcrumb, i) in breadcrumbs">
     <template v-if="breadcrumbs.length === i + 1">
       <!-- @slot Current page (Scoped slot) -->
@@ -9,7 +9,7 @@
         <span
           :key="`breadcrumb-${i}`"
           :aria-label="breadcrumb.text"
-          class="breadcrumbs__item"
+          class="a-breadcrumbs__item"
           tabindex="0"
         >
           {{ breadcrumb.text }}
@@ -25,14 +25,14 @@
         <router-link
           :to="breadcrumb.href"
           :aria-label="breadcrumb.text"
-          class="breadcrumbs__link"
+          class="a-breadcrumbs__link"
         >
           {{ breadcrumb.text }}
         </router-link>
       </slot>
       <!-- @slot Separator (Named slot) -->
       <slot name="separator">
-        <span class="breadcrumbs__separator">
+        <span class="a-breadcrumbs__separator">
           /
         </span>
       </slot>
