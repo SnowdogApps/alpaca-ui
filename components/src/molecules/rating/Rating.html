@@ -3,7 +3,7 @@
     v-for="item in localItems"
     :key="`item_${item.val}`"
     :class="['a-rating__button a-button--blank', buttonClass]"
-    :aria-label="buttonAriaLabel"
+    :aria-label="buttonAriaLabel(item.val)"
     @mouseover.native="setActive(item, true)"
     @mouseleave.native="setActive(item, false)"
     @click.native="select(item)"

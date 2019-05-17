@@ -57,13 +57,6 @@ export default {
       default: null
     },
     /**
-     * Aria label of rating
-     */
-    buttonAriaLabel: {
-      type: String,
-      default: null
-    },
-    /**
      * Is active icon props
      */
     isActive: {
@@ -115,6 +108,9 @@ export default {
        * @type {Event}
        */
       this.$emit('select', item)
+    },
+    buttonAriaLabel (item) {
+      return `Rate option, ${item} of ${this.items}. Click to vote`
     }
   }
 }
