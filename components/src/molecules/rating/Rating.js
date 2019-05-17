@@ -22,7 +22,7 @@ export default {
       default: 'star'
     },
     /**
-     * Icon for not inactive element
+     * Icon for inactive element
      */
     uncheckedIcon: {
       type: String,
