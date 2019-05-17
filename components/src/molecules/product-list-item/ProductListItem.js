@@ -1,9 +1,11 @@
 import AImage from '../../atoms/image/Image.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import APrice from '../../atoms/price/Price.vue'
+import ALabel from '../../atoms/label/Label.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import AButton from '../../atoms/button/Button.vue'
+import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 
 // @vue/component
 export default {
@@ -11,9 +13,11 @@ export default {
     AImage,
     AIcon,
     APrice,
+    ALabel,
     AList,
     AListItem,
-    AButton
+    AButton,
+    AQuantityUpdate
   },
   model: {
     prop: 'qty',
@@ -35,10 +39,10 @@ export default {
       required: true
     },
     /**
-     * Product url (string value or URL)
+     * Product url
      */
     url: {
-      type: [URL, String],
+      type: String,
       required: true
     },
     /**
@@ -75,6 +79,20 @@ export default {
     options: {
       type: Array,
       default: null
+    },
+    /**
+     * Product quantity
+     */
+    qty: {
+      type: Number,
+      default: 1
+    },
+    /**
+     * Specify if qty component is not needed (default: false)
+     */
+    hideQty: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

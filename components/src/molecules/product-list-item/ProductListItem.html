@@ -62,15 +62,35 @@
     <div
       :class="[
         'a-product-list-item__actions',
-        { 'a-product-list-item__actions--to-right': !$slots.quantity }
+        { 'a-product-list-item__actions--to-right': hideQty }
       ]"
     >
       <div
-        v-if="$slots.quantity"
+        v-if="!hideQty"
         class="a-product-list-item__qty-wrapper"
       >
         <!--@slot Custom product quantity (Named slots)-->
-        <slot name="quantity"/>
+        <slot name="quantity">
+          <a-quantity-update
+            :value="qty"
+            input-id="qty_1"
+            class="product-list-item__qty"
+            @update="onChange"
+            decrement-aria-label="Decrease the quantity"
+            decrement-icon-title="Minus mark"
+            increment-aria-label="Increase the quantity"
+            increment-icon-title="Plus mark"
+          >
+            <template #label>
+              <a-label
+                class="product-list-item__qty-label"
+                for="qty_1"
+              >
+                Qty:
+              </a-label>
+            </template>
+          </a-quantity-update>
+        </slot>
       </div>
 
       <div class="a-product-list-item__action-buttons-wrapper">
