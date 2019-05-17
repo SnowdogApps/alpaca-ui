@@ -16,6 +16,7 @@ const defaultData = {
   },
   data () {
     return {
+      id: 'prod1',
       qty: 1,
       options: [
         {
@@ -42,6 +43,7 @@ storiesOf('Molecules/Product List Item', module)
     },
     template: `
       <a-product-list-item
+        :id="id"
         name="Ingrid Running Jacket"
         imageUrl="/images/product/cart-product-160_160.jpg"
         price=""
@@ -61,6 +63,7 @@ storiesOf('Molecules/Product List Item', module)
     },
     template: `
       <a-product-list-item
+        :id="id"
         name="Ingrid Running Jacket"
         imageUrl="/images/product/cart-product-160_160.jpg"
         price=""

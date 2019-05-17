@@ -21,6 +21,13 @@ export default {
   },
   props: {
     /**
+     * Product id
+     */
+    id: {
+      type: String,
+      required: true
+    },
+    /**
      * Product name
      */
     name: {
@@ -68,14 +75,6 @@ export default {
     options: {
       type: Array,
       default: null
-    }
-  },
-  computed: {
-    /**
-     * Dynamically generated item id based on name and timestamp
-     */
-    id () {
-      return `${new Date().getTime()}_${String(this.name).toLowerCase().replace(/\s/g, '-')}`
     }
   },
   methods: {
