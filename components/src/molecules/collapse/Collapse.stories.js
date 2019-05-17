@@ -54,8 +54,8 @@ storiesOf('Molecules/Collapse', module)
       },
       template: `
         <a-collapse>
-          <template #title>
-            <span>Title</span>
+          <template #button="{ collapse }">
+            <button @click="collapse">X</button>
           </template>
           <div>Content</div>
         </a-collapse>

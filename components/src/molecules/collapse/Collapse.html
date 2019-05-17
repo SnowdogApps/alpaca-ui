@@ -1,20 +1,23 @@
 <div class="a-collapse">
-  <button
-    :class="['a-collapse__button', titleClass]"
-    :aria-controls="!collapseLocal"
-    @click="toggle"
+  <!-- @slot Custom button slots (Scoped slot) -->
+  <slot
+    name="button"
+    :collapse="collapse"
+  >
+  <a-button
+    :class="['a-collapse__button a-button--blank', titleClass]"
+    :aria-controls="collapseLocal"
+    @click.native="toggle"
     :aria-expanded="!collapseLocal"
   >
-    <!-- @slot Custom title slots (Named slot) -->
-    <slot name="title">
       {{ title }}
       <a-icon
         title="Angle down"
         icon="angle-down"
         class="a-collapse__icon"
       />
-    </slot>
-  </button>
+  </a-button>
+  </slot>
   <div
     :class="['a-collapse__content', contentClass]"
     :aria-hidden="collapseLocal"

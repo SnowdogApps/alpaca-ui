@@ -23,7 +23,8 @@ $collapse__icon-fill-active           : $color-primary !default;
 $collapse__icon-fill--secondary       : $gray !default;
 $collapse__icon-fill-active--secondary: $color-primary !default;
 $collapse__icon-margin-left--secondary: $spacer--medium !default;
-$collapse__icon-inner                 : $color-primary !default;
+$collapse__icon-inner                 : $white !default;
+$collapse__icon-inner-hover           : $color-primary !default;
 $collapse__content-padding            : $spacer !default;
 
 .a-collapse {
@@ -90,6 +91,10 @@ $collapse__content-padding            : $spacer !default;
 
     .a-collapse__icon {
       fill: $collapse__icon-inner;
+
+      &:hover {
+        fill: $collapse__icon-inner-hover;
+      }
     }
   }
 
@@ -103,6 +108,7 @@ $collapse__content-padding            : $spacer !default;
     text-align: left;
     text-decoration: none;
     border: 0;
+    border-radius: 0;
     cursor: pointer;
 
     &:hover,
@@ -138,10 +144,6 @@ $collapse__content-padding            : $spacer !default;
     margin: auto;
     transition: $collapse__transition;
     fill: $collapse__icon-fill;
-
-    &:hover {
-      fill: $collapse__icon-fill-active;
-    }
   }
 
   &__content {
