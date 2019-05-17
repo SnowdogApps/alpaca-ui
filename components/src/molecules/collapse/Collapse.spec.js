@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import ACollapse from './Collapse.vue'
 
-describe('Button', () => {
+describe('Collapse', () => {
   it('has default structure', () => {
     const wrapper = mount(ACollapse)
 
