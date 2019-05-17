@@ -112,7 +112,7 @@ $collapse__content-padding            : $spacer !default;
       background-color: $collapse__button-background-active;
       outline: $collapse__button-outline;
 
-      & > .a-collapse-button__icon {
+      & > .a-collapse__icon {
         fill: $collapse__icon-fill-active;
       }
     }
@@ -138,6 +138,10 @@ $collapse__content-padding            : $spacer !default;
     margin: auto;
     transition: $collapse__transition;
     fill: $collapse__icon-fill;
+
+    &:hover {
+      fill: $collapse__icon-fill-active;
+    }
   }
 
   &__content {
