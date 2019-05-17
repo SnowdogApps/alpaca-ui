@@ -23,13 +23,6 @@ export default {
       default: true
     },
     /**
-     * Custom class for title
-     */
-    titleClass: {
-      type: String,
-      default: null
-    },
-    /**
      * Custom class for content
      */
     contentClass: {
@@ -40,6 +33,11 @@ export default {
   data () {
     return {
       collapseLocal: this.collapse
+    }
+  },
+  computed: {
+    ariaControls () {
+      return this.title.replace(/ /g, '_')
     }
   },
   methods: {

@@ -53,9 +53,15 @@ storiesOf('Molecules/Collapse', module)
         ACollapse
       },
       template: `
-        <a-collapse>
-          <template #button="{ collapse }">
-            <button @click="collapse">X</button>
+        <a-collapse title="Simple content">
+          <template #button="{ toggle, collapseLocal, ariaControls }">
+            <button 
+              :aria-expanded="!collapseLocal"
+              :aria-controls="ariaControls"
+              @click="toggle"
+            >
+              Text
+            </button>
           </template>
           <div>Content</div>
         </a-collapse>
