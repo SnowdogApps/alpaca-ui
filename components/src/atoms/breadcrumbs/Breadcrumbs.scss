@@ -7,7 +7,7 @@ $breadcrumbs__link-color       : $gray-darker !default;
 $breadcrumbs__link-color--hover: $blue !default;
 $breadcrumbs__separator-margin : 0 $spacer !default;
 
-.breadcrumbs {
+.a-breadcrumbs {
   display: flex;
   flex-wrap: wrap;
   font-size: $breadcrumbs__font-size;
