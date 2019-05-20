@@ -31,7 +31,6 @@ describe('Rating', () => {
     const item = wrapper.find('.a-rating__button')
     item.trigger('click')
     expect(wrapper.find('.a-rating__button').classes()).toContain('selected')
-
     expect(wrapper.props().buttonClass).toBe('button-class')
     expect(wrapper.find('.a-rating > button').classes()).toContain('button-class')
     expect(item.is('.a-rating > button')).toBe(true)
