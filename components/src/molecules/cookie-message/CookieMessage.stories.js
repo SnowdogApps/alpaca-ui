@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import ACookieMessage from './CookieMessage.vue'
 
-storiesOf('Elements/CookieMessage', module)
+storiesOf('Molecules/CookieMessage', module)
   // @vue/component
   .add('Default', () => ({
     components: { ACookieMessage },
