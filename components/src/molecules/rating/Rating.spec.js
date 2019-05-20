@@ -19,4 +19,21 @@ describe('Rating', () => {
 
     expect(wrapper.find('.a-rating > button > span').exists()).toBe(true)
   })
+
+  it('should return chosen value', () => {
+    const wrapper = mount(ARating, {
+      propsData: {
+        items: 1,
+        buttonClass: 'button-class'
+      }
+    })
+
+    const item = wrapper.find('.a-rating__button')
+    item.trigger('click')
+    expect(wrapper.find('.a-rating__button').classes()).toContain('selected')
+
+    expect(wrapper.props().buttonClass).toBe('button-class')
+    expect(wrapper.find('.a-rating > button').classes()).toContain('button-class')
+    expect(item.is('.a-rating > button')).toBe(true)
+  })
 })

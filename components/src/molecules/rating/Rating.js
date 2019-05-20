@@ -56,19 +56,13 @@ export default {
     buttonClass: {
       type: String,
       default: null
-    },
-    /**
-     * Is active icon props
-     */
-    isActive: {
-      type: Boolean,
-      default: false
     }
   },
   data () {
     return {
       localItems: Array.from(Array(this.items), (x, index) => index + 1)
-        .map(el => ({ val: el, isActive: false, selected: false }))
+        .map(el => ({ val: el, isActive: false, selected: false })),
+      selected: null
     }
   },
   computed: {
@@ -108,6 +102,7 @@ export default {
        * Change event
        * @type {Event}
        */
+      this.selected = item.val
       this.$emit('select', item)
     },
     buttonAriaLabel (item) {
