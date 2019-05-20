@@ -66,4 +66,3 @@ storiesOf('Molecules/Tabs', module)
       </a-tabs>
     `
   }))
-z
