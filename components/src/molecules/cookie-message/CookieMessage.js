@@ -13,7 +13,7 @@ export default {
      */
     dataType: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Icon for close button
