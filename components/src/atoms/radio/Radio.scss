@@ -1,10 +1,6 @@
 @import '../../../assets/styles/globals';
 
-$radio__margin            : 0 0 $spacer--medium 0 !default;
-
-$radio__legend-padding    : 0 0 $spacer--medium 0 !default;
-
-$radio__item-margin       : 0 0 $spacer 0 !default;
+$radio__margin            : 0 0 $spacer 0 !default;
 
 $radio__label-line-height : 16px !default;
 $radio__label-font-size   : $font-size-small !default;
@@ -19,24 +15,9 @@ $radio__icon-transition   : $transition-base !default;
 
 $radio__dot-size          : 6px !default;
 
-.radio {
+.a-radio {
   position: relative;
   margin: $radio__margin;
-
-  &__fieldset {
-    margin: $reset;
-    padding: $reset;
-    border: none;
-  }
-
-  &__legend {
-    padding: $radio__legend-padding;
-  }
-
-  &__item {
-    position: relative;
-    margin: $radio__item-margin;
-  }
 
   &__field {
     position: absolute;
@@ -44,8 +25,8 @@ $radio__dot-size          : 6px !default;
     z-index: -1;
     opacity: 0;
 
-    &:checked + .radio__label {
-      .radio__icon {
+    &:checked + .a-radio__label {
+      .a-radio__icon {
         &::before {
           transform: scale(1);
           opacity: 1;
