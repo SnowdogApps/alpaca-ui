@@ -3,9 +3,9 @@
     v-for="item in localItems"
     :key="`item_${item.val}`"
     :class="[
-    'a-rating__button a-button--blank',
-    (selected === item.val) && 'selected',
-     buttonClass
+      'a-rating__button a-button--blank',
+      (selected === item.val) && 'selected',
+       buttonClass
      ]"
     :aria-label="buttonAriaLabel(item.val)"
     @mouseover.native="setActive(item, true)"
