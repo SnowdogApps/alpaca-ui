@@ -107,5 +107,5 @@ $cookie-message__close-icon-transition : $transition-base !default;
 }
 
 .a-cookie-message__text > a {
-  @extend .cookie-message__link;
+  @extend .a-cookie-message__link;
 }
