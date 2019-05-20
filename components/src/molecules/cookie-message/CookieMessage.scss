@@ -19,7 +19,7 @@ $cookie-message__close-icon-margin-left: $spacer !default;
 $cookie-message__close-icon-transition : $transition-base !default;
 
 
-.cookie-message {
+.a-cookie-message {
   display: none;
   align-items: stretch;
   box-sizing: border-box;
@@ -106,6 +106,6 @@ $cookie-message__close-icon-transition : $transition-base !default;
   }
 }
 
-.cookie-message__text > a {
+.a-cookie-message__text > a {
   @extend .cookie-message__link;
 }

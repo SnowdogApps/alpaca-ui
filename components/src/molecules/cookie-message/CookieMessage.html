@@ -1,23 +1,23 @@
 <div
-  :class="['cookie-message', isOpen && 'cookie-message--open']"
+  :class="['a-cookie-message', isOpen && 'a-cookie-message--open']"
   :data-type="dataType"
   :aria-label="ariaLabel"
   tabindex="0"
 >
-  <div class="cookie-message__container">
+  <div class="a-cookie-message__container">
     <span
-      class="cookie-message__text"
+      class="a-cookie-message__text"
       v-html="text"
     />
     <a-button
       :aria-label="closeAriaLabel"
-      class="cookie-message__close"
+      class="a-cookie-message__close"
       @click.native="closeBar()"
     >
       {{ closeButton }}
       <a-icon
         :icon="closeIcon"
-        class="cookie-message__close-icon"
+        class="a-cookie-message__close-icon"
       />
      </a-button>
   </div>
