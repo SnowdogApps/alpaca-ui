@@ -4,7 +4,7 @@ import ALink from '../../atoms/link/Link.vue'
 import ACookieMessage from './CookieMessage.vue'
 
 storiesOf('Molecules/CookieMessage', module)
-  // @vue/component
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { ACookieMessage, ALink },
     template: `

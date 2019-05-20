@@ -6,8 +6,10 @@
 >
   <div class="a-cookie-message__container">
     <div class="a-cookie-message__text">
+      <!-- @slot Content slot -->
       <slot />
     </div>
+    <!-- @slot Close button (Scoped slot) -->
     <slot
       name="button"
       :close-bar="closeBar"

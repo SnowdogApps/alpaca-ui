@@ -8,22 +8,37 @@ export default {
     AButton
   },
   props: {
+    /**
+     * Data typeQuantity value (used with v-model)
+     */
     dataType: {
       type: String,
       required: true
     },
+    /**
+     * Icon for close button
+     */
     closeIcon: {
       type: String,
       default: null
     },
+    /**
+     * Text for close button
+     */
     closeButton: {
       type: String,
       default: null
     },
+    /**
+     * Aria label for container
+     */
     ariaLabel: {
       type: String,
       default: 'Cookie policy message'
     },
+    /**
+     * Aria label for close button
+     */
     closeAriaLabel: {
       type: String,
       default: 'Close cookie message'
