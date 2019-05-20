@@ -37,7 +37,7 @@ export default {
   },
   computed: {
     ariaControls () {
-      return this.title.replace(/ /g, '_')
+      return this.title && this.title.replace(/ /g, '_')
     }
   },
   methods: {
