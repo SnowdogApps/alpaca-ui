@@ -8,10 +8,6 @@ export default {
     AButton
   },
   props: {
-    text: {
-      type: String,
-      required: true
-    },
     dataType: {
       type: String,
       required: true

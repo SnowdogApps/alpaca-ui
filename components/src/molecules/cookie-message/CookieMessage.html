@@ -5,20 +5,24 @@
   tabindex="0"
 >
   <div class="a-cookie-message__container">
-    <span
-      class="a-cookie-message__text"
-      v-html="text"
-    />
-    <a-button
-      :aria-label="closeAriaLabel"
-      class="a-cookie-message__close"
-      @click.native="closeBar()"
+    <div class="a-cookie-message__text">
+      <slot />
+    </div>
+    <slot
+      name="button"
+      :close-bar="closeBar"
     >
-      {{ closeButton }}
-      <a-icon
-        :icon="closeIcon"
-        class="a-cookie-message__close-icon"
-      />
-     </a-button>
+      <a-button
+        :aria-label="closeAriaLabel"
+        class="a-cookie-message__close"
+        @click.native="closeBar()"
+      >
+        {{ closeButton }}
+        <a-icon
+          :icon="closeIcon"
+          class="a-cookie-message__close-icon"
+        />
+      </a-button>
+    </slot>
   </div>
 </div>
