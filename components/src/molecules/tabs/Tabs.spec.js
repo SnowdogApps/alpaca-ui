@@ -12,25 +12,18 @@ describe('Tabs', () => {
   })
 
   it('renders slot text when passed', () => {
-
-    const TestComponent = {
-      template: `
-        <a-tab name="test1">
-          <span>hehe</span>
-        </a-tab>
-      `,
-      components: {
-        ATab
-      }
-    }
-
     const wrapper = mount(ATabs, {
       slots: {
-        default: TestComponent
+        default: {
+          render (h) {
+            return h(ATab, { props: { name: 'Sample' } })
+          }
+        }
       }
     })
 
-    console.log(wrapper)
-    console.log(wrapper.find('a-tabs a-tabs__nav-button').exists())
+    expect(wrapper.find('.a-tabs div').exists()).toBe(true)
+    const tab = wrapper.find(ATab)
+    expect(tab.vm.name).toBe('Sample')
   })
 })
