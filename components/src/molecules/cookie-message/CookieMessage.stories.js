@@ -9,7 +9,6 @@ storiesOf('Molecules/CookieMessage', module)
     components: { ACookieMessage, ALink },
     template: `
       <a-cookie-message
-        closeIcon="close"
         dataType="cookie"
         closeButton="Close"
         aria-label="Cookie policy message"
@@ -26,7 +25,6 @@ storiesOf('Molecules/CookieMessage', module)
     components: { ACookieMessage, ALink },
     template: `
       <a-cookie-message
-        closeIcon="close"
         dataType="cookie"
         closeButton="Close"
         aria-label="Cookie policy message"

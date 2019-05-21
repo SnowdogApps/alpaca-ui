@@ -16,13 +16,6 @@ export default {
       default: null
     },
     /**
-     * Icon for close button
-     */
-    closeIcon: {
-      type: String,
-      default: null
-    },
-    /**
      * Text for close button
      */
     closeButton: {
