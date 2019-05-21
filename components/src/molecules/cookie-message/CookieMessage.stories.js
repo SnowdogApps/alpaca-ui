@@ -8,10 +8,15 @@ storiesOf('Molecules/CookieMessage', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ACookieMessage, ALink },
+    props: {
+      textKnobs: {
+        default: text('Text', 'Close')
+      }
+    },
     template: `
       <a-cookie-message
         dataType="cookie"
-        closeButton="Close"
+        :closeButton="textKnobs"
         aria-label="Cookie policy message"
         close-aria-label="Close cookie message"
       >
@@ -32,7 +37,6 @@ storiesOf('Molecules/CookieMessage', module)
     template: `
       <a-cookie-message
         dataType="cookie"
-        closeButton="Close"
         aria-label="Cookie policy message"
         close-aria-label="Close cookie message"
       >
