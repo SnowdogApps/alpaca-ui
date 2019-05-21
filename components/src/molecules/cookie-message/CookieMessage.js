@@ -34,14 +34,14 @@ export default {
      */
     ariaLabel: {
       type: String,
-      default: 'Cookie policy message'
+      default: null
     },
     /**
      * Aria label for close button
      */
     closeAriaLabel: {
       type: String,
-      default: 'Close cookie message'
+      default: null
     }
   },
   data: () => {
@@ -56,9 +56,10 @@ export default {
   },
   methods: {
     closeBar () {
-      const focusable = document.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]')
-
       this.isOpen = false
+
+      const focusable = this.$root.$el.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]')
+
       localStorage.setItem(this.dataType, 'closed')
       // after closing message box move focus on first focusable element on the page
       if (focusable.length) {

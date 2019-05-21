@@ -12,6 +12,8 @@ storiesOf('Molecules/CookieMessage', module)
         closeIcon="close"
         dataType="cookie"
         closeButton="Close"
+        aria-label="Cookie policy message"
+        close-aria-label="Close cookie message"
       >
         <a-link href='#'>
           Example link
@@ -27,6 +29,8 @@ storiesOf('Molecules/CookieMessage', module)
         closeIcon="close"
         dataType="cookie"
         closeButton="Close"
+        aria-label="Cookie policy message"
+        close-aria-label="Close cookie message"
       >
         <a-link href='#'>
           Example link
