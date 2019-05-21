@@ -9,13 +9,6 @@ export default {
   },
   props: {
     /**
-     * Data typeQuantity value (used with v-model)
-     */
-    dataType: {
-      type: String,
-      default: null
-    },
-    /**
      * Text for close button
      */
     closeButton: {
@@ -39,7 +32,8 @@ export default {
   },
   data: () => {
     return {
-      isOpen: false
+      isOpen: false,
+      dataType: 'cookie'
     }
   },
   mounted () {
