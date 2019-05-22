@@ -1,0 +1,97 @@
+<a-list-item class="a-product-grid-item">
+  <!--@slot Custom product badge (Named slots)-->
+  <slot name="badge">
+    <a-badge
+      v-if="badgeText"
+      class="a-product-grid-item__badge"
+    >
+      {{ badgeText }}
+    </a-badge>
+  </slot>
+
+  <!--@slot Custom product image (Named slots)-->
+  <slot name="image">
+    <router-link
+      :to="url"
+      class="a-product-grid-item__link"
+    >
+      <a-image
+        :src="imageUrl"
+        :alt="name"
+        class="a-product-grid-item__image"
+      />
+    </router-link>
+  </slot>
+
+  <section class="a-product-grid-item__details">
+    <!--@slot Custom product name (Named slots)-->
+    <slot name="name">
+      <h2 class="a-product-grid-item__name">
+        <router-link
+          :to="url"
+          class="a-product-grid-item__link a-product-grid-item__link--name"
+        >
+          {{ name }}
+        </router-link>
+      </h2>
+    </slot>
+
+    <!--@slot Custom product price (Named slots)-->
+    <slot name="price">
+      <div class="a-product-grid-item__price">
+        <a-price
+          :special-price="specialPrice"
+          :old-price="oldPrice"
+        >
+          {{ price }}
+        </a-price>
+      </div>
+    </slot>
+
+    <!--TODO Add rating component-->
+    <div class="a-product-grid-item__options">
+      <!--@slot Custom product options (Named slots)-->
+      <slot name="options">
+        <!-- <a-swatch
+          v-if="textSwatch"
+          :options="textSwatch"
+        />
+        <a-swatch
+          v-if="iconSwatch"
+          :options="iconSwatch"
+          image
+        /> -->
+      </slot>
+    </div>
+
+    <div class="a-product-grid-item__actions">
+      <!--@slot Custom product actions (Named slots)-->
+      <slot name="actions">
+        <form class="a-product-grid-item__primary-form">
+          <a-button
+            class="button--secondary a-product-grid-item__primary-action"
+            @click.native.stop.prevent="addToCart"
+          >
+            Add to cart
+          </a-button>
+        </form>
+
+        <div class="a-product-grid-item__secondary-action">
+          <a-button
+            aria-label="Add to Wish List"
+            @click.native="addToWishList"
+          >
+            <a-icon icon="heart"/>
+          </a-button>
+
+          <a-button
+            aria-label="Add to Wish compare"
+            @click.native="addToCompare"
+          >
+            <a-icon icon="compare"/>
+          </a-button>
+        </div>
+      </slot>
+    </div>
+  </section>
+</a-list-item>

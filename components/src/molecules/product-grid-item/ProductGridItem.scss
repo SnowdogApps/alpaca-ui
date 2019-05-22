@@ -1,0 +1,189 @@
+@import '../../../assets/styles/_globals.scss';
+
+$catalog-grid-item__base-spacing              : $spacer !default;
+$catalog-grid-item__border                    : 1px solid $gray-lightest !default;
+$catalog-grid-item__font-size                 : $font-size-base !default;
+$catalog-grid-item__font-size\@large          : 16px !default;
+$catalog-grid-item__line-height               : 1.5 !default;
+$catalog-grid-item__font-weight               : $font-weight-bold !default;
+
+$catalog-grid-item__badge-top-position        : $spacer--medium !default;
+$catalog-grid-item__badge-left-position       : 0 !default;
+$catalog-grid-item__badge-z-index             : 1 !default;
+$catalog-grid-item__badge-padding             : 5px 12px !default;
+$catalog-grid-item__badge-font-size           : $font-size-small !default;
+$catalog-grid-item__badge-border-radius       : 0 !default;
+
+$catalog-grid-item__link-overflow             : hidden !default;
+$catalog-grid-item__link-overflow--visible    : visible !default;
+$catalog-grid-item__link-white-space          : nowrap !default;
+$catalog-grid-item__link-white-space--visible : normal !default;
+$catalog-grid-item__link-text-overflow        : ellipsis !default;
+
+$catalog-grid-item__content-bg-color          : $white !default;
+$catalog-grid-item__content-padding           : $spacer !default;
+$catalog-grid-item__content-width             : 100% !default;
+$catalog-grid-item__content-height            : 66px !default;
+$catalog-grid-item__content-translateY        : translateY(-$catalog-grid-item__content-height) !default;
+$catalog-grid-item__content-translateY--active: translateY(-100%) !default;
+
+$catalog-grid-item__name-color                : $font-color-base !default;
+$catalog-grid-item__name-font-weight          : $font-weight-normal !default;
+$catalog-grid-item__name-margin-bottom       : $spacer !default;
+
+$catalog-grid-item__price-margin-bottom       : $spacer !default;
+
+$catalog-grid-item__action-size               : 48px !default;
+$catalog-grid-item__action-background         : transparent !default;
+$catalog-grid-item__action-border             : none !default;
+$catalog-grid-item__action-cursor             : pointer !default;
+$catalog-grid-item__action-icon-size          : 18px !default;
+$catalog-grid-item__action-icon-transition    : $transition-base !default;
+$catalog-grid-item__action-icon-fill          : $gray-darker !default;
+$catalog-grid-item__action-icon-fill-hover    : $green !default;
+
+.a-product-grid-item {
+  position: relative;
+  display: block;
+  padding: $reset;
+  overflow: hidden;
+  border: $catalog-grid-item__border;
+
+  @include mq($screen-m) {
+    &:hover,
+    &:focus-within {
+      .a-product-grid-item__details {
+        transform: $catalog-grid-item__content-translateY--active;
+      }
+
+      .a-product-grid-item__link--name {
+        overflow: $catalog-grid-item__link-overflow--visible;
+        white-space: $catalog-grid-item__link-white-space--visible;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: $catalog-grid-item__badge-top-position;
+    left: $catalog-grid-item__badge-left-position;
+    z-index: $catalog-grid-item__badge-z-index;
+    padding: $catalog-grid-item__badge-padding;
+    font-size: $catalog-grid-item__badge-font-size;
+    border-radius: $catalog-grid-item__badge-border-radius;
+  }
+
+  &__link {
+    display: block;
+
+    &--name {
+      overflow: $catalog-grid-item__link-overflow;
+      color: $catalog-grid-item__name-color;
+      white-space: $catalog-grid-item__link-white-space;
+      text-overflow: $catalog-grid-item__link-text-overflow;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+
+    @media all and (min-width: 768px) {
+      padding-bottom: $catalog-grid-item__content-height;
+    }
+
+    @media all and (min-width: 768px) and (min-width: 1600px) {
+      padding-bottom: $reset;
+    }
+  }
+
+  &__name {
+    margin-bottom: $catalog-grid-item__name-margin-bottom;
+    font-weight: $catalog-grid-item__name-font-weight;
+    font-size: $catalog-grid-item__font-size;
+    line-height: $catalog-grid-item__line-height;
+
+    @include mq($screen-xxl) {
+      font-size: $catalog-grid-item__font-size\@large;
+    }
+  }
+
+  &__price {
+    margin-bottom: $catalog-grid-item__price-margin-bottom;
+    padding: $reset;
+    font-weight: $catalog-grid-item__font-weight;
+    font-size: $catalog-grid-item__font-size;
+    line-height: $catalog-grid-item__line-height;
+    white-space: nowrap;
+
+    @include mq($screen-xxl) {
+      font-size: $catalog-grid-item__font-size\@large;
+    }
+  }
+
+  &__details {
+    padding: $catalog-grid-item__content-padding;
+    background: $catalog-grid-item__content-bg-color;
+    transition: $transition-base;
+
+    @include mq($screen-m) {
+      position: absolute;
+      width: $catalog-grid-item__content-width;
+      border-top: $catalog-grid-item__border;
+      transform: $catalog-grid-item__content-translateY;
+    }
+
+    @include mq($screen-xxl) {
+      transform: $reset;
+    }
+  }
+
+  &__options {
+    .swatch {
+      margin: $catalog-grid-item__base-spacing 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  &__primary-form {
+    margin: $reset;
+
+    @include mq($screen-m) {
+      flex: 1;
+    }
+  }
+
+  &__secondary-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .a-button {
+      width: $catalog-grid-item__action-size;
+      height: $catalog-grid-item__action-size;
+      padding: $reset;
+      background: $catalog-grid-item__action-background;
+      border: $catalog-grid-item__action-border;
+      cursor: $catalog-grid-item__action-cursor;
+      fill: $catalog-grid-item__action-icon-fill;
+
+      &:hover,
+      &:focus {
+        transition: $catalog-grid-item__action-icon-transition;
+        fill: $catalog-grid-item__action-icon-fill-hover;
+      }
+
+      .a-icon {
+        width: $catalog-grid-item__action-icon-size;
+        height: $catalog-grid-item__action-icon-size;
+      }
+    }
+  }
+}
