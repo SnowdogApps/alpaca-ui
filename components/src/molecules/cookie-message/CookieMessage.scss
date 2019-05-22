@@ -28,6 +28,10 @@ $cookie-message__close-icon-transition : $transition-base !default;
   font-family: $cookie-message__font-family;
   background-color: $cookie-message__background-color;
 
+  &--open {
+    display: flex;
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -74,34 +78,36 @@ $cookie-message__close-icon-transition : $transition-base !default;
     cursor: pointer;
 
     &:active,
-    &:hover {
+    &:hover,
+    &:focus {
       color: $cookie-message__close-color;
       background: none;
+
+      .a-cookie-message__close-icon {
+        transition: $cookie-message__close-icon-transition;
+        fill: $color-primary;
+      }
     }
 
     @include mq($screen-s) {
       padding: $cookie-message__close-padding--small;
     }
-  }
 
-  &__close-icon {
-    width: $cookie-message__close-icon-size;
-    height: $cookie-message__close-icon-size;
-    margin-left: $cookie-message__close-icon-margin-left;
-    fill: $cookie-message__close-color;
+    &-icon {
+      width: $cookie-message__close-icon-size;
+      height: $cookie-message__close-icon-size;
+      margin-left: $cookie-message__close-icon-margin-left;
+      fill: $cookie-message__close-color;
 
-    &:hover,
-    &:focus {
-      transition: $cookie-message__close-icon-transition;
-      fill: $color-primary;
+      &:hover,
+      &:focus {
+        transition: $cookie-message__close-icon-transition;
+        fill: $color-primary;
+      }
     }
   }
 
-  &--open {
-    display: flex;
+  &__text > a {
+    color: $cookie-message__link-color;
   }
-}
-
-.a-cookie-message__text > a {
-  color: $cookie-message__link-color;
 }
