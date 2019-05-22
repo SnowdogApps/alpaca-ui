@@ -41,18 +41,14 @@ export default {
         evt.preventDefault()
         evt.stopPropagation()
         this.$refs.content.focus()
-      }
-
-      if ((key === KeyCodes.LEFT || key === KeyCodes.UP || key === KeyCodes.HOME) && this.activeFocusedTab > 0) {
+      } else if ((key === KeyCodes.LEFT || key === KeyCodes.UP || key === KeyCodes.HOME) && this.activeFocusedTab > 0) {
         if (key === KeyCodes.HOME) {
           this.focus('button_0')
         } else {
           this.activeFocusedTab = this.activeFocusedTab - 1
           this.focus('button_' + this.activeFocusedTab)
         }
-      }
-
-      if ((key === KeyCodes.RIGHT || key === KeyCodes.DOWN || key === KeyCodes.END) && this.activeFocusedTab < this.tabs.length - 1) {
+      } else if ((key === KeyCodes.RIGHT || key === KeyCodes.DOWN || key === KeyCodes.END) && this.activeFocusedTab < this.tabs.length - 1) {
         if (key === KeyCodes.END) {
           this.focus('button_' + (this.tabs.length - 1))
         } else {
