@@ -22,7 +22,7 @@
   </slot>
   <transition name="fade">
     <div
-      v-if="!collapseLocal"
+      v-show="!collapseLocal"
       :id="ariaControls"
       :class="['a-collapse__content', contentClass]"
       :aria-hidden="collapseLocal"
