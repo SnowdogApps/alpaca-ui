@@ -148,6 +148,7 @@ $collapse__content-padding            : $spacer !default;
 
   &__content {
     padding: $collapse__content-padding;
+    animation-duration: 400ms;
 
     &[aria-hidden="true"] {
       display: none;
