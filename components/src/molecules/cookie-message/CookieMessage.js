@@ -9,6 +9,13 @@ export default {
   },
   props: {
     /**
+     * Storage name
+     */
+    storageName: {
+      type: String,
+      default: 'cookie'
+    },
+    /**
      * Text for close button
      */
     closeButton: {
@@ -32,12 +39,11 @@ export default {
   },
   data: () => {
     return {
-      isOpen: false,
-      dataType: 'cookie'
+      isOpen: false
     }
   },
   mounted () {
-    if (localStorage.getItem(this.dataType) !== 'closed') {
+    if (localStorage.getItem(this.storageName) !== 'closed') {
       this.isOpen = true
     }
   },
@@ -47,7 +53,7 @@ export default {
 
       const focusable = this.$root.$el.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]')
 
-      localStorage.setItem(this.dataType, 'closed')
+      localStorage.setItem(this.storageName, 'closed')
       // after closing message box move focus on first focusable element on the page
       if (focusable.length) {
         let firstFocusable = [...focusable].find(el => el.offsetParent !== null)

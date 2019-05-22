@@ -10,20 +10,25 @@ storiesOf('Molecules/CookieMessage', module)
     components: { ACookieMessage, ALink },
     props: {
       textKnobs: {
-        default: text('Text', 'Close')
+        default: text('Button text', 'Button text')
+      },
+      linkText: {
+        default: text('Link text', 'Example link')
+      },
+      infoText: {
+        default: text('Info text', 'Find out more about their purpose and settings in your browser. By browsing the site you are agreeing to use cookies according to your browser settings.')
       }
     },
     template: `
       <a-cookie-message
-        dataType="cookie"
-        :closeButton="textKnobs"
+        :close-button="textKnobs"
         aria-label="Cookie policy message"
         close-aria-label="Close cookie message"
       >
         <a-link href='#'>
-          Example link
+          {{ linkText }}
         </a-link> 
-          Find out more about their purpose and settings in your browser. By browsing the site you are agreeing to use cookies according to your browser settings."
+        {{ infoText }}
       </a-cookie-message>
     `
   }))
@@ -31,19 +36,24 @@ storiesOf('Molecules/CookieMessage', module)
     components: { ACookieMessage, ALink },
     props: {
       textKnobs: {
-        default: text('Text', 'Custom button')
+        default: text('Button text', 'Button text')
+      },
+      linkText: {
+        default: text('Link text', 'Link text')
+      },
+      infoText: {
+        default: text('Info text', 'Info text')
       }
     },
     template: `
       <a-cookie-message
-        dataType="cookie"
         aria-label="Cookie policy message"
         close-aria-label="Close cookie message"
       >
         <a-link href='#'>
-          Example link
+          {{ linkText }}
         </a-link> 
-          Find out more about their purpose and settings in your browser. By browsing the site you are agreeing to use cookies according to your browser settings."
+        {{ infoText }}
         <template #button="{ closeBar }">
           <button @click="closeBar">
             {{ textKnobs }}
