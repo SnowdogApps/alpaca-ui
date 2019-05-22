@@ -37,7 +37,7 @@ storiesOf('Atoms/Breadcrumbs', module)
           </a-link>
         </template>
         <template #separator>
-          <span class="breadcrumbs__separator">
+          <span class="a-breadcrumbs__separator">
             -
           </span>
         </template>
