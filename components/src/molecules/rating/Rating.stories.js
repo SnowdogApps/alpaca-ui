@@ -58,12 +58,14 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating :items="3">
         <template #item="data">
-          <button
-            style="background: none;"
+          <svg
             @click="click(data.item)"
+            class="icon"
+            role="img"
           >
-            {{ data.item.val }}
-          </button>
+            <title>heart</title>
+            <use xlink:href="/assets/icons/sprite.svg#heart" />
+          </svg>
         </template>
       </a-rating>
     `

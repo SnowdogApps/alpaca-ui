@@ -1,7 +1,7 @@
+// @vue/component
 import AButton from '../../atoms/button/Button.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
-// @vue/component
 export default {
   components: {
     AButton,
@@ -84,13 +84,21 @@ export default {
       })
     },
     showAverageIcon (item) {
-      return (item.val - 1 < this.average && item.val > this.average) || (item.val === this.average)
+      return (
+        (item.val - 1 < this.average && item.val > this.average) ||
+        item.val === this.average
+      )
     },
     showIcon (item) {
-      if ((item.isActive && !this.uncheckedIcon) || (item.isActive && this.uncheckedIcon) || (!item.isActive && !this.uncheckedIcon) || (item.selected)) {
+      if (
+        (item.isActive && !this.uncheckedIcon) ||
+        (item.isActive && this.uncheckedIcon) ||
+        (!item.isActive && !this.uncheckedIcon) ||
+        item.selected
+      ) {
         return this.activeIcon
       }
-      if ((!item.isActive && this.uncheckedIcon)) {
+      if (!item.isActive && this.uncheckedIcon) {
         return this.uncheckedIcon
       }
     },
@@ -101,7 +109,7 @@ export default {
       this.selected = item.val
       /**
        * Change event
-       * @type {Event}
+       * @type { Event }
        */
       this.$emit('select', item)
     },
