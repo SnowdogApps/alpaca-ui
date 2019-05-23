@@ -98,11 +98,11 @@ export default {
       this.localItems.map(el => {
         el.selected = item.val >= el.val
       })
+      this.selected = item.val
       /**
        * Change event
        * @type {Event}
        */
-      this.selected = item.val
       this.$emit('select', item)
     },
     buttonAriaLabel (item) {
