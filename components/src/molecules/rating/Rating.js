@@ -56,6 +56,13 @@ export default {
     buttonClass: {
       type: String,
       default: null
+    },
+    /**
+     * Aria label for button element
+     */
+    ariaLabel: {
+      type: String,
+      default: null
     }
   },
   data () {
@@ -114,7 +121,9 @@ export default {
       this.$emit('select', item)
     },
     buttonAriaLabel (item) {
-      return `Rate option, ${item} of ${this.items}. Click to vote`
+      return this.ariaLabel
+        ? this.ariaLabel
+        : `Rate option, ${item} of ${this.items}. Click to vote`
     }
   }
 }
