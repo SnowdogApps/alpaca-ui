@@ -58,6 +58,7 @@ storiesOf('Molecules/Collapse', module)
             <button 
               :aria-expanded="!collapseLocal"
               :aria-controls="ariaControls"
+              style="width: 100px; height: 50px; z-index: 1; position: relative;"
               @click="toggle"
             >
               Text
