@@ -1,5 +1,9 @@
-<fieldset class="a-fieldset">
+<fieldset
+  class="a-fieldset"
+  :aria-labelledby="`legend-${id}`"
+>
   <legend
+    :id="`legend-${id}`"
     :class="[
       legendClass,
       'a-fieldset__legend'
