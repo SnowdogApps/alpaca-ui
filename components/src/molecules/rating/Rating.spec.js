@@ -13,11 +13,12 @@ describe('Rating', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(ARating, {
       slots: {
-        item: `<span data-test="item">x</span>`
+        item: `<span data-test="item">Sample text</span>`
       }
     })
 
     expect(wrapper.find('.a-rating > button > span').exists()).toBe(true)
+    expect(wrapper.find('.a-rating > button > span').text()).toEqual('Sample text')
   })
 
   it('should return chosen value', () => {
