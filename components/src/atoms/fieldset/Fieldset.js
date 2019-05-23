@@ -15,5 +15,10 @@ export default {
       type: String,
       default: null
     }
+  },
+  computed: {
+    id () {
+      return this.legendText.toLowerCase().replace(/ /g, '-')
+    }
   }
 }
