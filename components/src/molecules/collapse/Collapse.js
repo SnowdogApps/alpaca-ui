@@ -1,27 +1,30 @@
 import AIcon from '../../atoms/icon/Icon.vue'
+import AButton from '../../atoms/button/Button.vue'
 
 // @vue/component
 export default {
   components: {
-    AIcon
+    AIcon,
+    AButton
   },
   props: {
+    /**
+     * Title
+     */
     title: {
       type: String,
-      required: true
+      default: null
     },
-    id: {
-      type: String,
-      required: true
-    },
+    /**
+     * Item collapse
+     */
     collapse: {
       type: Boolean,
       default: true
     },
-    labelClass: {
-      type: String,
-      default: null
-    },
+    /**
+     * Custom class for content
+     */
     contentClass: {
       type: String,
       default: null
@@ -32,9 +35,9 @@ export default {
       collapseLocal: this.collapse
     }
   },
-  watch: {
-    collapse (val) {
-      this.collapseLocal = val
+  computed: {
+    ariaControls () {
+      return this.title && this.title.replace(/ /g, '_')
     }
   },
   methods: {
