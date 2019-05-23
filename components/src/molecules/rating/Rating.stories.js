@@ -56,9 +56,7 @@ storiesOf('Molecules/Rating', module)
       click: action('Clicked')
     },
     template: `
-      <a-rating
-        :items="3"
-      >
+      <a-rating :items="3">
         <template #item="data">
           <button
             style="background: none;"
