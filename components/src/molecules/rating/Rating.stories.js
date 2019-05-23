@@ -34,19 +34,37 @@ storiesOf('Molecules/Rating', module)
         :active-icon="activeIcon"
         :unchecked-icon="uncheckedIcon"
         :active-color="activeColor"
-        :uncheckedColor="uncheckedColor"
+        :unchecked-color="uncheckedColor"
         @select="select"
       />
     `
   }))
   .add('Read only', () => ({
     components: { ARating },
+    props: {
+      uncheckedColor: {
+        default: color('Unchecked color', '#c9c9c9')
+      },
+      activeColor: {
+        default: color('Active icon', '#d42343')
+      },
+      uncheckedIcon: {
+        default: text('Unchecked icon', 'star-border')
+      },
+      average: {
+        default: number('Average', 3.4)
+      },
+      numberOfRatingKnob: {
+        default: number('Number of rating', 6)
+      }
+    },
     template: `
       <a-rating
-        :items="6"
-        active-color="green"
-        unchecked-icon="star-border"
-        :average="3.6"
+        :items="numberOfRatingKnob"
+        :unchecked-color="uncheckedColor"
+        :active-color="activeColor"
+        :unchecked-icon="uncheckedIcon"
+        :average="average"
       />
     `
   }))
