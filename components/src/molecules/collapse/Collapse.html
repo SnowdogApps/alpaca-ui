@@ -22,7 +22,7 @@
   </slot>
   <transition name="slide-down">
     <div
-      v-if="!collapseLocal"
+      v-show="!collapseLocal"
       :id="ariaControls"
       :class="['a-collapse__content', contentClass]"
     >
