@@ -12,6 +12,7 @@ describe('Tab', () => {
     expect(wrapper.is('div')).toBe(true)
     expect(wrapper.attributes().role).toBeDefined()
     expect(wrapper.attributes().role).toEqual('tabpanel')
+    expect(wrapper.attributes('data-tab')).toBeDefined()
   })
 
   it('renders slot text when passed', () => {
