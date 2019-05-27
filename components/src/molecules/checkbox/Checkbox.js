@@ -19,7 +19,7 @@ export default {
      * Input value
      */
     value: {
-      type: String,
+      type: [String, Boolean],
       default: null
     },
     /**

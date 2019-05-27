@@ -1,85 +1,118 @@
 <footer class="footer">
   <div class="footer__handler container">
-    <a-button
-      class="footer__scroll-top"
-      aria-label="Scroll to top"
-      @click.native="scrollToTop()"
+    <!-- @slot Scroll to top button (Scoped slot) -->
+    <slot
+      name="scrollButton"
+      :scroll-to-top="scrollToTop"
     >
-      <a-icon
-        icon="arrow-up"
-        class="footer__icon"
-      />
-    </a-button>
+      <a-button
+        class="footer__scroll-top"
+        aria-label="Scroll to top"
+        @click.native="scrollToTop"
+      >
+        <a-icon
+          icon="arrow-up"
+          class="footer__icon"
+        />
+      </a-button>
+    </slot>
     <section class="footer__newsletter col-xs-12 col-lg-3">
-      <a-newsletter
-        :heading="heading"
-        :input="input"
-        button="Submit"
-        :checkboxes="checkboxes"
-        @submit="submitNewsletter"
-      />
+      <!-- @slot Newsletter (Scoped slot) -->
+      <slot
+        name="newsletter"
+        :submit="submitNewsletter"
+      >
+        <a-newsletter
+          :heading="heading"
+          :input="input"
+          button="Submit"
+          :checkboxes="checkboxes"
+          @submit="submitNewsletter"
+        />
+      </slot>
     </section>
     <section :class="['footer__links col-xs-12 col-lg-9', isLargeScreen && 'footer__links--screen-m']">
         <a-collapse
           class="footer__links-list"
           button-class="footer__links-button"
           content-class="footer__links-content"
-          v-for="element in menu"
-          :key="element.id"
+          v-for="item in menu"
+          :key="item.id"
           :collapse="!isLargeScreen"
-          :title="element.title"
-          :id="element.id"
+          :title="item.title"
+          :id="item.id"
           :disabled="isLargeScreen"
         >
-          <a-list>
-            <a-list-item
-              v-for="link in element.items"
-              :key="link.id"
-            >
-              <a-link
-                class="footer__link"
-                :href="link.link"
+          <!-- @slot Links list (Scoped slot) -->
+          <slot
+            name="list"
+            :item="item"
+          >
+            <a-list>
+              <a-list-item
+                v-for="link in item.items"
+                :key="link.id"
               >
-                {{ link.title }}
-              </a-link>
-            </a-list-item>
-          </a-list>
+                <a-link
+                  class="footer__link"
+                  :href="link.link"
+                >
+                  {{ link.title }}
+                </a-link>
+              </a-list-item>
+            </a-list>
+          </slot>
         </a-collapse>
     </section>
   </div>
   <section class="footer__bottom-bar">
     <div class="footer__bottom-bar-handler container">
       <div class="footer__social-handler">
-        <span class="footer__social-list-subtitle">
+        <!-- @slot Social media title (Named slot) -->
+        <slot name="socialTitle">
+          <span class="footer__social-list-subtitle">
             {{ socialListSubtitle }}
-        </span>
+          </span>
+        </slot>
         <a-list class="a-list--horizontal footer__social-list">
           <a-list-item
-            v-for="element in socialMenu"
-            :key="element.id"
-            :aria-label="element.ariaLabel"
+            v-for="item in socialMenu"
+            :key="item.id"
+            :aria-label="item.ariaLabel"
           >
-            <a-link
-              class="list__icon-link"
-              :href="element.link"
+            <!-- @slot Social media list (Scoped slot) -->
+            <slot
+              name="social"
+              :item="item"
             >
-              <a-icon
-                :icon="element.iconId"
-                class="footer__social-icon"
-              />
-            </a-link>
+              <a-link
+                class="list__icon-link"
+                :href="item.link"
+              >
+                <a-icon
+                  :icon="item.iconId"
+                  class="footer__social-icon"
+                />
+              </a-link>
+            </slot>
           </a-list-item>
         </a-list>
       </div>
-      <small class="footer__copyright">
-        {{ copyrightText }}
-      </small>
+      <!-- @slot Copyright text (Named slot) -->
+      <slot name="copyright">
+        <small class="footer__copyright">
+          {{ copyrightText }}
+        </small>
+      </slot>
     </div>
   </section>
-  <a-cookie-message
-    :text="cookieText"
-    closeIcon="close"
-    dataType="cookie"
-    closeButton="Close"
-  />
+  <!-- @slot Cookie message (Named slot) -->
+  <slot name="cookie">
+    <a-cookie-message
+      :text="cookieText"
+      closeIcon="close"
+      dataType="cookie"
+      closeButton="Close"
+    />
+  </slot>
 </footer>
