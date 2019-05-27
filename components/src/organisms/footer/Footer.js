@@ -1,3 +1,5 @@
+// @vue/component
+
 import AIcon from '../../atoms/icon/Icon.vue'
 import ALink from '../../atoms/link/Link.vue'
 import AButton from '../../atoms/button/Button.vue'
@@ -7,7 +9,6 @@ import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
 import ACollapse from '../../molecules/collapse/Collapse.vue'
 import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
 
-// @vue/component
 export default {
   components: {
     AButton,
@@ -20,34 +21,58 @@ export default {
     ANewsletter
   },
   props: {
+    /**
+     * Copyright text
+     */
     copyrightText: {
       type: String,
       required: true
     },
+    /**
+     * Title for social media list
+     */
     socialListSubtitle: {
       type: String,
       required: true
     },
+    /**
+     * Array with social media
+     */
     socialMenu: {
       type: Array,
       required: true
     },
+    /**
+     * Array with menu
+     */
     menu: {
       type: Array,
       required: true
     },
+    /**
+     * Cookie text
+     */
     cookieText: {
       type: String,
       required: true
     },
+    /**
+     * Heading
+     */
     heading: {
       type: String,
       required: true
     },
+    /**
+     * Input object
+     */
     input: {
       type: Object,
       required: true
     },
+    /**
+     * Array with checkboxes
+     */
     checkboxes: {
       type: Array,
       required: true
@@ -75,6 +100,10 @@ export default {
     scrollToTop () {
       window.scrollTo(0, 0)
     },
+    /**
+     * Submit newsletter event
+     * @type {Event}
+     */
     submitNewsletter (payload) {
       this.$emit('submitNewsletter', payload)
     }
