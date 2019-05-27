@@ -1,8 +1,6 @@
 import AHeading from '../../atoms/heading/Heading.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import ADivider from '../../../../cookbook/src/atoms/divider/Divider.vue'
-import ADropdownList from '../../02-elements/dropdown-list/DropdownList.vue'
-import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
 import AActiveFilters from '../../03-modules/active-filters/ActiveFilters.vue'
 import ASwatchFilter from '../swatch-filter/SwatchFilter.vue'
 import ACheckboxFilter from '../checkbox-filter/CheckboxFilter.vue'
@@ -14,8 +12,6 @@ export default {
     AHeading,
     AIcon,
     ADivider,
-    ADropdownList,
-    ADropdownListItem,
     AActiveFilters,
     AColorFilter,
     ASwatchFilter,
