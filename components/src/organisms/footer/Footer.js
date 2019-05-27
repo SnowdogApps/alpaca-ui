@@ -4,7 +4,7 @@ import AButton from '../../atoms/button/Button.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
-import ADropdownList from '../../molecules/collapse/Collapse.vue'
+import ACollapse from '../../molecules/collapse/Collapse.vue'
 import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
 
 // @vue/component
@@ -16,7 +16,7 @@ export default {
     AList,
     AListItem,
     ACookieMessage,
-    ADropdownList,
+    ACollapse,
     ANewsletter
   },
   props: {
@@ -52,6 +52,24 @@ export default {
       type: Array,
       required: true
     }
+  },
+  data () {
+    return {
+      windowWidth: window.innerWidth,
+      isLargeScreen: window.innerWidth > 768
+    }
+  },
+  watch: {
+    windowWidth (newWidth) {
+      this.isLargeScreen = newWidth > 768
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {
+        this.windowWidth = window.innerWidth
+      })
+    })
   },
   methods: {
     scrollToTop () {

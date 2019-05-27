@@ -7,10 +7,11 @@
     :ariaControls="ariaControls"
   >
     <a-button
-      class="a-collapse__button a-button--blank"
+      :class="['a-collapse__button a-button--blank', buttonClass]"
       :aria-controls="!collapseLocal && ariaControls"
       @click.native="toggle"
       :aria-expanded="!collapseLocal"
+      :disabled="disabled"
     >
       {{ title }}
       <a-icon

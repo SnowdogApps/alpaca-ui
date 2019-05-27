@@ -7,7 +7,7 @@ import listElements from './mocks/listElements.json'
 import dropdownListElements from './mocks/dropdownListElements.json'
 import newsletter from './mocks/newsletter.json'
 
-storiesOf('Modules/Footer', module)
+storiesOf('Organisms/Footer', module)
   // @vue/component
   .add('Default', () => ({
     components: { AFooter },

@@ -1,4 +1,5 @@
-@import '../../../assets/styles/_globals.scss';
+@import '../../../assets/styles/globals.scss';
+@import '../../../../cookbook/src/atoms/grid/Grid.scss';
 
 $footer__padding                     : $spacer--medium !default;
 $footer__background-color            : $gray-darkest !default;
@@ -49,6 +50,10 @@ $footer__icon-fill-hover             : $color-primary !default;
       background: none;
     }
 
+    a {
+      color: $color-primary;
+    }
+
     @include mq($screen-l) {
       order: 1;
       padding-top: $footer__padding;
@@ -56,29 +61,51 @@ $footer__icon-fill-hover             : $color-primary !default;
   }
 
   &__links {
-    .dropdown-list {
+    &-button {
+      color: $white;
+      font-weight: bold;
+      background-color: $footer__background-color\@large;
+    }
+
+    &-content {
+      color: white;
+      background-color: $footer__background-color\@large;
+    }
+
+    &--screen-m {
       @include mq($screen-m) {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin: 0;
         padding: 0;
+        list-style-type: none;
+
+        .footer__links-list {
+          width: 25%;
+          background-color: $footer__background-color\@large;
+          border-bottom: 0;
+          cursor: default;
+        }
+
+        .footer__links-button {
+          color: $white;
+          font-weight: bold;
+          cursor: default;
+
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            background-color: $footer__background-color\@large;
+          }
+
+          .icon {
+            display: none;
+          }
+        }
       }
     }
-
-    .dropdown-list__item {
-      @include mq($screen-m) {
-        border-bottom: 0;
-      }
-    }
-
-    .list__item {
-      padding-left: $footer__link-inner-padding;
-
-      @include mq($screen-m) {
-        padding-left: 0;
-      }
-    }
-  }
-
-  &__links-list {
-    padding-bottom: $footer__padding;
   }
 
   &__link {

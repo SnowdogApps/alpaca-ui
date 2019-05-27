@@ -23,11 +23,25 @@ export default {
       default: true
     },
     /**
+     * Custom class for button
+     */
+    buttonClass: {
+      type: String,
+      default: null
+    },
+    /**
      * Custom class for content
      */
     contentClass: {
       type: String,
       default: null
+    },
+    /**
+     * Attribute for disable button
+     */
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -38,6 +52,11 @@ export default {
   computed: {
     ariaControls () {
       return this.title && this.title.replace(/ /g, '_')
+    }
+  },
+  watch: {
+    collapse (newVal) {
+      this.collapseLocal = newVal
     }
   },
   methods: {
