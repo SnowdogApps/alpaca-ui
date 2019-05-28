@@ -40,7 +40,6 @@ storiesOf('Organisms/Footer', module)
     data: () => ({
       listElements,
       menu,
-      newsletter,
       status: true
     }),
     methods: {
