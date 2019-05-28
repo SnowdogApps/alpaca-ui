@@ -92,18 +92,18 @@ $cookie-message__close-icon-transition : $transition-base !default;
     @include mq($screen-s) {
       padding: $cookie-message__close-padding--small;
     }
+  }
 
-    &-icon {
-      width: $cookie-message__close-icon-size;
-      height: $cookie-message__close-icon-size;
-      margin-left: $cookie-message__close-icon-margin-left;
-      fill: $cookie-message__close-color;
+  &__close-icon {
+    width: $cookie-message__close-icon-size;
+    height: $cookie-message__close-icon-size;
+    margin-left: $cookie-message__close-icon-margin-left;
+    fill: $cookie-message__close-color;
 
-      &:hover,
-      &:focus {
-        transition: $cookie-message__close-icon-transition;
-        fill: $color-primary;
-      }
+    &:hover,
+    &:focus {
+      transition: $cookie-message__close-icon-transition;
+      fill: $color-primary;
     }
   }
 
