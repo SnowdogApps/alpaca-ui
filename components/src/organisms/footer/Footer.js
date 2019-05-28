@@ -7,7 +7,7 @@ import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import ACookieMessage from '../../02-elements/cookie-message/CookieMessage.vue'
 import ACollapse from '../../molecules/collapse/Collapse.vue'
-import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
+// import ANewsletter from '../../03-modules/newsletter/Newsletter.vue' // for tests should be commented, until the newsletter component has been refactored
 
 export default {
   components: {
@@ -17,8 +17,8 @@ export default {
     AList,
     AListItem,
     ACookieMessage,
-    ACollapse,
-    ANewsletter
+    ACollapse
+    // ANewsletter
   },
   props: {
     /**
