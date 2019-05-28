@@ -84,7 +84,6 @@ $cookie-message__close-icon-transition : $transition-base !default;
       background: none;
 
       .a-cookie-message__close-icon {
-        transition: $cookie-message__close-icon-transition;
         fill: $color-primary;
       }
     }
@@ -98,11 +97,11 @@ $cookie-message__close-icon-transition : $transition-base !default;
     width: $cookie-message__close-icon-size;
     height: $cookie-message__close-icon-size;
     margin-left: $cookie-message__close-icon-margin-left;
+    transition: $cookie-message__close-icon-transition;
     fill: $cookie-message__close-color;
 
     &:hover,
     &:focus {
-      transition: $cookie-message__close-icon-transition;
       fill: $color-primary;
     }
   }
