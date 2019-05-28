@@ -1,10 +1,8 @@
-import ADropdownListItem from '../../02-elements/dropdown-list-item/DropdownListItem.vue'
 import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
 
 // @vue/component
 export default {
   components: {
-    ADropdownListItem,
     ACheckbox
   },
   props: {
