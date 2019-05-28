@@ -26,56 +26,56 @@ export default {
      */
     copyrightText: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Title for social media list
      */
     socialListSubtitle: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Array with social media
      */
     socialMenu: {
       type: Array,
-      required: true
+      default: null
     },
     /**
      * Array with menu
      */
     menu: {
       type: Array,
-      required: true
+      default: null
     },
     /**
      * Cookie text
      */
     cookieText: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Heading
      */
     heading: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Input object
      */
     input: {
       type: Object,
-      required: true
+      default: null
     },
     /**
      * Array with checkboxes
      */
     checkboxes: {
       type: Array,
-      required: true
+      default: null
     }
   },
   data () {
@@ -100,11 +100,11 @@ export default {
     scrollToTop () {
       window.scrollTo(0, 0)
     },
-    /**
-     * Submit newsletter event
-     * @type {Event}
-     */
     submitNewsletter (payload) {
+      /**
+       * Submit newsletter event
+       * @type {Event}
+       */
       this.$emit('submitNewsletter', payload)
     }
   }

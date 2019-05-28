@@ -18,10 +18,7 @@
     </slot>
     <section class="footer__newsletter col-xs-12 col-lg-3">
       <!-- @slot Newsletter (Scoped slot) -->
-      <slot
-        name="newsletter"
-        :submit="submitNewsletter"
-      >
+      <slot name="newsletter">
         <a-newsletter
           :heading="heading"
           :input="input"
@@ -46,7 +43,7 @@
           <!-- @slot Links list (Scoped slot) -->
           <slot
             name="list"
-            :item="item"
+            :item="item.items"
           >
             <a-list>
               <a-list-item
@@ -106,6 +103,7 @@
       </slot>
     </div>
   </section>
+  <!--TODO Edit after merge cookie-message component-->
   <!-- @slot Cookie message (Named slot) -->
   <slot name="cookie">
     <a-cookie-message
