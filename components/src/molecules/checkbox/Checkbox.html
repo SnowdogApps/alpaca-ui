@@ -1,9 +1,9 @@
-<div class="checkbox">
+<div class="a-checkbox">
   <input
     :id="id"
     :name="name"
     type="checkbox"
-    :class="['checkbox__field', inputClass]"
+    :class="['a-checkbox__field', inputClass]"
     :value="value"
     :checked="checked"
     @change="$emit('input', $event.target.checked)"
@@ -12,11 +12,11 @@
   <slot name="label">
     <a-icon
       icon="checked"
-      class="checkbox__icon"
+      class="a-checkbox__icon"
     />
     <label
       :for="id"
-      class="checkbox__label"
+      class="a-checkbox__label"
     >
       <!-- @slot Custom label content (Default slot) -->
       <slot />
