@@ -52,7 +52,16 @@ storiesOf('Organisms/Footer', module)
           <button 
             type="button"
             @click="scrollToTop"
-            style="position: absolute; width: 50px; height: 50px; z-index: 2; right: 0; top: 0;"
+            style="
+              position: absolute; 
+              right: 0; 
+              top: 0; 
+              width: 50px; 
+              height: 50px; 
+              z-index: 2; 
+              background-color: #31e37d; 
+              border: none;
+            "
           >
             Top
           </button>
