@@ -11,26 +11,30 @@ export default {
     /**
      * Storage name
      */
-    storageName: {
+    dataType: {
       type: String,
       default: 'marketing-bar'
+    },
+    isBarVisible: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     return {
-      isBarVisible: true
+      isBarVisibleLocal: this.isBarVisible
     }
   },
   mounted () {
     // Display message if it wasn't closed before
-    if (localStorage.getItem(this.storageName) !== 'closed') {
-      this.isBarVisible = true
+    if (localStorage.getItem(this.dataType) !== 'closed') {
+      this.isBarVisibleLocal = true
     }
   },
   methods: {
     onButtonClose () {
-      localStorage.setItem(this.storageName, 'closed')
-      this.isBarVisible = false
+      localStorage.setItem(this.dataType, 'closed')
+      this.isBarVisibleLocal = false
     }
   }
 }
