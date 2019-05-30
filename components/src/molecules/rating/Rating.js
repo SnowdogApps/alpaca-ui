@@ -67,10 +67,13 @@ export default {
   },
   data () {
     return {
-      localItems: Array.from(Array(this.items), (x, index) => index + 1)
-        .map(el => ({ val: el, isActive: false, selected: false })),
-      selected: null
+      selected: null,
+      localItems: []
     }
+  },
+  mounted () {
+    this.localItems = Array.from(Array(this.items), (x, index) => index + 1)
+      .map(el => ({ val: el, isActive: false, selected: false }))
   },
   computed: {
     showAverage () {
