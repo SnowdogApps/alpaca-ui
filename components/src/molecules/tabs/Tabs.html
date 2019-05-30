@@ -4,9 +4,9 @@
 >
   <button
     v-for="(tab, i) in tabs"
-    :key="tab.id"
-    :id="tab.id"
-    :aria-controls="tab.id + '-tab'"
+    :key="`${tab.id}-tab-trigger`"
+    :id="`${tab.id}-tab-trigger`"
+    :aria-controls="`${tab.id}-tab`"
     :aria-selected="tab.isActive || 'false'"
     :ref="'button_' + i"
     :class="[
