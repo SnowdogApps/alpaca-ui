@@ -20,31 +20,7 @@
       />
     </section>
     <section class="footer__links col-xs-12 col-lg-9">
-        <a-dropdown-list
-          dark
-          screenM
-        >
-          <a-dropdown-list-item
-            v-for="element in menu"
-            :key="element.id"
-            :title="element.title"
-            :id="element.id"
-          >
-            <a-list>
-              <a-list-item
-                v-for="link in element.items"
-                :key="link.id"
-              >
-                <a-link
-                  class="footer__link"
-                  :href="link.link"
-                >
-                  {{ link.title }}
-                 </a-link>
-               </a-list-item>
-             </a-list>
-           </a-dropdown-list-item>
-         </a-dropdown-list>
+      <!--TODO Add list with links-->
     </section>
   </div>
   <section class="footer__bottom-bar">
@@ -53,7 +29,7 @@
         <span class="footer__social-list-subtitle">
             {{ socialListSubtitle }}
         </span>
-        <a-list class="list--with-icon list--horizontal footer__social-list">
+        <a-list class="a-list--horizontal footer__social-list">
           <a-list-item
             v-for="element in socialMenu"
             :key="element.id"
