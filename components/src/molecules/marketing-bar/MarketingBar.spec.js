@@ -33,6 +33,5 @@ describe('Cookie message', () => {
     expect(closeBtn.exists()).toBe(true)
     closeBtn.trigger('click')
     expect(closeBtn.exists()).toBe(false)
-
   })
 })
