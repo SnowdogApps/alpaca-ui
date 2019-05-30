@@ -1,9 +1,7 @@
-import AButton from '../../atoms/button/Button.vue'
 import KeyCodes from '../../utils/key-codes'
 
 // @vue/component
 export default {
-  components: { AButton },
   data () {
     return {
       tabs: null,
