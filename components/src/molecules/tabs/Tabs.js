@@ -32,12 +32,12 @@ export default {
     focus (el) {
       this.$refs[el][0].focus()
     },
-    handleEvt (evt) {
-      const key = evt.keyCode
+    onKeydown (e) {
+      const key = e.keyCode
 
       if (key === KeyCodes.TAB) {
-        evt.preventDefault()
-        evt.stopPropagation()
+        e.preventDefault()
+        e.stopPropagation()
         this.$refs.content.focus()
       } else if (
         (key === KeyCodes.LEFT ||
