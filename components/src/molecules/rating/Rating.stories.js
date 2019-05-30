@@ -80,6 +80,7 @@ storiesOf('Molecules/Rating', module)
             @click="click(data.item)"
             class="icon"
             role="img"
+            :style="(data.item.isActive || data.item.selected) && {fill: 'red'} "
           >
             <title>heart</title>
             <use xlink:href="/assets/icons/sprite.svg#heart" />
