@@ -19,7 +19,7 @@ $footer__icon-size                   : 13px !default;
 $footer__icon-fill                   : $color-secondary !default;
 $footer__icon-fill-hover             : $color-primary !default;
 
-.footer {
+.a-footer {
   flex-shrink: 0;
   background-color: $footer__background-color;
 
@@ -81,14 +81,14 @@ $footer__icon-fill-hover             : $color-primary !default;
         padding: 0;
         list-style-type: none;
 
-        .footer__links-list {
+        .a-footer__links-list {
           width: 25%;
           background-color: $footer__background-color\@large;
           border-bottom: 0;
           cursor: default;
         }
 
-        .footer__links-button {
+        .a-footer__links-button {
           color: $white;
           font-weight: bold;
           cursor: default;

@@ -1,22 +1,22 @@
-<footer class="footer">
-  <div class="footer__handler container">
+<footer class="a-footer">
+  <div class="a-footer__handler container">
     <!-- @slot Scroll to top button (Scoped slot) -->
     <slot
       name="scrollButton"
       :scroll-to-top="scrollToTop"
     >
       <a-button
-        class="footer__scroll-top"
+        class="a-footer__scroll-top"
         aria-label="Scroll to top"
         @click.native="scrollToTop"
       >
         <a-icon
           icon="arrow-up"
-          class="footer__icon"
+          class="a-footer__icon"
         />
       </a-button>
     </slot>
-    <section class="footer__newsletter col-xs-12 col-lg-3">
+    <section class="a-footer__newsletter col-xs-12 col-lg-3">
       <!--@slot Newsletter (Scoped slot)-->
       <slot name="newsletter">
         <a-newsletter
@@ -28,11 +28,11 @@
         />
       </slot>
     </section>
-    <section :class="['footer__links col-xs-12 col-lg-9', isLargeScreen && 'footer__links--screen-m']">
+    <section :class="['a-footer__links col-xs-12 col-lg-9', isLargeScreen && 'a-footer__links--screen-m']">
         <a-collapse
-          class="footer__links-list"
-          button-class="footer__links-button"
-          content-class="footer__links-content"
+          class="a-footer__links-list"
+          button-class="a-footer__links-button"
+          content-class="a-footer__links-content"
           v-for="item in menu"
           :key="item.id"
           :collapse="!isLargeScreen"
@@ -51,7 +51,7 @@
                 :key="link.id"
               >
                 <a-link
-                  class="footer__link"
+                  class="a-footer__link"
                   :href="link.link"
                 >
                   {{ link.title }}
@@ -62,16 +62,16 @@
         </a-collapse>
     </section>
   </div>
-  <section class="footer__bottom-bar">
-    <div class="footer__bottom-bar-handler container">
-      <div class="footer__social-handler">
+  <section class="a-footer__bottom-bar">
+    <div class="a-footer__bottom-bar-handler container">
+      <div class="a-footer__social-handler">
         <!-- @slot Social media title (Named slot) -->
         <slot name="socialTitle">
-          <span class="footer__social-list-subtitle">
+          <span class="a-footer__social-list-subtitle">
             {{ socialListSubtitle }}
           </span>
         </slot>
-        <a-list class="a-list--horizontal footer__social-list">
+        <a-list class="a-list--horizontal a-footer__social-list">
           <a-list-item
             v-for="item in socialMenu"
             :key="item.id"
@@ -88,7 +88,7 @@
               >
                 <a-icon
                   :icon="item.iconId"
-                  class="footer__social-icon"
+                  class="a-footer__social-icon"
                 />
               </a-link>
             </slot>
@@ -97,7 +97,7 @@
       </div>
       <!-- @slot Copyright text (Named slot) -->
       <slot name="copyright">
-        <small class="footer__copyright">
+        <small class="a-footer__copyright">
           {{ copyrightText }}
         </small>
       </slot>
