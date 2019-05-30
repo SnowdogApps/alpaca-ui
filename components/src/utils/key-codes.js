@@ -2,7 +2,7 @@
  * Key Codes (events)
  */
 
-const KEY_CODES = {
+export default {
   ENTER: 13,
   LEFT: 37,
   UP: 38,
@@ -12,5 +12,3 @@ const KEY_CODES = {
   END: 35,
   TAB: 9
 }
-
-export default KEY_CODES
