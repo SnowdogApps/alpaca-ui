@@ -1,5 +1,5 @@
 <template src="./MarketingBar.html" />
 
-<script src="MarketingBar.js" />
+<script src="./MarketingBar.js" />
 
-<style lang="scss" src="MarketingBar.scss" />
+<style lang="scss" src="./MarketingBar.scss" />
