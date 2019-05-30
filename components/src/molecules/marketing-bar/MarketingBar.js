@@ -1,14 +1,17 @@
+// @vue/component
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 
-// @vue/component
 export default {
   components: {
     AIcon,
     AButton
   },
   props: {
-    dataType: {
+    /**
+     * Storage name
+     */
+    storageName: {
       type: String,
       default: 'marketing-bar'
     }
@@ -20,13 +23,13 @@ export default {
   },
   mounted () {
     // Display message if it wasn't closed before
-    if (localStorage.getItem(this.dataType) !== 'closed') {
+    if (localStorage.getItem(this.storageName) !== 'closed') {
       this.isBarVisible = true
     }
   },
   methods: {
     onButtonClose () {
-      localStorage.setItem(this.dataType, 'closed')
+      localStorage.setItem(this.storageName, 'closed')
       this.isBarVisible = false
     }
   }

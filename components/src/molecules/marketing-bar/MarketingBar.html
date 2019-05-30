@@ -5,16 +5,23 @@
 >
   <div class="container marketing-bar__container">
     <div class="marketing-bar__text">
+      <!-- @slot Default slot -->
       <slot />
     </div>
-    <a-button
-      class="marketing-bar__close"
-      @click.native="onButtonClose"
+    <!-- @slot Button (Scoped slot) -->
+    <slot
+      name="button"
+      :on-button-close="onButtonClose"
     >
-      <a-icon
-        icon="close"
-        class="marketing-bar__close-icon"
-      />
-    </a-button>
+      <a-button
+        class="marketing-bar__close"
+        @click.native="onButtonClose"
+      >
+        <a-icon
+          icon="close"
+          class="marketing-bar__close-icon"
+        />
+      </a-button>
+    </slot>
   </div>
 </div>
