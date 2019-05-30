@@ -74,7 +74,8 @@ storiesOf('Organisms/Footer', module)
             value="some value"
             @input="onChange"
           >
-            <span style="color: white">I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.</span>
+            <span style="color: white">I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a>.</span>
+             <div style="color: white">I am happy to receive your newsletter with all your promotions</div>
           </a-checkbox>
           <button type="button" @click="submit">Submit</button>
         </template>

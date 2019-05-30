@@ -17,16 +17,16 @@
       </a-button>
     </slot>
     <section class="footer__newsletter col-xs-12 col-lg-3">
-      <!-- @slot Newsletter (Scoped slot) -->
-      <!--<slot name="newsletter">-->
-        <!--<a-newsletter-->
-          <!--:heading="heading"-->
-          <!--:input="input"-->
-          <!--button="Submit"-->
-          <!--:checkboxes="checkboxes"-->
-          <!--@submit="submitNewsletter"-->
-        <!--/>-->
-      <!--</slot>-->
+      <!--@slot Newsletter (Scoped slot)-->
+      <slot name="newsletter">
+        <a-newsletter
+          :heading="heading"
+          :input="input"
+          button="Submit"
+          :checkboxes="checkboxes"
+          @submit="submitNewsletter"
+        />
+      </slot>
     </section>
     <section :class="['footer__links col-xs-12 col-lg-9', isLargeScreen && 'footer__links--screen-m']">
         <a-collapse
