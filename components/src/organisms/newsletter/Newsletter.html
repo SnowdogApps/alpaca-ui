@@ -1,5 +1,5 @@
 <form class="a-newsletter">
-  <div class="'a-newsletter__heading'">
+  <div class="a-newsletter__heading">
     <!-- @slot Heading (Named slot) -->
     <slot name="heading">
       {{ heading }}
@@ -23,7 +23,7 @@
         </template>
         <a-input
           :id="input.field.id"
-          class="newsletter__field"
+          class="a-newsletter__field"
           type="text"
           v-model="value"
           :placeholder="input.field.placeholder"
