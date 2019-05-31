@@ -45,7 +45,7 @@ storiesOf('Molecules/Checkbox', module)
       <a-checkbox
         id="checkbox-slots"
         name="checkbox-slots"
-        input-class="checkbox__field"
+        input-class="a-checkbox__field"
         v-model="status"
         value="some value"
         @input="onChange"
@@ -53,11 +53,11 @@ storiesOf('Molecules/Checkbox', module)
         <template #label>
           <a-icon
             icon="checked"
-            class="checkbox__icon"
+            class="a-checkbox__icon"
           />
           <label
             for="checkbox-slots"
-            class="checkbox__label"
+            class="a-checkbox__label"
             style="color: #0000ff;"
           >
             I hereby agree for processing my personal data.
