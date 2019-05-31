@@ -7,6 +7,7 @@ $cookie-message__font-family           : $font-family-base !default;
 $cookie-message__text-color            : $gray-dark !default;
 $cookie-message__text-padding          : $spacer--medium $spacer--medium 0 $spacer--medium !default;
 $cookie-message__text-padding--small   : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
+$cookie-message__text-line-height      : 1.5 !default;
 $cookie-message__link-color            : $blue !default;
 $cookie-message__close-color           : $cookie-message__text-color !default;
 $cookie-message__close-size            : 48px !default;
@@ -52,6 +53,7 @@ $cookie-message__close-icon-transition : $transition-base !default;
     color: $cookie-message__text-color;
     font-size: inherit;
     font-family: inherit;
+    line-height: $cookie-message__text-line-height;
     text-align: justify;
 
     @include mq($screen-s) {
