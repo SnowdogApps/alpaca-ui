@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import AMarketingBar from './MarketingBar.vue'
 
-describe('Cookie message', () => {
+describe('Marketing bar', () => {
   it('has default structure', () => {
     const wrapper = mount(AMarketingBar, {
       propsData: {
