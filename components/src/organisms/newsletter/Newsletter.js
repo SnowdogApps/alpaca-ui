@@ -19,34 +19,27 @@ export default {
      */
     heading: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Input object
      */
     input: {
       type: Object,
-      required: true
+      default: null
     },
     /**
      * Button text
      */
     button: {
       type: String,
-      required: true
+      default: null
     },
     /**
      * Array with checkboxes
      */
     checkboxes: {
       type: Array,
-      default: null
-    },
-    /**
-     * Custom heading class
-     */
-    headingClass: {
-      type: String,
       default: null
     }
   },
