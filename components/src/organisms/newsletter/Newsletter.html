@@ -1,10 +1,11 @@
-  <div :class="['newsletter__heading', headingClass]">
+<form class="a-newsletter">
+  <div :class="['a-newsletter__heading', headingClass]">
     {{ heading }}
   </div>
-  <div class="newsletter__controls">
+  <div class="a-newsletter__controls">
     <a-input-wrapper
       :input-id="input.field.id"
-      class="newsletter__input"
+      class="a-newsletter__input"
     >
       <template #label>
         <a-label
@@ -24,7 +25,7 @@
       />
     </a-input-wrapper>
     <a-button
-      class="newsletter__button"
+      class="a-newsletter__button"
       @click.native.stop.prevent="onSubmit"
     >
       {{ button }}
@@ -32,7 +33,7 @@
   </div>
   <div
     v-if="checkboxes"
-    class="newsletter__agreements"
+    class="a-newsletter__agreements"
   >
     <a-checkbox
       v-for="checkbox in checkboxes"

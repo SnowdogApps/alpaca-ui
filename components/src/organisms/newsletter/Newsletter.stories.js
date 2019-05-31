@@ -5,7 +5,7 @@ import ANewsletter from './Newsletter.vue'
 
 import newsletter from './mocks/newsletter.json'
 
-storiesOf('Modules/Newsletter', module)
+storiesOf('Organisms/Newsletter', module)
   // @vue/component
   .add('Default', () => ({
     components: { ANewsletter },

@@ -14,22 +14,37 @@ export default {
     AButton
   },
   props: {
+    /**
+     * Custom heading text
+     */
     heading: {
       type: String,
       required: true
     },
+    /**
+     * Input object
+     */
     input: {
       type: Object,
       required: true
     },
+    /**
+     * Button text
+     */
     button: {
       type: String,
       required: true
     },
+    /**
+     * Array with checkboxes
+     */
     checkboxes: {
       type: Array,
       default: null
     },
+    /**
+     * Custom heading class
+     */
     headingClass: {
       type: String,
       default: null
@@ -43,6 +58,10 @@ export default {
   },
   methods: {
     onSubmit () {
+      /**
+       * Triggered when form is submit
+       * @type {Event}
+       */
       this.$emit('submit', { email: this.value, checkboxes: this.selected })
     }
   }
