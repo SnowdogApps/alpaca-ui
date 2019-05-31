@@ -26,7 +26,6 @@ storiesOf('Organisms/Newsletter', module)
   }))
   .add('With slots', () => ({
     components: { ANewsletter, AHeading },
-
     template: `
       <a-newsletter>
         <template #heading>
