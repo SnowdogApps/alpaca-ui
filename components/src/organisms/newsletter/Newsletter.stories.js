@@ -16,7 +16,7 @@ storiesOf('Organisms/Newsletter', module)
     },
     template: `
       <a-newsletter
-        :heading="newsletter.heading"
+        heading="Sing up to our twisted newsletter"
         :input="newsletter.input"
         button="Submit"
         :checkboxes="newsletter.checkboxes"
@@ -34,7 +34,7 @@ storiesOf('Organisms/Newsletter', module)
             :level="2"
             style="color: white;"
           >
-            Sample heading
+            Sing up to our twisted newsletter
           </a-heading>
         </template>
         <template #input>
