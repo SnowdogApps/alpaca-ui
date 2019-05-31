@@ -49,9 +49,9 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
   overflow: hidden;
   border: $catalog-grid-item__border;
 
-  @include mq($screen-m) {
-    &:hover,
-    &:focus-within {
+  &:hover,
+  &:focus-within {
+    @include mq($screen-m) {
       .a-product-grid-item__details {
         transform: $catalog-grid-item__content-translateY--active;
       }
