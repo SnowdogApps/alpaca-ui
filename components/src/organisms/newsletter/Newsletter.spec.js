@@ -3,10 +3,7 @@ import ANewsletter from './Newsletter.vue'
 
 describe('Newsletter', () => {
   it('has default structure', () => {
-    const wrapper = mount(ANewsletter, {
-      propsData: {
-      }
-    })
+    const wrapper = mount(ANewsletter)
     expect(wrapper.is('form')).toBe(true)
     expect(wrapper.classes()).toContain('a-newsletter')
   })
