@@ -9,10 +9,9 @@
             "label": "Subcategory subcategory",
             "nodes": [
               {
-                "label": "Subcategory subcategory Link",
-                "href": "/sub-link/subcategory"
-              }
-            ]
+              "label": "Subcategory subcategory Link",
+              "href": "/sub-link/subcategory"
+            }]
           },
           {
             "label": "Subcategory Link",
@@ -34,8 +33,8 @@
     "label": "Men's",
     "nodes": [
       {
-        "label": "Men's Link",
-        "href": "/men-link"
+      "label": "Men's Link",
+      "href": "/men-link"
       }
     ]
   },
