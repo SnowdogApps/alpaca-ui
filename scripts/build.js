@@ -46,7 +46,7 @@ files.forEach(file => {
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          /\"\S+\/(\S+)\"/gm,
+          /"\S+\/(\S+)"/gm,
           '"@snowdog/alpaca-components/dist/$1"'
         )
     )
@@ -57,7 +57,7 @@ files.forEach(file => {
       `${dist}/${name}`,
       fs.readFileSync(`${dist}/${name}`, 'utf8')
         .replace(
-          /(import\s\w+\sfrom)\s(?:\'|\")\S+\/(\S+)(?:\'|\")/gm,
+          /(import\s\w+\sfrom)\s(?:'|")\S+\/(\S+)(?:'|")/gm,
           `$1 '@snowdog/alpaca-components/dist/$2'`
         )
     )
