@@ -1,8 +1,6 @@
-import AIcon from '../../atoms/icon/Icon.vue'
-
 // @vue/component
+
 export default {
-  components: { AIcon },
   model: {
     prop: 'checked',
     event: 'input'
