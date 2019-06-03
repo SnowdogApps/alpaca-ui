@@ -1,7 +1,7 @@
 <template src="./QuantityUpdate.html" />
 
 <script>
-import QuantityUpdate from './QuantityUpdate.js'
+import AQuantityUpdate from './QuantityUpdate.js'
 
 import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
@@ -15,7 +15,7 @@ export default {
     AButton,
     ALabel
   },
-  mixins: [QuantityUpdate]
+  mixins: [AQuantityUpdate]
 }
 </script>
 
