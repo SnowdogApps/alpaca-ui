@@ -1,7 +1,7 @@
 jobs:
   build:
     docker:
-      - image: circleci/node:carbon-browsers
+      - image: circleci/node:dubnium
     steps:
       - checkout
       - run: yarn
