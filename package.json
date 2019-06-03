@@ -3,6 +3,7 @@
   "version": "0.4.0-alpha",
   "license": "MIT",
   "scripts": {
+    "postinstall": "node scripts/build.js",
     "dev": "start-storybook -p 6006 -s ./public",
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",
