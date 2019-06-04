@@ -21,12 +21,4 @@ describe('Cookie message', () => {
     expect(span.text()).toEqual('Sample content')
     expect(wrapper.find('button').text()).toBe('Sample button')
   })
-
-  it('close cookie message info', () => {
-    const wrapper = mount(ACookieMessage)
-    const closeBtn = wrapper.find('.a-cookie-message__close')
-    expect(wrapper.classes().length).toBe(2)
-    closeBtn.trigger('click')
-    expect(wrapper.classes().length).toBe(1)
-  })
 })
