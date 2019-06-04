@@ -18,7 +18,7 @@ storiesOf('Organisms/Newsletter', module)
       <a-newsletter
         heading="Sing up to our twisted newsletter"
         :input="newsletter.input"
-        button="Submit"
+        button-text="Submit"
         :checkboxes="newsletter.checkboxes"
         @submit="exampleMethod"
       />

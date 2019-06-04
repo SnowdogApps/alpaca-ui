@@ -31,7 +31,7 @@ export default {
     /**
      * Button text
      */
-    button: {
+    buttonText: {
       type: String,
       default: null
     },
