@@ -1,21 +1,14 @@
-<div
-  v-if="isBarVisibleLocal"
-  class="a-marketing-bar"
-  :data-type="dataType"
->
-  <div class="container a-marketing-bar__container">
+<div class="a-marketing-bar">
+  <div class="a-marketing-bar__container">
     <div class="a-marketing-bar__text">
       <!-- @slot Default slot -->
       <slot />
     </div>
-    <!-- @slot Button (Scoped slot) -->
-    <slot
-      name="button"
-      :on-button-close="onButtonClose"
-    >
+    <!-- @slot Button (Named slot) -->
+    <slot name="button">
       <a-button
         class="a-marketing-bar__close"
-        @click.native="onButtonClose"
+        @click.native="closeBar"
       >
         <a-icon
           icon="close"

@@ -1,30 +1,46 @@
 import { storiesOf } from '@storybook/vue'
 
-import MarketingBar from './MarketingBar.vue'
+import AMarketingBar from './MarketingBar.vue'
+
+const data = {
+  data: () => ({
+    isOpen: true
+  }),
+  methods: {
+    close () {
+      this.isOpen = false
+    }
+  }
+}
 
 storiesOf('Molecules/MarketingBar', module)
   .addParameters({ info: true })
   .add('Default', () => ({
-    components: { MarketingBar },
+    components: { AMarketingBar },
+    ...data,
     template: `
-      <MarketingBar>
+      <a-marketing-bar
+        v-if="isOpen"
+        @close="close"
+      >
         Subscribe and get 10$ for Shopping!
-      </MarketingBar>
+      </a-marketing-bar>
     `
   }))
   .add('With slots', () => ({
-    components: { MarketingBar },
+    components: { AMarketingBar },
+    ...data,
     template: `
-      <MarketingBar>
+      <a-marketing-bar v-if="isOpen">
         Subscribe and get 10$ for Shopping!
-        <template #button="{ onButtonClose }">
+        <template #button>
           <button 
-            @click="onButtonClose"
+            @click="close"
             style="border: none; margin-top: 10px; opacity: 0.8;"
           >
             Close
           </button>
         </template>
-      </MarketingBar>
+      </a-marketing-bar>
     `
   }))
