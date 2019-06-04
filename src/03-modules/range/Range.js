@@ -1,12 +1,5 @@
-import vueSlider from 'vue-slider-component'
-import AButton from '../../atoms/button/Button.vue'
-
 // @vue/component
 export default {
-  components: {
-    vueSlider,
-    AButton
-  },
   model: {
     prop: 'value',
     event: 'input'
@@ -41,8 +34,8 @@ export default {
           },
           dotStyle: {
             'box-shadow': '0 2px 4px 0 rgba(51, 51, 51, 0.5)',
-            'width': '24px',
-            'height': '24px',
+            width: '24px',
+            height: '24px',
             'border-radius': '50%',
             'background-color': '#fff'
           }

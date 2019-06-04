@@ -11,4 +11,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./RadioWrapper.scss"/>
+<style lang="scss" src="./RadioWrapper.scss" />

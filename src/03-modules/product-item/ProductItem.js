@@ -1,22 +1,5 @@
-import AImage from '../../atoms/image/Image.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
-import APrice from '../../atoms/price/Price.vue'
-import AList from '../../atoms/list/List.vue'
-import AListItem from '../../atoms/list-item/ListItem.vue'
-import AButton from '../../atoms/button/Button.vue'
-import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
-
 // @vue/component
 export default {
-  components: {
-    AImage,
-    AIcon,
-    APrice,
-    AList,
-    AListItem,
-    AButton,
-    AQuantityUpdate
-  },
   model: {
     prop: 'quantity',
     event: 'change'

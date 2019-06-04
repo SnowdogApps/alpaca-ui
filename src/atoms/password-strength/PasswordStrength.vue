@@ -1,5 +1,13 @@
 <template src="./PasswordStrength.html" />
 
-<script src="./PasswordStrength.js" />
+<script>
+import APasswordStrength from './PasswordStrength.js'
+
+export default {
+  name: 'AlpacaPasswordStrength',
+
+  mixins: [APasswordStrength]
+}
+</script>
 
 <style lang="scss" src="./PasswordStrength.scss" />

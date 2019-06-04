@@ -1,5 +1,13 @@
 <template src="./Filter.html" />
 
-<script src="./Filter.js" />
+<script>
+import AFilter from './Filter.js'
+
+export default {
+  name: 'AlpacaFilter',
+
+  mixins: [AFilter]
+}
+</script>
 
 <style lang="scss" src="./Filter.scss" />

@@ -1,8 +1,19 @@
 <template src="./Wishlist.html" />
 
-<script src="./Wishlist.js" />
+<script>
+import AList from '../../atoms/list/List.vue'
+import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 
-<style
-  lang="scss"
-  src="./Wishlist.scss"
-/>
+import AWishlist from './Wishlist.js'
+
+export default {
+  name: 'AlpacaWishlist',
+  components: {
+    AList,
+    AProductItem
+  },
+  mixins: [AWishlist]
+}
+</script>
+
+<style lang="scss" src="./Wishlist.scss" />

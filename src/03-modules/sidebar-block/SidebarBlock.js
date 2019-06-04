@@ -1,20 +1,5 @@
-import AHeading from '../../atoms/heading/Heading.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
-import AButton from '../../atoms/button/Button.vue'
-import ADivider from '../../templates/divider/Divider.vue'
-import AList from '../../atoms/list/List.vue'
-import AListItem from '../../atoms/list-item/ListItem.vue'
-
 // @vue/component
 export default {
-  components: {
-    AHeading,
-    AIcon,
-    AButton,
-    ADivider,
-    AList,
-    AListItem
-  },
   props: {
     products: {
       type: Array,

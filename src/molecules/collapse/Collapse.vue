@@ -1,5 +1,19 @@
 <template src="./Collapse.html" />
 
-<script src="./Collapse.js"/>
+<script>
+import AIcon from '../../atoms/icon/Icon.vue'
+import AButton from '../../atoms/button/Button.vue'
 
-<style lang="scss" src="./Collapse.scss"/>
+import ACollapse from './Collapse.js'
+
+export default {
+  name: 'AlpacaCollapse',
+  components: {
+    AIcon,
+    AButton
+  },
+  mixins: [ACollapse]
+}
+</script>
+
+<style lang="scss" src="./Collapse.scss" />

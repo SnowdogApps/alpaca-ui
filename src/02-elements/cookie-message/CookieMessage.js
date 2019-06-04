@@ -1,12 +1,5 @@
-import AIcon from '../../atoms/icon/Icon.vue'
-import AButton from '../../atoms/button/Button.vue'
-
 // @vue/component
 export default {
-  components: {
-    AIcon,
-    AButton
-  },
   props: {
     text: {
       type: String,
@@ -45,7 +38,9 @@ export default {
   },
   methods: {
     closeBar () {
-      const focusable = document.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]')
+      const focusable = document.querySelectorAll(
+        'button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]'
+      )
 
       this.isOpen = false
       localStorage.setItem(this.dataType, 'closed')

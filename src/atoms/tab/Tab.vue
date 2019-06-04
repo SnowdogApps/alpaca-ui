@@ -1,3 +1,11 @@
 <template src="./Tab.html" />
 
-<script src="./Tab.js" />
+<script>
+import ATab from './Tab.js'
+
+export default {
+  name: 'AlpacaTab',
+
+  mixins: [ATab]
+}
+</script>

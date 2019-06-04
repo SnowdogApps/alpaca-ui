@@ -1,5 +1,13 @@
 <template src="./TabContent.html" />
 
-<script src="./TabContent.js" />
+<script>
+import ATabContent from './TabContent.js'
+
+export default {
+  name: 'AlpacaTabContent',
+
+  mixins: [ATabContent]
+}
+</script>
 
 <style lang="scss" src="./TabContent.scss" />

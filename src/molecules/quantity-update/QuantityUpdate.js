@@ -83,14 +83,20 @@ export default {
     },
     updateQty (value) {
       const newValue = this.currentValue + value
-      if (this.minQty <= newValue && (this.maxQty ? (newValue <= this.maxQty) : true)) {
+      if (
+        this.minQty <= newValue &&
+        (this.maxQty ? newValue <= this.maxQty : true)
+      ) {
         this.currentValue = newValue
       }
       this.updateEmit(this.currentValue)
     },
     inputEvent (event) {
       const newValue = parseInt(event.target.value, 10)
-      if (this.minQty <= newValue && (this.maxQty ? (newValue <= this.maxQty) : true)) {
+      if (
+        this.minQty <= newValue &&
+        (this.maxQty ? newValue <= this.maxQty : true)
+      ) {
         this.currentValue = newValue
       } else if (newValue > this.maxQty) {
         this.currentValue = this.maxQty

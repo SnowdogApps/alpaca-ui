@@ -20,7 +20,7 @@ export default {
     selectTab (selectedTab) {
       this.$emit('click', selectedTab.name)
       this.tabs.forEach(tab => {
-        tab.isActive = (tab.name === selectedTab.name)
+        tab.isActive = tab.name === selectedTab.name
       })
     }
   }

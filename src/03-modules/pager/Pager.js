@@ -1,12 +1,5 @@
-import AIcon from '../../atoms/icon/Icon.vue'
-import AButton from '../../atoms/button/Button.vue'
-
 // @vue/component
 export default {
-  components: {
-    AIcon,
-    AButton
-  },
   props: {
     page: {
       type: Number,
@@ -56,17 +49,20 @@ export default {
         return this.listOfPageNumbers
       }
 
-      if (this.page < this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1) {
+      if (
+        this.page <
+        this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1
+      ) {
         this.showFirst = false
         this.showLast = true
 
-        return this.listOfPageNumbers.slice(
-          0,
-          this.limitPerPage
-        )
+        return this.listOfPageNumbers.slice(0, this.limitPerPage)
       }
 
-      if (this.numberOfPages - this.page < this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1) {
+      if (
+        this.numberOfPages - this.page <
+        this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1
+      ) {
         this.showFirst = true
         this.showLast = false
 

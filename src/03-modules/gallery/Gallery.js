@@ -1,14 +1,5 @@
-import ABadge from '../../atoms/badge/Badge.vue'
-import AImage from '../../atoms/image/Image.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
-
 // @vue/component
 export default {
-  components: {
-    ABadge,
-    AImage,
-    AIcon
-  },
   props: {
     images: {
       type: Array,
@@ -29,11 +20,12 @@ export default {
   },
   data () {
     return {
-      currentImage: this.mainImage === 0
-        ? this.mainImage
-        : this.mainImage >= this.images.length
-          ? this.images.length - 1
-          : this.mainImage - 1
+      currentImage:
+        this.mainImage === 0
+          ? this.mainImage
+          : this.mainImage >= this.images.length
+            ? this.images.length - 1
+            : this.mainImage - 1
     }
   },
   computed: {

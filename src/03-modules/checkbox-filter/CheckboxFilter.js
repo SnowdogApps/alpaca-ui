@@ -1,10 +1,5 @@
-import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
-
 // @vue/component
 export default {
-  components: {
-    ACheckbox
-  },
   props: {
     items: {
       type: Array,

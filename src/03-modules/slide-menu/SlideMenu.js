@@ -1,12 +1,5 @@
-import AIcon from '../../atoms/icon/Icon.vue'
-import AButton from '../../atoms/button/Button.vue'
-
 // @vue/component
 export default {
-  components: {
-    AIcon,
-    AButton
-  },
   props: {
     menuItems: {
       type: Array,
@@ -75,9 +68,11 @@ export default {
     getDataByLevelPath (levelPath) {
       let data
 
-      String(levelPath).split('').forEach(level => {
-        data = data && data.nodes ? data.nodes[level] : this.items[level]
-      })
+      String(levelPath)
+        .split('')
+        .forEach(level => {
+          data = data && data.nodes ? data.nodes[level] : this.items[level]
+        })
 
       return data || { nodes: this.items }
     },

@@ -1,12 +1,5 @@
-import AHeading from '../../atoms/heading/Heading.vue'
-import AParagraph from '../../atoms/paragraph/Paragraph.vue'
-
 // @vue/component
 export default {
-  components: {
-    AHeading,
-    AParagraph
-  },
   props: {
     author: {
       type: String,

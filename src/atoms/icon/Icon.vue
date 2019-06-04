@@ -1,5 +1,13 @@
 <template src="./Icon.html" />
 
-<script src="./Icon.js" />
+<script>
+import AIcon from './Icon.js'
+
+export default {
+  name: 'AlpacaIcon',
+
+  mixins: [AIcon]
+}
+</script>
 
 <style lang="scss" src="./Icon.scss" />

@@ -1,3 +1,11 @@
 <template src="./Source.html" />
 
-<script src="./Source.js" />
+<script>
+import ASource from './Source.js'
+
+export default {
+  name: 'AlpacaSource',
+
+  mixins: [ASource]
+}
+</script>

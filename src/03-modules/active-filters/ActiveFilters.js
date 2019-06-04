@@ -1,16 +1,5 @@
-import AIcon from '../../atoms/icon/Icon.vue'
-import AList from '../../atoms/list/List.vue'
-import AButton from '../../atoms/button/Button.vue'
-import AListItem from '../../atoms/list-item/ListItem.vue'
-
 // @vue/component
 export default {
-  components: {
-    AIcon,
-    AList,
-    AButton,
-    AListItem
-  },
   props: {
     items: {
       type: Array,

@@ -1,5 +1,13 @@
 <template src="./Input.html" />
 
-<script src="./Input.js" />
+<script>
+import AInput from './Input.js'
+
+export default {
+  name: 'AlpacaInput',
+
+  mixins: [AInput]
+}
+</script>
 
 <style lang="scss" src="./Input.scss" />

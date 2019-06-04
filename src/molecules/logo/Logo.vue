@@ -1,5 +1,15 @@
 <template src="./Logo.html" />
 
-<script src="./Logo.js" />
+<script>
+import AImage from '../../atoms/image/Image.vue'
+
+import ALogo from './Logo.js'
+
+export default {
+  name: 'AlpacaLogo',
+  components: { AImage },
+  mixins: [ALogo]
+}
+</script>
 
 <style lang="scss" src="./Logo.scss" />

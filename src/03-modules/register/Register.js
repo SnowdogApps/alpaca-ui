@@ -1,16 +1,5 @@
-import AFieldset from '../../atoms/fieldset/Fieldset.vue'
-import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../atoms/input/Input.vue'
-import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
-
 // @vue/component
 export default {
-  components: {
-    AFieldset,
-    AButton,
-    AInput,
-    AInputWrapper
-  },
   props: {
     personalInformationLegend: {
       type: String,

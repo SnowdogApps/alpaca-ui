@@ -1,12 +1,5 @@
-import ALink from '../../atoms/link/Link.vue'
-import AButton from '../../atoms/button/Button.vue'
-
 // @vue/component
 export default {
-  components: {
-    ALink,
-    AButton
-  },
   props: {
     reviewsQty: {
       type: Number,

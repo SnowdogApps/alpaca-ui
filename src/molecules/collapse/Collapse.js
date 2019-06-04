@@ -1,12 +1,5 @@
-import AIcon from '../../atoms/icon/Icon.vue'
-import AButton from '../../atoms/button/Button.vue'
-
 // @vue/component
 export default {
-  components: {
-    AIcon,
-    AButton
-  },
   props: {
     /**
      * Title

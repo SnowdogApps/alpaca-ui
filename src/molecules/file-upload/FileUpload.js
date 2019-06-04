@@ -1,12 +1,5 @@
-import AButton from '../../atoms/button/Button.vue'
-import ALabel from '../../atoms/label/Label.vue'
-
 // @vue/component
 export default {
-  components: {
-    AButton,
-    ALabel
-  },
   props: {
     /**
      * File input id

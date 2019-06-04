@@ -1,8 +1,19 @@
 <template src="./Review.html" />
 
-<script src="./Review.js" />
+<script>
+import AHeading from '../../atoms/heading/Heading.vue'
+import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 
-<style
-  lang="scss"
-  src="./Review.scss"
-/>
+import AReview from './Review.js'
+
+export default {
+  name: 'AlpacaReview',
+  components: {
+    AHeading,
+    AParagraph
+  },
+  mixins: [AReview]
+}
+</script>
+
+<style lang="scss" src="./Review.scss" />

@@ -1,14 +1,5 @@
-import AHeading from '../../atoms/heading/Heading.vue'
-import ADivider from '../../templates/divider/Divider.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
-
 // @vue/component
 export default {
-  components: {
-    AIcon,
-    ADivider,
-    AHeading
-  },
   props: {
     name: {
       type: String,
@@ -98,7 +89,8 @@ export default {
       }
     },
     setFocusTrap (event) {
-      const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
+      const focusable =
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
       const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
 
       let currentFocus = document.activeElement

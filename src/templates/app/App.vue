@@ -1,3 +1,15 @@
 <template src="./App.html" />
-<script src="./App.js" />
+
+<script>
+import 'normalize.css'
+
+import AApp from './App.js'
+
+export default {
+  name: 'AlpacaApp',
+
+  mixins: [AApp]
+}
+</script>
+
 <style lang="scss" src="./App.scss" />

@@ -1,10 +1,5 @@
-import AButton from '../../atoms/button/Button.vue'
-
 // @vue/component
 export default {
-  components: {
-    AButton
-  },
   props: {
     items: {
       type: Array,
