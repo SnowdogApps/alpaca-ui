@@ -1,12 +1,6 @@
 // @vue/component
-import AButton from '../../atoms/button/Button.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
 
 export default {
-  components: {
-    AButton,
-    AIcon
-  },
   props: {
     /**
      * Number of elements
@@ -72,12 +66,14 @@ export default {
     }
   },
   mounted () {
-    this.localItems = Array.from(Array(this.items), (x, index) => index + 1)
-      .map(el => ({ val: el, isActive: false, selected: false }))
+    this.localItems = Array.from(
+      Array(this.items),
+      (x, index) => index + 1
+    ).map(el => ({ val: el, isActive: false, selected: false }))
   },
   computed: {
     showAverage () {
-      const average = this.average % 1 * 100
+      const average = (this.average % 1) * 100
       this.localItems.map(el => {
         el.isActive = el.val < this.average
       })
