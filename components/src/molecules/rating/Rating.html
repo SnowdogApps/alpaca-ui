@@ -1,0 +1,34 @@
+<div class="a-rating">
+  <a-button
+    v-for="item in localItems"
+    :key="`item_${item.val}`"
+    :class="[
+      'a-rating__button a-button--blank',
+      (selected === item.val) && 'selected',
+       buttonClass
+     ]"
+    :aria-label="buttonAriaLabel(item.val)"
+    @mouseover.native="setActive(item, true)"
+    @mouseleave.native="setActive(item, false)"
+    @click.native="select(item)"
+    :disabled="!!average"
+  >
+    <!-- @slot Rating item (Scoped slot) -->
+    <slot
+      name="item"
+      :item="item"
+    >
+      <a-icon
+        :style="{fill: item.isActive || item.selected ? activeColor : uncheckedColor}"
+        :class="['a-rating__icon', item.isActive && 'a-rating__icon--active']"
+        :icon="showIcon(item)"
+      />
+      <a-icon
+        v-if="showAverageIcon(item)"
+        :style="{clipPath: showAverage, fill : !item.isActive && activeColor}"
+        :class="['a-rating__icon', 'a-rating__icon--disabled']"
+        :icon="activeIcon"
+      />
+    </slot>
+  </a-button>
+</div>
