@@ -1,16 +1,28 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
+import generateVueInfoTable from '../../../utils/vue-info-table.js'
 
 import AButton from './Button.vue'
 import AIcon from '../icon/Icon.vue'
 
+const bemModifiersConfig = [
+  {
+    name: '.a-button--secondary',
+    description: 'Selector for applying secondary styles'
+  },
+  {
+    name: '.a-button--blank',
+    description: 'Selector for applying blank styles'
+  },
+  {
+    name: '.a-button--fluid',
+    description: 'Selector for applying fluid styles (width: 100%)'
+  }
+]
+
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-button--secondary\` - Selector for applying secondary styles
-  - \`.a-button--blank\` - Selector for applying blank styles
-  - \`.a-button--fluid\` - Selector for applying fluid styles (width: 100%)
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(bemModifiersConfig, 'BEM modifiers')}
 `
 
 const bemModifiers = [
