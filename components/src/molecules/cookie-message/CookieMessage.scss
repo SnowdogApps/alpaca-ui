@@ -21,17 +21,12 @@ $cookie-message__close-icon-transition : $transition-base !default;
 
 
 .a-cookie-message {
-  display: none;
   align-items: stretch;
   box-sizing: border-box;
   width: $cookie-message__width;
   font-size: $cookie-message__font-size;
   font-family: $cookie-message__font-family;
   background-color: $cookie-message__background-color;
-
-  &--open {
-    display: flex;
-  }
 
   &__container {
     display: flex;
