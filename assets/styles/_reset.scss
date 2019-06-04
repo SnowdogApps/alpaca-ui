@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: $reset;
+}
+
+html,
+body {
+  min-width: 320px;
+  height: 100%;
+  margin: $reset;
+  color: $font-color-base;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  flex: 1 0 auto;
+}
+
+p {
+  margin: $reset;
+  padding: $reset;
+}
+
+dl,
+dt,
+dd {
+  margin: $reset;
+}

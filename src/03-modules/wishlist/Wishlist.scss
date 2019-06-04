@@ -1,0 +1,9 @@
+@import '../../../assets/styles/_globals.scss';
+
+.wishlist {
+  &__item {
+    &:first-child {
+      padding-top: $reset;
+    }
+  }
+}

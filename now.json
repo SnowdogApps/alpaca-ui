@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "alias": ["alpaca-ui.now.sh"],
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
+}

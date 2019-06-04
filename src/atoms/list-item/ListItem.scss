@@ -1,0 +1,7 @@
+@import '../../../assets/styles/globals';
+
+$list-item-padding: $spacer !default;
+
+.a-list-item {
+  padding: $list-item-padding;
+}

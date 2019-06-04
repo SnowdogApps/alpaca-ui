@@ -1,0 +1,10 @@
+jobs:
+  build:
+    docker:
+      - image: circleci/node:dubnium
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn eslint
+      - run: yarn stylelint
+      - run: yarn test

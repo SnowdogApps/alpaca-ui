@@ -1,0 +1,18 @@
+[
+  {
+    "href": "/catalog",
+    "label": "Default"
+  },
+  {
+    "href": "/catalog/3",
+    "label": "Gear"
+  },
+  {
+    "href": "/catalog/5",
+    "label": "Fitness Equipment"
+  },
+  {
+    "href": "/catalog/8",
+    "label": "New Luma Yoga Collection"
+  }
+]

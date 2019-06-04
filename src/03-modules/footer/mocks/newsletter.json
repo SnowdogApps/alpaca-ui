@@ -1,0 +1,19 @@
+{
+  "input": {
+    "field": {
+      "placeholder": "Enter your email address",
+      "id": "newsletterEmail",
+      "name": "newsletterEmail"
+    },
+    "label": {
+      "text": "Email for newsletter subscription"
+    }
+  },
+  "checkbox" :
+  [
+    {
+      "name": "newsletter1",
+      "label": "I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a> and I am happy to receive your newsletter with all your promotions."
+    }
+  ]
+}

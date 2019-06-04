@@ -1,0 +1,17 @@
+<table
+  class="table"
+  tabindex="0"
+  role="table"
+>
+  <!-- @slot Custom caption (Named slot) -->
+  <slot name="caption">
+    <caption
+      v-if="caption"
+      class="table__caption"
+    >
+      {{ caption }}
+    </caption>
+  </slot>
+  <!-- @slot Table content -->
+  <slot />
+</table>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "el1",
+    "iconId": "youtube",
+    "ariaLabel": "Go to A Youtube Channel",
+    "link": "#"
+  },
+  {
+    "id": "el2",
+    "iconId": "facebook",
+    "ariaLabel": "Go to A Facebook Page",
+    "link": "#"
+  },
+  {
+    "id": "el3",
+    "iconId": "instagram",
+    "ariaLabel": "Check A on Instagram",
+    "link": "#"
+  },
+  {
+    "id": "el4",
+    "iconId": "google-plus",
+    "ariaLabel": "Find A on Google Plus",
+    "link": "#"
+  }
+]

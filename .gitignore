@@ -71,3 +71,9 @@ typings/
 
 # Serverless directories
 .serverless
+
+# IDE's
+.idea
+
+# Project
+/index.js

@@ -1,0 +1,56 @@
+<div>
+  <header class="header">
+    <a-container>
+      <div class="header__wrapper">
+        <div class="header__buttons">
+          <a-header-button
+            icon="heart"
+            @click.native="toggleWishlist()"
+          >
+            Wishlist
+           </a-header-button>
+          <a-header-button icon="phone">
+            Contact
+           </a-header-button>
+          <a-header-button
+            icon="account"
+            @click.native="goToAccount()"
+          >
+            Account
+           </a-header-button>
+          <div class="header__minicart">
+            <a-button
+              class="header-button popup-trigger"
+              data-popuptrigger="popup-minicart"
+              @click.native="toggleMicrocart()"
+            >
+              <a-icon
+                icon="shopping-cart"
+                class="header-button__icon"
+              />
+              <span class="header-button__text">
+                Cart
+              </span>
+              <span class="header-button__counter">
+                <span class="header-button__counter-dot" />
+              </span>
+             </a-button>
+          </div>
+        </div>
+        <a-side-menu
+          :menu-items="sideMenu"
+          class="header__mobile-menu"
+        />
+        <a-logo
+          :src="src"
+          :to="link"
+          class="header__logo"
+        />
+        <div class="header__search-wrapper">
+          <a-header-search />
+        </div>
+      </div>
+     </a-container>
+  </header>
+  <a-mega-menu :menu="menu" />
+</div>

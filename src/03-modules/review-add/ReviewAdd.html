@@ -1,0 +1,61 @@
+<div class="review review--add">
+  <a-heading
+    :level="3"
+    class="review__title"
+  >
+    {{ headingText }}
+    <span class="review__title-product">
+      {{ productTitle }}
+    </span>
+   </a-heading>
+  <!--TODO Add rating component-->
+  <a-fieldset
+    :legendText="legendText"
+    legend-class="rating-rate-legend review__rating-legend"
+    class="review__fieldset"
+  >
+    <a-input-wrapper
+      input-id="nickname"
+      label="Nickname *"
+    >
+      <a-input
+        id="nickname"
+        type="text"
+        v-model="nickname"
+        name="nickname"
+        placeholder="Nickname"
+      />
+    </a-input-wrapper>
+    <a-input-wrapper
+      input-id="summary"
+      label="Summary *"
+    >
+      <a-input
+        id="summary"
+        type="text"
+        v-model="summary"
+        name="summary"
+        placeholder="Summary"
+      />
+    </a-input-wrapper>
+    <a-input-wrapper
+      input-id="review"
+      label="Review *"
+    >
+      <a-textarea
+        id="review"
+        v-model="review"
+        name="review"
+        placeholder="Review"
+      />
+    </a-input-wrapper>
+
+    <a-button @click.native="addReview()">
+      Add Your Review
+    </a-button>
+
+    <a-paragraph class="review__required-info">
+      * Required fields
+    </a-paragraph>
+   </a-fieldset>
+</div>

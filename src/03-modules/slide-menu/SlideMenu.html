@@ -1,0 +1,52 @@
+<ul class="slide-menu">
+  <li
+    :class="[
+      'slide-menu__item',
+      'slide-menu__item--prev',
+      { 'slide-menu__item--no-hover' : isRootPosition }
+    ]">
+    <a-button
+      v-if="!isRootPosition"
+      class="slide-menu__button slide-menu__button--prev"
+      @click.native="load(prevLevel)"
+    >
+      <a-icon
+        :icon="prevIcon"
+        class="slide-menu__icon slide-menu__icon--prev"
+      />
+      {{ currentItem.label }}
+    </a-button>
+  </li>
+  <li class="slide-menu__item slide-menu__item--no-hover">
+    <transition-group
+      :name="transitionName"
+      tag="ul"
+      class="slide-menu slide-menu--nested"
+    >
+      <li
+        v-for="item in currentItem.nodes"
+        :key="item.level"
+        class="slide-menu__item"
+      >
+        <router-link
+          v-if="item.href"
+          :to="item.href"
+          class="slide-menu__link"
+        >
+          {{ item.label }}
+        </router-link>
+        <a-button
+          v-if="item.nodes"
+          class="slide-menu__button"
+          @click.native="load(item.level)"
+        >
+          {{ item.label }}
+          <a-icon
+            :icon="nextIcon"
+            class="slide-menu__icon"
+          />
+        </a-button>
+      </li>
+    </transition-group>
+  </li>
+</ul>

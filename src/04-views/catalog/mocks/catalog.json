@@ -1,0 +1,131 @@
+{
+  "products": {
+    "total_count": 187,
+    "page_info": {
+      "page_size": 20,
+      "current_page": 1
+    },
+    "items": [
+      {
+        "id": 1,
+        "name": "Some product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Some product name",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Some product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Some product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Some product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Some extra product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Some extra product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "$343,55",
+        "specialPrice": null,
+        "oldPrice": null,
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Some extra product name - very long name because that's important",
+        "badge": "sale",
+        "url": "#",
+        "price": "",
+        "specialPrice": "$100,00",
+        "oldPrice": "$299,99",
+        "image": "/images/catalog-grid-item/product-1_320_312.jpg"
+      }
+    ],
+    "filters": [
+      {
+        "name": "Category",
+        "code": "cat1",
+        "items": [
+          {
+            "label": "Gear",
+            "id": 34
+          },
+          {
+            "label": "Training",
+            "id": 6
+          }
+        ]
+      },
+      {
+        "name": "Style",
+        "code": "cat2",
+        "items": [
+          {
+            "label": "New",
+            "id": 34
+          },
+          {
+            "label": "Skiny",
+            "id": 6
+          }
+        ]
+      }
+    ]
+  }
+}

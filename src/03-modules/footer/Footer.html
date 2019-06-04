@@ -1,0 +1,61 @@
+<footer class="footer">
+  <div class="footer__handler container">
+    <a-button
+      class="footer__scroll-top"
+      aria-label="Scroll to top"
+      @click.native="scrollToTop()"
+    >
+      <a-icon
+        icon="arrow-up"
+        class="footer__icon"
+      />
+    </a-button>
+    <section class="footer__newsletter col-xs-12 col-lg-3">
+      <a-newsletter
+        :heading="heading"
+        :input="input"
+        button="Submit"
+        :checkboxes="checkboxes"
+        @submit="submitNewsletter"
+      />
+    </section>
+    <section class="footer__links col-xs-12 col-lg-9">
+      <!--TODO Add list with links-->
+    </section>
+  </div>
+  <section class="footer__bottom-bar">
+    <div class="footer__bottom-bar-handler container">
+      <div class="footer__social-handler">
+        <span class="footer__social-list-subtitle">
+            {{ socialListSubtitle }}
+        </span>
+        <a-list class="a-list--horizontal footer__social-list">
+          <a-list-item
+            v-for="element in socialMenu"
+            :key="element.id"
+            :aria-label="element.ariaLabel"
+          >
+            <a-link
+              class="list__icon-link"
+              :href="element.link"
+            >
+              <a-icon
+                :icon="element.iconId"
+                class="footer__social-icon"
+              />
+             </a-link>
+           </a-list-item>
+         </a-list>
+      </div>
+      <small class="footer__copyright">
+        {{ copyrightText }}
+      </small>
+    </div>
+  </section>
+  <a-cookie-message
+    :text="cookieText"
+    closeIcon="close"
+    dataType="cookie"
+    closeButton="Close"
+  />
+</footer>

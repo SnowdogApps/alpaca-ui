@@ -1,0 +1,54 @@
+@import '../../../assets/styles/_globals.scss';
+
+$mega-menu__border-bottom: 1px solid $gray-light !default;
+$mega-menu__font-color: $gray-darker !default;
+$mega-menu__font-weight: $font-weight-bold !default;
+$mega-menu__font-size: $font-size-base !default;
+$mega-menu__font-size--large: 16px !default;
+$mega-menu__background-color: $white !default;
+$mega-menu__list-justify-content: flex-start !default;
+$mega-menu__list-background-color: $white !default;
+$mega-menu__link-padding: 12px $spacer--medium !default;
+$mega-menu__link-margin: 0 $spacer--medium !default;
+$mega-menu__link-color: $gray-darker !default;
+$mega-menu__link-color--active: $color-primary !default;
+$mega-menu__link-text-decoration: none !default;
+
+.mega-menu {
+  position: relative;
+  display: none;
+  margin: $reset;
+  color: $mega-menu__font-color;
+  background: $mega-menu__background-color;
+  border-bottom: $mega-menu__border-bottom;
+
+  @include mq($screen-xl) {
+    display: block;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: $mega-menu__list-justify-content;
+    padding: $reset;
+    list-style: none;
+    background-color: $mega-menu__list-background-color;
+  }
+
+  &__link {
+    display: block;
+    margin: $mega-menu__link-margin;
+    padding: $mega-menu__link-padding;
+    color: $mega-menu__link-color;
+    font-weight: $mega-menu__font-weight;
+    font-size: $mega-menu__font-size--large;
+    text-decoration: $mega-menu__link-text-decoration;
+
+    &:focus,
+    &:hover {
+      color: $mega-menu__link-color--active;
+      text-decoration: $mega-menu__link-text-decoration;
+    }
+  }
+}

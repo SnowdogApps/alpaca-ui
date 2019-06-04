@@ -1,0 +1,117 @@
+@import '../../../assets/styles/_globals.scss';
+
+// Label
+$quantity-update__label-font-size                  : $font-size-base !default;
+$quantity-update__label-font-weight                : $font-weight-bold !default;
+
+// Input
+$quantity-update__input-wrapper-margin             : 0 !default;
+$quantity-update__input-border                     : 1px solid $gray-dark !default;
+$quantity-update__input-size                       : 48px !default;
+$quantity-update__input-color                      : $gray-dark !default;
+
+// Button
+$quantity-update__button-background                : $white !default;
+$quantity-update__button-border                    : 1px solid $gray-dark !default;
+$quantity-update__button-background-hover--disabled: $white !default;
+$quantity-update__button-cursor-hover--disabled    : default !default;
+$quantity-update__button-fill-hover--disabled      : $gray !default;
+
+// Icon
+$quantity-updater__icon-fill                       : $gray-dark !default;
+$quantity-updater__icon-spacing                    : 18px !default;
+$quantity-updater__icon-fill-hover                 : $color-primary !default;
+$quantity-updater__icon-transition                 : $transition-base !default;
+
+// Error
+$quantity-updater__error-margin                    : 0 0 0 $spacer !default;
+$quantity-updater__error-max-width                 : 120px !default;
+
+.a-quantity-update {
+  &__label {
+    font-weight: $quantity-update__label-font-weight;
+    font-size: $quantity-update__label-font-size;
+  }
+
+  &__qty {
+    display: flex;
+  }
+
+  &__input-wrapper {
+    margin: $quantity-update__input-wrapper-margin;
+  }
+
+  &__input {
+    width: $quantity-update__input-size;
+    height: $quantity-update__input-size;
+    color: $quantity-update__input-color;
+    text-align: center;
+    border-top: $quantity-update__input-border;
+    border-right: 0;
+    border-bottom: $quantity-update__input-border;
+    border-left: 0;
+    border-radius: 0;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    background: $quantity-update__button-background;
+    border: $quantity-update__button-border;
+
+    &:hover,
+    &:focus {
+      .a-quantity-update__icon {
+        fill: $quantity-updater__icon-fill-hover;
+      }
+    }
+
+    &:disabled {
+      &:hover,
+      &:focus {
+        background: $quantity-update__button-background-hover--disabled;
+        cursor: $quantity-update__button-cursor-hover--disabled;
+
+        .a-quantity-update__icon {
+          fill: $quantity-update__button-fill-hover--disabled;
+        }
+      }
+
+      .a-quantity-update__icon {
+        fill: $quantity-update__button-fill-hover--disabled;
+      }
+    }
+
+    &--plus {
+      border-left: 0;
+      border-radius: 0 100% 100% 0;
+    }
+
+    &--minus {
+      border-right: 0;
+      border-radius: 100% 0 0 100%;
+    }
+  }
+
+  &__icon {
+    width: $quantity-updater__icon-spacing;
+    height: $quantity-updater__icon-spacing;
+    transition: $quantity-updater__icon-transition;
+    fill: $quantity-updater__icon-fill;
+  }
+
+  // Disable spin buttons in number input type
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}

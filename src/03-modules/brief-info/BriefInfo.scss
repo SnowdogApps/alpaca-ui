@@ -1,0 +1,114 @@
+@import '../../../assets/styles/_globals.scss';
+
+$brief-info__padding\@medium                 : $spacer--large 0 $spacer--large !default;
+$brief-info__border                          : 1px $gray-light solid !default;
+$brief-info__content-text-align              : center !default;
+$brief-info__content-text-align\@medium      : left !default;
+$brief-info__heading-margin                  : 0 0 $spacer--medium !default;
+$brief-info__icon-bg-color                   : $gray-lightest !default;
+$brief-info__icon-border-radius              : 32px !default;
+$brief-info__icon-size                       : 48px !default;
+$brief-info__icon-padding                    : 0 $spacer--medium !default;
+$brief-info__icon-margin-bottom              : $spacer !default;
+$brief-info__link-font-size                  : $font-size-small !default;
+$brief-info__link-font-weight                : $font-weight-bold !default;
+$brief-info__link-text-decoration            : none !default;
+$brief-info__title-font-size                 : $font-size-small !default;
+$brief-info__title-font-size\@large          : $font-size-base !default;
+$brief-info__title-font-weight               : $font-weight-normal !default;
+$brief-info__title-line-height               : 1em !default;
+$brief-info__title-text-transform            : uppercase !default;
+
+.brief-info {
+  @include mq($screen-m) {
+    padding: $brief-info__padding\@medium;
+    border-top: $brief-info__border;
+    border-bottom: $brief-info__border;
+  }
+
+  &__heading {
+    width: 100%;
+    margin: $brief-info__heading-margin;
+    text-align: center;
+
+    @include mq($screen-m) {
+      text-align: left;
+    }
+  }
+
+  &__items-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: $brief-info__icon-padding;
+
+    @include mq($screen-m) {
+      align-items: flex-start;
+    }
+
+    @include mq($screen-l) {
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    &:first-child,
+    &:last-child {
+      @include mq($screen-m) {
+        padding: $reset;
+      }
+    }
+  }
+
+  &__icon-wrapper {
+    flex-shrink: 0;
+    width: $brief-info__icon-size;
+    height: $brief-info__icon-size;
+    margin-bottom: $brief-info__icon-margin-bottom;
+    background-color: $brief-info__icon-bg-color;
+    border-radius: $brief-info__icon-border-radius;
+
+    @include mq($screen-l) {
+      margin-bottom: $reset;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    padding: 14px;
+  }
+
+  &__title {
+    margin-bottom: $reset;
+    font-weight: $brief-info__title-font-weight;
+    font-size: $brief-info__title-font-size;
+    line-height: $brief-info__title-line-height;
+    text-transform: $brief-info__title-text-transform;
+
+    @include mq($screen-l) {
+      margin: 0 0 0 10px;
+      font-size: $brief-info__title-font-size\@large;
+    }
+  }
+
+  &__link {
+    font-weight: $brief-info__link-font-weight;
+    font-size: $brief-info__link-font-size;
+    text-decoration: $brief-info__link-text-decoration;
+  }
+
+  &__content {
+    text-align: $brief-info__content-text-align;
+
+    @include mq($screen-m) {
+      text-align: $brief-info__content-text-align\@medium;
+    }
+  }
+}

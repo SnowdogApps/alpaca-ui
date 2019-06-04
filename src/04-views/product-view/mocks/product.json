@@ -1,0 +1,159 @@
+{
+  "sku": "SKU WSH09",
+  "name": "Ingrid Running Jacket with Long Sleaves",
+  "price": {
+    "old": "$1400.00",
+    "special": "$1299.99",
+    "regular": "$1400.00"
+  },
+  "qty": 5,
+  "description": "Limestone is currently on backorder - this item is available to ship on December 24th. Palladium is currently on backorder - this item is available to ship on January 3rd.",
+  "swatches": {
+    "text": {
+      "label": "Size",
+      "options": [
+        {
+          "headingId": "option-label-size-1",
+          "id": "opt-size-xs",
+          "text": "XS",
+          "value": "XS"
+        },
+        {
+          "headingId": "option-label-size-1",
+          "id": "opt-size-s",
+          "text": "S",
+          "value": "S"
+        },
+        {
+          "headingId": "option-label-size-1",
+          "id": "opt-size-m",
+          "text": "M",
+          "value": "M"
+        },
+        {
+          "headingId": "option-label-size-1",
+          "id": "opt-size-l",
+          "text": "L",
+          "value": "L"
+        },
+        {
+          "headingId": "option-label-size-1",
+          "id": "opt-size-xl",
+          "text": "XL",
+          "value": "XL"
+        }
+      ]
+    },
+    "image": {
+      "label": "Color",
+      "options": [
+        {
+          "id": "opt-color-orange-1",
+          "style": "background-image: url('../../images/swatch/swatch-orange.jpg')",
+          "ariaLabel": "Orange",
+          "text": "S",
+          "value": "S"
+        },
+        {
+          "id": "opt-color-green-2",
+          "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+          "ariaLabel": "Green",
+          "text": "M",
+          "value": "M"
+        },
+        {
+          "id": "opt-color-green-3",
+          "style": "background-image: url('../../images/swatch/swatch-green.jpg')",
+          "ariaLabel": "Red",
+          "text": "L",
+          "value": "L"
+        },
+        {
+          "id": "opt-color-white-4",
+          "style": "background-image: url('../../images/swatch/swatch-white.jpg')",
+          "ariaLabel": "White",
+          "text": "XL",
+          "value": "XL"
+        }
+      ]
+    }
+  },
+  "reviews": [
+    {},
+    {}
+  ],
+  "relatedProducts": [
+    {
+      "id": 1,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    }
+  ],
+  "featuredProducts": [
+    {
+      "id": 1,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Some product name - very long name because that's important",
+      "badge": "sale",
+      "url": "#",
+      "price": "",
+      "specialPrice": "$100,00",
+      "oldPrice": "$299,99",
+      "image": "/images/gallery/product-img-496-496.jpg"
+    }
+  ]
+}

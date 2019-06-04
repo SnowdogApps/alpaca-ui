@@ -1,0 +1,138 @@
+@import '../../../assets/styles/_globals.scss';
+
+$rating__margin                  : $spacer--medium !default;
+$review__info-column-width       : 20% !default;
+$review__decsription-column-width: 80% !default;
+$review__summary-max-width\@large: 300px !default;
+
+.review {
+  width: 100%;
+
+  @include mq($screen-m) {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &--add {
+    @include mq($screen-m) {
+      display: block;
+    }
+  }
+
+  &--summary {
+    width: auto;
+
+    @include mq($screen-m) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .rating {
+      margin-right: $spacer;
+    }
+  }
+
+  &__details {
+    width: 100%;
+
+    @include mq($screen-m) {
+      &:first-child {
+        width: $review__info-column-width;
+      }
+
+      &:last-child {
+        width: $review__decsription-column-width;
+      }
+    }
+  }
+
+  &__author,
+  &__date,
+  &__title,
+  &__rating,
+  &__rating-legend {
+    margin-bottom: $rating__margin;
+  }
+
+  &__title {
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+  }
+
+  &__title-product {
+    display: block;
+    margin: $spacer 0;
+    font-weight: bold;
+    text-transform: none;
+  }
+
+  &__author {
+    font-weight: $font-weight-base;
+  }
+
+  &__date {
+    display: block;
+    color: $gray;
+    font-size: $font-size-small;
+  }
+
+  &__fieldset {
+    max-width: 430px;
+  }
+
+  &__field {
+    margin-bottom: $spacer--extra-large;
+  }
+
+  &__submit-btn {
+    width: 100%;
+
+    @include mq($screen-m) {
+      width: auto;
+    }
+  }
+
+  &__required-info {
+    margin-top: $spacer--large;
+    font-size: $font-size-small;
+  }
+
+  &__summary-handle {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    @include mq($screen-m) {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      width: auto;
+      max-width: $review__summary-max-width\@large;
+    }
+  }
+
+  &__amount {
+    margin-right: $spacer;
+    font-size: $font-size-small;
+    letter-spacing: 2px;
+    text-decoration: underline;
+
+    @include mq($screen-m) {
+      margin-right: 0;
+    }
+
+    &-text {
+      display: none;
+    }
+  }
+
+  &__summary-add {
+    flex-grow: 1;
+    text-align: right;
+    text-decoration: underline;
+
+    @include mq($screen-m) {
+      flex-basis: 100%;
+    }
+  }
+}
