@@ -6,14 +6,6 @@ import AMarketingBar from './MarketingBar.vue'
 const info = 'Check **Knobs** tab to edit component properties dynamically.'
 
 const data = {
-  props: {
-    buttonKnobs: {
-      default: text('Button text', 'Close')
-    },
-    contentKnobs: {
-      default: text('Content text', 'Subscribe and get 10$ for Shopping!')
-    }
-  },
   data: () => ({
     isOpen: true
   }),
@@ -28,6 +20,11 @@ storiesOf('Molecules/MarketingBar', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AMarketingBar },
+    props: {
+      contentKnobs: {
+        default: text('Content text', 'Subscribe and get 10$ for Shopping!')
+      }
+    },
     ...data,
     template: `
       <a-marketing-bar
@@ -40,6 +37,14 @@ storiesOf('Molecules/MarketingBar', module)
   }))
   .add('With slots', () => ({
     components: { AMarketingBar },
+    props: {
+      buttonKnobs: {
+        default: text('Button text', 'Close')
+      },
+      contentKnobs: {
+        default: text('Content text', 'Subscribe!')
+      }
+    },
     ...data,
     template: `
       <a-marketing-bar v-if="isOpen">
