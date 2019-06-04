@@ -4,23 +4,27 @@ $cookie-message__width                 : 100% !default;
 $cookie-message__background-color      : $gray-lightest !default;
 $cookie-message__font-size             : $font-size-small !default;
 $cookie-message__font-family           : $font-family-base !default;
-$cookie-message__text-color            : $gray !default;
+$cookie-message__container-min-width  : 100% !default;
+$cookie-message__text-color            : $gray-dark !default;
 $cookie-message__text-padding          : $spacer--medium $spacer--medium 0 $spacer--medium !default;
 $cookie-message__text-padding--small   : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
+$cookie-message__text-line-height      : 1.5 !default;
+$cookie-message__text-line-height      : 1.5 !default;
 $cookie-message__link-color            : $blue !default;
-$cookie-message__close-color           : $cookie-message__text-color !default;
 $cookie-message__close-size            : 48px !default;
+$cookie-message__close-color           : $cookie-message__text-color !default;
+$cookie-message__close-background      : none !default;
+$cookie-message__close-border          : none !default;
 $cookie-message__close-font-weight     : $font-weight-bold !default;
 $cookie-message__close-padding         : 0 $spacer--medium 0 0 !default;
 $cookie-message__close-padding--small  : 0 $spacer--medium 0 $spacer !default;
 $cookie-message__text-padding--small   : $spacer--medium $spacer $spacer--medium $spacer--medium !default;
 $cookie-message__close-icon-size       : 14px !default;
 $cookie-message__close-icon-margin-left: $spacer !default;
+$cookie-message__close-icon-fill       : $color-primary !default;
 $cookie-message__close-icon-transition : $transition-base !default;
 
-
-.cookie-message {
-  display: none;
+.a-cookie-message {
   align-items: stretch;
   box-sizing: border-box;
   width: $cookie-message__width;
@@ -33,8 +37,7 @@ $cookie-message__close-icon-transition : $transition-base !default;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    min-width: 100%;
-    text-align: center;
+    min-width: $cookie-message__container-min-width;
 
     @include mq($screen-s) {
       flex-wrap: nowrap;
@@ -46,8 +49,7 @@ $cookie-message__close-icon-transition : $transition-base !default;
     flex-basis: 100%;
     padding: $cookie-message__text-padding;
     color: $cookie-message__text-color;
-    font-size: inherit;
-    font-family: inherit;
+    line-height: $cookie-message__text-line-height;
     text-align: justify;
 
     @include mq($screen-s) {
@@ -55,10 +57,10 @@ $cookie-message__close-icon-transition : $transition-base !default;
       padding: $cookie-message__text-padding--small;
       text-align: left;
     }
-  }
 
-  &__link {
-    color: $cookie-message__link-color;
+    & > a {
+      color: $cookie-message__link-color;
+    }
   }
 
   &__close {
@@ -71,16 +73,19 @@ $cookie-message__close-icon-transition : $transition-base !default;
     padding: $cookie-message__close-padding;
     color: $cookie-message__close-color;
     font-weight: $cookie-message__close-font-weight;
-    font-size: inherit;
-    font-family: inherit;
-    background: none;
-    border: none;
+    background: $cookie-message__close-background;
+    border: $cookie-message__close-border;
     cursor: pointer;
 
     &:active,
-    &:hover {
+    &:hover,
+    &:focus {
       color: $cookie-message__close-color;
-      background: none;
+      background: $cookie-message__close-background;
+
+      .a-cookie-message__close-icon {
+        fill: $cookie-message__close-icon-fill;
+      }
     }
 
     @include mq($screen-s) {
@@ -92,20 +97,12 @@ $cookie-message__close-icon-transition : $transition-base !default;
     width: $cookie-message__close-icon-size;
     height: $cookie-message__close-icon-size;
     margin-left: $cookie-message__close-icon-margin-left;
+    transition: $cookie-message__close-icon-transition;
     fill: $cookie-message__close-color;
 
     &:hover,
     &:focus {
-      transition: $cookie-message__close-icon-transition;
-      fill: $color-primary;
+      fill: $cookie-message__close-icon-fill;
     }
   }
-
-  &--open {
-    display: flex;
-  }
-}
-
-.cookie-message__text > a {
-  @extend .cookie-message__link;
 }

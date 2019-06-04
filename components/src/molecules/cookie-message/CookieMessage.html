@@ -1,0 +1,29 @@
+<div
+  class="a-cookie-message"
+  :aria-label="ariaLabel"
+  tabindex="0"
+>
+  <div class="a-cookie-message__container">
+    <div class="a-cookie-message__text">
+      <!-- @slot Content slot -->
+      <slot />
+    </div>
+    <!-- @slot Close button (Scoped slot) -->
+    <slot
+      name="button"
+      :close-bar="closeBar"
+    >
+      <a-button
+        :aria-label="closeAriaLabel"
+        class="a-cookie-message__close"
+        @click.native="closeBar"
+      >
+        {{ closeButton }}
+        <a-icon
+          icon="close"
+          class="a-cookie-message__close-icon"
+        />
+      </a-button>
+    </slot>
+  </div>
+</div>
