@@ -1,8 +1,19 @@
 import { storiesOf } from '@storybook/vue'
+import { text } from '@storybook/addon-knobs'
 
 import AMarketingBar from './MarketingBar.vue'
 
+const info = 'Check **Knobs** tab to edit component properties dynamically.'
+
 const data = {
+  props: {
+    buttonKnobs: {
+      default: text('Button text', 'Close')
+    },
+    contentKnobs: {
+      default: text('Content text', 'Subscribe and get 10$ for Shopping!')
+    }
+  },
   data: () => ({
     isOpen: true
   }),
@@ -14,7 +25,7 @@ const data = {
 }
 
 storiesOf('Molecules/MarketingBar', module)
-  .addParameters({ info: true })
+  .addParameters({ info })
   .add('Default', () => ({
     components: { AMarketingBar },
     ...data,
@@ -23,7 +34,7 @@ storiesOf('Molecules/MarketingBar', module)
         v-if="isOpen"
         @close="close"
       >
-        Subscribe and get 10$ for Shopping!
+        {{ contentKnobs }}
       </a-marketing-bar>
     `
   }))
@@ -32,13 +43,13 @@ storiesOf('Molecules/MarketingBar', module)
     ...data,
     template: `
       <a-marketing-bar v-if="isOpen">
-        Subscribe and get 10$ for Shopping!
+        {{ contentKnobs }}
         <template #button>
           <button 
             @click="close"
             style="border: none; margin-top: 10px; opacity: 0.8;"
           >
-            Close
+            {{ buttonKnobs }}
           </button>
         </template>
       </a-marketing-bar>
