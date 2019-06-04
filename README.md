@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SnowdogApps/alpaca-ui/develop/public/assets/icons/alpaca.svg" alt="Alpaca logo" height="100" />
+  <img src="https://alpaca-ui.now.sh/assets/icons/alpaca.svg" alt="Alpaca logo" height="100" />
 </p>
 <br/>
 
