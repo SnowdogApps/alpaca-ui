@@ -25,13 +25,4 @@ describe('Marketing bar', () => {
     expect(span.text()).toEqual('Sample content')
     expect(wrapper.find('button').text()).toBe('Sample button')
   })
-
-  it('close marketing bar', () => {
-    const wrapper = mount(AMarketingBar)
-    const closeBtn = wrapper.find('.a-marketing-bar__close')
-
-    expect(closeBtn.exists()).toBe(true)
-    closeBtn.trigger('click')
-    expect(closeBtn.exists()).toBe(false)
-  })
 })
