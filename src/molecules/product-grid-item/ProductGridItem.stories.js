@@ -9,7 +9,8 @@ const defaultData = {
   methods: {
     addToCart: action('Added to Cart'),
     addToWishList: action('Added to Wishlist'),
-    addToCompare: action('Added to Compare')
+    addToCompare: action('Added to Compare'),
+    showAlert (msg) { alert(msg) }
   }
 }
 
@@ -61,27 +62,32 @@ storiesOf('Molecules/Product grid item', module)
           />
         </template>
 
-        <template #image>
+        <template #image="{ imageUrl, alt }">
           <img
-            src="/images/catalog-grid-item/product-1_320_312.jpg"
-            alt="Sample product"
+            :src="imageUrl"
+            :alt="alt + ' image.'"
             style="border:1px solid #00ff00; border-radius: 5px;"
           />
         </template>
 
-        <template #name>
-          <strong>Some product name - very very long name because that's important</strong>
+        <template #name="{ productName, productUrl }">
+          <strong>Product: </strong> <a :href="productUrl">{{ productName.toUpperCase() }}</a>
         </template>
 
-        <template #price>
+        <template #price="{ specialPrice, oldPrice }">
           <div style="margin: 10px auto;">
-            <strong style="color: #00ff00;">$100,00</strong>
-            <small style="text-decoration: line-through;">$299,99"</small>
+            <strong style="color: #00ff00;">{{ specialPrice }}</strong>
+            <small style="text-decoration: line-through;">{{ oldPrice }}</small>
           </div>
         </template>
 
-        <template #actions>
-          <button onclick="alert('To remove!')">Delete!</button>
+        <template #addToCart="{ addToCart }">
+          <button
+            type="button"
+            @click="() => { addToCart(); showAlert('Added!'); }"
+          >
+            Add
+          </button>
         </template>
       </a-product-grid-item>
     `

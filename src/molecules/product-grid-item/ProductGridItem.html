@@ -1,6 +1,9 @@
 <a-list-item class="a-product-grid-item">
-  <!--@slot Custom product badge (Named slots)-->
-  <slot name="badge">
+  <!--@slot Custom product badge (Scoped slot)-->
+  <slot
+    name="badge"
+    :badge-text="badgeText"
+  >
     <a-badge
       v-if="badgeText"
       class="a-product-grid-item__badge"
@@ -9,8 +12,12 @@
     </a-badge>
   </slot>
 
-  <!--@slot Custom product image (Named slots)-->
-  <slot name="image">
+  <!--@slot Custom product image (Scoped slot)-->
+  <slot
+    name="image"
+    :image-url="imageUrl"
+    :alt="name"
+  >
     <router-link
       :to="url"
       class="a-product-grid-item__link"
@@ -24,8 +31,12 @@
   </slot>
 
   <section class="a-product-grid-item__details">
-    <!--@slot Custom product name (Named slots)-->
-    <slot name="name">
+    <!--@slot Custom product name (Scoped slot)-->
+    <slot
+      name="name"
+      :product-name="name"
+      :product-url="url"
+    >
       <h2 class="a-product-grid-item__name">
         <router-link
           :to="url"
@@ -36,62 +47,71 @@
       </h2>
     </slot>
 
-    <!--@slot Custom product price (Named slots)-->
-    <slot name="price">
-      <div class="a-product-grid-item__price">
+    <div class="a-product-grid-item__price">
+      <!--@slot Custom product price (Scoped slot)-->
+      <slot
+        name="price"
+        :price="price"
+        :special-price="specialPrice"
+        :old-price="oldPrice"
+      >
         <a-price
+          :price="price"
           :special-price="specialPrice"
           :old-price="oldPrice"
-        >
-          {{ price }}
-        </a-price>
-      </div>
-    </slot>
-
-    <!--TODO Add rating component-->
-    <div class="a-product-grid-item__options">
-      <!--@slot Custom product options (Named slots)-->
-      <slot name="options">
-        <!-- <a-swatch
-          v-if="textSwatch"
-          :options="textSwatch"
         />
-        <a-swatch
-          v-if="iconSwatch"
-          :options="iconSwatch"
-          image
-        /> -->
       </slot>
     </div>
 
+    <!--TODO Add rating component-->
+    <div class="a-product-grid-item__options">
+      <!--@slot Custom product options (Named slot)-->
+      <slot name="options" />
+    </div>
+
     <div class="a-product-grid-item__actions">
-      <!--@slot Custom product actions (Named slots)-->
-      <slot name="actions">
-        <form class="a-product-grid-item__primary-form">
+      <form class="a-product-grid-item__primary-form">
+        <!--@slot Custom add to cart action (Scoped slot)-->
+        <slot
+          name="addToCart"
+          :add-to-cart="addToCart"
+        >
           <a-button
             class="button--secondary a-product-grid-item__primary-action"
-            @click.native.stop.prevent="addToCart"
+            @click.native="addToCart"
           >
             Add to cart
           </a-button>
-        </form>
+        </slot>
+      </form>
 
-        <div class="a-product-grid-item__secondary-action">
+      <div class="a-product-grid-item__secondary-action">
+        <!--@slot Custom add to wishlist action (Scoped slot)-->
+        <slot
+          name="addToWishList"
+          :add-to-wishlist="addToWishList"
+        >
           <a-button
             aria-label="Add to Wish List"
             @click.native="addToWishList"
           >
             <a-icon icon="heart"/>
           </a-button>
+        </slot>
 
+        <!--@slot Custom add to compare action (Scoped slot)-->
+        <slot
+          name="addToCompare"
+          :add-to-compare="addToCompare"
+        >
           <a-button
             aria-label="Add to Wish compare"
             @click.native="addToCompare"
           >
             <a-icon icon="compare"/>
           </a-button>
-        </div>
-      </slot>
+        </slot>
+      </div>
     </div>
   </section>
 </a-list-item>
