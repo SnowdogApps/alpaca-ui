@@ -7,7 +7,10 @@
   </div>
   <div class="a-newsletter__controls">
     <!-- @slot Input (Named slot) -->
-    <slot name="input">
+    <slot
+      name="input"
+      :current-value="currentValue"
+    >
       <a-input-wrapper
         v-if="input"
         :input-id="input.field.id"
@@ -25,7 +28,7 @@
           :id="input.field.id"
           class="a-newsletter__field"
           type="text"
-          v-model="value"
+          v-model="currentValue"
           :placeholder="input.field.placeholder"
           :name="input.field.name"
         />

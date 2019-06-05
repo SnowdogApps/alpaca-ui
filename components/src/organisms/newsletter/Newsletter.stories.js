@@ -26,8 +26,11 @@ storiesOf('Organisms/Newsletter', module)
   }))
   .add('With slots', () => ({
     components: { ANewsletter, AHeading },
+    methods: {
+      exampleMethod: action('Clicked')
+    },
     template: `
-      <a-newsletter>
+      <a-newsletter @submit="exampleMethod">
         <template #heading>
           <a-heading 
             :level="2"
@@ -36,9 +39,13 @@ storiesOf('Organisms/Newsletter', module)
             Sing up to our twisted newsletter
           </a-heading>
         </template>
-        <template #input>
+        <template #input="{ currentValue }">
           <label for="newsletter" style="color: white;">Sample label</label>
-          <input type="text" id="newsletter"/>
+          <input 
+            type="text" 
+            id="newsletter"
+            v-model="currentValue"
+          />
         </template>
         <template #button="{ onSubmit }">
           <button 

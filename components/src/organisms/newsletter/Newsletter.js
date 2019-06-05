@@ -46,7 +46,7 @@ export default {
   data () {
     return {
       selected: {},
-      value: null
+      currentValue: null
     }
   },
   methods: {
@@ -55,7 +55,7 @@ export default {
        * Triggered when form is submit
        * @type {Event}
        */
-      this.$emit('submit', { email: this.value, checkboxes: this.selected })
+      this.$emit('submit', { email: this.currentValue, checkboxes: this.selected })
     }
   }
 }
