@@ -47,7 +47,7 @@
       <a-list
         v-if="options"
         tag="dl"
-        class="list--description a-product-list-item__attributes"
+        class="a-product-list-item__attributes"
       >
         <template v-for="item in options">
           <!-- @slot Custom product item option (Scoped slot) -->
@@ -55,16 +55,10 @@
             name="option"
             :option="item"
           >
-            <a-list-item
-              tag="dt"
-              class="list--description__label"
-            >
+            <a-list-item tag="dt">
               {{ item.label }}
             </a-list-item>
-            <a-list-item
-              tag="dd"
-              class="list--description__value"
-            >
+            <a-list-item tag="dd">
               {{ item.value }}
             </a-list-item>
           </slot>
