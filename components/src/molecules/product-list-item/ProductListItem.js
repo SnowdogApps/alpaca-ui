@@ -96,18 +96,18 @@ export default {
     }
   },
   methods: {
+    onRemove () {
     /**
      * Triggered when value is removed by id
      * @type {Event}
      */
-    onRemove () {
       this.$emit('remove', this.id)
     },
+    onChange (val) {
     /**
      * Triggered when value is changed
      * @type {Event}
      */
-    onChange (val) {
       this.$emit('change', val)
     }
   }
