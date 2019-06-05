@@ -52,7 +52,7 @@ storiesOf('Molecules/MarketingBar', module)
         <template #button>
           <button 
             @click="close"
-            style="border: none; margin-top: 10px; opacity: 0.8;"
+            style="border: none; opacity: 0.8;"
           >
             {{ buttonKnobs }}
           </button>

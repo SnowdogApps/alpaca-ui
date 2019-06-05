@@ -14,9 +14,8 @@ $marketing-bar__button-icon-size: 18px !default;
 $marketing-bar__button-icon-padding: 2px !default;
 
 .a-marketing-bar {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: $marketing-bar__padding;
   background-color: $marketing-bar__background-color;
@@ -25,12 +24,8 @@ $marketing-bar__button-icon-padding: 2px !default;
     text-align: center;
   }
 
-  &__container {
-    position: relative;
-    width: 100%;
-  }
-
   &__text {
+    flex-grow: 1;
     padding: $marketing-bar__text-padding;
     color: $marketing-bar__text-font-color;
     font-weight: $marketing-bar__text-font-weight;
@@ -42,15 +37,7 @@ $marketing-bar__button-icon-padding: 2px !default;
   }
 
   &__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    min-width: $marketing-bar__button-size;
     height: $marketing-bar__button-size;
-    margin: auto;
-    background-color: transparent;
-    border: none;
 
     &:focus,
     &:hover {
