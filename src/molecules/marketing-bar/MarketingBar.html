@@ -6,6 +6,7 @@
     <!-- @slot Button (Named slot) -->
     <slot name="button">
       <a-button
+        :aria-label="closeAriaLabel"
         class="a-marketing-bar__close"
         @click.native="closeBar"
       >

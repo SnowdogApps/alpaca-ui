@@ -1,6 +1,12 @@
 // @vue/component
 
 export default {
+  props: {
+    closeAriaLabel: {
+      type: String,
+      default: null
+    }
+  },
   methods: {
     closeBar () {
       /**

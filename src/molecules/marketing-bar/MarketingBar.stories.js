@@ -29,6 +29,7 @@ storiesOf('Molecules/MarketingBar', module)
     template: `
       <a-marketing-bar
         v-if="isOpen"
+        close-aria-label="Close marketing bar"
         @close="close"
       >
         {{ contentKnobs }}
