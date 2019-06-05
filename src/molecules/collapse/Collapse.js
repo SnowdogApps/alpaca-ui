@@ -16,13 +16,6 @@ export default {
       default: true
     },
     /**
-     * Custom class for button
-     */
-    buttonClass: {
-      type: String,
-      default: null
-    },
-    /**
      * Custom class for content
      */
     contentClass: {
