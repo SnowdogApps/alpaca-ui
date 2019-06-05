@@ -60,11 +60,23 @@ export default {
   },
   methods: {
     addToCart (event) {
+    /**
+     * Triggered when product is added to cart
+     * @type {Event}
+     */
       this.$emit('addToCart', event)
     },
     addToWishList (event) {
+    /**
+     * Triggered when product is added to wishlist
+     * @type {Event}
+     */
       this.$emit('addToWishList', event)
     },
+    /**
+     * Triggered when product is added to compare
+     * @type {Event}
+     */
     addToCompare (event) {
       this.$emit('addToCompare', event)
     }
