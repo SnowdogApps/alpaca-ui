@@ -1,7 +1,11 @@
 <a-list-item tag="div" class="a-product-list-item">
   <div class="a-product-list-item__image">
-    <!--@slot Custom product image (Named slots)-->
-    <slot name="image">
+    <!--@slot Custom product image (Scoped slot)-->
+    <slot
+      name="image"
+      :alt="name"
+      :image-url="imageUrl"
+    >
       <a-image
         :src="imageUrl"
         :alt="name"
@@ -10,8 +14,12 @@
   </div>
   <div class="a-product-list-item__info">
     <div class="a-product-list-item__data">
-      <!--@slot Custom product name (Named slots)-->
-      <slot name="name">
+      <!--@slot Custom product name (Scoped slot)-->
+      <slot
+        name="name"
+        :product-name="name"
+        :product-url="url"
+      >
         <router-link
           :to="url"
           class="link link--inverted a-product-list-item__name"
@@ -19,8 +27,13 @@
           {{ name }}
         </router-link>
       </slot>
-      <!--@slot Custom product price (Named slots)-->
-      <slot name="price">
+      <!--@slot Custom product price (Scoped slot)-->
+      <slot
+        name="price"
+        :price="price"
+        :special-price="specialPrice"
+        :old-price="oldPrice"
+      >
         <a-price
           :price="price"
           :special-price="specialPrice"
@@ -69,8 +82,12 @@
         v-if="!hideQty"
         class="a-product-list-item__qty-wrapper"
       >
-        <!--@slot Custom product quantity (Named slots)-->
-        <slot name="quantity">
+        <!--@slot Custom product quantity (Scoped slot)-->
+        <slot
+          name="quantity"
+          :item-qty="qty"
+          :change-qty="onChange"
+        >
           <a-quantity-update
             :value="qty"
             input-id="qty_1"
@@ -94,8 +111,11 @@
       </div>
 
       <div class="a-product-list-item__action-buttons-wrapper">
-        <!--@slot Custom product remove button (Named slots)-->
-        <slot name="removeAction">
+        <!--@slot Custom product remove button (Scoped slot)-->
+        <slot
+          name="removeAction"
+          :item-remove="onRemove"
+        >
           <a-button
             class="a-product-list-item__action-button"
             aria-label="Remove this product from your shopping cart"

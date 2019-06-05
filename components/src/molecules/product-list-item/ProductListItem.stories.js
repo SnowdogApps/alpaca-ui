@@ -25,6 +25,10 @@ const defaultData = {
         }
       ]
     }
+  },
+  methods: {
+    removeMethod: action('Remove'),
+    changeMethod: action('Change')
   }
 }
 
@@ -32,10 +36,6 @@ storiesOf('Molecules/Product List Item', module)
   .addParameters({ info })
   .add('Default', () => ({
     ...defaultData,
-    methods: {
-      removeMethod: action('Remove'),
-      changeMethod: action('Change')
-    },
     template: `
       <a-product-list-item
         :id="id"
@@ -54,10 +54,6 @@ storiesOf('Molecules/Product List Item', module)
   }))
   .add('Without Qty', () => ({
     ...defaultData,
-    methods: {
-      removeMethod: action('Remove'),
-      changeMethod: action('Change')
-    },
     template: `
       <a-product-list-item
         :id="id"
@@ -75,6 +71,13 @@ storiesOf('Molecules/Product List Item', module)
   }))
   .add('With slots', () => ({
     ...defaultData,
+    methods: {
+      removeMethod: action('Remove'),
+      changeMethod: action('Change'),
+      showAlert (msg) {
+        alert(msg)
+      }
+    },
     template: `
       <a-product-list-item
         :id="id"
@@ -87,20 +90,21 @@ storiesOf('Molecules/Product List Item', module)
         :options="options"
         @remove="removeMethod"
       >
-        <template #image>
+        <template #image="{ alt, imageUrl }">
           <img
-            src="/images/product/cart-product-160_160.jpg"
-            alt="Sample Image"
+            :src="imageUrl"
+            :alt="alt + ' image.'"
             style="border: 1px dashed #000; border-radius: 50%;"
           />
         </template>
-        <template #name>
-          <strong>Product:</strong> Ingrid Running Jacket
+        <template #name="{ productName, productUrl }">
+          <strong style="margin-right: 5px;">Product:</strong>
+          <a :href="productUrl">{{ productName.toUpperCase() }}</a>
         </template>
-        <template #price>
+        <template #price="{ specialPrice, oldPrice }">
           <div style="margin-top: 10px; flex-basis: 100%;">
-            <strong style="color: #00ff00;">$100,00</strong>
-            <small style="text-decoration: line-through;">$299,99"</small>
+            <strong style="color: #00ff00;">{{ specialPrice }}</strong>
+            <small style="text-decoration: line-through;">{{ oldPrice }}</small>
           </div>
         </template>
         <template #option="data">
@@ -117,8 +121,10 @@ storiesOf('Molecules/Product List Item', module)
             value="11"
           >
         </template>
-        <template #removeAction>
-          <button onclick="alert('To remove!')">Delete!</button>
+        <template #removeAction="{ itemRemove }">
+          <button @click="() => { itemRemove(); showAlert('Item removed!'); }">
+            Delete!
+          </button>
         </template>
       </a-product-list-item>
     `
