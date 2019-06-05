@@ -1,0 +1,196 @@
+@import '../../../assets/styles/globals.scss';
+
+$footer__padding                     : $spacer--medium !default;
+$footer__background-color-darkest    : $gray-darkest !default;
+$footer__background-color-darker     : $gray-darker !default;
+$footer__bottom-bar-background\@large: $gray-darkest !default;
+$footer__bottom-bar-color            : $gray-lighter !default;
+$footer__bottom-bar-font-size        : $font-size-small !default;
+$footer__link-color                  : $gray-lighter !default;
+$footer__link-color-hover            : $color-primary !default;
+$footer__link-inner-padding          : $spacer--medium !default;
+$footer__link-button-margin          : 3px !default;
+$footer__link-button-color           : $white !default;
+$footer__newsletter-padding          : 0 $spacer--medium !default;
+$footer__newsletter-color            : $white !default;
+$footer__newsletter-link-color       : $color-primary !default;
+$footer__content-color               : $white !default;
+$footer__social-handle-margin        : 0 0 $spacer 0 !default;
+$footer__social-icon-color           : $white !default;
+$footer__copywrite-padding           : $spacer--medium;
+$footer__scroll-top-top              : -24px !default;
+$footer__icon-size                   : 13px !default;
+$footer__icon-fill                   : $color-secondary !default;
+$footer__icon-fill-hover             : $color-primary !default;
+
+.a-footer {
+  flex-shrink: 0;
+  background-color: $footer__background-color-darkest;
+
+  @include mq($screen-l) {
+    background-color: $footer__background-color-darker;
+  }
+
+  &__handler {
+    position: relative;
+    margin: 0 auto $footer__padding;
+    padding-top: $footer__padding;
+
+    @include mq($screen-m) {
+      margin: 0 auto;
+    }
+
+    @include mq($screen-l) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
+
+  &__newsletter {
+    margin: 0 auto $footer__padding;
+    padding: $footer__newsletter-padding;
+    color: $footer__newsletter-color;
+    font-size: $font-size-small;
+
+    .newsletter {
+      background: none;
+    }
+
+    a {
+      color: $footer__newsletter-link-color;
+    }
+
+    @include mq($screen-l) {
+      order: 1;
+      padding-top: $footer__padding;
+    }
+  }
+
+  &__links {
+    &-list {
+      background-color: $footer__background-color-darker;
+    }
+
+    &-button {
+      margin-bottom: $footer__link-button-margin;
+      color: $footer__link-button-color;
+      font-weight: bold;
+      background-color: $footer__background-color-darker;
+
+      .a-icon {
+        fill: $footer__link-button-color;
+      }
+    }
+
+    &-content {
+      color: $footer__content-color;
+      background-color: $footer__background-color-darker;
+    }
+
+    &--screen-m {
+      @include mq($screen-m) {
+        display: flex;
+
+        .a-footer__links-list {
+          width: 25%;
+          background-color: $footer__background-color-darker;
+          border-bottom: 0;
+          cursor: default;
+        }
+
+        .a-footer__links-button {
+          color: $footer__link-button-color;
+          font-weight: bold;
+          cursor: default;
+
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            background-color: $footer__background-color-darker;
+          }
+
+          .a-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $footer__link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $footer__link-color-hover;
+    }
+  }
+
+  &__bottom-bar {
+    color: $footer__bottom-bar-color;
+
+    @include mq($screen-l) {
+      background-color: $footer__bottom-bar-background\@large;
+    }
+  }
+
+  &__bottom-bar-handler {
+    @include mq($screen-m) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__social-handler {
+    margin: $footer__social-handle-margin;
+
+    @include mq($screen-m) {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      order: 1;
+      margin: $reset;
+    }
+
+    .a-list {
+      justify-content: center;
+    }
+  }
+
+  &__social-list-subtitle {
+    display: none;
+
+    @include mq($screen-m) {
+      display: block;
+      margin-right: $footer__padding;
+      font-size: $footer__bottom-bar-font-size;
+    }
+  }
+
+  &__social-icon {
+    fill: $footer__social-icon-color;
+  }
+
+  &__copyright {
+    display: block;
+    padding: $footer__copywrite-padding;
+    font-size: $footer__bottom-bar-font-size;
+    text-align: center;
+  }
+
+  &__scroll-top {
+    position: absolute;
+    top: $footer__scroll-top-top;
+    right: 0;
+
+    &:hover,
+    &:focus {
+      .footer__icon {
+        fill: $footer__icon-fill-hover;
+      }
+    }
+  }
+}
