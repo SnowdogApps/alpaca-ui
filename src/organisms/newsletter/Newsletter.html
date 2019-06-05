@@ -1,4 +1,7 @@
-<form class="a-newsletter">
+<form
+  class="a-newsletter"
+  @submit.prevent="onSubmit"
+>
   <div class="a-newsletter__heading">
     <!-- @slot Heading (Named slot) -->
     <slot name="heading">
@@ -34,14 +37,11 @@
         />
       </a-input-wrapper>
     </slot>
-    <!-- @slot Button (Scoped slot) -->
-    <slot
-      name="button"
-      :on-submit="onSubmit"
-    >
+    <!-- @slot Button (Named slot) -->
+    <slot name="button">
       <a-button
         class="a-newsletter__button"
-        @click.native.stop.prevent="onSubmit"
+        type="submit"
       >
         {{ buttonText }}
       </a-button>

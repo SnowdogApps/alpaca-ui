@@ -47,9 +47,9 @@ storiesOf('Organisms/Newsletter', module)
             v-model="currentValue"
           />
         </template>
-        <template #button="{ onSubmit }">
+        <template #button>
           <button 
-            @click.stop.prevent="onSubmit"
+            type="submit"
             style="display: block; margin: 20px 0;"
           >
             Submit
