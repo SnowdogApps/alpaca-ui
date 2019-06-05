@@ -2,7 +2,6 @@
   "version": 2,
   "alias": ["alpaca-ui.now.sh"],
   "builds": [
-    { "src": "components/package.json", "use": "@now/static-build" }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "/components/$1" }]
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
 }
