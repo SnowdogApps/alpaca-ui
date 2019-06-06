@@ -1,17 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import selectorsConfig from './Message.selectors.json'
+
 import AMessage from './Message.vue'
 
 const info = `
-  ---
-  #### Use these modifiers with \`.message\` class.
-  - \`.message--success\` - Selector for applying styles for success message
-  - \`.message--error\` - Selector for applying styles for error message
-  ---
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
 
-// @vue/component
 const defaultData = {
   components: { AMessage },
   methods: {
@@ -21,7 +19,6 @@ const defaultData = {
 
 storiesOf('Molecules/Message', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     ...defaultData,
     template: `
@@ -33,7 +30,6 @@ storiesOf('Molecules/Message', module)
       </a-message>
     `
   }))
-  // @vue/component
   .add('Success', () => ({
     ...defaultData,
     template: `
@@ -48,7 +44,6 @@ storiesOf('Molecules/Message', module)
       </a-message>
     `
   }))
-  // @vue/component
   .add('Error', () => ({
     ...defaultData,
     template: `
@@ -61,7 +56,6 @@ storiesOf('Molecules/Message', module)
       </a-message>
     `
   }))
-  // @vue/component
   .add('With slot', () => ({
     ...defaultData,
     template: `
