@@ -56,6 +56,10 @@ export default {
     checkboxes: {
       type: Array,
       default: null
+    },
+    scrollAriaLabel: {
+      type: String,
+      default: null
     }
   },
   data () {

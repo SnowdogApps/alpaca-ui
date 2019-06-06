@@ -24,6 +24,7 @@ storiesOf('Organisms/Footer', module)
     template: `
       <a-footer
         copyright-text="Copyright © 2019 A. All rights reserved."
+        scroll-aria-label="Scroll to top"
         :input="newsletter.input"
         :checkboxes="newsletter.checkbox"
         social-list-subtitle="Find us on"
