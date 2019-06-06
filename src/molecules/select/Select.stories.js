@@ -7,7 +7,6 @@ import ASelect from './Select.vue'
 
 storiesOf('Molecules/Select', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { ASelect },
     data () {
@@ -31,7 +30,6 @@ storiesOf('Molecules/Select', module)
       />
     `
   }))
-  // @vue/component
   .add('Selected', () => ({
     components: { ASelect },
     data () {
@@ -54,7 +52,6 @@ storiesOf('Molecules/Select', module)
       />
     `
   }))
-  // @vue/component
   .add('With slots', () => ({
     components: { ASelect },
     data () {
