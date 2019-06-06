@@ -18,7 +18,10 @@
     </slot>
     <section class="a-footer__newsletter col-xs-12 col-lg-3">
       <!--@slot Newsletter (Scoped slot)-->
-      <slot name="newsletter">
+      <slot
+        name="newsletter"
+        :submit-newsletter="submitNewsletter"
+      >
         <a-newsletter
           :heading="heading"
           :input="input"

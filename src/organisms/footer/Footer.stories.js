@@ -43,7 +43,6 @@ storiesOf('Organisms/Footer', module)
       status: true
     }),
     methods: {
-      submit: action('Submitted'),
       onChange: action('Option changed')
     },
     template: `
@@ -66,7 +65,7 @@ storiesOf('Organisms/Footer', module)
             Top
           </button>
         </template>
-        <template #newsletter>
+        <template #newsletter="{ submitNewsletter }">
           <a-checkbox
             id="checkbox-default"
             name="checkbox-default"
@@ -77,7 +76,7 @@ storiesOf('Organisms/Footer', module)
             <span style="color: white">I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a>.</span>
              <div style="color: white">I am happy to receive your newsletter with all your promotions</div>
           </a-checkbox>
-          <button type="button" @click="submit">Submit</button>
+          <button type="button" @click="submitNewsletter">Submit</button>
         </template>
         <template #list="data">
           <a 
