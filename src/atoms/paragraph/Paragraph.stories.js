@@ -4,7 +4,6 @@ import AParagraph from './Paragraph.vue'
 
 storiesOf('Atoms/Paragraph', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { AParagraph },
     template: `
@@ -13,7 +12,6 @@ storiesOf('Atoms/Paragraph', module)
       </a-paragraph>
     `
   }))
-  // @vue/component
   .add('Custom tag', () => ({
     components: { AParagraph },
     template: `
