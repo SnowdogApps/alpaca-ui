@@ -4,7 +4,6 @@ import { action } from '@storybook/addon-actions'
 import ACheckbox from './Checkbox.vue'
 import AIcon from './../../atoms/icon/Icon.vue'
 
-// @vue/component
 const defaultData = {
   data: () => {
     return {
@@ -18,7 +17,6 @@ const defaultData = {
 
 storiesOf('Molecules/Checkbox', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     ...defaultData,
     components: { ACheckbox },
@@ -34,7 +32,6 @@ storiesOf('Molecules/Checkbox', module)
       </a-checkbox>
     `
   }))
-  // @vue/component
   .add('With slot', () => ({
     ...defaultData,
     components: {
