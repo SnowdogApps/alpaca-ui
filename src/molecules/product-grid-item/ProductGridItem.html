@@ -75,12 +75,13 @@
         <slot
           name="addToCart"
           :add-to-cart="addToCart"
+          :add-to-cart-text="addToCartText"
         >
           <a-button
             class="button--secondary a-product-grid-item__primary-action"
             @click.native="addToCart"
           >
-            Add to cart
+            {{ addToCartText }}
           </a-button>
         </slot>
       </form>

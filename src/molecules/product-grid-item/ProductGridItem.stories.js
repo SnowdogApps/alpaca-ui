@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/vue'
+import { addDecorator, storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import StoryRouter from 'storybook-vue-router'
 
@@ -9,13 +9,13 @@ const defaultData = {
   methods: {
     addToCart: action('Added to Cart'),
     addToWishList: action('Added to Wishlist'),
-    addToCompare: action('Added to Compare'),
-    showAlert (msg) { alert(msg) }
+    addToCompare: action('Added to Compare')
   }
 }
 
+addDecorator(StoryRouter())
 storiesOf('Molecules/Product grid item', module)
-  .addDecorator(StoryRouter())
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { AProductGridItem },
     ...defaultData,
@@ -29,9 +29,9 @@ storiesOf('Molecules/Product grid item', module)
         url="#"
         imageUrl="/images/catalog-grid-item/product-1_320_312.jpg"
         badgeText="Sale!"
-        @addToCart="addToCart()"
-        @addToWishList="addToWishList()"
-        @addToCompare="addToCompare()"
+        @addToCart="addToCart"
+        @addToWishList="addToWishList"
+        @addToCompare="addToCompare"
       />
     `
   }))
@@ -51,9 +51,9 @@ storiesOf('Molecules/Product grid item', module)
         url="#"
         imageUrl="/images/catalog-grid-item/product-1_320_312.jpg"
         badgeText="Sale!"
-        @addToCart="addToCart()"
-        @addToWishList="addToWishList()"
-        @addToCompare="addToCompare()"
+        @addToCart="addToCart"
+        @addToWishList="addToWishList"
+        @addToCompare="addToCompare"
       >
         <template #badge>
           <a-icon
@@ -81,12 +81,12 @@ storiesOf('Molecules/Product grid item', module)
           </div>
         </template>
 
-        <template #addToCart="{ addToCart }">
+        <template #addToCart="{ addToCart, addToCartText }">
           <button
             type="button"
-            @click="() => { addToCart(); showAlert('Added!'); }"
+            @click="addToCart"
           >
-            Add
+            {{ addToCartText }}
           </button>
         </template>
       </a-product-grid-item>

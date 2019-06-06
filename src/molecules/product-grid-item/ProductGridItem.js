@@ -56,6 +56,13 @@ export default {
     oldPrice: {
       type: String,
       required: true
+    },
+    /**
+     * Product add to cart button default text
+     */
+    addToCartText: {
+      type: String,
+      default: 'Add to cart'
     }
   },
   methods: {
