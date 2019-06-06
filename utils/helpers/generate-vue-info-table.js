@@ -17,16 +17,18 @@ export default (items, label) => {
       <label class="src-components-Table-label-3GH2">
         ${label}
       </label>
-      <table class="src-components-Table-table-3VHw">
-        <thead>
-          <tr>
-            ${head}
-          </tr>
-        </thead>
-        <tbody>
-          ${body}
-        </tbody>
-      </table>
+      <div class="src-components-Table-contents-2Hzm">
+        <table class="src-components-Table-table-3VHw">
+          <thead>
+            <tr>
+              ${head}
+            </tr>
+          </thead>
+          <tbody>
+            ${body}
+          </tbody>
+        </table>
+      </div>
     </div>
   `
 }
