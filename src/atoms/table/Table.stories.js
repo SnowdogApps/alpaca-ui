@@ -1,19 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 
-import ATable from './Table.vue'
-import ATableRow from '../table-row/TableRow.vue'
-import ATableCell from '../table-cell/TableCell.vue'
-
 import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'
 import footCells from './mocks/footCells.json'
 
-const info = `
-  ---
-  #### Use these modifiers with \`.table\` class.
-  - \`.table--odd-even\` - Selector for applying odd-even styles
-  ---
-`
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import selectorsConfig from './Table.selectors.json'
+
+import ATable from './Table.vue'
+import ATableRow from '../table-row/TableRow.vue'
+import ATableCell from '../table-cell/TableCell.vue'
 
 const defaultData = {
   components: { ATable, ATableRow, ATableCell },
@@ -25,7 +21,9 @@ const defaultData = {
 }
 
 storiesOf('Atoms/Table', module)
-  .addParameters({ info })
+  .addParameters({
+    info: generateVueInfoTable(selectorsConfig, 'BEM modifiers')
+  })
   .add('Default', () => ({
     ...defaultData,
     template: `
