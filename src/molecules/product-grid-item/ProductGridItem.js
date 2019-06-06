@@ -30,13 +30,6 @@ export default {
       required: true
     },
     /**
-     * Product badge text
-     */
-    badgeText: {
-      type: String,
-      required: true
-    },
-    /**
      * Product standard price
      */
     price: {
@@ -56,6 +49,13 @@ export default {
     oldPrice: {
       type: String,
       required: true
+    },
+    /**
+     * Product badge text
+     */
+    badgeText: {
+      type: String,
+      default: null
     },
     /**
      * Product add to cart button default text
