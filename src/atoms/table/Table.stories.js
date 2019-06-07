@@ -13,12 +13,15 @@ import ATable from './Table.vue'
 import ATableRow from '../table-row/TableRow.vue'
 import ATableCell from '../table-cell/TableCell.vue'
 
+const info = `
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
+`
+
 const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Atoms/Table', module)
-  .addParameters({
-    info: generateVueInfoTable(selectorsConfig, 'BEM modifiers')
-  })
+  .addParameters({ info })
   .add('Default', () => ({
     components: { ATable, ATableRow, ATableCell },
     props: {
