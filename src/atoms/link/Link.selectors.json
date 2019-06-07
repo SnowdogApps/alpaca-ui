@@ -1,0 +1,10 @@
+[
+  {
+    "name": ".a-link--inverted",
+    "description": "Selector for applying inverted styles"
+  },
+  {
+    "name": ".a-link--secondary",
+    "description": "Selector for applying secondary styles"
+  }
+]

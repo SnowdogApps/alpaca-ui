@@ -1,0 +1,10 @@
+[
+  {
+    "name": ".a-collapse--secondary",
+    "description": "Selector for applying secondary styles"
+  },
+  {
+    "name": ".a-collapse--inner",
+    "description": "Selector for applying inner styles"
+  }
+]

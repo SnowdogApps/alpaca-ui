@@ -1,19 +1,22 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './InputWrapper.selectors.json'
+
 import AInputWrapper from './InputWrapper.vue'
 import ALabel from '../../atoms/label/Label.vue'
 import AInput from '../../atoms/input/Input.vue'
 
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-input-wrapper--inline\` - Selector for applying inline styles
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
-const inputClasses = [null, 'a-input-wrapper--inline']
 
-storiesOf('Molecules/Input wrapper', module)
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
+
+storiesOf('Molecules/Input Wrapper', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AInputWrapper },
@@ -22,7 +25,7 @@ storiesOf('Molecules/Input wrapper', module)
         default: text('Label text', 'First name')
       },
       classKnob: {
-        default: select('Input wrapper class', inputClasses)
+        default: select('Input wrapper class', classKnobsConfig)
       }
     },
     template: `
@@ -43,7 +46,7 @@ storiesOf('Molecules/Input wrapper', module)
         default: text('Placeholder', 'Kowalski')
       },
       classKnob: {
-        default: select('Input wrapper class', inputClasses)
+        default: select('Input wrapper class', classKnobsConfig)
       }
     },
     template: `

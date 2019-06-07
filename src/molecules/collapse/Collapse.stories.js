@@ -1,21 +1,18 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './Collapse.selectors.json'
+
 import ACollapse from './Collapse.vue'
 
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-collapse--secondary\` - Selector for applying secondary styles
-  - \`.a-collapse--inner\` - Selector for applying inner styles
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
 
-const bemModifiers = [
-  null,
-  'a-collapse--secondary',
-  'a-collapse--inner'
-]
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Molecules/Collapse', module)
   .addParameters({ info })
@@ -27,7 +24,7 @@ storiesOf('Molecules/Collapse', module)
       },
       props: {
         classKnobs: {
-          default: select('BEM Modifier', bemModifiers)
+          default: select('BEM Modifier', classKnobsConfig)
         },
         titleTextKnobs: {
           default: text('Title', 'Collapse title text')
@@ -37,7 +34,7 @@ storiesOf('Molecules/Collapse', module)
         }
       },
       template: `
-        <a-collapse 
+        <a-collapse
           :class="classKnobs"
           :title="titleTextKnobs"
         >
@@ -55,7 +52,7 @@ storiesOf('Molecules/Collapse', module)
       template: `
         <a-collapse>
           <template #button="{ toggle, collapseLocal, ariaControls }">
-            <button 
+            <button
               :aria-expanded="!collapseLocal"
               :aria-controls="ariaControls"
               style="width: 100px; height: 50px; z-index: 1; position: relative;"
