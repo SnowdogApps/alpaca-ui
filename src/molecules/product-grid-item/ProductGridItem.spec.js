@@ -1,20 +1,23 @@
-import { mount } from '@vue/test-utils'
+import { mount, RouterLinkStub } from '@vue/test-utils'
 import AProductGridItem from './ProductGridItem.vue'
 
-const sampleRequiredData = {
-  id: 'prod1',
-  name: 'Some product name - very long name because that\'s important',
-  price: '',
-  specialPrice: '$100,00',
-  oldPrice: '$299,99',
-  url: '#',
-  imageUrl: '/images/catalog-grid-item/product-1_320_312.jpg'
-}
-
 describe('Product Grid Item', () => {
+
+  const sampleRequiredData = {
+    id: 'prod1',
+    name: 'Some product name - very long name because that\'s important',
+    price: '',
+    specialPrice: '$100,00',
+    oldPrice: '$299,99',
+    url: '#',
+    imageUrl: '/images/catalog-grid-item/product-1_320_312.jpg',
+    badgeText: 'Sale!'
+  }
+
   it('has default structure', () => {
     const wrapper = mount(AProductGridItem, {
-      propsData: sampleRequiredData
+      propsData: sampleRequiredData,
+      stubs: { 'router-link': RouterLinkStub }
     })
 
     expect(wrapper.classes()).toContain('a-product-grid-item')
@@ -23,13 +26,11 @@ describe('Product Grid Item', () => {
 
   it('renders badge when text was passed', () => {
     const wrapper = mount(AProductGridItem, {
-      propsData: {
-        ...sampleRequiredData,
-        badgeText: 'NEW'
-      }
+      propsData: sampleRequiredData,
+      stubs: { 'router-link': RouterLinkStub }
     })
 
     expect(wrapper.find('.a-product-grid-item__badge').exists()).toBe(true)
-    expect(wrapper.find('.a-product-grid-item__badge').text()).toEqual('NEW')
+    expect(wrapper.find('.a-product-grid-item__badge').text()).toEqual('Sale!')
   })
 })
