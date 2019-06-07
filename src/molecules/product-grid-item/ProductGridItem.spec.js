@@ -2,7 +2,6 @@ import { mount, RouterLinkStub } from '@vue/test-utils'
 import AProductGridItem from './ProductGridItem.vue'
 
 describe('Product Grid Item', () => {
-
   const sampleRequiredData = {
     id: 'prod1',
     name: 'Some product name - very long name because that\'s important',
