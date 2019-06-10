@@ -64,23 +64,20 @@ export default {
   },
   data () {
     return {
-      windowWidth: window.innerWidth,
-      isLargeScreen: window.innerWidth > 768
-    }
-  },
-  watch: {
-    windowWidth (newWidth) {
-      this.isLargeScreen = newWidth > 768
+      isLargeScreen: window.matchMedia('(min-width: 768px)').matches
     }
   },
   mounted () {
     this.$nextTick(() => {
-      window.addEventListener('resize', () => {
-        this.windowWidth = window.innerWidth
-      })
+      const breakpoint = window.matchMedia(('(min-width: 768px)'))
+      this.checkMedia(breakpoint)
+      breakpoint.addListener(this.checkMedia)
     })
   },
   methods: {
+    checkMedia (e) {
+      this.isLargeScreen = e.matches
+    },
     scrollToTop () {
       window.scrollTo(0, 0)
     },
