@@ -29,4 +29,17 @@ describe('Heading', () => {
     expect(wrapper.find('.a-heading span').exists()).toBe(true)
     expect(wrapper.find('.a-heading span').text()).toEqual('Heading level 1')
   })
+
+  it('has custom tag when tag prop is set', () => {
+    const wrapper = mount(AHeading, {
+      propsData: {
+        level: 2,
+        tag: 'span'
+      }
+    })
+    expect(wrapper.is('span')).toBe(true)
+    expect(wrapper.classes()).toContain('a-heading')
+    expect(wrapper.classes()).toContain('a-heading--second-level')
+  })
+
 })
