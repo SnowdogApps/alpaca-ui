@@ -41,5 +41,4 @@ describe('Heading', () => {
     expect(wrapper.classes()).toContain('a-heading')
     expect(wrapper.classes()).toContain('a-heading--second-level')
   })
-
 })
