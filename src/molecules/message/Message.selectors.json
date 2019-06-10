@@ -1,0 +1,10 @@
+[
+  {
+    "name": ".message--success",
+    "description": "Selector for applying styles for success message"
+  },
+  {
+    "name": ".message--error",
+    "description": "elector for applying styles for error message"
+  }
+]

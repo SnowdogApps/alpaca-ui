@@ -5,7 +5,6 @@ import AFileUpload from './FileUpload.vue'
 
 storiesOf('Molecules/File Upload', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { AFileUpload },
     template: `
@@ -16,7 +15,6 @@ storiesOf('Molecules/File Upload', module)
       />
     `
   }))
-  // @vue/component
   .add('With slots', () => ({
     components: {
       AButton,
@@ -49,7 +47,6 @@ storiesOf('Molecules/File Upload', module)
       </a-file-upload>
     `
   }))
-  // @vue/component
   .add('File size limit', () => ({
     components: { AFileUpload },
     template: `
