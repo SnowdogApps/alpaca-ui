@@ -10,53 +10,49 @@ const info = `
   ---
 `
 
-const levels = [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6
-]
+const levels = [1, 2, 3, 4, 5, 6]
 
 storiesOf('Atoms/Heading', module)
   .addParameters({ info })
-  // @vue/component
   .add('Default', () => ({
     components: { AHeading },
     props: {
       levelKnobs: {
-        default: select('Heading level', levels, 1),
-        type: Number
+        default: select('Heading level', levels, 1)
+      },
+      tagKnobs: {
+        default: text('Tag', null)
       },
       textKnobs: {
-        default: text('Text', 'Heading level 1'),
-        type: String
+        default: text('Text', 'Heading level 1')
       }
     },
     template: `
-      <a-heading :level="levelKnobs">
+      <a-heading 
+        :level="levelKnobs"
+        :tag="tagKnobs"
+      >
         {{ textKnobs }}
       </a-heading>
     `
   }))
-  // @vue/component
   .add('Custom tag', () => ({
     components: { AHeading },
     props: {
       levelKnobs: {
-        default: select('Heading level', levels, 4),
-        type: Number
+        default: select('Heading level', levels, 4)
+      },
+      tagKnobs: {
+        default: text('Tag', 'span')
       },
       textKnobs: {
-        default: text('Text', 'Span level 4'),
-        type: String
+        default: text('Text', 'Span level 4')
       }
     },
     template: `
       <a-heading
         :level="levelKnobs"
-        tag="span"
+        :tag="tagKnobs"
       >
         {{ textKnobs }}
       </a-heading>
