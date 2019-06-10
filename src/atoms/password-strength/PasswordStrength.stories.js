@@ -1,25 +1,18 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './PasswordStrength.selectors.json'
+
 import APasswordStrength from './PasswordStrength.vue'
 
 const info = `
-  ------
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-password-strength--weak\` - Class for applying weak password styles
-  - \`.a-password-strength--medium\` - Class for applying medium password styles
-  - \`.a-password-strength--strong\` - Class for applying strong password styles
-  - \`.a-password-strength--very-strong\` - Class for applying very strong password styles
-  ------
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
 
-const bemModifiers = [
-  null,
-  'a-password-strength--weak',
-  'a-password-strength--medium',
-  'a-password-strength--strong',
-  'a-password-strength--very-strong'
-]
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Atoms/PasswordStrength', module)
   .addParameters({ info })
@@ -27,7 +20,7 @@ storiesOf('Atoms/PasswordStrength', module)
     components: { APasswordStrength },
     props: {
       classKnobs: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       },
       textKnobs: {
         default: text('Content', 'No password')
