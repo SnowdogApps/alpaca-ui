@@ -2,6 +2,11 @@ import { mount } from '@vue/test-utils'
 import AFooter from './Footer.vue'
 
 describe('Footer', () => {
+
+  Object.defineProperty(window, 'matchMedia', {
+    value: jest.fn(() => { return { matches: true, addListener: jest.fn() } })
+  })
+
   it('has default structure', () => {
     const wrapper = mount(AFooter, {
       propsData: {
