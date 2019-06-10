@@ -12,7 +12,6 @@ storiesOf('Atoms/Icon', module)
       notes: readme
     }
   )
-  // @vue/component
   .add('Default', () => ({
     components: { AIcon },
     data: () => ({ icons }),
