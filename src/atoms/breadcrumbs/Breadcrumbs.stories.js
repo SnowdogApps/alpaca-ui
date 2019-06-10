@@ -6,15 +6,14 @@ import ALink from '../link/Link.vue'
 
 import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
-// @vue/component
 const defaultData = {
   data: () => ({ breadcrumbs })
 }
 
 addDecorator(StoryRouter())
+
 storiesOf('Atoms/Breadcrumbs', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { ABreadcrumbs },
     ...defaultData,
@@ -22,7 +21,6 @@ storiesOf('Atoms/Breadcrumbs', module)
       <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
     `
   }))
-  // @vue/component
   .add('With slots', () => ({
     components: { ABreadcrumbs, ALink },
     ...defaultData,

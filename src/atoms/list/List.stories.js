@@ -1,21 +1,20 @@
 import { storiesOf } from '@storybook/vue'
 import { select } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './List.selectors.json'
+
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
 import AIcon from '../icon/Icon.vue'
 
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-list--horizontal\` - Selector for applying horizontal styles
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
 
-const bemModifiers = [
-  null,
-  'a-list--horizontal'
-]
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Atoms/List', module)
   .addParameters({ info })
@@ -23,7 +22,7 @@ storiesOf('Atoms/List', module)
     components: { AList, AListItem },
     props: {
       classKnobs: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       }
     },
     template: `
@@ -44,7 +43,7 @@ storiesOf('Atoms/List', module)
     components: { AList, AListItem, AIcon },
     props: {
       classKnobs: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       }
     },
     data: () => ({
