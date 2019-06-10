@@ -5,12 +5,11 @@ describe('Heading', () => {
   it('has default structure', () => {
     const wrapper = mount(AHeading, {
       propsData: {
-        level: 1,
-        tag: 'span'
+        level: 1
       }
     })
 
-    expect(wrapper.is('span')).toBe(true)
+    expect(wrapper.is('h1')).toBe(true)
     expect(wrapper.classes()).toContain('a-heading')
     expect(wrapper.classes()).toContain('a-heading--first-level')
   })
@@ -27,7 +26,6 @@ describe('Heading', () => {
       }
     })
 
-    expect(wrapper.is('h1')).toBe(true)
     expect(wrapper.find('.a-heading span').exists()).toBe(true)
     expect(wrapper.find('.a-heading span').text()).toEqual('Heading level 1')
   })
