@@ -5,3 +5,8 @@
 @import '../../../assets/styles/transitions/_fade.scss';
 @import '../../../assets/styles/transitions/_slide-right.scss';
 @import '../../../assets/styles/transitions/_slide-down.scss';
+
+// Global styles for remove focus for mouse events
+.js-focus-visible :focus:not([data-focus-visible-added]) {
+  outline: none;
+}
