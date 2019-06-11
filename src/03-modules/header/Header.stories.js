@@ -9,7 +9,6 @@ import ALogin from '../../03-modules/login/Login.vue'
 import AMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
-import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu'
@@ -29,8 +28,7 @@ storiesOf('Modules/Header', module)
       AOffCanvasSidebar,
       AMiniCart,
       AWishlist,
-      AQuantityUpdate,
-      AProductItem
+      AQuantityUpdate
     },
     data: () => ({
       menu,
@@ -99,44 +97,7 @@ storiesOf('Modules/Header', module)
             return-to-shopping-button="Return to shopping"
           >
             <template #products>
-              <a-product-item
-                v-for="product in products"
-                :key="product.id"
-                :id="product.id"
-                :name="product.name"
-                :url="product.url"
-                :image="product.image"
-                :price="product.price"
-                :special-price="product.specialPrice"
-                :old-price="product.oldPrice"
-                :options="product.options"
-                remove-button="Remove button"
-                item-tag="li"
-                class="minicart__product-item"
-                @remove="removeMethod(product.id)"
-              >
-                <template #quantity>
-                  <a-quantity-update
-                    :value="3"
-                    class="product-item__qty"
-                    :input-id="'qty' + product.id"
-                    decrement-aria-label="Decrease the quantity"
-                    decrement-icon-title="Minus mark"
-                    increment-aria-label="Increase the quantity"
-                    increment-icon-title="Plus mark"
-                    @update="changeMethod"
-                  >
-                    <template #label>
-                      <a-label
-                        class="product-item__qty-label"
-                        :for="'qty' + product.id"
-                      >
-                        Qty:
-                      </a-label>
-                    </template>
-                  </a-quantity-update>
-                </template>
-               </a-product-item>
+              <!-- todo: add ProductListItem here -->
             </template>
            </a-mini-cart>
          </a-off-canvas-sidebar>
@@ -145,7 +106,9 @@ storiesOf('Modules/Header', module)
           ref="modalWishlist"
           heading="Wishlist"
         >
-          <a-wishlist :products="products" />
+          <a-wishlist>
+            <!-- todo: add ProductListItem here -->
+          </a-wishlist>
          </a-off-canvas-sidebar>
       </div>
     `
