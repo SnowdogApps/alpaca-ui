@@ -1,7 +1,7 @@
 // Storybook
 import { configure, addDecorator, addParameters } from '@storybook/vue'
 
-// Polyfils
+// Polyfills
 import 'focus-visible'
 
 // Addons
