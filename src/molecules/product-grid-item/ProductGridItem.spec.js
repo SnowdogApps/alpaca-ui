@@ -1,3 +1,4 @@
+import sinon from 'sinon'
 import { mount, RouterLinkStub } from '@vue/test-utils'
 import AProductGridItem from './ProductGridItem.vue'
 
@@ -23,13 +24,50 @@ describe('Product Grid Item', () => {
     expect(wrapper.classes().length).toBe(2)
   })
 
-  it('renders badge when text was passed', () => {
+  it('renders slots content when passed', () => {
     const wrapper = mount(AProductGridItem, {
       propsData: sampleRequiredData,
-      stubs: { 'router-link': RouterLinkStub }
+      slots: {
+        badge: `<span data-test="badge">New</span>`,
+        image: `<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">`,
+        name: `<h2 data-test="name">Sample name</h2>`,
+        price: `$100`,
+        options: `<ul data-test="options"><li>otion I</li></ul>`,
+        addToCart: `<button type="button" data-test="addToCart">Add to cart</button>`,
+        addToWishList: `<button type="button" data-test="addToWishList">Add to wishlist</button>`,
+        addToCompare: `<button type="button" data-test="addToCompare">Add to compare</button>`
+      }
     })
 
-    expect(wrapper.find('.a-product-grid-item__badge').exists()).toBe(true)
-    expect(wrapper.find('.a-product-grid-item__badge').text()).toEqual('Sale!')
+    const badge = wrapper.find('span[data-test="badge"]')
+    expect(badge.exists()).toBe(true)
+    expect(badge.text()).toEqual('New')
+
+    const image = wrapper.find('img[data-test="image"]')
+    expect(image.exists()).toBe(true)
+
+    const name = wrapper.find('h2[data-test="name"]')
+    expect(name.exists()).toBe(true)
+    expect(name.text()).toEqual('Sample name')
+
+    const price = wrapper.find('.a-product-grid-item__price')
+    expect(price.text()).toEqual('$100')
+
+    const options = wrapper.find('.a-product-grid-item__options ul[data-test="options"]')
+    expect(options.exists()).toBe(true)
+
+    const actions = wrapper.find('.a-product-grid-item__actions')
+
+    const addToCart = actions.find('button[data-test="addToCart"]')
+    expect(addToCart.exists()).toBe(true)
+    expect(addToCart.text()).toEqual('Add to cart')
+
+    const addToWishList = actions.find('button[data-test="addToWishList"]')
+    expect(addToWishList.exists()).toBe(true)
+    expect(addToWishList.text()).toEqual('Add to wishlist')
+
+    const addToCompare = actions.find('button[data-test="addToCompare"]')
+    expect(addToCompare.exists()).toBe(true)
+    expect(addToCompare.text()).toEqual('Add to compare')
   })
 })
