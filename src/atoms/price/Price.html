@@ -1,0 +1,24 @@
+<div class="price">
+  <!-- @slot Custom old price slots (Named slots) -->
+  <slot name="oldPrice">
+    <del
+      v-if="oldPrice"
+      :aria-label="oldPriceAriaLabel"
+      class="price__value price__value--old"
+    >
+      {{ oldPrice }}
+    </del>
+  </slot>
+  <!-- @slot Custom special price slots (Named slots) -->
+  <slot name="specialPrice">
+    <ins
+      v-if="specialPrice"
+      :aria-label="specialPriceAriaLabel"
+      class="price__value price__value--special"
+    >
+      {{ specialPrice }}
+    </ins>
+  </slot>
+  <!-- @slot Custom price content (Default slot) -->
+  <slot/>
+</div>
