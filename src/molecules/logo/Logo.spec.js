@@ -1,0 +1,34 @@
+import { mount, RouterLinkStub } from '@vue/test-utils'
+import ALogo from './Logo.vue'
+
+describe('Button', () => {
+  it('has default structure', () => {
+    const wrapper = mount(ALogo, {
+      stubs: { 'router-link': RouterLinkStub },
+      propsData: {
+        to: '#'
+      }
+    })
+
+    expect(wrapper.is('a')).toBe(true)
+    expect(wrapper.classes()).toContain('a-logo')
+    expect(wrapper.classes().length).toBe(1)
+  })
+
+  it('renders slot text when passed', () => {
+    const wrapper = mount(ALogo, {
+      stubs: { 'router-link': RouterLinkStub },
+      propsData: {
+        to: '#'
+      },
+      slots: {
+        image: `
+          <img src="/images/logo/alpaca.svg" alt="Logo">
+        `
+      }
+    })
+
+    expect(wrapper.find('.a-logo img').exists()).toBe(true)
+    expect(wrapper.find('.a-logo img').attributes('alt')).toEqual('Logo')
+  })
+})
