@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Vue Info table generator helper
 
+### Changed
+- Move ProductItem to atomic design, rename to ProductListItem
+
 ## [0.4.0] - 04-06-2019
 ### Added
 - This CHANGELOG

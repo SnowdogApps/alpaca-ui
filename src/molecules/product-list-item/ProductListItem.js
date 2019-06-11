@@ -1,24 +1,5 @@
-import AImage from '../../atoms/image/Image.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
-import APrice from '../../atoms/price/Price.vue'
-import ALabel from '../../atoms/label/Label.vue'
-import AList from '../../atoms/list/List.vue'
-import AListItem from '../../atoms/list-item/ListItem.vue'
-import AButton from '../../atoms/button/Button.vue'
-import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
-
 // @vue/component
 export default {
-  components: {
-    AImage,
-    AIcon,
-    APrice,
-    ALabel,
-    AList,
-    AListItem,
-    AButton,
-    AQuantityUpdate
-  },
   model: {
     prop: 'qty',
     event: 'change'
@@ -97,17 +78,17 @@ export default {
   },
   methods: {
     onRemove () {
-    /**
-     * Triggered when value is removed by id
-     * @type {Event}
-     */
+      /**
+       * Triggered when value is removed by id
+       * @type {Event}
+       */
       this.$emit('remove', this.id)
     },
     onChange (val) {
-    /**
-     * Triggered when value is changed
-     * @type {Event}
-     */
+      /**
+       * Triggered when value is changed
+       * @type {Event}
+       */
       this.$emit('change', val)
     }
   }
