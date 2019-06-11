@@ -5,6 +5,6 @@
   },
   {
     "name": ".message--error",
-    "description": "elector for applying styles for error message"
+    "description": "Selector for applying styles for error message"
   }
 ]
