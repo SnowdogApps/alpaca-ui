@@ -1,4 +1,3 @@
-import sinon from 'sinon'
 import { mount, RouterLinkStub } from '@vue/test-utils'
 import AProductGridItem from './ProductGridItem.vue'
 
