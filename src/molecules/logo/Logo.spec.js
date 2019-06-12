@@ -1,7 +1,7 @@
 import { mount, RouterLinkStub } from '@vue/test-utils'
 import ALogo from './Logo.vue'
 
-describe('Button', () => {
+describe('Logo', () => {
   it('has default structure', () => {
     const wrapper = mount(ALogo, {
       stubs: { 'router-link': RouterLinkStub },
