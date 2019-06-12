@@ -34,7 +34,6 @@ We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.c
 git clone git@github.com:SnowdogApps/alpaca-ui.git
 cd alpaca-ui
 yarn
-cd components
 yarn dev
 ```
 
