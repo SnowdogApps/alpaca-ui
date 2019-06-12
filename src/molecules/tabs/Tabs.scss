@@ -2,6 +2,7 @@
 
 // common
 $tabs__border-width             : 8px !default;
+$tabs__outline-focus            : $blue auto 5px !default;
 
 // button
 $tabs__button-padding           : $spacer--medium !default;
@@ -36,11 +37,20 @@ $tabs__content-padding\@large   : $spacer--large $spacer--extra-large !default;
       background-color: $tabs__button-background--active;
       border-bottom: $tabs__button-border--active;
     }
+
+    &:focus {
+      z-index: 1;
+      outline: $tabs__outline-focus;
+    }
   }
 
   &__content {
     flex: 100%;
     padding: $tabs__content-padding;
+
+    &:focus {
+      outline: $tabs__outline-focus;
+    }
 
     @include mq($screen-l) {
       padding: $tabs__content-padding\@large;
