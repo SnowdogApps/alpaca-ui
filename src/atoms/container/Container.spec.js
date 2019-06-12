@@ -5,6 +5,18 @@ describe('Container', () => {
   it('has default structure', () => {
     const wrapper = mount(AContainer)
 
+    expect(wrapper.is('div')).toBe(true)
+    expect(wrapper.classes()).toContain('a-container')
+    expect(wrapper.classes().length).toBe(1)
+  })
+
+  it('renders custom root element', () => {
+    const wrapper = mount(AContainer, {
+      propsData: {
+        tag: 'main'
+      }
+    })
+
     expect(wrapper.is('main')).toBe(true)
     expect(wrapper.classes()).toContain('a-container')
     expect(wrapper.classes().length).toBe(1)

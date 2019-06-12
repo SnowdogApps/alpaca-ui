@@ -18,3 +18,16 @@ storiesOf('Atoms/Container', module)
       </a-container>
     `
   }))
+  .add('Custom tag', () => ({
+    components: { AContainer },
+    props: {
+      contentKnob: {
+        default: text('Container content', 'Container')
+      }
+    },
+    template: `
+      <a-container tag="main">
+        {{ contentKnob }}
+      </a-container>
+    `
+  }))

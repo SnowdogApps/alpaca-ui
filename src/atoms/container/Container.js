@@ -1,2 +1,12 @@
 // @vue/component
-export default {}
+export default {
+  props: {
+    /**
+     * Container tag
+     */
+    tag: {
+      type: String,
+      default: 'div'
+    }
+  }
+}
