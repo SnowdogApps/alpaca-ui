@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Move CatalogGridItem to atomic design, rename to ProductGridItem
 
+### Fixed
+- Typo in Message.selectors.json file
+
 ## [0.4.0] - 04-06-2019
 ### Added
 - This CHANGELOG

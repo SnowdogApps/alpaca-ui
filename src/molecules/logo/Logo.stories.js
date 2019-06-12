@@ -6,7 +6,6 @@ import ALogo from './Logo.vue'
 addDecorator(StoryRouter())
 storiesOf('Molecules/Logo', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { ALogo },
     template: `
@@ -17,7 +16,6 @@ storiesOf('Molecules/Logo', module)
       />
     `
   }))
-  // @vue/component
   .add('With slots', () => ({
     components: { ALogo },
     template: `
