@@ -14,6 +14,15 @@ Highly customizable library of responsive UI components crafted for e-commerce. 
 
 > ⚠️ This library is currently in an early stage. Expect things to be broken or APIs to change as this project matures. DO NOT USE IT IN PRODUCTION!
 
+## Features
+
+- High customization and performance
+- Possibility to override global variables
+- Possibility to override components from partials (HTML/JS/SCSS)
+- Semantic and accessible code output
+- Ready to use with Vue CLI, Vue Storefornt and Nuxt.js
+
+
 ## Getting Started
 
 ### Installation 
@@ -67,14 +76,6 @@ export default {
 <style src="@snowdog/alpaca-ui/src/atoms/button/Button.scss" lang="scss" /> 
 ```
 For now, to see all possible cases/modifiers, you should clone and run repo as in Development point, or check .stories.js file in component.
-
-## Features
-
-- High customization and performance
-- Possibility to override global variables
-- Possibility to override components from partials (HTML/JS/SCSS)
-- Semantic and accessible code output
-- Ready to use with Vue CLI, Vue Storefornt and Nuxt.js
 
 ## Browser support
 
