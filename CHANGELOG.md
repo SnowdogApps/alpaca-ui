@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Vue Info table generator helper
 
+### Changed
+- Update readme
+
 ### Fixed
 - Typo in Message.selectors.json file
 

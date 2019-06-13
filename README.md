@@ -11,6 +11,60 @@ Highly customizable library of responsive UI components crafted for e-commerce. 
 
 > ⚠️ This library is currently in an early stage. Expect things to be broken or APIs to change as this project matures. DO NOT USE IT IN PRODUCTION!
 
+## Getting Started
+
+### Installation 
+
+Install Alpaca-UI using yarn
+```bash
+yarn add @snowdog/alpaca-ui
+```
+
+or npm
+```bash
+npm install @snowdog/alpaca-ui
+```
+
+### Usage
+
+Import component in your app using named imports:
+
+`import { AButton } from '@snowdog/alpaca-ui'`
+
+```vue
+<template>
+  <a-button type="button">
+    Alpaca button
+  </a-button>
+</template>
+
+<script>
+import { AButton } from '@snowdog/alpaca-ui'
+
+export default {
+  name: 'MyComponent',
+  components: AButton
+}
+</script>
+```
+
+If you need more flexibility you can take the source:
+
+```vue
+<template src="@snowdog/alpaca-ui/src/atoms/button/Button.html" />
+
+<script>
+import Button from '@snowdog/alpaca-ui/src/atoms/button/Button.js'
+
+export default {
+  mixins: [Button]
+}
+</script>
+
+<style src="@snowdog/alpaca-ui/src/atoms/button/Button.scss" lang="scss" /> 
+```
+For now, to see all possible cases/modifiers, you should clone and run repo as in Development point, or check .stories.js file in component.
+
 ## Features
 
 - High customization and performance
