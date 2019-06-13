@@ -13,7 +13,7 @@ $heading-font-size--fourth-level: 14px !default;
 $heading-font-size--fifth-level : 12px !default;
 $heading-font-size--sixth-level : 12px !default;
 
-.heading {
+.a-heading {
   margin: $headings-margin;
   color: $headings-color;
   font-weight: $headings-font-weight;
@@ -52,29 +52,29 @@ h3,
 h4,
 h5,
 h6 {
-  @extend .heading;
+  @extend .a-heading;
 }
 
 h1 {
-  @extend .heading--first-level;
+  @extend .a-heading--first-level;
 }
 
 h2 {
-  @extend .heading--second-level;
+  @extend .a-heading--second-level;
 }
 
 h3 {
-  @extend .heading--third-level;
+  @extend .a-heading--third-level;
 }
 
 h4 {
-  @extend .heading--fourth-level;
+  @extend .a-heading--fourth-level;
 }
 
 h5 {
-  @extend .heading--fifth-level;
+  @extend .a-heading--fifth-level;
 }
 
 h6 {
-  @extend .heading--sixth-level;
+  @extend .a-heading--sixth-level;
 }

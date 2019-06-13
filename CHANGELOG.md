@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vue Info table generator helper
 
 ### Changed
+- heading: update heading class and add unit test and knobs
 - Update readme
 
 ### Fixed
