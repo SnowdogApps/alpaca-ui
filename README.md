@@ -3,9 +3,12 @@
 </p>
 <br/>
 
+
 ## Alpaca UI
 
 [![CircleCI](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop.svg?style=svg)](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop)
+
+[![npm version](https://badge.fury.io/js/%40snowdog%2Falpaca-ui.svg)](https://www.npmjs.com/package/@snowdog/alpaca-ui)
 
 Highly customizable library of responsive UI components crafted for e-commerce. It is based on Vue.js and Alpaca design system.
 
