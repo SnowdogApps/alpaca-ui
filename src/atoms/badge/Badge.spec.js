@@ -20,4 +20,16 @@ describe('Badge', () => {
     expect(wrapper.find('.a-badge').exists()).toBe(true)
     expect(wrapper.find('.a-badge').text()).toEqual('Badge default text')
   })
+
+  it('renders custom root element', () => {
+    const wrapper = mount(ABadge, {
+      propsData: {
+        tag: 'span'
+      }
+    })
+
+    expect(wrapper.is('span')).toBe(true)
+    expect(wrapper.classes()).toContain('a-badge')
+    expect(wrapper.classes().length).toBe(1)
+  })
 })
