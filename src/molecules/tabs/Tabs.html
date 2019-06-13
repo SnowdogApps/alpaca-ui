@@ -3,11 +3,12 @@
   role="tablist"
 >
   <button
-    v-for="tab in tabs"
+    v-for="(tab, i) in tabs"
     :key="`${tab.id}-tab-trigger`"
     :id="`${tab.id}-tab-trigger`"
     :aria-controls="`${tab.id}-tab`"
     :aria-selected="tab.isActive || 'false'"
+    :ref="'button_' + i"
     :class="[
       'a-tabs__nav-button',
       {
@@ -17,6 +18,7 @@
     type="button"
     role="tab"
     @click="selectTab(tab)"
+    @keydown="onKeydown"
   >
     <!-- @slot Custom tab button content (Scoped slot) -->
     <slot
@@ -26,7 +28,11 @@
       {{ tab.name }}
     </slot>
   </button>
-  <div class="a-tabs__content">
+  <div
+    ref="content"
+    class="a-tabs__content"
+    tabindex="-1"
+  >
     <!-- @slot Tab components -->
     <slot/>
   </div>

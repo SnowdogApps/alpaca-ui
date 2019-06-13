@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Vue Info table generator helper
 
+### Changed
+- heading: update heading class and add unit test and knobs
+
+### Fixed
+- Typo in Message.selectors.json file
+
 ## [0.4.0] - 04-06-2019
 ### Added
 - This CHANGELOG
