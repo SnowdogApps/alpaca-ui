@@ -23,10 +23,13 @@ storiesOf('Atoms/Container', module)
     props: {
       contentKnob: {
         default: text('Container content', 'Container')
+      },
+      tagKnob: {
+        default: text('Html tag', 'div')
       }
     },
     template: `
-      <a-container tag="main">
+      <a-container :tag="tagKnob">
         {{ contentKnob }}
       </a-container>
     `
