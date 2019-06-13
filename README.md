@@ -27,12 +27,12 @@ Highly customizable library of responsive UI components crafted for e-commerce. 
 
 ### Installation 
 
-Install Alpaca-UI using yarn
+Add Alpaca UI to your project by using Yarn
 ```bash
 yarn add @snowdog/alpaca-ui
 ```
 
-or npm
+or NPM
 ```bash
 npm install @snowdog/alpaca-ui
 ```
