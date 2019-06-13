@@ -18,9 +18,11 @@ describe('Product List Item', () => {
         'value': 'Red'
       }
     ],
-    price: '',
-    specialPrice: '$100,00',
-    oldPrice: '$299,99',
+    price: {
+      price: '',
+      specialPrice: '$100,00',
+      oldPrice: '$299,99'
+    },
     url: '#',
     imageUrl: '/images/catalog-grid-item/product-1_320_312.jpg'
   }
@@ -41,8 +43,8 @@ describe('Product List Item', () => {
       slots: {
         name: `<h2 data-test="name">Sample name</h2>`,
         image: `<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">`,
-        price: `<div data-test="price">$100</div>`,
-        option: `<li data-test="option">option</li>`,
+        prices: `<div data-test="prices">$100</div>`,
+        options: `<ul data-test="options"><li>option</li></ul>`,
         removeAction: `<button type="button" data-test="remove">Remove</button>`
       }
     })
@@ -54,13 +56,11 @@ describe('Product List Item', () => {
     const image = wrapper.find('.a-product-list-item__image img[data-test="image"]')
     expect(image.exists()).toBe(true)
 
-    const price = wrapper.find('.a-product-list-item__data div[data-test="price"]')
-    expect(price.exists()).toBe(true)
-    expect(price.text()).toEqual('$100')
+    const prices = wrapper.find('div[data-test="prices"]')
+    expect(prices.exists()).toBe(true)
 
-    const option = wrapper.find('.a-product-list-item__attributes li[data-test="option"]')
-    expect(option.exists()).toBe(true)
-    expect(option.text()).toEqual('option')
+    const options = wrapper.find('ul[data-test="options"]')
+    expect(options.exists()).toBe(true)
 
     const remove = wrapper.find('.a-product-list-item__action-buttons-wrapper button[data-test="remove"]')
     expect(remove.exists()).toBe(true)
@@ -85,7 +85,6 @@ describe('Product List Item', () => {
 
     const optionList = wrapper.find('.a-product-list-item__attributes')
     expect(optionList.exists()).toBe(true)
-    expect(optionList.classes().length).toBe(2)
     expect(wrapper.findAll('dt').length).toBe(sampleRequiredData.options.length)
     expect(wrapper.findAll('dd').length).toBe(sampleRequiredData.options.length)
   })

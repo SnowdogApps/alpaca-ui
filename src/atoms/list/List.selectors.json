@@ -2,5 +2,9 @@
   {
     "name": ".a-list--horizontal",
     "description": "Selector for applying horizontal styles"
+  },
+  {
+    "name": ".a-list--grid",
+    "description": "Selector for applying grid styles - ideally for description list (dl) to set dt and dd in the same line"
   }
 ]

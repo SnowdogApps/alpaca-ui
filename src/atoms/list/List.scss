@@ -11,4 +11,9 @@ $list__style: none !default;
     display: flex;
     flex-flow: row wrap;
   }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+  }
 }

@@ -2,10 +2,13 @@
 
 $product-list-item__padding                     : $spacer--large 0 !default;
 $product-list-item__border                      : 1px solid $gray-light !default;
+$product-list-item__color                       : $gray-darker !default;
+$product-list-item__font-weight                 : $font-weight-normal !default;
 $product-list-item__image-width                 : 160px !default;
 $product-list-item__image-padding               : 0 $spacer--medium 0 0 !default;
 $product-list-item__name-weight\@medium         : $font-weight-bold !default;
 $product-list-item__name-padding\@medium        : 0 $spacer--medium 0 0 !default;
+$product-list-item__name-text-decoration        : none !default;
 $product-list-item__attributes-margin           : 0 0 $spacer--medium 0 !default;
 $product-list-item__actions-item-margin         : 0 0 0 $spacer !default;
 $product-list-item__actions-item-padding        : 0 $spacer--medium 0 0 !default;
@@ -22,6 +25,7 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
   flex-flow: row nowrap;
   width: 100%;
   padding: $product-list-item__padding;
+  color: $product-list-item__color;
   border-bottom: $product-list-item__border;
 
   &__image {
@@ -45,8 +49,9 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
   &__name {
     flex: 1;
     margin-bottom: $spacer;
+    color: $product-list-item__color;
     line-height: $font-line-height;
-    text-decoration: none;
+    text-decoration: $product-list-item__name-text-decoration;
 
     @include mq($screen-m) {
       padding: $product-list-item__name-padding\@medium;
@@ -55,14 +60,14 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
 
     &:hover,
     &:focus {
-      text-decoration: none;
+      text-decoration: $product-list-item__name-text-decoration;
     }
   }
 
   &__price-wrapper {
     display: flex;
     flex-direction: column;
-    font-weight: normal;
+    font-weight: $product-list-item__font-weight;
     text-align: right;
 
     @include mq($screen-m) {
@@ -79,12 +84,13 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
 
   &__qty {
     display: flex;
+    align-items: center;
   }
 
   &__qty-label {
     align-self: center;
     margin: $product-list-item__qty-label-margin;
-    font-weight: normal;
+    font-weight: $product-list-item__font-weight;
   }
 
   &__action-buttons-wrapper {
@@ -101,6 +107,10 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
     @include mq($screen-m) {
       font-size: $font-size-base;
     }
+  }
+
+  &__attribute {
+    padding: 0 $spacer $spacer 0;
   }
 
   &__actions {
@@ -132,10 +142,12 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
   &__action-icon {
     width: $product-list-item__action-icon-size;
     height: $product-list-item__action-icon-size;
+    opacity: 0.75;
     fill: $product-list-item__action-icon-fill-color;
 
     &:hover,
     &:focus {
+      opacity: 1;
       transition: $product-list-item__action-icon-transition;
       fill: $product-list-item__action-icon-fill-color-hover;
     }
