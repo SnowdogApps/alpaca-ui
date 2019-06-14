@@ -28,7 +28,7 @@ describe('Radio', () => {
       }
     })
 
-    const span = wrapper.find('.a-radio__label > span[data-test="default"]')
+    const span = wrapper.find('.a-radio__label span[data-test="default"]')
     expect(span.exists()).toBe(true)
     expect(span.text()).toEqual('Default slot')
   })
