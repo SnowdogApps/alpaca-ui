@@ -3,7 +3,7 @@
     :name="name"
     :id="inputId"
     :value="value"
-    :checked="checked === value ? true : false"
+    :checked="checked === value"
     type="radio"
     :class="['a-radio__field', inputClass]"
     @change="$emit('change', $event.target.value)"
