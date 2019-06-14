@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - heading: update heading class and add unit test and knobs
+- paragraph: to update stories - add text knobs, update component class name - add prefix
 
 ### Fixed
 - Typo in Message.selectors.json file
