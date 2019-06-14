@@ -30,25 +30,11 @@ export default {
       required: true
     },
     /**
-     * Product standard price
+     * Product prices
      */
-    price: {
-      type: String,
-      required: true
-    },
-    /**
-     * Product special price
-     */
-    specialPrice: {
-      type: String,
-      required: true
-    },
-    /**
-     * Product old price
-     */
-    oldPrice: {
-      type: String,
-      required: true
+    prices: {
+      type: [Object, Boolean],
+      default: false
     },
     /**
      * Product badge text

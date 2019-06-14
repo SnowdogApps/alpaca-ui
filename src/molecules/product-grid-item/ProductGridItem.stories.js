@@ -1,10 +1,16 @@
 import { addDecorator, storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { object } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-vue-router'
 
 import AProductGridItem from './ProductGridItem.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 
+const defaultPrices = {
+  price: '',
+  specialPrice: '$100.00',
+  oldPrice: '$299.99'
+}
 const defaultData = {
   methods: {
     addToCart: action('Added to Cart'),
@@ -18,15 +24,18 @@ storiesOf('Molecules/Product grid item', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { AProductGridItem },
+    props: {
+      pricesKnob: {
+        default: object('Product prices', defaultPrices)
+      }
+    },
     ...defaultData,
     template: `
       <a-product-grid-item
         id="prod1"
         name="Some product name - very long name because that's important"
-        price=""
-        specialPrice="$100,00"
-        oldPrice="$299,99"
         url="#"
+        :prices="pricesKnob"
         imageUrl="/images/catalog-grid-item/product-1_320_312.jpg"
         badgeText="Sale!"
         @addToCart="addToCart"
@@ -40,14 +49,17 @@ storiesOf('Molecules/Product grid item', module)
       AProductGridItem,
       AIcon
     },
+    props: {
+      pricesKnob: {
+        default: object('Product prices', defaultPrices)
+      }
+    },
     ...defaultData,
     template: `
       <a-product-grid-item
         id="prod1"
         name="Some product name - very long name because that's important"
-        price=""
-        specialPrice="$100,00"
-        oldPrice="$299,99"
+        :prices="pricesKnob"
         url="#"
         imageUrl="/images/catalog-grid-item/product-1_320_312.jpg"
         badgeText="Sale!"
@@ -74,10 +86,10 @@ storiesOf('Molecules/Product grid item', module)
           <strong>Product: </strong> <a :href="productUrl">{{ productName.toUpperCase() }}</a>
         </template>
 
-        <template #price="{ specialPrice, oldPrice }">
+        <template #prices="{ productPrices }">
           <div style="margin: 10px auto;">
-            <strong style="color: #00ff00;">{{ specialPrice }}</strong>
-            <small style="text-decoration: line-through;">{{ oldPrice }}</small>
+            <strong style="color: #00ff00;">{{ productPrices.specialPrice }}</strong>
+            <small style="text-decoration: line-through;">{{ productPrices.oldPrice }}</small>
           </div>
         </template>
 

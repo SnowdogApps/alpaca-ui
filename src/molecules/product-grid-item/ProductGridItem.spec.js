@@ -5,9 +5,11 @@ describe('Product Grid Item', () => {
   const sampleRequiredData = {
     id: 'prod1',
     name: 'Some product name - very long name because that\'s important',
-    price: '',
-    specialPrice: '$100,00',
-    oldPrice: '$299,99',
+    prices: {
+      price: '',
+      specialPrice: '$100,00',
+      oldPrice: '$299,99'
+    },
     url: '#',
     imageUrl: '/images/catalog-grid-item/product-1_320_312.jpg',
     badgeText: 'Sale!'
@@ -30,7 +32,7 @@ describe('Product Grid Item', () => {
         badge: `<span data-test="badge">New</span>`,
         image: `<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">`,
         name: `<h2 data-test="name">Sample name</h2>`,
-        price: `$100`,
+        prices: `<div data-test="prices">$100</div>`,
         options: `<ul data-test="options"><li>otion I</li></ul>`,
         addToCart: `<button type="button" data-test="addToCart">Add to cart</button>`,
         addToWishList: `<button type="button" data-test="addToWishList">Add to wishlist</button>`,
@@ -49,8 +51,8 @@ describe('Product Grid Item', () => {
     expect(name.exists()).toBe(true)
     expect(name.text()).toEqual('Sample name')
 
-    const price = wrapper.find('.a-product-grid-item__price')
-    expect(price.text()).toEqual('$100')
+    const prices = wrapper.find('div[data-test="prices"]')
+    expect(prices.exists()).toBe(true)
 
     const options = wrapper.find('.a-product-grid-item__options ul[data-test="options"]')
     expect(options.exists()).toBe(true)

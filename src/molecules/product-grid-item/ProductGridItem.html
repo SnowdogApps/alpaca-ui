@@ -50,15 +50,14 @@
     <div class="a-product-grid-item__price">
       <!--@slot Custom product price (Scoped slot)-->
       <slot
-        name="price"
-        :price="price"
-        :special-price="specialPrice"
-        :old-price="oldPrice"
+        name="prices"
+        :product-prices="prices"
       >
         <a-price
-          :price="price"
-          :special-price="specialPrice"
-          :old-price="oldPrice"
+          v-if="prices"
+          :price="prices.price"
+          :special-price="prices.specialPrice"
+          :old-price="prices.oldPrice"
         />
       </slot>
     </div>
