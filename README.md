@@ -3,9 +3,12 @@
 </p>
 <br/>
 
+
 ## Alpaca UI
 
 [![CircleCI](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop.svg?style=svg)](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop)
+
+[![npm version](https://badge.fury.io/js/%40snowdog%2Falpaca-ui.svg)](https://www.npmjs.com/package/@snowdog/alpaca-ui)
 
 Highly customizable library of responsive UI components crafted for e-commerce. It is based on Vue.js and Alpaca design system.
 
@@ -18,6 +21,61 @@ Highly customizable library of responsive UI components crafted for e-commerce. 
 - Possibility to override components from partials (HTML/JS/SCSS)
 - Semantic and accessible code output
 - Ready to use with Vue CLI, Vue Storefornt and Nuxt.js
+
+
+## Getting Started
+
+### Installation 
+
+Add Alpaca UI to your project by using Yarn
+```bash
+yarn add @snowdog/alpaca-ui
+```
+
+or NPM
+```bash
+npm install @snowdog/alpaca-ui
+```
+
+### Usage
+
+Import component in your app using named imports:
+
+`import { AButton } from '@snowdog/alpaca-ui'`
+
+```vue
+<template>
+  <a-button type="button">
+    Alpaca button
+  </a-button>
+</template>
+
+<script>
+import { AButton } from '@snowdog/alpaca-ui'
+
+export default {
+  name: 'MyComponent',
+  components: AButton
+}
+</script>
+```
+
+If you need more flexibility you can take the source:
+
+```vue
+<template src="@snowdog/alpaca-ui/src/atoms/button/Button.html" />
+
+<script>
+import Button from '@snowdog/alpaca-ui/src/atoms/button/Button.js'
+
+export default {
+  mixins: [Button]
+}
+</script>
+
+<style src="@snowdog/alpaca-ui/src/atoms/button/Button.scss" lang="scss" /> 
+```
+For now, to see all possible cases/modifiers, you should clone and run repo as in Development point, or check .stories.js file in component.
 
 ## Browser support
 
