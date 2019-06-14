@@ -54,6 +54,7 @@ describe('Radio', () => {
         name: 'Radio'
       }
     })
+
     const input = wrapper.find('.a-radio__field')
     expect(input.attributes('type')).toBeDefined()
     expect(input.attributes('type')).toEqual('radio')
@@ -66,10 +67,9 @@ describe('Radio', () => {
         name: 'Radio'
       }
     })
+
     const input = wrapper.find('.a-radio__field')
     expect(input.attributes('disabled')).not.toBeDefined()
-
-    wrapper.destroy()
   })
 
   it('emits a change event when clicked', () => {
