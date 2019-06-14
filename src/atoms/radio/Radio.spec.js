@@ -6,7 +6,8 @@ describe('Radio', () => {
     const wrapper = mount(ARadio, {
       propsData: {
         id: '1',
-        name: 'Radio'
+        name: 'Radio',
+        value: 'radio'
       }
     })
 
@@ -19,7 +20,8 @@ describe('Radio', () => {
     const wrapper = mount(ARadio, {
       propsData: {
         id: '1',
-        name: 'Radio'
+        name: 'Radio',
+        value: 'radio'
       },
       slots: {
         default: `<span data-test="default">Default slot</span>`
@@ -35,7 +37,8 @@ describe('Radio', () => {
     const wrapper = mount(ARadio, {
       propsData: {
         id: '1',
-        name: 'Radio'
+        name: 'Radio',
+        value: 'radio'
       },
       slots: {
         option: '<label data-test="label">Label</label>'
@@ -51,7 +54,8 @@ describe('Radio', () => {
     const wrapper = mount(ARadio, {
       propsData: {
         id: '1',
-        name: 'Radio'
+        name: 'Radio',
+        value: 'radio'
       }
     })
 
@@ -64,7 +68,8 @@ describe('Radio', () => {
     const wrapper = mount(ARadio, {
       propsData: {
         id: '1',
-        name: 'Radio'
+        name: 'Radio',
+        value: 'radio'
       }
     })
 
