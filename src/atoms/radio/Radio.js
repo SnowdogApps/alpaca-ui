@@ -1,6 +1,6 @@
 // @vue/component
-
 import ALabel from '../label/Label.vue'
+
 export default {
   components: {
     ALabel
