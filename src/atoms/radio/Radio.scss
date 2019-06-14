@@ -26,6 +26,8 @@ $radio__dot-size          : 6px !default;
     opacity: 0;
 
     &:checked + .a-radio__label {
+      color: $radio__label-color-active;
+
       .a-radio__icon {
         &::before {
           transform: scale(1);
@@ -66,7 +68,7 @@ $radio__dot-size          : 6px !default;
       height: $radio__dot-size;
       margin: auto;
       background-color: $radio__icon-background;
-      border-radius: $radio__dot-size;
+      border-radius: 100%;
       transform: scale(0);
       opacity: 0;
       transition: $radio__icon-transition;

@@ -10,7 +10,6 @@ Snowdog team is monitoring for new pull requests. We'll review your PR and eithe
 git clone git@github.com:SnowdogApps/alpaca-ui.git
 cd alpaca-ui
 yarn
-cd components
 yarn dev
 ```
 
