@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Vue Info table generator helper
+- Tests for radio button
 
 ### Changed
 - heading: update heading class and add unit test and knobs
