@@ -1,5 +1,6 @@
 import { mount, RouterLinkStub } from '@vue/test-utils'
 import AProductGridItem from './ProductGridItem.vue'
+import ARating from '../../molecules/rating/Rating.vue'
 
 describe('Product Grid Item', () => {
   const sampleRequiredData = {
@@ -36,9 +37,12 @@ describe('Product Grid Item', () => {
         options: `<ul data-test="options"><li>otion I</li></ul>`,
         addToCart: `<button type="button" data-test="addToCart">Add to cart</button>`,
         addToWishList: `<button type="button" data-test="addToWishList">Add to wishlist</button>`,
-        addToCompare: `<button type="button" data-test="addToCompare">Add to compare</button>`
+        addToCompare: `<button type="button" data-test="addToCompare">Add to compare</button>`,
+        rating: ARating
       }
     })
+
+    expect(wrapper.contains(ARating)).toBe(true)
 
     const badge = wrapper.find('span[data-test="badge"]')
     expect(badge.exists()).toBe(true)

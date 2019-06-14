@@ -2,7 +2,7 @@
   <!--@slot Custom product badge (Scoped slot)-->
   <slot
     name="badge"
-    :badge-text="badgeText"
+    :product-badge-text="badgeText"
   >
     <a-badge
       v-if="badgeText"
@@ -15,8 +15,8 @@
   <!--@slot Custom product image (Scoped slot)-->
   <slot
     name="image"
-    :image-url="imageUrl"
-    :alt="name"
+    :product-image-url="imageUrl"
+    :product-image-alt="name"
   >
     <router-link
       :to="url"
@@ -47,6 +47,11 @@
       </h2>
     </slot>
 
+    <div class="a-product-grid-item__rating">
+      <!--@slot Custom product rating (Named slot)-->
+      <slot name="rating" />
+    </div>
+
     <div class="a-product-grid-item__price">
       <!--@slot Custom product price (Scoped slot)-->
       <slot
@@ -62,38 +67,23 @@
       </slot>
     </div>
 
-    <!--TODO Add rating component-->
     <div class="a-product-grid-item__options">
       <!--@slot Custom product options (Named slot)-->
       <slot name="options" />
     </div>
 
     <div class="a-product-grid-item__actions">
-      <form class="a-product-grid-item__primary-form">
-        <!--@slot Custom add to cart action (Scoped slot)-->
-        <slot
-          name="addToCart"
-          :add-to-cart="addToCart"
-          :add-to-cart-text="addToCartText"
-        >
-          <a-button
-            class="button--secondary a-product-grid-item__primary-action"
-            @click.native="addToCart"
-          >
-            {{ addToCartText }}
-          </a-button>
-        </slot>
-      </form>
-
       <div class="a-product-grid-item__secondary-action">
         <!--@slot Custom add to wishlist action (Scoped slot)-->
         <slot
           name="addToWishList"
-          :add-to-wishlist="addToWishList"
+          :product-add-to-wishlist="addToWishList"
+          :product-add-to-wishlist-text="addToWishListText"
         >
           <a-button
-            aria-label="Add to Wish List"
+            :aria-label="addToWishListText"
             @click.native="addToWishList"
+            class="a-product-grid-item__action-button"
           >
             <a-icon icon="heart"/>
           </a-button>
@@ -103,15 +93,32 @@
         <slot
           name="addToCompare"
           :add-to-compare="addToCompare"
+          :add-to-compare-text="addToCompareText"
         >
           <a-button
-            aria-label="Add to Wish compare"
+            :aria-label="addToCompareText"
             @click.native="addToCompare"
+            class="a-product-grid-item__action-button"
           >
             <a-icon icon="compare"/>
           </a-button>
         </slot>
       </div>
+      <form class="a-product-grid-item__primary-form">
+        <!--@slot Custom add to cart action (Scoped slot)-->
+        <slot
+          name="addToCart"
+          :product-add-to-cart="addToCart"
+          :product-add-to-cart-text="addToCartText"
+        >
+          <a-button
+            class="button--secondary a-product-grid-item__primary-action"
+            @click.native="addToCart"
+          >
+            {{ addToCartText }}
+          </a-button>
+        </slot>
+      </form>
     </div>
   </section>
 </a-list-item>

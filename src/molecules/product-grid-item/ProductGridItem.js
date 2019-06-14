@@ -49,6 +49,20 @@ export default {
     addToCartText: {
       type: String,
       default: 'Add to cart'
+    },
+    /**
+     * Product add to cart wishlist default text
+     */
+    addToWishListText: {
+      type: String,
+      default: 'Add to wishlist'
+    },
+    /**
+     * Product add to compare default text
+     */
+    addToCompareText: {
+      type: String,
+      default: 'Add to compare'
     }
   },
   methods: {

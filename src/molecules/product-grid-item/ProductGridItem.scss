@@ -1,9 +1,9 @@
 @import '../../../assets/styles/_globals.scss';
 
 $catalog-grid-item__base-spacing              : $spacer !default;
+$catalog-grid-item__base-color                : $gray-darker !default;
 $catalog-grid-item__border                    : 1px solid $gray-lightest !default;
 $catalog-grid-item__font-size                 : $font-size-base !default;
-$catalog-grid-item__font-size\@large          : 16px !default;
 $catalog-grid-item__line-height               : 1.5 !default;
 $catalog-grid-item__font-weight               : $font-weight-bold !default;
 
@@ -19,17 +19,19 @@ $catalog-grid-item__link-overflow--visible    : visible !default;
 $catalog-grid-item__link-white-space          : nowrap !default;
 $catalog-grid-item__link-white-space--visible : normal !default;
 $catalog-grid-item__link-text-overflow        : ellipsis !default;
+$catalog-grid-item__link-text-decoration       : none !default;
 
 $catalog-grid-item__content-bg-color          : $white !default;
 $catalog-grid-item__content-padding           : $spacer !default;
+$catalog-grid-item__content-padding\@large    : $spacer--medium $spacer !default;
 $catalog-grid-item__content-width             : 100% !default;
 $catalog-grid-item__content-height            : 66px !default;
 $catalog-grid-item__content-translateY        : translateY(-$catalog-grid-item__content-height) !default;
 $catalog-grid-item__content-translateY--active: translateY(-100%) !default;
 
-$catalog-grid-item__name-color                : $font-color-base !default;
+$catalog-grid-item__name-color                : $catalog-grid-item__base-color !default;
 $catalog-grid-item__name-font-weight          : $font-weight-normal !default;
-$catalog-grid-item__name-margin-bottom       : $spacer !default;
+$catalog-grid-item__name-margin-bottom        : $spacer !default;
 
 $catalog-grid-item__price-margin-bottom       : $spacer !default;
 
@@ -42,11 +44,15 @@ $catalog-grid-item__action-icon-transition    : $transition-base !default;
 $catalog-grid-item__action-icon-fill          : $gray-darker !default;
 $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
+$catalog-grid-item__primary-action-border     : 2px solid $green !default;
+$catalog-grid-item__rating-wrapper-transition : opacity 0.3s ease-in-out, height 0.3s ease-in-out !default;
+
 .a-product-grid-item {
   position: relative;
   display: block;
   padding: $reset;
   overflow: hidden;
+  color: $catalog-grid-item__base-color;
   border: $catalog-grid-item__border;
 
   &:hover,
@@ -59,6 +65,13 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
       .a-product-grid-item__link--name {
         overflow: $catalog-grid-item__link-overflow--visible;
         white-space: $catalog-grid-item__link-white-space--visible;
+      }
+
+      .a-product-grid-item__rating-wrapper {
+        position: relative;
+        height: auto;
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
@@ -80,6 +93,7 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
       overflow: $catalog-grid-item__link-overflow;
       color: $catalog-grid-item__name-color;
       white-space: $catalog-grid-item__link-white-space;
+      text-decoration: $catalog-grid-item__link-text-decoration;
       text-overflow: $catalog-grid-item__link-text-overflow;
     }
   }
@@ -89,11 +103,11 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
     width: 100%;
     max-width: 100%;
 
-    @media all and (min-width: 768px) {
+    @include mq($screen-m) {
       padding-bottom: $catalog-grid-item__content-height;
     }
 
-    @media all and (min-width: 768px) and (min-width: 1600px) {
+    @include mq($screen-m) {
       padding-bottom: $reset;
     }
   }
@@ -103,10 +117,6 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
     font-weight: $catalog-grid-item__name-font-weight;
     font-size: $catalog-grid-item__font-size;
     line-height: $catalog-grid-item__line-height;
-
-    @include mq($screen-xxl) {
-      font-size: $catalog-grid-item__font-size\@large;
-    }
   }
 
   &__price {
@@ -116,10 +126,6 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
     font-size: $catalog-grid-item__font-size;
     line-height: $catalog-grid-item__line-height;
     white-space: nowrap;
-
-    @include mq($screen-xxl) {
-      font-size: $catalog-grid-item__font-size\@large;
-    }
   }
 
   &__details {
@@ -134,15 +140,39 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
       transform: $catalog-grid-item__content-translateY;
     }
 
+    @include mq($screen-xl) {
+      padding: $catalog-grid-item__content-padding\@large;
+    }
+
     @include mq($screen-xxl) {
       transform: $reset;
     }
   }
 
-  &__options {
-    .swatch {
-      margin: $catalog-grid-item__base-spacing 0;
-    }
+  &__rating-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 0;
+    margin: $catalog-grid-item__base-spacing 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: $catalog-grid-item__rating-wrapper-transition;
+  }
+
+  &__rating-wrapper &__rating-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__rating-button {
+    min-width: 0;
+    height: auto;
+  }
+
+  &__rating-count {
+    font-size: 12px;
   }
 
   &__actions {
@@ -154,36 +184,38 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
   &__primary-form {
     margin: $reset;
+  }
 
-    @include mq($screen-m) {
-      flex: 1;
-    }
+  &__primary-action {
+    color: $catalog-grid-item__base-color;
+    background: $catalog-grid-item__action-background;
+    border: $catalog-grid-item__primary-action-border;
   }
 
   &__secondary-action {
     display: flex;
+    flex: 1;
     align-items: center;
-    justify-content: center;
+  }
 
-    .a-button {
-      width: $catalog-grid-item__action-size;
-      height: $catalog-grid-item__action-size;
-      padding: $reset;
-      background: $catalog-grid-item__action-background;
-      border: $catalog-grid-item__action-border;
-      cursor: $catalog-grid-item__action-cursor;
-      fill: $catalog-grid-item__action-icon-fill;
+  &__action-button {
+    width: $catalog-grid-item__action-size;
+    height: $catalog-grid-item__action-size;
+    padding: $reset;
+    background: $catalog-grid-item__action-background;
+    border: $catalog-grid-item__action-border;
+    cursor: $catalog-grid-item__action-cursor;
+    fill: $catalog-grid-item__action-icon-fill;
 
-      &:hover,
-      &:focus {
-        transition: $catalog-grid-item__action-icon-transition;
-        fill: $catalog-grid-item__action-icon-fill-hover;
-      }
+    &:hover,
+    &:focus {
+      transition: $catalog-grid-item__action-icon-transition;
+      fill: $catalog-grid-item__action-icon-fill-hover;
+    }
 
-      .a-icon {
-        width: $catalog-grid-item__action-icon-size;
-        height: $catalog-grid-item__action-icon-size;
-      }
+    .a-icon {
+      width: $catalog-grid-item__action-icon-size;
+      height: $catalog-grid-item__action-icon-size;
     }
   }
 }
