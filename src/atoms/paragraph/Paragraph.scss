@@ -8,7 +8,7 @@ $paragraph-font-size  : $font-size-base !default;
 $paragraph-margin     : 0 0 $spacer--medium 0 !default;
 $paragraph-transition : none !default;
 
-.paragraph {
+.a-paragraph {
   margin: $paragraph-margin;
   color: $paragraph-color;
   font-weight: $paragraph-font-weight;
