@@ -5,7 +5,6 @@ $radio__vertical-align                : middle !default;
 $radio__label-width                   : 100% !default;
 $radio__label-font-size               : $font-size-small !default;
 $radio__label-color                   : $black !default;
-$radio__label-color-active            : $color-primary !default;
 $radio__label-font-weight             : $font-weight-normal !default;
 $radio__icon-size                     : 16px !default;
 $radio__icon-margin                   : 0 $spacer 0 0 !default;
@@ -27,8 +26,6 @@ $radio__icon-background--checked      : $color-primary !default;
     opacity: 0;
 
     &:checked + .a-radio__label {
-      color: $radio__label-color-active;
-
       .a-radio__icon {
         background-color: $radio__icon-background--checked;
         border: $radio__icon-border--checked;
