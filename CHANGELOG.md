@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - heading: update heading class and add unit test and knobs
+- container: add props with tag, update tests
 - Update readme
 - Refactor styles for radio button
 
