@@ -1,5 +1,5 @@
 // @vue/component
-import ALabel from '../label/Label.vue'
+import ALabel from '../../atoms/label/Label.vue'
 
 export default {
   components: {

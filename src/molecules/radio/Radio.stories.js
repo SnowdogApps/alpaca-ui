@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import ARadio from './Radio.vue'
 
-storiesOf('Atoms/Radio', module)
+storiesOf('Molecules/Radio', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ARadio },
