@@ -45,36 +45,3 @@ $heading-font-size--sixth-level : 12px !default;
     font-size: $heading-font-size--sixth-level;
   }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend .a-heading;
-}
-
-h1 {
-  @extend .a-heading--first-level;
-}
-
-h2 {
-  @extend .a-heading--second-level;
-}
-
-h3 {
-  @extend .a-heading--third-level;
-}
-
-h4 {
-  @extend .a-heading--fourth-level;
-}
-
-h5 {
-  @extend .a-heading--fifth-level;
-}
-
-h6 {
-  @extend .a-heading--sixth-level;
-}
