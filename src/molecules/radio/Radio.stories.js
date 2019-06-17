@@ -17,6 +17,7 @@ storiesOf('Molecules/Radio', module)
           v-model="selected"
           name="radio1"
           value="option_one"
+          id="r1"
         >
           Option one
         </a-radio>
@@ -24,6 +25,7 @@ storiesOf('Molecules/Radio', module)
           v-model="selected"
           name="radio1"
           value="option_two"
+          id="r2"
         >
           Option two
         </a-radio>
