@@ -30,12 +30,16 @@ $checkbox__icon-transition   : $transition-base !default;
   }
 
   &__label {
+    display: flex;
+    align-items: center;
     margin: $reset;
     padding-left: $checkbox__label-padding;
     cursor: pointer;
   }
 
   &__item {
+    display: flex;
+    align-items: center;
     width: $checkbox__item-size;
     height: $checkbox__item-size;
     border: $checkbox__border;
