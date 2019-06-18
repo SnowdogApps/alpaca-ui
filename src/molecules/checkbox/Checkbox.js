@@ -3,7 +3,7 @@
 export default {
   model: {
     prop: 'checked',
-    event: 'input'
+    event: 'change'
   },
   props: {
     /**

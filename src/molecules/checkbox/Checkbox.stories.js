@@ -26,7 +26,7 @@ storiesOf('Molecules/Checkbox', module)
         name="checkbox-default"
         v-model="status"
         value="some value"
-        @input="onChange"
+        @change="onChange"
       >
         Checkbox field
       </a-checkbox>
@@ -45,7 +45,7 @@ storiesOf('Molecules/Checkbox', module)
         input-class="a-checkbox__field"
         v-model="status"
         value="some value"
-        @input="onChange"
+        @change="onChange"
       >
         <template #label>
           <a-icon

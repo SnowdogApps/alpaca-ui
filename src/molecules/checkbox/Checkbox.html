@@ -6,7 +6,7 @@
     :class="['a-checkbox__field', inputClass]"
     :value="value"
     :checked="checked"
-    @change="$emit('input', $event.target.checked)"
+    @change="$emit('change', $event.target.checked)"
   >
   <!-- @slot Custom checkbox markup (Named slot) -->
   <slot name="label">
