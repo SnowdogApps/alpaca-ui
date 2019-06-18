@@ -12,13 +12,12 @@ $checkbox__icon-fill         : $color-primary !default;
 $checkbox__icon-transition   : $transition-base !default;
 
 .a-checkbox {
+  position: relative;
   display: flex;
   margin-bottom: $checkbox__margin;
 
   &__field {
     position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
 
     &:checked + .a-checkbox__item .a-checkbox__icon {
