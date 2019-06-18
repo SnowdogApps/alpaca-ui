@@ -5,8 +5,9 @@ $checkbox__line-height       : 18px !default;
 $checkbox__label-padding     : 26px !default;
 $checkbox__border            : 2px solid $gray !default;
 $checkbox__border--checked   : none !default;
-
-$checkbox__icon-size         : 18px !default;
+$checkbox__item-size         : 18px !default;
+$checkbox__icon-width        : 100% !default;
+$checkbox__icon-height       : 100% !default;
 $checkbox__icon-border-radius: 2px !default;
 $checkbox__icon-fill         : $color-primary !default;
 $checkbox__icon-transition   : $transition-base !default;
@@ -21,11 +22,11 @@ $checkbox__icon-transition   : $transition-base !default;
     left: 0;
     opacity: 0;
 
-    &:checked + .a-checkbox__icon {
+    &:checked + .a-checkbox__item .a-checkbox__icon {
       opacity: 1;
     }
 
-    &:checked ~ .a-checkbox__label::before {
+    &:checked ~ .a-checkbox__item {
       border: $checkbox__border--checked;
     }
   }
@@ -36,25 +37,19 @@ $checkbox__icon-transition   : $transition-base !default;
     padding-left: $checkbox__label-padding;
     line-height: $checkbox__line-height;
     cursor: pointer;
+  }
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: $checkbox__icon-size;
-      height: $checkbox__icon-size;
-      border: $checkbox__border;
-      border-radius: $checkbox__icon-border-radius;
-      content: '';
-    }
+  &__item {
+    position: absolute;
+    width: $checkbox__item-size;
+    height: $checkbox__item-size;
+    border: $checkbox__border;
+    border-radius: $checkbox__icon-border-radius;
   }
 
   &__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $checkbox__icon-size;
-    height: $checkbox__icon-size;
+    width: $checkbox__icon-width;
+    height: $checkbox__icon-height;
     padding: $reset;
     cursor: pointer;
     opacity: 0;
