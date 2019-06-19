@@ -48,7 +48,7 @@ storiesOf('Molecules/Checkbox', module)
         @change="onChange"
       >
         <template #label>
-          <div class="a-checkbox__item">
+          <div class="a-checkbox__icon-wrapper">
             <a-icon
               icon="checked"
               class="a-checkbox__icon"
