@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - container: add props with tag, update tests
 - Update readme
 - Update tests in heading component, remove extends from styles
-- image: class name - add prefix
+- image: class name - add prefix, add basic tests
 
 ### Fixed
 - Typo in Message.selectors.json file
