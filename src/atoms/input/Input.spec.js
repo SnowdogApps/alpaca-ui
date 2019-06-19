@@ -19,7 +19,7 @@ describe('Input', () => {
     expect(input.attributes('type')).toBe('text')
   })
 
-  it('is disabled when disabled', () => {
+  it('is disabled when disabled = true', () => {
     const wrapper = mount(AInput, {
       propsData: {
         disabled: true
