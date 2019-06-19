@@ -8,8 +8,3 @@ $image__wrapper-background-color: $white !default;
   width: $image__width;
   max-width: $image__width;
 }
-
-img,
-picture {
-  @extend .a-image;
-}
