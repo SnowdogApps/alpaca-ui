@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Vue Info table generator helper
-
+- Add more tests in input/input-wrapper
 ### Changed
 - heading: update heading class and add unit test and knobs
 - paragraph: to update stories - add text knobs, update component class name - add prefix
