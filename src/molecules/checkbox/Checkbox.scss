@@ -21,11 +21,11 @@ $checkbox__icon-transition   : $transition-base !default;
     position: absolute;
     opacity: 0;
 
-    &:checked + .a-checkbox__item .a-checkbox__icon {
+    &:checked + .a-checkbox__icon-wrapper .a-checkbox__icon {
       opacity: 1;
     }
 
-    &:checked ~ .a-checkbox__item {
+    &:checked ~ .a-checkbox__icon-wrapper {
       border: $checkbox__border--checked;
     }
   }
@@ -38,7 +38,7 @@ $checkbox__icon-transition   : $transition-base !default;
     cursor: pointer;
   }
 
-  &__item {
+  &__icon-wrapper {
     display: flex;
     align-items: center;
     width: $checkbox__item-size;
