@@ -9,7 +9,7 @@ describe('Input', () => {
     expect(wrapper.classes().length).toBe(1)
   })
 
-  it('renders number input when type set to text', () => {
+  it('renders text input when type set to text', () => {
     const wrapper = mount(AInput, {
       propsData: {
         type: 'text'
@@ -32,7 +32,6 @@ describe('Input', () => {
 
   it('emits an input event', () => {
     const wrapper = mount(AInput)
-
     const input = wrapper.find('.a-input')
     input.element.value = 'Sample text'
     input.trigger('input')
