@@ -22,4 +22,10 @@ describe('Input wrapper', () => {
     const input = wrapper.find('.a-input-wrapper > input')
     expect(input.exists()).toBe(true)
   })
+
+  it('renders text input by default', () => {
+    const wrapper = mount(AInputWrapper)
+    const input = wrapper.find('.a-input')
+    expect(input.attributes('type')).toBe('text')
+  })
 })
