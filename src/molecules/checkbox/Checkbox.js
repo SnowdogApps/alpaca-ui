@@ -18,21 +18,21 @@ export default {
      */
     value: {
       type: String,
-      default: null
+      required: true
     },
     /**
      * Input id
      */
     id: {
       type: String,
-      default: null
+      required: true
     },
     /**
      * Input name
      */
     name: {
       type: String,
-      default: null
+      required: true
     },
     /**
      * Class for input
