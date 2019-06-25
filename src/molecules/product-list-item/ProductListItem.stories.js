@@ -60,6 +60,53 @@ storiesOf('Molecules/Product List Item', module)
       />
     `
   }))
+  .add('With Qty Updater', () => ({
+    components: { AProductListItem, AQuantityUpdate },
+    props: {
+      nameKnob: {
+        default: text('Product name', 'Ingrid Running Jacket')
+      },
+      imageUrlKnob: {
+        default: text('Product image url', '/images/product/cart-product-160_160.jpg')
+      },
+      pricesKnob: {
+        default: object('Product prices', defaultPrices)
+      },
+      optionsKnob: {
+        default: object('Product options', defaultOptions)
+      }
+    },
+    methods: {
+      removeMethod: action('Remove'),
+      changeMethod: action('Change')
+    },
+    template: `
+      <a-product-list-item
+        id="prod1"
+        url="#"
+        :name="nameKnob"
+        :image-url="imageUrlKnob"
+        :prices="pricesKnob"
+        :options="optionsKnob"
+        remove-button-aria-label="Remove this product from your shopping cart"
+        @remove="removeMethod"
+      >
+        <template #quantity>
+          <a-quantity-update
+            :value="Number(2)"
+            input-id="qty_1"
+            class="a-product-list-item__qty"
+            @update="changeMethod"
+            decrement-aria-label="Decrease the quantity"
+            decrement-icon-title="Minus mark"
+            increment-aria-label="Increase the quantity"
+            increment-icon-title="Plus mark"
+            label=""
+          />
+        </template>
+      </a-product-list-item>
+    `
+  }))
   .add('With slots', () => ({
     components: {
       AProductListItem,
@@ -82,10 +129,7 @@ storiesOf('Molecules/Product List Item', module)
     },
     methods: {
       removeMethod: action('Remove'),
-      changeMethod: action('Change'),
-      showAlert (msg) {
-        alert(msg)
-      }
+      changeMethod: action('Change')
     },
     template: `
       <a-product-list-item
@@ -143,9 +187,7 @@ storiesOf('Molecules/Product List Item', module)
           </a-quantity-update>
         </template>
         <template #removeAction="{ productRemove }">
-          <button
-            @click="() => { productRemove(); showAlert('Item removed!'); }"
-          >
+          <button @click="() => { productRemove(); }">
             Delete!
           </button>
         </template>

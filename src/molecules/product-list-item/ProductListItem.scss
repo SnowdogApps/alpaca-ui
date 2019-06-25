@@ -4,19 +4,33 @@ $product-list-item__padding                     : $spacer--large 0 !default;
 $product-list-item__border                      : 1px solid $gray-light !default;
 $product-list-item__color                       : $gray-darker !default;
 $product-list-item__font-weight                 : $font-weight-normal !default;
+
 $product-list-item__image-width                 : 160px !default;
 $product-list-item__image-padding               : 0 $spacer--medium 0 0 !default;
+
 $product-list-item__name-weight\@small          : $font-weight-bold !default;
 $product-list-item__name-padding\@small         : 0 $spacer 0 0 !default;
 $product-list-item__name-text-decoration        : none !default;
+
+$product-list-item__attributes-font-size        : $font-size-small !default;
+$product-list-item__attributes-font-size\@small : $font-size-base !default;
+
+$product-list-item__attribute-label-padding     : $reset !default;
+$product-list-item__attribute-label-margin      : $reset $spacer $spacer $reset !default;
+
+$product-list-item__attribute-value-padding     : $reset !default;
+$product-list-item__attribute-value-margin      : $reset $spacer $spacer $reset !default;
+
 $product-list-item__actions-item-margin         : 0 0 0 $spacer !default;
-$product-list-item__actions-item-padding        : 0 $spacer--medium 0 0 !default;
+
 $product-list-item__button-border               : none !default;
 $product-list-item__button-background           : none !default;
+
 $product-list-item__action-icon-fill-color      : $gray-darker !default;
 $product-list-item__action-icon-size            : 20px !default;
 $product-list-item__action-icon-fill-color-hover: $color-primary !default;
 $product-list-item__action-icon-transition      : $transition-base !default;
+
 $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
 
 .a-product-list-item {
@@ -99,17 +113,18 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
   &__attributes {
     display: inline-block;
     width: 100%;
-    font-size: $font-size-small;
+    font-size: $product-list-item__attributes-font-size;
 
-    @include mq($screen-m) {
-      font-size: $font-size-base;
+    @include mq($screen-s) {
+      font-size: $product-list-item__attributes-font-size\@small;
     }
   }
 
   &__attribute-label {
     float: left;
     clear: left;
-    margin: $reset $spacer $spacer $reset;
+    margin: $product-list-item__attribute-label-margin;
+    padding: $product-list-item__attribute-label-padding;
     padding: $reset;
 
     &::after {
@@ -119,8 +134,8 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
 
   &__attribute-value {
     float: left;
-    margin: $reset $spacer $spacer $reset;
-    padding: $reset;
+    margin: $product-list-item__attribute-value-margin;
+    padding: $product-list-item__attribute-value-padding;
   }
 
   &__actions {
@@ -128,11 +143,9 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
     flex-direction: column;
     justify-content: space-between;
     margin-top: $spacer--medium;
-    // padding: $product-list-item__actions-item-padding;
 
     @include mq($screen-m) {
       flex-direction: row;
-      // padding: $reset;
     }
 
     &--to-right {

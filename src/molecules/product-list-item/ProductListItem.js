@@ -46,6 +46,13 @@ export default {
     options: {
       type: Array,
       default: null
+    },
+    /**
+     * Product remove button aria label
+     */
+    removeButtonAriaLabel: {
+      type: String,
+      default: ''
     }
   },
   computed: {
