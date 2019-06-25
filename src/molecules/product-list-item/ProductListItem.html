@@ -12,6 +12,7 @@
       />
     </slot>
   </div>
+
   <div class="a-product-list-item__info">
     <div class="a-product-list-item__data">
       <!--@slot Custom product name (Scoped slot)-->
@@ -48,26 +49,15 @@
         name="options"
         :product-options="options"
       >
-        <a-list
-          v-if="options"
-          tag="dl"
-          class="a-list--grid a-product-list-item__attributes"
-        >
-          <template v-for="item in options">
-            <a-list-item
-              tag="dt"
-              class="a-product-list-item__attribute"
-            >
-              {{ item.label }}
-            </a-list-item>
-            <a-list-item
-              tag="dd"
-              class="a-product-list-item__attribute"
-            >
-              {{ item.value }}
-            </a-list-item>
-          </template>
-        </a-list>
+          <dl
+            v-if="options"
+            class="a-product-list-item__attributes"
+          >
+            <template v-for="item in options">
+              <dt class="a-product-list-item__attribute-label">{{ item.label }}</dt>
+              <dd class="a-product-list-item__attribute-value">{{ item.value }}</dd>
+            </template>
+          </dl>
       </slot>
     </div>
 
@@ -88,7 +78,7 @@
         >
           <a-button
             class="a-product-list-item__action-button"
-            aria-label="Remove this product from your shopping cart"
+            aria-label="removeButtonAriaLabel"
             custom-class="a-product-list-item__actions-item"
             @click.native="onRemove"
           >
