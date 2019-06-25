@@ -39,11 +39,14 @@ storiesOf('Atoms/Badge', module)
       },
       classKnob: {
         default: select('BEM Modifier', classKnobsConfig)
+      },
+      tagKnob: {
+        default: text('Html tag', 'span')
       }
     },
     template: `
       <a-badge
-        tag="span"
+        :tag="tagKnob"
         :class="classKnob"
       >
         {{ textKnob }}

@@ -6,7 +6,7 @@ import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.j
 import selectorsConfig from './RadioWrapper.selectors.json'
 
 import ARadioWrapper from './RadioWrapper.vue'
-import ARadio from './../../atoms/radio/Radio.vue'
+import ARadio from '../radio/Radio.vue'
 
 const info = `
   <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
