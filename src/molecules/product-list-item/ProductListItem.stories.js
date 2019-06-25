@@ -101,8 +101,16 @@ storiesOf('Molecules/Product List Item', module)
             decrement-icon-title="Minus mark"
             increment-aria-label="Increase the quantity"
             increment-icon-title="Plus mark"
-            label=""
-          />
+          >
+            <template #label>
+              <a-label
+                class="a-product-list-item__qty-label"
+                for="qty_1"
+              >
+                Qty:
+              </a-label>
+            </template>
+          </a-quantity-update>
         </template>
       </a-product-list-item>
     `
