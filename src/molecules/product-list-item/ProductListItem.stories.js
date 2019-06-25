@@ -7,15 +7,16 @@ import ALabel from '../../atoms/label/Label.vue'
 import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 
 const info = '<p>Check <b>Knobs</b> tab to edit component properties dynamically.</p>'
+
 const defaultOptions = [
   {
     'id': 'size_id_1',
-    'label': 'Size:',
+    'label': 'Size',
     'value': 'XXL'
   },
   {
     'id': 'color_id_1',
-    'label': 'Color:',
+    'label': 'Color',
     'value': 'Red'
   }
 ]
@@ -23,12 +24,6 @@ const defaultPrices = {
   price: '',
   specialPrice: '$100,00',
   oldPrice: '$299,99'
-}
-const defaultData = {
-  methods: {
-    removeMethod: action('Remove'),
-    changeMethod: action('Change')
-  }
 }
 
 storiesOf('Molecules/Product List Item', module)
@@ -49,15 +44,18 @@ storiesOf('Molecules/Product List Item', module)
         default: object('Product options', defaultOptions)
       }
     },
-    ...defaultData,
+    methods: {
+      removeMethod: action('Remove')
+    },
     template: `
       <a-product-list-item
         id="prod1"
         url="#"
         :name="nameKnob"
-        :imageUrl="imageUrlKnob"
+        :image-url="imageUrlKnob"
         :prices="pricesKnob"
         :options="optionsKnob"
+        remove-button-aria-label="Remove this product from your shopping cart"
         @remove="removeMethod"
       />
     `
@@ -82,7 +80,6 @@ storiesOf('Molecules/Product List Item', module)
         default: object('Product options', defaultOptions)
       }
     },
-    ...defaultData,
     methods: {
       removeMethod: action('Remove'),
       changeMethod: action('Change'),
@@ -94,7 +91,7 @@ storiesOf('Molecules/Product List Item', module)
       <a-product-list-item
         id="prod1"
         :name="nameKnob"
-        :imageUrl="imageUrlKnob"
+        :image-url="imageUrlKnob"
         :prices="pricesKnob"
         url="#"
         :options="optionsKnob"
@@ -146,7 +143,9 @@ storiesOf('Molecules/Product List Item', module)
           </a-quantity-update>
         </template>
         <template #removeAction="{ productRemove }">
-          <button @click="() => { productRemove(); showAlert('Item removed!'); }">
+          <button
+            @click="() => { productRemove(); showAlert('Item removed!'); }"
+          >
             Delete!
           </button>
         </template>
