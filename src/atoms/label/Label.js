@@ -2,7 +2,7 @@
 export default {
   props: {
     /**
-     * Button tag
+     * Label tag
      */
     tag: {
       type: String,
