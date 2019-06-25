@@ -110,7 +110,7 @@ storiesOf('Molecules/Product List Item', module)
         </template>
         <template #prices="{ productPrices }">
           <div style="margin-top: 10px; flex-basis: 100%;">
-            <strong style="color: #00ff00;">{{ productPrices.specialPrice }}</strong>
+            <strong style="color: #a01111;">{{ productPrices.specialPrice }}</strong>
             <small style="text-decoration: line-through;">{{ productPrices.oldPrice }}</small>
           </div>
         </template>
