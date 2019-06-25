@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import ARadio from './Radio.vue'
 
-storiesOf('Atoms/Radio', module)
+storiesOf('Molecules/Radio', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ARadio },
@@ -17,13 +17,15 @@ storiesOf('Atoms/Radio', module)
           v-model="selected"
           name="radio1"
           value="option_one"
+          id="r1"
         >
           Option one
         </a-radio>
         <a-radio
           v-model="selected"
-          name="radio1"
+          name="radio2"
           value="option_two"
+          id="r2"
         >
           Option two
         </a-radio>
@@ -59,7 +61,7 @@ storiesOf('Atoms/Radio', module)
         </a-radio>
         <a-radio
           v-model="selected"
-          name="radio1"
+          name="radio2"
           id="id2"
           value="option_two"
         >

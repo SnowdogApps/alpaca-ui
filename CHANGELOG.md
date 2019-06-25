@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Vue Info table generator helper
 - badge: tag knob and new test regarding custom tag
+- Tests for radio button
 
 ### Changed
 - heading: update heading class and add unit test and knobs
@@ -16,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update readme
 - Update tests in heading component, remove extends from styles
 - Refactor styles in checkbox component
+- Refactor styles for radio button
 
 ### Fixed
 - Typo in Message.selectors.json file
