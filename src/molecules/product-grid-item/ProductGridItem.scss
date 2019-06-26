@@ -1,51 +1,51 @@
 @import '../../../assets/styles/_globals.scss';
 
-$catalog-grid-item__base-spacing              : $spacer !default;
-$catalog-grid-item__base-color                : $gray-darker !default;
-$catalog-grid-item__border                    : 1px solid $gray-lightest !default;
-$catalog-grid-item__font-size                 : $font-size-base !default;
-$catalog-grid-item__line-height               : 1.5 !default;
-$catalog-grid-item__font-weight               : $font-weight-bold !default;
+$catalog-grid-item__base-spacing                : $spacer !default;
+$catalog-grid-item__base-color                  : $gray-darker !default;
+$catalog-grid-item__border                      : 1px solid $gray-lightest !default;
+$catalog-grid-item__font-size                   : $font-size-base !default;
+$catalog-grid-item__line-height                 : 1.5 !default;
+$catalog-grid-item__font-weight                 : $font-weight-bold !default;
 
-$catalog-grid-item__badge-top-position        : $spacer--medium !default;
-$catalog-grid-item__badge-left-position       : 0 !default;
-$catalog-grid-item__badge-z-index             : 1 !default;
-$catalog-grid-item__badge-padding             : 5px 12px !default;
-$catalog-grid-item__badge-font-size           : $font-size-small !default;
-$catalog-grid-item__badge-border-radius       : 0 !default;
+$catalog-grid-item__badge-top-position          : $spacer--medium !default;
+$catalog-grid-item__badge-left-position         : 0 !default;
+$catalog-grid-item__badge-z-index               : 1 !default;
+$catalog-grid-item__badge-padding               : 5px 12px !default;
+$catalog-grid-item__badge-font-size             : $font-size-small !default;
+$catalog-grid-item__badge-border-radius         : 0 !default;
 
-$catalog-grid-item__link-overflow             : hidden !default;
-$catalog-grid-item__link-overflow--visible    : visible !default;
-$catalog-grid-item__link-white-space          : nowrap !default;
-$catalog-grid-item__link-white-space--visible : normal !default;
-$catalog-grid-item__link-text-overflow        : ellipsis !default;
-$catalog-grid-item__link-text-decoration       : none !default;
+$catalog-grid-item__link-overflow               : hidden !default;
+$catalog-grid-item__link-overflow--visible      : visible !default;
+$catalog-grid-item__link-white-space            : nowrap !default;
+$catalog-grid-item__link-white-space--visible   : normal !default;
+$catalog-grid-item__link-text-overflow          : ellipsis !default;
+$catalog-grid-item__link-text-decoration        : none !default;
 
-$catalog-grid-item__content-bg-color          : $white !default;
-$catalog-grid-item__content-padding           : $spacer !default;
-$catalog-grid-item__content-padding\@large    : $spacer--medium $spacer !default;
-$catalog-grid-item__content-width             : 100% !default;
-$catalog-grid-item__content-height            : 66px !default;
-$catalog-grid-item__content-translateY        : translateY(-$catalog-grid-item__content-height) !default;
-$catalog-grid-item__content-translateY--active: translateY(-100%) !default;
+$catalog-grid-item__content-bg-color            : $white !default;
+$catalog-grid-item__content-padding             : $spacer !default;
+$catalog-grid-item__content-padding\@extra-large: $spacer--medium $spacer !default;
+$catalog-grid-item__content-width               : 100% !default;
+$catalog-grid-item__content-height              : 66px !default;
+$catalog-grid-item__content-translateY          : translateY(-$catalog-grid-item__content-height) !default;
+$catalog-grid-item__content-translateY--active  : translateY(-100%) !default;
 
-$catalog-grid-item__name-color                : $catalog-grid-item__base-color !default;
-$catalog-grid-item__name-font-weight          : $font-weight-normal !default;
-$catalog-grid-item__name-margin-bottom        : $spacer !default;
+$catalog-grid-item__name-color                  : $catalog-grid-item__base-color !default;
+$catalog-grid-item__name-font-weight            : $font-weight-normal !default;
+$catalog-grid-item__name-margin-bottom          : $spacer !default;
 
-$catalog-grid-item__price-margin-bottom       : $spacer !default;
+$catalog-grid-item__price-margin-bottom         : $spacer !default;
 
-$catalog-grid-item__action-size               : 48px !default;
-$catalog-grid-item__action-background         : transparent !default;
-$catalog-grid-item__action-border             : none !default;
-$catalog-grid-item__action-cursor             : pointer !default;
-$catalog-grid-item__action-icon-size          : 18px !default;
-$catalog-grid-item__action-icon-transition    : $transition-base !default;
-$catalog-grid-item__action-icon-fill          : $gray-darker !default;
-$catalog-grid-item__action-icon-fill-hover    : $green !default;
+$catalog-grid-item__action-size                 : 48px !default;
+$catalog-grid-item__action-background           : transparent !default;
+$catalog-grid-item__action-border               : none !default;
+$catalog-grid-item__action-cursor               : pointer !default;
+$catalog-grid-item__action-icon-size            : 18px !default;
+$catalog-grid-item__action-icon-transition      : $transition-base !default;
+$catalog-grid-item__action-icon-fill            : $gray-darker !default;
+$catalog-grid-item__action-icon-fill-hover      : $green !default;
 
-$catalog-grid-item__primary-action-border     : 2px solid $green !default;
-$catalog-grid-item__rating-wrapper-transition : opacity 0.3s ease-in-out, height 0.3s ease-in-out !default;
+$catalog-grid-item__primary-action-border       : 2px solid $green !default;
+$catalog-grid-item__rating-wrapper-transition   : opacity 0.3s ease-in-out, height 0.3s ease-in-out !default;
 
 .a-product-grid-item {
   position: relative;
@@ -104,10 +104,6 @@ $catalog-grid-item__rating-wrapper-transition : opacity 0.3s ease-in-out, height
     max-width: 100%;
 
     @include mq($screen-m) {
-      padding-bottom: $catalog-grid-item__content-height;
-    }
-
-    @include mq($screen-m) {
       padding-bottom: $reset;
     }
   }
@@ -141,7 +137,7 @@ $catalog-grid-item__rating-wrapper-transition : opacity 0.3s ease-in-out, height
     }
 
     @include mq($screen-xl) {
-      padding: $catalog-grid-item__content-padding\@large;
+      padding: $catalog-grid-item__content-padding\@extra-large;
     }
 
     @include mq($screen-xxl) {
