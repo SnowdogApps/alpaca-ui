@@ -95,7 +95,7 @@ storiesOf('Molecules/Product List Item', module)
           <a-quantity-update
             :value="Number(2)"
             input-id="qty_1"
-            class="a-product-list-item__qty"
+            class="a-quantity-update--inline a-product-list-item__qty"
             @update="changeMethod"
             decrement-aria-label="Decrease the quantity"
             decrement-icon-title="Minus mark"
@@ -177,7 +177,7 @@ storiesOf('Molecules/Product List Item', module)
           <a-quantity-update
             :value="Number(2)"
             input-id="qty_1"
-            class="a-product-list-item__qty"
+            class="a-quantity-update--inline a-product-list-item__qty"
             @update="changeMethod"
             decrement-aria-label="Decrease the quantity"
             decrement-icon-title="Minus mark"

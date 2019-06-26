@@ -94,11 +94,6 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
     }
   }
 
-  &__qty {
-    display: flex;
-    align-items: center;
-  }
-
   &__qty-label {
     align-self: center;
     margin: $product-list-item__qty-label-margin;
