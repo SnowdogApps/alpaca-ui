@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Vue Info table generator helper
+- badge: tag knob and new test regarding custom tag
+- Tests for radio button
 - Add more tests in input/input-wrapper
 
 ### Changed
@@ -15,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - container: add props with tag, update tests
 - Update readme
 - Update tests in heading component, remove extends from styles
+- Refactor styles in checkbox component
+- Refactor styles for radio button
+- Remove unnecessary variables in quantity update styles
 
 ### Fixed
 - Typo in Message.selectors.json file

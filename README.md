@@ -45,7 +45,7 @@ Import component in your app using named imports:
 
 ```vue
 <template>
-  <a-button type="button">
+  <a-button>
     Alpaca button
   </a-button>
 </template>

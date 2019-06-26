@@ -32,7 +32,7 @@ export default {
      */
     id: {
       type: String,
-      default: null
+      required: true
     },
     /**
      * Custom input class
@@ -40,11 +40,6 @@ export default {
     inputClass: {
       type: String,
       default: null
-    }
-  },
-  computed: {
-    inputId () {
-      return this.id || this.value.toLowerCase().replace(/[^a-z0-9]/g, '-')
     }
   }
 }
