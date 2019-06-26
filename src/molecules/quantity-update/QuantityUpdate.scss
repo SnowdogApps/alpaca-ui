@@ -3,6 +3,7 @@
 // Label
 $quantity-update__label-font-size                  : $font-size-base !default;
 $quantity-update__label-font-weight                : $font-weight-bold !default;
+$quantity-update__label-margin--inline             : 0 $spacer 0 0 !default;
 
 // Input
 $quantity-update__input-wrapper-margin             : 0 !default;
@@ -28,6 +29,18 @@ $quantity-updater__error-margin                    : 0 0 0 $spacer !default;
 $quantity-updater__error-max-width                 : 120px !default;
 
 .a-quantity-update {
+  display: flex;
+  flex-direction: column;
+
+  &--inline {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &--inline &__label {
+    margin: $quantity-update__label-margin--inline;
+  }
+
   &__label {
     font-weight: $quantity-update__label-font-weight;
     font-size: $quantity-update__label-font-size;
