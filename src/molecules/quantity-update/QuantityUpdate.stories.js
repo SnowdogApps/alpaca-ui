@@ -4,7 +4,9 @@ import { number, text } from '@storybook/addon-knobs'
 
 import AQuantityUpdate from './QuantityUpdate.vue'
 
-const info = 'Check **Knobs** tab to edit component properties dynamically.'
+const info = `
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p>
+`
 
 storiesOf('Molecules/Quantity Update', module)
   .addParameters({ info })

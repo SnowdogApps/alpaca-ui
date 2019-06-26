@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update tests in heading component, remove extends from styles
 - Refactor styles in checkbox component
 - Refactor styles for radio button
+- Remove unnecessary variables in quantity update styles
 
 ### Fixed
 - Typo in Message.selectors.json file
