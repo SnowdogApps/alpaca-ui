@@ -1,4 +1,12 @@
-<template src="./Icon.html" />
+<template>
+  <svg
+    class="a-icon"
+    role="img"
+  >
+    <title>{{ titleComputed }}</title>
+    <use :xlink:href="url" />
+  </svg>
+</template>
 
 <script>
 import AIcon from './Icon.js'
