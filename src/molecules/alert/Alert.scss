@@ -3,7 +3,7 @@
 $alert__padding            : 0 $spacer !default;
 $alert__background-color   : $color-primary !default;
 
-$alert__text-padding       : 0 $spacer--medium 0 0 !default;
+$alert__text-padding       : $spacer $spacer--medium $spacer 0 !default;
 $alert__text-font-size     : $font-size-small !default;
 $alert__text-font-color    : $gray-darker !default;
 $alert__text-font-weight   : $font-weight-bold !default;
