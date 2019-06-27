@@ -1,43 +1,44 @@
 import { storiesOf } from '@storybook/vue'
 import { text } from '@storybook/addon-knobs'
 
-import AMarketingBar from './MarketingBar.vue'
+import AAlert from './Alert.vue'
 
 const info = 'Check **Knobs** tab to edit component properties dynamically.'
 
 const data = {
   data: () => ({
-    isOpen: true
+    isVisible: true
   }),
   methods: {
     close () {
-      this.isOpen = false
+      this.isVisible = false
     }
   }
 }
 
-storiesOf('Molecules/MarketingBar', module)
+storiesOf('Molecules/Alert', module)
   .addParameters({ info })
   .add('Default', () => ({
-    components: { AMarketingBar },
+    components: { AAlert },
+    ...data,
     props: {
       contentKnobs: {
         default: text('Content text', 'Subscribe and get 10$ for Shopping!')
       }
     },
-    ...data,
     template: `
-      <a-marketing-bar
-        v-if="isOpen"
-        close-aria-label="Close marketing bar"
+      <a-alert
+        visibility="isVisible"
+        close-aria-label="Close alert"
         @close="close"
       >
         {{ contentKnobs }}
-      </a-marketing-bar>
+      </a-alert>
     `
   }))
   .add('With slots', () => ({
-    components: { AMarketingBar },
+    ...data,
+    components: { AAlert },
     props: {
       buttonKnobs: {
         default: text('Button text', 'Close')
@@ -46,18 +47,17 @@ storiesOf('Molecules/MarketingBar', module)
         default: text('Content text', 'Subscribe!')
       }
     },
-    ...data,
     template: `
-      <a-marketing-bar v-if="isOpen">
+      <a-alert visibility="isVisible">
         {{ contentKnobs }}
         <template #button>
-          <button 
+          <button
             @click="close"
             style="border: none; opacity: 0.8;"
           >
             {{ buttonKnobs }}
           </button>
         </template>
-      </a-marketing-bar>
+      </a-alert>
     `
   }))

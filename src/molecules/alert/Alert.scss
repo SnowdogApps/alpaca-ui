@@ -1,0 +1,52 @@
+@import '../../../assets/styles/globals';
+
+$alert__padding            : 0 $spacer !default;
+$alert__background-color   : $color-primary !default;
+
+$alert__text-padding       : 0 $spacer--medium 0 0 !default;
+$alert__text-font-size     : $font-size-small !default;
+$alert__text-font-color    : $gray-darker !default;
+$alert__text-font-weight   : $font-weight-bold !default;
+$alert__text-line-height   : $font-line-height !default;
+
+$alert__button-padding     : 0 $spacer !default;
+$alert__button-icon-color  : $gray-darker !default;
+$alert__button-icon-size   : 18px !default;
+$alert__button-icon-padding: 2px !default;
+
+.a-alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $alert__padding;
+  background-color: $alert__background-color;
+
+  @include mq($screen-m) {
+    text-align: center;
+  }
+
+  &__text {
+    flex-grow: 1;
+    padding: $alert__text-padding;
+    color: $alert__text-font-color;
+    font-weight: $alert__text-font-weight;
+    font-size: $alert__text-font-size;
+    line-height: $alert__text-line-height;
+  }
+
+  &__close {
+    padding: $alert__button-padding;
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+    }
+
+    &-icon {
+      width: $alert__button-icon-size;
+      height: $alert__button-icon-size;
+      padding: $alert__button-icon-padding;
+      fill: $alert__button-icon-color;
+    }
+  }
+}
