@@ -1,26 +1,23 @@
 import { mount } from '@vue/test-utils'
-import AMarketingBar from './MarketingBar.vue'
+import AAlert from './Alert.vue'
 
-describe('Marketing bar', () => {
+describe('Alert', () => {
   it('has default structure', () => {
-    const wrapper = mount(AMarketingBar, {
-      propsData: {
-        isBarVisible: true
-      }
-    })
+    const wrapper = mount(AAlert)
+
     expect(wrapper.is('div')).toBe(true)
-    expect(wrapper.classes()).toContain('a-marketing-bar')
+    expect(wrapper.classes()).toContain('a-alert')
   })
 
   it('renders slots content when passed', () => {
-    const wrapper = mount(AMarketingBar, {
+    const wrapper = mount(AAlert, {
       slots: {
         default: `<span>Sample content</span>`,
-        button: `<button>Sample button</button>`
+        button: `<button type="button">Sample button</button>`
       }
     })
 
-    const span = wrapper.find('.a-marketing-bar span')
+    const span = wrapper.find('.a-alert span')
     expect(span.exists()).toBe(true)
     expect(span.text()).toEqual('Sample content')
     expect(wrapper.find('button').text()).toBe('Sample button')
