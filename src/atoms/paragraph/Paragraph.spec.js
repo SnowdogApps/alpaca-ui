@@ -6,7 +6,7 @@ describe('Paragraph', () => {
     const wrapper = mount(AParagraph)
 
     expect(wrapper.is('p')).toBe(true)
-    expect(wrapper.classes()).toContain('paragraph')
+    expect(wrapper.classes()).toContain('a-paragraph')
     expect(wrapper.classes().length).toBe(1)
   })
 
@@ -18,7 +18,7 @@ describe('Paragraph', () => {
     })
 
     expect(wrapper.is('span')).toBe(true)
-    expect(wrapper.classes()).toContain('paragraph')
+    expect(wrapper.classes()).toContain('a-paragraph')
     expect(wrapper.classes().length).toBe(1)
   })
 

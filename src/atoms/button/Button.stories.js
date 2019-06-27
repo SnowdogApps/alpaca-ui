@@ -1,24 +1,19 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './Button.selectors.json'
+
 import AButton from './Button.vue'
 import AIcon from '../icon/Icon.vue'
 
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-button--secondary\` - Selector for applying secondary styles
-  - \`.a-button--blank\` - Selector for applying blank styles
-  - \`.a-button--fluid\` - Selector for applying fluid styles (width: 100%)
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
 
-const bemModifiers = [
-  null,
-  'a-button--secondary',
-  'a-button--blank',
-  'a-button--fluid'
-]
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Atoms/Button', module)
   .addParameters({ info })
@@ -26,7 +21,7 @@ storiesOf('Atoms/Button', module)
     components: { AButton },
     props: {
       classKnobs: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       },
       textKnobs: {
         default: text('Text', 'Button text')
@@ -42,7 +37,7 @@ storiesOf('Atoms/Button', module)
     components: { AButton, AIcon },
     props: {
       classKnobs: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       }
     },
     template: `

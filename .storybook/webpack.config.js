@@ -25,10 +25,7 @@ module.exports = ({ config }) => {
   config.module.rules.push({
     enforce: 'pre',
     test: /\.(js|vue)$/,
-    loader: 'eslint-loader',
-    options: {
-      fix: true
-    }
+    loader: 'eslint-loader'
   })
 
   config.plugins.push(new StyleLintPlugin({
