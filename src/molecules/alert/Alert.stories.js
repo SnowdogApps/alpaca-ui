@@ -19,8 +19,8 @@ const data = {
 storiesOf('Molecules/Alert', module)
   .addParameters({ info })
   .add('Default', () => ({
-    components: { AAlert },
     ...data,
+    components: { AAlert },
     props: {
       contentKnobs: {
         default: text('Content text', 'Subscribe and get 10$ for Shopping!')
@@ -28,7 +28,7 @@ storiesOf('Molecules/Alert', module)
     },
     template: `
       <a-alert
-        visibility="isVisible"
+        :visible="isVisible"
         close-aria-label="Close alert"
         @close="close"
       >
@@ -48,7 +48,7 @@ storiesOf('Molecules/Alert', module)
       }
     },
     template: `
-      <a-alert visibility="isVisible">
+      <a-alert :visible="isVisible">
         {{ contentKnobs }}
         <template #button>
           <button
