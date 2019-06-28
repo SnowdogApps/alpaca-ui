@@ -6,14 +6,16 @@
     :class="['a-checkbox__field', inputClass]"
     :value="value"
     :checked="checked"
-    @change="$emit('input', $event.target.checked)"
+    @change="$emit('change', $event.target.checked)"
   >
   <!-- @slot Custom checkbox markup (Named slot) -->
   <slot name="label">
-    <a-icon
-      icon="checked"
-      class="a-checkbox__icon"
-    />
+    <div class="a-checkbox__icon-wrapper">
+      <a-icon
+        icon="checked"
+        class="a-checkbox__icon"
+      />
+    </div>
     <label
       :for="id"
       class="a-checkbox__label"
