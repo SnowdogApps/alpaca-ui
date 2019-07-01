@@ -52,7 +52,7 @@ export default {
      */
     removeButtonAriaLabel: {
       type: String,
-      default: ''
+      default: null
     }
   },
   computed: {
