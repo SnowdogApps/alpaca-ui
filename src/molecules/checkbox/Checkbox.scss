@@ -47,6 +47,9 @@ $checkbox__icon-transition   : $transition-base !default;
   }
 
   &__icon {
+    width: $checkbox__icon-width;
+    height: $checkbox__icon-height;
+    margin: $checkbox__icon-margin;
     padding: $reset;
     cursor: pointer;
     opacity: 0;
