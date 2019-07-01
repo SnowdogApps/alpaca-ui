@@ -5,10 +5,11 @@ import StoryRouter from 'storybook-vue-router'
 
 import AProductGridItem from './ProductGridItem.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
+import ABadge from '../../atoms/badge/Badge.vue'
 import ARating from '../../molecules/rating/Rating.vue'
 
 const defaultPrices = {
-  price: '',
+  price: '$1684.00',
   specialPrice: '$100.00',
   oldPrice: '$299.99'
 }
@@ -60,6 +61,7 @@ storiesOf('Molecules/Product grid item', module)
   .add('With slots', () => ({
     components: {
       AProductGridItem,
+      ABadge,
       AIcon,
       ARating
     },
@@ -97,22 +99,33 @@ storiesOf('Molecules/Product grid item', module)
         @addToCompare="addToCompare"
       >
         <template #badge="{ productBadgeText }">
-          <div style="display: flex; align-items: center; position: absolute; left: 0;">
+          <a-badge
+            class="a-product-grid-item__badge"
+            style="display: flex; align-items: center;"
+          >
             {{ productBadgeText }}
             <a-icon icon="youtube" />
-          </div>
+          </a-badge>
         </template>
 
         <template #image="{ productImageUrl, productImageAlt }">
-          <img
-            :src="productImageUrl"
-            :alt="productImageAlt + ' image.'"
-            style="border:1px solid #00ff00; border-radius: 5px;"
-          />
+          <a href="/" style="display:block; overflow: hidden;">
+            <img
+              :src="productImageUrl"
+              :alt="productImageAlt + ' image.'"
+              class="a-product-grid-item__image"
+            />
+          </a>
         </template>
 
         <template #name="{ productName, productUrl }">
-          <strong>Product: </strong> <a :href="productUrl">{{ productName.toUpperCase() }}</a>
+          <strong>Product: </strong>
+          <a
+            :href="productUrl"
+            class="a-product-grid-item__link a-product-grid-item__link--name"
+          >
+            {{ productName.toUpperCase() }}
+          </a>
         </template>
 
         <template #rating>
@@ -127,16 +140,14 @@ storiesOf('Molecules/Product grid item', module)
         </template>
 
         <template #prices="{ productPrices }">
-          <div style="margin: 10px auto;">
-            <strong style="color: #00ff00;">{{ productPrices.specialPrice }}</strong>
-            <small style="text-decoration: line-through;">{{ productPrices.oldPrice }}</small>
-          </div>
+          {{ productPrices.price }}
         </template>
 
         <template #addToCart="{ productAddToCart, productAddToCartText }">
           <button
             type="button"
             @click="productAddToCart"
+            style="padding: 10px; border: none; border-radius: 5px; background: #00ff00;"
           >
             {{ productAddToCartText }}
           </button>
