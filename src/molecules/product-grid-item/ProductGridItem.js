@@ -48,21 +48,21 @@ export default {
      */
     addToCartText: {
       type: String,
-      default: ''
+      default: null
     },
     /**
      * Product add to cart wishlist default text
      */
     addToWishListText: {
       type: String,
-      default: ''
+      default: null
     },
     /**
      * Product add to compare default text
      */
     addToCompareText: {
       type: String,
-      default: ''
+      default: null
     }
   },
   methods: {
