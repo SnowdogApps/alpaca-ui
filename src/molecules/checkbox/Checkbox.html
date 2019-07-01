@@ -10,16 +10,16 @@
   >
   <!-- @slot Custom checkbox markup (Named slot) -->
   <slot name="label">
-    <div class="a-checkbox__icon-wrapper">
-      <a-icon
-        icon="checked"
-        class="a-checkbox__icon"
-      />
-    </div>
     <label
       :for="id"
       class="a-checkbox__label"
     >
+      <div class="a-checkbox__icon-wrapper">
+        <a-icon
+          icon="checked"
+          class="a-checkbox__icon"
+        />
+      </div>
       <!-- @slot Custom label content (Default slot) -->
       <slot />
     </label>
