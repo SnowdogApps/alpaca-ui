@@ -2,10 +2,10 @@
 
 $catalog-grid-item__base-spacing                : $spacer !default;
 $catalog-grid-item__base-color                  : $gray-darker !default;
-$catalog-grid-item__border                      : 1px solid $gray-lightest !default;
 $catalog-grid-item__font-size                   : $font-size-base !default;
 $catalog-grid-item__line-height                 : 1.5 !default;
 $catalog-grid-item__font-weight                 : $font-weight-bold !default;
+$catalog-grid-item__transition                  : $transition-base !default;
 
 $catalog-grid-item__badge-top-position          : $spacer--medium !default;
 $catalog-grid-item__badge-left-position         : 0 !default;
@@ -14,67 +14,47 @@ $catalog-grid-item__badge-padding               : 5px 12px !default;
 $catalog-grid-item__badge-font-size             : $font-size-small !default;
 $catalog-grid-item__badge-border-radius         : 0 !default;
 
+$catalog-grid-item__link-bg-color               : #f9f9f9 !default;
 $catalog-grid-item__link-overflow               : hidden !default;
-$catalog-grid-item__link-overflow--visible      : visible !default;
 $catalog-grid-item__link-white-space            : nowrap !default;
-$catalog-grid-item__link-white-space--visible   : normal !default;
 $catalog-grid-item__link-text-overflow          : ellipsis !default;
 $catalog-grid-item__link-text-decoration        : none !default;
 
 $catalog-grid-item__content-bg-color            : $white !default;
 $catalog-grid-item__content-padding             : $spacer !default;
-$catalog-grid-item__content-padding\@extra-large: $spacer--medium $spacer !default;
-$catalog-grid-item__content-width               : 100% !default;
-$catalog-grid-item__content-height              : 66px !default;
-$catalog-grid-item__content-translateY          : translateY(-$catalog-grid-item__content-height) !default;
-$catalog-grid-item__content-translateY--active  : translateY(-100%) !default;
+$catalog-grid-item__content-padding\@extra-large: $spacer--medium !default;
 
 $catalog-grid-item__name-color                  : $catalog-grid-item__base-color !default;
 $catalog-grid-item__name-font-weight            : $font-weight-normal !default;
-$catalog-grid-item__name-margin-bottom          : $spacer !default;
+$catalog-grid-item__name-margin                 : 0 0 $spacer 0 !default;
 
 $catalog-grid-item__price-margin-bottom         : $spacer !default;
 
-$catalog-grid-item__action-size                 : 48px !default;
+$catalog-grid-item__action-margin               : 0 $spacer 0 0 !default;
+$catalog-grid-item__action-size                 : 40px !default;
+$catalog-grid-item__action-size\@medium         : 48px !default;
 $catalog-grid-item__action-background           : transparent !default;
 $catalog-grid-item__action-border               : none !default;
 $catalog-grid-item__action-cursor               : pointer !default;
-$catalog-grid-item__action-icon-size            : 18px !default;
-$catalog-grid-item__action-icon-transition      : $transition-base !default;
+$catalog-grid-item__icon-size                   : 20px !default;
+$catalog-grid-item__icon-size\@medium           : 24px !default;
 $catalog-grid-item__action-icon-fill            : $gray-darker !default;
 $catalog-grid-item__action-icon-fill-hover      : $green !default;
 
 $catalog-grid-item__primary-action-border       : 2px solid $green !default;
-$catalog-grid-item__rating-wrapper-transition   : opacity 0.3s ease-in-out, height 0.3s ease-in-out !default;
+
+$catalog-grid-item__image-default-opacity       : 0.85 !default;
+$catalog-grid-item__image-transform             : scale(1.1) !default;
+$catalog-grid-item__image-mix-blend-mode        : darken !default;
+
+$catalog-grid-item__rating-icon-size            : 16px !default;
+$catalog-grid-item__rating-count-font-size      : $font-size-small !default;
 
 .a-product-grid-item {
   position: relative;
   display: block;
   padding: $reset;
-  overflow: hidden;
   color: $catalog-grid-item__base-color;
-  border: $catalog-grid-item__border;
-
-  &:hover,
-  &:focus-within {
-    @include mq($screen-m) {
-      .a-product-grid-item__details {
-        transform: $catalog-grid-item__content-translateY--active;
-      }
-
-      .a-product-grid-item__link--name {
-        overflow: $catalog-grid-item__link-overflow--visible;
-        white-space: $catalog-grid-item__link-white-space--visible;
-      }
-
-      .a-product-grid-item__rating-wrapper {
-        position: relative;
-        height: auto;
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  }
 
   &__badge {
     position: absolute;
@@ -96,12 +76,26 @@ $catalog-grid-item__rating-wrapper-transition   : opacity 0.3s ease-in-out, heig
       text-decoration: $catalog-grid-item__link-text-decoration;
       text-overflow: $catalog-grid-item__link-text-overflow;
     }
+
+    &--image {
+      overflow: hidden;
+      background-color: $catalog-grid-item__link-bg-color;
+    }
   }
 
   &__image {
     display: block;
     width: 100%;
     max-width: 100%;
+    opacity: $catalog-grid-item__image-default-opacity;
+    mix-blend-mode: $catalog-grid-item__image-mix-blend-mode;
+    transition: $catalog-grid-item__transition;
+
+    &:hover,
+    &:focus {
+      transform: $catalog-grid-item__image-transform;
+      opacity: 1;
+    }
 
     @include mq($screen-m) {
       padding-bottom: $reset;
@@ -109,7 +103,7 @@ $catalog-grid-item__rating-wrapper-transition   : opacity 0.3s ease-in-out, heig
   }
 
   &__name {
-    margin-bottom: $catalog-grid-item__name-margin-bottom;
+    margin: $catalog-grid-item__name-margin;
     font-weight: $catalog-grid-item__name-font-weight;
     font-size: $catalog-grid-item__font-size;
     line-height: $catalog-grid-item__line-height;
@@ -129,46 +123,32 @@ $catalog-grid-item__rating-wrapper-transition   : opacity 0.3s ease-in-out, heig
     background: $catalog-grid-item__content-bg-color;
     transition: $transition-base;
 
-    @include mq($screen-m) {
-      position: absolute;
-      width: $catalog-grid-item__content-width;
-      border-top: $catalog-grid-item__border;
-      transform: $catalog-grid-item__content-translateY;
-    }
-
     @include mq($screen-xl) {
       padding: $catalog-grid-item__content-padding\@extra-large;
-    }
-
-    @include mq($screen-xxl) {
-      transform: $reset;
     }
   }
 
   &__rating-wrapper {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 0;
-    margin: $catalog-grid-item__base-spacing 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: $catalog-grid-item__rating-wrapper-transition;
+    margin: $catalog-grid-item__base-spacing $reset;
+    transition: $catalog-grid-item__transition;
   }
 
   &__rating-wrapper &__rating-icon {
-    width: 16px;
-    height: 16px;
+    width: $catalog-grid-item__rating-icon-size;
+    height: $catalog-grid-item__rating-icon-size;
   }
 
   &__rating-button {
-    min-width: 0;
+    min-width: $reset;
     height: auto;
   }
 
   &__rating-count {
-    font-size: 12px;
+    font-size: $catalog-grid-item__rating-count-font-size;
   }
 
   &__actions {
@@ -194,9 +174,20 @@ $catalog-grid-item__rating-wrapper-transition   : opacity 0.3s ease-in-out, heig
     align-items: center;
   }
 
+  &__icon {
+    width: $catalog-grid-item__icon-size;
+    height: $catalog-grid-item__icon-size;
+
+    @include mq($screen-m) {
+      width: $catalog-grid-item__icon-size\@medium;
+      height: $catalog-grid-item__icon-size\@medium;
+    }
+  }
+
   &__action-button {
     width: $catalog-grid-item__action-size;
     height: $catalog-grid-item__action-size;
+    margin: $reset;
     padding: $reset;
     background: $catalog-grid-item__action-background;
     border: $catalog-grid-item__action-border;
@@ -205,13 +196,14 @@ $catalog-grid-item__rating-wrapper-transition   : opacity 0.3s ease-in-out, heig
 
     &:hover,
     &:focus {
-      transition: $catalog-grid-item__action-icon-transition;
+      transition: $catalog-grid-item__transition;
       fill: $catalog-grid-item__action-icon-fill-hover;
     }
 
-    .a-icon {
-      width: $catalog-grid-item__action-icon-size;
-      height: $catalog-grid-item__action-icon-size;
+    @include mq($screen-m) {
+      width: $catalog-grid-item__action-size\@medium;
+      height: $catalog-grid-item__action-size\@medium;
+      margin: $catalog-grid-item__action-margin;
     }
   }
 }
