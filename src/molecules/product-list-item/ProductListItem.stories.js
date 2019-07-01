@@ -61,7 +61,11 @@ storiesOf('Molecules/Product List Item', module)
     `
   }))
   .add('With Qty Updater', () => ({
-    components: { AProductListItem, AQuantityUpdate },
+    components: {
+      AProductListItem,
+      AQuantityUpdate,
+      ALabel
+    },
     props: {
       nameKnob: {
         default: text('Product name', 'Ingrid Running Jacket')
