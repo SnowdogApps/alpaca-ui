@@ -6,7 +6,6 @@ import AList from '../../atoms/list/List.vue'
 import AButton from '../../atoms/button/Button.vue'
 import AInput from '../../atoms/input/Input.vue'
 import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
-import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 
 import AMiniCart from './MiniCart.js'
 
@@ -17,8 +16,7 @@ export default {
     AList,
     AButton,
     AInput,
-    AInputWrapper,
-    AProductItem
+    AInputWrapper
   },
   mixins: [AMiniCart]
 }
