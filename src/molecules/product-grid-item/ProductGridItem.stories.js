@@ -22,7 +22,7 @@ const defaultData = {
 }
 
 addDecorator(StoryRouter())
-storiesOf('Molecules/Product grid item', module)
+storiesOf('Molecules/Product Grid Item', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { AProductGridItem },
@@ -129,14 +129,7 @@ storiesOf('Molecules/Product grid item', module)
         </template>
 
         <template #rating>
-          <div class="a-product-grid-item__rating-wrapper">
-            <a-rating
-              :average="averageRatingKnob"
-              button-class="a-product-grid-item__rating-button"
-              icon-class="a-product-grid-item__rating-icon"
-            />
-            <span class="a-product-grid-item__rating-count">(34)</span>
-          </div>
+          <a-rating :average="averageRatingKnob"/>
         </template>
 
         <template #prices="{ productPrices }">
