@@ -1,0 +1,63 @@
+<transition :name="modalMainTransition">
+  <div
+    v-show="visibility"
+    :aria-hidden="ariaHidden"
+    :aria-labelledby="ariaLabelledby"
+    :aria-describedby="ariaDescribedby"
+    class="a-modal"
+    role="dialog"
+  >
+    <div
+      @click.self="handleBackgroundClick"
+      class="a-modal__mask"
+    ></div>
+    <transition :name="modalContentTransition">
+      <div
+        class="a-modal__content"
+        v-show="visibility"
+        ref="modal"
+        role="document"
+        tabindex="0"
+        @keydown="handleKeydown"
+      >
+        <div
+          v-if="heading || closeButton"
+          class="a-modal__header"
+        >
+          <!-- @slot Custom heading (Scoped slot) -->
+          <slot
+            v-if="heading"
+            name="heading"
+            :modal-heading="heading"
+          >
+            <a-heading
+              :level="2"
+              class="a-modal__heading"
+            >
+              {{ heading }}
+            </a-heading>
+            <a-divider class="a-modal__divider"/>
+          </slot>
+          <button
+            @click="hide(name)"
+            class="button button--icon a-modal__close-button"
+            type="button"
+          >
+            <!-- @slot Custom close icon (Named slot) -->
+            <slot
+              v-if="closeButton"
+              name="close"
+            >
+              <a-icon
+                icon="close"
+                class="a-modal__close-button-icon"
+              />
+            </slot>
+          </button>
+        </div>
+        <!-- @slot Modal content -->
+        <slot/>
+      </div>
+    </transition>
+  </div>
+</transition>

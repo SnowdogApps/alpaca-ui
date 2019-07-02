@@ -4,7 +4,6 @@ import { action } from '@storybook/addon-actions'
 
 import ALabel from '../../atoms/label/Label.vue'
 import AHeader from './Header.vue'
-import AModal from '../../03-modules/modal/Modal.vue'
 import ALogin from '../../03-modules/login/Login.vue'
 import AMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AWishlist from '../../03-modules/wishlist/Wishlist.vue'
@@ -17,14 +16,14 @@ import sideMenu from '../../../mocks/slide-menu'
 import products from '../../../mocks/products'
 import totals from '../../../mocks/totals'
 
+// todo: add modal component to story
+
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
-  // @vue/component
   .add('Default', () => ({
     components: {
       ALabel,
       AHeader,
-      AModal,
       ALogin,
       AOffCanvasSidebar,
       AMiniCart,
@@ -68,22 +67,6 @@ storiesOf('Modules/Header', module)
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
-        <a-modal
-          name="register"
-          ref="modalRegister"
-          heading="Registred Customers"
-        >
-          <a-login
-            legend="Login form"
-            forget-password-text="Forgot your password?"
-            forget-password-link="#"
-            submit-button="Sign In"
-            go-to-forgot-password-button=""
-            go-to-register-button="or register an account"
-            @login="login"
-            @goToRegister="goToRegister"
-          />
-         </a-modal>
         <a-off-canvas-sidebar
           name="mini-cart"
           ref="modalMiniCart"

@@ -17,6 +17,14 @@ export default {
       type: Boolean,
       default: true
     },
+    modalMainTransition: {
+      type: String,
+      default: 'fade'
+    },
+    modalContentTransition: {
+      type: String,
+      default: 'slide-down'
+    },
     maxWidth: {
       type: Number,
       default: null
@@ -32,10 +40,6 @@ export default {
     closeButton: {
       type: Boolean,
       default: true
-    },
-    blank: {
-      type: Boolean,
-      default: false
     }
   },
   data () {
@@ -97,16 +101,12 @@ export default {
       let totalOfFocusable = focusableChildren.length
       let focusedIndex = focusableChildren.indexOf(currentFocus)
 
-      if (event.shiftKey) {
-        if (focusedIndex <= 0) {
-          event.preventDefault()
-          focusableChildren[totalOfFocusable - 1].focus()
-        }
-      } else {
-        if (focusedIndex === totalOfFocusable - 1) {
-          event.preventDefault()
-          focusableChildren[0].focus()
-        }
+      if (event.shiftKey && focusedIndex <= 0) {
+        event.preventDefault()
+        focusableChildren[totalOfFocusable - 1].focus()
+      } else if (focusedIndex === totalOfFocusable - 1) {
+        event.preventDefault()
+        focusableChildren[0].focus()
       }
     }
   }
