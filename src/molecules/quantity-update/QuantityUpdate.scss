@@ -24,10 +24,6 @@ $quantity-updater__icon-spacing                    : 18px !default;
 $quantity-updater__icon-fill-hover                 : $color-primary !default;
 $quantity-updater__icon-transition                 : $transition-base !default;
 
-// Error
-$quantity-updater__error-margin                    : 0 0 0 $spacer !default;
-$quantity-updater__error-max-width                 : 120px !default;
-
 .a-quantity-update {
   display: flex;
   flex-direction: column;
