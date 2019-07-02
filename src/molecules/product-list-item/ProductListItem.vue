@@ -1,4 +1,4 @@
-<template src="./ProductItem.html" />
+<template src="./ProductListItem.html" />
 
 <script>
 import AImage from '../../atoms/image/Image.vue'
@@ -7,23 +7,21 @@ import APrice from '../../atoms/price/Price.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 
-import AProductItem from './ProductItem.js'
+import AProductListItem from './ProductListItem.js'
 
 export default {
-  name: 'AlpacaProductItem',
+  name: 'AlpacaProductListItem',
   components: {
     AImage,
     AIcon,
     APrice,
     AList,
     AListItem,
-    AButton,
-    AQuantityUpdate
+    AButton
   },
-  mixins: [AProductItem]
+  mixins: [AProductListItem]
 }
 </script>
 
-<style lang="scss" src="./ProductItem.scss" />
+<style lang="scss" src="./ProductListItem.scss" />
