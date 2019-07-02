@@ -10,5 +10,8 @@ module.exports = {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
     '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
   },
-  'collectCoverage': true
+  'collectCoverage': true,
+  'collectCoverageFrom': [
+    '**/*.vue'
+  ]
 }
