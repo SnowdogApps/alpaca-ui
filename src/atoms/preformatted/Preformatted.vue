@@ -1,11 +1,11 @@
 <template src="./Preformatted.html" />
 
 <script>
-import APeformatted from './Peformatted.js'
+import APreformatted from './Preformatted.js'
 
 export default {
-  name: 'AlpacaPeformatted',
-  mixins: [APeformatted]
+  name: 'AlpacaPreformatted',
+  mixins: [APreformatted]
 }
 </script>
 
