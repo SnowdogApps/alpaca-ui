@@ -1,10 +1,19 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { number, text } from '@storybook/addon-knobs'
+import { number, text, select } from '@storybook/addon-knobs'
+
+import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './QuantityUpdate.selectors.json'
 
 import AQuantityUpdate from './QuantityUpdate.vue'
 
-const info = 'Check **Knobs** tab to edit component properties dynamically.'
+const info = `
+  Check **Knobs** tab to edit component properties dynamically.<br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
+`
+
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Molecules/Quantity Update', module)
   .addParameters({ info })
@@ -19,6 +28,9 @@ storiesOf('Molecules/Quantity Update', module)
       },
       maxQtyKnob: {
         default: number('Max qty', 100)
+      },
+      classKnob: {
+        default: select('Input wrapper class', classKnobsConfig)
       }
     },
     data () {
@@ -32,6 +44,7 @@ storiesOf('Molecules/Quantity Update', module)
     template: `
       <a-quantity-update
         v-model="qty"
+        :class="classKnob"
         @update="updateVal"
         :label="labelKnob"
         input-id="qty-update"
@@ -55,6 +68,9 @@ storiesOf('Molecules/Quantity Update', module)
       },
       maxQtyKnob: {
         default: number('Max qty', 20)
+      },
+      classKnob: {
+        default: select('Input wrapper class', classKnobsConfig)
       }
     },
     methods: {
@@ -68,6 +84,7 @@ storiesOf('Molecules/Quantity Update', module)
     template: `
       <a-quantity-update
         v-model="qty"
+        :class="classKnob"
         @update="updateVal"
         :min-qty="minQtyKnob"
         :max-qty="maxQtyKnob"
