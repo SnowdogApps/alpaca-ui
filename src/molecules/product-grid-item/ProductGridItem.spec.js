@@ -34,7 +34,6 @@ describe('Product Grid Item', () => {
         image: `<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">`,
         name: `<h2 data-test="name">Sample name</h2>`,
         prices: `<div data-test="prices">$100</div>`,
-        options: `<ul data-test="options"><li>otion I</li></ul>`,
         addToCart: `<button type="button" data-test="addToCart">Add to cart</button>`,
         addToWishList: `<button type="button" data-test="addToWishList">Add to wishlist</button>`,
         addToCompare: `<button type="button" data-test="addToCompare">Add to compare</button>`,
@@ -57,9 +56,6 @@ describe('Product Grid Item', () => {
 
     const prices = wrapper.find('div[data-test="prices"]')
     expect(prices.exists()).toBe(true)
-
-    const options = wrapper.find('.a-product-grid-item__options ul[data-test="options"]')
-    expect(options.exists()).toBe(true)
 
     const actions = wrapper.find('.a-product-grid-item__actions')
 
