@@ -9,7 +9,8 @@
     "now-build": "yarn build",
     "eslint": "eslint --ext .js,.vue .",
     "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.scss' 'assets/styles/**/*.scss'",
-    "test": "jest"
+    "test": "jest",
+    "cov": "./node_modules/codcov/bin/codcov"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
@@ -36,6 +37,7 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
+    "codecov": "^3.5.0",
     "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
