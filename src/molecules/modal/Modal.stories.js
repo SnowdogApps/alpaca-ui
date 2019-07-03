@@ -224,7 +224,7 @@ storiesOf('Molecules/Modal', module)
         </a-button>
         <a-modal
           name="default"
-          heading="Sample title"
+          :heading="headingKnob"
           ref="modalDefault"
         >
           <template #heading="{ modalHeading }">
