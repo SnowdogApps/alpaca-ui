@@ -4,7 +4,22 @@ jobs:
       - image: circleci/node:dubnium
     steps:
       - checkout
-      - run: yarn
-      - run: yarn eslint
-      - run: yarn stylelint
-      - run: yarn test
+      - run:
+        name: Install Dependencies
+        command: yarn
+
+      - run:
+        name: Run eslint
+        command: yarn eslint
+
+      - run:
+        name: Run stylelint
+        command: yarn stylelint
+
+      - run:
+        name: Run unit tests
+        command: yarn test
+
+      - run:
+        name: Run codecov
+        command: yarn codecov
