@@ -1,12 +1,16 @@
-<template src="./Button.html" />
+<template>
+  <button
+    class="a-button"
+    type="button"
+  >
+    <!-- @slot Slot for button content -->
+    <slot />
+  </button>
+</template>
 
 <script>
-import AButton from './Button.js'
-
 export default {
-  name: 'AlpacaButton',
-
-  mixins: [AButton]
+  name: 'AlpacaButton'
 }
 </script>
 
