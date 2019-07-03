@@ -58,17 +58,17 @@ describe('Modal', () => {
       },
       slots: {
         default: `<span data-test="content">Sample text</span>`,
-        heading: `<h1 data-test="heading">Sample text</h1>`,
-        close: `<button data-test="close">Sample text</button>`
+        heading: `<h1 data-test="heading">Sample heading</h1>`,
+        close: `<button data-test="close">Sample button</button>`
       }
     })
 
     expect(wrapper.find('.a-modal__content [data-test="content"]').exists()).toBe(true)
     expect(wrapper.find('.a-modal__content [data-test="content"]').text()).toEqual('Sample text')
     expect(wrapper.find('.a-modal__content [data-test="heading"]').exists()).toBe(true)
-    expect(wrapper.find('.a-modal__content [data-test="heading"]').text()).toEqual('Sample text')
+    expect(wrapper.find('.a-modal__content [data-test="heading"]').text()).toEqual('Sample heading')
     expect(wrapper.find('.a-modal__content [data-test="close"]').exists()).toBe(true)
-    expect(wrapper.find('.a-modal__content [data-test="close"]').text()).toEqual('Sample text')
+    expect(wrapper.find('.a-modal__content [data-test="close"]').text()).toEqual('Sample button')
   })
 
   it('should change aria hidden when `show` and `hide` functions are used', () => {
