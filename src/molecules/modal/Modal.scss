@@ -96,11 +96,6 @@ $modal__close-button-icon-transition : $transition-base !default;
     margin: $modal__header-margin;
   }
 
-  &__header &__divider {
-    flex: 100%;
-    order: 3;
-  }
-
   &__heading {
     display: flex;
     flex: 1;
@@ -110,6 +105,11 @@ $modal__close-button-icon-transition : $transition-base !default;
 
   &__divider {
     margin: $modal__divider-margin;
+
+    &--header {
+      flex: 100%;
+      order: 1;
+    }
   }
 
   &__close-button {
@@ -121,16 +121,16 @@ $modal__close-button-icon-transition : $transition-base !default;
     &:focus {
       background-color: $modal__close-button-background-color;
     }
+  }
 
-    &-icon {
-      width: $modal__close-button-icon-size;
-      height: $modal__close-button-icon-size;
-      transition: $modal__close-button-icon-transition;
+  &__close-icon {
+    width: $modal__close-button-icon-size;
+    height: $modal__close-button-icon-size;
+    transition: $modal__close-button-icon-transition;
 
-      &:hover,
-      &:focus {
-        fill: $modal__close-button-icon-color;
-      }
+    &:hover,
+    &:focus {
+      fill: $modal__close-button-icon-color;
     }
   }
 }

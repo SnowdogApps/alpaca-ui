@@ -38,7 +38,7 @@
             </a-heading>
             <a-divider
               v-if="heading"
-              class="a-modal__divider"
+              class="a-modal__divider a-modal__divider--header"
             />
           </slot>
           <button
@@ -51,7 +51,7 @@
               <a-icon
                 v-if="closeButton"
                 icon="close"
-                class="a-modal__close-button-icon"
+                class="a-modal__close-icon"
               />
             </slot>
           </button>

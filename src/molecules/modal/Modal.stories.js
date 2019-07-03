@@ -282,14 +282,14 @@ storiesOf('Molecules/Modal', module)
               {{ modalHeading.toUpperCase() }}
             </a-heading>
             <a-divider
-              class="a-modal__divider"
+              class="a-modal__divider a-modal__divider--header"
               style="background-color: #393243;"
             />
           </template>
           <template #close>
             <a-icon
               icon="minus"
-              class="button__icon a-modal__close-button-icon"
+              class="button__icon a-modal__close-icon"
               title="Close"
             />
           </template>
