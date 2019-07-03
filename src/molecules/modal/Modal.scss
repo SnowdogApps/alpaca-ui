@@ -1,7 +1,9 @@
 @import '../../../assets/styles/_globals.scss';
 
-$modal__padding                      : 0 !default;
+$modal__padding                      : $reset !default;
 $modal__background-color\@medium     : rgba(57, 50, 67, 0.6) !default;
+$modal__z-index                      : 100 !default;
+$modal__animation-duration           : 400ms !default;
 
 $modal__header-margin                : 0 0 $spacer--large 0 !default;
 
@@ -9,6 +11,9 @@ $modal__heading-margin               : $reset !default;
 
 $modal__divider-margin               : $spacer--large 0 0 0 !default;
 
+$modal__mask-z-index                 : 100 !default;
+
+$modal__content-z-index              : 101 !default;
 $modal__content-width                : 100% !default;
 $modal__content-width\@medium        : calc(100% - (2 * #{$spacer--medium})) !default;
 $modal__content-width\@extra-large   : 80% !default;
@@ -25,7 +30,9 @@ $modal__content-border               : none !default;
 $modal__content-box-shadow\@medium   : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
 $modal__content-animation-duration   : 400ms !default;
 
+$modal__close-button-height          : auto !default;
 $modal__close-button-margin          : 0 0 0 auto !default;
+$modal__close-button-padding         : $reset !default;
 $modal__close-button-border          : none !default;
 $modal__close-button-background-color: transparent !default;
 $modal__close-button-icon-color      : $color-primary !default;
@@ -36,7 +43,7 @@ $modal__close-button-icon-transition : $transition-base !default;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: $modal__z-index;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,14 +51,14 @@ $modal__close-button-icon-transition : $transition-base !default;
   width: 100%;
   height: 100%;
   padding: $modal__padding;
-  animation-duration: 400ms;
+  animation-duration: $modal__animation-duration;
 
   &__mask {
     @include mq($screen-m) {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 100;
+      z-index: $modal__mask-z-index;
       width: 100%;
       height: 100%;
       background-color: $modal__background-color\@medium;
@@ -60,7 +67,7 @@ $modal__close-button-icon-transition : $transition-base !default;
 
   &__content {
     position: relative;
-    z-index: 101;
+    z-index: $modal__content-z-index;
     display: block;
     width: $modal__content-width;
     min-width: $modal__content-min-width;
@@ -113,7 +120,10 @@ $modal__close-button-icon-transition : $transition-base !default;
   }
 
   &__close-button {
+    min-width: $reset;
+    height: $modal__close-button-height;
     margin: $modal__close-button-margin;
+    padding: $modal__close-button-padding;
     background-color: $modal__close-button-background-color;
     border: $modal__close-button-border;
 

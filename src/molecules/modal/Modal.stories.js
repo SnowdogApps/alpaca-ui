@@ -289,7 +289,7 @@ storiesOf('Molecules/Modal', module)
           <template #close>
             <a-icon
               icon="minus"
-              class="button__icon a-modal__close-icon"
+              class="a-modal__close-icon"
               title="Close"
             />
           </template>

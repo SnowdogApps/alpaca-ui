@@ -41,10 +41,9 @@
               class="a-modal__divider a-modal__divider--header"
             />
           </slot>
-          <button
-            @click="hide(name)"
-            class="button button--icon a-modal__close-button"
-            type="button"
+          <a-button
+            @click.native="hide(name)"
+            class="a-modal__close-button"
           >
             <!-- @slot Custom close icon (Named slot) -->
             <slot name="close">
@@ -54,7 +53,7 @@
                 class="a-modal__close-icon"
               />
             </slot>
-          </button>
+          </a-button>
         </div>
         <!-- @slot Modal content -->
         <slot/>
