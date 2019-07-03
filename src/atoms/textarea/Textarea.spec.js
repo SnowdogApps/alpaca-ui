@@ -28,10 +28,10 @@ describe('Textarea', () => {
   it('emits an change event with single arg of value', () => {
     const input = mount(ATextarea)
 
-    input.element.value = 'test'
+    input.element.value = 'Sample text'
     input.trigger('input')
     expect(input.emitted('change')).toBeDefined()
     expect(input.emitted('change')[0].length).toEqual(1)
-    expect(input.emitted('change')[0][0]).toEqual('test')
+    expect(input.emitted('change')[0][0]).toEqual('Sample text')
   })
 })
