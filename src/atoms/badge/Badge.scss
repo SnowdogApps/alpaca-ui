@@ -1,6 +1,6 @@
 @import '../../../assets/styles/_globals.scss';
 
-$badge__padding         : 3px 13px !default;
+$badge__padding         : $spacer 12px !default;
 $badge__background      : $bg-color-base !default;
 $badge__border-radius   : $border-radius !default;
 $badge__font-size       : $font-size-small !default;

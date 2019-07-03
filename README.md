@@ -96,10 +96,6 @@ yarn dev
 
 Open your browser, visit http://127.0.0.1:6006 and have fun.
 
-## Cooperation with Storefront UI
-
-Ideas behind Alpaca UI and [Storefront UI](https://github.com/DivanteLtd/storefront-ui/) are common efforts. We share almost identical configuration and API so you can easily switch between these two ones. [SNOW.DOG](https://snow.dog) and [Divante](https://divante.co) joined forces in figuring out how to make things right to deliver the best possible experience to the users.
-
 ## License
 
 Code released under MIT license.

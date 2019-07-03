@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add test coverage
 
 ### Changed
+- Move CatalogGridItem to atomic design, rename to ProductGridItem
 - heading: update heading class and add unit test and knobs
 - paragraph: to update stories - add text knobs, update component class name - add prefix
 - container: add props with tag, update tests
