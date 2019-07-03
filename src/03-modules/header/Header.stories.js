@@ -8,6 +8,7 @@ import ALogin from '../../03-modules/login/Login.vue'
 import AMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
+import AModal from '../../molecules/modal/Modal.vue'
 import AProductItem from '../../03-modules/product-item/ProductItem.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
@@ -29,6 +30,7 @@ storiesOf('Modules/Header', module)
       AMiniCart,
       AWishlist,
       AQuantityUpdate,
+      AModal,
       AProductItem
     },
     data: () => ({
@@ -67,6 +69,22 @@ storiesOf('Modules/Header', module)
           @toggleWishlist="toggleWishlist"
           @goToAccount="showRegister"
         />
+        <a-modal
+          name="register"
+          ref="modalRegister"
+          heading="Registred Customers"
+        >
+          <a-login
+            legend="Login form"
+            forget-password-text="Forgot your password?"
+            forget-password-link="#"
+            submit-button="Sign In"
+            go-to-forgot-password-button=""
+            go-to-register-button="or register an account"
+            @login="login"
+            @goToRegister="goToRegister"
+          />
+        </a-modal>
         <a-off-canvas-sidebar
           name="mini-cart"
           ref="modalMiniCart"
