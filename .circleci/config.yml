@@ -9,3 +9,4 @@ jobs:
       - run: yarn stylelint
       - run: yarn test --clearCache
       - run: yarn test
+      - run: yarn codecov
