@@ -3,8 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/node:dubnium
+
     steps:
       - checkout
+
       - run:
         name: Install Dependencies
         command: yarn
