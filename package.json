@@ -10,7 +10,7 @@
     "eslint": "eslint --ext .js,.vue .",
     "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.scss' 'assets/styles/**/*.scss'",
     "test": "jest",
-    "cov": "./node_modules/codcov/bin/codcov"
+    "codcov": "./node_modules/codcov/bin/codcov"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
