@@ -52,6 +52,13 @@ export default {
       default: null
     },
     /**
+     * Class for icon element
+     */
+    iconClass: {
+      type: String,
+      default: null
+    },
+    /**
      * Aria label for button element
      */
     ariaLabel: {

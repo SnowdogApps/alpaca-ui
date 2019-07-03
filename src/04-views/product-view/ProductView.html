@@ -156,9 +156,7 @@
           v-for="(product, index) in product.relatedProducts"
           :key="index"
         >
-          <a-catalog-grid-item
-            :product="product"
-          />
+          <!-- TODO: use new ProductGridItem here -->
         </slide>
        </a-slider>
     </div>
@@ -175,7 +173,7 @@
           v-for="(product, index) in product.featuredProducts"
           :key="index"
         >
-          <a-catalog-grid-item :product="product"/>
+          <!-- TODO: use new ProductGridItem here -->
         </slide>
        </a-slider>
     </div>

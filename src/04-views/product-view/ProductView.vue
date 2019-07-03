@@ -9,7 +9,6 @@ import APrice from '../../atoms/price/Price.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
 import ATabContent from '../../02-elements/tab-content/TabContent.vue'
 import AAdditionalContent from '../../03-modules/additional-content/AdditionalContent.vue'
-import ACatalogGridItem from '../../03-modules/catalog-grid-item/CatalogGridItem.vue'
 import AGallery from '../../03-modules/gallery/Gallery.vue'
 import ABriefInfo from '../../03-modules/brief-info/BriefInfo.vue'
 import AReviewSummary from '../../03-modules/review-summary/ReviewSummary.vue'
@@ -30,7 +29,6 @@ export default {
     ASwatch,
     ATabContent,
     AAdditionalContent,
-    ACatalogGridItem,
     AGallery,
     ABriefInfo,
     AReviewSummary,
