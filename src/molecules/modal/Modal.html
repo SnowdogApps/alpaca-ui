@@ -26,17 +26,20 @@
         >
           <!-- @slot Custom heading (Scoped slot) -->
           <slot
-            v-if="heading"
             name="heading"
             :modal-heading="heading"
           >
             <a-heading
+              v-if="heading"
               :level="2"
               class="a-modal__heading"
             >
               {{ heading }}
             </a-heading>
-            <a-divider class="a-modal__divider"/>
+            <a-divider
+              v-if="heading"
+              class="a-modal__divider"
+            />
           </slot>
           <button
             @click="hide(name)"
@@ -44,11 +47,9 @@
             type="button"
           >
             <!-- @slot Custom close icon (Named slot) -->
-            <slot
-              v-if="closeButton"
-              name="close"
-            >
+            <slot name="close">
               <a-icon
+                v-if="closeButton"
                 icon="close"
                 class="a-modal__close-button-icon"
               />

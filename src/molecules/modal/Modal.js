@@ -1,42 +1,65 @@
 // @vue/component
 export default {
   props: {
+    /**
+     * Modal name
+     */
     name: {
       type: String,
       required: true
     },
+    /**
+     * Modal heading text
+     */
     heading: {
       type: String,
       default: null
     },
+    /**
+     * Indicate if clicking outside modal can emit `close` action
+     */
     closeOnBackgroundClick: {
       type: Boolean,
       default: true
     },
+    /**
+     * Indicate if Esc key can emit `close` action
+     */
     closeOnEsc: {
       type: Boolean,
       default: true
     },
+    /**
+     * Modal main transition effect name
+     */
     modalMainTransition: {
       type: String,
       default: 'fade'
     },
+    /**
+     * Modal content transition effect name
+     */
     modalContentTransition: {
       type: String,
       default: 'slide-down'
     },
-    maxWidth: {
-      type: Number,
-      default: null
-    },
+    /**
+     * Modal aria-labelledby text
+     */
     ariaLabelledby: {
       type: String,
       default: null
     },
+    /**
+     * Modal aria-describedby text
+     */
     ariaDescribedby: {
       type: String,
       default: null
     },
+    /**
+     * Indicate if close button is available
+     */
     closeButton: {
       type: Boolean,
       default: true
@@ -47,11 +70,6 @@ export default {
       visibility: false,
       trigger: null,
       ariaHidden: 'true'
-    }
-  },
-  computed: {
-    getMaxWidth () {
-      return this.maxWidth !== null ? `max-width: ${this.maxWidth}px;` : null
     }
   },
   methods: {
