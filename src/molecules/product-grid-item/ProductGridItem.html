@@ -50,28 +50,22 @@
     <!--@slot Custom product rating (Named slot)-->
     <slot name="rating" />
 
-    <div class="a-product-grid-item__price">
-      <!--@slot Custom product price (Scoped slot)-->
-      <slot
-        name="prices"
-        :product-prices="prices"
-      >
-        <a-price
-          v-if="prices"
-          :price="prices.price"
-          :special-price="prices.specialPrice"
-          :old-price="prices.oldPrice"
-        />
-      </slot>
-    </div>
-
-    <div class="a-product-grid-item__options">
-      <!--@slot Custom product options (Named slot)-->
-      <slot name="options" />
-    </div>
+    <!--@slot Custom product price (Scoped slot)-->
+    <slot
+      name="prices"
+      :product-prices="prices"
+    >
+      <a-price
+        v-if="prices"
+        :price="prices.price"
+        :special-price="prices.specialPrice"
+        :old-price="prices.oldPrice"
+        class="a-product-grid-item__price"
+      />
+    </slot>
 
     <div class="a-product-grid-item__actions">
-      <div class="a-product-grid-item__secondary-action">
+      <div class="a-product-grid-item__secondary-actions">
         <!--@slot Custom add to wishlist action (Scoped slot)-->
         <slot
           name="addToWishList"
