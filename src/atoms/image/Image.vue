@@ -1,13 +1,11 @@
-<template src="./Image.html" />
+<template>
+  <img class="a-image">
+</template>
 
 <script>
-import AImage from './Image.js'
-
 export default {
-  name: 'AlpacaImage',
-
-  mixins: [AImage]
+  name: 'AlpacaImage'
 }
 </script>
 
-<style lang="scss" src="./Image.scss" />
+<style lang="scss" scoped src="./Image.scss" />

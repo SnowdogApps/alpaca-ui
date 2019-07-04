@@ -1,12 +1,28 @@
-<template src="./Badge.html" />
+<template>
+  <!-- eslint-disable -->
+  <!-- https://github.com/vuejs/eslint-plugin-vue/issues/869 -->
+  <component
+    :is="tag"
+    class="a-badge"
+  >
+    <!-- @slot Slot for badge content -->
+    <slot />
+  </component>
+  <!-- eslint-enable -->
+</template>
 
 <script>
-import ABadge from './Badge.js'
-
 export default {
   name: 'AlpacaBadge',
-
-  mixins: [ABadge]
+  props: {
+    /**
+     * To use another tag instead of `div`
+     */
+    tag: {
+      type: String,
+      default: 'div'
+    }
+  }
 }
 </script>
 
