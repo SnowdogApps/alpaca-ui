@@ -8,6 +8,7 @@
 
 [![CircleCI](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop.svg?style=svg)](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop)
 [![npm version](https://badge.fury.io/js/%40snowdog%2Falpaca-ui.svg)](https://www.npmjs.com/package/@snowdog/alpaca-ui)
+[![codecov](https://codecov.io/gh/SnowdogApps/alpaca-ui/branch/develop/graph/badge.svg)](https://codecov.io/gh/SnowdogApps/alpaca-ui)
 
 Highly customizable library of responsive UI components crafted for e-commerce. It is based on Vue.js and Alpaca design system.
 
@@ -24,7 +25,7 @@ Highly customizable library of responsive UI components crafted for e-commerce. 
 
 ## Getting Started
 
-### Installation 
+### Installation
 
 Add Alpaca UI to your project by using Yarn
 ```bash
@@ -72,7 +73,7 @@ export default {
 }
 </script>
 
-<style src="@snowdog/alpaca-ui/src/atoms/button/Button.scss" lang="scss" /> 
+<style src="@snowdog/alpaca-ui/src/atoms/button/Button.scss" lang="scss" />
 ```
 For now, to see all possible cases/modifiers, you should clone and run repo as in Development point, or check .stories.js file in component.
 

@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vue Info table generator helper
 - badge: tag knob and new test regarding custom tag
 - Tests for radio button
-- Add test coverage
+- Test coverage
+- Codecov badge
 
 ### Changed
 - Move CatalogGridItem to atomic design, rename to ProductGridItem
