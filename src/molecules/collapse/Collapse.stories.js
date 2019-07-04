@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
-import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
-import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Collapse.selectors.json'
 
 import ACollapse from './Collapse.vue'
