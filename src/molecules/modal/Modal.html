@@ -42,13 +42,14 @@
             />
           </slot>
           <a-button
+            v-if="closeButton"
             @click.native="hide(name)"
             class="a-modal__close-button"
+            :aria-label="closeButtonAriaLabel"
           >
             <!-- @slot Custom close icon (Named slot) -->
             <slot name="close">
               <a-icon
-                v-if="closeButton"
                 icon="close"
                 class="a-modal__close-icon"
               />

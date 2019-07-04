@@ -46,6 +46,7 @@ storiesOf('Molecules/Modal', module)
           name="default"
           ref="modalDefault"
           :modalContentTransition="contentTransitionKnob"
+          closeButtonAriaLabel="Close"
         >
           <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
           <a-input-wrapper
@@ -98,6 +99,7 @@ storiesOf('Molecules/Modal', module)
           :heading="headingKnob"
           ref="modalDefault"
           :modalContentTransition="contentTransitionKnob"
+          closeButtonAriaLabel="Close"
         >
           <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
           <a-input-wrapper
@@ -252,6 +254,7 @@ storiesOf('Molecules/Modal', module)
           :heading="headingKnob"
           ref="modalDefault"
           :modalContentTransition="contentTransitionKnob"
+          closeButtonAriaLabel="Close"
         >
           <template #heading="{ modalHeading }">
             <a-heading

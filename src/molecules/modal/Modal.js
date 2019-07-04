@@ -63,6 +63,13 @@ export default {
     closeButton: {
       type: Boolean,
       default: true
+    },
+    /**
+     * Modal close button aria-label text
+     */
+    closeButtonAriaLabel: {
+      type: String,
+      default: null
     }
   },
   data () {
