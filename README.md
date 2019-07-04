@@ -66,10 +66,10 @@ If you need more flexibility you can take the source:
 <template src="@snowdog/alpaca-ui/src/atoms/button/Button.html" />
 
 <script>
-import Button from '@snowdog/alpaca-ui/src/atoms/button/Button.js'
+import AButton from '@snowdog/alpaca-ui/src/atoms/button/Button.js'
 
 export default {
-  mixins: [Button]
+  mixins: [AButton]
 }
 </script>
 
