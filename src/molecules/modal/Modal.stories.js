@@ -12,8 +12,7 @@ import AModal from './Modal.vue'
 const availableTransitions = [
   'fade',
   'slide-down',
-  'slide-right',
-  'slide'
+  'slide-right'
 ]
 
 storiesOf('Molecules/Modal', module)
@@ -27,9 +26,6 @@ storiesOf('Molecules/Modal', module)
     props: {
       contentKnob: {
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
-      },
-      mainTransitionKnob: {
-        default: select('Main transition', availableTransitions)
       },
       contentTransitionKnob: {
         default: select('Content transition', availableTransitions)
@@ -49,7 +45,6 @@ storiesOf('Molecules/Modal', module)
         <a-modal
           name="default"
           ref="modalDefault"
-          :modalMainTransition="mainTransitionKnob"
           :modalContentTransition="contentTransitionKnob"
         >
           <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
@@ -83,9 +78,6 @@ storiesOf('Molecules/Modal', module)
       contentKnob: {
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
       },
-      mainTransitionKnob: {
-        default: select('Main transition', availableTransitions)
-      },
       contentTransitionKnob: {
         default: select('Content transition', availableTransitions)
       }
@@ -105,7 +97,6 @@ storiesOf('Molecules/Modal', module)
           name="default"
           :heading="headingKnob"
           ref="modalDefault"
-          :modalMainTransition="mainTransitionKnob"
           :modalContentTransition="contentTransitionKnob"
         >
           <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
@@ -139,9 +130,6 @@ storiesOf('Molecules/Modal', module)
       contentKnob: {
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
       },
-      mainTransitionKnob: {
-        default: select('Main transition', availableTransitions)
-      },
       contentTransitionKnob: {
         default: select('Content transition', availableTransitions)
       }
@@ -162,7 +150,6 @@ storiesOf('Molecules/Modal', module)
           :heading="headingKnob"
           :closeButton="false"
           ref="modalDefault"
-          :modalMainTransition="mainTransitionKnob"
           :modalContentTransition="contentTransitionKnob"
         >
           <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
@@ -193,9 +180,6 @@ storiesOf('Molecules/Modal', module)
       contentKnob: {
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
       },
-      mainTransitionKnob: {
-        default: select('Main transition', availableTransitions)
-      },
       contentTransitionKnob: {
         default: select('Content transition', availableTransitions)
       }
@@ -215,7 +199,6 @@ storiesOf('Molecules/Modal', module)
           name="default"
           :closeButton="false"
           ref="modalDefault"
-          :modalMainTransition="mainTransitionKnob"
           :modalContentTransition="contentTransitionKnob"
         >
           <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
@@ -250,9 +233,6 @@ storiesOf('Molecules/Modal', module)
       contentKnob: {
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
       },
-      mainTransitionKnob: {
-        default: select('Main transition', availableTransitions)
-      },
       contentTransitionKnob: {
         default: select('Content transition', availableTransitions)
       }
@@ -271,7 +251,6 @@ storiesOf('Molecules/Modal', module)
           name="default"
           :heading="headingKnob"
           ref="modalDefault"
-          :modalMainTransition="mainTransitionKnob"
           :modalContentTransition="contentTransitionKnob"
         >
           <template #heading="{ modalHeading }">
