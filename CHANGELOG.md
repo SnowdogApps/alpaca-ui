@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Codecov badge
 
 ### Changed
+- Move ProductItem to atomic design, rename to ProductListItem
 - Move CatalogGridItem to atomic design, rename to ProductGridItem
 - heading: update heading class and add unit test and knobs
 - paragraph: to update stories - add text knobs, update component class name - add prefix
@@ -27,9 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Typo in Message.selectors.json file
-
-### Changed
-- Move ProductItem to atomic design, rename to ProductListItem
 
 ## [0.4.0] - 04-06-2019
 ### Added
