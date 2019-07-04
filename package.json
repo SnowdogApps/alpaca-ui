@@ -9,7 +9,7 @@
     "now-build": "yarn build",
     "eslint": "eslint --ext .js,.vue .",
     "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.scss' 'assets/styles/**/*.scss'",
-    "test": "jest",
+    "test": "jest --clearCache && jest",
     "codcov": "./node_modules/codcov/bin/codcov"
   },
   "dependencies": {

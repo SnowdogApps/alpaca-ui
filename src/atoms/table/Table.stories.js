@@ -5,8 +5,8 @@ import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'
 import footCells from './mocks/footCells.json'
 
-import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
-import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Table.selectors.json'
 
 import ATable from './Table.vue'

@@ -12,6 +12,10 @@ module.exports = {
   },
   'collectCoverage': true,
   'collectCoverageFrom': [
-    '**/*.vue'
+    '**/atoms/*/*.vue',
+    '**/molecules/*/*.vue',
+    '**/organisms/*/*.vue',
+    '**/templates/*/*.vue',
+    '**/pages/*/*.vue'
   ]
 }
