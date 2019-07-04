@@ -8,4 +8,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Image.scss" />
+<style lang="scss" scoped src="./Image.scss" />
