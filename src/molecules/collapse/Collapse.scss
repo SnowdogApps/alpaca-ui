@@ -105,9 +105,10 @@ $collapse__content-padding            : $spacer !default;
     width: $collapse__button-width;
     margin: $reset;
     padding: $collapse__button-padding;
-    color: $black;
+    color: $collapse__button-color;
     text-align: left;
     text-decoration: none;
+    background: $collapse__button-background;
     border: 0;
     border-radius: 0;
     cursor: pointer;
@@ -125,7 +126,7 @@ $collapse__content-padding            : $spacer !default;
     }
 
     &[aria-expanded="true"] {
-      color: #fff;
+      color: $collapse__button-color-active;
       background-color: $collapse__button-background-active;
 
       & > .a-collapse__icon {
