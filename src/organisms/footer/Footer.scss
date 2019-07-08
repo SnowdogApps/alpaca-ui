@@ -44,7 +44,6 @@ $footer__icon-fill-hover             : $color-primary !default;
 
     @include mq($screen-l) {
       display: flex;
-      flex-flow: row wrap;
     }
   }
 
@@ -77,6 +76,10 @@ $footer__icon-fill-hover             : $color-primary !default;
       order: 1;
       padding-top: $footer__padding;
     }
+  }
+
+  &__links {
+    width: 100%;
   }
 
   &__link {
