@@ -21,6 +21,7 @@ $footer__social-handle-margin        : 0 0 $spacer 0 !default;
 $footer__social-icon-color           : $white !default;
 $footer__copywrite-padding           : $spacer--medium;
 $footer__scroll-top-top              : -24px !default;
+$footer__scroll-top-width            : 48px !default;
 $footer__icon-size                   : 13px !default;
 $footer__icon-fill                   : $color-secondary !default;
 $footer__icon-fill-hover             : $color-primary !default;
@@ -135,6 +136,7 @@ $footer__icon-fill-hover             : $color-primary !default;
     position: absolute;
     top: $footer__scroll-top-top;
     right: 0;
+    width: $footer__scroll-top-width;
 
     &:hover,
     &:focus {
