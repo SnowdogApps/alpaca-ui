@@ -24,7 +24,6 @@ export default {
   methods: {
     checkMedia (e) {
       this.isLargeScreen = e.matches
-      console.log(this.isLargeScreen)
     }
   }
 }
