@@ -1,11 +1,12 @@
 @import '../../../assets/styles/globals.scss';
 
-$footer-menu__background-color-darker     : $gray-darker !default;
-$footer-menu__button-color                : $white !default;
-$footer-menu__button-border               : 3px solid $gray-darkest !default;
-$footer-menu__content-padding             : $spacer $spacer--large !default;
-$footer-menu__content-padding--mq-medium  : $spacer !default;
-$footer-menu__content-color               : $white !default;
+$footer-menu__background-color-darker: $gray-darker !default;
+$footer-menu__button-color           : $white !default;
+$footer-menu__button-border          : 3px solid $gray-darkest !default;
+$footer-menu__button-border\@medium  : none !default;
+$footer-menu__content-padding        : $spacer $spacer--large !default;
+$footer-menu__content-padding\@medium: $spacer !default;
+$footer-menu__content-color          : $white !default;
 
 .a-footer-menu {
   background-color: $footer-menu__background-color-darker;
@@ -30,7 +31,7 @@ $footer-menu__content-color               : $white !default;
     color: $footer-menu__content-color;
 
     @include mq($screen-m) {
-      padding: $footer-menu__content-padding--mq-medium;
+      padding: $footer-menu__content-padding\@medium;
     }
   }
 
@@ -47,8 +48,12 @@ $footer-menu__content-color               : $white !default;
       .a-footer-menu__button {
         color: $footer-menu__button-color;
         font-weight: bold;
-        border-bottom: $footer-menu__button-border;
+        border-bottom: $footer-menu__button-border\@medium;
         cursor: default;
+
+        @include mq(screen--m) {
+          border-bottom: $footer-menu__button-border;
+        }
 
         &:hover,
         &:focus {
