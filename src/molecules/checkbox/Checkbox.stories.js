@@ -48,18 +48,17 @@ storiesOf('Molecules/Checkbox', module)
         @change="onChange"
       >
         <template #label>
-          <div class="a-checkbox__icon-wrapper">
-            <a-icon
-              icon="checked"
-              class="a-checkbox__icon"
-            />
-          </div>
-
           <label
             for="checkbox-slots"
             class="a-checkbox__label"
             style="color: #0000ff;"
           >
+            <div class="a-checkbox__icon-wrapper">
+              <a-icon
+                icon="checked"
+                class="a-checkbox__icon"
+              />
+            </div>
             I hereby agree for processing my personal data.
           </label>
         </template>

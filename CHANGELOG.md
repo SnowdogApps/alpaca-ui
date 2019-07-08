@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vue Info table generator helper
 - badge: tag knob and new test regarding custom tag
 - Tests for radio button
+- Test coverage
+- Codecov badge
 - Add more tests in input/input-wrapper
 
 ### Changed
+- Move ProductItem to atomic design, rename to ProductListItem
+- Move CatalogGridItem to atomic design, rename to ProductGridItem
 - heading: update heading class and add unit test and knobs
 - paragraph: to update stories - add text knobs, update component class name - add prefix
 - container: add props with tag, update tests
@@ -21,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactor styles in checkbox component
 - Refactor styles for radio button
 - Remove unnecessary variables in quantity update styles
+- Components structure
+- Add tests in textarea component
 
 ### Fixed
 - Typo in Message.selectors.json file
