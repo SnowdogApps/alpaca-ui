@@ -9,21 +9,20 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
 $footer__handler-margin              : 0 auto $spacer--medium !default;
 $footer__link-color                  : $gray-lighter !default;
 $footer__link-color-hover            : $color-primary !default;
-$footer__link-inner-padding          : $spacer--medium !default;
-$footer__link-button-margin          : 3px !default;
-$footer__link-button-color           : $white !default;
 $footer__newsletter-margin           : 0 auto $spacer--medium !default;
 $footer__newsletter-padding          : 0 $spacer--medium !default;
 $footer__newsletter-color            : $white !default;
 $footer__newsletter-link-color       : $color-primary !default;
+$footer__newsletter-checkbox-width   : 24px !default;
+$footer__newsletter-checkbox-height  : 24px !default;
+$footer__newsletter-checkbox-margin  : 0 16px 0 0 !default;
 $footer__content-color               : $white !default;
-$footer__social-handle-margin        : 0 0 $spacer 0 !default;
 $footer__social-icon-color           : $white !default;
+$footer__social-list-item-width      : 48px !default;
+$footer__social-list-item-height     : 48px !default;
 $footer__copywrite-padding           : $spacer--medium;
 $footer__scroll-top-top              : -24px !default;
 $footer__scroll-top-width            : 48px !default;
-$footer__icon-size                   : 13px !default;
-$footer__icon-fill                   : $color-secondary !default;
 $footer__icon-fill-hover             : $color-primary !default;
 
 .a-footer {
@@ -57,6 +56,17 @@ $footer__icon-fill-hover             : $color-primary !default;
 
     .newsletter {
       background: none;
+    }
+
+    .a-icon {
+      width: auto;
+      height: auto;
+    }
+
+    .a-checkbox__icon-wrapper {
+      width: $footer__newsletter-checkbox-width;
+      height: $footer__newsletter-checkbox-height;
+      margin: $footer__newsletter-checkbox-margin;
     }
 
     a {
@@ -96,18 +106,20 @@ $footer__icon-fill-hover             : $color-primary !default;
   }
 
   &__social-handler {
-    margin: $footer__social-handle-margin;
-
     @include mq($screen-m) {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       order: 1;
-      margin: $reset;
     }
+  }
 
-    .a-footer__social-list {
-      justify-content: center;
+  &__social-list {
+    justify-content: center;
+
+    &-item {
+      width: $footer__social-list-item-width;
+      height: $footer__social-list-item-width;
     }
   }
 
@@ -137,10 +149,14 @@ $footer__icon-fill-hover             : $color-primary !default;
     top: $footer__scroll-top-top;
     right: 0;
     width: $footer__scroll-top-width;
+  }
+
+  &__icon {
+    padding: $reset;
 
     &:hover,
     &:focus {
-      .footer__icon {
+      .a-footer__icon {
         fill: $footer__icon-fill-hover;
       }
     }
