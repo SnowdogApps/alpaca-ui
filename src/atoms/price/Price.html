@@ -19,7 +19,7 @@
       {{ specialPrice }}
     </ins>
   </slot>
-  <!-- @slot Custom regular price (Scoped slot) -->
+  <!-- @slot Custom regular price (Named slot) -->
   <slot name="regularPrice">
     <template v-if="!specialPrice && regularPrice">
       {{ regularPrice }}
