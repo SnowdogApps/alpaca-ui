@@ -35,12 +35,9 @@
       >
         <a-price
           v-if="prices"
-          :price="prices.price"
           :special-price="prices.specialPrice"
-          :old-price="prices.oldPrice"
+          :regular-price="prices.regularPrice"
           class="a-product-list-item__price-wrapper"
-          old-price-class="a-product-list-item__price-wrapper--old"
-          special-price-class="a-product-list-item__price-wrapper--special"
         />
       </slot>
 
