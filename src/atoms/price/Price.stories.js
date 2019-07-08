@@ -7,8 +7,7 @@ storiesOf('Atoms/Price', module)
   .add('Default', () => ({
     components: { APrice },
     template: `<a-price regular-price="$36,00" />`
-  })
-  )
+  }))
   .add('Special Price', () => ({
     components: { APrice },
     template: `
