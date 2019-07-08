@@ -1,6 +1,6 @@
-<section :class="['a-footer-menu', isLargeScreen && 'a-footer-menu--screen-m']">
+<div :class="['a-footer-menu', isLargeScreen && 'a-footer-menu--screen-m']">
   <a-collapse
-    class="a-footer__list"
+    class="a-footer-menu__list"
     button-class="a-footer-menu__button"
     content-class="a-footer-menu__content"
     v-for="item in menu"
@@ -45,4 +45,4 @@
       </a-list>
     </slot>
   </a-collapse>
-</section>
+</div>

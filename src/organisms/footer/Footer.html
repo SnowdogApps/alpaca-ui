@@ -31,53 +31,8 @@
         />
       </slot>
     </section>
-    <section :class="['a-footer__links col-xs-12 col-lg-9', isLargeScreen && 'a-footer__links--screen-m']">
-      <a-collapse
-        class="a-footer__links-list"
-        button-class="a-footer__links-button"
-        content-class="a-footer__links-content"
-        v-for="item in menu"
-        :key="item.id"
-        :collapse="!isLargeScreen"
-        :title="item.title"
-        :id="item.id"
-        :disabled="isLargeScreen"
-      >
-        <template #button="{collapseLocal, ariaControls, toggle}">
-            <a-button
-              class="a-footer__links-button a-button--blank a-collapse__button"
-              :aria-controls="!collapseLocal && ariaControls"
-              @click.native="toggle"
-              :aria-expanded="!collapseLocal"
-            >
-              {{ item.title }}
-              <a-icon
-                title="Angle down"
-                icon="angle-down"
-                class="a-collapse__icon"
-              />
-            </a-button>
-          </template>
-          <!-- @slot Links list (Scoped slot) -->
-        <slot
-          name="list"
-          :item="item.items"
-        >
-          <a-list>
-            <a-list-item
-              v-for="link in item.items"
-              :key="link.id"
-            >
-              <a-link
-                class="a-footer__link"
-                :href="link.link"
-              >
-                {{ link.title }}
-              </a-link>
-            </a-list-item>
-          </a-list>
-        </slot>
-      </a-collapse>
+    <section class="col-xs-12 col-lg-9">
+      <a-footer-menu :menu="menu"/>
     </section>
   </div>
   <section class="a-footer__bottom-bar">
