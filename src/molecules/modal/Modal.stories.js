@@ -16,6 +16,7 @@ const availableTransitions = [
 ]
 
 storiesOf('Molecules/Modal', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: {
       AButton,
@@ -34,7 +35,7 @@ storiesOf('Molecules/Modal', module)
     data: () => ({ value: null }),
     methods: {
       showModal () {
-        this.$refs.modalDefault.show('default')
+        this.$refs.modalDefault.show()
       }
     },
     template: `
@@ -43,7 +44,6 @@ storiesOf('Molecules/Modal', module)
           Modal button
         </a-button>
         <a-modal
-          name="default"
           ref="modalDefault"
           :modalContentTransition="contentTransitionKnob"
           closeButtonAriaLabel="Close"
@@ -61,7 +61,7 @@ storiesOf('Molecules/Modal', module)
               placeholder="Test focus trap"
             />
           </a-input-wrapper>
-         </a-modal>
+        </a-modal>
       </div>
     `
   }))
@@ -86,7 +86,7 @@ storiesOf('Molecules/Modal', module)
     data: () => ({ value: null }),
     methods: {
       showModal () {
-        this.$refs.modalDefault.show('default')
+        this.$refs.modalDefault.show()
       }
     },
     template: `
@@ -95,7 +95,6 @@ storiesOf('Molecules/Modal', module)
           Modal button
         </a-button>
         <a-modal
-          name="default"
           :heading="headingKnob"
           ref="modalDefault"
           :modalContentTransition="contentTransitionKnob"
@@ -114,7 +113,7 @@ storiesOf('Molecules/Modal', module)
               placeholder="Test focus trap"
             />
           </a-input-wrapper>
-         </a-modal>
+        </a-modal>
       </div>
     `
   }))
@@ -139,7 +138,7 @@ storiesOf('Molecules/Modal', module)
     data: () => ({ value: null }),
     methods: {
       showModal () {
-        this.$refs.modalDefault.show('default')
+        this.$refs.modalDefault.show()
       }
     },
     template: `
@@ -148,7 +147,6 @@ storiesOf('Molecules/Modal', module)
           Modal button
         </a-button>
         <a-modal
-          name="default"
           :heading="headingKnob"
           :closeButton="false"
           ref="modalDefault"
@@ -167,7 +165,7 @@ storiesOf('Molecules/Modal', module)
               placeholder="Test focus trap"
             />
           </a-input-wrapper>
-         </a-modal>
+        </a-modal>
       </div>
     `
   }))
@@ -189,7 +187,7 @@ storiesOf('Molecules/Modal', module)
     data: () => ({ value: null }),
     methods: {
       showModal () {
-        this.$refs.modalDefault.show('default')
+        this.$refs.modalDefault.show()
       }
     },
     template: `
@@ -198,7 +196,6 @@ storiesOf('Molecules/Modal', module)
           Modal button
         </a-button>
         <a-modal
-          name="default"
           :closeButton="false"
           ref="modalDefault"
           :modalContentTransition="contentTransitionKnob"
@@ -216,7 +213,7 @@ storiesOf('Molecules/Modal', module)
               placeholder="Test focus trap"
             />
           </a-input-wrapper>
-         </a-modal>
+        </a-modal>
       </div>
     `
   }))
@@ -240,17 +237,22 @@ storiesOf('Molecules/Modal', module)
       }
     },
     methods: {
-      showModal () {
-        this.$refs.modalDefault.show('default')
+      showDefaultModal () {
+        this.$refs.modalDefault.show()
+      },
+      showSecondModal () {
+        this.$refs.secondModal.show()
       }
     },
     template: `
       <div>
-        <a-button @click.native="showModal">
-          Modal button
+        <a-button @click.native="showDefaultModal">
+          Default Modal button
+        </a-button>
+        <a-button @click.native="showSecondModal">
+          Second Modal button
         </a-button>
         <a-modal
-          name="default"
           :heading="headingKnob"
           ref="modalDefault"
           :modalContentTransition="contentTransitionKnob"
@@ -276,7 +278,34 @@ storiesOf('Molecules/Modal', module)
             />
           </template>
           <p>{{ contentKnob }}</p>
-         </a-modal>
+        </a-modal>
+        <a-modal
+          :heading="headingKnob"
+          ref="secondModal"
+          :modalContentTransition="contentTransitionKnob"
+          closeButtonAriaLabel="Close"
+        >
+          <template #heading="{ modalHeading }">
+            <a-heading
+              :level="1"
+              class="a-modal__heading"
+            >
+              {{ modalHeading + ' II' }}
+            </a-heading>
+            <a-divider
+              class="a-modal__divider a-modal__divider--header"
+              style="background-color: #fab216;"
+            />
+          </template>
+          <template #close>
+            <a-icon
+              icon="minus"
+              class="a-modal__close-icon"
+              title="Close"
+            />
+          </template>
+          <p>{{ contentKnob.toUpperCase() }}</p>
+        </a-modal>
       </div>
     `
   }))

@@ -3,11 +3,7 @@ import AModal from './Modal.vue'
 
 describe('Modal', () => {
   it('has default structure', () => {
-    const wrapper = mount(AModal, {
-      propsData: {
-        name: 'test-modal'
-      }
-    })
+    const wrapper = mount(AModal)
 
     expect(wrapper.is('div')).toBe(true)
     expect(wrapper.isVisible()).toBe(false)
@@ -27,7 +23,6 @@ describe('Modal', () => {
   it('should render default heading if provided', () => {
     const wrapper = mount(AModal, {
       propsData: {
-        name: 'test-modal',
         heading: 'Sample heading'
       }
     })
@@ -53,9 +48,6 @@ describe('Modal', () => {
 
   it('renders slot text when passed', () => {
     const wrapper = mount(AModal, {
-      propsData: {
-        name: 'Test modal'
-      },
       slots: {
         default: `<span data-test="content">Sample text</span>`,
         heading: `<h1 data-test="heading">Sample heading</h1>`,
@@ -72,17 +64,13 @@ describe('Modal', () => {
   })
 
   it('should change aria hidden when `show` and `hide` functions are used', () => {
-    const wrapper = mount(AModal, {
-      propsData: {
-        name: 'test-modal'
-      }
-    })
+    const wrapper = mount(AModal)
 
-    wrapper.vm.show('test-modal')
+    wrapper.vm.show()
     expect(wrapper.isVisible()).toBe(true)
     expect(wrapper.attributes()['aria-hidden']).toBeDefined()
     expect(wrapper.attributes()['aria-hidden']).toEqual('false')
-    wrapper.vm.hide('test-modal')
+    wrapper.vm.hide()
     expect(wrapper.isVisible()).toBe(false)
     expect(wrapper.attributes()['aria-hidden']).toBeDefined()
     expect(wrapper.attributes()['aria-hidden']).toEqual('true')
@@ -91,7 +79,6 @@ describe('Modal', () => {
   it('should do not render header if there is no heading and close button is disabled', () => {
     const wrapper = mount(AModal, {
       propsData: {
-        name: 'test-modal',
         closeButton: false
       }
     })

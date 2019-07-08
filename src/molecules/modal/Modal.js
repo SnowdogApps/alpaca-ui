@@ -2,13 +2,6 @@
 export default {
   props: {
     /**
-     * Modal name
-     */
-    name: {
-      type: String,
-      required: true
-    },
-    /**
      * Modal heading text
      */
     heading: {
@@ -80,18 +73,14 @@ export default {
     }
   },
   methods: {
-    show (name) {
-      if (name === this.name) {
-        this.trigger = document.activeElement
-        this.toggleParams(true)
-        this.$nextTick(() => this.$refs.modal.focus())
-      }
+    show () {
+      this.trigger = document.activeElement
+      this.toggleParams(true)
+      this.$nextTick(() => this.$refs.modal.focus())
     },
-    hide (name) {
-      if (name === this.name) {
-        this.toggleParams(false)
-        this.$nextTick(() => this.trigger.focus())
-      }
+    hide () {
+      this.toggleParams(false)
+      this.$nextTick(() => this.trigger.focus())
     },
     toggleParams (state) {
       this.ariaHidden = state ? 'false' : 'true'
@@ -99,7 +88,7 @@ export default {
     },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
-        this.hide(this.name)
+        this.hide()
       }
     },
     handleKeydown (event) {
@@ -108,7 +97,7 @@ export default {
           case 'Esc': // IE/Edge specific value
           case 'Escape':
             if (this.closeOnEsc) {
-              this.hide(this.name)
+              this.hide()
             }
             break
           case 'Tab':
