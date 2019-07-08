@@ -1,16 +1,18 @@
 @import '../../../assets/styles/globals.scss';
 
 $footer__padding                     : $spacer--medium !default;
-$footer__background-color-darkest    : $gray-darkest !default;
-$footer__background-color-darker     : $gray-darker !default;
+$footer__background-color            : $gray-darkest !default;
+$footer__background-color\@large     : $gray-darker !default;
 $footer__bottom-bar-background\@large: $gray-darkest !default;
 $footer__bottom-bar-color            : $gray-lighter !default;
 $footer__bottom-bar-font-size        : $font-size-small !default;
+$footer__handler-margin              : 0 auto $spacer--medium !default;
 $footer__link-color                  : $gray-lighter !default;
 $footer__link-color-hover            : $color-primary !default;
 $footer__link-inner-padding          : $spacer--medium !default;
 $footer__link-button-margin          : 3px !default;
 $footer__link-button-color           : $white !default;
+$footer__newsletter-margin           : 0 auto $spacer--medium !default;
 $footer__newsletter-padding          : 0 $spacer--medium !default;
 $footer__newsletter-color            : $white !default;
 $footer__newsletter-link-color       : $color-primary !default;
@@ -25,15 +27,15 @@ $footer__icon-fill-hover             : $color-primary !default;
 
 .a-footer {
   flex-shrink: 0;
-  background-color: $footer__background-color-darkest;
+  background-color: $footer__background-color;
 
   @include mq($screen-l) {
-    background-color: $footer__background-color-darker;
+    background-color: $footer__background-color\@large;
   }
 
   &__handler {
     position: relative;
-    margin: 0 auto $footer__padding;
+    margin: $footer__handler-margin;
     padding-top: $footer__padding;
 
     @include mq($screen-m) {
@@ -47,7 +49,7 @@ $footer__icon-fill-hover             : $color-primary !default;
   }
 
   &__newsletter {
-    margin: 0 auto $footer__padding;
+    margin: $footer__newsletter-margin;
     padding: $footer__newsletter-padding;
     color: $footer__newsletter-color;
     font-size: $font-size-small;
@@ -63,58 +65,6 @@ $footer__icon-fill-hover             : $color-primary !default;
     @include mq($screen-l) {
       order: 1;
       padding-top: $footer__padding;
-    }
-  }
-
-  &__links {
-    &-list {
-      background-color: $footer__background-color-darker;
-    }
-
-    &-button {
-      margin-bottom: $footer__link-button-margin;
-      color: $footer__link-button-color;
-      font-weight: bold;
-      background-color: $footer__background-color-darker;
-
-      .a-icon {
-        fill: $footer__link-button-color;
-      }
-    }
-
-    &-content {
-      color: $footer__content-color;
-      background-color: $footer__background-color-darker;
-    }
-
-    &--screen-m {
-      @include mq($screen-m) {
-        display: flex;
-
-        .a-footer__links-list {
-          width: 25%;
-          background-color: $footer__background-color-darker;
-          border-bottom: 0;
-          cursor: default;
-        }
-
-        .a-footer__links-button {
-          color: $footer__link-button-color;
-          font-weight: bold;
-          cursor: default;
-
-
-          &:hover,
-          &:focus {
-            text-decoration: none;
-            background-color: $footer__background-color-darker;
-          }
-
-          .a-icon {
-            display: none;
-          }
-        }
-      }
     }
   }
 
@@ -155,7 +105,7 @@ $footer__icon-fill-hover             : $color-primary !default;
       margin: $reset;
     }
 
-    .a-list {
+    .a-footer__social-list {
       justify-content: center;
     }
   }

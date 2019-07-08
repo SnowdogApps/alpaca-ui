@@ -20,7 +20,7 @@ $footer-menu__content-color               : $white !default;
     background-color: $footer-menu__background-color-darker;
     border-bottom: $footer-menu__button-border;
 
-    .a-icon {
+    .a-footer-menu__icon {
       fill: $footer-menu__button-color;
     }
   }
@@ -56,7 +56,7 @@ $footer-menu__content-color               : $white !default;
           background-color: $footer-menu__background-color-darker;
         }
 
-        .a-icon {
+        .a-footer-menu__icon {
           display: none;
         }
       }
