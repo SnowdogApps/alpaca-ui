@@ -9,5 +9,13 @@ module.exports = {
   'transform': {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
     '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
-  }
+  },
+  'collectCoverage': true,
+  'collectCoverageFrom': [
+    '**/atoms/*/*.vue',
+    '**/molecules/*/*.vue',
+    '**/organisms/*/*.vue',
+    '**/templates/*/*.vue',
+    '**/pages/*/*.vue'
+  ]
 }

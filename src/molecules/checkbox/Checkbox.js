@@ -3,7 +3,7 @@
 export default {
   model: {
     prop: 'checked',
-    event: 'input'
+    event: 'change'
   },
   props: {
     /**
@@ -18,21 +18,21 @@ export default {
      */
     value: {
       type: [String, Boolean],
-      default: null
+      required: true
     },
     /**
      * Input id
      */
     id: {
       type: String,
-      default: null
+      required: true
     },
     /**
      * Input name
      */
     name: {
       type: String,
-      default: null
+      required: true
     },
     /**
      * Class for input

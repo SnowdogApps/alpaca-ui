@@ -28,7 +28,6 @@ $button__font-color-hover--secondary: $gray-dark !default;
 $button__background--blank          : transparent !default;
 $button__background-hover--blank    : transparent !default;
 $button__font-color--blank          : $gray-darker !default;
-$button__font-color-hover--blank    : $gray-dark !default;
 $button__font-weight--blank         : $font-weight-base !default;
 
 //fluid
@@ -36,6 +35,7 @@ $button__width--fluid               : 100% !default;
 
 .a-button {
   display: inline-flex;
+  align-items: center;
   justify-content: center;
   min-width: $button__width;
   height: $button__height;

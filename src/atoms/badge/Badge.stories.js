@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
-import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
-import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Badge.selectors.json'
 
 import ABadge from './Badge.vue'
@@ -39,11 +39,14 @@ storiesOf('Atoms/Badge', module)
       },
       classKnob: {
         default: select('BEM Modifier', classKnobsConfig)
+      },
+      tagKnob: {
+        default: text('Html tag', 'span')
       }
     },
     template: `
       <a-badge
-        tag="span"
+        :tag="tagKnob"
         :class="classKnob"
       >
         {{ textKnob }}

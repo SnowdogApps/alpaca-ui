@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 import { select } from '@storybook/addon-knobs'
 
-import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
-import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './RadioWrapper.selectors.json'
 
 import ARadioWrapper from './RadioWrapper.vue'
-import ARadio from './../../atoms/radio/Radio.vue'
+import ARadio from '../radio/Radio.vue'
 
 const info = `
   <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
