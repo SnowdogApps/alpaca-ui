@@ -1,0 +1,69 @@
+@import '../../../assets/styles/globals.scss';
+
+$footer-menu__background-color-darker     : $gray-darker !default;
+$footer-menu__button-color                : $white !default;
+$footer-menu__button-border               : 3px solid $gray-darkest !default;
+$footer-menu__content-padding             : $spacer $spacer--large !default;
+$footer-menu__content-padding--mq-medium  : $spacer !default;
+$footer-menu__content-color               : $white !default;
+
+.a-footer-menu {
+  background-color: $footer-menu__background-color-darker;
+
+  &__list {
+    background-color: $footer-menu__background-color-darker;
+  }
+
+  &__button {
+    color: $footer-menu__button-color;
+    font-weight: bold;
+    background-color: $footer-menu__background-color-darker;
+    border-bottom: $footer-menu__button-border;
+
+    .a-icon {
+      fill: $footer-menu__button-color;
+    }
+  }
+
+  &__content {
+    padding: $footer-menu__content-padding;
+    color: $footer-menu__content-color;
+
+    @include mq($screen-m) {
+      padding: $footer-menu__content-padding--mq-medium;
+    }
+  }
+
+  &--screen-m {
+    @include mq($screen-m) {
+      display: flex;
+
+      .a-footer-menu__list {
+        width: 25%;
+        border-bottom: 0;
+        cursor: default;
+      }
+
+      .a-footer-menu__button {
+        color: $footer-menu__button-color;
+        font-weight: bold;
+        border-bottom: $footer-menu__button-border;
+        cursor: default;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: $footer-menu__background-color-darker;
+        }
+
+        .a-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .a-collapse {
+    background: transparent;
+  }
+}

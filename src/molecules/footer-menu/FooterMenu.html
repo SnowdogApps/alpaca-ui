@@ -1,0 +1,48 @@
+<section :class="['a-footer-menu', isLargeScreen && 'a-footer-menu--screen-m']">
+  <a-collapse
+    class="a-footer__list"
+    button-class="a-footer-menu__button"
+    content-class="a-footer-menu__content"
+    v-for="item in menu"
+    :key="item.id"
+    :collapse="!isLargeScreen"
+    :title="item.title"
+    :id="item.id"
+  >
+    <template #button="{collapseLocal, ariaControls, toggle}">
+      <a-button
+        class="a-footer-menu__button a-button--blank a-collapse__button"
+        :aria-controls="!collapseLocal && ariaControls"
+        @click.native="toggle"
+        :aria-expanded="!collapseLocal"
+        :disabled="isLargeScreen"
+      >
+        {{ item.title }}
+        <a-icon
+          title="Angle down"
+          icon="angle-down"
+          class="a-collapse__icon"
+        />
+      </a-button>
+    </template>
+    <!-- @slot Links list (Scoped slot) -->
+    <slot
+      name="list"
+      :item="item.items"
+    >
+      <a-list>
+        <a-list-item
+          v-for="link in item.items"
+          :key="link.id"
+        >
+          <a-link
+            class="a-footer__link"
+            :href="link.link"
+          >
+            {{ link.title }}
+          </a-link>
+        </a-list-item>
+      </a-list>
+    </slot>
+  </a-collapse>
+</section>
