@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactor styles for radio button
 - Remove unnecessary variables in quantity update styles
 - Components structure
+- Add tests in textarea component
 - Collapse style
 
 ### Fixed
