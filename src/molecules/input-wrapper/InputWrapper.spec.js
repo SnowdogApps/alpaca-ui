@@ -12,20 +12,11 @@ describe('Input wrapper', () => {
   it('renders slots content when passed', () => {
     const wrapper = mount(AInputWrapper, {
       slots: {
-        label: `<label for="input-1">Alpaca UI</label>`,
-        default: `<input id="input-1">`
+        label: `<label for="input-1">Alpaca UI</label>`
       }
     })
     const label = wrapper.find('.a-input-wrapper > label')
     expect(label.exists()).toBe(true)
     expect(label.text()).toEqual('Alpaca UI')
-    const input = wrapper.find('.a-input-wrapper > input')
-    expect(input.exists()).toBe(true)
-  })
-
-  it('renders text input by default', () => {
-    const wrapper = mount(AInputWrapper)
-    const input = wrapper.find('.a-input')
-    expect(input.attributes('type')).toBe('text')
   })
 })
