@@ -11,7 +11,8 @@ import AInput from '../../atoms/input/Input.vue'
 
 const info = `
   <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
-  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}<br>
+  Remember, you should use AInput component inside the AInputWrapper.
 `
 
 const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
@@ -19,7 +20,7 @@ const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 storiesOf('Molecules/Input Wrapper', module)
   .addParameters({ info })
   .add('Default', () => ({
-    components: { AInputWrapper },
+    components: { AInputWrapper, AInput },
     props: {
       labelKnob: {
         default: text('Label text', 'First name')
@@ -32,8 +33,13 @@ storiesOf('Molecules/Input Wrapper', module)
       <a-input-wrapper
         :class="classKnob"
         :label="labelKnob"
-        input-id="input-1"
-      />
+        :label-for="inputId"
+      >
+        <a-input
+          :id="inputId"
+          type="text"
+        />
+      </a-input-wrapper>
     `
   }))
   .add('With slot', () => ({

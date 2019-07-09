@@ -3,16 +3,11 @@
   <slot name="label">
     <a-label
       v-if="label"
-      :for="inputId"
+      :for="labelFor"
     >
       {{ label }}
     </a-label>
   </slot>
   <!-- @slot Input (Default slot) -->
-  <slot>
-    <a-input
-      :id="inputId"
-      type="text"
-    />
-  </slot>
+  <slot />
 </div>

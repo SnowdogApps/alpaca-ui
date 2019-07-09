@@ -5,7 +5,7 @@ export default {
     /**
      * Input id
      */
-    inputId: {
+    labelFor: {
       type: String,
       default: null
     },
