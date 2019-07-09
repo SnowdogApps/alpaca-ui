@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Test coverage
 - Codecov badge
 - Tests for Price component
+- Tests for Preformatted component
 
 ### Changed
 - Move ProductItem to atomic design, rename to ProductListItem
