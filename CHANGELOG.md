@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Components structure
 - Add tests in textarea component
 - Collapse style
+- Remove -webkit- in transitions
 
 ### Fixed
 - Typo in Message.selectors.json file
