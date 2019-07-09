@@ -2,7 +2,7 @@
 export default {
   props: {
     /**
-     * Rgular price value
+     * Regular price value
      */
     regularPrice: {
       type: [String, Number],
