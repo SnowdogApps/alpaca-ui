@@ -57,9 +57,8 @@
     >
       <a-price
         v-if="prices"
-        :price="prices.price"
+        :regular-price="prices.regularPrice"
         :special-price="prices.specialPrice"
-        :old-price="prices.oldPrice"
         class="a-product-grid-item__price"
       />
     </slot>
