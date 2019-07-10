@@ -9,9 +9,8 @@ import ABadge from '../../atoms/badge/Badge.vue'
 import ARating from '../../molecules/rating/Rating.vue'
 
 const defaultPrices = {
-  price: '$1684.00',
-  specialPrice: '$100.00',
-  oldPrice: '$299.99'
+  regularPrice: '$1684.00',
+  specialPrice: '$100.00'
 }
 const defaultData = {
   methods: {
