@@ -1,5 +1,9 @@
 <footer class="a-footer">
-  <a-container class="a-footer__handler">
+  <a-container
+    tag="div"
+    class="a-footer__handler"
+  >
+
     <!-- @slot Scroll to top button (Scoped slot) -->
     <slot
       name="scrollButton"
@@ -10,10 +14,7 @@
         :aria-label="scrollAriaLabel"
         @click.native="scrollToTop"
       >
-        <a-icon
-          icon="arrow-up"
-          class="a-footer__icon"
-        />
+        <a-icon icon="arrow-up" />
       </a-button>
     </slot>
 
@@ -38,47 +39,54 @@
   </a-container>
 
   <section class="a-footer__bottom-bar">
-    <a-container class="a-footer__bottom-bar-handler">
-      <div class="a-footer__social-handler">
-        <!-- @slot Social media title (Named slot) -->
-        <slot name="socialTitle">
-          <span class="a-footer__social-list-subtitle">
-            {{ socialListSubtitle }}
-          </span>
-        </slot>
-        <a-list class="a-list--horizontal a-footer__social-list">
-          <a-list-item
-            class="a-footer__social-list-item"
-            v-for="item in socialMenu"
-            :key="item.id"
-            :aria-label="item.ariaLabel"
-          >
-            <!-- @slot Social media list (Scoped slot) -->
-            <slot
-              name="social"
-              :item="item"
-            >
-              <a-link
-                class="list__icon-link"
-                :href="item.link"
+    <a-container
+      tag="div"
+      class="a-footer__bottom-bar-container"
+    >
+
+      <!-- @slot Social media container (Named slot) -->
+      <slot name="socias">
+        <div class="a-footer__socials">
+
+          <!-- @slot Social media title (Named slot) -->
+          <slot name="socialTitle">
+            <span class="a-footer__social-list-subtitle">
+              {{ socialListSubtitle }}
+            </span>
+          </slot>
+
+          <!-- @slot Social media list (Named slot) -->
+          <slot name="socialItmes">
+            <a-list class="a-list--horizontal a-footer__social-list">
+              <a-list-item
+                class="a-footer__social-list-item"
+                v-for="item in socialMenu"
+                :key="item.id"
                 :aria-label="item.ariaLabel"
               >
-                <a-icon
-                  :icon="item.iconId"
-                  class="a-footer__social-icon"
-                />
-              </a-link>
-            </slot>
-          </a-list-item>
-        </a-list>
-      </div>
+                <a-link
+                  style="display: block"
+                  :href="item.link"
+                  :aria-label="item.ariaLabel"
+                >
+                  <a-icon
+                    :icon="item.iconId"
+                    class="a-footer__social-icon "
+                  />
+                </a-link>
+              </a-list-item>
+            </a-list>
+          </slot>
+        </div>
+      </slot>
 
       <!-- @slot Copyright text (Named slot) -->
       <slot name="copyright">
-        <small class="a-footer__copyright">
+        <div class="a-footer__copyright">
           {{ copyrightText }}
-        </small>
+        </div>
       </slot>
+
     </a-container>
   </section>
 

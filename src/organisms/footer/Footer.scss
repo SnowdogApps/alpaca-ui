@@ -3,6 +3,11 @@
 $footer__padding                     : $spacer--medium !default;
 $footer__background-color            : $gray-darkest !default;
 $footer__background-color\@large     : $gray-darker !default;
+
+$footer__scroll-top-top              : -24px !default;
+$footer__scroll-top-width            : 48px !default;
+$footer__scroll-top-fill--hover      : $color-primary !default;
+
 $footer__bottom-bar-background\@large: $gray-darkest !default;
 $footer__bottom-bar-color            : $gray-lighter !default;
 $footer__bottom-bar-font-size        : $font-size-small !default;
@@ -21,9 +26,9 @@ $footer__social-icon-color           : $white !default;
 $footer__social-list-item-width      : 48px !default;
 $footer__social-list-item-height     : 48px !default;
 $footer__copywrite-padding           : $spacer--medium;
-$footer__scroll-top-top              : -24px !default;
-$footer__scroll-top-width            : 48px !default;
-$footer__icon-fill-hover             : $color-primary !default;
+
+$footer__social-list-subtitle-margin : 0 $spacer--medium 0 0 !default;
+$footer__social-list-item-padding    : 12px !default;
 
 .a-footer {
   flex-shrink: 0;
@@ -44,6 +49,18 @@ $footer__icon-fill-hover             : $color-primary !default;
 
     @include mq($screen-l) {
       display: flex;
+    }
+  }
+
+  &__scroll-top {
+    position: absolute;
+    top: $footer__scroll-top-top;
+    right: 0;
+    width: $footer__scroll-top-width;
+
+    &:hover,
+    &:focus {
+      fill: $footer__scroll-top-fill--hover;
     }
   }
 
@@ -90,13 +107,14 @@ $footer__icon-fill-hover             : $color-primary !default;
 
   &__bottom-bar {
     color: $footer__bottom-bar-color;
+    font-size: $footer__bottom-bar-font-size;
 
     @include mq($screen-l) {
       background-color: $footer__bottom-bar-background\@large;
     }
   }
 
-  &__bottom-bar-handler {
+  &__bottom-bar-container {
     @include mq($screen-m) {
       display: flex;
       align-items: center;
@@ -104,7 +122,7 @@ $footer__icon-fill-hover             : $color-primary !default;
     }
   }
 
-  &__social-handler {
+  &__socials {
     @include mq($screen-m) {
       display: flex;
       flex-flow: row nowrap;
@@ -113,23 +131,30 @@ $footer__icon-fill-hover             : $color-primary !default;
     }
   }
 
-  &__social-list {
-    justify-content: center;
+  // &__social-list {
+  //   justify-content: center;
 
-    &-item {
-      width: $footer__social-list-item-width;
-      height: $footer__social-list-item-width;
-    }
-  }
+  //   &-item {
+  //     width: $footer__social-list-item-width;
+  //     height: $footer__social-list-item-width;
+  //   }
+  // }
 
   &__social-list-subtitle {
     display: none;
 
     @include mq($screen-m) {
       display: block;
-      margin-right: $footer__padding;
-      font-size: $footer__bottom-bar-font-size;
+      margin: $footer__social-list-subtitle-margin;
     }
+  }
+
+  &__social-list-item {
+    padding: $footer__social-list-item-padding;
+  }
+
+  &__social-list-link {
+    display: block;
   }
 
   &__social-icon {
@@ -139,25 +164,6 @@ $footer__icon-fill-hover             : $color-primary !default;
   &__copyright {
     display: block;
     padding: $footer__copywrite-padding;
-    font-size: $footer__bottom-bar-font-size;
     text-align: center;
-  }
-
-  &__scroll-top {
-    position: absolute;
-    top: $footer__scroll-top-top;
-    right: 0;
-    width: $footer__scroll-top-width;
-  }
-
-  &__icon {
-    padding: $reset;
-
-    &:hover,
-    &:focus {
-      .a-footer__icon {
-        fill: $footer__icon-fill-hover;
-      }
-    }
   }
 }

@@ -16,11 +16,5 @@
     "iconId": "instagram",
     "ariaLabel": "Check A on Instagram",
     "link": "#"
-  },
-  {
-    "id": "el4",
-    "iconId": "google-plus",
-    "ariaLabel": "Find A on Google Plus",
-    "link": "#"
   }
 ]
