@@ -3,9 +3,9 @@
 $modal__padding                      : 0 !default;
 $modal__background-color\@medium     : rgba(57, 50, 67, 0.6) !default;
 
-$modal__header-margin                : $reset !default;
+$modal__header-margin                : 0 !default;
 
-$modal__heading-margin               : $reset !default;
+$modal__heading-margin               : 0 !default;
 
 $modal__divider-margin               : $spacer 0 $spacer--large 0 !default;
 
@@ -86,7 +86,7 @@ $modal__close-button-icon-transition : $transition-base !default;
     }
 
     &--blank {
-      padding: $reset;
+      padding: 0;
     }
   }
 

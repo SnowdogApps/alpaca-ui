@@ -14,7 +14,7 @@ $table__border-radius: $border-radius !default;
 
     &:last-child {
       @include mq($screen-m) {
-        border-right: $reset;
+        border-right: 0;
       }
     }
 
@@ -71,7 +71,7 @@ $table__border-radius: $border-radius !default;
 
     &:last-child {
       @include mq($screen-m) {
-        border-right: $reset;
+        border-right: 0;
       }
     }
 

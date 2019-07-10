@@ -103,7 +103,7 @@ $collapse__content-padding            : $spacer !default;
     z-index: 1;
     display: block;
     width: $collapse__button-width;
-    margin: $reset;
+    margin: 0;
     padding: $collapse__button-padding;
     color: $collapse__button-color;
     text-align: left;

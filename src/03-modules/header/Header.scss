@@ -23,7 +23,7 @@ $header__search-wrapper-padding--mq-medium: 0 24px !default;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: $reset;
+    padding: 0;
 
     @include mq($screen-m) {
       padding: $header__wrapper-padding--mq-medium;

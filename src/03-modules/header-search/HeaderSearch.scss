@@ -19,7 +19,7 @@ $search-form__placeholder-color : $gray !default;
   align-self: $search-form__alignment;
   width: $search-form__width;
   height: $search-form__height;
-  margin: $reset;
+  margin: 0;
   border: 1px solid $search-form__border-color;
   border-radius: $search-form__height;
 
@@ -53,7 +53,7 @@ $search-form__placeholder-color : $gray !default;
     top: 0;
     right: 0;
     height: $search-form__input-height;
-    margin: $reset;
+    margin: 0;
     background-color: $search-form__button-background;
     border: $search-form__button-border;
     border-radius: $search-form__height;
@@ -67,7 +67,7 @@ $search-form__placeholder-color : $gray !default;
   &__icon {
     width: $search-form__button-size;
     height: $search-form__button-size;
-    padding: $reset;
+    padding: 0;
     transition: $transition-base;
     fill: $search-form__button-icon-color;
 

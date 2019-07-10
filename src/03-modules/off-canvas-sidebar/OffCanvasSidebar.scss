@@ -3,9 +3,9 @@
 $off-canvas-sidebar__padding                      : 0 !default;
 $off-canvas-sidebar__background-color\@small      : rgba(57, 50, 67, 0.6) !default;
 
-$off-canvas-sidebar__header-margin                : $reset !default;
+$off-canvas-sidebar__header-margin                : 0 !default;
 
-$off-canvas-sidebar__heading-margin               : $reset !default;
+$off-canvas-sidebar__heading-margin               : 0 !default;
 
 $off-canvas-sidebar__divider-margin               : $spacer 0 $spacer--large 0 !default;
 
@@ -81,7 +81,7 @@ $off-canvas-sidebar__close-button-icon-transition : $transition-base !default;
     }
 
     &--blank {
-      padding: $reset;
+      padding: 0;
     }
 
     &--left {
