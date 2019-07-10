@@ -27,7 +27,7 @@ storiesOf('Organisms/Footer', module)
       cookieMessage
     }),
     methods: {
-      submit: action('Submitted'),
+      submitNewsletter: action('Submitted'),
       closeCookieMessage () {
         this.cookieMessage.visible = false
       }
