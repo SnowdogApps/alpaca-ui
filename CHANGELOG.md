@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Price component (removed props, changed classes, removed useless storeies)
 - Collapse style
 - Remove -webkit- in transitions
+- Remove modifiers in collapse component
 
 ### Fixed
 - Typo in Message.selectors.json file

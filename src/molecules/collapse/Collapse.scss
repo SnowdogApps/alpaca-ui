@@ -13,86 +13,14 @@ $collapse__button-background          : $white !default;
 $collapse__button-background--active  : $gray-darker !default;
 $collapse__button-border-radius       : 0 !default;
 $collapse__button-outline             : none !default;
-$collapse__button_color--inner        : $white !default;
-$collapse__button_color-active--inner : $color-primary !default;
-$collapse__button_background--inner   : $gray-dark !default;
 $collapse__icon-width                 : $spacer--medium !default;
 $collapse__icon-height                : $spacer--medium !default;
 $collapse__icon-fill                  : $black !default;
 $collapse__icon-fill-active           : $color-primary !default;
-$collapse__icon-fill--secondary       : $gray !default;
-$collapse__icon-fill-active--secondary: $color-primary !default;
-$collapse__icon-margin-left--secondary: $spacer--medium !default;
-$collapse__icon-inner                 : $white !default;
-$collapse__icon-inner-hover           : $color-primary !default;
 $collapse__content-padding            : $spacer !default;
 
 .a-collapse {
   background-color: $collapse__background;
-
-  &--secondary {
-    .a-collapse__button {
-      color: $collapse__button-color;
-      font-weight: $collapse__button-font-weight;
-      text-transform: $collapse__button-text-transform;
-      background-color: $collapse__button-background;
-      outline: $collapse__button-outline;
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: $collapse__button-color;
-        background-color: $collapse__button-background;
-
-        & > .a-collapse__icon {
-          fill: $collapse__icon-fill--secondary;
-        }
-      }
-
-      &[aria-expanded="true"] {
-        color: $collapse__button-color-active;
-        text-decoration: $collapse__button-text-decoration;
-        background-color: $collapse__button-background;
-
-        &:active,
-        &:focus,
-        &:hover {
-          color: $collapse__button-color-active;
-          background-color: $collapse__button-background;
-
-          & > .a-collapse__icon {
-            fill: $collapse__icon-fill-active--secondary;
-          }
-        }
-      }
-    }
-
-    .a-collapse__icon {
-      top: 3px;
-      margin-left: $collapse__icon-margin-left--secondary;
-      fill: $collapse__icon-fill--secondary;
-    }
-  }
-
-  &--inner {
-    .a-collapse__button {
-      color: $collapse__button_color--inner;
-      background-color: $collapse__button_background--inner;
-
-      &:active,
-      &:focus {
-        color: $collapse__button_color-active--inner;
-      }
-    }
-
-    .a-collapse__icon {
-      fill: $collapse__icon-inner;
-
-      &:hover {
-        fill: $collapse__icon-inner-hover;
-      }
-    }
-  }
 
   &__button {
     z-index: 2;
