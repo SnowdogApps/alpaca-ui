@@ -11,6 +11,7 @@ $collapse__button-text-transform      : uppercase !default;
 $collapse__button-text-decoration     : underline !default;
 $collapse__button-background          : $white !default;
 $collapse__button-background--active  : $gray-darker !default;
+$collapse__button-border-radius       : 0 !default;
 $collapse__button-outline             : none !default;
 $collapse__button_color--inner        : $white !default;
 $collapse__button_color-active--inner : $color-primary !default;
@@ -102,7 +103,7 @@ $collapse__content-padding            : $spacer !default;
     text-align: left;
     text-decoration: none;
     background: $collapse__button-background;
-    border-radius: 0;
+    border-radius: $collapse__button-border-radius;
 
     &:hover,
     &:focus {
