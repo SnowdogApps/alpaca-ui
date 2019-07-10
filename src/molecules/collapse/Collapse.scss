@@ -23,7 +23,8 @@ $collapse__content-padding            : $spacer !default;
   background-color: $collapse__background;
 
   &__button {
-    z-index: 2;
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     width: $collapse__button-width;
