@@ -32,8 +32,8 @@ export default {
     /**
      * Cookie text
      */
-    cookieText: {
-      type: String,
+    cookieMessage: {
+      type: Object,
       default: null
     },
     /**
@@ -84,9 +84,16 @@ export default {
     submitNewsletter (payload) {
       /**
        * Submit newsletter event
-       * @type {Event}
+       * @type { Event }
        */
       this.$emit('submitNewsletter', payload)
+    },
+    closeCookieMessage () {
+      /**
+       * Close Cookie Message event
+       * @type { Event }
+       */
+      this.$emit('closeCookieMessage')
     }
   }
 }

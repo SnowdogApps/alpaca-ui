@@ -16,25 +16,27 @@
         />
       </a-button>
     </slot>
-    <section class="a-footer__newsletter">
-      <!--@slot Newsletter (Scoped slot)-->
-      <slot
-        name="newsletter"
-        :submit-newsletter="submitNewsletter"
-      >
-        <a-newsletter
-          :heading="heading"
-          :input="input"
-          button="Submit"
-          :checkboxes="checkboxes"
-          @submit="submitNewsletter"
-        />
-      </slot>
-    </section>
+
+    <!--@slot Newsletter (Scoped slot)-->
+    <slot
+      name="newsletter"
+      :submit-newsletter="submitNewsletter"
+    >
+      <a-newsletter
+        class="a-footer__newsletter"
+        :heading="heading"
+        :input="input"
+        button="Submit"
+        :checkboxes="checkboxes"
+        @submit="submitNewsletter"
+      />
+    </slot>
+
     <section class="a-footer__links">
       <a-footer-menu :menu="menu"/>
     </section>
   </a-container>
+
   <section class="a-footer__bottom-bar">
     <a-container class="a-footer__bottom-bar-handler">
       <div class="a-footer__social-handler">
@@ -70,6 +72,7 @@
           </a-list-item>
         </a-list>
       </div>
+
       <!-- @slot Copyright text (Named slot) -->
       <slot name="copyright">
         <small class="a-footer__copyright">
@@ -78,13 +81,17 @@
       </slot>
     </a-container>
   </section>
-  <!--TODO Edit after merge cookie-message component-->
+
   <!-- @slot Cookie message (Named slot) -->
   <slot name="cookie">
     <a-cookie-message
-      :text="cookieText"
-      close-icon="close"
-      close-button="Close"
-    />
+      v-if="cookieMessage"
+      :visible="cookieMessage.visible"
+      :close-button="cookieMessage.closeButton"
+      :close-aria-label="cookieMessage.closeAriaLabel"
+      @close="closeCookieMessage"
+    >
+      {{ cookieMessage.text }}
+    </a-cookie-message>
   </slot>
 </footer>
