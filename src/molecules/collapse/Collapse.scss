@@ -1,6 +1,5 @@
 @import '../../../assets/styles/globals';
 
-$collapse__width                      : 100% !default;
 $collapse__background                 : $white !default;
 $collapse__transition                 : $transition-base !default;
 $collapse__button-color               : $black !default;
@@ -28,8 +27,6 @@ $collapse__icon-inner-hover           : $color-primary !default;
 $collapse__content-padding            : $spacer !default;
 
 .a-collapse {
-  position: relative;
-  width: $collapse__width;
   background-color: $collapse__background;
 
   &--secondary {
@@ -70,9 +67,7 @@ $collapse__content-padding            : $spacer !default;
     }
 
     .a-collapse__icon {
-      position: relative;
       top: 3px;
-      display: inline;
       margin-left: $collapse__icon-margin-left--secondary;
       fill: $collapse__icon-fill--secondary;
     }
@@ -99,19 +94,15 @@ $collapse__content-padding            : $spacer !default;
   }
 
   &__button {
-    position: relative;
-    z-index: 1;
-    display: block;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
     width: $collapse__button-width;
-    margin: 0;
-    padding: $collapse__button-padding;
     color: $collapse__button-color;
     text-align: left;
     text-decoration: none;
     background: $collapse__button-background;
-    border: 0;
     border-radius: 0;
-    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -137,13 +128,8 @@ $collapse__content-padding            : $spacer !default;
   }
 
   &__icon {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    bottom: 0;
     width: $collapse__icon-width;
     height: $collapse__icon-height;
-    margin: auto;
     transition: $collapse__transition;
     fill: $collapse__icon-fill;
   }
