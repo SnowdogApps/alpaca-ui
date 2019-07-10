@@ -7,13 +7,6 @@ export default {
     title: {
       type: String,
       default: null
-    },
-    /**
-     * Custom class for content
-     */
-    contentClass: {
-      type: String,
-      default: null
     }
   },
   data () {

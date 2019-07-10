@@ -45,17 +45,4 @@ describe('Collapse', () => {
     expect(wrapper.find('.a-collapse div').exists()).toBe(true)
     expect(wrapper.find('.a-collapse div').text()).toEqual('Alpaca UI')
   })
-
-  it('renders elements with custom class', () => {
-    const wrapper = mount(ACollapse, {
-      propsData: {
-        title: 'Sample title',
-        contentClass: 'content-class'
-      }
-    })
-
-    expect(wrapper.props().contentClass).toBe('content-class')
-    expect(wrapper.find('.a-collapse div').classes()).toContain('content-class')
-    expect(wrapper.find('.a-collapse div').classes().length).toBe(2)
-  })
 })
