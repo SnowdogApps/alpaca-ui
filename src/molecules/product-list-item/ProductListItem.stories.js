@@ -21,9 +21,8 @@ const defaultOptions = [
   }
 ]
 const defaultPrices = {
-  price: '',
   specialPrice: '$100,00',
-  oldPrice: '$299,99'
+  regularPrice: '$299,99'
 }
 
 storiesOf('Molecules/Product List Item', module)
@@ -167,7 +166,7 @@ storiesOf('Molecules/Product List Item', module)
         <template #prices="{ productPrices }">
           <div style="margin-top: 10px; flex-basis: 100%;">
             <strong style="color: #a01111;">{{ productPrices.specialPrice }}</strong>
-            <small style="text-decoration: line-through;">{{ productPrices.oldPrice }}</small>
+            <small style="text-decoration: line-through;">{{ productPrices.regularPrice }}</small>
           </div>
         </template>
         <template #options="{ productOptions }">

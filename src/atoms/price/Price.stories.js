@@ -1,78 +1,45 @@
 import { storiesOf } from '@storybook/vue'
+import { text } from '@storybook/addon-knobs'
 
 import APrice from './Price.vue'
 
-// @vue/component
-const defaultData = {
-  components: { APrice },
-  data: () => {
-    return {
-      price: '$1 400.00',
-      special: '$1 299 00',
-      old: '$1 999.99'
-    }
-  }
-}
-
 storiesOf('Atoms/Price', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
-    ...defaultData,
+    components: { APrice },
+    props: {
+      regularPriceKnobs: {
+        default: text('Regular price', '$36,00')
+      }
+    },
+    template: `<a-price :regular-price="regularPriceKnobs" />`
+  }))
+  .add('Special Price', () => ({
+    components: { APrice },
+    props: {
+      regularPriceKnobs: {
+        default: text('Regular price', '$36,00')
+      },
+      specialPriceKnobs: {
+        default: text('Special price', '$19,90')
+      }
+    },
+    template: `
+      <a-price
+        :regular-price="regularPriceKnobs"
+        :special-price="specialPriceKnobs"
+        aria-label-special-price="Special price:"
+        aria-label-old-price="Old price:"
+      />
+    `
+  }))
+  .add('With slot', () => ({
+    components: { APrice },
     template: `
       <a-price>
-        {{ price }}
+        <template #regularPrice>
+          Price: <span style="color: #2b15e0;">$123</span>
+        </template>
       </a-price>
     `
-  })
-  )
-  // @vue/component
-  .add('Special Price', () => ({
-    ...defaultData,
-    template: `
-      <a-price
-        :special-price="special"
-        aria-label-special="Special price:"
-      />
-    `
-  }))
-  // @vue/component
-  .add('Old price', () => ({
-    ...defaultData,
-    template: `
-      <a-price
-        :old-price="old"
-        aria-label-old="Old price:"
-      />
-    `
-  }))
-  // @vue/component
-  .add('With special price', () => ({
-    ...defaultData,
-    template: `
-      <a-price
-        :old-price="old"
-        :special-price="special"
-        aria-label-special="Special price:"
-        aria-label-old="Old price:"
-        />
-      `
-  }))
-  // @vue/component
-  .add('With slots', () => ({
-    ...defaultData,
-    template: `
-      <a-price>
-        <template #oldPrice>
-          <span :style="{color: '#73739c'}">
-            {{ old }}
-          </span>&nbsp;
-          </template>
-          <template #specialPrice>
-            <span :style="{color: '#e32926'}">
-              {{ special }}
-            </span>
-          </template>
-        </a-price>
-      `
   }))

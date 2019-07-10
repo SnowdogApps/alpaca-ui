@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tests for radio button
 - Test coverage
 - Codecov badge
+- Tests for Price component
+- Tests for Preformatted component
 - Add more tests in input/input-wrapper
 
 ### Changed
@@ -21,12 +23,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - container: add props with tag, update tests
 - Update readme
 - Update tests in heading component, remove extends from styles
-- image: class name - add prefix, add basic tests
+- Image: class name - add prefix, add basic tests
 - Refactor styles in checkbox component
 - Refactor styles for radio button
 - Remove unnecessary variables in quantity update styles
 - Components structure
 - Add tests in textarea component
+- Price component (removed props, changed classes, removed useless storeies)
 - Remove default slot in input-wrapper component
 
 ### Fixed

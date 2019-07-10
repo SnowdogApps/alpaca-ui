@@ -11,6 +11,7 @@ module.exports = {
     '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
   },
   'collectCoverage': true,
+  'coverageDirectory': './coverage/',
   'collectCoverageFrom': [
     '**/atoms/*/*.vue',
     '**/molecules/*/*.vue',
