@@ -3,18 +3,20 @@
 export default {
   props: {
     /**
-     * Input id
-     */
-    labelFor: {
-      type: String,
-      default: null
-    },
-    /**
      * Label text
      */
     label: {
       type: String,
       default: null
     }
+  },
+  data () {
+    return {
+      inputId: null
+    }
+  },
+  mounted () {
+    const input = this.$slots.default[0].elm
+    this.inputId = input.id
   }
 }

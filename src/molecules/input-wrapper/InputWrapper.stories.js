@@ -33,10 +33,9 @@ storiesOf('Molecules/Input Wrapper', module)
       <a-input-wrapper
         :class="classKnob"
         :label="labelKnob"
-        :label-for="inputId"
       >
         <a-input
-          :id="inputId"
+          id="inputId"
           type="text"
         />
       </a-input-wrapper>
