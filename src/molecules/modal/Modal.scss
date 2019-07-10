@@ -8,6 +8,8 @@ $modal__animation-duration           : 400ms !default;
 $modal__header-margin                : 0 0 $spacer--large 0 !default;
 
 $modal__heading-margin               : $reset !default;
+$modal__heading-font-size            : $font-size-large !default;
+$modal__heading-color                : $gray-darker !default;
 
 $modal__divider-margin               : $spacer--large 0 0 0 !default;
 
@@ -108,6 +110,8 @@ $modal__close-button-icon-transition : $transition-base !default;
     flex: 1;
     align-items: center;
     margin: $modal__heading-margin;
+    color: $modal__heading-color;
+    font-size: $modal__heading-font-size;
   }
 
   &__divider {
