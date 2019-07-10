@@ -17,8 +17,7 @@ describe('Collapse', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(ACollapse, {
       propsData: {
-        title: 'Sample title',
-        collapse: false
+        title: 'Sample title'
       },
       slots: {
         default: `
@@ -51,7 +50,6 @@ describe('Collapse', () => {
     const wrapper = mount(ACollapse, {
       propsData: {
         title: 'Sample title',
-        collapse: false,
         contentClass: 'content-class'
       }
     })

@@ -9,13 +9,6 @@ export default {
       default: null
     },
     /**
-     * Item collapse
-     */
-    collapse: {
-      type: Boolean,
-      default: true
-    },
-    /**
      * Custom class for content
      */
     contentClass: {
@@ -25,7 +18,7 @@ export default {
   },
   data () {
     return {
-      collapseLocal: this.collapse
+      collapseLocal: true
     }
   },
   computed: {
