@@ -1,7 +1,7 @@
 <footer class="a-footer">
   <a-container
     tag="div"
-    class="a-footer__handler"
+    class="a-footer__container"
   >
 
     <!-- @slot Scroll to top button (Scoped slot) -->
@@ -33,9 +33,10 @@
       />
     </slot>
 
-    <section class="a-footer__links">
-      <a-footer-menu :menu="menu"/>
-    </section>
+    <a-footer-menu
+      :menu="menu"
+      class="a-footer__menu"
+    />
   </a-container>
 
   <section class="a-footer__bottom-bar">
@@ -60,7 +61,7 @@
             <a-list class="a-list--horizontal a-footer__social-list">
               <a-list-item
                 class="a-footer__social-list-item"
-                v-for="item in socialMenu"
+                v-for="item in socialList"
                 :key="item.id"
                 :aria-label="item.ariaLabel"
               >

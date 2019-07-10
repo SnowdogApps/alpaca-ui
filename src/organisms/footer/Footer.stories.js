@@ -36,7 +36,7 @@ storiesOf('Organisms/Footer', module)
       <a-footer
         :input="newsletter.input"
         :checkboxes="newsletter.checkbox"
-        :social-menu="listElements"
+        :social-list="listElements"
         :menu="menu"
         :cookie-message="cookieMessage"
         copyright-text="Copyright © 2019 A. All rights reserved."

@@ -2,6 +2,13 @@
 export default {
   props: {
     /**
+     * Array with menu
+     */
+    menu: {
+      type: Array,
+      default: null
+    },
+    /**
      * Copyright text
      */
     copyrightText: {
@@ -18,14 +25,7 @@ export default {
     /**
      * Array with social media
      */
-    socialMenu: {
-      type: Array,
-      default: null
-    },
-    /**
-     * Array with menu
-     */
-    menu: {
+    socialList: {
       type: Array,
       default: null
     },
