@@ -39,6 +39,7 @@
       v-for="checkbox in checkboxes"
       :id="checkbox.name"
       :key="checkbox.name"
+      name="checkbox.name"
       v-model="selected[checkbox.name]"
       :value="true"
       :unchecked-value="false"

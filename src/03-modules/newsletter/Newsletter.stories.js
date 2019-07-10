@@ -6,7 +6,6 @@ import ANewsletter from './Newsletter.vue'
 import newsletter from './mocks/newsletter.json'
 
 storiesOf('Modules/Newsletter', module)
-  // @vue/component
   .add('Default', () => ({
     components: { ANewsletter },
     data: () => ({ newsletter }),
@@ -14,12 +13,14 @@ storiesOf('Modules/Newsletter', module)
       exampleMethod: action('Clicked button')
     },
     template: `
-      <a-newsletter
-        :heading="newsletter.heading"
-        :input="newsletter.input"
-        button="Submit"
-        :checkboxes="newsletter.checkboxes"
-        @submit="exampleMethod"
-      />
+      <div style="background: #444;">
+        <a-newsletter
+          :heading="newsletter.heading"
+          :input="newsletter.input"
+          button="Submit"
+          :checkboxes="newsletter.checkboxes"
+          @submit="exampleMethod"
+        />
+      </div>
     `
   }))

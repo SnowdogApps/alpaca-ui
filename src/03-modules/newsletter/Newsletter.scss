@@ -23,8 +23,6 @@ $newsletter__checkbox-icon-position-top : 0 !default;
 $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !default;
 
 .newsletter {
-  background-color: #333;
-
   &__heading {
     height: auto;
     margin: $newsletter__heading-margin;
