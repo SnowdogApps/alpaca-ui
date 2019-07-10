@@ -28,6 +28,7 @@ $collapse__content-padding            : $spacer !default;
     display: flex;
     justify-content: space-between;
     width: $collapse__button-width;
+    min-width: 0;
     color: $collapse__button-color;
     text-align: left;
     text-decoration: none;
