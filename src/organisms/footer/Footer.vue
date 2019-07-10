@@ -1,6 +1,7 @@
 <template src="./Footer.html" />
 
 <script>
+import AContainer from '../../atoms/container/Container.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import ALink from '../../atoms/link/Link.vue'
 import AButton from '../../atoms/button/Button.vue'
@@ -16,6 +17,7 @@ export default {
   name: 'AlpacaFooter',
   components: {
     AButton,
+    AContainer,
     ALink,
     AIcon,
     AList,

@@ -1,5 +1,5 @@
 <footer class="a-footer">
-  <div class="a-footer__handler container">
+  <a-container class="a-footer__handler">
     <!-- @slot Scroll to top button (Scoped slot) -->
     <slot
       name="scrollButton"
@@ -34,9 +34,9 @@
     <section class="a-footer__links">
       <a-footer-menu :menu="menu"/>
     </section>
-  </div>
+  </a-container>
   <section class="a-footer__bottom-bar">
-    <div class="a-footer__bottom-bar-handler container">
+    <a-container class="a-footer__bottom-bar-handler">
       <div class="a-footer__social-handler">
         <!-- @slot Social media title (Named slot) -->
         <slot name="socialTitle">
@@ -76,7 +76,7 @@
           {{ copyrightText }}
         </small>
       </slot>
-    </div>
+    </a-container>
   </section>
   <!--TODO Edit after merge cookie-message component-->
   <!-- @slot Cookie message (Named slot) -->
