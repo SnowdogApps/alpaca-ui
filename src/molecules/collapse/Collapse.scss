@@ -10,7 +10,7 @@ $collapse__button-font-weight         : $font-weight-bold !default;
 $collapse__button-text-transform      : uppercase !default;
 $collapse__button-text-decoration     : underline !default;
 $collapse__button-background          : $white !default;
-$collapse__button-background-active   : $gray-darker !default;
+$collapse__button-background--active  : $gray-darker !default;
 $collapse__button-outline             : none !default;
 $collapse__button_color--inner        : $white !default;
 $collapse__button_color-active--inner : $color-primary !default;
@@ -108,7 +108,7 @@ $collapse__content-padding            : $spacer !default;
     &:focus {
       color: $collapse__button-color-active;
       text-decoration: $collapse__button-text-decoration;
-      background-color: $collapse__button-background-active;
+      background-color: $collapse__button-background--active;
       outline: $collapse__button-outline;
 
       & > .a-collapse__icon {
@@ -118,7 +118,7 @@ $collapse__content-padding            : $spacer !default;
 
     &[aria-expanded="true"] {
       color: $collapse__button-color-active;
-      background-color: $collapse__button-background-active;
+      background-color: $collapse__button-background--active;
 
       & > .a-collapse__icon {
         transform: rotate(180deg);
