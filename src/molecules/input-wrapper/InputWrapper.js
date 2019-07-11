@@ -17,6 +17,6 @@ export default {
   },
   mounted () {
     const input = this.$slots.default[0].elm
-    this.inputId = input.id
+    this.inputId = input && input.id
   }
 }
