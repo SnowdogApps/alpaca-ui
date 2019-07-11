@@ -11,7 +11,7 @@
 }
 
 .slide-down-enter-active {
-  animation: slide-down-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: slide-down-enter 400ms both cubic-bezier(0.4, 0, 0, 1.5);
 }
 
 @-webkit-keyframes slide-down-leave {
@@ -27,5 +27,5 @@
 }
 
 .slide-down-leave-active {
-  animation: slide-down-leave both;
+  animation: slide-down-leave 400ms both;
 }

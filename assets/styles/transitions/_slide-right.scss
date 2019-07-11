@@ -11,7 +11,7 @@
 }
 
 .slide-right-enter-active {
-  animation: slide-right-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: slide-right-enter 400ms both cubic-bezier(0.4, 0, 0, 1.5);
 }
 
 @-webkit-keyframes slide-right-leave {
@@ -27,5 +27,5 @@
 }
 
 .slide-right-leave-active {
-  animation: slide-right-leave both;
+  animation: slide-right-leave 400ms both;
 }
