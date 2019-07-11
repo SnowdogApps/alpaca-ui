@@ -1,44 +1,46 @@
 @import '../../../assets/styles/globals.scss';
 
-$footer__padding                     : 0 $spacer--medium $spacer--medium $spacer--medium !default;
-$footer__background-color            : #2c2733 !default;
-$footer__background-color\@large     : $gray-darker !default;
+$footer__padding                           : 0 $spacer--medium $spacer--medium $spacer--medium !default;
+$footer__background-color                  : #2c2733 !default;
+$footer__background-color\@large           : $gray-darker !default;
 
-$footer__container-margin            : 0 auto $spacer !default;
-$footer__container-margin\@medium    : 0 auto !default;
-$footer__container-padding           : $spacer--large 0 0 0 !default;
+$footer__container-margin                  : 0 auto $spacer !default;
+$footer__container-margin\@medium          : 0 auto !default;
+$footer__container-padding                 : $spacer--large 0 0 0 !default;
 
-$footer__scroll-top-top              : -24px !default;
-$footer__scroll-top-width            : 48px !default;
-$footer__scroll-top-fill--hover      : $color-primary !default;
+$footer__scroll-up-top                     : -24px !default;
+$footer__scroll-up-right                   : $spacer !default;
+$footer__scroll-up-right\@extra-extra-large: 0 !default;
+$footer__scroll-up-width                   : 48px !default;
+$footer__scroll-up-fill--hover             : $color-primary !default;
 
-$footer__newsletter-min-width        : 300px !default;
-$footer__newsletter-max-width        : 500px !default;
-$footer__newsletter-max-width\@large : 100% !default;
-$footer__newsletter-padding          : 0 $spacer--medium !default;
-$footer__newsletter-padding\@large   : 0 !default;
-$footer__newsletter-margin           : 0 auto $spacer--medium !default;
-$footer__newsletter-margin\@large    : 0 $spacer--medium $spacer--medium 0 !default;
+$footer__newsletter-min-width              : 300px !default;
+$footer__newsletter-max-width              : 500px !default;
+$footer__newsletter-max-width\@large       : 100% !default;
+$footer__newsletter-padding                : 0 $spacer--medium !default;
+$footer__newsletter-padding\@large         : 0 !default;
+$footer__newsletter-margin                 : 0 auto $spacer--medium !default;
+$footer__newsletter-margin\@large          : 0 $spacer--medium $spacer--medium 0 !default;
 
-$footer__bottom-bar-background\@large: $gray-darkest !default;
-$footer__bottom-bar-color            : $gray-lighter !default;
-$footer__bottom-bar-font-size        : $font-size-small !default;
+$footer__bottom-bar-background\@large      : $gray-darkest !default;
+$footer__bottom-bar-color                  : $gray-lighter !default;
+$footer__bottom-bar-font-size              : $font-size-small !default;
 
-$footer__link-color                  : $gray-lighter !default;
-$footer__link-color-hover            : $color-primary !default;
-$footer__newsletter-color            : $white !default;
-$footer__newsletter-link-color       : $color-primary !default;
-$footer__newsletter-checkbox-width   : 24px !default;
-$footer__newsletter-checkbox-height  : 24px !default;
-$footer__newsletter-checkbox-margin  : 0 16px 0 0 !default;
-$footer__content-color               : $white !default;
-$footer__social-icon-color           : $white !default;
-$footer__social-list-item-width      : 48px !default;
-$footer__social-list-item-height     : 48px !default;
-$footer__copywrite-padding           : $spacer--medium;
+$footer__link-color                        : $gray-lighter !default;
+$footer__link-color-hover                  : $color-primary !default;
+$footer__newsletter-color                  : $white !default;
+$footer__newsletter-link-color             : $color-primary !default;
+$footer__newsletter-checkbox-width         : 24px !default;
+$footer__newsletter-checkbox-height        : 24px !default;
+$footer__newsletter-checkbox-margin        : 0 16px 0 0 !default;
+$footer__content-color                     : $white !default;
+$footer__social-icon-color                 : $white !default;
+$footer__social-list-item-width            : 48px !default;
+$footer__social-list-item-height           : 48px !default;
+$footer__copywrite-padding                 : $spacer--medium;
 
-$footer__social-list-subtitle-margin : 0 $spacer--medium 0 0 !default;
-$footer__social-list-item-padding    : 12px !default;
+$footer__social-list-subtitle-margin       : 0 $spacer--medium 0 0 !default;
+$footer__social-list-item-padding          : 12px !default;
 
 .a-footer {
   flex-shrink: 0;
@@ -62,15 +64,19 @@ $footer__social-list-item-padding    : 12px !default;
     }
   }
 
-  &__scroll-top {
+  &__scroll-up {
     position: absolute;
-    top: $footer__scroll-top-top;
-    right: 0;
-    width: $footer__scroll-top-width;
+    top: $footer__scroll-up-top;
+    right: $footer__scroll-up-right;
+    width: $footer__scroll-up-width;
 
     &:hover,
     &:focus {
-      fill: $footer__scroll-top-fill--hover;
+      fill: $footer__scroll-up-fill--hover;
+    }
+
+    @include mq($screen-xxl) {
+      right: $footer__scroll-up-right\@extra-extra-large;
     }
   }
 
