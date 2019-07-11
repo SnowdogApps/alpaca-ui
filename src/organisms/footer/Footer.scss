@@ -6,11 +6,13 @@ $footer__background-color\@large     : $gray-darker !default;
 
 $footer__container-margin            : 0 auto $spacer !default;
 $footer__container-margin\@medium    : 0 auto !default;
-$footer__container-padding           : $spacer--medium 0 0 0 !default;
+$footer__container-padding           : $spacer--large 0 0 0 !default;
 
 $footer__scroll-top-top              : -24px !default;
 $footer__scroll-top-width            : 48px !default;
 $footer__scroll-top-fill--hover      : $color-primary !default;
+
+$footer__newsletter-max-width        : 500px !default;
 
 $footer__bottom-bar-background\@large: $gray-darkest !default;
 $footer__bottom-bar-color            : $gray-lighter !default;
@@ -73,6 +75,7 @@ $footer__social-list-item-padding    : 12px !default;
   }
 
   &__newsletter {
+    max-width: $footer__newsletter-max-width;
     margin: $footer__newsletter-margin;
     padding: $footer__newsletter-padding;
     color: $footer__newsletter-color;
