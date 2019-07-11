@@ -4,9 +4,8 @@ import { text, select } from '@storybook/addon-knobs'
 import AHeading from '../../atoms/heading/Heading.vue'
 import AButton from '../../atoms/button/Button.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
+import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 import ADivider from '../../templates/divider/Divider.vue'
-import AInput from '../../atoms/input/Input.vue'
-import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AModal from './Modal.vue'
 
 const availableTransitions = [
@@ -15,63 +14,31 @@ const availableTransitions = [
   'slide-right'
 ]
 
+const data = {
+  components: {
+    AButton,
+    AModal,
+    AParagraph
+  },
+  data: () => ({
+    isModalVisible: false
+  }),
+  methods: {
+    openModal () {
+      this.isModalVisible = true
+      this.$nextTick(() => this.$refs.modal.$el.focus())
+    },
+    closeModal () {
+      this.isModalVisible = false
+      this.$nextTick(() => this.$refs.modalTriggerBtn.$el.focus())
+    }
+  }
+}
+
 storiesOf('Molecules/Modal', module)
   .addParameters({ info: true })
   .add('Default', () => ({
-    components: {
-      AButton,
-      AModal,
-      AInput,
-      AInputWrapper
-    },
-    props: {
-      contentKnob: {
-        default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
-      },
-      contentTransitionKnob: {
-        default: select('Content transition', availableTransitions)
-      }
-    },
-    data: () => ({ value: null }),
-    methods: {
-      showModal () {
-        this.$refs.modalDefault.show()
-      }
-    },
-    template: `
-      <div>
-        <a-button @click.native="showModal">
-          Modal button
-        </a-button>
-        <a-modal
-          ref="modalDefault"
-          :modalContentTransition="contentTransitionKnob"
-          closeButtonAriaLabel="Close"
-        >
-          <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
-          <a-input-wrapper
-            input-id="field_id"
-            class="a-input-wrapper--inline"
-            label="Inline text"
-          >
-            <a-input
-              id="field_id"
-              type="text"
-              v-model="value"
-              placeholder="Test focus trap"
-            />
-          </a-input-wrapper>
-        </a-modal>
-      </div>
-    `
-  }))
-  .add('With heading', () => ({
-    components: {
-      AButton,
-      AModal,
-      AInput,
-      AInputWrapper
-    },
+    ...data,
     props: {
       headingKnob: {
         default: text('Modal heading', 'Modal heading')
@@ -83,47 +50,31 @@ storiesOf('Molecules/Modal', module)
         default: select('Content transition', availableTransitions)
       }
     },
-    data: () => ({ value: null }),
-    methods: {
-      showModal () {
-        this.$refs.modalDefault.show()
-      }
-    },
     template: `
       <div>
-        <a-button @click.native="showModal">
+        <a-button
+          ref="modalTriggerBtn"
+          @click.native="openModal()"
+        >
           Modal button
         </a-button>
         <a-modal
           :heading="headingKnob"
-          ref="modalDefault"
+          :visible="isModalVisible"
+          ref="modal"
+          @close="closeModal()"
           :modalContentTransition="contentTransitionKnob"
           closeButtonAriaLabel="Close"
         >
-          <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
-          <a-input-wrapper
-            input-id="field_id"
-            class="a-input-wrapper--inline"
-            label="Inline text"
-          >
-            <a-input
-              id="field_id"
-              type="text"
-              v-model="value"
-              placeholder="Test focus trap"
-            />
-          </a-input-wrapper>
+          <a-paragraph>
+            {{ contentKnob }}
+          </a-paragraph>
         </a-modal>
       </div>
     `
   }))
   .add('Without close icon', () => ({
-    components: {
-      AButton,
-      AModal,
-      AInput,
-      AInputWrapper
-    },
+    ...data,
     props: {
       headingKnob: {
         default: text('Modal heading', 'Modal heading')
@@ -135,47 +86,31 @@ storiesOf('Molecules/Modal', module)
         default: select('Content transition', availableTransitions)
       }
     },
-    data: () => ({ value: null }),
-    methods: {
-      showModal () {
-        this.$refs.modalDefault.show()
-      }
-    },
     template: `
       <div>
-        <a-button @click.native="showModal">
+        <a-button
+          ref="modalTriggerBtn"
+          @click.native="openModal()"
+        >
           Modal button
         </a-button>
         <a-modal
           :heading="headingKnob"
+          :visible="isModalVisible"
           :closeButton="false"
-          ref="modalDefault"
+          ref="modal"
+          @close="closeModal()"
           :modalContentTransition="contentTransitionKnob"
         >
-          <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
-          <a-input-wrapper
-            input-id="field_id"
-            class="a-input-wrapper--inline"
-            label="Inline text"
-          >
-            <a-input
-              id="field_id"
-              type="text"
-              v-model="value"
-              placeholder="Test focus trap"
-            />
-          </a-input-wrapper>
+          <a-paragraph>
+            {{ contentKnob }}
+          </a-paragraph>
         </a-modal>
       </div>
     `
   }))
   .add('Without header', () => ({
-    components: {
-      AButton,
-      AModal,
-      AInput,
-      AInputWrapper
-    },
+    ...data,
     props: {
       contentKnob: {
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
@@ -184,35 +119,24 @@ storiesOf('Molecules/Modal', module)
         default: select('Content transition', availableTransitions)
       }
     },
-    data: () => ({ value: null }),
-    methods: {
-      showModal () {
-        this.$refs.modalDefault.show()
-      }
-    },
     template: `
       <div>
-        <a-button @click.native="showModal">
+        <a-button
+          ref="modalTriggerBtn"
+          @click.native="openModal()"
+        >
           Modal button
         </a-button>
         <a-modal
+          :visible="isModalVisible"
           :closeButton="false"
-          ref="modalDefault"
+          ref="modal"
+          @close="closeModal()"
           :modalContentTransition="contentTransitionKnob"
         >
-          <p style="margin-bottom: 8px;">{{ contentKnob }}</p>
-          <a-input-wrapper
-            input-id="field_id"
-            class="a-input-wrapper--inline"
-            label="Inline text"
-          >
-            <a-input
-              id="field_id"
-              type="text"
-              v-model="value"
-              placeholder="Test focus trap"
-            />
-          </a-input-wrapper>
+          <a-paragraph>
+            {{ contentKnob }}
+          </a-paragraph>
         </a-modal>
       </div>
     `
@@ -236,25 +160,52 @@ storiesOf('Molecules/Modal', module)
         default: select('Content transition', availableTransitions)
       }
     },
+    data: () => ({
+      isFirstModalVisible: false,
+      isSecondModalVisible: false
+    }),
     methods: {
-      showDefaultModal () {
-        this.$refs.modalDefault.show()
+      triggerFocus (ref) {
+        this.$nextTick(() => this.$refs[ref].$el.focus())
       },
-      showSecondModal () {
-        this.$refs.secondModal.show()
+      toggleModalState (name) {
+        switch (name) {
+          case 'firstModal':
+            this.isFirstModalVisible = !this.isFirstModalVisible
+            break
+          case 'secondModal':
+            this.isSecondModalVisible = !this.isSecondModalVisible
+            break
+        }
+      },
+      openModal (name) {
+        this.toggleModalState(name)
+        this.triggerFocus(name)
+      },
+      closeModal (name) {
+        this.toggleModalState(name)
+        this.triggerFocus(`${name}Btn`)
       }
     },
     template: `
       <div>
-        <a-button @click.native="showDefaultModal">
+        <a-button
+          ref="firstModalBtn"
+          @click.native="openModal('firstModal')"
+        >
           Default Modal button
         </a-button>
-        <a-button @click.native="showSecondModal">
+        <a-button
+          ref="secondModalBtn"
+          @click.native="openModal('secondModal')"
+        >
           Second Modal button
         </a-button>
         <a-modal
+          :visible="isFirstModalVisible"
           :heading="headingKnob"
-          ref="modalDefault"
+          ref="firstModal"
+          @close="closeModal('firstModal')"
           :modalContentTransition="contentTransitionKnob"
           closeButtonAriaLabel="Close"
         >
@@ -281,7 +232,9 @@ storiesOf('Molecules/Modal', module)
         </a-modal>
         <a-modal
           :heading="headingKnob"
+          :visible="isSecondModalVisible"
           ref="secondModal"
+          @close="closeModal('secondModal')"
           :modalContentTransition="contentTransitionKnob"
           closeButtonAriaLabel="Close"
         >

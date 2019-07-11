@@ -9,6 +9,13 @@ export default {
       default: null
     },
     /**
+     * Modal visibility indicator
+     */
+    visible: {
+      type: Boolean,
+      default: false
+    },
+    /**
      * Indicate if clicking outside modal can emit `close` action
      */
     closeOnBackgroundClick: {
@@ -67,37 +74,27 @@ export default {
   },
   data () {
     return {
-      visibility: false,
-      trigger: null,
-      ariaHidden: 'true'
+      trigger: null
+    }
+  },
+  computed: {
+    ariaHidden () {
+      return this.visible ? 'false' : 'true'
     }
   },
   methods: {
-    show () {
-      this.trigger = document.activeElement
-      this.toggleParams(true)
-      this.$nextTick(() => this.$refs.modal.focus())
-    },
-    hide () {
-      this.toggleParams(false)
-      this.$nextTick(() => this.trigger.focus())
-    },
-    toggleParams (state) {
-      this.ariaHidden = state ? 'false' : 'true'
-      this.visibility = state
-    },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
-        this.hide()
+        this.$emit('close')
       }
     },
     handleKeydown (event) {
-      if (this.visibility) {
+      if (this.visible) {
         switch (event.key) {
           case 'Esc': // IE/Edge specific value
           case 'Escape':
             if (this.closeOnEsc) {
-              this.hide()
+              this.$emit('close')
             }
             break
           case 'Tab':

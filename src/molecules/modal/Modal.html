@@ -1,6 +1,6 @@
 <transition :name="modalMainTransition">
   <div
-    v-show="visibility"
+    v-show="visible"
     :aria-hidden="ariaHidden"
     :aria-labelledby="ariaLabelledby"
     :aria-describedby="ariaDescribedby"
@@ -14,8 +14,7 @@
     <transition :name="modalContentTransition">
       <div
         class="a-modal__content"
-        v-show="visibility"
-        ref="modal"
+        v-if="visible"
         role="document"
         tabindex="0"
         @keydown="handleKeydown"
@@ -43,7 +42,7 @@
           </slot>
           <a-button
             v-if="closeButton"
-            @click.native="hide()"
+            @click.native="$emit('close')"
             class="a-modal__close-button"
             :aria-label="closeButtonAriaLabel"
           >
