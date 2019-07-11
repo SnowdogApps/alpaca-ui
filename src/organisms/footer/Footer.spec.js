@@ -66,7 +66,7 @@ describe('Footer', () => {
       }
     })
 
-    const button = wrapper.find('.a-footer__scroll-top')
+    const button = wrapper.find('.a-footer__scroll-up')
     const scrollTo = jest.fn()
     global.scrollTo = scrollTo
     button.trigger('click')

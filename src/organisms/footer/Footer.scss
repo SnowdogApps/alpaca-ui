@@ -21,26 +21,19 @@ $footer__newsletter-padding                : 0 $spacer--medium !default;
 $footer__newsletter-padding\@large         : 0 !default;
 $footer__newsletter-margin                 : 0 auto $spacer--medium !default;
 $footer__newsletter-margin\@large          : 0 $spacer--medium $spacer--medium 0 !default;
+$footer__newsletter-color                  : $white !default;
 
 $footer__bottom-bar-background\@large      : $gray-darkest !default;
 $footer__bottom-bar-color                  : $gray-lighter !default;
 $footer__bottom-bar-font-size              : $font-size-small !default;
 
-$footer__link-color                        : $gray-lighter !default;
-$footer__link-color-hover                  : $color-primary !default;
-$footer__newsletter-color                  : $white !default;
-$footer__newsletter-link-color             : $color-primary !default;
-$footer__newsletter-checkbox-width         : 24px !default;
-$footer__newsletter-checkbox-height        : 24px !default;
-$footer__newsletter-checkbox-margin        : 0 16px 0 0 !default;
-$footer__content-color                     : $white !default;
 $footer__social-icon-color                 : $white !default;
+$footer__social-list-subtitle-margin       : 0 $spacer--medium 0 0 !default;
 $footer__social-list-item-width            : 48px !default;
 $footer__social-list-item-height           : 48px !default;
-$footer__copywrite-padding                 : $spacer--medium;
-
-$footer__social-list-subtitle-margin       : 0 $spacer--medium 0 0 !default;
 $footer__social-list-item-padding          : 12px !default;
+
+$footer__copywrite-padding                 : $spacer--medium;
 
 .a-footer {
   flex-shrink: 0;
@@ -100,16 +93,6 @@ $footer__social-list-item-padding          : 12px !default;
 
     @include mq($screen-l) {
       order: 1;
-    }
-  }
-
-  &__link {
-    color: $footer__link-color;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: $footer__link-color-hover;
     }
   }
 
