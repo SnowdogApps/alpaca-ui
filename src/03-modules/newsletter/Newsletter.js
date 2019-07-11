@@ -9,16 +9,12 @@ export default {
       type: Object,
       required: true
     },
-    button: {
+    buttonText: {
       type: String,
       required: true
     },
-    checkboxes: {
-      type: Array,
-      default: null
-    },
-    headingClass: {
-      type: String,
+    checkbox: {
+      type: Object,
       default: null
     }
   },
@@ -30,7 +26,7 @@ export default {
   },
   methods: {
     onSubmit () {
-      this.$emit('submit', { email: this.value, checkboxes: this.selected })
+      this.$emit('submit', { email: this.value })
     }
   }
 }

@@ -1,5 +1,13 @@
 @import '../../../assets/styles/_globals.scss';
 
+$newsletter__heading-margin             : 0 !default;
+$newsletter__heading-color              : $white !default;
+$newsletter__heading-line-height        : 48px !default;
+
+$newsletter__agreement-padding          : 0 0 $spacer--medium 0;
+$newsletter__agreement-color            : $white !default;
+$newsletter__agreement-font-size        : $font-size-small !default;
+
 $newsletter__font-size                  : $font-size-base !default;
 $newsletter__font-size--agreements      : $font-size-small !default;
 $newsletter__field-height               : 32px !default;
@@ -14,28 +22,22 @@ $newsletter__heading-color              : $white !default;
 $newsletter__controls-height            : 32px !default;
 $newsletter__bottom-gap                 : $spacer--medium !default;
 $newsletter__button-padding             : 21px !default;
-$newsletter__checkbox-bg-color          : $white !default;
-$newsletter__checkbox-label-padding-left: 24px !default;
-$newsletter__checkbox-label-line-height : $font-line-height !default;
-$newsletter__checkbox-icon-border-radius: 2px !default;
-$newsletter__checkbox-icon-size         : 18px !default;
-$newsletter__checkbox-icon-position-top : 0 !default;
-$newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !default;
 
-.newsletter {
+.a-newsletter {
   &__heading {
-    height: auto;
     margin: $newsletter__heading-margin;
     color: $newsletter__heading-color;
-    font-weight: $font-weight-bold;
-    font-size: $newsletter__font-size;
-    line-height: $newsletter__line-height;
-    text-align: left;
+    line-height: $newsletter__heading-line-height;
+  }
+
+  &__agreement {
+    padding: $newsletter__agreement-padding;
+    color: $newsletter__agreement-color;
+    font-size: $newsletter__agreement-font-size;
   }
 
   &__controls {
     position: relative;
-    height: auto;
     margin-bottom: $newsletter__bottom-gap;
   }
 
@@ -70,47 +72,6 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
 
     &::placeholder {
       color: $newsletter__input-color--placeholder;
-    }
-  }
-
-  &__agreements {
-    margin-left: $spacer;
-  }
-
-  .checkbox__icon {
-    top: $newsletter__checkbox-icon-position-top;
-    left: 0;
-    border-radius: $newsletter__checkbox-icon-border-radius;
-  }
-
-  .checkbox__label {
-    width: 100%;
-    padding-left: $newsletter__checkbox-label-padding-left;
-    color: $newsletter__checkbox-label-color;
-    font-size: $newsletter__font-size--agreements;
-    line-height: $newsletter__checkbox-label-line-height;
-    text-align: left;
-    opacity: 1;
-
-    &::before {
-      top: $newsletter__checkbox-icon-position-top; // to align with label, depends on line-height of label
-      width: $newsletter__checkbox-icon-size;
-      height: $newsletter__checkbox-icon-size;
-      background: $newsletter__checkbox-bg-color;
-      border: none;
-    }
-
-    & > a {
-      &:hover,
-      &:focus {
-        color: $newsletter__checkbox-label-color;
-      }
-    }
-  }
-
-  .checkbox__field {
-    &:checked ~ .checkbox__label::before {
-      background: none;
     }
   }
 }

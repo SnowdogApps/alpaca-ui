@@ -1,10 +1,13 @@
 @import '../../../assets/styles/_variables';
 
+$checkbox__line-height                 : $font-line-height !default;
+
 $checkbox__icon-width                  : 100% !default;
 $checkbox__icon-height                 : 100% !default;
 $checkbox__icon-margin                 : $reset !default;
 $checkbox__icon-fill                   : $color-primary !default;
 $checkbox__icon-transition             : $transition-base !default;
+
 $checkbox__icon-wrapper-margin         : $reset $spacer $reset $reset !default;
 $checkbox__icon-wrapper-width          : 18px !default;
 $checkbox__icon-wrapper-height         : 18px !default;
@@ -15,6 +18,7 @@ $checkbox__icon-wrapper-border--checked: none !default;
 .a-checkbox {
   position: relative;
   display: flex;
+  line-height: $checkbox__line-height;
 
   &__field {
     position: absolute;

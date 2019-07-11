@@ -10,19 +10,5 @@
       "hidden": true,
       "text": "Email for newsletter subscription"
     }
-  },
-  "checkboxes":[
-    {
-      "name": "newsletter1",
-      "label": "I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a> and I am happy to receive your newsletter with all your promotions."
-    },
-    {
-      "name": "newsletter2",
-      "label": "I am happy to receive your newsletter with all your promotions."
-    },
-    {
-      "name": "newsletter3",
-      "label": "I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a>"
-    }
-  ]
+  }
 }
