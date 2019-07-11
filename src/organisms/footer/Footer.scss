@@ -17,6 +17,8 @@ $footer__newsletter-max-width        : 500px !default;
 $footer__newsletter-max-width\@large : 100% !default;
 $footer__newsletter-padding          : 0 $spacer--medium !default;
 $footer__newsletter-padding\@large   : 0 !default;
+$footer__newsletter-margin           : 0 auto $spacer--medium !default;
+$footer__newsletter-margin\@large    : 0 $spacer--medium $spacer--medium 0 !default;
 
 $footer__bottom-bar-background\@large: $gray-darkest !default;
 $footer__bottom-bar-color            : $gray-lighter !default;
@@ -24,7 +26,6 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
 
 $footer__link-color                  : $gray-lighter !default;
 $footer__link-color-hover            : $color-primary !default;
-$footer__newsletter-margin           : 0 auto $spacer--medium !default;
 $footer__newsletter-color            : $white !default;
 $footer__newsletter-link-color       : $color-primary !default;
 $footer__newsletter-checkbox-width   : 24px !default;
@@ -87,22 +88,8 @@ $footer__social-list-item-padding    : 12px !default;
 
     @include mq($screen-l) {
       max-width: $footer__newsletter-max-width\@large;
+      margin: $footer__newsletter-margin\@large;
       padding: $footer__newsletter-padding\@large;
-    }
-
-    .a-icon {
-      width: auto;
-      height: auto;
-    }
-
-    .a-checkbox__icon-wrapper {
-      width: $footer__newsletter-checkbox-width;
-      height: $footer__newsletter-checkbox-height;
-      margin: $footer__newsletter-checkbox-margin;
-    }
-
-    a {
-      color: $footer__newsletter-link-color;
     }
 
     @include mq($screen-l) {
@@ -148,11 +135,6 @@ $footer__social-list-item-padding    : 12px !default;
 
   &__social-list {
     justify-content: center;
-
-    // &-item {
-    //   width: $footer__social-list-item-width;
-    //   height: $footer__social-list-item-width;
-    // }
   }
 
   &__social-list-subtitle {

@@ -9,6 +9,13 @@ import listElements from './mocks/listElements.json'
 import menu from './mocks/menu.json'
 import newsletter from './mocks/newsletter.json'
 
+const checkbox = {
+  name: 'agreement',
+  value: 'agreement-value',
+  id: 'newsletter-agreement',
+  label: 'I agree to Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.'
+}
+
 const cookieMessage = {
   visible: true,
   text: 'Find out more about their purpose and settings in your browser. By browsing the site you are agreeing to use cookies according to your browser settings.',
@@ -24,7 +31,8 @@ storiesOf('Organisms/Footer', module)
       listElements,
       menu,
       newsletter,
-      cookieMessage
+      cookieMessage,
+      checkbox
     }),
     methods: {
       submitNewsletter: action('Submitted'),
@@ -35,7 +43,7 @@ storiesOf('Organisms/Footer', module)
     template: `
       <a-footer
         :input="newsletter.input"
-        :checkboxes="newsletter.checkbox"
+        :checkbox="checkbox"
         :social-list="listElements"
         :menu="menu"
         :cookie-message="cookieMessage"

@@ -53,8 +53,8 @@ export default {
     /**
      * Array with checkboxes
      */
-    checkboxes: {
-      type: Array,
+    checkbox: {
+      type: Object,
       default: null
     },
     scrollAriaLabel: {
