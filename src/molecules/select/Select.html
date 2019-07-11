@@ -1,19 +1,19 @@
-<div class="select">
+<div class="a-select">
   <!-- @slot Label content (Named slot) -->
   <slot name="label">
     <a-label
       :for="id"
-      class="select__label"
+      class="a-select__label"
       v-if="label"
     >
       {{ label }}
     </a-label>
   </slot>
-  <div class="select__field">
+  <div class="a-select__field">
     <select
       :id="id"
       :name="name"
-      :class="['select__input', selectClass]"
+      :class="['a-select__input', selectClass]"
       @focus="$emit('focus')"
       @blur="$emit('blur')"
       @change="$emit('input', $event.target.value)"
