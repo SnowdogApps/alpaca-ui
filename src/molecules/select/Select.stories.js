@@ -12,29 +12,7 @@ storiesOf('Molecules/Select', module)
     data () {
       return {
         countries,
-        selectedCountry: ''
-      }
-    },
-    methods: {
-      showCountry: action('Selected country')
-    },
-    template: `
-      <a-select
-        id="field-id"
-        name="field-name"
-        label="Label text"
-        :options="countries"
-        default-option="Please select an option"
-        v-model="selectedCountry"
-        @input="showCountry"
-      />
-    `
-  }))
-  .add('Selected', () => ({
-    components: { ASelect },
-    data () {
-      return {
-        countries,
+        selected: '',
         selectedCountry: 'PL'
       }
     },
@@ -42,14 +20,25 @@ storiesOf('Molecules/Select', module)
       showCountry: action('Selected country')
     },
     template: `
-      <a-select
-        id="field-id"
-        name="field-name"
-        label="Label text"
-        :options="countries"
-        v-model="selectedCountry"
-        @input="showCountry"
-      />
+      <div>
+        <a-select
+          id="field-id"
+          name="field-name"
+          label="Label text"
+          :options="countries"
+          default-option="Please select an option"
+          v-model="selected"
+          @input="showCountry"
+        />    
+        <a-select
+          id="field-id"
+          name="field-name"
+          label="Label text"
+          :options="countries"
+          v-model="selectedCountry"
+          @input="showCountry"
+        />    
+      </div>
     `
   }))
   .add('With slots', () => ({
