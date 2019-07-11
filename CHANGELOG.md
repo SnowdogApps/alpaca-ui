@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Codecov badge
 - Tests for Price component
 - Tests for Preformatted component
-- Tests in textarea component
+- Tests for Textarea component
 
 ### Removed
 - -webkit- in transitions
