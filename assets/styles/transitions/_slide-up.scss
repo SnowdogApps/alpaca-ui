@@ -1,6 +1,6 @@
-$offset: -50px;
+$offset: 50px;
 
-@-webkit-keyframes slide-down-enter {
+@-webkit-keyframes slide-up-enter {
   from {
     -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
@@ -8,7 +8,7 @@ $offset: -50px;
   }
 }
 
-@keyframes slide-down-enter {
+@keyframes slide-up-enter {
   from {
     -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
@@ -16,12 +16,12 @@ $offset: -50px;
   }
 }
 
-.slide-down-enter-active {
-  -webkit-animation: slide-down-enter both cubic-bezier(0.4, 0, 0, 0);
-  animation: slide-down-enter both cubic-bezier(0.4, 0, 0, 0);
+.slide-up-enter-active {
+  -webkit-animation: slide-up-enter both cubic-bezier(0.4, 0, 0, 0);
+  animation: slide-up-enter both cubic-bezier(0.4, 0, 0, 0);
 }
 
-@-webkit-keyframes slide-down-leave {
+@-webkit-keyframes slide-up-leave {
   to {
     -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
@@ -29,7 +29,7 @@ $offset: -50px;
   }
 }
 
-@keyframes slide-down-leave {
+@keyframes slide-up-leave {
   to {
     -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
@@ -37,7 +37,7 @@ $offset: -50px;
   }
 }
 
-.slide-down-leave-active {
-  -webkit-animation: slide-down-leave both;
-  animation: slide-down-leave both;
+.slide-up-leave-active {
+  -webkit-animation: slide-up-leave both;
+  animation: slide-up-leave both;
 }
