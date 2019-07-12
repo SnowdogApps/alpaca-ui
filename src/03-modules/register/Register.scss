@@ -14,7 +14,7 @@ $register__login-wrapper-margin       : $spacer 0 0 0 !default;
   }
 
   &__legend {
-    margin: $reset;
+    margin: 0;
     padding: $register__legend-padding;
     color: $register__legend-color;
     font-size: $register__legend-font-size;

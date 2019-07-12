@@ -27,10 +27,10 @@ $catalog-grid-item__name-color                  : $gray-darker !default;
 $catalog-grid-item__name-font-weight            : $font-weight-normal !default;
 $catalog-grid-item__name-margin                 : 0 0 $spacer 0 !default;
 
-$catalog-grid-item__price-margin                : $reset $reset $spacer $reset !default;
+$catalog-grid-item__price-margin                : 0 0 $spacer 0 !default;
 
 $catalog-grid-item__action-margin               : 0 $spacer 0 0 !default;
-$catalog-grid-item__action-padding              : $reset !default;
+$catalog-grid-item__action-padding              : 0 !default;
 $catalog-grid-item__action-background           : transparent !default;
 $catalog-grid-item__action-background--hover    : transparent !default;
 $catalog-grid-item__action-border               : none !default;
@@ -41,7 +41,7 @@ $catalog-grid-item__action-icon-fill--hover     : $green !default;
 .a-product-grid-item {
   position: relative;
   display: block;
-  padding: $reset;
+  padding: 0;
   color: $catalog-grid-item__color;
 
   &__badge {

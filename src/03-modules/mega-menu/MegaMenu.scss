@@ -16,7 +16,7 @@ $mega-menu__link-text-decoration: none !default;
 .mega-menu {
   position: relative;
   display: none;
-  margin: $reset;
+  margin: 0;
   color: $mega-menu__font-color;
   background: $mega-menu__background-color;
   border-bottom: $mega-menu__border-bottom;
@@ -30,7 +30,7 @@ $mega-menu__link-text-decoration: none !default;
     display: flex;
     flex-wrap: nowrap;
     justify-content: $mega-menu__list-justify-content;
-    padding: $reset;
+    padding: 0;
     list-style: none;
     background-color: $mega-menu__list-background-color;
   }
