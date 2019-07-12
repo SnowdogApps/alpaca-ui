@@ -20,7 +20,10 @@ storiesOf('Molecules/Collapse', module)
         }
       },
       template: `
-        <a-collapse :title="titleTextKnobs">
+        <a-collapse
+          :title="titleTextKnobs"
+          icon-title="Angle down"
+        >
           <span>{{ contentTextKnobs }}</span>
         </a-collapse>
       `
@@ -39,10 +42,10 @@ storiesOf('Molecules/Collapse', module)
               :aria-expanded="!collapseLocal"
               :aria-controls="ariaControls"
               style="
-                width: 100%; 
-                height: 40px; 
-                z-index: 1; 
-                position: relative; 
+                width: 100%;
+                height: 40px;
+                z-index: 1;
+                position: relative;
                 background-color: #31e37d;
                 cursor: pointer;
                 border-radius: 4px;

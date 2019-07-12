@@ -2,6 +2,7 @@
 
 $collapse__background                 : $white !default;
 $collapse__transition                 : $transition-base !default;
+
 $collapse__button-color               : $black !default;
 $collapse__button-width               : 100% !default;
 $collapse__button-padding             : $spacer--medium !default;
@@ -13,10 +14,12 @@ $collapse__button-background          : $white !default;
 $collapse__button-background--active  : $gray-darker !default;
 $collapse__button-border-radius       : 0 !default;
 $collapse__button-outline             : none !default;
+
 $collapse__icon-width                 : $spacer--medium !default;
 $collapse__icon-height                : $spacer--medium !default;
 $collapse__icon-fill                  : $black !default;
-$collapse__icon-fill-active           : $color-primary !default;
+$collapse__icon-fill--active           : $color-primary !default;
+
 $collapse__content-padding            : $spacer !default;
 
 .a-collapse {
@@ -43,7 +46,7 @@ $collapse__content-padding            : $spacer !default;
       outline: $collapse__button-outline;
 
       & > .a-collapse__icon {
-        fill: $collapse__icon-fill-active;
+        fill: $collapse__icon-fill--active;
       }
     }
 
@@ -53,7 +56,7 @@ $collapse__content-padding            : $spacer !default;
 
       & > .a-collapse__icon {
         transform: rotate(180deg);
-        fill: $collapse__icon-fill-active;
+        fill: $collapse__icon-fill--active;
       }
     }
   }

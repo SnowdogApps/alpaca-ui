@@ -7,6 +7,13 @@ export default {
     title: {
       type: String,
       default: null
+    },
+    /**
+     * Title
+     */
+    iconTitle: {
+      type: String,
+      default: null
     }
   },
   data () {
