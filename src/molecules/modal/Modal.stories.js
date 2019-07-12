@@ -28,11 +28,9 @@ const data = {
   methods: {
     openModal () {
       this.isModalVisible = true
-      this.$nextTick(() => this.$refs.modal.$el.focus())
     },
     closeModal () {
       this.isModalVisible = false
-      this.$nextTick(() => this.$refs.modalTriggerBtn.$el.focus())
     }
   }
 }
@@ -54,16 +52,12 @@ storiesOf('Molecules/Modal', module)
     },
     template: `
       <div>
-        <a-button
-          ref="modalTriggerBtn"
-          @click.native="openModal()"
-        >
+        <a-button @click.native="openModal()">
           Modal button
         </a-button>
         <a-modal
           :heading="headingKnob"
           :visible="isModalVisible"
-          ref="modal"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
           close-button-aria-label="Close"
@@ -90,17 +84,13 @@ storiesOf('Molecules/Modal', module)
     },
     template: `
       <div>
-        <a-button
-          ref="modalTriggerBtn"
-          @click.native="openModal()"
-        >
+        <a-button @click.native="openModal()">
           Modal button
         </a-button>
         <a-modal
           :heading="headingKnob"
           :visible="isModalVisible"
           :closeButton="false"
-          ref="modal"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
         >
@@ -123,16 +113,12 @@ storiesOf('Molecules/Modal', module)
     },
     template: `
       <div>
-        <a-button
-          ref="modalTriggerBtn"
-          @click.native="openModal()"
-        >
+        <a-button @click.native="openModal()">
           Modal button
         </a-button>
         <a-modal
           :visible="isModalVisible"
           :closeButton="false"
-          ref="modal"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
         >
@@ -166,48 +152,18 @@ storiesOf('Molecules/Modal', module)
       isFirstModalVisible: false,
       isSecondModalVisible: false
     }),
-    methods: {
-      triggerFocus (ref) {
-        this.$nextTick(() => this.$refs[ref].$el.focus())
-      },
-      toggleModalState (name) {
-        switch (name) {
-          case 'firstModal':
-            this.isFirstModalVisible = !this.isFirstModalVisible
-            break
-          case 'secondModal':
-            this.isSecondModalVisible = !this.isSecondModalVisible
-            break
-        }
-      },
-      openModal (name) {
-        this.toggleModalState(name)
-        this.triggerFocus(name)
-      },
-      closeModal (name) {
-        this.toggleModalState(name)
-        this.triggerFocus(`${name}Btn`)
-      }
-    },
     template: `
       <div>
-        <a-button
-          ref="firstModalBtn"
-          @click.native="openModal('firstModal')"
-        >
+        <a-button @click.native="isFirstModalVisible = true">
           Default Modal button
         </a-button>
-        <a-button
-          ref="secondModalBtn"
-          @click.native="openModal('secondModal')"
-        >
+        <a-button @click.native="isSecondModalVisible = true">
           Second Modal button
         </a-button>
         <a-modal
           :visible="isFirstModalVisible"
           :heading="headingKnob"
-          ref="firstModal"
-          @close="closeModal('firstModal')"
+          @close="isFirstModalVisible = false"
           :modal-content-transition="contentTransitionKnob"
           close-button-aria-label="Close"
         >
@@ -235,8 +191,7 @@ storiesOf('Molecules/Modal', module)
         <a-modal
           :heading="headingKnob"
           :visible="isSecondModalVisible"
-          ref="secondModal"
-          @close="closeModal('secondModal')"
+          @close="isSecondModalVisible = false"
           :modal-content-transition="contentTransitionKnob"
           close-button-aria-label="Close"
         >

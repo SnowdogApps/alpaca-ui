@@ -82,6 +82,14 @@ export default {
       return this.visible ? 'false' : 'true'
     }
   },
+  watch: {
+    visible (val) {
+      if (val && typeof window !== 'undefined') {
+        this.trigger = document.activeElement
+        this.$nextTick(() => this.$refs.modal.focus())
+      }
+    }
+  },
   methods: {
     close () {
       /**
@@ -89,6 +97,10 @@ export default {
        * @type {Event}
        */
       this.$emit('close')
+
+      if (this.trigger) {
+        this.$nextTick(() => this.trigger.focus())
+      }
     },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
