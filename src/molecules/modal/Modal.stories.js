@@ -10,8 +10,10 @@ import AModal from './Modal.vue'
 
 const availableTransitions = [
   'fade',
+  'slide-up',
+  'slide-right',
   'slide-down',
-  'slide-right'
+  'slide-left'
 ]
 
 const data = {
