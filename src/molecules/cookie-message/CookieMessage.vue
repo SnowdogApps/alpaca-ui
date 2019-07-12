@@ -1,10 +1,10 @@
 <template src="./CookieMessage.html" />
 
 <script>
+import ACookieMessage from './CookieMessage.js'
+
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
-
-import ACookieMessage from './CookieMessage.js'
 
 export default {
   name: 'AlpacaCookieMessage',

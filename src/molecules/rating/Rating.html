@@ -20,13 +20,21 @@
     >
       <a-icon
         :style="{fill: item.isActive || item.selected ? activeColor : uncheckedColor}"
-        :class="['a-rating__icon', item.isActive && 'a-rating__icon--active']"
+        :class="[
+          'a-rating__icon',
+          item.isActive && 'a-rating__icon--active',
+          iconClass
+        ]"
         :icon="showIcon(item)"
       />
       <a-icon
         v-if="showAverageIcon(item)"
         :style="{clipPath: showAverage, fill : !item.isActive && activeColor}"
-        :class="['a-rating__icon', 'a-rating__icon--disabled']"
+        :class="[
+          'a-rating__icon',
+          'a-rating__icon--disabled',
+          iconClass
+        ]"
         :icon="activeIcon"
       />
     </slot>

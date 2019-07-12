@@ -1,8 +1,8 @@
 $offset: -50px;
+$animationDuration: 400ms;
 
 @-webkit-keyframes slide-down-enter {
   from {
-    -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
     opacity: 0;
   }
@@ -10,20 +10,17 @@ $offset: -50px;
 
 @keyframes slide-down-enter {
   from {
-    -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
     opacity: 0;
   }
 }
 
 .slide-down-enter-active {
-  -webkit-animation: slide-down-enter both cubic-bezier(0.4, 0, 0, 0);
-  animation: slide-down-enter both cubic-bezier(0.4, 0, 0, 0);
+  animation: slide-down-enter $animationDuration both cubic-bezier(0.4, 0, 0, 0);
 }
 
 @-webkit-keyframes slide-down-leave {
   to {
-    -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
     opacity: 0;
   }
@@ -31,13 +28,11 @@ $offset: -50px;
 
 @keyframes slide-down-leave {
   to {
-    -webkit-transform: translate3d(0, $offset, 0);
     transform: translate3d(0, $offset, 0);
     opacity: 0;
   }
 }
 
 .slide-down-leave-active {
-  -webkit-animation: slide-down-leave both;
-  animation: slide-down-leave both;
+  animation: slide-down-leave $animationDuration both;
 }

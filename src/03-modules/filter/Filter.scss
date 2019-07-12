@@ -37,7 +37,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
   }
 
   .dropdown-list__label.filter__label {
-    padding-left: $reset;
+    padding-left: 0;
   }
 
   .dropdown-list__label.filter__label::before {

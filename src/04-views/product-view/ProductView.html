@@ -25,17 +25,9 @@
         </div>
         <div class="product-view__stock-line">
           <a-price
-            v-if="product.price.old && product.price.special"
-            :old-price="product.price.old"
+            :regular-price="product.price.old"
             :special-price="product.price.special"
-            class="price--large"
           />
-          <a-price
-            v-else
-            class="price--large"
-          >
-            {{ product.price.regular }}
-          </a-price>
           <span
             v-if="product.qty > 0 && product.qty <= stockAlertMaxQty"
             class="product-view__stock-status product-view__stock-status--alert"
@@ -156,9 +148,7 @@
           v-for="(product, index) in product.relatedProducts"
           :key="index"
         >
-          <a-catalog-grid-item
-            :product="product"
-          />
+          <!-- TODO: use new ProductGridItem here -->
         </slide>
        </a-slider>
     </div>
@@ -175,7 +165,7 @@
           v-for="(product, index) in product.featuredProducts"
           :key="index"
         >
-          <a-catalog-grid-item :product="product"/>
+          <!-- TODO: use new ProductGridItem here -->
         </slide>
        </a-slider>
     </div>

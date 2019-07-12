@@ -7,8 +7,8 @@
 ## Alpaca UI
 
 [![CircleCI](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop.svg?style=svg)](https://circleci.com/gh/SnowdogApps/alpaca-ui/tree/develop)
-
 [![npm version](https://badge.fury.io/js/%40snowdog%2Falpaca-ui.svg)](https://www.npmjs.com/package/@snowdog/alpaca-ui)
+[![codecov](https://codecov.io/gh/SnowdogApps/alpaca-ui/branch/develop/graph/badge.svg)](https://codecov.io/gh/SnowdogApps/alpaca-ui)
 
 Highly customizable library of responsive UI components crafted for e-commerce. It is based on Vue.js and Alpaca design system.
 
@@ -25,7 +25,7 @@ Highly customizable library of responsive UI components crafted for e-commerce. 
 
 ## Getting Started
 
-### Installation 
+### Installation
 
 Add Alpaca UI to your project by using Yarn
 ```bash
@@ -66,14 +66,14 @@ If you need more flexibility you can take the source:
 <template src="@snowdog/alpaca-ui/src/atoms/button/Button.html" />
 
 <script>
-import Button from '@snowdog/alpaca-ui/src/atoms/button/Button.js'
+import AButton from '@snowdog/alpaca-ui/src/atoms/button/Button.js'
 
 export default {
-  mixins: [Button]
+  mixins: [AButton]
 }
 </script>
 
-<style src="@snowdog/alpaca-ui/src/atoms/button/Button.scss" lang="scss" /> 
+<style src="@snowdog/alpaca-ui/src/atoms/button/Button.scss" lang="scss" />
 ```
 For now, to see all possible cases/modifiers, you should clone and run repo as in Development point, or check .stories.js file in component.
 
@@ -96,10 +96,6 @@ yarn dev
 ```
 
 Open your browser, visit http://127.0.0.1:6006 and have fun.
-
-## Cooperation with Storefront UI
-
-Ideas behind Alpaca UI and [Storefront UI](https://github.com/DivanteLtd/storefront-ui/) are common efforts. We share almost identical configuration and API so you can easily switch between these two ones. [SNOW.DOG](https://snow.dog) and [Divante](https://divante.co) joined forces in figuring out how to make things right to deliver the best possible experience to the users.
 
 ## License
 

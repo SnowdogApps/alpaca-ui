@@ -33,7 +33,7 @@ $header-button__counter-dot-bg-color: $white !default;
   min-width: $header-button__size;
   height: $header-button__size;
   margin: $header-button__margin;
-  padding: $reset;
+  padding: 0;
   font-family: $header-button__text-font-family;
   text-decoration: none;
   background-color: #fff;
@@ -55,7 +55,7 @@ $header-button__counter-dot-bg-color: $white !default;
   }
 
   &--reset-margin {
-    margin: $reset;
+    margin: 0;
   }
 
   &__icon {

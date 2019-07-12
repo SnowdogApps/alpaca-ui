@@ -1,7 +1,12 @@
 <template src="./Divider.html" />
 
 <script>
-export default {}
+import ADivider from './Divider.js'
+
+export default {
+  name: 'AlpacaDivider',
+  mixins: [ADivider]
+}
 </script>
 
 <style lang="scss" src="./Divider.scss" />

@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { select } from '@storybook/addon-knobs'
 
-import generateVueInfoTable from '../../../utils/helpers/generate-vue-info-table.js'
-import getClassKnobsConfig from '../../../utils/helpers/get-class-knobs-config.js'
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Message.selectors.json'
 
 import AMessage from './Message.vue'

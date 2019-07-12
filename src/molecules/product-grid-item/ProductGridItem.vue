@@ -1,4 +1,4 @@
-<template src="./CatalogGridItem.html" />
+<template src="./ProductGridItem.html" />
 
 <script>
 import AIcon from '../../atoms/icon/Icon.vue'
@@ -7,21 +7,25 @@ import ABadge from '../../atoms/badge/Badge.vue'
 import APrice from '../../atoms/price/Price.vue'
 import AImage from '../../atoms/image/Image.vue'
 import ASwatch from '../../02-elements/swatch/Swatch.vue'
+import AList from '../../atoms/list/List.vue'
+import AListItem from '../../atoms/list-item/ListItem.vue'
 
-import ACatalogGridItem from './CatalogGridItem.js'
+import AProductGridItem from './ProductGridItem.js'
 
 export default {
-  name: 'AlpacaCatalogGridItem',
+  name: 'AlpacaProductGridItem',
   components: {
     AIcon,
     AButton,
     ABadge,
     AImage,
     APrice,
-    ASwatch
+    ASwatch,
+    AList,
+    AListItem
   },
-  mixins: [ACatalogGridItem]
+  mixins: [AProductGridItem]
 }
 </script>
 
-<style lang="scss" src="./CatalogGridItem.scss" />
+<style lang="scss" src="./ProductGridItem.scss" />

@@ -2,10 +2,16 @@
 
 export default {
   props: {
+    /**
+     * Visibility status
+     */
     visible: {
       type: Boolean,
       default: true
     },
+    /**
+     * Aria label for close button
+     */
     closeAriaLabel: {
       type: String,
       default: null
