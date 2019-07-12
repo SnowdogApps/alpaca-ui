@@ -63,8 +63,8 @@ storiesOf('Molecules/Modal', module)
           :visible="isModalVisible"
           ref="modal"
           @close="closeModal()"
-          :modalContentTransition="contentTransitionKnob"
-          closeButtonAriaLabel="Close"
+          :modal-content-transition="contentTransitionKnob"
+          close-button-aria-label="Close"
         >
           <a-paragraph>
             {{ contentKnob }}
@@ -100,7 +100,7 @@ storiesOf('Molecules/Modal', module)
           :closeButton="false"
           ref="modal"
           @close="closeModal()"
-          :modalContentTransition="contentTransitionKnob"
+          :modal-content-transition="contentTransitionKnob"
         >
           <a-paragraph>
             {{ contentKnob }}
@@ -132,7 +132,7 @@ storiesOf('Molecules/Modal', module)
           :closeButton="false"
           ref="modal"
           @close="closeModal()"
-          :modalContentTransition="contentTransitionKnob"
+          :modal-content-transition="contentTransitionKnob"
         >
           <a-paragraph>
             {{ contentKnob }}
@@ -206,8 +206,8 @@ storiesOf('Molecules/Modal', module)
           :heading="headingKnob"
           ref="firstModal"
           @close="closeModal('firstModal')"
-          :modalContentTransition="contentTransitionKnob"
-          closeButtonAriaLabel="Close"
+          :modal-content-transition="contentTransitionKnob"
+          close-button-aria-label="Close"
         >
           <template #heading="{ modalHeading }">
             <a-heading
@@ -235,8 +235,8 @@ storiesOf('Molecules/Modal', module)
           :visible="isSecondModalVisible"
           ref="secondModal"
           @close="closeModal('secondModal')"
-          :modalContentTransition="contentTransitionKnob"
-          closeButtonAriaLabel="Close"
+          :modal-content-transition="contentTransitionKnob"
+          close-button-aria-label="Close"
         >
           <template #heading="{ modalHeading }">
             <a-heading
