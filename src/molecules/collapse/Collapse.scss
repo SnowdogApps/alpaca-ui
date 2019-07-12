@@ -4,9 +4,9 @@ $collapse__background                 : $white !default;
 $collapse__transition                 : $transition-base !default;
 
 $collapse__button-color               : $black !default;
+$collapse__button-color--active        : $color-primary !default;
 $collapse__button-width               : 100% !default;
 $collapse__button-padding             : $spacer--medium !default;
-$collapse__button-color-active        : $color-primary !default;
 $collapse__button-font-weight         : $font-weight-bold !default;
 $collapse__button-text-transform      : uppercase !default;
 $collapse__button-text-decoration     : underline !default;
@@ -40,7 +40,7 @@ $collapse__content-padding            : $spacer !default;
 
     &:hover,
     &:focus {
-      color: $collapse__button-color-active;
+      color: $collapse__button-color--active;
       text-decoration: $collapse__button-text-decoration;
       background-color: $collapse__button-background--active;
       outline: $collapse__button-outline;
@@ -51,7 +51,7 @@ $collapse__content-padding            : $spacer !default;
     }
 
     &[aria-expanded="true"] {
-      color: $collapse__button-color-active;
+      color: $collapse__button-color--active;
       background-color: $collapse__button-background--active;
 
       & > .a-collapse__icon {
