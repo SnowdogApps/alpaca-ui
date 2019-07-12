@@ -83,9 +83,16 @@ export default {
     }
   },
   methods: {
+    close () {
+      /**
+       * Trigger close action
+       * @type {Event}
+       */
+      this.$emit('close')
+    },
     handleBackgroundClick () {
       if (this.closeOnBackgroundClick) {
-        this.$emit('close')
+        this.close()
       }
     },
     handleKeydown (event) {
@@ -94,7 +101,7 @@ export default {
           case 'Esc': // IE/Edge specific value
           case 'Escape':
             if (this.closeOnEsc) {
-              this.$emit('close')
+              this.close()
             }
             break
           case 'Tab':
