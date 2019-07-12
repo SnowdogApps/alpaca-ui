@@ -21,6 +21,13 @@ export default {
     contentClass: {
       type: String,
       default: null
+    },
+    /**
+     * Transition effect name
+     */
+    transitionName: {
+      type: String,
+      default: 'slide-down'
     }
   },
   data () {
