@@ -50,6 +50,13 @@ export default {
     defaultOption: {
       type: String,
       default: null
+    },
+    /**
+     * Customm icon
+     */
+    icon: {
+      type: String,
+      default: null
     }
   }
 }

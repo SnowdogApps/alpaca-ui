@@ -9,7 +9,10 @@
       {{ label }}
     </a-label>
   </slot>
-  <div class="a-select__field">
+  <div :class="[
+      'a-select__field',
+      icon && 'a-select__field--icon'
+    ]">
     <select
       :id="id"
       :name="name"
@@ -33,5 +36,10 @@
         {{ option.text }}
       </option>
     </select>
+    <a-icon
+      v-if="icon"
+      class="a-select__icon"
+      :icon="icon"
+    />
   </div>
 </div>

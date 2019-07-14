@@ -29,6 +29,20 @@ $select__border-radius: 20px !default;
       content: "";
       pointer-events: none;
     }
+
+    &--icon {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 35%;
+    right: 8px;
+    width: 15px;
+    height: 15px;
   }
 
   &__input {

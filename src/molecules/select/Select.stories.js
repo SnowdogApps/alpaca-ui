@@ -41,6 +41,33 @@ storiesOf('Molecules/Select', module)
       </div>
     `
   }))
+  .add('Custom icon', () => ({
+    components: { ASelect },
+    data () {
+      return {
+        countries,
+        selected: '',
+        selectedCountry: 'PL'
+      }
+    },
+    methods: {
+      showCountry: action('Selected country')
+    },
+    template: `
+      <div>
+        <a-select
+          id="field-id"
+          name="field-name"
+          label="Label text"
+          :options="countries"
+          default-option="Please select an option"
+          v-model="selected"
+          @input="showCountry"
+          icon="arrow-down"
+        /> 
+      </div>
+    `
+  }))
   .add('With slots', () => ({
     components: { ASelect },
     data () {
