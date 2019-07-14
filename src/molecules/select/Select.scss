@@ -2,12 +2,11 @@
 
 $select__field-border             : 1px solid $form-elements-border-color !default;
 $select__field-border-radius      : 20px !default;
+$select__field-margin--after      : 3px 0 0 0;
 $select__field-border-color--after: $gray-dark transparent transparent transparent !default;
-$select__field-border-top--after  : 48% !default;
 $select__field-border-right--after: $spacer--medium !default;
 $select__field-border-style--after: solid !default;
 $select__field-border-width--after: 5px !default;
-$select__icon-top                 : 35% !default;
 $select__icon-right               : $spacer--medium !default;
 $select__icon-width               : 16px !default;
 $select__icon-height              : 16px !default;
@@ -22,13 +21,15 @@ $select__input-outline            : none !default;
 .a-select {
   &__field {
     position: relative;
+    display: flex;
+    align-items: center;
     border: $select__field-border;
     border-radius: $select__field-border-radius;
 
     &::after {
       position: absolute;
-      top: $select__field-border-top--after;
       right: $select__field-border-right--after;
+      margin: $select__field-margin--after;
       border-color: $select__field-border-color--after;
       border-style: $select__field-border-style--after;
       border-width: $select__field-border-width--after;
@@ -44,7 +45,6 @@ $select__input-outline            : none !default;
 
   &__icon {
     position: absolute;
-    top: $select__icon-top;
     right: $select__icon-right;
     width: $select__icon-width;
     height: $select__icon-height;
