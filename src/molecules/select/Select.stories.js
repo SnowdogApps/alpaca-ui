@@ -29,6 +29,7 @@ storiesOf('Molecules/Select', module)
           default-option="Please select an option"
           v-model="selected"
           @input="showCountry"
+          style="margin-bottom: 20px;"
         />    
         <a-select
           id="field-id"
