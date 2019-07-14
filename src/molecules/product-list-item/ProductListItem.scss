@@ -15,11 +15,11 @@ $product-list-item__name-text-decoration        : none !default;
 $product-list-item__attributes-font-size        : $font-size-small !default;
 $product-list-item__attributes-font-size\@small : $font-size-base !default;
 
-$product-list-item__attribute-label-padding     : $reset !default;
-$product-list-item__attribute-label-margin      : $reset $spacer $spacer $reset !default;
+$product-list-item__attribute-label-padding     : 0 !default;
+$product-list-item__attribute-label-margin      : 0 $spacer $spacer 0 !default;
 
-$product-list-item__attribute-value-padding     : $reset !default;
-$product-list-item__attribute-value-margin      : $reset $spacer $spacer $reset !default;
+$product-list-item__attribute-value-padding     : 0 !default;
+$product-list-item__attribute-value-margin      : 0 $spacer $spacer 0 !default;
 
 $product-list-item__actions-item-margin         : 0 0 0 $spacer !default;
 
@@ -120,7 +120,7 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
     clear: left;
     margin: $product-list-item__attribute-label-margin;
     padding: $product-list-item__attribute-label-padding;
-    padding: $reset;
+    padding: 0;
 
     &::after {
       content: ': ';

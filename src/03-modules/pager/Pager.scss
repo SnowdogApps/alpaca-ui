@@ -19,7 +19,7 @@ $pager__link-fill                           : $green !default;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: $reset;
+    margin: 0;
     padding: $pager__list-padding;
     list-style-type: none;
   }
@@ -31,14 +31,14 @@ $pager__link-fill                           : $green !default;
     justify-content: center;
     height: $pager__item-size;
     margin: $pager__item-margin;
-    padding: $reset;
+    padding: 0;
 
     &:first-child {
-      margin-left: $reset;
+      margin-left: 0;
     }
 
     &:last-child {
-      margin-right: $reset;
+      margin-right: 0;
     }
 
     &--current {

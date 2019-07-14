@@ -25,7 +25,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 
 .filters {
   &__heading {
-    margin: $reset;
+    margin: 0;
     font-weight: $filters__heading-font-weight;
 
     @include mq($screen-l) {
@@ -48,7 +48,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
     min-width: 100%;
     height: $filters__switcher-size;
     margin: $filters__switcher-margin;
-    padding: $reset;
+    padding: 0;
     color: $filters__switcher-color;
     font-size: $filters__switcher-font-size;
     font-family: $filters__switcher-font-family;
