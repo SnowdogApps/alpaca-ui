@@ -2,7 +2,6 @@ import { mount } from '@vue/test-utils'
 import ASelect from './Select.vue'
 
 describe('Select', () => {
-
   const sampleData = {
     id: '1',
     name: 'select',
