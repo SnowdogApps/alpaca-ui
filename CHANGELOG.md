@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tests for Preformatted component
 - Tests for Textarea component
 - Tests for Select component
-- Posibility to use custom icon in Select component
+- Custom icon in Select component
 
 ### Removed
 - -webkit- in transitions
