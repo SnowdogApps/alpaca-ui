@@ -52,7 +52,7 @@ export default {
       default: null
     },
     /**
-     * Customm icon
+     * Custom icon
      */
     icon: {
       type: String,
