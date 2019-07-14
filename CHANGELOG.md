@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tests for Preformatted component
 - Tests for Textarea component
 - Tests for Select component
+- Posibility to use custom icon in Select component
 
 ### Removed
 - -webkit- in transitions
@@ -36,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Price component (removed props, changed classes, removed useless storeies)
 - Collapse style
 - Remove 'selected' story in Selected coomponents
+- Refactor styles in Select component
 
 ### Fixed
 - Typo in Message.selectors.json file
