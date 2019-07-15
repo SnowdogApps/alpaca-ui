@@ -10,5 +10,6 @@ export default {
   DOWN: 40,
   HOME: 36,
   END: 35,
-  TAB: 9
+  TAB: 9,
+  ESC: 27
 }

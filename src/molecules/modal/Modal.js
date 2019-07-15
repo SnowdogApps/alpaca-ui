@@ -1,3 +1,5 @@
+import KeyCodes from '../../utils/key-codes'
+
 // @vue/component
 export default {
   props: {
@@ -109,14 +111,13 @@ export default {
     },
     handleKeydown (event) {
       if (this.visible) {
-        switch (event.key) {
-          case 'Esc': // IE/Edge specific value
-          case 'Escape':
+        switch (event.keyCode) {
+          case KeyCodes.ESC:
             if (this.closeOnEsc) {
               this.close()
             }
             break
-          case 'Tab':
+          case KeyCodes.TAB:
             this.setFocusTrap(event)
             break
         }
