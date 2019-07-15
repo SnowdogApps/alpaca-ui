@@ -11,8 +11,7 @@
 }
 
 .fade-enter-active {
-  -webkit-animation: fade-enter both ease-in;
-  animation: fade-enter both ease-in;
+  animation: fade-enter 400ms both ease-in;
 }
 
 @-webkit-keyframes fade-leave {
@@ -28,6 +27,5 @@
 }
 
 .fade-leave-active {
-  -webkit-animation: fade-leave both ease-out;
-  animation: fade-leave both ease-out;
+  animation: fade-leave 400ms both ease-out;
 }

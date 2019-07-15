@@ -5,14 +5,14 @@
 }
 
 *:focus {
-  outline: $reset;
+  outline: 0;
 }
 
 html,
 body {
   min-width: 320px;
   height: 100%;
-  margin: $reset;
+  margin: 0;
   color: $font-color-base;
   font-weight: $font-weight-base;
   font-size: $font-size-base;
@@ -29,12 +29,12 @@ body {
 }
 
 p {
-  margin: $reset;
-  padding: $reset;
+  margin: 0;
+  padding: 0;
 }
 
 dl,
 dt,
 dd {
-  margin: $reset;
+  margin: 0;
 }

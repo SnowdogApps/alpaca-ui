@@ -115,7 +115,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     width: $toolbar__mode-icon-size;
     height: $toolbar__mode-icon-size;
     margin: $toolbar__mode-icon-margin;
-    padding: $reset;
+    padding: 0;
     transition: $toolbar__mode-icon-transition;
     fill: $toolbar__icon-color;
 
@@ -148,7 +148,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
   &__limiter-wrapper {
     display: flex;
     align-items: center;
-    margin: $reset;
+    margin: 0;
 
     .choices {
       flex-grow: 1;
@@ -279,7 +279,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
       right: $toolbar__dropdown-icon-area-right;
       width: $toolbar__dropdown-icon-area-size;
       height: $toolbar__dropdown-icon-area-size;
-      margin: $reset;
+      margin: 0;
       background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M12 2L10.59.59 6 5.17 1.41.59 0 2l6 6z" fill="#{$toolbar__dropdown-icon-color}" /></svg>');
       background-repeat: no-repeat;
       background-position: center center;

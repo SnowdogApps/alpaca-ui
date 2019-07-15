@@ -16,7 +16,7 @@ $file-upload__error-color   : $color-danger !default;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: $reset;
+    margin: 0;
   }
 
   &__input {
@@ -35,7 +35,7 @@ $file-upload__error-color   : $color-danger !default;
     font-size: $file-upload__font-size;
 
     @include mq($screen-s) {
-      margin-top: $reset;
+      margin-top: 0;
       margin-left: $file-upload__margin;
     }
   }
@@ -48,7 +48,7 @@ $file-upload__error-color   : $color-danger !default;
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: $reset;
+    margin-bottom: 0;
     padding: $file-upload__button-padding;
 
     @include mq($screen-s) {

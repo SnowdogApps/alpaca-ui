@@ -71,7 +71,7 @@ $message__button-font-weight--last-child    : $font-weight-bold !default;
   &__information,
   &__actions {
     width: $message__content-width;
-    margin: $reset auto;
+    margin: 0 auto;
 
     @include mq($screen-m) {
       width: auto;
@@ -79,7 +79,7 @@ $message__button-font-weight--last-child    : $font-weight-bold !default;
   }
 
   &__button {
-    padding: $reset;
+    padding: 0;
     color: $message__button-color;
 
     &:hover,
