@@ -50,3 +50,40 @@ storiesOf('Molecules/Input', module)
       />
     `
   }))
+  .add('With slot', () => ({
+    components: { AInput },
+    data: () => {
+      return {
+        value: ''
+      }
+    },
+    props: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      },
+      placeholderKnob: {
+        default: text('Placeholder', 'First and last name')
+      },
+      typeKnob: {
+        default: select('Type', inputTypes, 'text')
+      }
+    },
+    template: `
+      <a-input
+        :class="classKnob"
+        v-model="value"
+        :type="typeKnob"
+        :placeholder="placeholderKnob"
+        id="input-id"
+      >
+        <template #label>
+          <label
+            for="input-id"
+            style="display: block; color: #260879; margin-bottom: 4px;"
+          >
+            Label
+          </label>
+        </template>
+      </a-input>
+    `
+  }))
