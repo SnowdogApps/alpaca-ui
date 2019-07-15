@@ -13,6 +13,7 @@ $select__icon-height              : 16px !default;
 $select__input-height             : 40px !default;
 $select__input-width              : 100% !default;
 $select__input-padding            : 0 $spacer--medium 0 $spacer--medium !default;
+$select__input-padding--icon      : 0 $spacer--extra-large 0 $spacer !default;
 $select__input-background-color   : transparent !default;
 $select__input-border             : none !default;
 $select__input-outline            : none !default;
@@ -39,6 +40,10 @@ $select__input-outline            : none !default;
     &--icon {
       &::after {
         content: none;
+      }
+
+      .a-select__input {
+        padding: $select__input-padding--icon;
       }
     }
   }
