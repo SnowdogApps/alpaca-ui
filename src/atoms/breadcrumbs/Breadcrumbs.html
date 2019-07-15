@@ -1,41 +1,46 @@
-<div class="a-breadcrumbs">
-  <template v-for="(breadcrumb, i) in breadcrumbs">
-    <template v-if="breadcrumbs.length === i + 1">
-      <!-- @slot Current page (Scoped slot) -->
-      <slot
-        name="current"
-        :breadcrumb="breadcrumb"
-      >
-        <span
-          :key="`breadcrumb-${i}`"
-          :aria-label="breadcrumb.text"
-          class="a-breadcrumbs__item"
-          tabindex="0"
+<nav aria-label="Breadcrumb" class="a-breadcrumbs">
+  <ol class="a-breadcrumbs__list">
+    <li
+      v-for="(breadcrumb, i) in breadcrumbs"
+      :key="`breadcrumb-${i}`"
+    >
+      <template v-if="breadcrumbs.length === i + 1">
+        <!-- @slot Current page (Scoped slot) -->
+        <slot
+          name="current"
+          :breadcrumb="breadcrumb"
         >
-          {{ breadcrumb.text }}
-        </span>
-      </slot>
-    </template>
-    <template v-else>
-      <!-- @slot Previous pages (Scoped slot) -->
-      <slot
-        name="previous"
-        :breadcrumb="breadcrumb"
-      >
-        <router-link
-          :to="breadcrumb.href"
-          :aria-label="breadcrumb.text"
-          class="a-breadcrumbs__link"
+          <router-link
+            :to="breadcrumb.href"
+            :aria-label="breadcrumb.text"
+            aria-current="page"
+            class="a-breadcrumbs__link a-breadcrumbs__link--current"
+          >
+            {{ breadcrumb.text }}
+          </router-link>
+        </slot>
+      </template>
+      <template v-else>
+        <!-- @slot Previous pages (Scoped slot) -->
+        <slot
+          name="previous"
+          :breadcrumb="breadcrumb"
         >
-          {{ breadcrumb.text }}
-        </router-link>
-      </slot>
-      <!-- @slot Separator (Named slot) -->
-      <slot name="separator">
-        <span class="a-breadcrumbs__separator">
-          /
-        </span>
-      </slot>
-    </template>
-  </template>
-</div>
+          <router-link
+            :to="breadcrumb.href"
+            :aria-label="breadcrumb.text"
+            class="a-breadcrumbs__link"
+          >
+            {{ breadcrumb.text }}
+          </router-link>
+        </slot>
+        <!-- @slot Separator (Named slot) -->
+        <slot name="separator">
+          <span class="a-breadcrumbs__separator">
+            /
+          </span>
+        </slot>
+      </template>
+    </li>
+  </ol>
+</nav>
