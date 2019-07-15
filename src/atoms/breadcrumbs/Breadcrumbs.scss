@@ -18,10 +18,14 @@ $breadcrumbs__separator-color             : $breadcrumbs__link-color !default;
   &__list {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
     margin: $breadcrumbs__list-margin;
     padding: $breadcrumbs__list-padding;
     list-style: none;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
   }
 
   &__link {
