@@ -20,15 +20,19 @@ const data = {
   }
 }
 
+const values = {
+  countries,
+  selectedCountry: 'PL'
+}
+
 storiesOf('Molecules/Select', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ASelect },
     data () {
       return {
-        countries,
         selected: '',
-        selectedCountry: 'PL'
+        ...values
       }
     },
     ...data,
@@ -61,7 +65,7 @@ storiesOf('Molecules/Select', module)
       return {
         countries,
         selected: '',
-        selectedCountry: 'PL'
+        ...values
       }
     },
     ...data,
@@ -85,7 +89,7 @@ storiesOf('Molecules/Select', module)
     data () {
       return {
         countries,
-        selectedCountry: ''
+        ...values
       }
     },
     ...data,
