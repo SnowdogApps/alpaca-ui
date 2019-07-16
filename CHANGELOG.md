@@ -13,11 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Codecov badge
 - Tests for Price component
 - Tests for Preformatted component
+- More tests in input component
 - Tests for Textarea component
 
 ### Removed
 - -webkit- in transitions
 - Modifiers in collapse component
+- InputWrapper component
 
 ### Changed
 - Move ProductItem to atomic design, rename to ProductListItem

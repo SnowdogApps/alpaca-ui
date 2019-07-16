@@ -2,14 +2,12 @@ import { storiesOf } from '@storybook/vue'
 
 import AHeading from '../../atoms/heading/Heading.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../atoms/input/Input.vue'
-import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AModal from '../../03-modules/modal/Modal.vue'
 
 storiesOf('Modules/Modal', module)
   // @vue/component
   .add('Default', () => ({
-    components: { AButton, AModal, AHeading, AInput, AInputWrapper },
+    components: { AButton, AModal, AHeading },
     data: () => ({ value: null }),
     methods: {
       showModal () {
@@ -28,18 +26,6 @@ storiesOf('Modules/Modal', module)
             </a-heading>
           </template>
           <p>Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a-input-wrapper
-            input-id="field_id"
-            class="a-input-wrapper--inline"
-            label="Inline text"
-          >
-            <a-input
-              id="field_id"
-              type="text"
-              v-model="value"
-              placeholder="Test focus trap"
-            />
-          </a-input-wrapper>
          </a-modal>
       </div>
     `
