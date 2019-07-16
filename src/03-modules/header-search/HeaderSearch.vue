@@ -3,9 +3,8 @@
 <script>
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../atoms/input/Input.vue'
+import AInput from '../../molecules/input/Input.vue'
 import ALabel from '../../atoms/label/Label.vue'
-import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 
 import AHeaderSearch from './HeaderSearch.js'
 
@@ -15,8 +14,7 @@ export default {
     AIcon,
     AButton,
     AInput,
-    ALabel,
-    AInputWrapper
+    ALabel
   },
   mixins: [AHeaderSearch]
 }

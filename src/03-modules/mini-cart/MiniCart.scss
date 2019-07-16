@@ -13,7 +13,7 @@ $minicart__discard-button-width\@small : 176px !default;
     padding-bottom: $spacer--medium;
 
     &:first-child {
-      padding-top: $reset;
+      padding-top: 0;
     }
   }
 
@@ -70,7 +70,7 @@ $minicart__discard-button-width\@small : 176px !default;
     line-height: $font-line-height;
 
     [class*='col'] {
-      padding: $reset;
+      padding: 0;
     }
 
     .row {
@@ -86,7 +86,7 @@ $minicart__discard-button-width\@small : 176px !default;
   &__return-button {
     @include mq($screen-m) {
       justify-content: flex-start;
-      padding-left: $reset;
+      padding-left: 0;
     }
   }
 }

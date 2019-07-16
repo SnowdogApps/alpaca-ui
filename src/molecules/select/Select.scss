@@ -12,7 +12,7 @@ $select__border-radius: 20px !default;
 
   &__field {
     position: relative;
-    padding: $reset;
+    padding: 0;
     border: $select__border;
     border-radius: $select__border-radius;
 

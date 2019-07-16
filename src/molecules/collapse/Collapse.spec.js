@@ -17,8 +17,7 @@ describe('Collapse', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(ACollapse, {
       propsData: {
-        title: 'Sample title',
-        collapse: false
+        title: 'Sample title'
       },
       slots: {
         default: `
@@ -45,19 +44,5 @@ describe('Collapse', () => {
 
     expect(wrapper.find('.a-collapse div').exists()).toBe(true)
     expect(wrapper.find('.a-collapse div').text()).toEqual('Alpaca UI')
-  })
-
-  it('renders elements with custom class', () => {
-    const wrapper = mount(ACollapse, {
-      propsData: {
-        title: 'Sample title',
-        collapse: false,
-        contentClass: 'content-class'
-      }
-    })
-
-    expect(wrapper.props().contentClass).toBe('content-class')
-    expect(wrapper.find('.a-collapse div').classes()).toContain('content-class')
-    expect(wrapper.find('.a-collapse div').classes().length).toBe(2)
   })
 })

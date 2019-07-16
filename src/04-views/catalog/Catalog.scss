@@ -34,7 +34,7 @@ $catalog-list__products-width\@medium : calc(100% - #{$catalog__sidebar-width--m
     display: grid;
     grid-gap: $catalog-grid__gap;
     grid-template-columns: 1fr 1fr;
-    margin: $reset;
+    margin: 0;
     padding: $catalog-grid__padding;
     list-style: none;
     border-bottom: $catalog-grid__border;

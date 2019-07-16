@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Codecov badge
 - Tests for Price component
 - Tests for Preformatted component
+- More tests in input component
+- Tests for Textarea component
+
+### Removed
+- -webkit- in transitions
+- Modifiers in collapse component
+- InputWrapper component
 
 ### Changed
 - Move ProductItem to atomic design, rename to ProductListItem
@@ -27,11 +34,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactor styles for radio button
 - Remove unnecessary variables in quantity update styles
 - Components structure
-- Add tests in textarea component
 - Price component (removed props, changed classes, removed useless storeies)
+- Collapse style
 
 ### Fixed
 - Typo in Message.selectors.json file
+- Transitions
 
 ## [0.4.0] - 04-06-2019
 ### Added

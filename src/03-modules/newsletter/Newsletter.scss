@@ -57,10 +57,7 @@ $newsletter__button-padding             : 21px !default;
   }
 
   &__input {
-    margin: 0;
-  }
-
-  &__field {
+    width: 100%;
     height: $newsletter__field-height;
     margin: 0;
     padding: $newsletter__field-padding;

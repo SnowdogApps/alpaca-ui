@@ -15,7 +15,7 @@
     >
       {{ title }}
       <a-icon
-        title="Angle down"
+        :title="iconTitle"
         icon="angle-down"
         class="a-collapse__icon"
       />
@@ -25,7 +25,7 @@
     <div
       v-show="!collapseLocal"
       :id="ariaControls"
-      :class="['a-collapse__content', contentClass]"
+      class="a-collapse__content"
     >
       <!-- @slot Default content-->
       <slot />

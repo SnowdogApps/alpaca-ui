@@ -74,7 +74,7 @@ $quicksearch__close-transition                 : $transition-base !default;
   }
 
   &__results {
-    margin: $reset;
+    margin: 0;
     padding: $quicksearch__results-padding;
     border-bottom: $quicksearch__results-border;
   }
@@ -122,8 +122,8 @@ $quicksearch__close-transition                 : $transition-base !default;
   }
 
   &__list {
-    margin: $reset;
-    padding: $reset;
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 
     &--column {
@@ -175,7 +175,7 @@ $quicksearch__close-transition                 : $transition-base !default;
     font-size: $quicksearch__name-font-size;
 
     &--thin {
-      margin: $reset;
+      margin: 0;
       padding: $quicksearch__name-padding;
       font-weight: $quicksearch__name-font-weight;
     }

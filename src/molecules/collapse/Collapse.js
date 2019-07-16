@@ -9,16 +9,9 @@ export default {
       default: null
     },
     /**
-     * Item collapse
+     * Title
      */
-    collapse: {
-      type: Boolean,
-      default: true
-    },
-    /**
-     * Custom class for content
-     */
-    contentClass: {
+    iconTitle: {
       type: String,
       default: null
     },
@@ -32,7 +25,7 @@ export default {
   },
   data () {
     return {
-      collapseLocal: this.collapse
+      collapseLocal: true
     }
   },
   computed: {
