@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Codecov badge
 - Tests for Price component
 - Tests for Preformatted component
+- More tests in input component
 - Tests for Textarea component
 - Tests for Select component
 - Custom icon in Select component
@@ -20,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - -webkit- in transitions
 - Modifiers in collapse component
+- InputWrapper component
 
 ### Changed
 - Move ProductItem to atomic design, rename to ProductListItem
@@ -36,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Components structure
 - Price component (removed props, changed classes, removed useless storeies)
 - Collapse style
+- Move modal to atomic design, update template and component js logic
 - Remove 'selected' story in Selected coomponents
 - Refactor styles in Select component
 
