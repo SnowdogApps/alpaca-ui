@@ -53,7 +53,7 @@ storiesOf('Atoms/Breadcrumbs', module)
         <template #current="data">
           <span
             aria-current="page"
-            style="padding: 0 10px; color: #2962ff; line-height: 1.5;"
+            style="padding: 0 10px; color: #2962ff;"
           >
             {{ data.breadcrumb.text }}
           </span>

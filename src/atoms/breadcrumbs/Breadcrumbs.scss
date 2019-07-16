@@ -3,7 +3,6 @@
 $breadcrumbs__list-margin                 : 0 !default;
 $breadcrumbs__list-padding                : 0 !default;
 $breadcrumbs__font-size                   : $font-size-small !default;
-$breadcrumbs__line-height                 : 1.5 !default;
 $breadcrumbs__link-color                  : $black !default;
 $breadcrumbs__link-color--hover           : $blue !default;
 $breadcrumbs__link-color--current         : $blue !default;
@@ -30,7 +29,6 @@ $breadcrumbs__separator-color             : $breadcrumbs__link-color !default;
 
   &__link {
     color: $breadcrumbs__link-color;
-    line-height: $breadcrumbs__line-height;
     text-decoration: $breadcrumbs__link-text-decoration;
 
     &:hover {
@@ -46,6 +44,5 @@ $breadcrumbs__separator-color             : $breadcrumbs__link-color !default;
   &__separator {
     margin: $breadcrumbs__separator-margin;
     color: $breadcrumbs__separator-color;
-    line-height: $breadcrumbs__line-height;
   }
 }
