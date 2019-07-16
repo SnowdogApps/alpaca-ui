@@ -16,11 +16,11 @@ export default {
       default: null
     },
     /**
-     * Attribute for disable button
+     * Transition effect name
      */
-    disabled: {
-      type: Boolean,
-      default: false
+    transitionName: {
+      type: String,
+      default: 'slide-down'
     }
   },
   data () {

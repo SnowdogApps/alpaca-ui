@@ -11,7 +11,6 @@
       :aria-controls="!collapseLocal && ariaControls"
       @click.native="toggle"
       :aria-expanded="!collapseLocal"
-      :disabled="disabled"
     >
       {{ title }}
       <a-icon
@@ -21,7 +20,7 @@
       />
     </a-button>
   </slot>
-  <transition name="slide-down">
+  <transition :name="transitionName">
     <div
       v-show="!collapseLocal"
       :id="ariaControls"
