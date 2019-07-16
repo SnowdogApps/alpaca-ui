@@ -9,7 +9,7 @@ import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 import ACookieMessage from '../../molecules/cookie-message/CookieMessage.vue'
 import AFooterMenu from '../../molecules/footer-menu/FooterMenu.vue'
-import ANewsletter from '../../03-modules/newsletter/Newsletter.vue'
+import ANewsletter from '../../molecules/newsletter/Newsletter.vue'
 
 import AFooter from './Footer.js'
 

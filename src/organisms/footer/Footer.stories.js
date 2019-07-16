@@ -13,7 +13,7 @@ const checkbox = {
   name: 'agreement',
   value: 'agreement-value',
   id: 'newsletter-agreement',
-  label: 'I agree to Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.'
+  label: 'I agree to Terms and conditions and I am happy to receive your newsletter with all your promotions.'
 }
 
 const cookieMessage = {
