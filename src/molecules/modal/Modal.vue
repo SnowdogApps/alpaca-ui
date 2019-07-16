@@ -2,8 +2,9 @@
 
 <script>
 import AHeading from '../../atoms/heading/Heading.vue'
-import ADivider from '../../templates/divider/Divider.vue'
+import AButton from '../../atoms/button/Button.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
+import ADivider from '../../templates/divider/Divider.vue'
 
 import AModal from './Modal.js'
 
@@ -12,7 +13,8 @@ export default {
   components: {
     AIcon,
     ADivider,
-    AHeading
+    AHeading,
+    AButton
   },
   mixins: [AModal]
 }
