@@ -20,13 +20,19 @@ export default {
   },
   data () {
     return {
-      selected: {},
-      value: null
+      email: null
     }
   },
   methods: {
     onSubmit () {
-      this.$emit('submit', { email: this.value })
+      /**
+       * Triggered when form is submit
+       * @type { Event }
+       */
+      this.$emit('submit', {
+        email: this.email,
+        checkbox: this.checkbox.status
+      })
     }
   }
 }
