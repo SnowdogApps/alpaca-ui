@@ -12,7 +12,7 @@ $footer-menu__content-color          : $white !default;
   background-color: $footer-menu__background-color-darker;
 
   &__list {
-    background-color: $footer-menu__background-color-darker;
+    background-color: transparent;
   }
 
   &__button {
@@ -66,9 +66,5 @@ $footer-menu__content-color          : $white !default;
         }
       }
     }
-  }
-
-  .a-collapse {
-    background: transparent;
   }
 }

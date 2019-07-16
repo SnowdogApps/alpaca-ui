@@ -11,12 +11,12 @@ export default {
   },
   data () {
     return {
-      isLargeScreen: window.matchMedia('(min-width: 768px)').matches
+      isLargeScreen: true
     }
   },
   mounted () {
     this.$nextTick(() => {
-      const breakpoint = window.matchMedia(('(min-width: 768px)'))
+      const breakpoint = window.matchMedia('(min-width: 768px)')
       this.checkMedia(breakpoint)
       breakpoint.addListener(this.checkMedia)
     })
