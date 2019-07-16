@@ -17,7 +17,7 @@ $select__input-padding--icon      : 0 $spacer--extra-large 0 $spacer--medium !de
 $select__input-background-color   : transparent !default;
 $select__input-border             : none !default;
 $select__input-outline            : none !default;
-
+$select__input-font-size          : $font-size-base;
 
 .a-select {
   &__field {
@@ -59,6 +59,7 @@ $select__input-outline            : none !default;
     width: $select__input-width;
     height: $select__input-height;
     padding: $select__input-padding;
+    font-size: $select__input-font-size;
     background-color: $select__input-background-color;
     border: $select__input-border;
     -moz-appearance: none;
