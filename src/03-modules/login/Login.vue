@@ -3,8 +3,7 @@
 <script>
 import AFieldset from '../../atoms/fieldset/Fieldset.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AInput from '../../atoms/input/Input.vue'
-import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
+import AInput from '../../molecules/input/Input.vue'
 
 import ALogin from './Login.js'
 
@@ -13,8 +12,7 @@ export default {
   components: {
     AFieldset,
     AButton,
-    AInput,
-    AInputWrapper
+    AInput
   },
   mixins: [ALogin]
 }
