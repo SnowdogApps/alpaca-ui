@@ -5,74 +5,8 @@
       :legend-text="personalInformationLegend"
       legend-class="register__legend"
     >
-      <a-input-wrapper
-        input-id="firstname"
-        label="First name"
-      >
-        <a-input
-          id="firstname"
-          type="text"
-          name="firstname"
-          placeholder="First name"
-          v-model="firstname"
-        />
-      </a-input-wrapper>
-
-      <a-input-wrapper
-        input-id="lastname"
-        label="Last name"
-      >
-        <a-input
-          id="lastname"
-          type="text"
-          v-model="lastname"
-          name="lastname"
-          placeholder="Last name"
-        />
-      </a-input-wrapper>
-     </a-fieldset>
-    <a-fieldset
-      class="register__fieldset"
-      :legend-text="signInLegend"
-      legend-class="register__legend"
-    >
-      <a-input-wrapper
-        input-id="email"
-        label="Email"
-      >
-        <a-input
-          id="email"
-          type="email"
-          v-model="email"
-          name="email"
-          placeholder="Email"
-        />
-      </a-input-wrapper>
-      <a-input-wrapper
-        input-id="password"
-        label="Password"
-      >
-        <a-input
-          id="password"
-          type="password"
-          v-model="password"
-          name="password"
-          placeholder="Password"
-        />
-      </a-input-wrapper>
-      <a-input-wrapper
-        input-id="passwordConfirmation"
-        label="Confirm password"
-      >
-        <a-input
-          id="passwordConfirmation"
-          type="password"
-          v-model="passwordConfirmation"
-          name="passwordConfirmation"
-          placeholder="Confirm password"
-        />
-      </a-input-wrapper>
-     </a-fieldset>
+      <!--TODO Add inputs component-->
+    </a-fieldset>
     <div class="row row--no-margins center-xs">
       <a-button
         class="register__submit-button"
