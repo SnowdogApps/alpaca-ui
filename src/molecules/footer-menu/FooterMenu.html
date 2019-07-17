@@ -11,7 +11,10 @@
   >
     <template #button="{ visibility, ariaControls, toggle }">
       <a-button
-        class="a-footer-menu__button a-button--blank a-collapse__button"
+        :class="[
+          'a-button--blank a-collapse__button a-footer-menu__button',
+          { ' a-footer-menu__button--active': visibility }
+        ]"
         :aria-controls="visibility && ariaControls"
         @click.native="toggle"
         :aria-expanded="visibility"
@@ -19,12 +22,12 @@
       >
         {{ item.title }}
         <a-icon
-          title="Angle down"
           icon="angle-down"
           class="a-footer-menu__icon a-collapse__icon"
         />
       </a-button>
     </template>
+
     <!-- @slot Links list (Scoped slot) -->
     <slot
       name="list"
@@ -36,7 +39,7 @@
           :key="link.id"
         >
           <a-link
-            class="a-footer__link"
+            class="a-footer-menu__link"
             :href="link.link"
           >
             {{ link.title }}
