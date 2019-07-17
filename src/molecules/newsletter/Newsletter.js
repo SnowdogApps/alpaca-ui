@@ -1,18 +1,30 @@
 // @vue/component
 export default {
   props: {
+    /**
+     * Heading text
+     */
     heading: {
       type: String,
-      required: true
+      default: null
     },
+    /**
+     * Input object
+     */
     input: {
       type: Object,
-      required: true
+      default: null
     },
+    /**
+     * Button text
+     */
     buttonText: {
       type: String,
-      required: true
+      default: null
     },
+    /**
+     * Checkbox object
+     */
     checkbox: {
       type: Object,
       default: null

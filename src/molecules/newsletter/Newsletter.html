@@ -16,6 +16,7 @@
     <!-- @slot Input (Named slot) -->
     <slot name="input">
       <input
+        v-if="input"
         :id="input.id"
         class="a-newsletter__input"
         type="text"
@@ -26,6 +27,7 @@
     </slot>
 
     <a-label
+      v-if="input"
       :for="input.id"
       class="a-label--hidden"
     >
