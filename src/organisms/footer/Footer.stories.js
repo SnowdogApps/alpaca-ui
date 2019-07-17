@@ -2,17 +2,24 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
 import AFooter from './Footer.vue'
-// import AIcon from '../../atoms/icon/Icon.vue'
-// import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import ANewsletter from '../../molecules/newsletter/Newsletter.vue'
 
-import listElements from './mocks/listElements.json'
-import menu from './mocks/menu.json'
+import socials from './mocks/socials.json'
+import menu from '../../molecules/footer-menu/mocks/menu.json'
 
 const checkbox = {
   name: 'agreement',
   value: 'agreement-value',
   id: 'newsletter-agreement',
   label: 'I agree to Terms and conditions and I am happy to receive your newsletter with all your promotions.'
+}
+
+const input = {
+  placeholder: 'Enter your email address',
+  id: 'newsletter-id',
+  name: 'newsletter-email',
+  label: 'Email'
 }
 
 const cookieMessage = {
@@ -27,16 +34,11 @@ storiesOf('Organisms/Footer', module)
   .add('Default', () => ({
     components: { AFooter },
     data: () => ({
-      listElements,
+      socials,
       menu,
       cookieMessage,
       checkbox,
-      input: {
-        placeholder: 'Enter your email address',
-        id: 'newsletter-id',
-        name: 'newsletter-email',
-        label: 'Email'
-      }
+      input
     }),
     methods: {
       submitNewsletter: action('Submitted'),
@@ -48,7 +50,7 @@ storiesOf('Organisms/Footer', module)
       <a-footer
         :input="input"
         :checkbox="checkbox"
-        :social-list="listElements"
+        :social-list="socials"
         :menu="menu"
         :cookie-message="cookieMessage"
         copyright-text="Copyright © 2019 A. All rights reserved."
@@ -60,75 +62,41 @@ storiesOf('Organisms/Footer', module)
       />
     `
   }))
-  // .add('With slots', () => ({
-  //   components: { AFooter, ACheckbox, AIcon },
-  //   data: () => ({
-  //     listElements,
-  //     menu,
-  //     status: true
-  //   }),
-  //   methods: {
-  //     onChange: action('Option changed')
-  //   },
-  //   template: `
-  //     <a-footer :menu="menu" :social-menu="listElements">
-  //       <template #scrollButton="{ scrollToTop }">
-  //         <button
-  //           type="button"
-  //           @click="scrollToTop"
-  //           style="
-  //             position: absolute;
-  //             right: 0;
-  //             top: 0;
-  //             width: 50px;
-  //             height: 50px;
-  //             z-index: 2;
-  //             background-color: #31e37d;
-  //             border: none;
-  //           "
-  //         >
-  //           Top
-  //         </button>
-  //       </template>
-  //       <template #newsletter="{ submitNewsletter }">
-  //         <a-checkbox
-  //           id="checkbox-default"
-  //           name="checkbox-default"
-  //           v-model="status"
-  //           value="some value"
-  //           @input="onChange"
-  //         >
-  //           <span style="color: white">I agree to <a href='#' title='Terms and conditions'>Terms and conditions</a>.</span>
-  //            <div style="color: white">I am happy to receive your newsletter with all your promotions</div>
-  //         </a-checkbox>
-  //         <button type="button" @click="submitNewsletter">Submit</button>
-  //       </template>
-  //       <template #list="data">
-  //         <a
-  //           v-for="link in data.item.items"
-  //           :href="link.link"
-  //           style="display: block; margin: 10px 0; color: #31e37d;"
-  //         >
-  //           {{ data.item.title }}
-  //         </a>
-  //       </template>
-  //       <template #socialTitle>
-  //         <span>Find us on</span>
-  //       </template>
-  //       <template #social="data">
-  //         <a-icon
-  //           style="fill: white;"
-  //           :icon="data.item.iconId"
-  //         />
-  //       </template>
-  //       <template #copyright>
-  //         <span>Copyright © 2019 A. All rights reserved.</span>
-  //       </template>
-  //       <template #cookie>
-  //         <span style="color: white">
-  //           <a href='#' style="color: #31e37d">Example link</a> Find out more about their purpose and settings in your browser. By browsing the site you are agreeing to use cookies according to your browser settings.
-  //         </span>
-  //       </template>
-  //     </a-footer>
-  //   `
-  // }))
+  .add('With slots', () => ({
+    components: { AFooter, ANewsletter, AIcon },
+    data: () => ({
+      socials,
+      menu,
+      input,
+      checkbox,
+      status: true
+    }),
+    methods: {
+      onChange: action('Option changed')
+    },
+    template: `
+      <a-footer
+        :menu="menu"
+        :social-list="socials"
+      >
+        <template #scrollButton="{ scrollToTop }">
+          <span><!-- Removed scrollButton--></span>
+        </template>
+        <template #newsletter="{ submitNewsletter }">
+          <div style="border: 1px solid #444; padding: 16px;">
+            <a-newsletter
+              class="a-footer__newsletter"
+              heading="Sing up to our twisted newsletter"
+              :input="input"
+              button-text="Submit"
+              :checkbox="checkbox"
+              @submit="submitNewsletter"
+            />
+          </div>
+        </template>
+        <template #socialTitle>
+          <span>Find us on</span>
+        </template>
+      </a-footer>
+    `
+  }))
