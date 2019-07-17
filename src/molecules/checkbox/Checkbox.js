@@ -17,7 +17,7 @@ export default {
      * Input value
      */
     value: {
-      type: [String, Boolean],
+      type: String,
       required: true
     },
     /**
