@@ -37,10 +37,10 @@ storiesOf('Molecules/Collapse', module)
       },
       template: `
         <a-collapse>
-          <template #button="{ toggle, collapseLocal, ariaControls }">
+          <template #button="button">
             <button
-              :aria-expanded="!collapseLocal"
-              :aria-controls="ariaControls"
+              :aria-expanded="!button.collapseLocal"
+              :aria-controls="button.ariaControls"
               style="
                 width: 100%;
                 height: 40px;
@@ -50,7 +50,7 @@ storiesOf('Molecules/Collapse', module)
                 cursor: pointer;
                 border-radius: 4px;
               "
-              @click="toggle"
+              @click="button.toggle"
             >
               Text
             </button>
