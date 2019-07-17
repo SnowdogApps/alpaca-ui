@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 
 import ANewsletter from './Newsletter.vue'
 
-storiesOf('Modules/Newsletter', module)
+storiesOf('Molecules/Newsletter', module)
   .add('Default', () => ({
     components: { ANewsletter },
     data: () => ({

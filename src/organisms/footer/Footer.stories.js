@@ -7,7 +7,6 @@ import AFooter from './Footer.vue'
 
 import listElements from './mocks/listElements.json'
 import menu from './mocks/menu.json'
-import newsletter from './mocks/newsletter.json'
 
 const checkbox = {
   name: 'agreement',
@@ -30,9 +29,14 @@ storiesOf('Organisms/Footer', module)
     data: () => ({
       listElements,
       menu,
-      newsletter,
       cookieMessage,
-      checkbox
+      checkbox,
+      input: {
+        placeholder: 'Enter your email address',
+        id: 'newsletter-id',
+        name: 'newsletter-email',
+        label: 'Email'
+      }
     }),
     methods: {
       submitNewsletter: action('Submitted'),
@@ -42,7 +46,7 @@ storiesOf('Organisms/Footer', module)
     },
     template: `
       <a-footer
-        :input="newsletter.input"
+        :input="input"
         :checkbox="checkbox"
         :social-list="listElements"
         :menu="menu"

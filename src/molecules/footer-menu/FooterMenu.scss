@@ -1,6 +1,7 @@
 @import '../../../assets/styles/globals.scss';
 
 $footer-menu__background-color-darker: $gray-darker !default;
+
 $footer-menu__button-color           : $white !default;
 $footer-menu__button-border          : 2px solid #2c2733 !default;
 $footer-menu__button-border\@medium  : none !default;
@@ -16,14 +17,7 @@ $footer-menu__content-color          : $white !default;
   }
 
   &__button {
-    color: $footer-menu__button-color;
-    font-weight: bold;
-    background-color: $footer-menu__background-color-darker;
     border-bottom: $footer-menu__button-border;
-
-    .a-footer-menu__icon {
-      fill: $footer-menu__button-color;
-    }
   }
 
   &__content {
