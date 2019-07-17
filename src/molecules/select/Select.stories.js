@@ -9,14 +9,6 @@ import ASelect from './Select.vue'
 const data = {
   methods: {
     showCountry: action('Selected country')
-  },
-  props: {
-    defaultOptionKnob: {
-      default: text('Default option', 'Please select an option')
-    },
-    labelKnob: {
-      default: text('Label', 'Label text')
-    }
   }
 }
 
@@ -33,6 +25,14 @@ storiesOf('Molecules/Select', module)
       return {
         selected: '',
         ...values
+      }
+    },
+    props: {
+      defaultOptionKnob: {
+        default: text('Default option', 'Please select an option')
+      },
+      labelKnob: {
+        default: text('Label', 'Label text')
       }
     },
     ...data,
@@ -68,6 +68,14 @@ storiesOf('Molecules/Select', module)
         ...values
       }
     },
+    props: {
+      defaultOptionKnob: {
+        default: text('Default option', 'Please select an option')
+      },
+      labelKnob: {
+        default: text('Label', 'Label text')
+      }
+    },
     ...data,
     template: `
       <div>
@@ -90,6 +98,14 @@ storiesOf('Molecules/Select', module)
       return {
         countries,
         ...values
+      }
+    },
+    props: {
+      defaultOptionKnob: {
+        default: text('Default option', 'Please select an option')
+      },
+      labelKnob: {
+        default: text('Label', 'Label text')
       }
     },
     ...data,
