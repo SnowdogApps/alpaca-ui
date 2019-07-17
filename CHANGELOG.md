@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tests for Preformatted component
 - More tests in input component
 - Tests for Textarea component
+- FooterMenu component
 
 ### Removed
 - -webkit- in transitions
@@ -37,6 +38,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Price component (removed props, changed classes, removed useless storeies)
 - Collapse style
 - Move modal to atomic design, update template and component js logic
+- Refactor Newsletter component
+- Refactor Collapse component
+- Refactor Footer component
 
 ### Fixed
 - Typo in Message.selectors.json file
