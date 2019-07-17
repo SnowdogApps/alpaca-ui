@@ -49,8 +49,8 @@ storiesOf('Molecules/Select', module)
           style="margin-bottom: 20px;"
         />    
         <a-select
-          id="field-id"
-          name="field-name"
+          id="field-id2"
+          name="field-name2"
           :label="labelKnob"
           :options="countries"
           v-model="selectedCountry"
