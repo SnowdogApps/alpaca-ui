@@ -27,25 +27,18 @@
         />
       </a-button>
     </template>
-
-    <!-- @slot Links list (Scoped slot) -->
-    <slot
-      name="list"
-      :item="item.items"
-    >
-      <a-list>
-        <a-list-item
-          v-for="link in item.items"
-          :key="link.id"
+    <a-list>
+      <a-list-item
+        v-for="link in item.items"
+        :key="link.id"
+      >
+        <a-link
+          class="a-footer-menu__link"
+          :href="link.link"
         >
-          <a-link
-            class="a-footer-menu__link"
-            :href="link.link"
-          >
-            {{ link.title }}
-          </a-link>
-        </a-list-item>
-      </a-list>
-    </slot>
+          {{ link.title }}
+        </a-link>
+      </a-list-item>
+    </a-list>
   </a-collapse>
 </div>

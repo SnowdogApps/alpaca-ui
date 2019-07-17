@@ -13,9 +13,5 @@ storiesOf('Molecules/Footer menu', module)
     methods: {
       submit: action('Submitted')
     },
-    template: `
-      <a-footer-menu
-        :menu="menu"
-      />
-    `
+    template: `<a-footer-menu :menu="menu"/>`
   }))
