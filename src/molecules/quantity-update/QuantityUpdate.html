@@ -14,6 +14,8 @@
     <slot
       name="minus"
       :update-qty="updateQty"
+      :current-value="currentValue"
+      :min-qty="minQty"
     >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--minus"
@@ -34,26 +36,23 @@
       :current-value="currentValue"
       :input-event="inputEvent"
     >
-      <a-input-wrapper
-        :input-id="inputId"
-        class="a-quantity-update__input-wrapper"
+      <input
+        :id="inputId"
+        class="a-quantity-update__input"
+        type="number"
+        :min="minQty"
+        :max="maxQty"
+        :value="currentValue"
+        @input="inputEvent"
+        autocomplete="off"
       >
-        <input
-          :id="inputId"
-          class="a-quantity-update__input"
-          type="number"
-          :min="minQty"
-          :max="maxQty"
-          :value="currentValue"
-          @input="inputEvent"
-          autocomplete="off"
-        />
-      </a-input-wrapper>
     </slot>
     <!-- @slot Increment qty button (Scoped slot) -->
     <slot
       name="plus"
       :update-qty="updateQty"
+      :current-value="currentValue"
+      :min-qty="maxQty"
     >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--plus"

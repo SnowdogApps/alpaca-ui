@@ -4,11 +4,11 @@ import { action } from '@storybook/addon-actions'
 
 import ALabel from '../../atoms/label/Label.vue'
 import AHeader from './Header.vue'
-import AModal from '../../03-modules/modal/Modal.vue'
 import ALogin from '../../03-modules/login/Login.vue'
 import AMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
+import AModal from '../../molecules/modal/Modal.vue'
 import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu'
@@ -16,19 +16,20 @@ import sideMenu from '../../../mocks/slide-menu'
 import products from '../../../mocks/products'
 import totals from '../../../mocks/totals'
 
+// todo: add product item component to story
+
 storiesOf('Modules/Header', module)
   .addDecorator(StoryRouter())
-  // @vue/component
   .add('Default', () => ({
     components: {
       ALabel,
       AHeader,
-      AModal,
       ALogin,
       AOffCanvasSidebar,
       AMiniCart,
       AWishlist,
-      AQuantityUpdate
+      AQuantityUpdate,
+      AModal
     },
     data: () => ({
       menu,
@@ -38,11 +39,12 @@ storiesOf('Modules/Header', module)
       quantity: {
         text: 'Qty:',
         label: ''
-      }
+      },
+      isModalVisible: false
     }),
     methods: {
       showRegister () {
-        this.$refs.modalRegister.show('register')
+        this.isModalVisible = true
       },
       showMiniCart () {
         this.$refs.modalMiniCart.show('mini-cart')
@@ -67,8 +69,8 @@ storiesOf('Modules/Header', module)
           @goToAccount="showRegister"
         />
         <a-modal
-          name="register"
-          ref="modalRegister"
+          :visible="isModalVisible"
+          @close="isModalVisible = false"
           heading="Registred Customers"
         >
           <a-login
@@ -81,7 +83,7 @@ storiesOf('Modules/Header', module)
             @login="login"
             @goToRegister="goToRegister"
           />
-         </a-modal>
+        </a-modal>
         <a-off-canvas-sidebar
           name="mini-cart"
           ref="modalMiniCart"

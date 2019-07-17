@@ -20,6 +20,9 @@ storiesOf('Molecules/Quantity Update', module)
   .add('Default', () => ({
     components: { AQuantityUpdate },
     props: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      },
       labelKnob: {
         default: text('Label', 'Quantity')
       },
@@ -28,9 +31,6 @@ storiesOf('Molecules/Quantity Update', module)
       },
       maxQtyKnob: {
         default: number('Max qty', 100)
-      },
-      classKnob: {
-        default: select('Input wrapper class', classKnobsConfig)
       }
     },
     data () {
