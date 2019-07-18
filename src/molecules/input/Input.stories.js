@@ -51,7 +51,7 @@ storiesOf('Molecules/Input', module)
       />
     `
   }))
-  .add('With slot', () => ({
+  .add('With slots', () => ({
     components: { AInput, AIcon },
     data: () => {
       return {
