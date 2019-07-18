@@ -1,6 +1,10 @@
 import { storiesOf } from '@storybook/vue'
 import { text, select } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './Modal.selectors.json'
+
 import AHeading from '../../atoms/heading/Heading.vue'
 import AButton from '../../atoms/button/Button.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
@@ -35,11 +39,21 @@ const data = {
   }
 }
 
+const info = `
+  Check **Knobs** tab to edit component properties dynamically.<br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
+`
+
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
+
 storiesOf('Molecules/Modal', module)
-  .addParameters({ info: true })
+  .addParameters({ info })
   .add('Default', () => ({
     ...data,
     props: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      },
       headingKnob: {
         default: text('Modal heading', 'Modal heading')
       },
@@ -58,6 +72,7 @@ storiesOf('Molecules/Modal', module)
         <a-modal
           :heading="headingKnob"
           :visible="isModalVisible"
+          :class="classKnob"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
           close-button-aria-label="Close"
@@ -72,6 +87,9 @@ storiesOf('Molecules/Modal', module)
   .add('Without close icon', () => ({
     ...data,
     props: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      },
       headingKnob: {
         default: text('Modal heading', 'Modal heading')
       },
@@ -90,6 +108,7 @@ storiesOf('Molecules/Modal', module)
         <a-modal
           :heading="headingKnob"
           :visible="isModalVisible"
+          :class="classKnob"
           :closeButton="false"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
@@ -104,6 +123,9 @@ storiesOf('Molecules/Modal', module)
   .add('Without header', () => ({
     ...data,
     props: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      },
       contentKnob: {
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
       },
@@ -118,6 +140,7 @@ storiesOf('Molecules/Modal', module)
         </a-button>
         <a-modal
           :visible="isModalVisible"
+          :class="classKnob"
           :closeButton="false"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
@@ -138,6 +161,9 @@ storiesOf('Molecules/Modal', module)
       AHeading
     },
     props: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      },
       headingKnob: {
         default: text('Modal heading', 'Modal heading')
       },
@@ -162,6 +188,7 @@ storiesOf('Molecules/Modal', module)
         </a-button>
         <a-modal
           :visible="isFirstModalVisible"
+          :class="classKnob"
           :heading="headingKnob"
           @close="isFirstModalVisible = false"
           :modal-content-transition="contentTransitionKnob"
@@ -191,6 +218,7 @@ storiesOf('Molecules/Modal', module)
         <a-modal
           :heading="headingKnob"
           :visible="isSecondModalVisible"
+          :class="classKnob"
           @close="isSecondModalVisible = false"
           :modal-content-transition="contentTransitionKnob"
           close-button-aria-label="Close"
