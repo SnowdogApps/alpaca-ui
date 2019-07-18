@@ -6,6 +6,7 @@ import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Input.selectors.json'
 
 import AInput from './Input.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 const inputTypes = ['text', 'email', 'search', 'number', 'password', 'hidden']
 
@@ -51,7 +52,7 @@ storiesOf('Molecules/Input', module)
     `
   }))
   .add('With slot', () => ({
-    components: { AInput },
+    components: { AInput, AIcon },
     data: () => {
       return {
         value: ''
@@ -84,6 +85,13 @@ storiesOf('Molecules/Input', module)
             Label
           </label>
         </template>
+        <template #icon>
+          <a-icon
+            icon="star"
+            style="cursor: pointer;"
+            @click.native="showPassword"
+          />
+        </template> 
       </a-input>
     `
   }))
