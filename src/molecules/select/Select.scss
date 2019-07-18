@@ -69,5 +69,10 @@ $select__input-font-size          : $font-size-base;
     &:focus {
       outline: $select__input-outline;
     }
+
+    // To remove select arrow on IE
+    &::-ms-expand {
+      display: none;
+    }
   }
 }
