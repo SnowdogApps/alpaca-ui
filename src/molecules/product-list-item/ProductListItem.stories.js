@@ -152,26 +152,26 @@ storiesOf('Molecules/Product List Item', module)
         :options="optionsKnob"
         @remove="removeMethod"
       >
-        <template #image="{ productImageAlt, productImageUrl }">
+        <template #image="image">
           <img
-            :src="productImageUrl"
-            :alt="productImageAlt + ' image.'"
+            :src="image.productImageUrl"
+            :alt="image.productImageAlt + ' image.'"
             style="border: 1px dashed #000; border-radius: 50%;"
           />
         </template>
-        <template #name="{ productName, productUrl }">
+        <template #name="name">
           <strong style="margin-right: 5px;">Product:</strong>
-          <a :href="productUrl">{{ productName.toUpperCase() }}</a>
+          <a :href="name.productUrl">{{ name.productName.toUpperCase() }}</a>
         </template>
-        <template #prices="{ productPrices }">
+        <template #prices="prices">
           <div style="margin-top: 10px; flex-basis: 100%;">
-            <strong style="color: #a01111;">{{ productPrices.specialPrice }}</strong>
-            <small style="text-decoration: line-through;">{{ productPrices.regularPrice }}</small>
+            <strong style="color: #a01111;">{{ prices.productPrices.specialPrice }}</strong>
+            <small style="text-decoration: line-through;">{{ prices.productPrices.regularPrice }}</small>
           </div>
         </template>
-        <template #options="{ productOptions }">
+        <template #options="options">
           <ul>
-            <li v-for="option in productOptions">
+            <li v-for="option in options.productOptions">
               {{ option.label }} {{ option.value }}
             </li>
           </ul>
@@ -197,8 +197,8 @@ storiesOf('Molecules/Product List Item', module)
             </template>
           </a-quantity-update>
         </template>
-        <template #removeAction="{ productRemove }">
-          <button @click="() => { productRemove(); }">
+        <template #removeAction="removeAction">
+          <button @click="() => { removeAction.productRemove(); }">
             Delete!
           </button>
         </template>
