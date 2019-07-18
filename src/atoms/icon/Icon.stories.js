@@ -1,20 +1,37 @@
 import { storiesOf } from '@storybook/vue'
+import { select } from '@storybook/addon-knobs'
 
 import AIcon from './Icon.vue'
 
 import readme from './README.md'
 import icons from './mocks/icons.json'
 
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './Icon.selectors.json'
+
+const info = `
+  Check **Knobs** tab to edit component properties dynamically.<br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
+`
+
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
+
 storiesOf('Atoms/Icon', module)
   .addParameters(
     {
-      info: true,
+      info,
       notes: readme
     }
   )
   .add('Default', () => ({
     components: { AIcon },
     data: () => ({ icons }),
+    prrops: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      }
+    },
     template: `
       <div style="display: flex; flex-wrap: wrap; padding: 10px;">
         <div
@@ -24,6 +41,7 @@ storiesOf('Atoms/Icon', module)
         >
           <a-icon
             :icon="icon.iconId"
+            :class="classKnob"
             style="margin: 0 auto;"
             :title="icon.iconTitle"
           />

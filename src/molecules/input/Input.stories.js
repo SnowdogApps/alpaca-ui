@@ -87,8 +87,9 @@ storiesOf('Molecules/Input', module)
         </template>
         <template #icon>
           <a-icon
+            class="a-icon--reset"
             icon="star"
-            style="cursor: pointer;"
+            style="cursor: pointer; width: 16px; height: 16px"
             @click.native="showPassword"
           />
         </template> 

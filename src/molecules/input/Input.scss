@@ -54,11 +54,5 @@ $input__icon-padding           : 0 !default;
     position: absolute;
     top: $input__icon-top;
     right: $input__icon-right;
-
-    .a-icon {
-      width: $input__icon-width;
-      height: $input__icon-height;
-      padding: $input__icon-padding;
-    }
   }
 }
