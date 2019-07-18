@@ -47,9 +47,9 @@ storiesOf('Molecules/Radio', module)
           id="id1"
           value="option_one"
         >
-          <template #option="{ id }">
+          <template #option="label">
             <label
-              :for="id"
+              :for="label.id"
               class="a-radio__label"
               style="background-color: #f1f1f1;"
             >
@@ -57,7 +57,6 @@ storiesOf('Molecules/Radio', module)
               Custom option one
             </label>
           </template>
-          Option one
         </a-radio>
         <a-radio
           v-model="selected"

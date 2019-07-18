@@ -97,33 +97,33 @@ storiesOf('Molecules/Product Grid Item', module)
         @addToWishList="addToWishList"
         @addToCompare="addToCompare"
       >
-        <template #badge="{ productBadgeText }">
+        <template #badge="badge">
           <a-badge
             class="a-product-grid-item__badge"
             style="display: flex; align-items: center;"
           >
-            {{ productBadgeText }}
+            {{ badge.productBadgeText }}
             <a-icon icon="youtube" />
           </a-badge>
         </template>
 
-        <template #image="{ productImageUrl, productImageAlt }">
+        <template #image="image">
           <a href="/" style="display:block; overflow: hidden;">
             <img
-              :src="productImageUrl"
-              :alt="productImageAlt + ' image.'"
+              :src="image.productImageUrl"
+              :alt="image.productImageAlt + ' image.'"
               class="a-product-grid-item__image"
             />
           </a>
         </template>
 
-        <template #name="{ productName, productUrl }">
+        <template #name="name">
           <strong>Product: </strong>
           <a
-            :href="productUrl"
+            :href="name.productUrl"
             class="a-product-grid-item__link a-product-grid-item__link--name"
           >
-            {{ productName.toUpperCase() }}
+            {{ name.productName.toUpperCase() }}
           </a>
         </template>
 
@@ -131,17 +131,17 @@ storiesOf('Molecules/Product Grid Item', module)
           <a-rating :average="averageRatingKnob"/>
         </template>
 
-        <template #prices="{ productPrices }">
-          {{ productPrices.price }}
+        <template #prices="prices">
+          {{ prices.productPrices.price }}
         </template>
 
-        <template #addToCart="{ productAddToCart, productAddToCartText }">
+        <template #addToCart="addToCart">
           <button
             type="button"
-            @click="productAddToCart"
+            @click="addToCart.productAddToCart"
             style="padding: 10px; border: none; border-radius: 5px; background: #00ff00;"
           >
-            {{ productAddToCartText }}
+            {{ addToCart.productAddToCartText }}
           </button>
         </template>
       </a-product-grid-item>

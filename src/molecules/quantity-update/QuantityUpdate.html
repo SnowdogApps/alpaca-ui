@@ -14,6 +14,8 @@
     <slot
       name="minus"
       :update-qty="updateQty"
+      :current-value="currentValue"
+      :min-qty="minQty"
     >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--minus"
@@ -49,6 +51,8 @@
     <slot
       name="plus"
       :update-qty="updateQty"
+      :current-value="currentValue"
+      :min-qty="maxQty"
     >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--plus"
