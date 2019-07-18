@@ -27,7 +27,7 @@ storiesOf('Atoms/Icon', module)
   .add('Default', () => ({
     components: { AIcon },
     data: () => ({ icons }),
-    prrops: {
+    props: {
       classKnob: {
         default: select('BEM Modifier', classKnobsConfig)
       }
