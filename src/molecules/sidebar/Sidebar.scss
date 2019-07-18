@@ -1,0 +1,42 @@
+@import '../../../assets/styles/_globals.scss';
+
+$sidebar__padding                   : 0 !default;
+
+$sidebar__divider-margin            : $spacer--large 0 !default;
+
+$sidebar__content-width\@medium     : 712px !default;
+$sidebar__content-width\@extra-large: 880px !default;
+$sidebar__content-max-width--compact: 385px !default;
+$sidebar__content-padding--compact  : $spacer--medium !default;
+$sidebar__content-height            : 100vh !default;
+
+$modal__padding                     : $sidebar__padding;
+
+$modal__divider-margin              : $sidebar__divider-margin;
+
+$modal__content-width\@medium       : $sidebar__content-width\@medium;
+$modal__content-width\@extra-large  : $sidebar__content-width\@extra-large;
+$modal__content-max-width--compact  : 385px;
+$modal__content-height              : $sidebar__content-height;
+$modal__content-height\@medium      : $sidebar__content-height;
+
+@import '../modal/Modal.scss';
+
+.a-sidebar {
+  align-items: flex-end;
+  padding: $sidebar__padding;
+
+  &--blank &__content {
+    padding: 0;
+  }
+
+  &--compact &__content {
+    max-width: $sidebar__content-max-width--compact;
+    padding-right: $sidebar__content-padding--compact;
+    padding-left: $sidebar__content-padding--compact;
+  }
+
+  &--left {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": ".a-sidebar--blank",
+    "description": "Remove default content paddings"
+  },
+  {
+    "name": ".a-sidebar--compact",
+    "description": "Reduce content paddings"
+  },
+  {
+    "name": ".a-sidebar--left",
+    "description": "Move sidebar to left"
+  }
+]
