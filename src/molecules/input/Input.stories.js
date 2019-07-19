@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
 import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
@@ -69,6 +70,9 @@ storiesOf('Molecules/Input', module)
         default: select('Type', inputTypes, 'text')
       }
     },
+    methods: {
+      click: action('Clicked')
+    },
     template: `
       <a-input
         :class="classKnob"
@@ -90,7 +94,7 @@ storiesOf('Molecules/Input', module)
             class="a-icon--reset"
             icon="star"
             style="cursor: pointer; width: 16px; height: 16px"
-            @click.native="showPassword"
+            @click.native="click"
           />
         </template> 
       </a-input>
