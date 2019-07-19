@@ -97,20 +97,20 @@ storiesOf('Molecules/Quantity Update', module)
             {{ labelKnob }}
           </label>
         </template>
-        <template #minus="{ updateQty }">
-          <button @click="updateQty(-1)">-</button>
+        <template #minus="minus">
+          <button @click="minus.updateQty(-1)">-</button>
         </template>
-        <template #input="{ currentValue, inputEvent }">
+        <template #input="input">
           <input
             id="qty-update"
             type="number"
-            :value="currentValue"
-            @input="inputEvent"
+            :value="input.currentValue"
+            @input="input.inputEvent"
             style="border: 0; text-align: center;"
           >
         </template>
-        <template #plus="{ updateQty }">
-          <button @click="updateQty(1)">+</button>
+        <template #plus="plus">
+          <button @click="plus.updateQty(1)">+</button>
         </template>
       </a-quantity-update>
     `

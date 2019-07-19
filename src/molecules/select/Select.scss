@@ -46,5 +46,10 @@ $select__border-radius: 20px !default;
     &:focus {
       outline: none;
     }
+
+    // To remove select arrow on IE
+    &::-ms-expand {
+      display: none;
+    }
   }
 }
