@@ -3,11 +3,11 @@ import { text, select } from '@storybook/addon-knobs'
 
 import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
 import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-import selectorsConfig from './Sidebar.selectors.json'
+import selectorsConfig from '../modal/Modal.selectors.json'
 
 import AButton from '../../atoms/button/Button.vue'
 import AParagraph from '../../atoms/paragraph/Paragraph.vue'
-import ASidebar from './Sidebar.vue'
+import AModal from '../modal/Modal.vue'
 
 const availableTransitions = [
   'fade',
@@ -18,7 +18,9 @@ const availableTransitions = [
 ]
 
 const info = `
-  Sidebar is a Modal based component <br>
+  <div style="margin-bottom: 15px; padding: 10px; background: #ffff66; ">
+    ⚠ Sidebar is build on top of the <a href="/?path=/story/molecules-modal--default">Modal</a> component.
+  </div><br>
   Check **Knobs** tab to edit component properties dynamically.<br>
   ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
@@ -31,7 +33,7 @@ storiesOf('Molecules/Sidebar', module)
     components: {
       AButton,
       AParagraph,
-      ASidebar
+      AModal
     },
     props: {
       classKnob: {
@@ -44,7 +46,7 @@ storiesOf('Molecules/Sidebar', module)
         default: text('Content', 'Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
       },
       contentTransitionKnob: {
-        default: select('Content transition', availableTransitions)
+        default: select('Content transition', availableTransitions, 'slide-left')
       }
     },
     data () {
@@ -65,10 +67,16 @@ storiesOf('Molecules/Sidebar', module)
         <a-button @click.native="showSidebar()">
           Sidebar button
         </a-button>
-        <a-sidebar
+        <a-modal
           :heading="headingKnob"
           :visible="isVisible"
-          :class="['a-sidebar', classKnob]"
+          :class="[
+            'a-modal--full-height',
+            classKnob !== 'a-modal--left' && 'a-modal--right',
+            classKnob
+          ]"
+          modal-tag="aside"
+          modal-role="complementary"
           :modal-content-transition="contentTransitionKnob"
           @close="hideSidebar()"
           close-button-aria-label="Close"
@@ -76,7 +84,7 @@ storiesOf('Molecules/Sidebar', module)
           <a-paragraph>
             {{ contentKnob }}
           </a-paragraph>
-        </a-sidebar>
+        </a-modal>
       </div>
     `
   }))
