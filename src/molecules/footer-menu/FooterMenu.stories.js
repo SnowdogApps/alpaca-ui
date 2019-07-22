@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { object } from '@storybook/addon-knobs'
 
 import AFooterMenu from './FooterMenu.vue'
 
@@ -10,8 +11,13 @@ storiesOf('Molecules/Footer menu', module)
   .add('Default', () => ({
     components: { AFooterMenu },
     data: () => ({ menu }),
+    props: {
+      menuKnob: {
+        default: object('Menu', menu)
+      }
+    },
     methods: {
       submit: action('Submitted')
     },
-    template: `<a-footer-menu :menu="menu"/>`
+    template: `<a-footer-menu :menu="menuKnob"/>`
   }))

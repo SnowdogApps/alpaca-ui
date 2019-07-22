@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { object } from '@storybook/addon-knobs'
 
 import AFooter from './Footer.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
@@ -33,6 +34,14 @@ storiesOf('Organisms/Footer', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { AFooter },
+    props: {
+      menuKnob: {
+        default: object('Menu', menu)
+      },
+      socialsKnob: {
+        default: object('Socials', socials)
+      }
+    },
     data: () => ({
       socials,
       menu,
@@ -50,8 +59,8 @@ storiesOf('Organisms/Footer', module)
       <a-footer
         :input="input"
         :checkbox="checkbox"
-        :social-list="socials"
-        :menu="menu"
+        :social-list="socialsKnob"
+        :menu="menuKnob"
         :cookie-message="cookieMessage"
         copyright-text="Copyright © 2019 A. All rights reserved."
         scroll-aria-label="Scroll to top"

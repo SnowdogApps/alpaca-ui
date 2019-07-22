@@ -44,42 +44,36 @@
       tag="div"
       class="a-footer__bottom-bar-container"
     >
-
-      <!-- @slot Social media container (Named slot) -->
-      <slot name="socias">
-        <div class="a-footer__socials">
-
-          <!-- @slot Social media title (Named slot) -->
-          <slot name="socialTitle">
-            <span class="a-footer__social-list-subtitle">
-              {{ socialListSubtitle }}
-            </span>
-          </slot>
-
-          <!-- @slot Social media list (Named slot) -->
-          <slot name="socialItmes">
-            <a-list class="a-list--horizontal a-footer__social-list">
-              <a-list-item
-                class="a-footer__social-list-item"
-                v-for="item in socialList"
-                :key="item.id"
+      <div class="a-footer__socials">
+        <!-- @slot Social media title (Named slot) -->
+        <slot name="socialTitle">
+          <span class="a-footer__social-list-subtitle">
+            {{ socialListSubtitle }}
+          </span>
+        </slot>
+        <!-- @slot Social media list (Named slot) -->
+        <slot name="socialItmes">
+          <a-list class="a-list--horizontal a-footer__social-list">
+            <a-list-item
+              class="a-footer__social-list-item"
+              v-for="item in socialList"
+              :key="item.id"
+              :aria-label="item.ariaLabel"
+            >
+              <a-link
+                style="display: block"
+                :href="item.link"
                 :aria-label="item.ariaLabel"
               >
-                <a-link
-                  style="display: block"
-                  :href="item.link"
-                  :aria-label="item.ariaLabel"
-                >
-                  <a-icon
-                    :icon="item.iconId"
-                    class="a-footer__social-icon "
-                  />
-                </a-link>
-              </a-list-item>
-            </a-list>
-          </slot>
-        </div>
-      </slot>
+                <a-icon
+                  :icon="item.iconId"
+                  class="a-footer__social-icon "
+                />
+              </a-link>
+            </a-list-item>
+          </a-list>
+        </slot>
+      </div>
 
       <!-- @slot Copyright text (Named slot) -->
       <slot name="copyright">
