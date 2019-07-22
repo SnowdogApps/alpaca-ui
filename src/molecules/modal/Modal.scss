@@ -52,6 +52,10 @@ $modal__close-button-icon-transition : $transition-base !default;
   height: 100%;
   padding: $modal__padding;
 
+  &--blank &__content {
+    padding: 0;
+  }
+
   &__mask {
     @include mq($screen-m) {
       position: absolute;
