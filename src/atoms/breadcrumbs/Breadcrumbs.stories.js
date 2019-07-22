@@ -23,9 +23,7 @@ storiesOf('Atoms/Breadcrumbs', module)
       }
     },
     ...defaultData,
-    template: `
-      <a-breadcrumbs :breadcrumbs="breadcrumbsKnob"/>
-    `
+    template: `<a-breadcrumbs :breadcrumbs="breadcrumbsKnob"/>`
   }))
   .add('With slots', () => ({
     components: { ABreadcrumbs, ALink },
