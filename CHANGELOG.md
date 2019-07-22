@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Price component (removed props, changed classes, removed useless storeies)
 - Collapse style
 - Move modal to atomic design, update template and component js logic
+- Move breadcrumbs to atomic design, update styles and template
 
 ### Fixed
 - Typo in Message.selectors.json file
