@@ -1,14 +1,18 @@
 @import '../../../assets/styles/globals';
 
+$breadcrumbs__font-size                   : $font-size-small !default;
+
 $breadcrumbs__list-margin                 : 0 !default;
 $breadcrumbs__list-padding                : 0 !default;
+
 $breadcrumbs__list-item-margin            : 0 0 $spacer 0 !default;
-$breadcrumbs__font-size                   : $font-size-small !default;
+
 $breadcrumbs__link-color                  : $black !default;
 $breadcrumbs__link-color--hover           : $blue !default;
 $breadcrumbs__link-color--current         : $blue !default;
 $breadcrumbs__link-pointer-events--current: none !default;
 $breadcrumbs__link-text-decoration        : none !default;
+
 $breadcrumbs__separator-margin            : 0 $spacer !default;
 $breadcrumbs__separator-color             : $breadcrumbs__link-color !default;
 
