@@ -5,8 +5,8 @@ import AFooter from './Footer.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import ANewsletter from '../../molecules/newsletter/Newsletter.vue'
 
-import socials from './mocks/socials.json'
-import menu from '../../molecules/footer-menu/mocks/menu.json'
+import socials from '../../../mocks/socials.json'
+import menu from '../../../mocks/footer-menu.json'
 
 const checkbox = {
   name: 'agreement',

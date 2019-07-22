@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 
 import AFooterMenu from './FooterMenu.vue'
 
-import menu from './mocks/menu.json'
+import menu from '../../../mocks/footer-menu.json'
 
 storiesOf('Molecules/Footer menu', module)
   .addParameters({ info: true })

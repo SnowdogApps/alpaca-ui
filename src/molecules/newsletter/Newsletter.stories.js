@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions'
 import ANewsletter from './Newsletter.vue'
 
 storiesOf('Molecules/Newsletter', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: { ANewsletter },
     data: () => ({
