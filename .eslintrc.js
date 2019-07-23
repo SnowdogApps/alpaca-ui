@@ -22,7 +22,7 @@ module.exports = {
     'arrow-parens': 0,
     'generator-star-spacing': 0,
     'no-console': 1,
-    'no-useless-escape': 1,
+    'no-useless-escape': 0,
     'no-restricted-imports': [2, { 'paths': ['lodash-es'] }],
     'prefer-arrow-callback': 1,
     'semi': ['error', 'never'],
