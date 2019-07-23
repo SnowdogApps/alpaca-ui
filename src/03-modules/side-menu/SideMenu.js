@@ -6,9 +6,9 @@ export default {
       required: true
     }
   },
-  methods: {
-    showSideMenu () {
-      this.$refs.sideMenu.show('side-menu')
+  data () {
+    return {
+      isSideMenuVisible: false
     }
   }
 }
