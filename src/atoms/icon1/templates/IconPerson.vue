@@ -7,3 +7,7 @@
     />
   </g>
 </template>
+
+<script>
+export default {}
+</script>
