@@ -69,10 +69,12 @@ export default {
   data () {
     return {
       selected: null,
-      localItems: []
+      localItems: [],
+      isIE: false
     }
   },
   mounted () {
+    this.isIE = !navigator.userAgent.match(/Trident.*rv:11\./)
     this.localItems = Array.from(
       Array(this.items),
       (x, index) => index + 1
