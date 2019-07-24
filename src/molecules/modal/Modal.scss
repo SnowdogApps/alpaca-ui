@@ -21,13 +21,11 @@ $modal__content-width\@extra-large   : 80% !default;
 $modal__content-min-width            : 320px !default;
 $modal__content-max-width\@medium    : 496px !default;
 $modal__content-max-width\@large     : 624px !default;
-$modal__content-max-width--compact   : 385px !default;
 $modal__content-height               : 100% !default;
 $modal__content-height\@medium       : auto !default;
 $modal__content-padding              : 24px $spacer--medium !default;
 $modal__content-padding\@medium      : 56px $spacer--large !default;
 $modal__content-padding\@large       : 56px 112px !default;
-$modal__content-padding--compact     : $spacer--medium !default;
 $modal__content-background-color     : $white !default;
 $modal__content-border               : none !default;
 $modal__content-box-shadow\@medium   : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
@@ -64,18 +62,6 @@ $modal__close-button-icon-transition : $transition-base !default;
 
   &--blank &__content {
     padding: 0;
-  }
-
-  &--compact &__content {
-    max-width: $modal__content-max-width--compact;
-    padding-right: $modal__content-padding--compact;
-    padding-left: $modal__content-padding--compact;
-  }
-
-  &--compact &__mask {
-    width: 100%;
-    height: 100%;
-    background-color: $modal__background-color\@medium;
   }
 
   &--full-height &__content {

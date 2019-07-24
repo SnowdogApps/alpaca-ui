@@ -4,10 +4,6 @@
     "description": "Remove default content paddings"
   },
   {
-    "name": ".a-modal--compact",
-    "description": "Reduce content paddings"
-  },
-  {
     "name": ".a-modal--full-height",
     "description": "Fill to 100% of viewport height"
   },
