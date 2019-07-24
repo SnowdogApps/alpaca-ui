@@ -14,10 +14,11 @@
     >
       {{ title }}
       <a-icon
-        :title="iconTitle"
-        icon="angle-down"
+        icon-title="angle-down"
         class="a-collapse__icon"
-      />
+      >
+        <a-icon-expand-more />
+      </a-icon>
     </a-button>
   </slot>
   <transition :name="transitionName">

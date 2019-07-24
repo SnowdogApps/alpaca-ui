@@ -1,26 +1,24 @@
 @import '../../../assets/styles/globals';
 
-$collapse__background                 : $white !default;
-$collapse__transition                 : $transition-base !default;
+$collapse__background               : $white !default;
+$collapse__transition               : $transition-base !default;
 
-$collapse__button-color               : $black !default;
-$collapse__button-color--active        : $color-primary !default;
-$collapse__button-width               : 100% !default;
-$collapse__button-padding             : $spacer--medium !default;
-$collapse__button-font-weight         : $font-weight-bold !default;
-$collapse__button-text-transform      : uppercase !default;
-$collapse__button-text-decoration     : underline !default;
-$collapse__button-background          : $white !default;
-$collapse__button-background--active  : $gray-darker !default;
-$collapse__button-border-radius       : 0 !default;
-$collapse__button-outline             : none !default;
+$collapse__button-color             : $black !default;
+$collapse__button-color--active     : $color-primary !default;
+$collapse__button-width             : 100% !default;
+$collapse__button-padding           : $spacer--medium !default;
+$collapse__button-font-weight       : $font-weight-bold !default;
+$collapse__button-text-transform    : uppercase !default;
+$collapse__button-text-decoration   : underline !default;
+$collapse__button-background        : $white !default;
+$collapse__button-background--active: $gray-darker !default;
+$collapse__button-border-radius     : 0 !default;
+$collapse__button-outline           : none !default;
 
-$collapse__icon-width                 : $spacer--medium !default;
-$collapse__icon-height                : $spacer--medium !default;
-$collapse__icon-fill                  : $black !default;
-$collapse__icon-fill--active           : $color-primary !default;
+$collapse__icon-fill                : $black !default;
+$collapse__icon-fill--active        : $color-primary !default;
 
-$collapse__content-padding            : $spacer !default;
+$collapse__content-padding          : $spacer !default;
 
 .a-collapse {
   background-color: $collapse__background;
@@ -62,8 +60,6 @@ $collapse__content-padding            : $spacer !default;
   }
 
   &__icon {
-    width: $collapse__icon-width;
-    height: $collapse__icon-height;
     transition: $collapse__transition;
     fill: $collapse__icon-fill;
   }
