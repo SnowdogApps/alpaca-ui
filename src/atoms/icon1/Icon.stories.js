@@ -27,7 +27,7 @@ storiesOf('Atoms/Icon1', module)
     template: `
       <div style="display: flex; flex-wrap: wrap; padding: 10px;">
         <div :style="wrapperStyles">
-          <a-icon icon-name="Account">
+          <a-icon icon-title="Account">
             <a-icon-person />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
@@ -35,7 +35,7 @@ storiesOf('Atoms/Icon1', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon icon-name="Checked">
+          <a-icon icon-title="Checked">
             <a-icon-check />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
@@ -43,7 +43,7 @@ storiesOf('Atoms/Icon1', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon icon-name="Checked">
+          <a-icon icon-title="Expand more">
             <a-icon-expand-more />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
@@ -51,7 +51,7 @@ storiesOf('Atoms/Icon1', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon icon-name="Checked">
+          <a-icon icon-title="Close">
             <a-icon-close />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
