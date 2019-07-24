@@ -18,10 +18,8 @@ const availableTransitions = [
 ]
 
 const info = `
-  <div style="margin-bottom: 15px; padding: 10px; background: #ffff66; ">
-    ⚠ Sidebar is build on top of the <a href="/?path=/story/molecules-modal--default">Modal</a> component.
-  </div><br>
-  Check **Knobs** tab to edit component properties dynamically.<br>
+  <pre>⚠️ Sidebar is build on top of the <a href="/?path=/story/molecules-modal--default"><strong>Modal</strong></a> component.</pre><br>
+  Check <strong>Knobs</strong> tab to edit component properties dynamically.<br>
   ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
 
