@@ -1,9 +1,21 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { text } from '@storybook/addon-knobs'
 
 import countries from '../../../mocks/countries.json'
 
 import ASelect from './Select.vue'
+
+const data = {
+  methods: {
+    showCountry: action('Selected country')
+  }
+}
+
+const values = {
+  countries,
+  selectedCountry: 'PL'
+}
 
 storiesOf('Molecules/Select', module)
   .addParameters({ info: true })
@@ -11,45 +23,73 @@ storiesOf('Molecules/Select', module)
     components: { ASelect },
     data () {
       return {
-        countries,
-        selectedCountry: ''
+        selected: '',
+        ...values
       }
     },
-    methods: {
-      showCountry: action('Selected country')
+    props: {
+      defaultOptionKnob: {
+        default: text('Default option', 'Please select an option')
+      },
+      labelKnob: {
+        default: text('Label', 'Label text')
+      }
     },
+    ...data,
     template: `
-      <a-select
-        id="field-id"
-        name="field-name"
-        label="Label text"
-        :options="countries"
-        default-option="Please select an option"
-        v-model="selectedCountry"
-        @input="showCountry"
-      />
+      <div>
+        <a-select
+          id="field-id"
+          name="field-name"
+          :label="labelKnob"
+          :options="countries"
+          :default-option="defaultOptionKnob"
+          v-model="selected"
+          @input="showCountry"
+          style="margin-bottom: 20px;"
+        />    
+        <a-select
+          id="field-id2"
+          name="field-name2"
+          :label="labelKnob"
+          :options="countries"
+          v-model="selectedCountry"
+          @input="showCountry"
+        />    
+      </div>
     `
   }))
-  .add('Selected', () => ({
+  .add('Custom icon', () => ({
     components: { ASelect },
     data () {
       return {
         countries,
-        selectedCountry: 'PL'
+        selected: '',
+        ...values
       }
     },
-    methods: {
-      showCountry: action('Selected country')
+    props: {
+      defaultOptionKnob: {
+        default: text('Default option', 'Please select an option')
+      },
+      labelKnob: {
+        default: text('Label', 'Label text')
+      }
     },
+    ...data,
     template: `
-      <a-select
-        id="field-id"
-        name="field-name"
-        label="Label text"
-        :options="countries"
-        v-model="selectedCountry"
-        @input="showCountry"
-      />
+      <div>
+        <a-select
+          id="field-id"
+          name="field-name"
+          :label="labelKnob"
+          :options="countries"
+          :default-option="defaultOptionKnob"
+          v-model="selected"
+          @input="showCountry"
+          icon="arrow-down"
+        /> 
+      </div>
     `
   }))
   .add('With slots', () => ({
@@ -57,32 +97,37 @@ storiesOf('Molecules/Select', module)
     data () {
       return {
         countries,
-        selectedCountry: ''
+        ...values
       }
     },
-    methods: {
-      showCountry: action('Selected country')
+    props: {
+      defaultOptionKnob: {
+        default: text('Default option', 'Please select an option')
+      },
+      labelKnob: {
+        default: text('Label', 'Label text')
+      }
     },
+    ...data,
     template: `
       <a-select
         id="field-id"
         name="field-name"
-        label="Label text"
         :options="countries"
         v-model="selectedCountry"
         @input="showCountry"
       >
         <template #label>
-          <label
-            class="a-label--hidden"
+          <label 
             for="field-id"
+            style="margin-bottom: 10px; display:block;"
           >
-            Label text
+            {{ labelKnob }}
           </label>
         </template>
         <template #defaultOption>
           <option value="">
-            Default option
+            {{ defaultOptionKnob }}
           </option>
         </template>
       </a-select>
