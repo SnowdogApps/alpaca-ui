@@ -3,14 +3,14 @@
   <slot
     name="button"
     :toggle="toggle"
-    :collapseLocal="collapseLocal"
+    :visibility="visibility"
     :ariaControls="ariaControls"
   >
     <a-button
       class="a-collapse__button a-button--blank"
-      :aria-controls="!collapseLocal && ariaControls"
+      :aria-controls="visibility && ariaControls"
       @click.native="toggle"
-      :aria-expanded="!collapseLocal"
+      :aria-expanded="visibility"
     >
       {{ title }}
       <a-icon
@@ -22,7 +22,7 @@
   </slot>
   <transition :name="transitionName">
     <div
-      v-show="!collapseLocal"
+      v-show="visibility"
       :id="ariaControls"
       class="a-collapse__content"
     >

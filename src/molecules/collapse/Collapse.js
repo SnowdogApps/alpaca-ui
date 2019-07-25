@@ -9,11 +9,18 @@ export default {
       default: null
     },
     /**
-     * Title
+     * Icon title
      */
     iconTitle: {
       type: String,
       default: null
+    },
+    /**
+     * Initial visibility (To make the <a-collapse> show initially, set the visible prop)
+     */
+    visible: {
+      type: Boolean,
+      default: false
     },
     /**
      * Transition effect name
@@ -25,7 +32,7 @@ export default {
   },
   data () {
     return {
-      collapseLocal: true
+      visibility: this.visible
     }
   },
   computed: {
@@ -33,9 +40,14 @@ export default {
       return this.title && this.title.replace(/ /g, '_')
     }
   },
+  watch: {
+    visible (value) {
+      this.visibility = value
+    }
+  },
   methods: {
     toggle () {
-      this.collapseLocal = !this.collapseLocal
+      this.visibility = !this.visibility
     }
   }
 }

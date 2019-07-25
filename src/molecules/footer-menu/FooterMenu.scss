@@ -1,0 +1,107 @@
+@import '../../../assets/styles/globals.scss';
+
+$footer-menu__background-color-darker             : $gray-darker !default;
+
+$footer-menu__list-background-color               : transparent !default;
+$footer-menu__list-width\@medium                  : 25% !default;
+
+$footer-menu__button-border-top                   : 2px solid #2c2733 !default;
+$footer-menu__button-border-bottom--active        : 2px solid #2c2733 !default;
+$footer-menu__button-border-bottom--active\@medium: none !default;
+$footer-menu__button-border-bottom                : 2px solid transparent !default;
+$footer-menu__button-border-top\@medium           : none !default;
+$footer-menu__button-border-bottom\@medium        : none !default;
+$footer-menu__button-color\@medium                : $white !default;
+$footer-menu__button-cursor\@medium               : default !default;
+$footer-menu__button-color--hover                 : $white !default;
+$footer-menu__button-text-decoration--hover       : none !default;
+
+$footer-menu__content-padding                     : $spacer $spacer--large !default;
+$footer-menu__content-padding\@medium             : $spacer !default;
+$footer-menu__content-color                       : $white !default;
+
+$footer-menu__link-padding                        : 0 0 0 $spacer--large !default;
+$footer-menu__link-padding\@medium                : 0 !default;
+$footer-menu__link-color                          : $white !default;
+$footer-menu__link-color--hover                   : $color-primary !default;
+$footer-menu__link-text-decoration--hover         : underline !default;
+
+.a-footer-menu {
+  background-color: $footer-menu__background-color-darker;
+
+  @include mq($screen-m) {
+    display: flex;
+  }
+
+  &__list {
+    background-color: $footer-menu__list-background-color;
+
+    @include mq($screen-m) {
+      width: $footer-menu__list-width\@medium;
+    }
+  }
+
+  &__button {
+    border-top: $footer-menu__button-border-top;
+    border-bottom: $footer-menu__button-border-bottom;
+
+    @include mq($screen-m) {
+      color: $footer-menu__button-color\@medium;
+      border-top: $footer-menu__button-border-top\@medium;
+      border-bottom: $footer-menu__button-border-bottom\@medium;
+      cursor: $footer-menu__button-cursor\@medium;
+    }
+
+    &[aria-expanded="true"] {
+      @include mq($screen-m) {
+        color: $footer-menu__button-color\@medium;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      @include mq($screen-m) {
+        color: $footer-menu__button-color--hover;
+        text-decoration: $footer-menu__button-text-decoration--hover;
+      }
+    }
+
+    &--active {
+      border-bottom: $footer-menu__button-border-bottom--active;
+
+      @include mq($screen-m) {
+        border-bottom: $footer-menu__button-border-bottom--active\@medium;
+      }
+    }
+  }
+
+  &__content {
+    padding: $footer-menu__content-padding;
+    color: $footer-menu__content-color;
+
+    @include mq($screen-m) {
+      padding: $footer-menu__content-padding\@medium;
+    }
+  }
+
+  &__link {
+    padding: $footer-menu__link-padding;
+    color: $footer-menu__link-color;
+
+    @include mq($screen-m) {
+      padding: $footer-menu__link-padding\@medium;
+    }
+
+    &:hover,
+    &:focus {
+      color: $footer-menu__link-color--hover;
+      text-decoration: $footer-menu__link-text-decoration--hover;
+    }
+  }
+
+  .a-footer-menu__icon {
+    @include mq($screen-m) {
+      display: none;
+    }
+  }
+}
