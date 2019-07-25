@@ -1,13 +1,15 @@
 @import '../../../assets/styles/_variables';
 
+$checkbox__line-height                 : $font-line-height !default;
+
 $checkbox__icon-width                  : 100% !default;
 $checkbox__icon-height                 : 100% !default;
 $checkbox__icon-margin                 : 0 !default;
 $checkbox__icon-fill                   : $color-primary !default;
 $checkbox__icon-transition             : $transition-base !default;
+
 $checkbox__icon-wrapper-margin         : 0 $spacer 0 0 !default;
-$checkbox__icon-wrapper-width          : 18px !default;
-$checkbox__icon-wrapper-height         : 18px !default;
+$checkbox__icon-wrapper-size           : 18px !default;
 $checkbox__icon-wrapper-border         : 2px solid $gray !default;
 $checkbox__icon-wrapper-border-radius  : 2px !default;
 $checkbox__icon-wrapper-border--checked: none !default;
@@ -15,6 +17,7 @@ $checkbox__icon-wrapper-border--checked: none !default;
 .a-checkbox {
   position: relative;
   display: flex;
+  line-height: $checkbox__line-height;
 
   &__field {
     position: absolute;
@@ -40,8 +43,9 @@ $checkbox__icon-wrapper-border--checked: none !default;
   &__icon-wrapper {
     display: flex;
     align-items: center;
-    width: $checkbox__icon-wrapper-width;
-    height: $checkbox__icon-wrapper-height;
+    width: $checkbox__icon-wrapper-size;
+    min-width: $checkbox__icon-wrapper-size;
+    height: $checkbox__icon-wrapper-size;
     margin: $checkbox__icon-wrapper-margin;
     border: $checkbox__icon-wrapper-border;
     border-radius: $checkbox__icon-wrapper-border-radius;
