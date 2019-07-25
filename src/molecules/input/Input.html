@@ -8,7 +8,6 @@
       {{ label }}
     </a-label>
   </slot>
-
   <input
     v-bind="$attrs"
     v-on="listeners"
@@ -16,4 +15,8 @@
     :id="id"
     class="a-input__field"
   >
+  <div class="a-input__icon">
+    <!-- @slot Icon (Named slot) -->
+    <slot name="icon" />
+  </div>
 </div>
