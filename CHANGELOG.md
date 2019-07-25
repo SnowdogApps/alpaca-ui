@@ -18,11 +18,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - FooterMenu component
 - Tests for Select component
 - Custom icon in Select component
+- Sidebar story based on Modal component
 
 ### Removed
 - -webkit- in transitions
 - Modifiers in collapse component
 - InputWrapper component
+- OffCanvasSidebar component
 
 ### Changed
 - Move ProductItem to atomic design, rename to ProductListItem
@@ -46,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move breadcrumbs to atomic design, update styles and template
 - Remove 'selected' story in Selected coomponents
 - Refactor styles in Select component
+- Update modal component js and styles to handle sidebar case
 
 ### Fixed
 - Typo in Message.selectors.json file
