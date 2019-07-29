@@ -1,77 +1,113 @@
 import { storiesOf } from '@storybook/vue'
 
-import ACollapse from '../../molecules/collapse/Collapse.vue'
+import AButton from '../../atoms/button/Button.vue'
 import AParagraph from '../../atoms/paragraph/Paragraph.vue'
+
+const data = {
+  data: () => ({
+    isVisible: true
+  }),
+  methods: {
+    toggleContent () {
+      this.isVisible = !this.isVisible
+    }
+  }
+}
 
 storiesOf('Templates/Transitions', module)
   .addParameters({ info: true })
   .add('Fade', () => ({
+    ...data,
     components: {
-      ACollapse,
+      AButton,
       AParagraph
     },
     template: `
-      <a-collapse
-        title="Fade animation"
-        transition-name="fade"
-      >
-        <a-paragraph>Fade</a-paragraph>
-      </a-collapse>
+      <div>
+        <a-button @click.native="toggleContent()">
+          Fade
+        </a-button>
+        <transition name="fade">
+          <a-paragraph v-if="isVisible" style="margin-top: 8px;">
+            Fade content
+          </a-paragraph>
+        </transition>
+      </div>
     `
   }))
   .add('Slide up', () => ({
+    ...data,
     components: {
-      ACollapse,
+      AButton,
       AParagraph
     },
     template: `
-      <a-collapse
-        title="Slide up animation"
-        transition-name="slide-up"
-      >
-        <a-paragraph>Slide up</a-paragraph>
-      </a-collapse>
+      <div>
+        <a-button @click.native="toggleContent()">
+          Slide Up
+        </a-button>
+        <transition name="slide-up">
+          <a-paragraph v-if="isVisible" style="margin-top: 8px;">
+            Slide Up
+          </a-paragraph>
+        </transition>
+      </div>
     `
   }))
   .add('Slide right', () => ({
+    ...data,
     components: {
-      ACollapse,
+      AButton,
       AParagraph
     },
     template: `
-      <a-collapse
-        title="Slide right animation"
-        transition-name="slide-right"
-      >
-        <a-paragraph>Slide right</a-paragraph>
-      </a-collapse>
+      <div>
+        <a-button @click.native="toggleContent()">
+          Slide Right
+        </a-button>
+        <transition name="slide-right">
+          <a-paragraph v-if="isVisible" style="margin-top: 8px;">
+            Slide right content
+          </a-paragraph>
+        </transition>
+      </div>
     `
   }))
   .add('Slide down', () => ({
+    ...data,
     components: {
-      ACollapse,
+      AButton,
       AParagraph
     },
     template: `
-      <a-collapse
-        title="Slide down animation"
-        transition-name="slide-down"
-      >
-        <a-paragraph>Slide down</a-paragraph>
-      </a-collapse>
+      <div>
+        <a-button @click.native="toggleContent()">
+          Slide Down
+        </a-button>
+        <transition name="slide-down">
+          <a-paragraph v-if="isVisible" style="margin-top: 8px;">
+            Slide down content
+          </a-paragraph>
+        </transition>
+      </div>
     `
   }))
   .add('Slide left', () => ({
+    ...data,
     components: {
-      ACollapse,
+      AButton,
       AParagraph
     },
     template: `
-      <a-collapse
-        title="Slide left animation"
-        transition-name="slide-left"
-      >
-        <a-paragraph>Slide left</a-paragraph>
-      </a-collapse>
+      <div>
+        <a-button @click.native="toggleContent()">
+          Slide Left
+        </a-button>
+        <transition name="slide-left">
+          <a-paragraph v-if="isVisible" style="margin-top: 8px;">
+            Slide left content
+          </a-paragraph>
+        </transition>
+      </div>
     `
   }))

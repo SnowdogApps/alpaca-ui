@@ -20,7 +20,7 @@
       />
     </a-button>
   </slot>
-  <transition :name="transitionName">
+  <a-transition-expand>
     <div
       v-show="visibility"
       :id="ariaControls"
@@ -29,5 +29,5 @@
       <!-- @slot Default content-->
       <slot />
     </div>
-  </transition>
+  </a-transition-expand>
 </div>

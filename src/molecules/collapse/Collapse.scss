@@ -15,8 +15,6 @@ $collapse__icon-fill                     : $white !default;
 $collapse__icon-fill--active             : $color-primary !default;
 $collapse__icon-transition               : $transition-base !default;
 
-$collapse__content-padding               : $spacer !default;
-
 .a-collapse {
   background-color: $collapse__background;
 
@@ -64,7 +62,6 @@ $collapse__content-padding               : $spacer !default;
 
   &__content {
     z-index: 0;
-    padding: $collapse__content-padding;
 
     &[aria-hidden="true"] {
       display: none;
