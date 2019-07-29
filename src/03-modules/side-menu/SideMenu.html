@@ -1,16 +1,16 @@
 <div class="side-menu">
   <a-button
     class="side-menu__button"
-    @click.native="showSideMenu"
+    @click.native="isSideMenuVisible = true"
   >
     <a-icon icon="mobile-menu"/>
   </a-button>
-  <a-off-canvas-sidebar
-    ref="sideMenu"
-    name="side-menu"
-    side="left"
-    class="side-menu__sidebar"
+  <a-modal
+    :visible="isSideMenuVisible"
+    class="side-menu__sidebar a-modal--left a-modal--full-height"
+    modal-content-transition="slide-right"
+    @close="isSideMenuVisible = false"
   >
     <a-slide-menu :menu-items="menuItems"/>
-  </a-off-canvas-sidebar>
+  </a-modal>
 </div>

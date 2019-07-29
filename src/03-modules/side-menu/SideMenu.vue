@@ -4,7 +4,7 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ASlideMenu from '../../03-modules/slide-menu/SlideMenu.vue'
-import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
+import AModal from '../../molecules/modal/Modal.vue'
 
 import ASideMenu from './SideMenu.js'
 
@@ -14,7 +14,7 @@ export default {
     AIcon,
     AButton,
     ASlideMenu,
-    AOffCanvasSidebar
+    AModal
   },
   mixins: [ASideMenu]
 }

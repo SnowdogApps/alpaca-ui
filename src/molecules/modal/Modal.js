@@ -32,6 +32,13 @@ export default {
       default: true
     },
     /**
+     * Modal wrapper html tag
+     */
+    modalTag: {
+      type: String,
+      default: 'div'
+    },
+    /**
      * Modal main transition effect name
      */
     modalMainTransition: {
@@ -44,6 +51,20 @@ export default {
     modalContentTransition: {
       type: String,
       default: 'slide-down'
+    },
+    /**
+     * Additional Modal content class
+     */
+    modalContentClass: {
+      type: String,
+      default: null
+    },
+    /**
+     * Modal role
+     */
+    modalRole: {
+      type: String,
+      default: 'dialog'
     },
     /**
      * Modal aria-labelledby text
@@ -90,6 +111,7 @@ export default {
         this.trigger = document.activeElement
         this.$nextTick(() => this.$refs.modal.focus())
       }
+      document.body.style.overflow = val ? 'hidden' : 'auto'
     }
   },
   methods: {
