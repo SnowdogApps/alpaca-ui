@@ -12,7 +12,10 @@ export default {
           element.style.height = `${element.scrollHeight}px`
         },
         leave (element) {
-          element.style.height = 0
+          element.style.height = `${element.scrollHeight}px`
+          setTimeout(() => {
+            element.style.height = 0
+          })
         }
       }
     }
