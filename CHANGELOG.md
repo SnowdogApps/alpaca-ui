@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tests for Select component
 - Custom icon in Select component
 - Sidebar story based on Modal component
+- TransitionExpand for Collapse component
 
 ### Removed
 - -webkit- in transitions

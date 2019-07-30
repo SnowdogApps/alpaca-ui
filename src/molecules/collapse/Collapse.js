@@ -21,13 +21,6 @@ export default {
     visible: {
       type: Boolean,
       default: false
-    },
-    /**
-     * Transition effect name
-     */
-    transitionName: {
-      type: String,
-      default: 'slide-down'
     }
   },
   data () {
