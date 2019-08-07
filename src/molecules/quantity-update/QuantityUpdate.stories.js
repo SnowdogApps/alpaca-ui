@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { number, text, select } from '@storybook/addon-knobs'
+import { number, text, select, boolean } from '@storybook/addon-knobs'
 
 import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
 import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
@@ -31,6 +31,9 @@ storiesOf('Molecules/Quantity Update', module)
       },
       maxQtyKnob: {
         default: number('Max qty', 100)
+      },
+      isDisabled: {
+        default: boolean('Disabled', false)
       }
     },
     data () {
@@ -50,6 +53,7 @@ storiesOf('Molecules/Quantity Update', module)
         input-id="qty-update"
         :min-qty="minQtyKnob"
         :max-qty="maxQtyKnob"
+        :disabled="isDisabled"
         decrement-aria-label="Decrease the quantity"
         decrement-icon-title="Minus mark"
         increment-aria-label="Increase the quantity"
