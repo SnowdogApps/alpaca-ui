@@ -13,7 +13,7 @@
         class="a-pagination__item"
       >
         <button
-          @click="setPage"
+          @click="setPage(page)"
           :class="['a-pagination__page-button', currentLocal === page && 'a-pagination__page-button--current']"
         >
           {{ page }}
@@ -52,19 +52,22 @@ export default {
   },
   data () {
     return {
-      currentLocal: this.currentPage
+      currentLocal: this.currentPage,
+      isFirst: false,
+      isLast: false
     }
   },
   methods: {
     prev () {
-      this.currentLocal = this.currentLocal - 1
+      this.currentLocal = this.currentLocal <= 1 ? this.currentLocal : this.currentLocal - 1
       console.log('<')
     },
     next () {
-      this.currentLocal = this.currentLocal + 1
+      this.currentLocal = this.currentLocal >= this.pages - 1 ? this.currentLocal : this.currentLocal + 1
       console.log('>')
     },
     setPage (page) {
+      this.currentLocal = page
       console.log(page)
     }
   }
