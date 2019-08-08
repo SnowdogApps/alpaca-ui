@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom icon in Select component
 - Sidebar story based on Modal component
 - TransitionExpand for Collapse component
+- Disabled attribute fir QuantityUpdate component
 
 ### Removed
 - -webkit- in transitions
@@ -50,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove 'selected' story in Selected coomponents
 - Refactor styles in Select component
 - Update modal component js and styles to handle sidebar case
+- Update attributes passed to Select component ($attrs)
 
 ### Fixed
 - Typo in Message.selectors.json file
