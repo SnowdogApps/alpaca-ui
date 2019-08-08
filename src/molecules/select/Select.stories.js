@@ -47,7 +47,7 @@ storiesOf('Molecules/Select', module)
           v-model="selected"
           @input="showCountry"
           style="margin-bottom: 20px;"
-        />    
+        />
         <a-select
           id="field-id2"
           name="field-name2"
@@ -55,7 +55,7 @@ storiesOf('Molecules/Select', module)
           :options="countries"
           v-model="selectedCountry"
           @input="showCountry"
-        />    
+        />
       </div>
     `
   }))
@@ -88,7 +88,7 @@ storiesOf('Molecules/Select', module)
           v-model="selected"
           @input="showCountry"
           icon="arrow-down"
-        /> 
+        />
       </div>
     `
   }))
@@ -118,7 +118,7 @@ storiesOf('Molecules/Select', module)
         @input="showCountry"
       >
         <template #label>
-          <label 
+          <label
             for="field-id"
             style="margin-bottom: 10px; display:block;"
           >
