@@ -11,8 +11,8 @@
   </slot>
   <div :class="[ 'a-select__field', icon && 'a-select__field--icon']">
     <select
+      v-bind="$attrs"
       :id="id"
-      :name="name"
       :class="['a-select__input', selectClass]"
       @focus="$emit('focus')"
       @blur="$emit('blur')"

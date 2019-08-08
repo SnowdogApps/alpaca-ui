@@ -10,13 +10,6 @@ export default {
       required: true
     },
     /**
-     * Name attribute
-     */
-    name: {
-      type: String,
-      required: true
-    },
-    /**
      * Array of options
      */
     options: {
