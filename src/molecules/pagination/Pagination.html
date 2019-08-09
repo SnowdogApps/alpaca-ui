@@ -7,7 +7,10 @@
         :disabled="currentPage < 2"
         @click.native="setCurrentPage(currentPage - 1)"
       >
-        <a-icon icon="arrow-left"/>
+        <!-- @slot Default icon for arrow-left (Named slot) -->
+        <slot name="arrow-left">
+          <a-icon icon="arrow-left"/>
+        </slot>
       </a-button>
     </li>
 
@@ -62,7 +65,10 @@
         :disabled="currentPage > numberOfPages - 1"
         @click.native="setCurrentPage(currentPage + 1)"
       >
-        <a-icon icon="arrow-right"/>
+        <!-- @slot Default icon for arrow-right (Named slot) -->
+        <slot name="arrow-right">
+          <a-icon icon="arrow-right"/>
+        </slot>
       </a-button>
     </li>
   </ul>

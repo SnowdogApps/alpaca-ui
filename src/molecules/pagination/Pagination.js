@@ -1,14 +1,23 @@
 // @vue/component
 export default {
   props: {
+    /*
+     * Current page
+     */
     page: {
       type: Number,
       required: true
     },
+    /*
+     * Total size
+     */
     totalSize: {
       type: Number,
       required: true
     },
+    /*
+     * Limit on page
+     */
     limit: {
       type: Number,
       default: 5
@@ -27,6 +36,10 @@ export default {
         return this.page
       },
       set (value) {
+        /**
+         * Triggered when page is changed
+         * @type {Event}
+         */
         this.$emit('update:page', value)
       }
     },
