@@ -4,15 +4,15 @@
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 
-import APager from './Pagination.js'
+import APagination from './Pagination.js'
 
 export default {
-  name: 'AlpacaPager',
+  name: 'AlpacaPagination',
   components: {
     AIcon,
     AButton
   },
-  mixins: [APager]
+  mixins: [APagination]
 }
 </script>
 
