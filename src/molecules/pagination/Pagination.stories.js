@@ -12,7 +12,7 @@ storiesOf('Molecules/Pagination', module)
     }),
     props: {
       limitPageKnobs: {
-        default: number('Limit per page', 3)
+        default: number('Limit per page', 2)
       },
       totalSizeKnobs: {
         default: number('Total size', 20)
