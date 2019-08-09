@@ -2,13 +2,13 @@
 
 $pagination-margin                         : 0 !default;
 $pagination__item-height--current          : 8px !default;
-$pagination__item-color--current           : $gray-dark !default;
 $pagination__item-background-color--current: $color-primary !default;
 $pagination__item-width--current           : 100% !default;
 $pagination__item-bottom--current          : 14px !default;
 $pagination__item-left--current            : 0 !default;
 $pagination__item-content--current         : '' !default;
 $pagination__dots-min-width                : 48px !default;
+$pagination__button-color--current         : $gray-dark !default;
 $pagination__button-font-weight            : $font-weight-normal !default;
 $pagination__button-background-color       : transparent !default;
 $pagination__button-border                 : none !default;
@@ -33,7 +33,6 @@ $pagination__icon-fill-disabled            : $gray-light !default;
   &__item {
     &--current {
       position: relative;
-      color: $pagination__item-color--current;
 
       &::after {
         position: absolute;
@@ -45,6 +44,10 @@ $pagination__icon-fill-disabled            : $gray-light !default;
         background-color: $pagination__item-background-color--current;
         transition: $pagination__item-left--current;
         content: $pagination__item-content--current;
+      }
+
+      .a-pagination__button {
+        color: $pagination__item-color--current;
       }
     }
   }
