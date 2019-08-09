@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
 import { number } from '@storybook/addon-knobs'
 
-import Pager from './Pagination.vue'
+import APagination from './Pagination.vue'
 
 storiesOf('Molecules/Pagination', module)
   .addParameters({ info: true })
   .add('Default', () => ({
-    components: { Pager },
+    components: { APagination },
     data: () => ({
       page: 1
     }),
@@ -29,7 +29,7 @@ storiesOf('Molecules/Pagination', module)
       }
     },
     template: `
-      <pager
+      <a-pagination
         @update:page="(page) => {this.setCurrentPage(page)}"
         :page="page"
         :limit="limitPageKnobs"
