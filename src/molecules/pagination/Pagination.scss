@@ -2,6 +2,7 @@
 
 $pagination-margin                         : 0 !default;
 $pagination__item-height--current          : 8px !default;
+$pagination__item-color--current           : $gray-dark !default;
 $pagination__item-background-color--current: $color-primary !default;
 $pagination__item-width--current           : 100% !default;
 $pagination__item-bottom--current          : 14px !default;
@@ -32,6 +33,7 @@ $pagination__icon-fill-disabled            : $gray-light !default;
   &__item {
     &--current {
       position: relative;
+      color: $pagination__item-color--current;
 
       &::after {
         position: absolute;
