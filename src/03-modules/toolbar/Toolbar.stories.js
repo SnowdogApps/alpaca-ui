@@ -33,7 +33,7 @@ storiesOf('Modules/Toolbar', module)
     `
   }))
   // @vue/component
-  .add('With pager', () => ({
+  .add('With pagination', () => ({
     components: { AToolbar },
     data: () => {
       return {

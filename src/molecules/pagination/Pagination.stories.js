@@ -1,15 +1,30 @@
 import { storiesOf } from '@storybook/vue'
 
-import APagination from './Pagination.vue'
+import Pager from './Pagination.vue'
 
-storiesOf('Modules/Pagination', module)
-// @vue/component
+storiesOf('Molecules/Pagination', module)
+  // @vue/component
   .add('Default', () => ({
-    components: { APagination },
+    components: { Pager },
+    data: () => ({
+      page: 1
+    }),
+    computed: {
+      currentPage () {
+        return this.page
+      }
+    },
+    methods: {
+      setCurrentPage (page) {
+        this.page = page
+      }
+    },
     template: `
-      <a-pagination
-        :pages="17"
-        :currentPage="5"
+      <pager
+        @update:page="(page) => {this.setCurrentPage(page)}"
+        :page="page"
+        :limit="3"
+        :totalSize="55"
       />
     `
   }))

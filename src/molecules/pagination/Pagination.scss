@@ -1,0 +1,87 @@
+@import '../../../assets/styles/globals';
+
+$pagination-margin                         : 0 !default;
+$pagination__item-height--current          : 8px !default;
+$pagination__item-background-color--current: $color-primary !default;
+$pagination__item-width--current           : 100% !default;
+$pagination__item-bottom--current          : 14px !default;
+$pagination__item-left--current            : 0 !default;
+$pagination__item-content--current         : '' !default;
+$pagination__dots-min-width                : 48px !default;
+$pagination__button-font-weight            : normal !default;
+$pagination__button-background-color       : transparent !default;
+$pagination__button-border                 : none !default;
+$pagination__button-color-hover            : $color-primary !default;
+$pagination__button-background-color-hover : transparent !default;
+$pagination__icon-width                    : 24px !default;
+$pagination__icon-height                   : 24px !default;
+$pagination__icon-fill                     : $green !default;
+$pagination__icon-fill-disabled            : $gray-light !default;
+
+.a-pagination {
+  text-align: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: $pagination-margin;
+    list-style-type: none;
+  }
+
+  &__item {
+    &--current {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        bottom: $pagination__item-bottom--current;
+        left: $pagination__item-left--current;
+        z-index: -1;
+        width: $pagination__item-width--current;
+        height: $pagination__item-height--current;
+        background-color: $pagination__item-background-color--current;
+        transition: $pagination__item-left--current;
+        content: $pagination__item-content--current;
+      }
+    }
+  }
+
+  &__dots {
+    min-width: $pagination__dots-min-width;
+  }
+
+  &__button {
+    font-weight: $pagination__button-font-weight;
+    background-color: $pagination__button-background-color;
+    border: $pagination__button-border;
+
+    &:focus,
+    &:hover {
+      color: $pagination__button-color-hover;
+      background-color: $pagination__button-background-color-hover;
+    }
+
+    &--prev,
+    &--next {
+      .icon {
+        width: $pagination__icon-width;
+        height: $pagination__icon-height;
+      }
+
+      &:focus:not([disabled]),
+      &:hover:not([disabled]) {
+        fill: $pagination__icon-fill;
+      }
+
+      &[disabled] {
+        cursor: default;
+        pointer-events: none;
+
+        .a-icon {
+          fill: $pagination__icon-fill-disabled;
+        }
+      }
+    }
+  }
+}

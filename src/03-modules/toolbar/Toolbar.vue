@@ -4,7 +4,7 @@
 import ASelect from '../../molecules/select/Select.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
-import APager from '../../molecules/pager/Pager.vue'
+import APager from '../../molecules/pagination/Pagination.vue'
 
 import AToolbar from './Toolbar.js'
 
