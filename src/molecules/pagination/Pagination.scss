@@ -8,7 +8,7 @@ $pagination__item-bottom--current          : 14px !default;
 $pagination__item-left--current            : 0 !default;
 $pagination__item-content--current         : '' !default;
 $pagination__dots-min-width                : 48px !default;
-$pagination__button-font-weight            : normal !default;
+$pagination__button-font-weight            : $font-weight-normal !default;
 $pagination__button-background-color       : transparent !default;
 $pagination__button-border                 : none !default;
 $pagination__button-color-hover            : $color-primary !default;
