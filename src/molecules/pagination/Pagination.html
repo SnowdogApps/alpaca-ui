@@ -24,7 +24,9 @@
          </a-button>
       </li>
       <li class="a-pagination__dots">
-        ...
+        <slot name="dots">
+          ...
+        </slot>
       </li>
     </template>
 
@@ -46,7 +48,9 @@
 
     <template v-if="showLast">
       <li class="a-pagination__dots">
-        ...
+        <slot name="dots">
+          ...
+        </slot>
       </li>
       <li class="a-pagination__item">
         <a-button
