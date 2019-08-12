@@ -6,6 +6,8 @@ import AIconCheck from './templates/IconCheck.vue'
 import AIconExpandMore from './templates/IconExpandMore.vue'
 import AIconClose from './templates/IconClose.vue'
 import AIconSearch from './templates/IconSearch.vue'
+import AIconFavoriteBorder from './templates/IconFavoriteBorder.vue'
+import AIconEqualizer from './templates/IconEqualizer.vue'
 
 const wrapperStyles = {
   'margin': '20px',
@@ -23,7 +25,9 @@ storiesOf('Atoms/Icon1', module)
       AIconCheck,
       AIconExpandMore,
       AIconClose,
-      AIconSearch
+      AIconSearch,
+      AIconFavoriteBorder,
+      AIconEqualizer
     },
     data: () => ({ wrapperStyles }),
     template: `
@@ -66,6 +70,22 @@ storiesOf('Atoms/Icon1', module)
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
             search
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon icon-title="Favorite icon">
+            <a-icon-favorite-border />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            favorite_border
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon icon-title="Equalizer icon">
+            <a-icon-equalizer />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            equalizer
           </span>
         </div>
       </div>
