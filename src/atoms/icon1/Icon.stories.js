@@ -5,6 +5,7 @@ import AIconPerson from './templates/IconPerson.vue'
 import AIconCheck from './templates/IconCheck.vue'
 import AIconExpandMore from './templates/IconExpandMore.vue'
 import AIconClose from './templates/IconClose.vue'
+import AIconSearch from './templates/IconSearch.vue'
 
 const wrapperStyles = {
   'margin': '20px',
@@ -21,7 +22,8 @@ storiesOf('Atoms/Icon1', module)
       AIconPerson,
       AIconCheck,
       AIconExpandMore,
-      AIconClose
+      AIconClose,
+      AIconSearch
     },
     data: () => ({ wrapperStyles }),
     template: `
@@ -56,6 +58,14 @@ storiesOf('Atoms/Icon1', module)
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
             close
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon icon-title="Search">
+            <a-icon-search />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            search
           </span>
         </div>
       </div>

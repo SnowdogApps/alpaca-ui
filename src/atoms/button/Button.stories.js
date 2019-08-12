@@ -6,7 +6,8 @@ import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Button.selectors.json'
 
 import AButton from './Button.vue'
-import AIcon from '../icon/Icon.vue'
+import AIcon from '../icon1/Icon.vue'
+import AIconSearch from '../icon1/templates/IconSearch.vue'
 
 const info = `
   <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
@@ -34,7 +35,7 @@ storiesOf('Atoms/Button', module)
     `
   }))
   .add('With slot', () => ({
-    components: { AButton, AIcon },
+    components: { AButton, AIcon, AIconSearch },
     props: {
       classKnobs: {
         default: select('BEM Modifier', classKnobsConfig)
@@ -45,11 +46,9 @@ storiesOf('Atoms/Button', module)
         :class="classKnobs"
         style="padding: 0;"
       >
-        <a-icon
-          icon="search"
-          class="button__icon"
-          title="iconTitle"
-        />
+        <a-icon icon-title="Search">
+          <a-icon-search />
+        </a-icon>
       </a-button>
     `
   }))

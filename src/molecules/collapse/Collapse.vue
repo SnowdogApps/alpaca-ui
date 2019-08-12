@@ -12,9 +12,9 @@ export default {
   name: 'AlpacaCollapse',
   components: {
     AIcon,
-    ATransitionExpand
-    AButton
-    AIconExpandMore,
+    ATransitionExpand,
+    AButton,
+    AIconExpandMore
   },
   mixins: [ACollapse]
 }

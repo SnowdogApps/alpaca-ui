@@ -14,7 +14,6 @@ $checkbox__icon-wrapper-background-color--checked: $color-primary !default;
 .a-checkbox {
   position: relative;
   display: flex;
-  line-height: $checkbox__line-height;
 
   &__field {
     position: absolute;
