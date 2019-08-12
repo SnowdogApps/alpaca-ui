@@ -1,3 +1,8 @@
+@import '../../../assets/styles/globals';
+
+$icon__transition : $transition-base !default;
+
 .a-icon {
   display: block;
+  transition: $icon__transition;
 }

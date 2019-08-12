@@ -17,8 +17,6 @@ $cookie-message__close-background      : none !default;
 $cookie-message__close-border          : none !default;
 $cookie-message__close-font-weight     : $font-weight-bold !default;
 
-
-$cookie-message__close-icon-size       : 14px !default;
 $cookie-message__close-icon-margin-left: $spacer !default;
 $cookie-message__close-icon-fill       : $color-primary !default;
 
@@ -87,8 +85,6 @@ $cookie-message__close-icon-fill       : $color-primary !default;
   }
 
   &__close-icon {
-    width: $cookie-message__close-icon-size;
-    height: $cookie-message__close-icon-size;
     margin-left: $cookie-message__close-icon-margin-left;
     fill: $cookie-message__close-color;
 
