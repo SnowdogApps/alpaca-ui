@@ -7,7 +7,8 @@ import selectorsConfig from './Modal.selectors.json'
 
 import AHeading from '../../atoms/heading/Heading.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
+import AIcon from '../../atoms/icon1/Icon.vue'
+import AIconClose from '../../atoms/icon1/templates/IconClose.vue'
 import AParagraph from '../../atoms/paragraph/Paragraph.vue'
 import ADivider from '../../templates/divider/Divider.vue'
 import AModal from './Modal.vue'
@@ -157,6 +158,7 @@ storiesOf('Molecules/Modal', module)
       AButton,
       ADivider,
       AIcon,
+      AIconClose,
       AModal,
       AHeading
     },
@@ -207,11 +209,9 @@ storiesOf('Molecules/Modal', module)
             />
           </template>
           <template #close>
-            <a-icon
-              icon="minus"
-              class="a-modal__close-icon"
-              title="Close"
-            />
+            <a-icon class="a-modal__close-icon">
+              <a-icon-close />
+            </a-icon>
           </template>
           <p>{{ contentKnob }}</p>
         </a-modal>
@@ -236,11 +236,9 @@ storiesOf('Molecules/Modal', module)
             />
           </template>
           <template #close>
-            <a-icon
-              icon="minus"
-              class="a-modal__close-icon"
-              title="Close"
-            />
+            <a-icon class="a-modal__close-icon">
+              <a-icon-close />
+            </a-icon>
           </template>
           <p>{{ contentKnob.toUpperCase() }}</p>
         </a-modal>
