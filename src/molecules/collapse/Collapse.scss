@@ -31,17 +31,16 @@ $collapse__content-padding          : $spacer !default;
     width: $collapse__button-width;
     min-width: 0;
     color: $collapse__button-color;
+    font-weight: $collapse__button-font-weight;
     text-align: left;
     text-decoration: none;
-    background: $collapse__button-background;
+    background-color: $collapse__button-background;
     border-radius: $collapse__button-border-radius;
 
     &:hover,
     &:focus {
       color: $collapse__button-color--active;
-      text-decoration: $collapse__button-text-decoration;
       background-color: $collapse__button-background--active;
-      outline: $collapse__button-outline;
 
       & > .a-collapse__icon {
         fill: $collapse__icon-fill--active;
@@ -66,7 +65,6 @@ $collapse__content-padding          : $spacer !default;
 
   &__content {
     z-index: 0;
-    padding: $collapse__content-padding;
 
     &[aria-hidden="true"] {
       display: none;

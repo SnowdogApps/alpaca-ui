@@ -1,8 +1,8 @@
 <template src="./Newsletter.html" />
 
 <script>
+import AHeading from '../../atoms/heading/Heading.vue'
 import ALabel from '../../atoms/label/Label.vue'
-import AInput from '../../molecules/input/Input.vue'
 import ACheckbox from '../../molecules/checkbox/Checkbox.vue'
 import AButton from '../../atoms/button/Button.vue'
 
@@ -11,7 +11,7 @@ import ANewsletter from './Newsletter.js'
 export default {
   name: 'AlpacaNewsletter',
   components: {
-    AInput,
+    AHeading,
     ALabel,
     ACheckbox,
     AButton

@@ -10,13 +10,6 @@ export default {
       required: true
     },
     /**
-     * Name attribute
-     */
-    name: {
-      type: String,
-      required: true
-    },
-    /**
      * Array of options
      */
     options: {
@@ -48,6 +41,13 @@ export default {
      * Default option text
      */
     defaultOption: {
+      type: String,
+      default: null
+    },
+    /**
+     * Custom icon
+     */
+    icon: {
       type: String,
       default: null
     }

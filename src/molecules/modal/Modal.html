@@ -1,11 +1,12 @@
 <transition :name="modalMainTransition">
-  <div
+  <component
+    :is="modalTag"
     v-show="visible"
     :aria-hidden="ariaHidden"
     :aria-labelledby="ariaLabelledby"
     :aria-describedby="ariaDescribedby"
     class="a-modal"
-    role="dialog"
+    :role="modalRole"
   >
     <div
       @click.self="handleBackgroundClick"
@@ -13,7 +14,7 @@
     ></div>
     <transition :name="modalContentTransition">
       <div
-        class="a-modal__content"
+        :class="['a-modal__content', modalContentClass]"
         v-if="visible"
         role="document"
         tabindex="0"
@@ -59,5 +60,5 @@
         <slot/>
       </div>
     </transition>
-  </div>
+  </component>
 </transition>

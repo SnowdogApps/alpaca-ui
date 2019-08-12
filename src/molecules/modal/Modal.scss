@@ -52,16 +52,33 @@ $modal__close-button-icon-transition : $transition-base !default;
   height: 100%;
   padding: $modal__padding;
 
+  &--left {
+    align-items: flex-start;
+  }
+
+  &--right {
+    align-items: flex-end;
+  }
+
   &--blank &__content {
     padding: 0;
   }
 
-  &__mask {
+  &--full-height &__content {
+    height: 100vh;
+
     @include mq($screen-m) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: $modal__mask-z-index;
+      height: 100vh;
+    }
+  }
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $modal__mask-z-index;
+
+    @include mq($screen-m) {
       width: 100%;
       height: 100%;
       background-color: $modal__background-color\@medium;

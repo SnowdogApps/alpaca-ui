@@ -15,11 +15,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tests for Preformatted component
 - More tests in input component
 - Tests for Textarea component
+- FooterMenu component
+- Tests for Select component
+- Custom icon in Select component
+- Sidebar story based on Modal component
+- TransitionExpand for Collapse component
+- Disabled attribute for QuantityUpdate component
 
 ### Removed
 - -webkit- in transitions
 - Modifiers in collapse component
 - InputWrapper component
+- OffCanvasSidebar component
 
 ### Changed
 - Move ProductItem to atomic design, rename to ProductListItem
@@ -37,7 +44,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Price component (removed props, changed classes, removed useless storeies)
 - Collapse style
 - Move modal to atomic design, update template and component js logic
+- Refactor Newsletter component
+- Refactor Collapse component
+- Refactor Footer component
 - Move breadcrumbs to atomic design, update styles and template
+- Remove 'selected' story in Selected coomponents
+- Refactor styles in Select component
+- Update modal component js and styles to handle sidebar case
+- Update attributes passed to Select component ($attrs)
 
 ### Fixed
 - Typo in Message.selectors.json file

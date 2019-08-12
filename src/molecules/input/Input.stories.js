@@ -1,11 +1,13 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
 import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Input.selectors.json'
 
 import AInput from './Input.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
 
 const inputTypes = ['text', 'email', 'search', 'number', 'password', 'hidden']
 
@@ -50,8 +52,8 @@ storiesOf('Molecules/Input', module)
       />
     `
   }))
-  .add('With slot', () => ({
-    components: { AInput },
+  .add('With slots', () => ({
+    components: { AInput, AIcon },
     data: () => {
       return {
         value: ''
@@ -67,6 +69,9 @@ storiesOf('Molecules/Input', module)
       typeKnob: {
         default: select('Type', inputTypes, 'text')
       }
+    },
+    methods: {
+      click: action('Clicked')
     },
     template: `
       <a-input
@@ -84,6 +89,14 @@ storiesOf('Molecules/Input', module)
             Label
           </label>
         </template>
+        <template #icon>
+          <a-icon
+            class="a-icon--reset"
+            icon="star"
+            style="cursor: pointer; width: 16px; height: 16px"
+            @click.native="click"
+          />
+        </template> 
       </a-input>
     `
   }))

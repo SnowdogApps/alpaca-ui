@@ -14,6 +14,7 @@ module.exports = {
   'coverageDirectory': './coverage/',
   'collectCoverageFrom': [
     '**/atoms/*/*.vue',
+    '!**/atoms/transition-expand/*.vue',
     '**/molecules/*/*.vue',
     '**/organisms/*/*.vue',
     '**/templates/*/*.vue',

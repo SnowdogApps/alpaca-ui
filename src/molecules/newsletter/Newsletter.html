@@ -1,0 +1,62 @@
+<form
+  class="a-newsletter"
+  @submit.prevent="onSubmit"
+>
+  <!-- @slot Heading (Named slot) -->
+  <slot name="heading">
+    <a-heading
+      :level="3"
+      class="a-newsletter__heading"
+    >
+      {{ heading }}
+    </a-heading>
+  </slot>
+
+  <div class="a-newsletter__controls">
+    <!-- @slot Input (Named slot) -->
+    <slot name="input">
+      <input
+        v-if="input"
+        :id="input.id"
+        class="a-newsletter__input"
+        type="text"
+        v-model="email"
+        :placeholder="input.placeholder"
+        :name="input.name"
+      >
+    </slot>
+
+    <a-label
+      v-if="input"
+      :for="input.id"
+      class="a-label--hidden"
+    >
+      {{ input.label }}
+    </a-label>
+
+    <!-- @slot Button (Named slot) -->
+    <slot name="button"></slot>
+      <a-button
+        class="a-newsletter__button"
+        @click.native.stop.prevent="onSubmit"
+      >
+        {{ buttonText }}
+      </a-button>
+    </slot>
+  </div>
+
+  <!-- @slot Agreements (Named slot) -->
+  <slot name="agreements">
+    <a-checkbox
+      v-if="checkbox"
+      v-model="checkbox.status"
+      :id="checkbox.id"
+      :key="checkbox.id"
+      :value="checkbox.value"
+      name="checkbox.name"
+      class="a-newsletter__agreement"
+    >
+      {{ checkbox.label }}
+    </a-checkbox>
+  </slot>
+</form>

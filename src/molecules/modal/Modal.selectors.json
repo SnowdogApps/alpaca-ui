@@ -2,5 +2,17 @@
   {
     "name": ".a-modal--blank",
     "description": "Remove default content paddings"
+  },
+  {
+    "name": ".a-modal--full-height",
+    "description": "Fill to 100% of viewport height"
+  },
+  {
+    "name": ".a-modal--left",
+    "description": "Align sidebar to left"
+  },
+  {
+    "name": ".a-modal--right",
+    "description": "Align sidebar to right"
   }
 ]

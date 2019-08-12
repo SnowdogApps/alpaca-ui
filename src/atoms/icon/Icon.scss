@@ -1,7 +1,9 @@
 @import '../../../assets/styles/_globals.scss';
 
-$icon__size   : 24px !default;
-$icon__padding: 2px !default;
+$icon__width         : 24px !default;
+$icon__height        : 24px !default;
+$icon__padding       : 2px !default;
+$icon__padding--reset: 0 !default;
 
 // .a-icon {
 //   display: block;

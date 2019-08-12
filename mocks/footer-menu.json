@@ -34,8 +34,7 @@
         "title": "Guides"
       }
     ]
-  }
-,
+  },
   {
     "id": "el2",
     "title": "Information",
@@ -99,37 +98,37 @@
   {
     "id": "el4",
     "title": "A.pl",
-      "items": [
-        {
-          "id": "item4.1",
-          "text": "About us",
-          "link": "#",
-          "title": "About"
-        },
-        {
-          "id": "item4.2",
-          "text": "Certificates and safety",
-          "link": "#",
-          "title": "Certificates"
-        },
-        {
-          "id": "item4.3",
-          "text": "Prizes and customer feedback",
-          "link": "#",
-          "title": "Prizes"
-        },
-        {
-          "id": "item4.4",
-          "text": "Cookie policy",
-          "link": "#",
-          "title": "Cookie"
-        },
-        {
-          "id": "item4.5",
-          "text": "Regulations",
-          "link": "#",
-          "title": "Regulations"
-        }
-      ]
-    }
+    "items": [
+      {
+        "id": "item4.1",
+        "text": "About us",
+        "link": "#",
+        "title": "About"
+      },
+      {
+        "id": "item4.2",
+        "text": "Certificates and safety",
+        "link": "#",
+        "title": "Certificates"
+      },
+      {
+        "id": "item4.3",
+        "text": "Prizes and customer feedback",
+        "link": "#",
+        "title": "Prizes"
+      },
+      {
+        "id": "item4.4",
+        "text": "Cookie policy",
+        "link": "#",
+        "title": "Cookie"
+      },
+      {
+        "id": "item4.5",
+        "text": "Regulations",
+        "link": "#",
+        "title": "Regulations"
+      }
+    ]
+  }
 ]

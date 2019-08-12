@@ -9,7 +9,6 @@ import AMiniCart from '../../03-modules/mini-cart/MiniCart.vue'
 import AWishlist from '../../03-modules/wishlist/Wishlist.vue'
 import AQuantityUpdate from '../../molecules/quantity-update/QuantityUpdate.vue'
 import AModal from '../../molecules/modal/Modal.vue'
-import AOffCanvasSidebar from '../../03-modules/off-canvas-sidebar/OffCanvasSidebar.vue'
 
 import menu from './mocks/menu'
 import sideMenu from '../../../mocks/slide-menu'
@@ -25,7 +24,6 @@ storiesOf('Modules/Header', module)
       ALabel,
       AHeader,
       ALogin,
-      AOffCanvasSidebar,
       AMiniCart,
       AWishlist,
       AQuantityUpdate,
@@ -40,18 +38,11 @@ storiesOf('Modules/Header', module)
         text: 'Qty:',
         label: ''
       },
-      isModalVisible: false
+      isModalVisible: false,
+      isMinicartVisible: false,
+      isWishlistVisible: false
     }),
     methods: {
-      showRegister () {
-        this.isModalVisible = true
-      },
-      showMiniCart () {
-        this.$refs.modalMiniCart.show('mini-cart')
-      },
-      toggleWishlist () {
-        this.$refs.modalWishlist.show('wishlist')
-      },
       login: action('Login'),
       removeMethod: action('Remove'),
       changeMethod: action('Change'),
@@ -64,14 +55,14 @@ storiesOf('Modules/Header', module)
           :side-menu="sideMenu"
           src="../../images/logo/alpaca.svg"
           link="#"
-          @toggleMicrocart="showMiniCart"
-          @toggleWishlist="toggleWishlist"
-          @goToAccount="showRegister"
+          @toggleMicrocart="isMinicartVisible = true"
+          @toggleWishlist="isWishlistVisible = true"
+          @goToAccount="isModalVisible = true"
         />
         <a-modal
           :visible="isModalVisible"
-          @close="isModalVisible = false"
           heading="Registred Customers"
+          @close="isModalVisible = false"
         >
           <a-login
             legend="Login form"
@@ -84,10 +75,12 @@ storiesOf('Modules/Header', module)
             @goToRegister="goToRegister"
           />
         </a-modal>
-        <a-off-canvas-sidebar
-          name="mini-cart"
-          ref="modalMiniCart"
+        <a-modal
+          :visible="isMinicartVisible"
           heading="Shipping Cart"
+          modal-content-transition="slide-left"
+          class="a-modal--full-height a-modal--right"
+          @close="isMinicartVisible = false"
         >
           <a-mini-cart
             :products="products"
@@ -102,16 +95,18 @@ storiesOf('Modules/Header', module)
               <!-- todo: add ProductListItem here -->
             </template>
            </a-mini-cart>
-         </a-off-canvas-sidebar>
-        <a-off-canvas-sidebar
-          name="wishlist"
-          ref="modalWishlist"
+         </a-modal>
+        <a-modal
+          :visible="isWishlistVisible"
           heading="Wishlist"
+          modal-content-transition="slide-left"
+          class="a-modal--full-height a-modal--right"
+          @close="isWishlistVisible = false"
         >
           <a-wishlist>
             <!-- todo: add ProductListItem here -->
           </a-wishlist>
-         </a-off-canvas-sidebar>
+         </a-modal>
       </div>
     `
   }))

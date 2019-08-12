@@ -19,7 +19,7 @@
     >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--minus"
-        :disabled="currentValue === minQty"
+        :disabled="currentValue === minQty || disabled"
         :aria-label="decrementAriaLabel"
         @click.native="updateQty(-1)"
       >
@@ -44,6 +44,7 @@
         :max="maxQty"
         :value="currentValue"
         @input="inputEvent"
+        :readonly="disabled"
         autocomplete="off"
       >
     </slot>
@@ -56,7 +57,7 @@
     >
       <a-button
         class="a-quantity-update__button a-quantity-update__button--plus"
-        :disabled="currentValue === maxQty"
+        :disabled="currentValue === maxQty || disabled"
         :aria-label="incrementAriaLabel"
         @click.native="updateQty(1)"
       >
