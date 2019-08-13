@@ -12,6 +12,8 @@ import AIconYoutube from './templates/IconYoutube.vue'
 import AIconDelete from './templates/IconDelete.vue'
 import AIconRemove from './templates/IconRemove.vue'
 import AIconAdd from './templates/IconAdd.vue'
+import AIconStar from './templates/IconStar.vue'
+import AIconStarBorder from './templates/IconStarBorder.vue'
 
 const wrapperStyles = {
   'margin': '20px',
@@ -35,7 +37,9 @@ storiesOf('Atoms/Icon1', module)
       AIconYoutube,
       AIconDelete,
       AIconRemove,
-      AIconAdd
+      AIconAdd,
+      AIconStar,
+      AIconStarBorder
     },
     data: () => ({ wrapperStyles }),
     template: `
@@ -126,6 +130,22 @@ storiesOf('Atoms/Icon1', module)
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
             youtube
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon icon-title="Star icon">
+            <a-icon-star />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            star
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon icon-title="Star border icon">
+            <a-icon-star-border />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            star_border
           </span>
         </div>
       </div>

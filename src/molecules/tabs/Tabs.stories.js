@@ -5,12 +5,17 @@ import ATabs from './Tabs.vue'
 import ATab from './../../atoms/tab/Tab.vue'
 import AButton from './../../atoms/button/Button.vue'
 import AParagraph from './../../atoms/paragraph/Paragraph.vue'
-import AIcon from './../../atoms/icon/Icon.vue'
+import AIcon from './../../atoms/icon1/Icon.vue'
+import AIconStarBorder from './../../atoms/icon1/templates/IconStarBorder.vue'
 
 storiesOf('Molecules/Tabs', module)
   .addParameters({ info: true })
   .add('Default', () => ({
-    components: { ATabs, ATab, AParagraph },
+    components: {
+      ATabs,
+      ATab,
+      AParagraph
+    },
     methods: {
       tabClick: action('Clicked tab')
     },
@@ -38,17 +43,23 @@ storiesOf('Molecules/Tabs', module)
     `
   }))
   .add('With slot', () => ({
-    components: { ATabs, ATab, AButton, AParagraph, AIcon },
+    components: {
+      ATabs,
+      ATab,
+      AButton,
+      AParagraph,
+      AIcon,
+      AIconStarBorder
+    },
     methods: {
       tabClick: action('Clicked tab')
     },
     template: `
       <a-tabs @click="tabClick">
         <template #button="{ tab }">
-          <a-icon
-            title="Star"
-            icon="star-border"
-          />
+          <a-icon icon-title="Star border icon">
+            <a-icon-star-border />
+          </a-icon>
           {{ tab.name }}
           <span
             v-if="tab.name === 'Reviews'"
