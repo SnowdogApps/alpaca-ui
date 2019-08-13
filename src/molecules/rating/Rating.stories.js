@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { number, color } from '@storybook/addon-knobs'
+import { number, color, text } from '@storybook/addon-knobs'
 
 import ARating from './Rating.vue'
 import AIcon from '../../atoms/icon1/Icon.vue'
@@ -15,10 +15,10 @@ storiesOf('Molecules/Rating', module)
       select: action('Selected')
     },
     props: {
-      activeColor: {
+      activeColorKnob: {
         default: color('Active color', '#fab216')
       },
-      uncheckedColor: {
+      uncheckedColorKnob: {
         default: color('Unchecked color', '#c9c9c9')
       },
       numberOfRatingKnob: {
@@ -28,8 +28,8 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="numberOfRatingKnob"
-        :active-color="activeColor"
-        :unchecked-color="uncheckedColor"
+        :active-color="activeColorKnob"
+        :unchecked-color="uncheckedColorKnob"
         @select="select"
       />
     `
@@ -37,13 +37,13 @@ storiesOf('Molecules/Rating', module)
   .add('Read only', () => ({
     components: { ARating },
     props: {
-      uncheckedColor: {
+      uncheckedColorKnob: {
         default: color('Unchecked color', '#c9c9c9')
       },
-      activeColor: {
+      activeColorKnob: {
         default: color('Active icon', '#d42343')
       },
-      average: {
+      averageKnob: {
         default: number('Average', 3.4)
       },
       numberOfRatingKnob: {
@@ -53,9 +53,9 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="numberOfRatingKnob"
-        :unchecked-color="uncheckedColor"
-        :active-color="activeColor"
-        :average="average"
+        :unchecked-color="uncheckedColorKnob"
+        :active-color="activeColorKnob"
+        :average="averageKnob"
       />
     `
   }))
@@ -65,30 +65,33 @@ storiesOf('Molecules/Rating', module)
       select: action('Selected')
     },
     props: {
-      activeColor: {
+      activeColorKnob: {
         default: color('Active color', '#39FD56')
       },
-      uncheckedColor: {
+      uncheckedColorKnob: {
         default: color('Unchecked color', '#E02020')
       },
       numberOfRatingKnob: {
         default: number('Number of rating', 5)
+      },
+      iconTitleKnob: {
+        default: text('Icon title', 'Rating icon')
       }
     },
     template: `
       <a-rating
         :items="numberOfRatingKnob"
-        :active-color="activeColor"
-        :unchecked-color="uncheckedColor"
+        :active-color="activeColorKnob"
+        :unchecked-color="uncheckedColorKnob"
         @select="select"
       >
         <template #customIcon>
-          <a-icon :title="iconTitle">
+          <a-icon :title="iconTitleKnob">
             <a-icon-check />
           </a-icon>
         </template>
         <template #customUncheckedIcon>
-          <a-icon :title="iconTitle">
+          <a-icon :title="iconTitleKnob">
             <a-icon-close />
           </a-icon>
         </template>
