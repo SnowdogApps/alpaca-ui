@@ -46,7 +46,7 @@ storiesOf('Atoms/Button', module)
         :class="classKnobs"
         style="padding: 0;"
       >
-        <a-icon icon-title="Search">
+        <a-icon title="Search icon">
           <a-icon-search />
         </a-icon>
       </a-button>

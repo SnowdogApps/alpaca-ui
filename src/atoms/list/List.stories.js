@@ -60,17 +60,17 @@ storiesOf('Atoms/List', module)
     template: `
       <a-list :class="classKnobs">
         <a-list-item>
-          <a-icon icon-title="Account">
+          <a-icon title="Account icon">
             <a-icon-person />
           </a-icon>
         </a-list-item>
         <a-list-item>
-          <a-icon icon-title="Account">
+          <a-icon title="Check icon">
             <a-icon-check />
           </a-icon>
         </a-list-item>
         <a-list-item>
-          <a-icon icon-title="Account">
+          <a-icon title="Account icon">
             <a-icon-person />
           </a-icon>
         </a-list-item>

@@ -25,6 +25,7 @@ storiesOf('Molecules/Checkbox', module)
       <a-checkbox
         id="checkbox-default"
         name="checkbox-default"
+        icon-title="Checked icon"
         v-model="status"
         value="some value"
         @change="onChange"
@@ -56,7 +57,10 @@ storiesOf('Molecules/Checkbox', module)
             style="color: #0000ff;"
           >
             <div class="a-checkbox__icon-wrapper">
-              <a-icon class="a-checkbox__icon">
+              <a-icon
+                class="a-checkbox__icon"
+                title="Checked icon"
+              >
                 <a-icon-check />
               </a-icon>
             </div>

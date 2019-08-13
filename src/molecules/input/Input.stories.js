@@ -100,7 +100,7 @@ storiesOf('Molecules/Input', module)
         <template #icon>
           <div :style="iconStyles">
             <a-icon
-              icon-title="person icon"
+              title="Person icon"
               @click.native="click"
             >
               <a-icon-person />

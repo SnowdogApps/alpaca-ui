@@ -9,7 +9,9 @@
       {{ label }}
     </a-label>
   </slot>
-  <div :class="[ 'a-select__field', icon && 'a-select__field--icon']">
+  <div :class="[
+    'a-select__field', !!this.$slots['icon'] && 'a-select__field--icon']"
+  >
     <select
       v-bind="$attrs"
       :id="id"
@@ -33,10 +35,6 @@
         {{ option.text }}
       </option>
     </select>
-    <a-icon
-      v-if="icon"
-      class="a-select__icon"
-      :icon="icon"
-    />
+    <slot name="icon" />
   </div>
 </div>

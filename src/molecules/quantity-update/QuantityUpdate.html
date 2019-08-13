@@ -24,7 +24,7 @@
         @click.native="updateQty(-1)"
       >
         <a-icon
-          :title-icon="decrementIconTitle"
+          :title="decrementIconTitle"
           class="button__icon a-quantity-update__icon"
         >
           <a-icon-remove />
@@ -63,7 +63,7 @@
         @click.native="updateQty(1)"
       >
         <a-icon
-          :title-icon="incrementIconTitle"
+          :title="incrementIconTitle"
           class="a-quantity-update__icon"
         >
           <a-icon-add />

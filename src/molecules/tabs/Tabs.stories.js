@@ -57,7 +57,7 @@ storiesOf('Molecules/Tabs', module)
     template: `
       <a-tabs @click="tabClick">
         <template #button="{ tab }">
-          <a-icon icon-title="Star border icon">
+          <a-icon title="Star border icon">
             <a-icon-star-border />
           </a-icon>
           {{ tab.name }}

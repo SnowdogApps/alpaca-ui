@@ -5,6 +5,8 @@ import { text } from '@storybook/addon-knobs'
 import countries from '../../../mocks/countries.json'
 
 import ASelect from './Select.vue'
+import AIcon from './../../atoms/icon1/Icon.vue'
+import AIconExpandMore from './../../atoms/icon1/templates/IconExpandMore.vue'
 
 const data = {
   methods: {
@@ -60,7 +62,11 @@ storiesOf('Molecules/Select', module)
     `
   }))
   .add('Custom icon', () => ({
-    components: { ASelect },
+    components: {
+      ASelect,
+      AIcon,
+      AIconExpandMore
+    },
     data () {
       return {
         countries,
@@ -87,8 +93,16 @@ storiesOf('Molecules/Select', module)
           :default-option="defaultOptionKnob"
           v-model="selected"
           @input="showCountry"
-          icon="arrow-down"
-        />
+        >
+          <template #icon>
+            <a-icon
+              title="Toggle icon"
+              style="position: absolute; pointer-events: none; right: 8px;"
+            >
+              <a-icon-expand-more />
+            </a-icon>
+          </template>
+        </a-select>
       </div>
     `
   }))

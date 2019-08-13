@@ -43,13 +43,6 @@ export default {
     defaultOption: {
       type: String,
       default: null
-    },
-    /**
-     * Custom icon
-     */
-    icon: {
-      type: String,
-      default: null
     }
   }
 }
