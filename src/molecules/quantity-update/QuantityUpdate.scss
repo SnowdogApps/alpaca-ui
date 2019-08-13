@@ -21,7 +21,6 @@ $quantity-update__button-fill-hover--disabled      : $gray !default;
 
 // Icon
 $quantity-updater__icon-fill                       : $gray !default;
-$quantity-updater__icon-fill-hover                 : $color-primary !default;
 
 .a-quantity-update {
   display: flex;
@@ -69,9 +68,7 @@ $quantity-updater__icon-fill-hover                 : $color-primary !default;
 
     &:hover,
     &:focus {
-      .a-quantity-update__icon {
-        fill: $quantity-updater__icon-fill-hover;
-      }
+      background: none;
     }
 
     &:disabled {
