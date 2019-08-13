@@ -4,9 +4,13 @@
   height="24px"
   class="a-icon"
   viewBox="0 0 24 24"
-  :aria-labelledby="iconTitle"
-  role="presentation"
+  :aria-labelledby="title"
+  :role="role"
 >
-  <title :id="iconTitle">{{ iconTitle }}</title>
+  <title
+    v-if="title && role === 'img'"
+    :id="title"
+  >{{ title }}</title>
+  <!-- @slot Slot for particular Icon template -->
   <slot />
 </svg>

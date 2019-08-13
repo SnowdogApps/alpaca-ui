@@ -24,6 +24,7 @@ const wrapperStyles = {
 }
 
 storiesOf('Atoms/Icon1', module)
+  .addParameters({ info: true })
   .add('Default', () => ({
     components: {
       AIcon,
@@ -45,79 +46,7 @@ storiesOf('Atoms/Icon1', module)
     template: `
       <div style="display: flex; flex-wrap: wrap; padding: 10px;">
         <div :style="wrapperStyles">
-          <a-icon icon-title="Account">
-            <a-icon-person />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            person
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Checked">
-            <a-icon-check />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            check
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Expand more">
-            <a-icon-expand-more />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            expand_more
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Close">
-            <a-icon-close />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            close
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Search">
-            <a-icon-search />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            search
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Favorite icon">
-            <a-icon-favorite-border />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            favorite_border
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Equalizer icon">
-            <a-icon-equalizer />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            equalizer
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Delete icon">
-            <a-icon-delete />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            delete
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Remove icon">
-            <a-icon-remove />
-          </a-icon>
-          <span style="display: block; margin-top: 20px; text-align: center;">
-            remove
-          </span>
-        </div>
-        <div :style="wrapperStyles">
-          <a-icon icon-title="Add icon">
+          <a-icon title="Add icon">
             <a-icon-add />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
@@ -125,15 +54,79 @@ storiesOf('Atoms/Icon1', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon icon-title="Youtube icon">
-            <a-icon-youtube />
+          <a-icon title="Checked icon">
+            <a-icon-check />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
-            youtube
+            check
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon icon-title="Star icon">
+          <a-icon title="Close icon">
+            <a-icon-close />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            close
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Delete icon">
+            <a-icon-delete />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            delete
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Equalizer icon">
+            <a-icon-equalizer />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            equalizer
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Expand more icon">
+            <a-icon-expand-more />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            expand_more
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Favorite icon">
+            <a-icon-favorite-border />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            favorite_border
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Account icon">
+            <a-icon-person />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            person
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Remove icon">
+            <a-icon-remove />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            remove
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Search icon">
+            <a-icon-search />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            search
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Star icon">
             <a-icon-star />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
@@ -141,11 +134,19 @@ storiesOf('Atoms/Icon1', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon icon-title="Star border icon">
+          <a-icon title="Star border icon">
             <a-icon-star-border />
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
             star_border
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Youtube icon">
+            <a-icon-youtube />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            youtube
           </span>
         </div>
       </div>
