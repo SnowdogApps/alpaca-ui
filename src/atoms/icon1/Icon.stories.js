@@ -8,6 +8,8 @@ import AIconClose from './templates/IconClose.vue'
 import AIconSearch from './templates/IconSearch.vue'
 import AIconFavoriteBorder from './templates/IconFavoriteBorder.vue'
 import AIconEqualizer from './templates/IconEqualizer.vue'
+import AIconYoutube from './templates/IconYoutube.vue'
+import AIconDelete from './templates/IconDelete.vue'
 
 const wrapperStyles = {
   'margin': '20px',
@@ -27,7 +29,9 @@ storiesOf('Atoms/Icon1', module)
       AIconClose,
       AIconSearch,
       AIconFavoriteBorder,
-      AIconEqualizer
+      AIconEqualizer,
+      AIconYoutube,
+      AIconDelete
     },
     data: () => ({ wrapperStyles }),
     template: `
@@ -86,6 +90,22 @@ storiesOf('Atoms/Icon1', module)
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
             equalizer
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon icon-title="Delete icon">
+            <a-icon-delete />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            delete
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon icon-title="Youtube icon">
+            <a-icon-youtube />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            youtube
           </span>
         </div>
       </div>

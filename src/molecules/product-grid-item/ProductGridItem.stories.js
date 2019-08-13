@@ -4,7 +4,8 @@ import { text, number, object } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-vue-router'
 
 import AProductGridItem from './ProductGridItem.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
+import AIcon from '../../atoms/icon1/Icon.vue'
+import AIconFavoriteBorder from '../../atoms/icon1/templates/IconFavoriteBorder.vue'
 import ABadge from '../../atoms/badge/Badge.vue'
 import ARating from '../../molecules/rating/Rating.vue'
 
@@ -62,6 +63,7 @@ storiesOf('Molecules/Product Grid Item', module)
       AProductGridItem,
       ABadge,
       AIcon,
+      AIconFavoriteBorder,
       ARating
     },
     props: {
@@ -103,7 +105,9 @@ storiesOf('Molecules/Product Grid Item', module)
             style="display: flex; align-items: center;"
           >
             {{ badge.productBadgeText }}
-            <a-icon icon="youtube" />
+            <a-icon style="margin-left: 8px;">
+              <a-icon-favorite-border />
+            </a-icon>
           </a-badge>
         </template>
 
