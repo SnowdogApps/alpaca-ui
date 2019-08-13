@@ -10,20 +10,6 @@ export default {
       default: 5
     },
     /**
-     * Icon for active element
-     */
-    activeIcon: {
-      type: String,
-      default: 'star'
-    },
-    /**
-     * Icon for inactive element
-     */
-    uncheckedIcon: {
-      type: String,
-      default: null
-    },
-    /**
      * Color for active element
      */
     activeColor: {
@@ -105,16 +91,11 @@ export default {
       )
     },
     showIcon (item) {
-      if (
-        (item.isActive && !this.uncheckedIcon) ||
-        (item.isActive && this.uncheckedIcon) ||
-        (!item.isActive && !this.uncheckedIcon) ||
-        item.selected
-      ) {
-        return this.activeIcon
+      if (item.isActive || item.selected) {
+        return true
       }
-      if (!item.isActive && this.uncheckedIcon) {
-        return this.uncheckedIcon
+      if (!item.isActive) {
+        return false
       }
     },
     select (item) {

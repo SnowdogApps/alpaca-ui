@@ -1,8 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { number, text, color } from '@storybook/addon-knobs'
+import { number, color } from '@storybook/addon-knobs'
 
 import ARating from './Rating.vue'
+import AIcon from '../../atoms/icon1/Icon.vue'
+import AIconClose from '../../atoms/icon1/templates/IconClose.vue'
+import AIconCheck from '../../atoms/icon1/templates/IconCheck.vue'
 
 storiesOf('Molecules/Rating', module)
   .addParameters({ info: true })
@@ -18,12 +21,6 @@ storiesOf('Molecules/Rating', module)
       uncheckedColor: {
         default: color('Unchecked color', '#c9c9c9')
       },
-      activeIcon: {
-        default: text('Active icon', 'star')
-      },
-      uncheckedIcon: {
-        default: text('Unchecked icon', 'star-border')
-      },
       numberOfRatingKnob: {
         default: number('Number of rating', 5)
       }
@@ -31,8 +28,6 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="numberOfRatingKnob"
-        :active-icon="activeIcon"
-        :unchecked-icon="uncheckedIcon"
         :active-color="activeColor"
         :unchecked-color="uncheckedColor"
         @select="select"
@@ -48,9 +43,6 @@ storiesOf('Molecules/Rating', module)
       activeColor: {
         default: color('Active icon', '#d42343')
       },
-      uncheckedIcon: {
-        default: text('Unchecked icon', 'star-border')
-      },
       average: {
         default: number('Average', 3.4)
       },
@@ -63,18 +55,58 @@ storiesOf('Molecules/Rating', module)
         :items="numberOfRatingKnob"
         :unchecked-color="uncheckedColor"
         :active-color="activeColor"
-        :unchecked-icon="uncheckedIcon"
         :average="average"
       />
     `
   }))
+  .add('With custom icons', () => ({
+    components: { ARating, AIcon, AIconClose, AIconCheck },
+    methods: {
+      select: action('Selected')
+    },
+    props: {
+      activeColor: {
+        default: color('Active color', '#39FD56')
+      },
+      uncheckedColor: {
+        default: color('Unchecked color', '#E02020')
+      },
+      numberOfRatingKnob: {
+        default: number('Number of rating', 5)
+      }
+    },
+    template: `
+      <a-rating
+        :items="numberOfRatingKnob"
+        :active-color="activeColor"
+        :unchecked-color="uncheckedColor"
+        @select="select"
+      >
+        <template #customIcon>
+          <a-icon :title="iconTitle">
+            <a-icon-check />
+          </a-icon>
+        </template>
+        <template #customUncheckedIcon>
+          <a-icon :title="iconTitle">
+            <a-icon-close />
+          </a-icon>
+        </template>
+      </a-rating>
+    `
+  }))
   .add('With slot', () => ({
     components: { ARating },
+    props: {
+      numberOfRatingKnob: {
+        default: number('Number of rating', 3)
+      }
+    },
     methods: {
       click: action('Clicked')
     },
     template: `
-      <a-rating :items="3">
+      <a-rating :items="numberOfRatingKnob">
         <template #item="data">
           <svg
             @click="click(data.item)"

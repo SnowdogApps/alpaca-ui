@@ -25,8 +25,14 @@
           item.isActive && 'a-rating__icon--active',
           iconClass
         ]"
-        :icon="showIcon(item)"
-      />
+      >
+        <slot name="customIcon" v-if="showIcon(item)">
+          <a-icon-star/>
+        </slot>
+        <slot name="customUncheckedIcon" v-else>
+          <a-icon-star-border />
+        </slot>
+      </a-icon>
       <a-icon
         v-if="showAverageIcon(item) && !isIE"
         :style="{clipPath: showAverage, fill : !item.isActive && activeColor}"
@@ -35,8 +41,11 @@
           'a-rating__icon--disabled',
           iconClass
         ]"
-        :icon="activeIcon"
-      />
+        >
+          <slot name="disabledIcon">
+            <a-icon-star/>
+          </slot>
+        </a-icon>
     </slot>
   </a-button>
 </div>
