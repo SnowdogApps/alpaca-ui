@@ -28,7 +28,7 @@
         :icon="showIcon(item)"
       />
       <a-icon
-        v-if="showAverageIcon(item) && isIE"
+        v-if="showAverageIcon(item) && !isIE"
         :style="{clipPath: showAverage, fill : !item.isActive && activeColor}"
         :class="[
           'a-rating__icon',
