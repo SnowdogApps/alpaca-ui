@@ -4,6 +4,7 @@ import AIcon from './Icon.vue'
 import AIconPerson from './templates/IconPerson.vue'
 import AIconCheck from './templates/IconCheck.vue'
 import AIconExpandMore from './templates/IconExpandMore.vue'
+import AIconExpandLess from './templates/IconExpandLess.vue'
 import AIconClose from './templates/IconClose.vue'
 import AIconSearch from './templates/IconSearch.vue'
 import AIconFavoriteBorder from './templates/IconFavoriteBorder.vue'
@@ -31,6 +32,7 @@ storiesOf('Atoms/Icon1', module)
       AIconPerson,
       AIconCheck,
       AIconExpandMore,
+      AIconExpandLess,
       AIconClose,
       AIconSearch,
       AIconFavoriteBorder,
@@ -91,6 +93,14 @@ storiesOf('Atoms/Icon1', module)
           </a-icon>
           <span style="display: block; margin-top: 20px; text-align: center;">
             expand_more
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Expand less icon">
+            <a-icon-expand-less />
+          </a-icon>
+          <span style="display: block; margin-top: 20px; text-align: center;">
+            expand_less
           </span>
         </div>
         <div :style="wrapperStyles">

@@ -2,11 +2,9 @@
 
 <script>
 import AContainer from '../../atoms/container/Container.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
-import ALink from '../../atoms/link/Link.vue'
+import AIcon from '../../atoms/icon1/Icon.vue'
+import AIconExpandLess from '../../atoms/icon1/templates/IconExpandLess.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AList from '../../atoms/list/List.vue'
-import AListItem from '../../atoms/list-item/ListItem.vue'
 import ACookieMessage from '../../molecules/cookie-message/CookieMessage.vue'
 import AFooterMenu from '../../molecules/footer-menu/FooterMenu.vue'
 import ANewsletter from '../../molecules/newsletter/Newsletter.vue'
@@ -18,10 +16,8 @@ export default {
   components: {
     AButton,
     AContainer,
-    ALink,
     AIcon,
-    AList,
-    AListItem,
+    AIconExpandLess,
     ACookieMessage,
     AFooterMenu,
     ANewsletter
