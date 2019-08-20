@@ -18,8 +18,8 @@ storiesOf('Molecules/Rating', module)
       activeColorKnob: {
         default: color('Active color', '#fab216')
       },
-      uncheckedColorKnob: {
-        default: color('Unchecked color', '#c9c9c9')
+      inactiveColorKnob: {
+        default: color('Inactive color', '#c9c9c9')
       },
       numberOfRatingKnob: {
         default: number('Number of rating', 5)
@@ -29,7 +29,7 @@ storiesOf('Molecules/Rating', module)
       <a-rating
         :items="numberOfRatingKnob"
         :active-color="activeColorKnob"
-        :unchecked-color="uncheckedColorKnob"
+        :inactive-color="inactiveColorKnob"
         @select="select"
       />
     `
@@ -37,8 +37,8 @@ storiesOf('Molecules/Rating', module)
   .add('Read only', () => ({
     components: { ARating },
     props: {
-      uncheckedColorKnob: {
-        default: color('Unchecked color', '#c9c9c9')
+      inactiveColorKnob: {
+        default: color('Inactive color', '#c9c9c9')
       },
       activeColorKnob: {
         default: color('Active icon', '#d42343')
@@ -53,14 +53,19 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="numberOfRatingKnob"
-        :unchecked-color="uncheckedColorKnob"
+        :inactive-color="inactiveColorKnob"
         :active-color="activeColorKnob"
         :average="averageKnob"
       />
     `
   }))
   .add('With custom icons', () => ({
-    components: { ARating, AIcon, AIconClose, AIconCheck },
+    components: {
+      ARating,
+      AIcon,
+      AIconClose,
+      AIconCheck
+    },
     methods: {
       select: action('Selected')
     },
@@ -68,8 +73,8 @@ storiesOf('Molecules/Rating', module)
       activeColorKnob: {
         default: color('Active color', '#39FD56')
       },
-      uncheckedColorKnob: {
-        default: color('Unchecked color', '#E02020')
+      inactiveColorKnob: {
+        default: color('Inactive color', '#E02020')
       },
       numberOfRatingKnob: {
         default: number('Number of rating', 5)
@@ -82,7 +87,7 @@ storiesOf('Molecules/Rating', module)
       <a-rating
         :items="numberOfRatingKnob"
         :active-color="activeColorKnob"
-        :unchecked-color="uncheckedColorKnob"
+        :inactive-color="inactiveColorKnob"
         @select="select"
       >
         <template #customIcon>

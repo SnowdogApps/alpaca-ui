@@ -19,7 +19,7 @@ export default {
     /**
      * Color for inactive element
      */
-    uncheckedColor: {
+    inactiveColor: {
       type: String,
       default: '#c9c9c9'
     },
