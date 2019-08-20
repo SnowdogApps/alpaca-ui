@@ -1,21 +1,21 @@
 // @vue/component
 export default {
   props: {
-    /*
+    /**
      * Current page
      */
     page: {
       type: Number,
       required: true
     },
-    /*
+    /**
      * Total size
      */
     totalSize: {
       type: Number,
       required: true
     },
-    /*
+    /**
      * Limit on page
      */
     limit: {
