@@ -30,7 +30,7 @@ const labelStyles = {
   'text-align': 'center'
 }
 
-storiesOf('Atoms/Icon1', module)
+storiesOf('Atoms/Icon', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: {
