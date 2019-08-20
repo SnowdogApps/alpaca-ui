@@ -1,13 +1,8 @@
-@import '../../../assets/styles/_globals.scss';
+@import '../../../assets/styles/globals';
 
-$icon__width         : 24px !default;
-$icon__height        : 24px !default;
-$icon__padding       : 2px !default;
-$icon__padding--reset: 0 !default;
+$icon__transition : $transition-base !default;
 
-// .a-icon {
-//   display: block;
-//   width: $icon__size;
-//   height: $icon__size;
-//   padding: $icon__padding;
-// }
+.a-icon {
+  display: block;
+  transition: $icon__transition;
+}

@@ -3,8 +3,8 @@
 <script>
 import ACheckbox from './Checkbox.js'
 
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconCheck from '../../atoms/icon1/templates/IconCheck.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconCheck from '../../atoms/icon/templates/IconCheck.vue'
 
 export default {
   components: { AIcon, AIconCheck },

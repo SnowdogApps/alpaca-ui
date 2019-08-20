@@ -18,10 +18,11 @@
       class="gallery__thumb-arr"
       @click="setCurrentImage(currentImage - 1)"
     >
-      <a-icon
+      <!-- <a-icon
         icon="angle-up"
         :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
-      />
+      /> -->
+      <!-- Angle up icon should be here -->
     </div>
     <div
       v-for="(image, i) in images"
@@ -38,10 +39,11 @@
       class="gallery__thumb-arr"
       @click="setCurrentImage(currentImage + 1)"
     >
-      <a-icon
+      <!-- Angle down icon should be here -->
+      <!-- <a-icon
         icon="angle-down"
         :class="['gallery__icon-arrow', horizontal ? 'gallery__icon-arrow--horizontal' : 'gallery__icon-arrow--vertical']"
-      />
+      /> -->
     </div>
   </div>
 </div>

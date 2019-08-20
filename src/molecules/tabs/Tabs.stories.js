@@ -5,8 +5,8 @@ import ATabs from './Tabs.vue'
 import ATab from './../../atoms/tab/Tab.vue'
 import AButton from './../../atoms/button/Button.vue'
 import AParagraph from './../../atoms/paragraph/Paragraph.vue'
-import AIcon from './../../atoms/icon1/Icon.vue'
-import AIconStarBorder from './../../atoms/icon1/templates/IconStarBorder.vue'
+import AIcon from './../../atoms/icon/Icon.vue'
+import AIconStarBorder from './../../atoms/icon/templates/IconStarBorder.vue'
 
 storiesOf('Molecules/Tabs', module)
   .addParameters({ info: true })

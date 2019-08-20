@@ -3,8 +3,8 @@
 <script>
 import AHeading from '../../atoms/heading/Heading.vue'
 import AButton from '../../atoms/button/Button.vue'
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconClose from '../../atoms/icon1/templates/IconClose.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconClose from '../../atoms/icon/templates/IconClose.vue'
 import ADivider from '../../templates/divider/Divider.vue'
 
 import AModal from './Modal.js'

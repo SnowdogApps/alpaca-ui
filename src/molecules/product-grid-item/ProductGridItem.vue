@@ -1,9 +1,9 @@
 <template src="./ProductGridItem.html" />
 
 <script>
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconFavoriteBorder from '../../atoms/icon1/templates/IconFavoriteBorder.vue'
-import AIconEqualizer from '../../atoms/icon1/templates/IconEqualizer.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconFavoriteBorder from '../../atoms/icon/templates/IconFavoriteBorder.vue'
+import AIconEqualizer from '../../atoms/icon/templates/IconEqualizer.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ABadge from '../../atoms/badge/Badge.vue'
 import APrice from '../../atoms/price/Price.vue'

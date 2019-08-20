@@ -3,9 +3,9 @@ import { action } from '@storybook/addon-actions'
 import { number, color, text } from '@storybook/addon-knobs'
 
 import ARating from './Rating.vue'
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconClose from '../../atoms/icon1/templates/IconClose.vue'
-import AIconCheck from '../../atoms/icon1/templates/IconCheck.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconClose from '../../atoms/icon/templates/IconClose.vue'
+import AIconCheck from '../../atoms/icon/templates/IconCheck.vue'
 
 storiesOf('Molecules/Rating', module)
   .addParameters({ info: true })

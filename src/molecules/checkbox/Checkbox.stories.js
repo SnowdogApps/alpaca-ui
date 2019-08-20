@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 
 import ACheckbox from './Checkbox.vue'
-import AIcon from './../../atoms/icon1/Icon.vue'
-import AIconCheck from './../../atoms/icon1/templates/IconCheck.vue'
+import AIcon from './../../atoms/icon/Icon.vue'
+import AIconCheck from './../../atoms/icon/templates/IconCheck.vue'
 
 const defaultData = {
   data: () => {

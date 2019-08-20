@@ -4,8 +4,8 @@ import { text, number, object } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-vue-router'
 
 import AProductGridItem from './ProductGridItem.vue'
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconFavoriteBorder from '../../atoms/icon1/templates/IconFavoriteBorder.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconFavoriteBorder from '../../atoms/icon/templates/IconFavoriteBorder.vue'
 import ABadge from '../../atoms/badge/Badge.vue'
 import ARating from '../../molecules/rating/Rating.vue'
 

@@ -6,8 +6,8 @@ import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Button.selectors.json'
 
 import AButton from './Button.vue'
-import AIcon from '../icon1/Icon.vue'
-import AIconSearch from '../icon1/templates/IconSearch.vue'
+import AIcon from '../icon/Icon.vue'
+import AIconSearch from '../icon/templates/IconSearch.vue'
 
 const info = `
   <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>

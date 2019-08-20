@@ -2,8 +2,8 @@
 
 <script>
 import AContainer from '../../atoms/container/Container.vue'
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconExpandLess from '../../atoms/icon1/templates/IconExpandLess.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconExpandLess from '../../atoms/icon/templates/IconExpandLess.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ACookieMessage from '../../molecules/cookie-message/CookieMessage.vue'
 import AFooterMenu from '../../molecules/footer-menu/FooterMenu.vue'

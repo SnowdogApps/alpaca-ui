@@ -7,8 +7,8 @@ import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Input.selectors.json'
 
 import AInput from './Input.vue'
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconPerson from '../../atoms/icon1/templates/IconPerson.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconPerson from '../../atoms/icon/templates/IconPerson.vue'
 
 const inputTypes = ['text', 'email', 'search', 'number', 'password', 'hidden']
 

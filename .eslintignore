@@ -1,4 +1,4 @@
 node_modules
 /index.js
 !/.storybook
-src/atoms/icon1/templates/*
+src/atoms/icon/templates/*

@@ -7,9 +7,9 @@ import selectorsConfig from './List.selectors.json'
 
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
-import AIcon from '../icon1/Icon.vue'
-import AIconPerson from '../icon1/templates/IconPerson.vue'
-import AIconCheck from '../icon1/templates/IconCheck.vue'
+import AIcon from '../icon/Icon.vue'
+import AIconPerson from '../icon/templates/IconPerson.vue'
+import AIconCheck from '../icon/templates/IconCheck.vue'
 
 const info = `
   <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>

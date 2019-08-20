@@ -5,8 +5,8 @@ import { text } from '@storybook/addon-knobs'
 import countries from '../../../mocks/countries.json'
 
 import ASelect from './Select.vue'
-import AIcon from './../../atoms/icon1/Icon.vue'
-import AIconExpandMore from './../../atoms/icon1/templates/IconExpandMore.vue'
+import AIcon from './../../atoms/icon/Icon.vue'
+import AIconExpandMore from './../../atoms/icon/templates/IconExpandMore.vue'
 
 const data = {
   methods: {

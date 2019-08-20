@@ -5,7 +5,6 @@ import AIcon from './Icon.js'
 
 export default {
   name: 'AlpacaIcon',
-
   mixins: [AIcon]
 }
 </script>

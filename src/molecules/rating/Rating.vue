@@ -2,9 +2,9 @@
 
 <script>
 import AButton from '../../atoms/button/Button.vue'
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconStar from '../../atoms/icon1/templates/IconStar.vue'
-import AIconStarBorder from '../../atoms/icon1/templates/IconStarBorder.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconStar from '../../atoms/icon/templates/IconStar.vue'
+import AIconStarBorder from '../../atoms/icon/templates/IconStarBorder.vue'
 
 import ARating from './Rating.js'
 

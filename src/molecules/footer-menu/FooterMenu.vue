@@ -1,8 +1,8 @@
 <template src="./FooterMenu.html" />
 
 <script>
-import AIcon from '../../atoms/icon1/Icon.vue'
-import AIconExpandMore from '../../atoms/icon1/templates/IconExpandMore.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconExpandMore from '../../atoms/icon/templates/IconExpandMore.vue'
 import ALink from '../../atoms/link/Link.vue'
 import AButton from '../../atoms/button/Button.vue'
 import AList from '../../atoms/list/List.vue'
