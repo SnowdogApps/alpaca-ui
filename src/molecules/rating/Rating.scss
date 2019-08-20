@@ -12,6 +12,7 @@ $rating__icon-height   : 40px;
   &__icon {
     width: $rating__icon-width;
     height: $rating__icon-height;
+    transition: none;
 
     &--disabled {
       position: absolute;
