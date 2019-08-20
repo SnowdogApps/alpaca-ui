@@ -1,6 +1,7 @@
 @import '../../../assets/styles/globals';
 
 $pagination-margin                         : 0 !default;
+$pagination-padding                         : 0 !default;
 $pagination__item-height--current          : 8px !default;
 $pagination__item-background-color--current: $color-primary !default;
 $pagination__item-width--current           : 100% !default;
@@ -25,8 +26,8 @@ $pagination__icon-fill-disabled            : $gray-light !default;
   &__list {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: $pagination-margin;
+    padding: $pagination-padding;
     list-style-type: none;
   }
 
