@@ -4,7 +4,7 @@ export default {
     /**
      * Current page
      */
-    page: {
+    currentPage: {
       type: Number,
       required: true
     },
@@ -31,9 +31,9 @@ export default {
     }
   },
   computed: {
-    currentPage: {
+    currentPageLocal: {
       get () {
-        return this.page
+        return this.currentPage
       },
       set (value) {
         /**
@@ -63,7 +63,7 @@ export default {
       }
 
       if (
-        this.page <
+        this.currentPage <
         this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1
       ) {
         this.showFirst = false
@@ -73,7 +73,7 @@ export default {
       }
 
       if (
-        this.numberOfPages - this.page <
+        this.numberOfPages - this.currentPage <
         this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1
       ) {
         this.showFirst = true
@@ -88,12 +88,12 @@ export default {
       this.showLast = true
 
       return this.listOfPageNumbers.slice(
-        this.currentPage - Math.floor(this.limitPerPage / 2) - 1,
-        this.currentPage + Math.floor(this.limitPerPage / 2)
+        this.currentPageLocal - Math.floor(this.limitPerPage / 2) - 1,
+        this.currentPageLocal + Math.floor(this.limitPerPage / 2)
       )
     },
     setCurrentPage (value) {
-      this.currentPage = value
+      this.currentPageLocal = value
     }
   }
 }

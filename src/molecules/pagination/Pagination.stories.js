@@ -31,7 +31,7 @@ storiesOf('Molecules/Pagination', module)
     template: `
       <a-pagination
         @update:page="(page) => {this.setCurrentPage(page)}"
-        :page="page"
+        :current-page="page"
         :limit="limitPageKnobs"
         :totalSize="totalSizeKnobs"
       />
