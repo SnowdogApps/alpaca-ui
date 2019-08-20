@@ -83,7 +83,7 @@ storiesOf('Organisms/Footer', module)
                 style="display: block;"
                 href="#"
               >
-               <!-- Add proper icon -->
+                <!-- Add proper icon -->
                 <a-icon
                   class="a-footer__social-icon"
                   style="fill: #fff;"
