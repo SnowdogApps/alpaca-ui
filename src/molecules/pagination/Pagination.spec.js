@@ -5,8 +5,8 @@ describe('Pagination', () => {
   it('has default structure', () => {
     const wrapper = mount(APagination, {
       propsData: {
-        totalSize: 20,
-        page: 5
+        numberOfPages: 20,
+        currentPage: 5
       }
     })
     expect(wrapper.is('nav')).toBe(true)
@@ -17,8 +17,8 @@ describe('Pagination', () => {
   it('renders slots content when passed', () => {
     const wrapper = mount(APagination, {
       propsData: {
-        totalSize: 20,
-        page: 5
+        numberOfPages: 20,
+        currentPage: 5
       },
       slots: {
         arrowLeft: `<span data-test="left">Left</span>`,
