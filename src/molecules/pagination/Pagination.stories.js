@@ -10,10 +10,10 @@ storiesOf('Molecules/Pagination', module)
     components: { APagination },
     props: {
       currentPageKnob: {
-        default: number('Current page', 4)
+        default: number('Current page', 10)
       },
       totalSizeKnobs: {
-        default: number('All pages', 10)
+        default: number('All pages', 20)
       }
     },
     methods: {
