@@ -4,8 +4,8 @@
       <a-button
         class="a-pagination__button a-pagination__button--prev"
         aria-label="Go to previous page"
-        :disabled="currentPageLocal < 2"
-        @click.native="setCurrentPage(currentPageLocal - 1)"
+        :disabled="currentPage < 2"
+        @click.native="setCurrentPage(currentPage - 1)"
       >
         <!-- @slot Default icon for arrow-left (Named slot) -->
         <slot name="arrowLeft">
@@ -35,7 +35,7 @@
       :key="number"
       :class="[
         'a-pagination__item',
-        { 'a-pagination__item--current': currentPageLocal === number }
+        { 'a-pagination__item--current': currentPage === number }
       ]"
     >
       <a-button
@@ -66,8 +66,8 @@
       <a-button
         class="a-pagination__button a-pagination__button--next"
         aria-label="Go to next page"
-        :disabled="currentPageLocal > numberOfPages - 1"
-        @click.native="setCurrentPage(currentPageLocal + 1)"
+        :disabled="currentPage > numberOfPages - 1"
+        @click.native="setCurrentPage(currentPage + 1)"
       >
         <!-- @slot Default icon for arrow-right (Named slot) -->
         <slot name="arrowRight">

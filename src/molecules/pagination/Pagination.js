@@ -9,43 +9,21 @@ export default {
       required: true
     },
     /**
-     * Total size
+     * All pagers
      */
-    totalSize: {
+    numberOfPages: {
       type: Number,
       required: true
-    },
-    /**
-     * Limit on page
-     */
-    limit: {
-      type: Number,
-      default: 5
     }
   },
   data () {
     return {
       showFirst: false,
       showLast: false,
-      limitPerPage: this.limit || 5
+      visibleNumbers: 3
     }
   },
   computed: {
-    currentPageLocal: {
-      get () {
-        return this.currentPage
-      },
-      set (value) {
-        /**
-         * Triggered when page is changed
-         * @type {Event}
-         */
-        this.$emit('update:page', value)
-      }
-    },
-    numberOfPages () {
-      return Math.ceil(this.totalSize / this.limitPerPage)
-    },
     listOfPageNumbers () {
       return Array.from(Array(this.numberOfPages), (_, i) => i + 1)
     },
@@ -55,7 +33,7 @@ export default {
   },
   methods: {
     setLimitedPageNumber () {
-      if (this.numberOfPages <= this.limitPerPage) {
+      if (this.numberOfPages <= this.visibleNumbers) {
         this.showFirst = false
         this.showLast = false
 
@@ -64,23 +42,23 @@ export default {
 
       if (
         this.currentPage <
-        this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1
+        this.visibleNumbers - Math.floor(this.visibleNumbers / 2) + 1
       ) {
         this.showFirst = false
         this.showLast = true
 
-        return this.listOfPageNumbers.slice(0, this.limitPerPage)
+        return this.listOfPageNumbers.slice(0, this.visibleNumbers)
       }
 
       if (
         this.numberOfPages - this.currentPage <
-        this.limitPerPage - Math.floor(this.limitPerPage / 2) + 1
+        this.visibleNumbers - Math.floor(this.visibleNumbers / 2) + 1
       ) {
         this.showFirst = true
         this.showLast = false
 
         return this.listOfPageNumbers.slice(
-          this.numberOfPages - this.limitPerPage
+          this.numberOfPages - this.visibleNumbers
         )
       }
 
@@ -88,12 +66,18 @@ export default {
       this.showLast = true
 
       return this.listOfPageNumbers.slice(
-        this.currentPageLocal - Math.floor(this.limitPerPage / 2) - 1,
-        this.currentPageLocal + Math.floor(this.limitPerPage / 2)
+        this.currentPage - Math.floor(this.visibleNumbers / 2) - 1,
+        this.currentPage + Math.floor(this.visibleNumbers / 2)
       )
     },
     setCurrentPage (value) {
-      this.currentPageLocal = value
+      this.currentPage = value
+
+      /**
+       * Triggered when page is changed
+       * @type {Event}
+       */
+      this.$emit('update', value)
     }
   }
 }

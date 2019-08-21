@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { number } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import APagination from './Pagination.vue'
 
@@ -7,33 +8,22 @@ storiesOf('Molecules/Pagination', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { APagination },
-    data: () => ({
-      page: 1
-    }),
     props: {
-      limitPageKnobs: {
-        default: number('Limit per page', 2)
+      currentPageKnob: {
+        default: number('Current page', 4)
       },
       totalSizeKnobs: {
-        default: number('Total size', 20)
-      }
-    },
-    computed: {
-      currentPage () {
-        return this.page
+        default: number('All pages', 10)
       }
     },
     methods: {
-      setCurrentPage (page) {
-        this.page = page
-      }
+      select: action('Selected')
     },
     template: `
       <a-pagination
-        @update:page="(page) => {this.setCurrentPage(page)}"
-        :current-page="page"
-        :limit="limitPageKnobs"
-        :totalSize="totalSizeKnobs"
+        @update="select"
+        :current-page="currentPageKnob"
+        :number-of-pages="totalSizeKnobs"
       />
     `
   }))
