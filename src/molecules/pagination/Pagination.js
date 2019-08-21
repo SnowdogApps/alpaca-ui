@@ -72,7 +72,6 @@ export default {
     },
     setCurrentPage (value) {
       this.currentPage = value
-
       /**
        * Triggered when page is changed
        * @type {Event}

@@ -34,14 +34,15 @@
     <li
       v-for="number in limitedPageNumbers"
       :key="number"
-      :class="[
-        'a-pagination__item',
-        { 'a-pagination__item--current': currentPage === number }
-      ]"
+      class="a-pagination__item"
     >
       <a-button
-        class="a-pagination__button"
+        :class="[
+          'a-pagination__button',
+          { 'a-pagination__button--current': currentPage === number }
+        ]"
         @click.native="setCurrentPage(number)"
+        :disabled="number === currentPage"
       >
         {{ number }}
        </a-button>

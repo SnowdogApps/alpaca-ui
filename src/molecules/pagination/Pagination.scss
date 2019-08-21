@@ -1,19 +1,16 @@
 @import '../../../assets/styles/globals';
 
 $pagination-margin                         : 0 !default;
-$pagination-padding                         : 0 !default;
-$pagination__item-height--current          : 8px !default;
-$pagination__item-background-color--current: $color-primary !default;
-$pagination__item-width--current           : 100% !default;
-$pagination__item-bottom--current          : 14px !default;
-$pagination__item-left--current            : 0 !default;
-$pagination__item-content--current         : '' !default;
+$pagination-padding                        : 0 !default;
 $pagination__dots-min-width                : 48px !default;
-$pagination__button-color--current         : $gray-dark !default;
+$pagination__button-color--current         : $color-primary !default;
+$pagination__button-font-weight--current   : $font-weight-bold !default;
 $pagination__button-font-weight            : $font-weight-normal !default;
 $pagination__button-background-color       : transparent !default;
 $pagination__button-border                 : none !default;
 $pagination__button-color-hover            : $color-primary !default;
+$pagination__button-width                  : 48px !default;
+$pagination__button-height                 : 48px !default;
 $pagination__button-background-color-hover : transparent !default;
 $pagination__icon-width                    : 24px !default;
 $pagination__icon-height                   : 24px !default;
@@ -31,33 +28,13 @@ $pagination__icon-fill-disabled            : $gray-light !default;
     list-style-type: none;
   }
 
-  &__item {
-    &--current {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        bottom: $pagination__item-bottom--current;
-        left: $pagination__item-left--current;
-        z-index: -1;
-        width: $pagination__item-width--current;
-        height: $pagination__item-height--current;
-        background-color: $pagination__item-background-color--current;
-        transition: $pagination__item-left--current;
-        content: $pagination__item-content--current;
-      }
-
-      .a-pagination__button {
-        color: $pagination__button-color--current;
-      }
-    }
-  }
-
   &__dots {
     min-width: $pagination__dots-min-width;
   }
 
   &__button {
+    width: $pagination__button-width;
+    height: $pagination__button-height;
     font-weight: $pagination__button-font-weight;
     background-color: $pagination__button-background-color;
     border: $pagination__button-border;
@@ -66,6 +43,11 @@ $pagination__icon-fill-disabled            : $gray-light !default;
     &:hover {
       color: $pagination__button-color-hover;
       background-color: $pagination__button-background-color-hover;
+    }
+
+    &--current {
+      color: $pagination__button-color--current;
+      font-weight: $pagination__button-font-weight--current;
     }
 
     &--prev,
