@@ -16,7 +16,8 @@ storiesOf('Modules/Toolbar', module)
     },
     methods: {
       listView: action('Change on list view'),
-      gridView: action('Change on gird view')
+      gridView: action('Change on gird view'),
+      updatePage: action('Change page')
     },
     template: `
       <a-toolbar
@@ -29,11 +30,12 @@ storiesOf('Modules/Toolbar', module)
         :amount="toolbar.amount"
         @listView="listView"
         @gridView="gridView"
+        @updatePage="updatePage"
       />
     `
   }))
   // @vue/component
-  .add('With pager', () => ({
+  .add('With pagination', () => ({
     components: { AToolbar },
     data: () => {
       return {
@@ -42,7 +44,8 @@ storiesOf('Modules/Toolbar', module)
     },
     methods: {
       listView: action('Change on list view'),
-      gridView: action('Change on grid view')
+      gridView: action('Change on grid view'),
+      updatePage: action('Change page')
     },
     template: `
       <a-toolbar
@@ -57,6 +60,7 @@ storiesOf('Modules/Toolbar', module)
         :amount="toolbar.amount"
         @listView="listView"
         @gridView="gridView"
+        @updatePage="updatePage"
       />
     `
   }))

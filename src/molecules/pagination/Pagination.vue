@@ -1,19 +1,19 @@
-<template src="./Pager.html" />
+<template src="./Pagination.html" />
 
 <script>
 import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
 
-import APager from './Pager.js'
+import APagination from './Pagination.js'
 
 export default {
-  name: 'AlpacaPager',
+  name: 'AlpacaPagination',
   components: {
     AIcon,
     AButton
   },
-  mixins: [APager]
+  mixins: [APagination]
 }
 </script>
 
-<style lang="scss" src="./Pager.scss" />
+<style lang="scss" src="./Pagination.scss" />
