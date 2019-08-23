@@ -38,14 +38,9 @@ export default {
       default: null
     }
   },
-  computed: {
-    currentPage () {
-      return this.pager.page
-    }
-  },
   methods: {
-    setCurrentPage (page) {
-      this.pager.page = page
+    setCurrentPage (event) {
+      this.$emit('updatePage', event)
     },
     listView (event) {
       this.$emit('listView', event)

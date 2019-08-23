@@ -74,10 +74,9 @@
     class="toolbar__pager"
   >
     <a-pager
-      :page="currentPage"
-      :limit="pager.limit"
-      :total-size="pager.totalSize"
-      @update:page="page => setCurrentPage(page)"
+      :current-page="pager.currentPage"
+      :number-of-pages="pager.totalSize"
+      @update="setCurrentPage"
     />
   </div>
 </div>
