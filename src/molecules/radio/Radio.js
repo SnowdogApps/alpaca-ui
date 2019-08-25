@@ -14,13 +14,6 @@ export default {
       default: null
     },
     /**
-     * Input name
-     */
-    name: {
-      type: String,
-      required: true
-    },
-    /**
      * Input value
      */
     value: {

@@ -52,7 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove 'selected' story in Selected coomponents
 - Refactor styles in Select component
 - Update modal component js and styles to handle sidebar case
-- Update attributes passed to Select component ($attrs)
+- Update attributes passed to Select, Radio and Checkbox components ($attrs)
 
 ### Fixed
 - Typo in Message.selectors.json file
