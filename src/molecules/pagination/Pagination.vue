@@ -1,16 +1,20 @@
 <template src="./Pagination.html" />
 
 <script>
-import AIcon from '../../atoms/icon/Icon.vue'
 import AButton from '../../atoms/button/Button.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconArrowLeft from '../../atoms/icon/templates/IconArrowLeft.vue'
+import AIconArrowRight from '../../atoms/icon/templates/IconArrowRight.vue'
 
 import APagination from './Pagination.js'
 
 export default {
   name: 'AlpacaPagination',
   components: {
+    AButton,
     AIcon,
-    AButton
+    AIconArrowLeft,
+    AIconArrowRight
   },
   mixins: [APagination]
 }

@@ -4,9 +4,11 @@ import { object } from '@storybook/addon-knobs'
 
 import AFooter from './Footer.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
-import ANewsletter from '../../molecules/newsletter/Newsletter.vue'
+import AIconStar from '../../atoms/icon/templates/IconStar.vue'
+import AList from '../../atoms/list/List.vue'
+import AListItem from '../../atoms/list-item/ListItem.vue'
+import ALink from '../../atoms/link/Link.vue'
 
-import socials from '../../../mocks/socials.json'
 import menu from '../../../mocks/footer-menu.json'
 
 const checkbox = {
@@ -33,17 +35,20 @@ const cookieMessage = {
 storiesOf('Organisms/Footer', module)
   .addParameters({ info: true })
   .add('Default', () => ({
-    components: { AFooter },
+    components: {
+      AFooter,
+      AList,
+      AListItem,
+      ALink,
+      AIcon,
+      AIconStar
+    },
     props: {
       menuKnob: {
         default: object('Menu', menu)
-      },
-      socialsKnob: {
-        default: object('Socials', socials)
       }
     },
     data: () => ({
-      socials,
       menu,
       cookieMessage,
       checkbox,
@@ -59,7 +64,6 @@ storiesOf('Organisms/Footer', module)
       <a-footer
         :input="input"
         :checkbox="checkbox"
-        :social-list="socialsKnob"
         :menu="menuKnob"
         :cookie-message="cookieMessage"
         copyright-text="Copyright © 2019 A. All rights reserved."
@@ -68,43 +72,27 @@ storiesOf('Organisms/Footer', module)
         social-list-subtitle="Find us on"
         @closeCookieMessage="closeCookieMessage"
         @submitNewsletter="submitNewsletter"
-      />
-    `
-  }))
-  .add('With slots', () => ({
-    components: { AFooter, ANewsletter, AIcon },
-    data: () => ({
-      socials,
-      menu,
-      input,
-      checkbox,
-      status: true
-    }),
-    methods: {
-      onChange: action('Option changed')
-    },
-    template: `
-      <a-footer
-        :menu="menu"
-        :social-list="socials"
       >
-        <template #scrollButton="{ scrollToTop }">
-          <span><!-- Removed scrollButton--></span>
-        </template>
-        <template #newsletter="{ submitNewsletter }">
-          <div style="border: 1px solid #444; padding: 16px;">
-            <a-newsletter
-              class="a-footer__newsletter"
-              heading="Sing up to our twisted newsletter"
-              :input="input"
-              button-text="Submit"
-              :checkbox="checkbox"
-              @submit="submitNewsletter"
-            />
-          </div>
-        </template>
-        <template #socialTitle>
-          <span>Find us on</span>
+        <template #socialList>
+          <a-list class="a-list--horizontal a-footer__social-list">
+            <a-list-item
+              class="a-footer__social-list-item"
+              aria-label="Go to A Youtube Channel"
+            >
+              <a-link
+                style="display: block;"
+                href="#"
+              >
+                <!-- Add proper icon -->
+                <a-icon
+                  class="a-footer__social-icon"
+                  style="fill: #fff;"
+                >
+                  <a-icon-star />
+                </a-icon>
+              </a-link>
+            </a-list-item>
+          </a-list>
         </template>
       </a-footer>
     `

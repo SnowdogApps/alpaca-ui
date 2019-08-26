@@ -8,6 +8,8 @@ import selectorsConfig from './List.selectors.json'
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
 import AIcon from '../icon/Icon.vue'
+import AIconPerson from '../icon/templates/IconPerson.vue'
+import AIconCheck from '../icon/templates/IconCheck.vue'
 
 const info = `
   <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
@@ -19,7 +21,10 @@ const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 storiesOf('Atoms/List', module)
   .addParameters({ info })
   .add('Default', () => ({
-    components: { AList, AListItem },
+    components: {
+      AList,
+      AListItem
+    },
     props: {
       classKnobs: {
         default: select('BEM Modifier', classKnobsConfig)
@@ -40,35 +45,34 @@ storiesOf('Atoms/List', module)
     `
   }))
   .add('With slots', () => ({
-    components: { AList, AListItem, AIcon },
+    components: {
+      AList,
+      AListItem,
+      AIcon,
+      AIconPerson,
+      AIconCheck
+    },
     props: {
       classKnobs: {
         default: select('BEM Modifier', classKnobsConfig)
       }
     },
-    data: () => ({
-      items: [
-        {
-          'id': 'el1',
-          'icon': 'facebook'
-        },
-        {
-          'id': 'el2',
-          'icon': 'twitter'
-        },
-        {
-          'id': 'el3',
-          'icon': 'linkedin'
-        }
-      ]
-    }),
     template: `
       <a-list :class="classKnobs">
-        <a-list-item
-          v-for="item in items"
-          :key="item.id"
-        >
-          <a-icon :icon="item.icon"/>
+        <a-list-item>
+          <a-icon title="Account icon">
+            <a-icon-person />
+          </a-icon>
+        </a-list-item>
+        <a-list-item>
+          <a-icon title="Check icon">
+            <a-icon-check />
+          </a-icon>
+        </a-list-item>
+        <a-list-item>
+          <a-icon title="Account icon">
+            <a-icon-person />
+          </a-icon>
         </a-list-item>
       </a-list>
     `

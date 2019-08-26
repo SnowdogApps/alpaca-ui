@@ -8,6 +8,7 @@ import selectorsConfig from './Input.selectors.json'
 
 import AInput from './Input.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
+import AIconPerson from '../../atoms/icon/templates/IconPerson.vue'
 
 const inputTypes = ['text', 'email', 'search', 'number', 'password', 'hidden']
 
@@ -52,11 +53,22 @@ storiesOf('Molecules/Input', module)
       />
     `
   }))
-  .add('With slots', () => ({
-    components: { AInput, AIcon },
+  .add('With slot', () => ({
+    components: { AInput, AIcon, AIconPerson },
     data: () => {
       return {
-        value: ''
+        value: '',
+        iconStyles: {
+          'position': 'absolute',
+          'top': '29px',
+          'right': '8px',
+          'display': 'flex',
+          'align-items': 'center',
+          'justify-content': 'center',
+          'width': '40px',
+          'height': '40px',
+          'cursor': 'pointer'
+        }
       }
     },
     props: {
@@ -65,6 +77,9 @@ storiesOf('Molecules/Input', module)
       },
       placeholderKnob: {
         default: text('Placeholder', 'First and last name')
+      },
+      labelKnob: {
+        default: text('Label', 'Label')
       },
       typeKnob: {
         default: select('Type', inputTypes, 'text')
@@ -77,26 +92,21 @@ storiesOf('Molecules/Input', module)
       <a-input
         :class="classKnob"
         v-model="value"
+        :label="labelKnob"
         :type="typeKnob"
         :placeholder="placeholderKnob"
         id="input-id"
       >
-        <template #label>
-          <label
-            for="input-id"
-            style="display: block; color: #260879; margin-bottom: 4px;"
-          >
-            Label
-          </label>
-        </template>
         <template #icon>
-          <a-icon
-            class="a-icon--reset"
-            icon="star"
-            style="cursor: pointer; width: 16px; height: 16px"
-            @click.native="click"
-          />
-        </template> 
+          <div :style="iconStyles">
+            <a-icon
+              title="Person icon"
+              @click.native="click"
+            >
+              <a-icon-person />
+            </a-icon>
+          </div>
+        </template>
       </a-input>
     `
   }))

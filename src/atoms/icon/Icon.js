@@ -2,26 +2,23 @@
 export default {
   props: {
     /**
-     * Icon
-     */
-    icon: {
-      type: String,
-      required: true
-    },
-    /**
-     * Title
+     * Icon title
      */
     title: {
       type: String,
       default: null
+    },
+    /**
+     * Icon role
+     */
+    role: {
+      type: String,
+      default: 'img'
     }
   },
   computed: {
-    url () {
-      return `/assets/icons/sprite.svg#${this.icon}`
-    },
-    titleComputed () {
-      return this.title || this.icon
+    id () {
+      return this.title ? this.title.toLowerCase().replace(/ /g, '-') : ''
     }
   }
 }

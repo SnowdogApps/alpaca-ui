@@ -27,7 +27,6 @@ $product-list-item__button-border               : none !default;
 $product-list-item__button-background           : none !default;
 
 $product-list-item__action-icon-fill-color      : $gray-darker !default;
-$product-list-item__action-icon-size            : 20px !default;
 $product-list-item__action-icon-fill-color-hover: $color-primary !default;
 $product-list-item__action-icon-transition      : $transition-base !default;
 
@@ -159,9 +158,6 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
   }
 
   &__action-icon {
-    width: $product-list-item__action-icon-size;
-    height: $product-list-item__action-icon-size;
-    opacity: 0.75;
     fill: $product-list-item__action-icon-fill-color;
 
     &:hover,

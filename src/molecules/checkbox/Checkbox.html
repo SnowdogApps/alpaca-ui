@@ -16,9 +16,11 @@
     >
       <div class="a-checkbox__icon-wrapper">
         <a-icon
-          icon="checked"
+          :title="iconTitle"
           class="a-checkbox__icon"
-        />
+        >
+          <a-icon-check />
+        </a-icon>
       </div>
       <!-- @slot Custom label content (Default slot) -->
       <slot />

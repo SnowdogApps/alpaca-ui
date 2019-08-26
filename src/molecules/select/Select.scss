@@ -7,9 +7,7 @@ $select__field-border-color--after: $gray-dark transparent transparent transpare
 $select__field-border-right--after: $spacer--medium !default;
 $select__field-border-style--after: solid !default;
 $select__field-border-width--after: 5px !default;
-$select__icon-right               : $spacer--medium !default;
-$select__icon-width               : 16px !default;
-$select__icon-height              : 16px !default;
+
 $select__input-height             : 32px !default;
 $select__input-width              : 100% !default;
 $select__input-padding            : 0 $spacer--medium 0 $spacer--medium !default;
@@ -46,13 +44,6 @@ $select__input-font-size          : $font-size-base;
         padding: $select__input-padding--icon;
       }
     }
-  }
-
-  &__icon {
-    position: absolute;
-    right: $select__icon-right;
-    width: $select__icon-width;
-    height: $select__icon-height;
   }
 
   &__input {

@@ -22,7 +22,7 @@ storiesOf('Molecules/Collapse', module)
       template: `
         <a-collapse
           :title="titleTextKnobs"
-          icon-title="Angle down"
+          icon-title="Angle down icon"
         >
           <div style="padding: 16px 0;">
             {{ contentTextKnobs }}

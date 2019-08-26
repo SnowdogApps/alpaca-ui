@@ -2,6 +2,7 @@
 
 <script>
 import AIcon from '../../atoms/icon/Icon.vue'
+import AIconExpandMore from '../../atoms/icon/templates/IconExpandMore.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ATransitionExpand from '../../atoms/transition-expand/TransitionExpand.vue'
 
@@ -11,8 +12,9 @@ export default {
   name: 'AlpacaCollapse',
   components: {
     AIcon,
+    ATransitionExpand,
     AButton,
-    ATransitionExpand
+    AIconExpandMore
   },
   mixins: [ACollapse]
 }

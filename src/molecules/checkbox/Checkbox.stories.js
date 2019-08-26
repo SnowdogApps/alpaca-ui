@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions'
 
 import ACheckbox from './Checkbox.vue'
 import AIcon from './../../atoms/icon/Icon.vue'
+import AIconCheck from './../../atoms/icon/templates/IconCheck.vue'
 
 const defaultData = {
   data: () => {
@@ -24,6 +25,7 @@ storiesOf('Molecules/Checkbox', module)
       <a-checkbox
         id="checkbox-default"
         name="checkbox-default"
+        icon-title="Checked icon"
         v-model="status"
         value="some value"
         @change="onChange"
@@ -36,7 +38,8 @@ storiesOf('Molecules/Checkbox', module)
     ...defaultData,
     components: {
       ACheckbox,
-      AIcon
+      AIcon,
+      AIconCheck
     },
     template: `
       <a-checkbox
@@ -55,9 +58,11 @@ storiesOf('Molecules/Checkbox', module)
           >
             <div class="a-checkbox__icon-wrapper">
               <a-icon
-                icon="checked"
                 class="a-checkbox__icon"
-              />
+                title="Checked icon"
+              >
+                <a-icon-check />
+              </a-icon>
             </div>
             I hereby agree for processing my personal data.
           </label>

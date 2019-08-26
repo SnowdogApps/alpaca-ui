@@ -1,19 +1,17 @@
 @import '../../../assets/styles/globals';
 
-$collapse__background                    : $white !default;
+$collapse__background               : $white !default;
 
-$collapse__button-color                  : $white !default;
-$collapse__button-color--active          : $color-primary !default;
-$collapse__button-width                  : 100% !default;
-$collapse__button-font-weight            : $font-weight-bold !default;
-$collapse__button-background             : $gray-darker !default;
-$collapse__button-background--active     : $gray-darker !default;
-$collapse__button-border-radius          : 0 !default;
+$collapse__button-color             : $white !default;
+$collapse__button-color--active     : $color-primary !default;
+$collapse__button-width             : 100% !default;
+$collapse__button-font-weight       : $font-weight-bold !default;
+$collapse__button-background        : $gray-darker !default;
+$collapse__button-background--active: $gray-darker !default;
+$collapse__button-border-radius     : 0 !default;
 
-$collapse__icon-size                     : 16px !default;
-$collapse__icon-fill                     : $white !default;
-$collapse__icon-fill--active             : $color-primary !default;
-$collapse__icon-transition               : $transition-base !default;
+$collapse__icon-fill                : $white !default;
+$collapse__icon-fill--active        : $color-primary !default;
 
 .a-collapse {
   background-color: $collapse__background;
@@ -54,9 +52,6 @@ $collapse__icon-transition               : $transition-base !default;
   }
 
   &__icon {
-    width: $collapse__icon-size;
-    height: $collapse__icon-size;
-    transition: $collapse__icon-transition;
     fill: $collapse__icon-fill;
   }
 

@@ -79,10 +79,9 @@
             custom-class="a-product-list-item__actions-item"
             @click.native="onRemove"
           >
-            <a-icon
-              icon="remove"
-              class="a-product-list-item__action-icon"
-            />
+            <a-icon class="a-product-list-item__action-icon">
+              <a-icon-delete />
+            </a-icon>
           </a-button>
         </slot>
       </div>
