@@ -2,7 +2,6 @@
 
 $checkbox__icon-size                             : 14px !default;
 $checkbox__icon-fill                             : $white !default;
-$checkbox__icon-transition                       : $transition-base !default;
 
 $checkbox__icon-wrapper-margin                   : 0 $spacer 0 0 !default;
 $checkbox__icon-wrapper-border                   : 2px solid $gray !default;
@@ -21,7 +20,7 @@ $checkbox__icon-wrapper-background-color--checked: $color-primary !default;
 
     &:checked + .a-checkbox__label {
       .a-checkbox__icon-wrapper {
-        background-color: $color-primary;
+        background-color: $checkbox__icon-wrapper-background-color--checked;
         border: $checkbox__icon-wrapper-border--checked;
       }
 
@@ -48,7 +47,6 @@ $checkbox__icon-wrapper-background-color--checked: $color-primary !default;
     height: $checkbox__icon-size;
     cursor: pointer;
     opacity: 0;
-    transition: $checkbox__icon-transition;
     fill: $checkbox__icon-fill;
   }
 }
