@@ -1,6 +1,7 @@
 // @vue/component
 
 export default {
+  inheritAttrs: false,
   props: {
     /**
      * Id attribute for select and label

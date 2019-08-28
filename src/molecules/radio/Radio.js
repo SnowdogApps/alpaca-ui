@@ -1,6 +1,7 @@
 // @vue/component
 
 export default {
+  inheritAttrs: false,
   model: {
     prop: 'checked',
     event: 'change'
@@ -12,13 +13,6 @@ export default {
     checked: {
       type: [String, Number, Boolean],
       default: null
-    },
-    /**
-     * Input name
-     */
-    name: {
-      type: String,
-      required: true
     },
     /**
      * Input value

@@ -1,10 +1,9 @@
 <div class="a-checkbox">
   <input
+    v-bind="$attrs"
     :id="id"
-    :name="name"
     type="checkbox"
     :class="['a-checkbox__field', inputClass]"
-    :value="value"
     :checked="checked"
     @change="$emit('change', $event.target.checked)"
   >
