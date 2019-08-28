@@ -19,7 +19,7 @@ export default {
      * Icon viewBox
      */
     viewBox: {
-      type: String,
+      type: [String, Boolean],
       default: '0 0 24 24'
     }
   },
