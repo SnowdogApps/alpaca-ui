@@ -2,7 +2,6 @@
 
 <script>
 import AContainer from '../../atoms/container/Container.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
 import ALogo from '../../molecules/logo/Logo.vue'
 import AButton from '../../atoms/button/Button.vue'
 import AMegaMenu from '../../03-modules/mega-menu/MegaMenu.vue'
@@ -16,7 +15,6 @@ export default {
   name: 'AlpacaHeader',
   components: {
     AContainer,
-    AIcon,
     ALogo,
     AButton,
     AMegaMenu,

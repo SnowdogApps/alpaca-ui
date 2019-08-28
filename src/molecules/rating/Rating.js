@@ -10,20 +10,6 @@ export default {
       default: 5
     },
     /**
-     * Icon for active element
-     */
-    activeIcon: {
-      type: String,
-      default: 'star'
-    },
-    /**
-     * Icon for inactive element
-     */
-    uncheckedIcon: {
-      type: String,
-      default: null
-    },
-    /**
      * Color for active element
      */
     activeColor: {
@@ -33,7 +19,7 @@ export default {
     /**
      * Color for inactive element
      */
-    uncheckedColor: {
+    inactiveColor: {
       type: String,
       default: '#c9c9c9'
     },
@@ -74,7 +60,7 @@ export default {
     }
   },
   mounted () {
-    this.isIE = !navigator.userAgent.match(/Trident.*rv:11\./)
+    this.isIE = navigator.userAgent.match(/Trident.*rv:11\./)
     this.localItems = Array.from(
       Array(this.items),
       (x, index) => index + 1
@@ -105,16 +91,11 @@ export default {
       )
     },
     showIcon (item) {
-      if (
-        (item.isActive && !this.uncheckedIcon) ||
-        (item.isActive && this.uncheckedIcon) ||
-        (!item.isActive && !this.uncheckedIcon) ||
-        item.selected
-      ) {
-        return this.activeIcon
+      if (item.isActive || item.selected) {
+        return true
       }
-      if (!item.isActive && this.uncheckedIcon) {
-        return this.uncheckedIcon
+      if (!item.isActive) {
+        return false
       }
     },
     select (item) {

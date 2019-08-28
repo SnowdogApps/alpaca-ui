@@ -12,8 +12,6 @@ $alert__text-line-height    : $font-line-height !default;
 
 $alert__button-padding      : 0 $spacer !default;
 $alert__button-icon-color   : $gray-darker !default;
-$alert__button-icon-size    : 18px !default;
-$alert__button-icon-padding : 2px !default;
 
 .a-alert {
   display: flex;
@@ -48,9 +46,6 @@ $alert__button-icon-padding : 2px !default;
     }
 
     &-icon {
-      width: $alert__button-icon-size;
-      height: $alert__button-icon-size;
-      padding: $alert__button-icon-padding;
       fill: $alert__button-icon-color;
     }
   }

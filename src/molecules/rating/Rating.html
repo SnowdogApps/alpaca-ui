@@ -19,24 +19,41 @@
       :item="item"
     >
       <a-icon
-        :style="{fill: item.isActive || item.selected ? activeColor : uncheckedColor}"
+        :style="{
+          fill: item.isActive || item.selected ? activeColor : inactiveColor
+        }"
         :class="[
           'a-rating__icon',
           item.isActive && 'a-rating__icon--active',
           iconClass
         ]"
-        :icon="showIcon(item)"
-      />
+      >
+        <!-- @slot Custom active icon (Named slot) -->
+        <slot
+          name="customIcon"
+          v-if="showIcon(item)"
+        >
+          <a-icon-star />
+        </slot>
+        <!-- @slot Custom inactive icon (Named slot) -->
+        <slot
+          name="customUncheckedIcon"
+          v-else
+        >
+          <a-icon-star-border />
+        </slot>
+      </a-icon>
       <a-icon
-        v-if="showAverageIcon(item) && isIE"
-        :style="{clipPath: showAverage, fill : !item.isActive && activeColor}"
+        v-if="showAverageIcon(item) && !isIE"
+        :style="{ clipPath: showAverage, fill: !item.isActive && activeColor }"
         :class="[
           'a-rating__icon',
           'a-rating__icon--disabled',
           iconClass
         ]"
-        :icon="activeIcon"
-      />
+      >
+        <a-icon-star />
+      </a-icon>
     </slot>
   </a-button>
 </div>

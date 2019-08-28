@@ -10,10 +10,11 @@
       class="slide-menu__button slide-menu__button--prev"
       @click.native="load(prevLevel)"
     >
-      <a-icon
+      <!-- <a-icon
         :icon="prevIcon"
         class="slide-menu__icon slide-menu__icon--prev"
-      />
+      /> -->
+      <!-- Icon should be here -->
       {{ currentItem.label }}
     </a-button>
   </li>
@@ -41,10 +42,11 @@
           @click.native="load(item.level)"
         >
           {{ item.label }}
-          <a-icon
+          <!-- <a-icon
             :icon="nextIcon"
             class="slide-menu__icon"
-          />
+          /> -->
+          <!-- Icon should be here -->
         </a-button>
       </li>
     </transition-group>

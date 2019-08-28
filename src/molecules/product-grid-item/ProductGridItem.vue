@@ -2,6 +2,8 @@
 
 <script>
 import AIcon from '../../atoms/icon/Icon.vue'
+import AIconFavoriteBorder from '../../atoms/icon/templates/IconFavoriteBorder.vue'
+import AIconEqualizer from '../../atoms/icon/templates/IconEqualizer.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ABadge from '../../atoms/badge/Badge.vue'
 import APrice from '../../atoms/price/Price.vue'
@@ -16,6 +18,8 @@ export default {
   name: 'AlpacaProductGridItem',
   components: {
     AIcon,
+    AIconFavoriteBorder,
+    AIconEqualizer,
     AButton,
     ABadge,
     AImage,

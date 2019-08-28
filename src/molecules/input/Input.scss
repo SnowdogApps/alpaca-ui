@@ -9,11 +9,9 @@ $input__field-height           : 40px !default;
 $input__field-border           : 1px solid $form-elements-border-color !default;
 $input__field-border-radius    : $form-elements-radius !default;
 $input__field-placeholder-color: $gray !default;
-$input__icon-top               : $spacer--large !default;
-$input__icon-right             : $spacer--medium !default;
-$input__icon-width             : 16px !default;
-$input__icon-height            : 16px !default;
-$input__icon-padding           : 0 !default;
+
+$input__icon-top               : 20px !default;
+$input__icon-right             : 8px !default;
 
 .a-input {
   position: relative;
@@ -48,11 +46,5 @@ $input__icon-padding           : 0 !default;
     &::placeholder {
       color: $input__field-placeholder-color;
     }
-  }
-
-  &__icon {
-    position: absolute;
-    top: $input__icon-top;
-    right: $input__icon-right;
   }
 }

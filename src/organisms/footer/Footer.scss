@@ -13,6 +13,7 @@ $footer__scroll-up-right                   : $spacer !default;
 $footer__scroll-up-right\@extra-extra-large: 0 !default;
 $footer__scroll-up-width                   : 48px !default;
 $footer__scroll-up-fill--hover             : $color-primary !default;
+$footer__scroll-up-padding                 : 0 !default;
 
 $footer__newsletter-min-width              : 300px !default;
 $footer__newsletter-max-width              : 500px !default;
@@ -62,10 +63,13 @@ $footer__copywrite-padding                 : $spacer--medium;
     top: $footer__scroll-up-top;
     right: $footer__scroll-up-right;
     width: $footer__scroll-up-width;
+    padding: $footer__scroll-up-padding;
 
     &:hover,
     &:focus {
-      fill: $footer__scroll-up-fill--hover;
+      .a-footer__scroll-up-icon {
+        fill: $footer__scroll-up-fill--hover;
+      }
     }
 
     @include mq($screen-xxl) {

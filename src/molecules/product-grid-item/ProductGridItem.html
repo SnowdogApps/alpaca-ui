@@ -76,10 +76,9 @@
             @click.native="addToWishList"
             class="a-product-grid-item__action-button"
           >
-            <a-icon
-              icon="heart"
-              class="a-product-grid-item__icon"
-            />
+            <a-icon>
+              <a-icon-favorite-border />
+            </a-icon>
           </a-button>
         </slot>
 
@@ -94,10 +93,9 @@
             @click.native="addToCompare"
             class="a-product-grid-item__action-button"
           >
-            <a-icon
-              icon="compare"
-              class="a-product-grid-item__icon"
-            />
+            <a-icon>
+              <a-icon-equalizer />
+            </a-icon>
           </a-button>
         </slot>
       </div>

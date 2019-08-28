@@ -27,6 +27,13 @@ export default {
     inputClass: {
       type: String,
       default: null
+    },
+    /**
+     * Icon title
+     */
+    iconTitle: {
+      type: String,
+      default: null
     }
   }
 }

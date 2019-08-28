@@ -3,6 +3,8 @@
 <script>
 import AButton from '../../atoms/button/Button.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
+import AIconStar from '../../atoms/icon/templates/IconStar.vue'
+import AIconStarBorder from '../../atoms/icon/templates/IconStarBorder.vue'
 
 import ARating from './Rating.js'
 
@@ -10,7 +12,9 @@ export default {
   name: 'AlpacaRating',
   components: {
     AButton,
-    AIcon
+    AIcon,
+    AIconStar,
+    AIconStarBorder
   },
   mixins: [ARating]
 }

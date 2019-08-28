@@ -35,8 +35,8 @@ $modal__close-button-margin          : 0 0 0 auto !default;
 $modal__close-button-padding         : 0 !default;
 $modal__close-button-border          : none !default;
 $modal__close-button-background-color: transparent !default;
+
 $modal__close-button-icon-color      : $color-primary !default;
-$modal__close-button-icon-size       : 18px !default;
 $modal__close-button-icon-transition : $transition-base !default;
 
 .a-modal {
@@ -155,8 +155,6 @@ $modal__close-button-icon-transition : $transition-base !default;
   }
 
   &__close-icon {
-    width: $modal__close-button-icon-size;
-    height: $modal__close-button-icon-size;
     transition: $modal__close-button-icon-transition;
 
     &:hover,

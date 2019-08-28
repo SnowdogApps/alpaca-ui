@@ -7,22 +7,20 @@ $quantity-update__label-margin--inline             : 0 $spacer 0 0 !default;
 
 // Input
 $quantity-update__input-wrapper-margin             : 0 !default;
-$quantity-update__input-border                     : 1px solid $gray-dark !default;
+$quantity-update__input-border                     : 1px solid $gray !default;
 $quantity-update__input-size                       : 48px !default;
 $quantity-update__input-color                      : $gray-dark !default;
 
 // Button
+$quantity-update__button-padding                   : 0 $spacer !default;
 $quantity-update__button-background                : $white !default;
-$quantity-update__button-border                    : 1px solid $gray-dark !default;
+$quantity-update__button-border                    : 1px solid $gray !default;
 $quantity-update__button-background-hover--disabled: $white !default;
 $quantity-update__button-cursor-hover--disabled    : default !default;
 $quantity-update__button-fill-hover--disabled      : $gray !default;
 
 // Icon
-$quantity-updater__icon-fill                       : $gray-dark !default;
-$quantity-updater__icon-spacing                    : 18px !default;
-$quantity-updater__icon-fill-hover                 : $color-primary !default;
-$quantity-updater__icon-transition                 : $transition-base !default;
+$quantity-updater__icon-fill                       : $gray !default;
 
 .a-quantity-update {
   display: flex;
@@ -64,14 +62,13 @@ $quantity-updater__icon-transition                 : $transition-base !default;
 
   &__button {
     margin: 0;
+    padding: $quantity-update__button-padding;
     background: $quantity-update__button-background;
     border: $quantity-update__button-border;
 
     &:hover,
     &:focus {
-      .a-quantity-update__icon {
-        fill: $quantity-updater__icon-fill-hover;
-      }
+      background: none;
     }
 
     &:disabled {
@@ -102,9 +99,6 @@ $quantity-updater__icon-transition                 : $transition-base !default;
   }
 
   &__icon {
-    width: $quantity-updater__icon-spacing;
-    height: $quantity-updater__icon-spacing;
-    transition: $quantity-updater__icon-transition;
     fill: $quantity-updater__icon-fill;
   }
 

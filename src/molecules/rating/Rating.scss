@@ -7,11 +7,13 @@ $rating__icon-height   : 40px;
 .a-rating {
   &__button {
     padding: $rating__button-padding;
+    transition: none;
   }
 
   &__icon {
     width: $rating__icon-width;
     height: $rating__icon-height;
+    transition: none;
 
     &--disabled {
       position: absolute;

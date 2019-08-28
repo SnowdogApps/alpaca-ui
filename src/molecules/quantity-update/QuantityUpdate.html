@@ -24,10 +24,11 @@
         @click.native="updateQty(-1)"
       >
         <a-icon
-          icon="minus"
-          class="button__icon a-quantity-update__icon"
           :title="decrementIconTitle"
-        />
+          class="button__icon a-quantity-update__icon"
+        >
+          <a-icon-remove />
+        </a-icon>
       </a-button>
     </slot>
     <!-- @slot Qty input (Scoped slot) -->
@@ -62,10 +63,11 @@
         @click.native="updateQty(1)"
       >
         <a-icon
-          icon="plus"
-          class="a-quantity-update__icon"
           :title="incrementIconTitle"
-        />
+          class="a-quantity-update__icon"
+        >
+          <a-icon-add />
+        </a-icon>
       </a-button>
     </slot>
   </div>

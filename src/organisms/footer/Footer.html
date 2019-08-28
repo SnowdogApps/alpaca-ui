@@ -14,7 +14,9 @@
         :aria-label="scrollAriaLabel"
         @click.native="scrollToTop"
       >
-        <a-icon icon="arrow-up" />
+        <a-icon class="a-footer__scroll-up-icon">
+          <a-icon-expand-less />
+        </a-icon>
       </a-button>
     </slot>
 
@@ -52,27 +54,7 @@
           </span>
         </slot>
         <!-- @slot Social media list (Named slot) -->
-        <slot name="socialItmes">
-          <a-list class="a-list--horizontal a-footer__social-list">
-            <a-list-item
-              class="a-footer__social-list-item"
-              v-for="item in socialList"
-              :key="item.id"
-              :aria-label="item.ariaLabel"
-            >
-              <a-link
-                style="display: block"
-                :href="item.link"
-                :aria-label="item.ariaLabel"
-              >
-                <a-icon
-                  :icon="item.iconId"
-                  class="a-footer__social-icon "
-                />
-              </a-link>
-            </a-list-item>
-          </a-list>
-        </slot>
+        <slot name="socialList" />
       </div>
 
       <!-- @slot Copyright text (Named slot) -->
