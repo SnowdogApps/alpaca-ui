@@ -14,6 +14,13 @@ export default {
     role: {
       type: String,
       default: 'img'
+    },
+    /**
+     * Icon viewBox
+     */
+    viewBox: {
+      type: String,
+      default: '0 0 24 24'
     }
   },
   computed: {
