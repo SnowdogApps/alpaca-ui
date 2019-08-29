@@ -87,9 +87,12 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
       justify-content: flex-end;
     }
 
-    &--special,
-    &--old {
+    .a-price__old {
       margin-bottom: $spacer;
+
+      @include mq($screen-m) {
+        margin-bottom: 0;
+      }
     }
   }
 
