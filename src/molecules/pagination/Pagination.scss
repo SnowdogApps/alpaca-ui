@@ -3,14 +3,18 @@
 $pagination-margin                         : 0 !default;
 $pagination-padding                        : 0 !default;
 $pagination__dots-min-width                : 48px !default;
+$pagination__dots-min-width--screen-m      : $spacer--large !default;
 $pagination__button-color--current         : $color-primary !default;
 $pagination__button-font-weight--current   : $font-weight-bold !default;
 $pagination__button-font-weight            : $font-weight-normal !default;
 $pagination__button-background-color       : transparent !default;
 $pagination__button-border                 : none !default;
 $pagination__button-color-hover            : $color-primary !default;
-$pagination__button-width                  : 48px !default;
 $pagination__button-height                 : 48px !default;
+$pagination__button-min-width              : 48px !default;
+$pagination__button-min-width--screen-m    : $spacer--large !default;
+$pagination__button-padding                : 0 $spacer--medium !default;
+$pagination__button-padding--screen-m      : 0 !default;
 $pagination__button-background-color-hover : transparent !default;
 $pagination__icon-width                    : 24px !default;
 $pagination__icon-height                   : 24px !default;
@@ -29,15 +33,25 @@ $pagination__icon-fill-disabled            : $gray-light !default;
   }
 
   &__dots {
-    min-width: $pagination__dots-min-width;
+    min-width: $pagination__dots-min-width--screen-m;
+
+    @include mq($screen-m) {
+      min-width: $pagination__dots-min-width;
+    }
   }
 
   &__button {
-    width: $pagination__button-width;
+    min-width: $pagination__button-min-width--screen-m;
     height: $pagination__button-height;
+    padding: $pagination__button-padding--screen-m;
     font-weight: $pagination__button-font-weight;
     background-color: $pagination__button-background-color;
     border: $pagination__button-border;
+
+    @include mq($screen-m) {
+      min-width: $pagination__button-min-width;
+      padding: $pagination__button-padding;
+    }
 
     &:focus,
     &:hover {
