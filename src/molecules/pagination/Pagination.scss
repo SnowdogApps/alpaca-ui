@@ -27,7 +27,6 @@ $pagination__icon-fill-disabled            : $gray-light !default;
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: $pagination-margin;
     padding: $pagination-padding;
     list-style-type: none;
