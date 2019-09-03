@@ -1,20 +1,25 @@
 @import '../../../assets/styles/_globals.scss';
 
+$banner-width          : 100% !default;
+$banner-text-decoration: none !default;
+$banner-outline        : none !default;
+$banner__image-width   : 100% !default;
+
 .a-banner {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: $banner-width;
 
   &:hover,
   &:focus {
-    text-decoration: none;
-    outline: none;
+    text-decoration: $banner-text-decoration;
+    outline: $banner-outline;
   }
 
   &__image {
-    width: 100%;
+    width: $banner__image-width;
   }
 
   &__text {
