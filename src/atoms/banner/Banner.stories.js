@@ -46,14 +46,11 @@ storiesOf('Atoms/Banner', module)
       sourcesKnobs: {
         default: object('Sources', sources)
       },
-      textKnobs: {
-        default: object('Text', sources)
-      },
       ariaLabelKnobs: {
         default: text('Aria label', 'Banner')
       },
       hrefKnobs: {
-        default: object('Href', '#')
+        default: text('Href', '#')
       }
     },
     template: `
@@ -63,5 +60,33 @@ storiesOf('Atoms/Banner', module)
         :image="imageKnobs"
         :sources="sourcesKnobs"
       />
+    `
+  }))
+  .add('With text', () => ({
+    components: { ABanner },
+    props: {
+      imageKnobs: {
+        default: object('Image', { src: '/images/image/banner.jpg', alt: 'Banner' })
+      },
+      textKnobs: {
+        default: text('Text', 'Banner')
+      },
+      ariaLabelKnobs: {
+        default: text('Aria label', 'Banner')
+      },
+      hrefKnobs: {
+        default: text('Href', '#')
+      }
+    },
+    template: `
+      <a-banner
+        :href="hrefKnobs"
+        :ariaLabel="ariaLabelKnobs"
+        :image="imageKnobs"
+      >
+        <span style="color: white; text-decoration: none; font-size: 48px; font-weight: bold;">
+          {{ textKnobs }}
+        </span>
+      </a-banner>
     `
   }))

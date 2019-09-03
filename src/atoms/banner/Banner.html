@@ -13,11 +13,9 @@
   </picture>
     <div
       class="a-banner__text"
-      v-if="text"
+      v-if="hasDefaultSlot"
     >
       <!-- @slot Slot for banner text (Named slot)-->
-      <slot name="text">
-        {{ text }}
-      </slot>
+      <slot />
     </div>
 </a>

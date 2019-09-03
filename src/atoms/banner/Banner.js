@@ -22,5 +22,10 @@ export default {
       type: String,
       default: null
     }
+  },
+  computed: {
+    hasDefaultSlot () {
+      return !!this.$slots.default
+    }
   }
 }
