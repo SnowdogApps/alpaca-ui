@@ -2,24 +2,24 @@
 export default {
   props: {
     /**
-     * Props for link should have kays: link, ariaLabel
-     */
-    link: {
-      type: Object,
-      required: true
-    },
-    /**
-     * Props for image should have kays: src, ale
+     * Props for image should have keys: src, alt
      */
     image: {
       type: Object,
       required: true
     },
     /**
-     * Props for source should have kays: srcset, media
+     * Props for source should have keys: id, srcset, media
      */
     sources: {
       type: Array,
+      default: null
+    },
+    /**
+     * Text on banner
+     */
+    text: {
+      type: String,
       default: null
     }
   }
