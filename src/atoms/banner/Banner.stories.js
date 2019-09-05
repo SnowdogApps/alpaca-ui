@@ -56,7 +56,7 @@ storiesOf('Atoms/Banner', module)
     template: `
       <a-banner
         :href="hrefKnobs"
-        :ariaLabel="ariaLabelKnobs"
+        :aria-label="ariaLabelKnobs"
         :image="imageKnobs"
         :sources="sourcesKnobs"
       />
@@ -81,7 +81,7 @@ storiesOf('Atoms/Banner', module)
     template: `
       <a-banner
         :href="hrefKnobs"
-        :ariaLabel="ariaLabelKnobs"
+        :aria-label="ariaLabelKnobs"
         :image="imageKnobs"
         tag="div"
       >
