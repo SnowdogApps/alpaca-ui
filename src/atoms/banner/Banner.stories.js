@@ -83,8 +83,9 @@ storiesOf('Atoms/Banner', module)
         :href="hrefKnobs"
         :ariaLabel="ariaLabelKnobs"
         :image="imageKnobs"
+        tag="div"
       >
-        <span style="color: white; text-decoration: none; font-size: 48px; font-weight: bold;">
+        <span style="color: white; font-size: 48px; font-weight: bold;">
           {{ textKnobs }}
         </span>
       </a-banner>

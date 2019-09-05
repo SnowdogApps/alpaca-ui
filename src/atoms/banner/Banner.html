@@ -1,4 +1,7 @@
-<a class="a-banner">
+<component
+  :is="tag"
+  class="a-banner"
+>
   <picture class="a-banner__image">
     <a-source
       v-for="item in sources"
@@ -18,4 +21,4 @@
       <!-- @slot Slot for banner text (Named slot)-->
       <slot />
     </div>
-</a>
+</component>

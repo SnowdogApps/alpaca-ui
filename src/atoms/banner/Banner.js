@@ -2,6 +2,13 @@
 export default {
   props: {
     /**
+     * Props for custom tag
+     */
+    tag: {
+      type: String,
+      default: 'a'
+    },
+    /**
      * Props for image should have keys: src, alt
      */
     image: {
