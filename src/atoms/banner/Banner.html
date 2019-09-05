@@ -1,9 +1,8 @@
-<a
-  :href="link.href"
-  :aria-label="link.ariaLabel"
-  class="banner"
+<component
+  :is="tag"
+  class="a-banner"
 >
-  <picture class="image">
+  <picture class="a-banner__image">
     <a-source
       v-for="item in sources"
       :key="item.id"
@@ -15,4 +14,11 @@
       :alt="image.alt"
     />
   </picture>
-</a>
+    <div
+      class="a-banner__text"
+      v-if="hasDefaultSlot"
+    >
+      <!-- @slot Slot for banner text (Named slot)-->
+      <slot />
+    </div>
+</component>

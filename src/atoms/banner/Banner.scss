@@ -1,19 +1,28 @@
 @import '../../../assets/styles/_globals.scss';
 
-.banner {
+$banner-width          : 100% !default;
+$banner-text-decoration: none !default;
+$banner-outline        : none !default;
+$banner__image-width   : 100% !default;
+
+.a-banner {
   position: relative;
-  display: block;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $banner-width;
 
-  &:hover {
-    text-decoration: none;
-  }
-
+  &:hover,
   &:focus {
-    outline: none;
+    text-decoration: $banner-text-decoration;
+    outline: $banner-outline;
   }
 
   &__image {
-    width: 100%;
+    width: $banner__image-width;
+  }
+
+  &__text {
+    position: absolute;
   }
 }
