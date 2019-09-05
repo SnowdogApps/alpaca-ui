@@ -3,12 +3,12 @@
   class="a-banner"
 >
   <picture class="a-banner__image">
-    <a-source
+    <source
       v-for="item in sources"
       :key="item.id"
       :srcset="item.srcset"
       :media="item.media"
-    />
+    >
     <a-image
       :src="image.src"
       :alt="image.alt"
