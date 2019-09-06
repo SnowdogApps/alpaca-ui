@@ -3,9 +3,7 @@ import { object, text } from '@storybook/addon-knobs'
 
 import ABanner from './Banner.vue'
 
-const info = `
-  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p>
-`
+const info = `<p>Check <b>Knobs</b> tab to edit component properties dynamically.</p>`
 
 const sources = [
   {
@@ -30,18 +28,16 @@ const sources = [
   }
 ]
 
-const image = {
-  src: '/images/banner/banner-320_176.jpg',
-  alt: 'Banner image'
-}
-
-storiesOf('Atoms/Banner', module)
+storiesOf('Molecules/Banner', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { ABanner },
     props: {
       imageKnobs: {
-        default: object('Image', image)
+        default: object('Image', '/images/banner/banner-320_176.jpg')
+      },
+      altKnobs: {
+        default: object('Alt', 'Banner image')
       },
       sourcesKnobs: {
         default: object('Sources', sources)
@@ -57,7 +53,8 @@ storiesOf('Atoms/Banner', module)
       <a-banner
         :href="hrefKnobs"
         :aria-label="ariaLabelKnobs"
-        :image="imageKnobs"
+        :image-src="imageKnobs"
+        :image-alt="altKnobs"
         :sources="sourcesKnobs"
       />
     `
@@ -66,7 +63,10 @@ storiesOf('Atoms/Banner', module)
     components: { ABanner },
     props: {
       imageKnobs: {
-        default: object('Image', { src: '/images/image/banner.jpg', alt: 'Banner' })
+        default: object('Image', '/images/image/banner.jpg')
+      },
+      altKnobs: {
+        default: object('Alt', 'Banner image')
       },
       textKnobs: {
         default: text('Text', 'Banner')
@@ -82,7 +82,8 @@ storiesOf('Atoms/Banner', module)
       <a-banner
         :href="hrefKnobs"
         :aria-label="ariaLabelKnobs"
-        :image="imageKnobs"
+        :image-src="imageKnobs"
+        :image-alt="altKnobs"
         tag="div"
       >
         <span style="color: white; font-size: 48px; font-weight: bold;">

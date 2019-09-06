@@ -9,10 +9,17 @@ export default {
       default: 'a'
     },
     /**
-     * Props for image should have keys: src, alt
+     *  Image alt
      */
-    image: {
-      type: Object,
+    imageAlt: {
+      type: String,
+      required: true
+    },
+    /**
+     *  Image src
+     */
+    imageSrc: {
+      type: String,
       required: true
     },
     /**
