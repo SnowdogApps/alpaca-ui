@@ -1,7 +1,7 @@
 <template src="./Banner.html" />
 
 <script>
-import AImage from '../image/Image.vue'
+import AImage from '../../atoms/image/Image.vue'
 
 import ABanner from './Banner.js'
 
