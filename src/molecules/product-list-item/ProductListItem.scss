@@ -86,13 +86,13 @@ $product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
       align-items: baseline;
       justify-content: flex-end;
     }
+  }
 
-    .a-price__old {
-      margin-bottom: $spacer;
+  &__old-price {
+    margin-bottom: $spacer;
 
-      @include mq($screen-m) {
-        margin-bottom: 0;
-      }
+    @include mq($screen-m) {
+      margin-bottom: 0;
     }
   }
 
