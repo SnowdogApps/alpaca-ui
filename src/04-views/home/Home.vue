@@ -3,7 +3,7 @@
 <script>
 import AHeading from '../../atoms/heading/Heading.vue'
 import AImage from '../../atoms/image/Image.vue'
-import ABanner from '../../atoms/banner/Banner.vue'
+import ABanner from '../../molecules/banner/Banner.vue'
 import AList from '../../atoms/list/List.vue'
 import AListItem from '../../atoms/list-item/ListItem.vue'
 
