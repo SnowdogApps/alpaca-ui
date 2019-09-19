@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { text } from '@storybook/addon-knobs'
 
 import ARadio from './Radio.vue'
 
@@ -11,6 +12,11 @@ storiesOf('Molecules/Radio', module)
         selected: 'option_two'
       }
     },
+    props: {
+      labelTextKnobs: {
+        default: text('Label', 'Option one')
+      }
+    },
     template: `
       <div>
         <a-radio
@@ -19,15 +25,7 @@ storiesOf('Molecules/Radio', module)
           value="option_one"
           id="r1"
         >
-          Option one
-        </a-radio>
-        <a-radio
-          v-model="selected"
-          name="radio2"
-          value="option_two"
-          id="r2"
-        >
-          Option two
+          {{ labelTextKnobs }}
         </a-radio>
       </div>
     `
@@ -37,6 +35,11 @@ storiesOf('Molecules/Radio', module)
     data () {
       return {
         selected: ''
+      }
+    },
+    props: {
+      labelTextKnobs: {
+        default: text('Label', 'Custom option one')
       }
     },
     template: `
@@ -54,17 +57,9 @@ storiesOf('Molecules/Radio', module)
               style="background-color: #f1f1f1;"
             >
               <span class="a-radio__icon" />
-              Custom option one
+              {{ labelTextKnobs }}
             </label>
           </template>
-        </a-radio>
-        <a-radio
-          v-model="selected"
-          name="radio2"
-          id="id2"
-          value="option_two"
-        >
-          Option two
         </a-radio>
       </div>
     `
