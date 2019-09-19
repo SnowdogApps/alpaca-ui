@@ -12,7 +12,7 @@ storiesOf('Atoms/Price', module)
         default: text('Regular price', '$36,00')
       }
     },
-    template: `<a-price :regular-price="regularPriceKnobs" />`
+    template: '<a-price :regular-price="regularPriceKnobs" />'
   }))
   .add('Special Price', () => ({
     components: { APrice },

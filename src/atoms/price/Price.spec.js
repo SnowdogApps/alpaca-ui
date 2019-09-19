@@ -43,7 +43,7 @@ describe('Price', () => {
   it('renders named slot regularPrice when passed', () => {
     const wrapper = mount(APrice, {
       slots: {
-        regularPrice: `<span>Price: $123,00</span>`
+        regularPrice: '<span>Price: $123,00</span>'
       }
     })
 

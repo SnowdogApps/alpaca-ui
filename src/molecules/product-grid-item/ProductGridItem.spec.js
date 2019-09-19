@@ -30,13 +30,13 @@ describe('Product Grid Item', () => {
     const wrapper = mount(AProductGridItem, {
       propsData: sampleRequiredData,
       slots: {
-        badge: `<span data-test="badge">New</span>`,
-        image: `<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">`,
-        name: `<h2 data-test="name">Sample name</h2>`,
-        prices: `<div data-test="prices">$100</div>`,
-        addToCart: `<button type="button" data-test="addToCart">Add to cart</button>`,
-        addToWishList: `<button type="button" data-test="addToWishList">Add to wishlist</button>`,
-        addToCompare: `<button type="button" data-test="addToCompare">Add to compare</button>`,
+        badge: '<span data-test="badge">New</span>',
+        image: '<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">',
+        name: '<h2 data-test="name">Sample name</h2>',
+        prices: '<div data-test="prices">$100</div>',
+        addToCart: '<button type="button" data-test="addToCart">Add to cart</button>',
+        addToWishList: '<button type="button" data-test="addToWishList">Add to wishlist</button>',
+        addToCompare: '<button type="button" data-test="addToCompare">Add to compare</button>',
         rating: ARating
       }
     })

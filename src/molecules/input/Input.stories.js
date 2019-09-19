@@ -59,15 +59,15 @@ storiesOf('Molecules/Input', module)
       return {
         value: '',
         iconStyles: {
-          'position': 'absolute',
-          'top': '29px',
-          'right': '8px',
-          'display': 'flex',
+          position: 'absolute',
+          top: '29px',
+          right: '8px',
+          display: 'flex',
           'align-items': 'center',
           'justify-content': 'center',
-          'width': '40px',
-          'height': '40px',
-          'cursor': 'pointer'
+          width: '40px',
+          height: '40px',
+          cursor: 'pointer'
         }
       }
     },

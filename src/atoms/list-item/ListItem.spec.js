@@ -13,7 +13,7 @@ describe('ListItem', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(AListItem, {
       slots: {
-        default: `<span>List item default text</span>`
+        default: '<span>List item default text</span>'
       }
     })
 

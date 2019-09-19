@@ -56,7 +56,7 @@ export default {
       return items.map((item, idx) => {
         const level = parentLevel ? `${parentLevel}${idx}` : `${idx}`
 
-        item['level'] = level
+        item.level = level
 
         if (item.nodes) {
           item.nodes = this.prepareData(item.nodes, level)

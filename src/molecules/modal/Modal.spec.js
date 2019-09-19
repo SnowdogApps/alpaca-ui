@@ -53,9 +53,9 @@ describe('Modal', () => {
         visible: true
       },
       slots: {
-        default: `<span data-test="content">Sample text</span>`,
-        heading: `<h1 data-test="heading">Sample heading</h1>`,
-        close: `<button data-test="close">Sample button</button>`
+        default: '<span data-test="content">Sample text</span>',
+        heading: '<h1 data-test="heading">Sample heading</h1>',
+        close: '<button data-test="close">Sample button</button>'
       }
     })
 
