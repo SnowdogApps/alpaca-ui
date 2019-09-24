@@ -29,7 +29,7 @@ export default {
 
       // after closing message box move focus on first focusable element on the page
       if (focusable.length) {
-        let firstFocusable = [...focusable].find(el => el.offsetParent !== null)
+        const firstFocusable = [...focusable].find(el => el.offsetParent !== null)
         firstFocusable.focus()
       }
 

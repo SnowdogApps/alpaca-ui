@@ -18,7 +18,7 @@ describe('Tab', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(ATab, {
       slots: {
-        default: `<span>Tab default text</span>`
+        default: '<span>Tab default text</span>'
       },
       propsData: {
         name: 'Tab'

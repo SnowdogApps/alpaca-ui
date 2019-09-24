@@ -23,7 +23,7 @@ describe('Banner', () => {
         text: 'Title'
       },
       slots: {
-        default: `<div class="example-slot">Alpaca UI</div>`
+        default: '<div class="example-slot">Alpaca UI</div>'
       }
     })
 

@@ -24,7 +24,7 @@ describe('Radio', () => {
         value: 'radio'
       },
       slots: {
-        default: `<span data-test="default">Default slot</span>`
+        default: '<span data-test="default">Default slot</span>'
       }
     })
 
