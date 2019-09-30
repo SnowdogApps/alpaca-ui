@@ -150,9 +150,9 @@ export default {
         'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
       const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
 
-      let currentFocus = document.activeElement
-      let totalOfFocusable = focusableChildren.length
-      let focusedIndex = focusableChildren.indexOf(currentFocus)
+      const currentFocus = document.activeElement
+      const totalOfFocusable = focusableChildren.length
+      const focusedIndex = focusableChildren.indexOf(currentFocus)
 
       if (event.shiftKey && focusedIndex <= 0) {
         event.preventDefault()

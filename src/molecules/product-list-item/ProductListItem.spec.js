@@ -8,14 +8,14 @@ describe('Product List Item', () => {
     qty: 2,
     options: [
       {
-        'id': 'size_id_1',
-        'label': 'Size',
-        'value': 'XXL'
+        id: 'size_id_1',
+        label: 'Size',
+        value: 'XXL'
       },
       {
-        'id': 'color_id_1',
-        'label': 'Color',
-        'value': 'Red'
+        id: 'color_id_1',
+        label: 'Color',
+        value: 'Red'
       }
     ],
     price: {
@@ -41,11 +41,11 @@ describe('Product List Item', () => {
     const wrapper = mount(AProductListItem, {
       propsData: sampleRequiredData,
       slots: {
-        name: `<h2 data-test="name">Sample name</h2>`,
-        image: `<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">`,
-        prices: `<div data-test="prices">$100</div>`,
-        options: `<ul data-test="options"><li>option</li></ul>`,
-        removeAction: `<button type="button" data-test="remove">Remove</button>`
+        name: '<h2 data-test="name">Sample name</h2>',
+        image: '<img data-test="image" src="/images/catalog-grid-item/product-1_320_312.jpg">',
+        prices: '<div data-test="prices">$100</div>',
+        options: '<ul data-test="options"><li>option</li></ul>',
+        removeAction: '<button type="button" data-test="remove">Remove</button>'
       }
     })
 

@@ -10,14 +10,14 @@ const info = '<p>Check <b>Knobs</b> tab to edit component properties dynamically
 
 const defaultOptions = [
   {
-    'id': 'size_id_1',
-    'label': 'Size',
-    'value': 'XXL'
+    id: 'size_id_1',
+    label: 'Size',
+    value: 'XXL'
   },
   {
-    'id': 'color_id_1',
-    'label': 'Color',
-    'value': 'Red'
+    id: 'color_id_1',
+    label: 'Color',
+    value: 'Red'
   }
 ]
 const defaultPrices = {

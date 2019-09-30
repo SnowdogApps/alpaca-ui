@@ -57,7 +57,7 @@ export default {
   },
   computed: {
     hasQuantitySlot () {
-      return !!this.$slots['quantity']
+      return !!this.$slots.quantity
     }
   },
   methods: {

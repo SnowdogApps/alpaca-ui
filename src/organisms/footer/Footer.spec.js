@@ -11,13 +11,13 @@ describe('Footer', () => {
       propsData: {
         heading: 'Example heading',
         input: {
-          'field': {
-            'placeholder': 'Input',
-            'id': 'inputId',
-            'name': 'inputName'
+          field: {
+            placeholder: 'Input',
+            id: 'inputId',
+            name: 'inputName'
           },
-          'label': {
-            'text': 'Input label'
+          label: {
+            text: 'Input label'
           }
         },
         cookieText: 'Cookie text'
@@ -32,12 +32,12 @@ describe('Footer', () => {
   it('renders slots content when passed', () => {
     const wrapper = mount(AFooter, {
       slots: {
-        newsletter: `<span data-test="newsletter">Newsletter</span>`,
+        newsletter: '<span data-test="newsletter">Newsletter</span>',
         list: '',
-        socialTitle: `<span data-test="socialTitle">Title</span>`,
+        socialTitle: '<span data-test="socialTitle">Title</span>',
         social: '',
-        copyright: `<span data-test="copyright">Copyright</span>`,
-        cookie: `<span data-test="cookie">Cookie</span>`
+        copyright: '<span data-test="copyright">Copyright</span>',
+        cookie: '<span data-test="cookie">Cookie</span>'
       }
     })
 
@@ -61,8 +61,8 @@ describe('Footer', () => {
   it('call scrollTo function', () => {
     const wrapper = mount(AFooter, {
       slots: {
-        newsletter: `<span data-test="newsletter">Newsletter</span>`,
-        cookie: `<span data-test="cookie">Cookie</span>`
+        newsletter: '<span data-test="newsletter">Newsletter</span>',
+        cookie: '<span data-test="cookie">Cookie</span>'
       }
     })
 
