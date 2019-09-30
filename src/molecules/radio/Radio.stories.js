@@ -4,8 +4,10 @@ import { text } from '@storybook/addon-knobs'
 
 import ARadio from './Radio.vue'
 
+const info = `<p>Check <b>Knobs</b> tab to edit component properties dynamically.</p>`
+
 storiesOf('Molecules/Radio', module)
-  .addParameters({ info: true })
+  .addParameters({ info })
   .add('Default', () => ({
     components: { ARadio },
     data () {
