@@ -4,27 +4,23 @@ import { text } from '@storybook/addon-knobs'
 
 import ARadio from './Radio.vue'
 
-const sampleData = {
-  data () {
-    return {
-      selected: ''
-    }
-  },
-  props: {
-    labelTextKnobs: {
-      default: text('Label', 'Option one')
-    }
-  },
-  methods: {
-    change: action('Changed')
-  }
-}
-
 storiesOf('Molecules/Radio', module)
   .addParameters({ info: true })
   .add('Default', () => ({
     components: { ARadio },
-    ...sampleData,
+    data () {
+      return {
+        selected: ''
+      }
+    },
+    props: {
+      labelTextKnobs: {
+        default: text('Label', 'Option one')
+      }
+    },
+    methods: {
+      change: action('Changed')
+    },
     template: `
       <div>
         <a-radio
@@ -41,7 +37,19 @@ storiesOf('Molecules/Radio', module)
   }))
   .add('With slot', () => ({
     components: { ARadio },
-    ...sampleData,
+    data () {
+      return {
+        selected: ''
+      }
+    },
+    props: {
+      labelTextKnobs: {
+        default: text('Label', 'Option one')
+      }
+    },
+    methods: {
+      change: action('Changed')
+    },
     template: `
       <div>
         <a-radio
