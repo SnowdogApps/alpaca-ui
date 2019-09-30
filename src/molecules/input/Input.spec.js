@@ -39,7 +39,7 @@ describe('Input', () => {
         id: 'input-id'
       },
       slots: {
-        label: `<label for="input-id">Alpaca UI</label>`
+        label: '<label for="input-id">Alpaca UI</label>'
       }
     })
 

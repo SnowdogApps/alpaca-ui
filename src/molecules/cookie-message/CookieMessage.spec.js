@@ -11,8 +11,8 @@ describe('Cookie message', () => {
   it('renders slots content when passed', () => {
     const wrapper = mount(ACookieMessage, {
       slots: {
-        default: `<span>Sample content</span>`,
-        button: `<button>Sample button</button>`
+        default: '<span>Sample content</span>',
+        button: '<button>Sample button</button>'
       }
     })
 

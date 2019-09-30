@@ -21,8 +21,8 @@ describe('Pagination', () => {
         currentPage: 5
       },
       slots: {
-        arrowLeft: `<span data-test="left">Left</span>`,
-        arrowRight: `<span data-test="right">Right</span>`
+        arrowLeft: '<span data-test="left">Left</span>',
+        arrowRight: '<span data-test="right">Right</span>'
       }
     })
     expect(wrapper.find('span[data-test="left"]').text()).toBe('Left')

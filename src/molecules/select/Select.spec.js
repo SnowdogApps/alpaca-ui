@@ -7,12 +7,12 @@ describe('Select', () => {
     name: 'select',
     options: [
       {
-        'text': 'Albania',
-        'value': 'AL'
+        text: 'Albania',
+        value: 'AL'
       },
       {
-        'text': 'Algeria',
-        'value': 'DZ'
+        text: 'Algeria',
+        value: 'DZ'
       }
     ]
   }

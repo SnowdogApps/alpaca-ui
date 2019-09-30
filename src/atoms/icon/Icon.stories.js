@@ -19,15 +19,15 @@ import AIconStar from './templates/IconStar.vue'
 import AIconStarBorder from './templates/IconStarBorder.vue'
 
 const wrapperStyles = {
-  'margin': '20px',
-  'width': '100px',
-  'display': 'flex',
+  margin: '20px',
+  width: '100px',
+  display: 'flex',
   'flex-direction': 'column',
   'align-items': 'center'
 }
 
 const labelStyles = {
-  'display': 'block',
+  display: 'block',
   'margin-top': '20px',
   'text-align': 'center'
 }

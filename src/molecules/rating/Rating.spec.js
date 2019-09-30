@@ -13,7 +13,7 @@ describe('Rating', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(ARating, {
       slots: {
-        item: `<span data-test="item">Sample text</span>`
+        item: '<span data-test="item">Sample text</span>'
       }
     })
 
