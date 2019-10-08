@@ -1,15 +1,27 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { text } from '@storybook/addon-knobs'
 
 import ARadio from './Radio.vue'
 
+const info = '<p>Check <b>Knobs</b> tab to edit component properties dynamically.</p>'
+
 storiesOf('Molecules/Radio', module)
-  .addParameters({ info: true })
+  .addParameters({ info })
   .add('Default', () => ({
     components: { ARadio },
     data () {
       return {
-        selected: 'option_two'
+        selected: ''
       }
+    },
+    props: {
+      labelTextKnobs: {
+        default: text('Label', 'Option one')
+      }
+    },
+    methods: {
+      change: action('Changed')
     },
     template: `
       <div>
@@ -17,17 +29,10 @@ storiesOf('Molecules/Radio', module)
           v-model="selected"
           name="radio1"
           value="option_one"
+          @change="change"
           id="r1"
         >
-          Option one
-        </a-radio>
-        <a-radio
-          v-model="selected"
-          name="radio2"
-          value="option_two"
-          id="r2"
-        >
-          Option two
+          {{ labelTextKnobs }}
         </a-radio>
       </div>
     `
@@ -39,12 +44,21 @@ storiesOf('Molecules/Radio', module)
         selected: ''
       }
     },
+    props: {
+      labelTextKnobs: {
+        default: text('Label', 'Option one')
+      }
+    },
+    methods: {
+      change: action('Changed')
+    },
     template: `
       <div>
         <a-radio
           v-model="selected"
           name="radio1"
           id="id1"
+          @change="change"
           value="option_one"
         >
           <template #option="label">
@@ -54,17 +68,9 @@ storiesOf('Molecules/Radio', module)
               style="background-color: #f1f1f1;"
             >
               <span class="a-radio__icon" />
-              Custom option one
+              {{ labelTextKnobs }}
             </label>
           </template>
-        </a-radio>
-        <a-radio
-          v-model="selected"
-          name="radio2"
-          id="id2"
-          value="option_two"
-        >
-          Option two
         </a-radio>
       </div>
     `
