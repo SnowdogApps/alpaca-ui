@@ -42,7 +42,7 @@ export default {
 
       if (
         this.currentPage <
-        this.visibleNumbers - Math.floor(this.visibleNumbers / 2) + 1
+        this.visibleNumbers - Math.floor(this.visibleNumbers / 2) + 2
       ) {
         this.showFirst = false
         this.showLast = true
