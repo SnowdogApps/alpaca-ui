@@ -20,7 +20,8 @@ export default {
     return {
       showFirst: false,
       showLast: false,
-      visibleNumbers: 3
+      visibleNumbers: 3,
+      currentPageLocal: this.currentPage
     }
   },
   computed: {
@@ -41,7 +42,7 @@ export default {
       }
 
       if (
-        this.currentPage <
+        this.currentPageLocal <
         this.visibleNumbers - Math.floor(this.visibleNumbers / 2) + 2
       ) {
         this.showFirst = false
@@ -51,7 +52,7 @@ export default {
       }
 
       if (
-        this.numberOfPages - this.currentPage <
+        this.numberOfPages - this.currentPageLocal <
         this.visibleNumbers - Math.floor(this.visibleNumbers / 2) + 1
       ) {
         this.showFirst = true
@@ -66,12 +67,12 @@ export default {
       this.showLast = true
 
       return this.listOfPageNumbers.slice(
-        this.currentPage - Math.floor(this.visibleNumbers / 2) - 1,
-        this.currentPage + Math.floor(this.visibleNumbers / 2)
+        this.currentPageLocal - Math.floor(this.visibleNumbers / 2) - 1,
+        this.currentPageLocal + Math.floor(this.visibleNumbers / 2)
       )
     },
     setCurrentPage (value) {
-      this.currentPage = value
+      this.currentPageLocal = value
       /**
        * Triggered when page is changed
        * @type {Event}
