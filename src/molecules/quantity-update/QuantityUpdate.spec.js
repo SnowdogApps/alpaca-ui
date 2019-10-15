@@ -19,10 +19,10 @@ describe('Quantity update', () => {
         value: 1
       },
       slots: {
-        label: `<label for="qty-update">Qty</label>`,
-        minus: `<button type="button" data-test="minus">-</button>`,
-        input: `<input id="qty-update">`,
-        plus: `<button type="button" data-test="plus">+</button>`
+        label: '<label for="qty-update">Qty</label>',
+        minus: '<button type="button" data-test="minus">-</button>',
+        input: '<input id="qty-update">',
+        plus: '<button type="button" data-test="plus">+</button>'
       }
     })
     const label = wrapper.find('.a-quantity-update > label')

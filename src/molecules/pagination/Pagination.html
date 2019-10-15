@@ -1,0 +1,86 @@
+<nav class="a-pagination">
+  <ul class="a-pagination__list">
+    <li class="a-pagination__item">
+      <a-button
+        class="a-pagination__button a-pagination__button--prev"
+        aria-label="Go to previous page"
+        :disabled="currentPageLocal < 2"
+        @click.native="setCurrentPage(currentPageLocal - 1)"
+      >
+        <!-- @slot Default icon for arrow-left (Named slot) -->
+        <slot name="arrowLeft">
+          <a-icon>
+            <a-icon-arrow-left />
+          </a-icon>
+        </slot>
+      </a-button>
+    </li>
+
+    <template v-if="showFirst">
+      <li class="a-pagination__item">
+        <a-button
+          class="a-pagination__button"
+          @click.native="setCurrentPage(1)"
+        >
+          1
+        </a-button>
+      </li>
+      <li class="a-pagination__dots">
+        <!-- @slot Default dots (Named slot) -->
+        <slot name="dots">
+          ...
+        </slot>
+      </li>
+    </template>
+
+    <li
+      v-for="number in limitedPageNumbers"
+      :key="number"
+      class="a-pagination__item"
+    >
+      <a-button
+        :class="[
+          'a-pagination__button',
+          { 'a-pagination__button--current': currentPageLocal === number }
+        ]"
+        @click.native="setCurrentPage(number)"
+        :disabled="number === currentPageLocal"
+      >
+        {{ number }}
+      </a-button>
+    </li>
+
+    <template v-if="showLast">
+      <li class="a-pagination__dots">
+        <!-- @slot Default dots (Named slot) -->
+        <slot name="dots">
+          ...
+        </slot>
+      </li>
+      <li class="a-pagination__item">
+        <a-button
+          class="a-pagination__button"
+          @click.native="setCurrentPage(numberOfPages)"
+        >
+          {{ numberOfPages }}
+        </a-button>
+      </li>
+    </template>
+
+    <li class="a-pagination__item">
+      <a-button
+        class="a-pagination__button a-pagination__button--next"
+        aria-label="Go to next page"
+        :disabled="currentPageLocal > numberOfPages - 1"
+        @click.native="setCurrentPage(currentPageLocal + 1)"
+      >
+        <!-- @slot Default icon for arrow-right (Named slot) -->
+        <slot name="arrowRight">
+          <a-icon>
+            <a-icon-arrow-right />
+          </a-icon>
+        </slot>
+      </a-button>
+    </li>
+  </ul>
+</nav>

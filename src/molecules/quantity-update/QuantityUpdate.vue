@@ -3,15 +3,17 @@
 <script>
 import AQuantityUpdate from './QuantityUpdate.js'
 
-import AInputWrapper from '../../molecules/input-wrapper/InputWrapper.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
+import AIconAdd from '../../atoms/icon/templates/IconAdd.vue'
+import AIconRemove from '../../atoms/icon/templates/IconRemove.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ALabel from '../../atoms/label/Label.vue'
 
 export default {
   components: {
-    AInputWrapper,
     AIcon,
+    AIconAdd,
+    AIconRemove,
     AButton,
     ALabel
   },
@@ -19,6 +21,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import './QuantityUpdate.scss';
-</style>
+<style lang="scss" src="./QuantityUpdate.scss" />

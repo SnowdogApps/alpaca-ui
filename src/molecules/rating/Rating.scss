@@ -1,17 +1,19 @@
 @import '../../../assets/styles/_globals.scss';
 
-$rating__button-padding: $reset;
-$rating__icon-width: 40px;
-$rating__icon-height: 40px;
+$rating__button-padding: 0;
+$rating__icon-width    : 40px;
+$rating__icon-height   : 40px;
 
 .a-rating {
   &__button {
     padding: $rating__button-padding;
+    transition: none;
   }
 
   &__icon {
     width: $rating__icon-width;
     height: $rating__icon-height;
+    transition: none;
 
     &--disabled {
       position: absolute;

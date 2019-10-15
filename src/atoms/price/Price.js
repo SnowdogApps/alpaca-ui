@@ -2,6 +2,13 @@
 export default {
   props: {
     /**
+     * Regular price value
+     */
+    regularPrice: {
+      type: [String, Number],
+      default: null
+    },
+    /**
      * Special price value
      */
     specialPrice: {
@@ -9,33 +16,32 @@ export default {
       default: null
     },
     /**
-     * Old price value
-     */
-    oldPrice: {
-      type: [String, Number],
-      default: null
-    },
-    /**
      * Aria label for special price
      */
-    ariaLabelSpecial: {
+    ariaLabelSpecialPrice: {
       type: String,
       default: null
     },
     /**
      * Aria label for old price
      */
-    ariaLabelOld: {
+    ariaLabelOldPrice: {
       type: String,
       default: null
-    }
-  },
-  computed: {
-    specialPriceAriaLabel () {
-      return `${this.ariaLabelSpecial} ${this.specialPrice}`
     },
-    oldPriceAriaLabel () {
-      return `${this.ariaLabelOld} ${this.oldPrice}`
+    /**
+     * Special price item custom class
+     */
+    specialPriceCustomClass: {
+      type: String,
+      default: null
+    },
+    /**
+     * Old price item custom class
+     */
+    oldPriceCustomClass: {
+      type: String,
+      default: null
     }
   }
 }

@@ -1,0 +1,50 @@
+@import '../../../assets/styles/_globals.scss';
+
+$input__margin                 : 0 0 $spacer--medium 0 !default;
+$input-wrapper__label-margin   : 0 $spacer--medium 0 0 !default;
+
+$input__field-padding          : 0 $spacer--large 0 $spacer--medium !default;
+$input__field-width            : 100% !default;
+$input__field-height           : 40px !default;
+$input__field-border           : 1px solid $form-elements-border-color !default;
+$input__field-border-radius    : $form-elements-radius !default;
+$input__field-placeholder-color: $gray !default;
+
+$input__icon-top               : 20px !default;
+$input__icon-right             : 8px !default;
+
+.a-input {
+  position: relative;
+  margin: $input__margin;
+
+  &--inline {
+    display: flex;
+    align-items: center;
+
+    .a-label {
+      flex-shrink: 0;
+      margin: $input-wrapper__label-margin;
+    }
+  }
+
+  &__field {
+    width: $input__field-width;
+    height: $input__field-height;
+    padding: $input__field-padding;
+    border: $input__field-border;
+    border-radius: $input__field-border-radius;
+
+    &[type='search'] {
+      -webkit-appearance: textfield;
+
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+      }
+    }
+
+    &::placeholder {
+      color: $input__field-placeholder-color;
+    }
+  }
+}

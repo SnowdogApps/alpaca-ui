@@ -1,17 +1,18 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './Label.selectors.json'
+
 import ALabel from './Label.vue'
 
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-label--inline\` - Selector for applying inline styles
-  - \`.a-label--hidden\` - Selector for applying hidden styles, mainly used for accessibility purposes
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
 
-const bemModifiers = [null, 'a-label--inline', 'a-label--hidden']
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Atoms/Label', module)
   .addParameters({ info })
@@ -19,7 +20,7 @@ storiesOf('Atoms/Label', module)
     components: { ALabel },
     props: {
       classKnobs: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       },
       textKnobs: {
         default: text('Text', 'Label')
@@ -35,7 +36,7 @@ storiesOf('Atoms/Label', module)
     components: { ALabel },
     props: {
       classKnobs: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       },
       textKnobs: {
         default: text('Text', 'Custom tag label')

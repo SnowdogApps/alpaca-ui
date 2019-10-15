@@ -1,64 +1,52 @@
-@import '../../../assets/styles/globals';
+@import '../../../assets/styles/_variables';
 
-$checkbox__margin            : $spacer !default;
-$checkbox__line-height       : 18px !default;
-$checkbox__label-padding     : 26px !default;
-$checkbox__border            : 2px solid $gray !default;
-$checkbox__border--checked   : none !default;
+$checkbox__icon-size                             : 14px !default;
+$checkbox__icon-fill                             : $white !default;
 
-$checkbox__icon-size         : 18px !default;
-$checkbox__icon-border-radius: 2px !default;
-$checkbox__icon-fill         : $color-primary !default;
-$checkbox__icon-transition   : $transition-base !default;
+$checkbox__icon-wrapper-margin                   : 0 $spacer 0 0 !default;
+$checkbox__icon-wrapper-border                   : 2px solid $gray !default;
+$checkbox__icon-wrapper-border-radius            : 2px !default;
+
+$checkbox__icon-wrapper-border--checked          : 2px solid $color-primary !default;
+$checkbox__icon-wrapper-background-color--checked: $color-primary !default;
 
 .a-checkbox {
   position: relative;
-  margin-bottom: $checkbox__margin;
+  display: flex;
 
   &__field {
     position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
 
-    &:checked + .a-checkbox__icon {
-      opacity: 1;
-    }
+    &:checked + .a-checkbox__label {
+      .a-checkbox__icon-wrapper {
+        background-color: $checkbox__icon-wrapper-background-color--checked;
+        border: $checkbox__icon-wrapper-border--checked;
+      }
 
-    &:checked ~ .a-checkbox__label::before {
-      border: $checkbox__border--checked;
+      .a-checkbox__icon {
+        opacity: 1;
+      }
     }
   }
 
   &__label {
-    display: block;
-    margin: $reset;
-    padding-left: $checkbox__label-padding;
-    line-height: $checkbox__line-height;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+  }
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: $checkbox__icon-size;
-      height: $checkbox__icon-size;
-      border: $checkbox__border;
-      border-radius: $checkbox__icon-border-radius;
-      content: '';
-    }
+  &__icon-wrapper {
+    margin: $checkbox__icon-wrapper-margin;
+    border: $checkbox__icon-wrapper-border;
+    border-radius: $checkbox__icon-wrapper-border-radius;
   }
 
   &__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: $checkbox__icon-size;
     height: $checkbox__icon-size;
-    padding: $reset;
     cursor: pointer;
     opacity: 0;
-    transition: $checkbox__icon-transition;
     fill: $checkbox__icon-fill;
   }
 }

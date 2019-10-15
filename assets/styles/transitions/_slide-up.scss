@@ -1,0 +1,38 @@
+$offset: 50px;
+$animationDuration: 400ms;
+
+@-webkit-keyframes slide-up-enter {
+  from {
+    transform: translate3d(0, $offset, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up-enter {
+  from {
+    transform: translate3d(0, $offset, 0);
+    opacity: 0;
+  }
+}
+
+.slide-up-enter-active {
+  animation: slide-up-enter $animationDuration both cubic-bezier(0.4, 0, 0, 0);
+}
+
+@-webkit-keyframes slide-up-leave {
+  to {
+    transform: translate3d(0, $offset, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up-leave {
+  to {
+    transform: translate3d(0, $offset, 0);
+    opacity: 0;
+  }
+}
+
+.slide-up-leave-active {
+  animation: slide-up-leave $animationDuration both;
+}

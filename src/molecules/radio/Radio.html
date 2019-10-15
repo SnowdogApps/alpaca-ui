@@ -1,0 +1,27 @@
+<div class="a-radio">
+  <input
+    v-bind="$attrs"
+    :id="id"
+    :value="value"
+    :checked="checked === value"
+    type="radio"
+    :class="['a-radio__field', inputClass]"
+    @change="$emit('change', $event.target.value)"
+  >
+  <!-- @slot Custom radio option (Scoped slot) -->
+  <slot
+    name="option"
+    :id="id"
+  >
+    <a-label
+      :for="id"
+      class="a-radio__label"
+    >
+      <span class="a-radio__icon" />
+      <span class="a-radio__text">
+        <!-- @slot Radio label (Default slot) -->
+        <slot/>
+      </span>
+    </a-label>
+  </slot>
+</div>

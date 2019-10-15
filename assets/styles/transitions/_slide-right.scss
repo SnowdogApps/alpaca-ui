@@ -1,37 +1,38 @@
+$offset: -150px;
+$animationDuration: 400ms;
+
 @-webkit-keyframes slide-right-enter {
   from {
-    -webkit-transform: translate3d(150px, 0, 0);
-    transform: translate3d(150px, 0, 0);
+    transform: translate3d($offset, 0, 0);
+    opacity: 0;
   }
 }
 
 @keyframes slide-right-enter {
   from {
-    -webkit-transform: translate3d(150px, 0, 0);
-    transform: translate3d(150px, 0, 0);
+    transform: translate3d($offset, 0, 0);
+    opacity: 0;
   }
 }
 
 .slide-right-enter-active {
-  -webkit-animation: slide-right-enter both cubic-bezier(0.4, 0, 0, 1.5);
-  animation: slide-right-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: slide-right-enter $animationDuration both cubic-bezier(0.4, 0, 0, 0);
 }
 
 @-webkit-keyframes slide-right-leave {
   to {
-    -webkit-transform: translate3d(150px, 0, 0);
-    transform: translate3d(150px, 0, 0);
+    transform: translate3d($offset, 0, 0);
+    opacity: 0;
   }
 }
 
 @keyframes slide-right-leave {
   to {
-    -webkit-transform: translate3d(150px, 0, 0);
-    transform: translate3d(150px, 0, 0);
+    transform: translate3d($offset, 0, 0);
+    opacity: 0;
   }
 }
 
 .slide-right-leave-active {
-  -webkit-animation: slide-right-leave both;
-  animation: slide-right-leave both;
+  animation: slide-right-leave $animationDuration both;
 }

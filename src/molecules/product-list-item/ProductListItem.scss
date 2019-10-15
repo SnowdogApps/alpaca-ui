@@ -1,0 +1,177 @@
+@import '../../../assets/styles/_globals.scss';
+
+$product-list-item__padding                     : $spacer--large 0 !default;
+$product-list-item__border                      : 1px solid $gray-light !default;
+$product-list-item__color                       : $gray-darker !default;
+$product-list-item__font-weight                 : $font-weight-normal !default;
+
+$product-list-item__image-width                 : 160px !default;
+$product-list-item__image-padding               : 0 $spacer--medium 0 0 !default;
+
+$product-list-item__name-weight\@small          : $font-weight-bold !default;
+$product-list-item__name-padding\@small         : 0 $spacer 0 0 !default;
+$product-list-item__name-text-decoration        : none !default;
+
+$product-list-item__attributes-font-size        : $font-size-small !default;
+$product-list-item__attributes-font-size\@small : $font-size-base !default;
+
+$product-list-item__attribute-label-padding     : 0 !default;
+$product-list-item__attribute-label-margin      : 0 $spacer $spacer 0 !default;
+
+$product-list-item__attribute-value-padding     : 0 !default;
+$product-list-item__attribute-value-margin      : 0 $spacer $spacer 0 !default;
+
+$product-list-item__actions-item-margin         : 0 0 0 $spacer !default;
+
+$product-list-item__button-border               : none !default;
+$product-list-item__button-background           : none !default;
+
+$product-list-item__action-icon-fill-color      : $gray-darker !default;
+$product-list-item__action-icon-fill-color-hover: $color-primary !default;
+$product-list-item__action-icon-transition      : $transition-base !default;
+
+$product-list-item__qty-label-margin            : 0 $spacer 0 0 !default;
+
+.a-product-list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: $product-list-item__padding;
+  color: $product-list-item__color;
+  border-bottom: $product-list-item__border;
+
+  &__image {
+    flex: 0 0 35%;
+    max-width: $product-list-item__image-width;
+    padding: $product-list-item__image-padding;
+  }
+
+  &__info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__data {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__name {
+    flex: 1;
+    margin-bottom: $spacer;
+    color: $product-list-item__color;
+    line-height: $font-line-height;
+    text-decoration: $product-list-item__name-text-decoration;
+
+    @include mq($screen-s) {
+      padding: $product-list-item__name-padding\@small;
+      font-weight: $product-list-item__name-weight\@small;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: $product-list-item__name-text-decoration;
+    }
+  }
+
+  &__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-weight: $product-list-item__font-weight;
+    text-align: right;
+
+    @include mq($screen-m) {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: flex-end;
+    }
+  }
+
+  &__old-price {
+    margin-bottom: $spacer;
+
+    @include mq($screen-m) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__qty-label {
+    align-self: center;
+    margin: $product-list-item__qty-label-margin;
+    font-weight: $product-list-item__font-weight;
+  }
+
+  &__action-buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__attributes {
+    display: inline-block;
+    width: 100%;
+    font-size: $product-list-item__attributes-font-size;
+
+    @include mq($screen-s) {
+      font-size: $product-list-item__attributes-font-size\@small;
+    }
+  }
+
+  &__attribute-label {
+    float: left;
+    clear: left;
+    margin: $product-list-item__attribute-label-margin;
+    padding: $product-list-item__attribute-label-padding;
+    padding: 0;
+
+    &::after {
+      content: ': ';
+    }
+  }
+
+  &__attribute-value {
+    float: left;
+    margin: $product-list-item__attribute-value-margin;
+    padding: $product-list-item__attribute-value-padding;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: $spacer--medium;
+
+    @include mq($screen-m) {
+      flex-direction: row;
+    }
+
+    &--to-right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__action-button {
+    background: $product-list-item__button-background;
+    border: $product-list-item__button-border;
+
+    &:hover,
+    &:focus {
+      background: $product-list-item__button-background;
+    }
+  }
+
+  &__action-icon {
+    fill: $product-list-item__action-icon-fill-color;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      transition: $product-list-item__action-icon-transition;
+      fill: $product-list-item__action-icon-fill-color-hover;
+    }
+  }
+
+  &__actions-item {
+    margin: $product-list-item__actions-item-margin;
+  }
+}

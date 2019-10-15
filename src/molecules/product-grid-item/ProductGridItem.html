@@ -1,0 +1,117 @@
+<a-list-item class="a-product-grid-item">
+  <!--@slot Custom product badge (Scoped slot)-->
+  <slot
+    name="badge"
+    :product-badge-text="badgeText"
+  >
+    <a-badge
+      v-if="badgeText"
+      class="a-product-grid-item__badge"
+    >
+      {{ badgeText }}
+    </a-badge>
+  </slot>
+
+  <!--@slot Custom product image (Scoped slot)-->
+  <slot
+    name="image"
+    :product-image-url="imageUrl"
+    :product-image-alt="name"
+  >
+    <router-link
+      :to="url"
+      class="a-product-grid-item__link a-product-grid-item__link--image"
+    >
+      <a-image
+        :src="imageUrl"
+        :alt="name"
+        class="a-product-grid-item__image"
+      />
+    </router-link>
+  </slot>
+
+  <div class="a-product-grid-item__details">
+    <!--@slot Custom product name (Scoped slot)-->
+    <slot
+      name="name"
+      :product-name="name"
+      :product-url="url"
+    >
+      <div class="a-product-grid-item__name">
+        <router-link
+          :to="url"
+          class="a-product-grid-item__link a-product-grid-item__link--name"
+        >
+          {{ name }}
+        </router-link>
+      </div>
+    </slot>
+
+    <!--@slot Custom product rating (Named slot)-->
+    <slot name="rating" />
+
+    <!--@slot Custom product price (Scoped slot)-->
+    <slot
+      name="prices"
+      :product-prices="prices"
+    >
+      <a-price
+        v-if="prices"
+        :regular-price="prices.regularPrice"
+        :special-price="prices.specialPrice"
+        class="a-product-grid-item__price"
+      />
+    </slot>
+
+    <div class="a-product-grid-item__actions">
+      <div class="a-product-grid-item__secondary-actions">
+        <!--@slot Custom add to wishlist action (Scoped slot)-->
+        <slot
+          name="addToWishList"
+          :product-add-to-wishlist="addToWishList"
+          :product-add-to-wishlist-text="addToWishListText"
+        >
+          <a-button
+            :aria-label="addToWishListText"
+            @click.native="addToWishList"
+            class="a-product-grid-item__action-button"
+          >
+            <a-icon>
+              <a-icon-favorite-border />
+            </a-icon>
+          </a-button>
+        </slot>
+
+        <!--@slot Custom add to compare action (Scoped slot)-->
+        <slot
+          name="addToCompare"
+          :add-to-compare="addToCompare"
+          :add-to-compare-text="addToCompareText"
+        >
+          <a-button
+            :aria-label="addToCompareText"
+            @click.native="addToCompare"
+            class="a-product-grid-item__action-button"
+          >
+            <a-icon>
+              <a-icon-equalizer />
+            </a-icon>
+          </a-button>
+        </slot>
+      </div>
+      <!--@slot Custom add to cart action (Scoped slot)-->
+      <slot
+        name="addToCart"
+        :product-add-to-cart="addToCart"
+        :product-add-to-cart-text="addToCartText"
+      >
+        <a-button
+          class="a-button--secondary a-product-grid-item__primary-action"
+          @click.native="addToCart"
+        >
+          {{ addToCartText }}
+        </a-button>
+      </slot>
+    </div>
+  </div>
+</a-list-item>

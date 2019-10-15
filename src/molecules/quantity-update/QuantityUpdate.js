@@ -40,6 +40,13 @@ export default {
       default: null
     },
     /**
+     * Indicate if buttons and input are disabled
+     */
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    /**
      * Decrement button aria-label (Default button)
      */
     decrementAriaLabel: {

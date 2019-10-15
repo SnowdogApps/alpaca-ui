@@ -1,9 +1,10 @@
 // @vue/component
 
 export default {
+  inheritAttrs: false,
   model: {
     prop: 'checked',
-    event: 'input'
+    event: 'change'
   },
   props: {
     /**
@@ -14,30 +15,23 @@ export default {
       default: false
     },
     /**
-     * Input value
-     */
-    value: {
-      type: String,
-      default: null
-    },
-    /**
      * Input id
      */
     id: {
       type: String,
-      default: null
-    },
-    /**
-     * Input name
-     */
-    name: {
-      type: String,
-      default: null
+      required: true
     },
     /**
      * Class for input
      */
     inputClass: {
+      type: String,
+      default: null
+    },
+    /**
+     * Icon title
+     */
+    iconTitle: {
       type: String,
       default: null
     }

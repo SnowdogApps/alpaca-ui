@@ -3,7 +3,6 @@
 $mega-menu__border-bottom: 1px solid $gray-light !default;
 $mega-menu__font-color: $gray-darker !default;
 $mega-menu__font-weight: $font-weight-bold !default;
-$mega-menu__font-size: $font-size-base !default;
 $mega-menu__font-size--large: 16px !default;
 $mega-menu__background-color: $white !default;
 $mega-menu__list-justify-content: flex-start !default;
@@ -17,7 +16,7 @@ $mega-menu__link-text-decoration: none !default;
 .mega-menu {
   position: relative;
   display: none;
-  margin: $reset;
+  margin: 0;
   color: $mega-menu__font-color;
   background: $mega-menu__background-color;
   border-bottom: $mega-menu__border-bottom;
@@ -31,7 +30,7 @@ $mega-menu__link-text-decoration: none !default;
     display: flex;
     flex-wrap: nowrap;
     justify-content: $mega-menu__list-justify-content;
-    padding: $reset;
+    padding: 0;
     list-style: none;
     background-color: $mega-menu__list-background-color;
   }

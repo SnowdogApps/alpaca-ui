@@ -1,50 +1,69 @@
 @import '../../../assets/styles/_globals.scss';
 
-$select__margin       : $spacer !default;
-$select__padding      : 0 $spacer--medium 0 $spacer--medium !default;
-$select__border       : 1px solid $form-elements-border-color !default;
-$select__spacing      : 40px !default;
-$select__arrow-color  : $gray-dark transparent transparent transparent !default;
-$select__border-radius: 20px !default;
+$select__field-border             : 1px solid $form-elements-border-color !default;
+$select__field-border-radius      : 20px !default;
+$select__field-margin--after      : 3px 0 0 0;
+$select__field-border-color--after: $gray-dark transparent transparent transparent !default;
+$select__field-border-right--after: $spacer--medium !default;
+$select__field-border-style--after: solid !default;
+$select__field-border-width--after: 5px !default;
 
-.select {
-  margin-bottom: $select__margin;
+$select__input-height             : 32px !default;
+$select__input-width              : 100% !default;
+$select__input-padding            : 0 $spacer--medium 0 $spacer--medium !default;
+$select__input-padding--icon      : 0 $spacer--extra-large 0 $spacer--medium !default;
+$select__input-background-color   : transparent !default;
+$select__input-border             : none !default;
+$select__input-outline            : none !default;
+$select__input-font-size          : $font-size-base;
 
+.a-select {
   &__field {
     position: relative;
-    padding: $reset;
-    border: $select__border;
-    border-radius: $select__border-radius;
+    display: flex;
+    align-items: center;
+    border: $select__field-border;
+    border-radius: $select__field-border-radius;
 
     &::after {
       position: absolute;
-      top: 50%;
-      right: 11.5px;
-      width: 0;
-      height: 0;
-      margin-top: -2.5px;
-      border-color: $select__arrow-color;
-      border-style: solid;
-      border-width: 5px;
+      right: $select__field-border-right--after;
+      margin: $select__field-margin--after;
+      border-color: $select__field-border-color--after;
+      border-style: $select__field-border-style--after;
+      border-width: $select__field-border-width--after;
       content: "";
-      pointer-events: none;
+    }
+
+    &--icon {
+      &::after {
+        content: none;
+      }
+
+      .a-select__input {
+        padding: $select__input-padding--icon;
+      }
     }
   }
 
   &__input {
-    width: 100%;
-    height: $select__spacing;
-    padding: $select__padding;
-    line-height: $select__spacing;
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
+    width: $select__input-width;
+    height: $select__input-height;
+    padding: $select__input-padding;
+    font-size: $select__input-font-size;
+    background-color: $select__input-background-color;
+    border: $select__input-border;
     -moz-appearance: none;
     -webkit-appearance: none;
 
     &:hover,
     &:focus {
-      outline: none;
+      outline: $select__input-outline;
+    }
+
+    // To remove select arrow on IE
+    &::-ms-expand {
+      display: none;
     }
   }
 }

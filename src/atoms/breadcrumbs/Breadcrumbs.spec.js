@@ -4,14 +4,19 @@ import ABreadcrumbs from './Breadcrumbs.vue'
 
 describe('Breadcrumbs', () => {
   it('has default structure', () => {
+    const itemsCount = breadcrumbs.length
     const wrapper = mount(ABreadcrumbs, {
       propsData: {
         breadcrumbs: breadcrumbs
       },
       stubs: ['router-link']
     })
-    expect(wrapper.is('div')).toBe(true)
+    expect(wrapper.is('nav')).toBe(true)
+    expect(wrapper.attributes('aria-label')).toEqual('Breadcrumb')
     expect(wrapper.classes()).toContain('a-breadcrumbs')
+    expect(wrapper.findAll('.a-breadcrumbs__separator').length).toBe(itemsCount - 1)
+    expect(wrapper.findAll('.a-breadcrumbs__link').length).toBe(itemsCount)
+    expect((wrapper.find('.a-breadcrumbs__link--current')).attributes('aria-current')).toEqual('page')
     expect(wrapper.classes().length).toBe(1)
   })
 

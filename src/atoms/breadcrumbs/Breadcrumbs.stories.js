@@ -1,4 +1,5 @@
 import { addDecorator, storiesOf } from '@storybook/vue'
+import { object } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-vue-router'
 
 import ABreadcrumbs from './Breadcrumbs.vue'
@@ -6,28 +7,34 @@ import ALink from '../link/Link.vue'
 
 import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
-// @vue/component
 const defaultData = {
   data: () => ({ breadcrumbs })
 }
 
 addDecorator(StoryRouter())
+
 storiesOf('Atoms/Breadcrumbs', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { ABreadcrumbs },
+    props: {
+      breadcrumbsKnob: {
+        default: object('Breadcrumbs links', breadcrumbs)
+      }
+    },
     ...defaultData,
-    template: `
-      <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
-    `
+    template: '<a-breadcrumbs :breadcrumbs="breadcrumbsKnob"/>'
   }))
-  // @vue/component
   .add('With slots', () => ({
     components: { ABreadcrumbs, ALink },
+    props: {
+      breadcrumbsKnob: {
+        default: object('Breadcrumbs links', breadcrumbs)
+      }
+    },
     ...defaultData,
     template: `
-      <a-breadcrumbs :breadcrumbs="breadcrumbs">
+      <a-breadcrumbs :breadcrumbs="breadcrumbsKnob">
         <template #previous="data">
           <a-link
             :href="data.breadcrumb.href"
@@ -42,7 +49,10 @@ storiesOf('Atoms/Breadcrumbs', module)
           </span>
         </template>
         <template #current="data">
-          <span style="padding: 0 10px; color: #2962ff; line-height: 1.5;">
+          <span
+            aria-current="page"
+            style="padding: 0 10px; color: #2962ff;"
+          >
             {{ data.breadcrumb.text }}
           </span>
         </template>

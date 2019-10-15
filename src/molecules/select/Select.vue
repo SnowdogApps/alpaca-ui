@@ -6,7 +6,9 @@ import ASelect from './Select.js'
 import ALabel from '../../atoms/label/Label.vue'
 
 export default {
-  components: { ALabel },
+  components: {
+    ALabel
+  },
   mixins: [ASelect]
 }
 </script>

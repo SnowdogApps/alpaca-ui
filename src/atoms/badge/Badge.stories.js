@@ -1,21 +1,17 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './Badge.selectors.json'
+
 import ABadge from './Badge.vue'
 
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-badge--new\` - Selector for applying styles for new badge
-  - \`.a-badge--sale\` - Selector for applying styles for sale badge
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
-
-const bemModifiers = [
-  null,
-  'a-badge--new',
-  'a-badge--sale'
-]
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Atoms/Badge', module)
   .addParameters({ info })
@@ -26,7 +22,7 @@ storiesOf('Atoms/Badge', module)
         default: text('Badge text', 'Default badge')
       },
       classKnob: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       }
     },
     template: `
@@ -42,12 +38,15 @@ storiesOf('Atoms/Badge', module)
         default: text('Badge text', 'Custom tag')
       },
       classKnob: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
+      },
+      tagKnob: {
+        default: text('Html tag', 'span')
       }
     },
     template: `
       <a-badge
-        tag="span"
+        :tag="tagKnob"
         :class="classKnob"
       >
         {{ textKnob }}

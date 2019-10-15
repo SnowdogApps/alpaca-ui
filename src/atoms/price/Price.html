@@ -1,24 +1,28 @@
-<div class="price">
-  <!-- @slot Custom old price slots (Named slots) -->
+<div class="a-price">
+  <!-- @slot Custom old price (Named slots) -->
   <slot name="oldPrice">
     <del
-      v-if="oldPrice"
-      :aria-label="oldPriceAriaLabel"
-      class="price__value price__value--old"
+      v-if="specialPrice && regularPrice"
+      :aria-label="`${this.ariaLabelOldPrice} ${this.regularPrice}`"
+      :class="['a-price__old', oldPriceCustomClass]"
     >
-      {{ oldPrice }}
+      {{ regularPrice }}
     </del>
   </slot>
-  <!-- @slot Custom special price slots (Named slots) -->
+  <!-- @slot Custom special price (Named slots) -->
   <slot name="specialPrice">
     <ins
       v-if="specialPrice"
-      :aria-label="specialPriceAriaLabel"
-      class="price__value price__value--special"
+      :aria-label="`${this.ariaLabelSpecialPrice} ${this.specialPrice}`"
+      :class="['a-price__special', specialPriceCustomClass]"
     >
       {{ specialPrice }}
     </ins>
   </slot>
-  <!-- @slot Custom price content (Default slot) -->
-  <slot/>
+  <!-- @slot Custom regular price (Named slot) -->
+  <slot name="regularPrice">
+    <template v-if="!specialPrice && regularPrice">
+      {{ regularPrice }}
+    </template>
+  </slot>
 </div>

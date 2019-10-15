@@ -1,15 +1,9 @@
 @import '../../../assets/styles/_globals.scss';
 
 $image__width                   : 100% !default;
-$image__wrapper-background-color: $white !default;
 
-.image {
+.a-image {
   display: block;
   width: $image__width;
   max-width: $image__width;
-}
-
-img,
-picture {
-  @extend .image;
 }

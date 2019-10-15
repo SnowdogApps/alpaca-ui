@@ -45,8 +45,7 @@
     "suffix": ""
   },
   "pager": {
-    "page": 1,
-    "limit": 4,
+    "currentPage": 3,
     "totalSize": 15
   },
   "amount": {

@@ -1,24 +1,10 @@
 import { storiesOf } from '@storybook/vue'
-import { select, text } from '@storybook/addon-knobs'
+import { text } from '@storybook/addon-knobs'
 
 import ACollapse from './Collapse.vue'
 
-const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-collapse--secondary\` - Selector for applying secondary styles
-  - \`.a-collapse--inner\` - Selector for applying inner styles
-  ---
-`
-
-const bemModifiers = [
-  null,
-  'a-collapse--secondary',
-  'a-collapse--inner'
-]
-
 storiesOf('Molecules/Collapse', module)
-  .addParameters({ info })
+  .addParameters({ info: true })
   .add(
     'Default',
     () => ({
@@ -26,9 +12,6 @@ storiesOf('Molecules/Collapse', module)
         ACollapse
       },
       props: {
-        classKnobs: {
-          default: select('BEM Modifier', bemModifiers)
-        },
         titleTextKnobs: {
           default: text('Title', 'Collapse title text')
         },
@@ -37,11 +20,13 @@ storiesOf('Molecules/Collapse', module)
         }
       },
       template: `
-        <a-collapse 
-          :class="classKnobs"
+        <a-collapse
           :title="titleTextKnobs"
+          icon-title="Angle down icon"
         >
-          <span>{{ contentTextKnobs }}</span>
+          <div style="padding: 16px 0;">
+            {{ contentTextKnobs }}
+          </div>
         </a-collapse>
       `
     })
@@ -54,12 +39,20 @@ storiesOf('Molecules/Collapse', module)
       },
       template: `
         <a-collapse>
-          <template #button="{ toggle, collapseLocal, ariaControls }">
-            <button 
-              :aria-expanded="!collapseLocal"
-              :aria-controls="ariaControls"
-              style="width: 100px; height: 50px; z-index: 1; position: relative;"
-              @click="toggle"
+          <template #button="button">
+            <button
+              :aria-expanded="!button.collapseLocal"
+              :aria-controls="button.ariaControls"
+              style="
+                width: 100%;
+                height: 40px;
+                z-index: 1;
+                position: relative;
+                background-color: #31e37d;
+                cursor: pointer;
+                border-radius: 4px;
+              "
+              @click="button.toggle"
             >
               Text
             </button>

@@ -1,0 +1,43 @@
+<div :class="['a-footer-menu', isLargeScreen && 'a-footer-menu--screen-m']">
+  <a-collapse
+    class="a-footer-menu__list"
+    button-class="a-footer-menu__button"
+    content-class="a-footer-menu__content"
+    v-for="item in menu"
+    :key="item.id"
+    :visible="isLargeScreen"
+    :title="item.title"
+    :id="item.id"
+  >
+    <template #button="button">
+      <a-button
+        :class="[
+          'a-button--blank a-collapse__button a-footer-menu__button',
+          { 'a-footer-menu__button--active': button.visibility }
+        ]"
+        :aria-controls="button.visibility && button.ariaControls"
+        @click.native="button.toggle"
+        :aria-expanded="button.visibility"
+        :disabled="isLargeScreen"
+      >
+        {{ item.title }}
+        <a-icon class="a-footer-menu__icon a-collapse__icon">
+          <a-icon-expand-more />
+        </a-icon>
+      </a-button>
+    </template>
+    <a-list>
+      <a-list-item
+        v-for="link in item.items"
+        :key="link.id"
+      >
+        <a-link
+          class="a-footer-menu__link"
+          :href="link.link"
+        >
+          {{ link.title }}
+        </a-link>
+      </a-list-item>
+    </a-list>
+  </a-collapse>
+</div>

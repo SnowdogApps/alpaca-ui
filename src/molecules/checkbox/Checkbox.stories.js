@@ -3,8 +3,8 @@ import { action } from '@storybook/addon-actions'
 
 import ACheckbox from './Checkbox.vue'
 import AIcon from './../../atoms/icon/Icon.vue'
+import AIconCheck from './../../atoms/icon/templates/IconCheck.vue'
 
-// @vue/component
 const defaultData = {
   data: () => {
     return {
@@ -18,7 +18,6 @@ const defaultData = {
 
 storiesOf('Molecules/Checkbox', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     ...defaultData,
     components: { ACheckbox },
@@ -26,20 +25,21 @@ storiesOf('Molecules/Checkbox', module)
       <a-checkbox
         id="checkbox-default"
         name="checkbox-default"
+        icon-title="Checked icon"
         v-model="status"
         value="some value"
-        @input="onChange"
+        @change="onChange"
       >
         Checkbox field
       </a-checkbox>
     `
   }))
-  // @vue/component
   .add('With slot', () => ({
     ...defaultData,
     components: {
       ACheckbox,
-      AIcon
+      AIcon,
+      AIconCheck
     },
     template: `
       <a-checkbox
@@ -48,18 +48,22 @@ storiesOf('Molecules/Checkbox', module)
         input-class="a-checkbox__field"
         v-model="status"
         value="some value"
-        @input="onChange"
+        @change="onChange"
       >
         <template #label>
-          <a-icon
-            icon="checked"
-            class="a-checkbox__icon"
-          />
           <label
             for="checkbox-slots"
             class="a-checkbox__label"
             style="color: #0000ff;"
           >
+            <div class="a-checkbox__icon-wrapper">
+              <a-icon
+                class="a-checkbox__icon"
+                title="Checked icon"
+              >
+                <a-icon-check />
+              </a-icon>
+            </div>
             I hereby agree for processing my personal data.
           </label>
         </template>

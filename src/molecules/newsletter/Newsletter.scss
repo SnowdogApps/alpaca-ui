@@ -1,0 +1,72 @@
+@import '../../../assets/styles/_globals.scss';
+
+$newsletter__heading-margin          : 0 !default;
+$newsletter__heading-color           : $white !default;
+$newsletter__heading-line-height     : 48px !default;
+
+$newsletter__controls-margin         : 0 0 $spacer--medium 0 !default;
+
+$newsletter__input-height            : 32px !default;
+$newsletter__input-border-radius     : 32px !default;
+$newsletter__input-padding           : 0 $spacer--medium !default;
+$newsletter__input-background        : $gray-dark !default;
+$newsletter__input-color             : $white !default;
+$newsletter__input-color--placeholder: rgba(255, 255, 255, 0.7) !default;
+
+$newsletter__button-border-radius    : 32px !default;
+$newsletter__button-height           : 32px !default;
+$newsletter__button-padding          : 0 $spacer--medium !default;
+
+$newsletter__agreement-padding       : 0 0 $spacer--medium 0;
+$newsletter__agreement-color         : $white !default;
+$newsletter__agreement-font-size     : $font-size-small !default;
+
+.a-newsletter {
+  &__heading {
+    margin: $newsletter__heading-margin;
+    color: $newsletter__heading-color;
+    line-height: $newsletter__heading-line-height;
+  }
+
+  &__controls {
+    position: relative;
+    margin: $newsletter__controls-margin;
+  }
+
+  &__input {
+    width: 100%;
+    height: $newsletter__input-height;
+    margin: 0;
+    padding: $newsletter__input-padding;
+    color: $newsletter__input-color;
+    line-height: $newsletter__input-height;
+    background: $newsletter__input-background;
+    border: none;
+    border-radius: $newsletter__input-border-radius;
+
+    &::placeholder {
+      color: $newsletter__input-color--placeholder;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $newsletter__button-height;
+    padding: $newsletter__button-padding;
+    border-radius: $newsletter__button-border-radius;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &__agreement {
+    padding: $newsletter__agreement-padding;
+    color: $newsletter__agreement-color;
+    font-size: $newsletter__agreement-font-size;
+  }
+}

@@ -9,23 +9,23 @@ export default {
       default: null
     },
     /**
-     * Item collapse
+     * Icon title
      */
-    collapse: {
-      type: Boolean,
-      default: true
-    },
-    /**
-     * Custom class for content
-     */
-    contentClass: {
+    iconTitle: {
       type: String,
       default: null
+    },
+    /**
+     * Initial visibility (To make the <a-collapse> show initially, set the visible prop)
+     */
+    visible: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     return {
-      collapseLocal: this.collapse
+      visibility: this.visible
     }
   },
   computed: {
@@ -33,9 +33,14 @@ export default {
       return this.title && this.title.replace(/ /g, '_')
     }
   },
+  watch: {
+    visible (value) {
+      this.visibility = value
+    }
+  },
   methods: {
     toggle () {
-      this.collapseLocal = !this.collapseLocal
+      this.visibility = !this.visibility
     }
   }
 }

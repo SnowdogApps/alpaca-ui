@@ -1,16 +1,28 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { number, text } from '@storybook/addon-knobs'
+import { number, text, select, boolean } from '@storybook/addon-knobs'
+
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './QuantityUpdate.selectors.json'
 
 import AQuantityUpdate from './QuantityUpdate.vue'
 
-const info = 'Check **Knobs** tab to edit component properties dynamically.'
+const info = `
+  Check **Knobs** tab to edit component properties dynamically.<br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
+`
+
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Molecules/Quantity Update', module)
   .addParameters({ info })
   .add('Default', () => ({
     components: { AQuantityUpdate },
     props: {
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      },
       labelKnob: {
         default: text('Label', 'Quantity')
       },
@@ -19,6 +31,9 @@ storiesOf('Molecules/Quantity Update', module)
       },
       maxQtyKnob: {
         default: number('Max qty', 100)
+      },
+      isDisabled: {
+        default: boolean('Disabled', false)
       }
     },
     data () {
@@ -32,11 +47,13 @@ storiesOf('Molecules/Quantity Update', module)
     template: `
       <a-quantity-update
         v-model="qty"
+        :class="classKnob"
         @update="updateVal"
         :label="labelKnob"
         input-id="qty-update"
         :min-qty="minQtyKnob"
         :max-qty="maxQtyKnob"
+        :disabled="isDisabled"
         decrement-aria-label="Decrease the quantity"
         decrement-icon-title="Minus mark"
         increment-aria-label="Increase the quantity"
@@ -55,6 +72,9 @@ storiesOf('Molecules/Quantity Update', module)
       },
       maxQtyKnob: {
         default: number('Max qty', 20)
+      },
+      classKnob: {
+        default: select('Input wrapper class', classKnobsConfig)
       }
     },
     methods: {
@@ -68,6 +88,7 @@ storiesOf('Molecules/Quantity Update', module)
     template: `
       <a-quantity-update
         v-model="qty"
+        :class="classKnob"
         @update="updateVal"
         :min-qty="minQtyKnob"
         :max-qty="maxQtyKnob"
@@ -80,20 +101,20 @@ storiesOf('Molecules/Quantity Update', module)
             {{ labelKnob }}
           </label>
         </template>
-        <template #minus="{ updateQty }">
-          <button @click="updateQty(-1)">-</button>
+        <template #minus="minus">
+          <button @click="minus.updateQty(-1)">-</button>
         </template>
-        <template #input="{ currentValue, inputEvent }">
+        <template #input="input">
           <input
             id="qty-update"
             type="number"
-            :value="currentValue"
-            @input="inputEvent"
+            :value="input.currentValue"
+            @input="input.inputEvent"
             style="border: 0; text-align: center;"
           >
         </template>
-        <template #plus="{ updateQty }">
-          <button @click="updateQty(1)">+</button>
+        <template #plus="plus">
+          <button @click="plus.updateQty(1)">+</button>
         </template>
       </a-quantity-update>
     `

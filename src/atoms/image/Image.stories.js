@@ -1,15 +1,20 @@
 import { storiesOf } from '@storybook/vue'
+import { text } from '@storybook/addon-knobs'
 
 import AImage from './Image.vue'
 
 storiesOf('Atoms/Image', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { AImage },
+    props: {
+      srcKnob: {
+        default: text('Image src', 'images/image/banner-480_480.png')
+      }
+    },
     template: `
       <a-image
-        src="images/image/banner-480_480.png"
+        :src="srcKnob"
         alt="alt image text"
       />
     `

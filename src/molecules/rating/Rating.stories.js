@@ -1,8 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { number, text, color } from '@storybook/addon-knobs'
+import { number, color, text } from '@storybook/addon-knobs'
 
 import ARating from './Rating.vue'
+import AIcon from '../../atoms/icon/Icon.vue'
+import AIconClose from '../../atoms/icon/templates/IconClose.vue'
+import AIconCheck from '../../atoms/icon/templates/IconCheck.vue'
 
 storiesOf('Molecules/Rating', module)
   .addParameters({ info: true })
@@ -12,17 +15,11 @@ storiesOf('Molecules/Rating', module)
       select: action('Selected')
     },
     props: {
-      activeColor: {
+      activeColorKnob: {
         default: color('Active color', '#fab216')
       },
-      uncheckedColor: {
-        default: color('Unchecked color', '#c9c9c9')
-      },
-      activeIcon: {
-        default: text('Active icon', 'star')
-      },
-      uncheckedIcon: {
-        default: text('Unchecked icon', 'star-border')
+      inactiveColorKnob: {
+        default: color('Inactive color', '#c9c9c9')
       },
       numberOfRatingKnob: {
         default: number('Number of rating', 5)
@@ -31,10 +28,8 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="numberOfRatingKnob"
-        :active-icon="activeIcon"
-        :unchecked-icon="uncheckedIcon"
-        :active-color="activeColor"
-        :unchecked-color="uncheckedColor"
+        :active-color="activeColorKnob"
+        :inactive-color="inactiveColorKnob"
         @select="select"
       />
     `
@@ -42,16 +37,13 @@ storiesOf('Molecules/Rating', module)
   .add('Read only', () => ({
     components: { ARating },
     props: {
-      uncheckedColor: {
-        default: color('Unchecked color', '#c9c9c9')
+      inactiveColorKnob: {
+        default: color('Inactive color', '#c9c9c9')
       },
-      activeColor: {
+      activeColorKnob: {
         default: color('Active icon', '#d42343')
       },
-      uncheckedIcon: {
-        default: text('Unchecked icon', 'star-border')
-      },
-      average: {
+      averageKnob: {
         default: number('Average', 3.4)
       },
       numberOfRatingKnob: {
@@ -61,20 +53,68 @@ storiesOf('Molecules/Rating', module)
     template: `
       <a-rating
         :items="numberOfRatingKnob"
-        :unchecked-color="uncheckedColor"
-        :active-color="activeColor"
-        :unchecked-icon="uncheckedIcon"
-        :average="average"
+        :inactive-color="inactiveColorKnob"
+        :active-color="activeColorKnob"
+        :average="averageKnob"
       />
+    `
+  }))
+  .add('With custom icons', () => ({
+    components: {
+      ARating,
+      AIcon,
+      AIconClose,
+      AIconCheck
+    },
+    methods: {
+      select: action('Selected')
+    },
+    props: {
+      activeColorKnob: {
+        default: color('Active color', '#39FD56')
+      },
+      inactiveColorKnob: {
+        default: color('Inactive color', '#E02020')
+      },
+      numberOfRatingKnob: {
+        default: number('Number of rating', 5)
+      },
+      iconTitleKnob: {
+        default: text('Icon title', 'Rating icon')
+      }
+    },
+    template: `
+      <a-rating
+        :items="numberOfRatingKnob"
+        :active-color="activeColorKnob"
+        :inactive-color="inactiveColorKnob"
+        @select="select"
+      >
+        <template #customIcon>
+          <a-icon :title="iconTitleKnob">
+            <a-icon-check />
+          </a-icon>
+        </template>
+        <template #customUncheckedIcon>
+          <a-icon :title="iconTitleKnob">
+            <a-icon-close />
+          </a-icon>
+        </template>
+      </a-rating>
     `
   }))
   .add('With slot', () => ({
     components: { ARating },
+    props: {
+      numberOfRatingKnob: {
+        default: number('Number of rating', 3)
+      }
+    },
     methods: {
       click: action('Clicked')
     },
     template: `
-      <a-rating :items="3">
+      <a-rating :items="numberOfRatingKnob">
         <template #item="data">
           <svg
             @click="click(data.item)"
@@ -82,8 +122,11 @@ storiesOf('Molecules/Rating', module)
             role="img"
             :style="[(data.item.isActive || data.item.selected) && {fill: 'red'}, {width: '24px', height: '24px'}]"
           >
-            <title>heart</title>
-            <use xlink:href="/assets/icons/sprite.svg#heart" />
+            <g>
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </g>
           </svg>
         </template>
       </a-rating>

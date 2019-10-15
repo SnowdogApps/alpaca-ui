@@ -2,15 +2,13 @@
 
 <script>
 import AHeading from '../../atoms/heading/Heading.vue'
-import AIcon from '../../atoms/icon/Icon.vue'
 
 import ABriefInfo from './BriefInfo.js'
 
 export default {
   name: 'AlpacaBriefInfo',
   components: {
-    AHeading,
-    AIcon
+    AHeading
   },
   mixins: [ABriefInfo]
 }

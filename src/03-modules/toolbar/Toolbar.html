@@ -8,20 +8,22 @@
       class="toolbar__mode-button"
       @click.native="gridView"
     >
-      <a-icon
+      <!-- <a-icon
         icon="grid"
         class="toolbar__mode-icon toolbar__mode-icon--active"
-      />
+      /> -->
+      <!-- Icon should be here -->
     </a-button>
     <a-button
       aria-label="Change to list view"
       class="toolbar__mode-button"
       @click.native="listView"
     >
-      <a-icon
+      <!-- <a-icon
         icon="list"
         class="toolbar__mode-icon"
-      />
+      /> -->
+      <!-- Icon should be here -->
     </a-button>
   </div>
   <div
@@ -74,10 +76,9 @@
     class="toolbar__pager"
   >
     <a-pager
-      :page="currentPage"
-      :limit="pager.limit"
-      :total-size="pager.totalSize"
-      @update:page="page => setCurrentPage(page)"
+      :current-page="pager.currentPage"
+      :number-of-pages="pager.totalSize"
+      @update="setCurrentPage"
     />
   </div>
 </div>

@@ -1,4 +1,5 @@
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const path = require('path')
 
 module.exports = ({ config }) => {
   config.module.rules.push({
@@ -25,10 +26,7 @@ module.exports = ({ config }) => {
   config.module.rules.push({
     enforce: 'pre',
     test: /\.(js|vue)$/,
-    loader: 'eslint-loader',
-    options: {
-      fix: true
-    }
+    loader: 'eslint-loader'
   })
 
   config.plugins.push(new StyleLintPlugin({
@@ -39,6 +37,11 @@ module.exports = ({ config }) => {
     ],
     fix: true
   }))
+
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    '@utils': path.resolve(__dirname, '../utils')
+  }
 
   return config
 }

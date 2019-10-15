@@ -5,7 +5,6 @@ import AFileUpload from './FileUpload.vue'
 
 storiesOf('Molecules/File Upload', module)
   .addParameters({ info: true })
-  // @vue/component
   .add('Default', () => ({
     components: { AFileUpload },
     template: `
@@ -16,7 +15,6 @@ storiesOf('Molecules/File Upload', module)
       />
     `
   }))
-  // @vue/component
   .add('With slots', () => ({
     components: {
       AButton,
@@ -24,9 +22,9 @@ storiesOf('Molecules/File Upload', module)
     },
     template: `
       <a-file-upload accepted-formats=".pdf,.doc">
-        <template #file="{ fileName }">
+        <template #file="file">
           <span>
-            {{ fileName }}
+            {{ file.fileName }}
           </span>
         </template>
         <template #title>
@@ -34,11 +32,11 @@ storiesOf('Molecules/File Upload', module)
             Your file (pdf, doc)
           </span>
         </template>
-        <template #button="{ chooseFile }">
+        <template #button="button">
           <a-button
             class="custom file-upload__button"
             aria-controls="file"
-            @click.native="chooseFile"
+            @click.native="button.chooseFile"
           >
             Upload new file
           </a-button>
@@ -49,7 +47,6 @@ storiesOf('Molecules/File Upload', module)
       </a-file-upload>
     `
   }))
-  // @vue/component
   .add('File size limit', () => ({
     components: { AFileUpload },
     template: `

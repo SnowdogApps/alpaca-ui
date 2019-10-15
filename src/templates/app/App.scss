@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext');
 @import '../../../assets/styles/_globals.scss';
 @import '../../../assets/styles/_reset.scss';
+@import '../../../assets/styles/_focus-visible.scss';
 @import '../../../assets/styles/transitions/_fade.scss';
+@import '../../../assets/styles/transitions/_slide-up.scss';
 @import '../../../assets/styles/transitions/_slide-right.scss';
 @import '../../../assets/styles/transitions/_slide-down.scss';
+@import '../../../assets/styles/transitions/_slide-left.scss';

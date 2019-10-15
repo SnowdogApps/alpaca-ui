@@ -1,35 +1,33 @@
 @import '../../../assets/styles/globals';
 
-$price__color                   : $gray-darker !default;
-$price__color--special          : $red !default;
-$price__color--old              : $gray !default;
-$price__font-size               : $font-size-base !default;
-$price__font-size--large        : $font-size-large !default;
-$price__font-weight             : $font-weight-bold !default;
-$price__special-margin-left     : $spacer--medium !default;
-$price__wrapper-font-weight--old: $font-weight-normal !default;
-$price__wrapper-font-size--old  : $font-size-small !default;
+$price__color                  : $gray-darker !default;
+$price__font-size              : $font-size-base !default;
 
-.price {
+$price__old-color              : $gray !default;
+$price__old-font-weight        : $font-weight-normal !default;
+$price__old-font-size          : $font-size-small !default;
+$price__old-text-decoration    : line-through !default;
+
+$price__special-color          : $red !default;
+$price__special-font-weight    : $font-weight-bold !default;
+$price__special-margin         : 0 0 0 $spacer--medium !default;
+$price__special-text-decoration: none !default;
+
+.a-price {
   color: $price__color;
   font-size: $price__font-size;
 
-  &__value {
-    &--old {
-      color: $price__color--old;
-      font-weight: $price__wrapper-font-weight--old;
-      font-size: $price__wrapper-font-size--old;
-      text-decoration: line-through;
-    }
+  &__old {
+    color: $price__old-color;
+    font-weight: $price__old-font-weight;
+    font-size: $price__old-font-size;
+    text-decoration: $price__old-text-decoration;
+  }
 
-    &--special {
-      color: $price__color--special;
-      font-weight: $price__font-weight;
-      text-decoration: none;
-    }
-
-    &--old + &--special {
-      margin-left: $price__special-margin-left;
-    }
+  &__special {
+    margin: $price__special-margin;
+    color: $price__special-color;
+    font-weight: $price__special-font-weight;
+    text-decoration: $price__special-text-decoration;
   }
 }

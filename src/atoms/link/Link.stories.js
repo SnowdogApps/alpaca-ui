@@ -1,20 +1,18 @@
 import { storiesOf } from '@storybook/vue'
 import { select, text } from '@storybook/addon-knobs'
 
+import generateVueInfoTable from '@utils/helpers/generate-vue-info-table.js'
+import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
+import selectorsConfig from './Link.selectors.json'
+
 import ALink from './Link.vue'
 
 const info = `
-  ---
-  Check **Knobs** tab to edit component properties dynamically. Below list of available BEM modifiers.
-  - \`.a-link--inverted\` - Selector for applying inverted styles
-  - \`.a-link--secondary\` -  Selector for applying secondary styles
-  ---
+  <p>Check <b>Knobs</b> tab to edit component properties dynamically.</p><br>
+  ${generateVueInfoTable(selectorsConfig, 'BEM modifiers')}
 `
-const bemModifiers = [
-  null,
-  'a-link--inverted',
-  'a-link--secondary'
-]
+
+const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 storiesOf('Atoms/Link', module)
   .addParameters({ info })
@@ -25,11 +23,11 @@ storiesOf('Atoms/Link', module)
         default: text('Link text', 'Default link')
       },
       classKnob: {
-        default: select('BEM Modifier', bemModifiers)
+        default: select('BEM Modifier', classKnobsConfig)
       }
     },
     template: `
-      <a-link 
+      <a-link
         href="#"
         :class="classKnob"
       >
