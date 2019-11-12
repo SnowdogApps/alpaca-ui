@@ -55,6 +55,7 @@ storiesOf('Molecules/Product List Item', module)
         :prices="pricesKnob"
         :options="optionsKnob"
         remove-button-aria-label="Remove this product from your shopping cart"
+        action-icon-title="Action title"
         @remove="removeMethod"
       />
     `
@@ -92,6 +93,7 @@ storiesOf('Molecules/Product List Item', module)
         :prices="pricesKnob"
         :options="optionsKnob"
         remove-button-aria-label="Remove this product from your shopping cart"
+        action-icon-title="Action title"
         @remove="removeMethod"
       >
         <template #quantity>

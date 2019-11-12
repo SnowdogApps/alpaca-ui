@@ -50,7 +50,10 @@
           >
             <!-- @slot Custom close icon (Named slot) -->
             <slot name="close">
-              <a-icon class="a-modal__close-icon">
+              <a-icon
+                class="a-modal__close-icon"
+                :title="closeIconTitle"
+              >
                 <a-icon-close />
               </a-icon>
             </slot>

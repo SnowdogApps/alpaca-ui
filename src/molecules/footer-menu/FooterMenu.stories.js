@@ -19,5 +19,10 @@ storiesOf('Molecules/Footer menu', module)
     methods: {
       submit: action('Submitted')
     },
-    template: '<a-footer-menu :menu="menuKnob"/>'
+    template: `
+      <a-footer-menu 
+        :menu="menuKnob"
+        collapse-icon-title="Collapse icon"
+      />
+    `
   }))

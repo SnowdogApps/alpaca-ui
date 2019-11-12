@@ -105,7 +105,10 @@ storiesOf('Molecules/Product Grid Item', module)
             style="display: flex; align-items: center;"
           >
             {{ badge.productBadgeText }}
-            <a-icon style="margin-left: 8px;">
+            <a-icon 
+              style="margin-left: 8px;"
+              title="Favorite border title"
+            >
               <a-icon-favorite-border />
             </a-icon>
           </a-badge>

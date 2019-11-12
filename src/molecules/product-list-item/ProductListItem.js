@@ -53,6 +53,13 @@ export default {
     removeButtonAriaLabel: {
       type: String,
       default: null
+    },
+    /**
+     * Action icon title
+     */
+    actionIconTitle: {
+      type: String,
+      default: null
     }
   },
   computed: {
