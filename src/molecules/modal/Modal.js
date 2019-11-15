@@ -111,7 +111,6 @@ export default {
         this.trigger = document.activeElement
         this.$nextTick(() => this.$refs.modal.focus())
       }
-      document.body.style.overflow = val ? 'hidden' : 'auto'
     }
   },
   methods: {
