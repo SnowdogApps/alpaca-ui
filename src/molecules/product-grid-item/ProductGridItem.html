@@ -76,7 +76,7 @@
             @click.native="addToWishList"
             class="a-product-grid-item__action-button"
           >
-            <a-icon>
+            <a-icon :title="addToWishListText">
               <a-icon-favorite-border />
             </a-icon>
           </a-button>
@@ -93,7 +93,7 @@
             @click.native="addToCompare"
             class="a-product-grid-item__action-button"
           >
-            <a-icon>
+            <a-icon :title="addToCompareText">
               <a-icon-equalizer />
             </a-icon>
           </a-button>

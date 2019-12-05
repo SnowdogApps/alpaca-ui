@@ -19,6 +19,7 @@
       :item="item"
     >
       <a-icon
+        :title="buttonAriaLabel(item.val)"
         :style="{
           fill: item.isActive || item.selected ? activeColor : inactiveColor
         }"
@@ -45,6 +46,7 @@
       </a-icon>
       <a-icon
         v-if="showAverageIcon(item) && !isIE"
+        title="buttonAriaLabel(item.val)"
         :style="{ clipPath: showAverage, fill: !item.isActive && activeColor }"
         :class="[
           'a-rating__icon',
