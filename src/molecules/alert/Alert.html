@@ -13,7 +13,10 @@
       class="a-alert__close"
       @click.native="close"
     >
-      <a-icon class="a-alert__close-icon">
+      <a-icon
+        class="a-alert__close-icon"
+        :title="closeIconTitle"
+      >
         <a-icon-close />
       </a-icon>
     </a-button>

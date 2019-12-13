@@ -21,7 +21,10 @@
         :disabled="isLargeScreen"
       >
         {{ item.title }}
-        <a-icon class="a-footer-menu__icon a-collapse__icon">
+        <a-icon
+          class="a-footer-menu__icon a-collapse__icon"
+          :title="collapseIconTitle"
+        >
           <a-icon-expand-more />
         </a-icon>
       </a-button>

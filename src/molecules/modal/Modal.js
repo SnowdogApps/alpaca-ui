@@ -93,6 +93,13 @@ export default {
     closeButtonAriaLabel: {
       type: String,
       default: null
+    },
+    /**
+     * Title for close icon
+     */
+    closeIconTitle: {
+      type: String,
+      default: null
     }
   },
   data () {

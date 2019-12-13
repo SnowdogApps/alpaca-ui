@@ -15,6 +15,13 @@ export default {
     closeAriaLabel: {
       type: String,
       default: null
+    },
+    /**
+     * Close icon title
+     */
+    closeIconTitle: {
+      type: String,
+      default: null
     }
   },
   methods: {
