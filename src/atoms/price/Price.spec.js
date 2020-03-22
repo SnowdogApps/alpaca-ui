@@ -43,11 +43,25 @@ describe('Price', () => {
   it('renders named slot regularPrice when passed', () => {
     const wrapper = mount(APrice, {
       slots: {
-        regularPrice: `<span>Price: $123,00</span>`
+        regularPrice: '<span>Price: $123,00</span>'
       }
     })
 
     expect(wrapper.find('div > span').exists()).toBe(true)
     expect(wrapper.find('div > span').text()).toEqual('Price: $123,00')
+  })
+
+  it('renders custom classes when passed', () => {
+    const wrapper = mount(APrice, {
+      propsData: {
+        regularPrice: '$128,00',
+        specialPrice: '$99,00',
+        oldPriceCustomClass: 'old-price-custom-class',
+        specialPriceCustomClass: 'special-price-custom-class'
+      }
+    })
+
+    expect(wrapper.find('.a-price__old').classes()).toContain('old-price-custom-class')
+    expect(wrapper.find('.a-price__special').classes()).toContain('special-price-custom-class')
   })
 })

@@ -35,6 +35,7 @@ storiesOf('Molecules/Cookie Message', module)
         :visible="isVisible"
         :close-button="textKnobs"
         close-aria-label="Close cookie message"
+        close-icon-title="Close message"
         @close="close"
       >
         <a-link href='#'>
@@ -61,6 +62,7 @@ storiesOf('Molecules/Cookie Message', module)
       <a-cookie-message
         :visible="isVisible"
         close-aria-label="Close cookie message"
+        close-icon-title="Close message"
         @close="close"
       >
         <a-link href='#'>

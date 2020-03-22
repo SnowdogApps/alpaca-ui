@@ -13,7 +13,7 @@ describe('List', () => {
   it('renders slot text when passed', () => {
     const wrapper = mount(AList, {
       slots: {
-        default: `<li>List default text</li>`
+        default: '<li>List default text</li>'
       }
     })
 

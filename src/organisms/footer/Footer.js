@@ -57,7 +57,17 @@ export default {
       type: Object,
       default: null
     },
+    /**
+     * Aria label for scroll
+     */
     scrollAriaLabel: {
+      type: String,
+      default: null
+    },
+    /**
+     * Title for scroll-up icon
+     */
+    scrollUpIconTitle: {
       type: String,
       default: null
     }

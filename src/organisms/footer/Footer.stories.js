@@ -85,6 +85,7 @@ storiesOf('Organisms/Footer', module)
               >
                 <!-- Add proper icon -->
                 <a-icon
+                  title="Go to A Youtube Channel"
                   class="a-footer__social-icon"
                   style="fill: #fff;"
                 >

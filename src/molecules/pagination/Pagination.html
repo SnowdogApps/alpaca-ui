@@ -4,12 +4,12 @@
       <a-button
         class="a-pagination__button a-pagination__button--prev"
         aria-label="Go to previous page"
-        :disabled="currentPage < 2"
-        @click.native="setCurrentPage(currentPage - 1)"
+        :disabled="currentPageLocal < 2"
+        @click.native="setCurrentPage(currentPageLocal - 1)"
       >
         <!-- @slot Default icon for arrow-left (Named slot) -->
         <slot name="arrowLeft">
-          <a-icon>
+          <a-icon title="Go to previous page">
             <a-icon-arrow-left />
           </a-icon>
         </slot>
@@ -41,10 +41,10 @@
       <a-button
         :class="[
           'a-pagination__button',
-          { 'a-pagination__button--current': currentPage === number }
+          { 'a-pagination__button--current': currentPageLocal === number }
         ]"
         @click.native="setCurrentPage(number)"
-        :disabled="number === currentPage"
+        :disabled="number === currentPageLocal"
       >
         {{ number }}
       </a-button>
@@ -71,12 +71,12 @@
       <a-button
         class="a-pagination__button a-pagination__button--next"
         aria-label="Go to next page"
-        :disabled="currentPage > numberOfPages - 1"
-        @click.native="setCurrentPage(currentPage + 1)"
+        :disabled="currentPageLocal > numberOfPages - 1"
+        @click.native="setCurrentPage(currentPageLocal + 1)"
       >
         <!-- @slot Default icon for arrow-right (Named slot) -->
         <slot name="arrowRight">
-          <a-icon>
+          <a-icon title="Go to next page">
             <a-icon-arrow-right />
           </a-icon>
         </slot>

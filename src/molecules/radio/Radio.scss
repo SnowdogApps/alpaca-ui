@@ -37,6 +37,7 @@ $radio__icon-background--checked      : $color-primary !default;
   }
 
   &__label {
+    display: flex;
     width: $radio__label-width;
     color: $radio__label-color;
     font-weight: $radio__label-font-weight;
@@ -46,7 +47,7 @@ $radio__icon-background--checked      : $color-primary !default;
 
   &__icon {
     display: inline-flex;
-    width: $radio__icon-size;
+    min-width: $radio__icon-size;
     height: $radio__icon-size;
     margin: $radio__icon-margin;
     vertical-align: $radio__vertical-align;

@@ -37,6 +37,7 @@
           v-if="prices"
           :special-price="prices.specialPrice"
           :regular-price="prices.regularPrice"
+          old-price-custom-class="a-product-list-item__old-price"
           class="a-product-list-item__price-wrapper"
         />
       </slot>
@@ -79,7 +80,10 @@
             custom-class="a-product-list-item__actions-item"
             @click.native="onRemove"
           >
-            <a-icon class="a-product-list-item__action-icon">
+            <a-icon
+              class="a-product-list-item__action-icon"
+              :title="actionIconTitle"
+            >
               <a-icon-delete />
             </a-icon>
           </a-button>

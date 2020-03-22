@@ -74,6 +74,7 @@ storiesOf('Molecules/Modal', module)
           :heading="headingKnob"
           :visible="isModalVisible"
           :class="classKnob"
+          close-icon-title="Close modal"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
           close-button-aria-label="Close"
@@ -110,6 +111,7 @@ storiesOf('Molecules/Modal', module)
           :heading="headingKnob"
           :visible="isModalVisible"
           :class="classKnob"
+          close-icon-title="Close modal"
           :closeButton="false"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
@@ -142,6 +144,7 @@ storiesOf('Molecules/Modal', module)
         <a-modal
           :visible="isModalVisible"
           :class="classKnob"
+          close-icon-title="Close modal"
           :closeButton="false"
           @close="closeModal()"
           :modal-content-transition="contentTransitionKnob"
@@ -209,7 +212,10 @@ storiesOf('Molecules/Modal', module)
             />
           </template>
           <template #close>
-            <a-icon class="a-modal__close-icon">
+            <a-icon 
+              class="a-modal__close-icon"
+              title="Close modal"
+            >
               <a-icon-close />
             </a-icon>
           </template>
@@ -236,7 +242,10 @@ storiesOf('Molecules/Modal', module)
             />
           </template>
           <template #close>
-            <a-icon class="a-modal__close-icon">
+            <a-icon 
+              class="a-modal__close-icon"
+              title="Close modal"
+            >
               <a-icon-close />
             </a-icon>
           </template>

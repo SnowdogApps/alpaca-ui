@@ -7,6 +7,13 @@ export default {
     menu: {
       type: Array,
       default: null
+    },
+    /**
+     * Collapse icon title
+     */
+    collapseIconTitle: {
+      type: String,
+      default: null
     }
   },
   data () {

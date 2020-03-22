@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.5.0] - 15-10-2019
 ### Added
 - Vue Info table generator helper
 - badge: tag knob and new test regarding custom tag
@@ -22,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TransitionExpand for Collapse component
 - Disabled attribute for QuantityUpdate component
 - Pagination component
+- Price component - custom classes props
 
 ### Removed
 - -webkit- in transitions
@@ -53,6 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactor styles in Select component
 - Update modal component js and styles to handle sidebar case
 - Update attributes passed to Select, Radio and Checkbox components ($attrs)
+- ProductListItem component styles for old price element
 
 ### Fixed
 - Typo in Message.selectors.json file

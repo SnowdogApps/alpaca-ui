@@ -10,14 +10,14 @@ const info = '<p>Check <b>Knobs</b> tab to edit component properties dynamically
 
 const defaultOptions = [
   {
-    'id': 'size_id_1',
-    'label': 'Size',
-    'value': 'XXL'
+    id: 'size_id_1',
+    label: 'Size',
+    value: 'XXL'
   },
   {
-    'id': 'color_id_1',
-    'label': 'Color',
-    'value': 'Red'
+    id: 'color_id_1',
+    label: 'Color',
+    value: 'Red'
   }
 ]
 const defaultPrices = {
@@ -55,6 +55,7 @@ storiesOf('Molecules/Product List Item', module)
         :prices="pricesKnob"
         :options="optionsKnob"
         remove-button-aria-label="Remove this product from your shopping cart"
+        action-icon-title="Action title"
         @remove="removeMethod"
       />
     `
@@ -92,6 +93,7 @@ storiesOf('Molecules/Product List Item', module)
         :prices="pricesKnob"
         :options="optionsKnob"
         remove-button-aria-label="Remove this product from your shopping cart"
+        action-icon-title="Action title"
         @remove="removeMethod"
       >
         <template #quantity>

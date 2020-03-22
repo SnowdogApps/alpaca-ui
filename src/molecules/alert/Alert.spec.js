@@ -12,8 +12,8 @@ describe('Alert', () => {
   it('renders slots content when passed', () => {
     const wrapper = mount(AAlert, {
       slots: {
-        default: `<span>Sample content</span>`,
-        button: `<button type="button">Sample button</button>`
+        default: '<span>Sample content</span>',
+        button: '<button type="button">Sample button</button>'
       }
     })
 

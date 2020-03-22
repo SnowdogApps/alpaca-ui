@@ -14,7 +14,10 @@
         :aria-label="scrollAriaLabel"
         @click.native="scrollToTop"
       >
-        <a-icon class="a-footer__scroll-up-icon">
+        <a-icon
+          class="a-footer__scroll-up-icon"
+          :title="scrollUpIconTitle"
+        >
           <a-icon-expand-less />
         </a-icon>
       </a-button>

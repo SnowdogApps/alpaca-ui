@@ -19,6 +19,7 @@ $message__information-font-size             : $font-size-base !default;
 $message__information-font-weight           : $font-weight-bold !default;
 $message__button-color                      : $white !default;
 $message__button-color--success             : $black !default;
+$message__button-background-color           : transparent !default;
 $message__button-font-weight--last-child    : $font-weight-bold !default;
 
 .message {
@@ -81,10 +82,12 @@ $message__button-font-weight--last-child    : $font-weight-bold !default;
   &__button {
     padding: 0;
     color: $message__button-color;
+    background-color: $message__button-background-color;
 
     &:hover,
     &:focus {
       color: $message__button-color;
+      background-color: $message__button-background-color;
     }
 
     &:last-child {

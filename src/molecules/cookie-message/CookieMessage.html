@@ -19,7 +19,10 @@
         @click.native="close"
       >
         {{ closeButton }}
-        <a-icon class="a-cookie-message__close-icon">
+        <a-icon
+          class="a-cookie-message__close-icon"
+          :title="closeIconTitle"
+        >
           <a-icon-close />
         </a-icon>
       </a-button>

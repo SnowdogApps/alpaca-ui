@@ -53,11 +53,18 @@ export default {
     removeButtonAriaLabel: {
       type: String,
       default: null
+    },
+    /**
+     * Action icon title
+     */
+    actionIconTitle: {
+      type: String,
+      default: null
     }
   },
   computed: {
     hasQuantitySlot () {
-      return !!this.$slots['quantity']
+      return !!this.$slots.quantity
     }
   },
   methods: {

@@ -93,6 +93,13 @@ export default {
     closeButtonAriaLabel: {
       type: String,
       default: null
+    },
+    /**
+     * Title for close icon
+     */
+    closeIconTitle: {
+      type: String,
+      default: null
     }
   },
   data () {
@@ -111,7 +118,6 @@ export default {
         this.trigger = document.activeElement
         this.$nextTick(() => this.$refs.modal.focus())
       }
-      document.body.style.overflow = val ? 'hidden' : 'auto'
     }
   },
   methods: {
@@ -150,9 +156,9 @@ export default {
         'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]'
       const focusableChildren = Array.from(this.$el.querySelectorAll(focusable))
 
-      let currentFocus = document.activeElement
-      let totalOfFocusable = focusableChildren.length
-      let focusedIndex = focusableChildren.indexOf(currentFocus)
+      const currentFocus = document.activeElement
+      const totalOfFocusable = focusableChildren.length
+      const focusedIndex = focusableChildren.indexOf(currentFocus)
 
       if (event.shiftKey && focusedIndex <= 0) {
         event.preventDefault()

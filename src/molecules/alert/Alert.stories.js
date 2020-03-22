@@ -30,6 +30,7 @@ storiesOf('Molecules/Alert', module)
       <a-alert
         :visible="isVisible"
         close-aria-label="Close alert"
+        close-icon-title="Close icon"
         @close="close"
       >
         {{ contentKnobs }}

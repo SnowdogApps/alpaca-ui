@@ -11,10 +11,10 @@ describe('Newsletter', () => {
   it('renders slots content when passed', () => {
     const wrapper = mount(ANewsletter, {
       slots: {
-        heading: `<h2 data-test="heading">Sample heading</h2>`,
-        input: `<input data-test="input" type="text"/>`,
-        button: `<button data-test="button" type="button">Sample button</button>`,
-        agreements: `<span data-test="span">Sample agreement</span>`
+        heading: '<h2 data-test="heading">Sample heading</h2>',
+        input: '<input data-test="input" type="text"/>',
+        button: '<button data-test="button" type="button">Sample button</button>',
+        agreements: '<span data-test="span">Sample agreement</span>'
       }
     })
 
