@@ -1,21 +1,16 @@
-// Storybook
-import { configure, addDecorator, addParameters } from '@storybook/vue'
+import { addDecorator, addParameters } from '@storybook/vue'
+import { withA11y } from '@storybook/addon-a11y'
+import { withKnobs } from '@storybook/addon-knobs'
+
+import AApp from '../src/templates/app/App.vue'
 
 // Polyfills
 import 'focus-visible'
 import 'svgxuse'
 
-// Addons
-import { withInfo } from 'storybook-addon-vue-info'
-import { withA11y } from '@storybook/addon-a11y'
-import { withKnobs } from '@storybook/addon-knobs'
-
-// Wrap every story in Alpaca App component
-import AApp from '../src/templates/app/App.vue'
-
-addDecorator(withInfo)
 addDecorator(withA11y)
 addDecorator(withKnobs)
+
 addDecorator(() => ({
   components: {
     AApp
@@ -36,10 +31,3 @@ addParameters({
     }
   }
 })
-
-function loadStories () {
-  const req = require.context('../src', true, /.stories.js$/)
-  req.keys().forEach(filename => req(filename))
-}
-
-configure(loadStories, module)
