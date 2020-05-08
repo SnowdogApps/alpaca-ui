@@ -1,17 +1,22 @@
 @import '../../../assets/styles/_globals.scss';
 
-$headings-margin                : 0 0 0.5em 0 !default;
-$headings-font-family           : $font-family-base !default;
-$headings-font-weight           : 700 !default;
-$headings-line-height           : $font-line-height !default;
-$headings-color                 : $color-secondary !default;
-$headings-text-transform        : none !default;
-$heading-font-size--first-level : 18px !default;
-$heading-font-size--second-level: 18px !default;
-$heading-font-size--third-level : 14px !default;
-$heading-font-size--fourth-level: 14px !default;
-$heading-font-size--fifth-level : 12px !default;
-$heading-font-size--sixth-level : 12px !default;
+$headings-margin                          : 0 0 0.5em 0 !default;
+$headings-font-family                     : $font-family-secondary !default;
+$headings-font-family--secondary          : $font-family-base !default;
+$headings-font-weight                     : $font-weight-medium !default;
+$headings-line-height                     : $font-line-height !default;
+$headings-color                           : $color-primary !default;
+$headings-text-transform                  : uppercase !default;
+
+$heading-font-size--first-level\@screen-m : $font-size-super-extra-large !default;
+$heading-font-size--first-level           : $font-size-extra-large !default;
+$heading-font-size--second-level\@screen-m: $font-size-extra-large !default;
+$heading-font-size--second-level          : $font-size-large !default;
+$heading-font-size--third-level\@screen-m : $font-size-large !default;
+$heading-font-size--third-level           : $font-size-medium !default;
+$heading-font-size--fourth-level          : $font-size-medium !default;
+$heading-font-size--fifth-level           : $font-size-medium !default;
+$heading-font-size--sixth-level           : $font-size-medium !default;
 
 .a-heading {
   margin: $headings-margin;
@@ -23,14 +28,26 @@ $heading-font-size--sixth-level : 12px !default;
 
   &--first-level {
     font-size: $heading-font-size--first-level;
+
+    @include mq($screen-m) {
+      font-size: $heading-font-size--first-level\@screen-m;
+    }
   }
 
   &--second-level {
     font-size: $heading-font-size--second-level;
+
+    @include mq($screen-m) {
+      font-size: $heading-font-size--second-level\@screen-m;
+    }
   }
 
   &--third-level {
     font-size: $heading-font-size--third-level;
+
+    @include mq($screen-m) {
+      font-size: $heading-font-size--third-level\@screen-m;
+    }
   }
 
   &--fourth-level {
@@ -43,5 +60,9 @@ $heading-font-size--sixth-level : 12px !default;
 
   &--sixth-level {
     font-size: $heading-font-size--sixth-level;
+  }
+
+  &--font-secondary {
+    font-family: $headings-font-family--secondary;
   }
 }
