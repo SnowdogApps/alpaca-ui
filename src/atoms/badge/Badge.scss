@@ -1,24 +1,30 @@
 @import '../../../assets/styles/_globals.scss';
 
-$badge__padding         : $spacer 12px !default;
-$badge__background      : $bg-color-base !default;
-$badge__border-radius   : $border-radius !default;
-$badge__font-size       : $font-size-small !default;
-$badge__font-family     : $font-family-base !default;
-$badge__font-weight     : $font-weight-bold !default;
-$badge__text-transform  : uppercase !default;
-$badge__color           : $font-color-base !default;
-$badge__color--new      : $white !default;
-$badge__background--new : $color-secondary !default;
-$badge__background--sale: $color-primary !default;
+$badge__margin         : 0 0 $spacer !default;
+$badge__padding        : 0 $spacer--medium !default;
+$badge__border-radius  : $border-radius !default;
+$badge__font-family    : $font-family-base !default;
+$badge__font-size      : $font-size-small !default;
+$badge__font-weight    : $font-weight-bold !default;
+$badge__text-transform : uppercase !default;
+$badge__line-height    : 16px !default;
+$badge__color          : $white !default;
+$badge__background     : $bg-color-dark !default;
+$badge__color--new     : $font-color-base !default;
+$badge__background--new: $white !default;
+$badge__justify-content: center !default;
+
 
 .a-badge {
   display: inline-flex;
+  justify-content: $badge__justify-content;
+  margin: $badge__margin;
   padding: $badge__padding;
   color: $badge__color;
   font-weight: $badge__font-weight;
   font-size: $badge__font-size;
   font-family: $badge__font-family;
+  line-height: $badge__line-height;
   text-transform: $badge__text-transform;
   background: $badge__background;
   border-radius: $badge__border-radius;
@@ -26,9 +32,5 @@ $badge__background--sale: $color-primary !default;
   &--new {
     color: $badge__color--new;
     background: $badge__background--new;
-  }
-
-  &--sale {
-    background: $badge__background--sale;
   }
 }
