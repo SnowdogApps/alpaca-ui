@@ -1,6 +1,6 @@
 <template>
   <g>
-    <path d="M13 3v8h8v2h-8v8h-2v-8H3v-2h8V3h2z" />
+    <path fill-rule="nonzero" d="M14.17 1L7 8.18V21h12.31L23 12.4V8h-8.31l1.12-5.38L14.17 1zM1 9h4v12H1V9z"/>
     <path d="M0 0h24v24H0z" fill="none" />
   </g>
 </template>

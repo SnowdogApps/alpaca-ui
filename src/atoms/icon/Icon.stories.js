@@ -7,8 +7,11 @@ import AIconPerson from './templates/IconPerson.vue'
 import AIconCheck from './templates/IconCheck.vue'
 import AIconExpandMore from './templates/IconExpandMore.vue'
 import AIconExpandLess from './templates/IconExpandLess.vue'
+import AIconAngleLeft from './templates/IconAngleLeft.vue'
+import AIconAngleRight from './templates/IconAngleRight.vue'
 import AIconClose from './templates/IconClose.vue'
 import AIconSearch from './templates/IconSearch.vue'
+import AIconFavorite from './templates/IconFavorite.vue'
 import AIconFavoriteBorder from './templates/IconFavoriteBorder.vue'
 import AIconEqualizer from './templates/IconEqualizer.vue'
 import AIconYoutube from './templates/IconYoutube.vue'
@@ -17,6 +20,23 @@ import AIconRemove from './templates/IconRemove.vue'
 import AIconAdd from './templates/IconAdd.vue'
 import AIconStar from './templates/IconStar.vue'
 import AIconStarBorder from './templates/IconStarBorder.vue'
+import AIconShoppingCart from './templates/IconShoppingCart.vue'
+import AIconGrid from './templates/IconGrid.vue'
+import AIconList from './templates/IconList.vue'
+import AIconEdit from './templates/IconEdit.vue'
+import AIconShare from './templates/IconShare.vue'
+import AIconPhone from './templates/IconPhone.vue'
+import AIconEnvelope from './templates/IconEnvelope.vue'
+import AIconMobileMenu from './templates/IconMobileMenu.vue'
+import AIconVisibility from './templates/IconVisibility.vue'
+import AIconVisibilityOff from './templates/IconVisibilityOff.vue'
+import AIconUnchecked from './templates/IconUnchecked.vue'
+import AIconChecked from './templates/IconChecked.vue'
+import AIconFacebook from './templates/IconFacebook.vue'
+import AIconTwitter from './templates/IconTwitter.vue'
+import AIconThumbUp from './templates/IconThumbUp.vue'
+import AIconThumbDown from './templates/IconThumbDown.vue'
+import AIconMore from './templates/IconMore.vue'
 
 const wrapperStyles = {
   margin: '20px',
@@ -43,8 +63,11 @@ storiesOf('Atoms/Icon', module)
       AIconCheck,
       AIconExpandMore,
       AIconExpandLess,
+      AIconAngleLeft,
+      AIconAngleRight,
       AIconClose,
       AIconSearch,
+      AIconFavorite,
       AIconFavoriteBorder,
       AIconEqualizer,
       AIconYoutube,
@@ -52,7 +75,24 @@ storiesOf('Atoms/Icon', module)
       AIconRemove,
       AIconAdd,
       AIconStar,
-      AIconStarBorder
+      AIconStarBorder,
+      AIconShoppingCart,
+      AIconGrid,
+      AIconList,
+      AIconEdit,
+      AIconShare,
+      AIconPhone,
+      AIconEnvelope,
+      AIconMobileMenu,
+      AIconVisibility,
+      AIconVisibilityOff,
+      AIconUnchecked,
+      AIconChecked,
+      AIconFacebook,
+      AIconTwitter,
+      AIconThumbUp,
+      AIconThumbDown,
+      AIconMore
     },
     data: () => ({
       wrapperStyles,
@@ -85,7 +125,15 @@ storiesOf('Atoms/Icon', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon title="Checked icon">
+          <a-icon title="Remove icon">
+            <a-icon-remove />
+          </a-icon>
+          <span :style="labelStyles">
+            remove
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Check icon">
             <a-icon-check />
           </a-icon>
           <span :style="labelStyles">
@@ -133,11 +181,19 @@ storiesOf('Atoms/Icon', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon title="Favorite icon">
-            <a-icon-favorite-border />
+          <a-icon title="Angle left">
+            <a-icon-angle-left />
           </a-icon>
           <span :style="labelStyles">
-            favorite_border
+            angle_left
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Angle right">
+            <a-icon-angle-right />
+          </a-icon>
+          <span :style="labelStyles">
+            angle_right
           </span>
         </div>
         <div :style="wrapperStyles">
@@ -149,19 +205,27 @@ storiesOf('Atoms/Icon', module)
           </span>
         </div>
         <div :style="wrapperStyles">
-          <a-icon title="Remove icon">
-            <a-icon-remove />
-          </a-icon>
-          <span :style="labelStyles">
-            remove
-          </span>
-        </div>
-        <div :style="wrapperStyles">
           <a-icon title="Search icon">
             <a-icon-search />
           </a-icon>
           <span :style="labelStyles">
             search
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Favorite icon">
+            <a-icon-favorite />
+          </a-icon>
+          <span :style="labelStyles">
+            favorite
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Favorite border icon">
+            <a-icon-favorite-border />
+          </a-icon>
+          <span :style="labelStyles">
+            favorite_border
           </span>
         </div>
         <div :style="wrapperStyles">
@@ -181,11 +245,147 @@ storiesOf('Atoms/Icon', module)
           </span>
         </div>
         <div :style="wrapperStyles">
+          <a-icon title="Grid icon">
+            <a-icon-grid />
+          </a-icon>
+          <span :style="labelStyles">
+            grid
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="List icon">
+            <a-icon-list />
+          </a-icon>
+          <span :style="labelStyles">
+            list
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Shopping cart icon">
+            <a-icon-shopping-cart />
+          </a-icon>
+          <span :style="labelStyles">
+            shooping_cart
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Edit icon">
+            <a-icon-edit />
+          </a-icon>
+          <span :style="labelStyles">
+            edit
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Share icon">
+            <a-icon-share />
+          </a-icon>
+          <span :style="labelStyles">
+            share
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Phone icon">
+            <a-icon-phone />
+          </a-icon>
+          <span :style="labelStyles">
+            phone
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Envelope icon">
+            <a-icon-envelope />
+          </a-icon>
+          <span :style="labelStyles">
+            envelope
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Mobile menu icon">
+            <a-icon-mobile-menu />
+          </a-icon>
+          <span :style="labelStyles">
+            mobile menu
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Visibility icon">
+              <a-icon-visibility />
+          </a-icon>
+          <span :style="labelStyles">
+            visibility
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Visibility off icon">
+            <a-icon-visibility-off />
+          </a-icon>
+          <span :style="labelStyles">
+            visibility
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Unchecked icon">
+            <a-icon-unchecked />
+          </a-icon>
+          <span :style="labelStyles">
+            unchecked
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Checked icon">
+            <a-icon-checked />
+          </a-icon>
+          <span :style="labelStyles">
+            checked
+          </span>
+        </div>
+        <div :style="wrapperStyles">
           <a-icon title="Youtube icon">
             <a-icon-youtube />
           </a-icon>
           <span :style="labelStyles">
             youtube
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Facebook icon">
+            <a-icon-facebook />
+          </a-icon>
+          <span :style="labelStyles">
+            facebook
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Twitter icon">
+            <a-icon-twitter />
+          </a-icon>
+          <span :style="labelStyles">
+            twitter
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Thumb up icon">
+            <a-icon-thumb-up />
+          </a-icon>
+          <span :style="labelStyles">
+            thumb_up
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Thumb down icon">
+            <a-icon-thumb-down />
+          </a-icon>
+          <span :style="labelStyles">
+            thumb_down
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="More icon">
+            <a-icon-more />
+          </a-icon>
+          <span :style="labelStyles">
+            more
           </span>
         </div>
       </div>
