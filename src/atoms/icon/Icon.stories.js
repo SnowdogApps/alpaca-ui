@@ -13,6 +13,7 @@ import AIconClose from './templates/IconClose.vue'
 import AIconSearch from './templates/IconSearch.vue'
 import AIconFavorite from './templates/IconFavorite.vue'
 import AIconFavoriteBorder from './templates/IconFavoriteBorder.vue'
+import AIconCompare from './templates/IconCompare.vue'
 import AIconEqualizer from './templates/IconEqualizer.vue'
 import AIconYoutube from './templates/IconYoutube.vue'
 import AIconDelete from './templates/IconDelete.vue'
@@ -37,6 +38,9 @@ import AIconTwitter from './templates/IconTwitter.vue'
 import AIconThumbUp from './templates/IconThumbUp.vue'
 import AIconThumbDown from './templates/IconThumbDown.vue'
 import AIconMore from './templates/IconMore.vue'
+import AIconAttention from './templates/IconAttention.vue'
+import AIconOk from './templates/IconOk.vue'
+import AIconError from './templates/IconError.vue'
 
 const wrapperStyles = {
   margin: '20px',
@@ -69,6 +73,7 @@ storiesOf('Atoms/Icon', module)
       AIconSearch,
       AIconFavorite,
       AIconFavoriteBorder,
+      AIconCompare,
       AIconEqualizer,
       AIconYoutube,
       AIconDelete,
@@ -92,7 +97,10 @@ storiesOf('Atoms/Icon', module)
       AIconTwitter,
       AIconThumbUp,
       AIconThumbDown,
-      AIconMore
+      AIconMore,
+      AIconAttention,
+      AIconOk,
+      AIconError
     },
     data: () => ({
       wrapperStyles,
@@ -223,6 +231,14 @@ storiesOf('Atoms/Icon', module)
         <div :style="wrapperStyles">
           <a-icon title="Favorite border icon">
             <a-icon-favorite-border />
+          </a-icon>
+          <span :style="labelStyles">
+            favorite_border
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+        <a-icon title="Compare icon">
+            <a-icon-compare />
           </a-icon>
           <span :style="labelStyles">
             favorite_border
@@ -386,6 +402,30 @@ storiesOf('Atoms/Icon', module)
           </a-icon>
           <span :style="labelStyles">
             more
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Attention icon">
+            <a-icon-attention />
+          </a-icon>
+          <span :style="labelStyles">
+            attention
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Ok icon">
+            <a-icon-ok />
+          </a-icon>
+          <span :style="labelStyles">
+            ok
+          </span>
+        </div>
+        <div :style="wrapperStyles">
+          <a-icon title="Error icon">
+            <a-icon-error />
+          </a-icon>
+          <span :style="labelStyles">
+            error
           </span>
         </div>
       </div>
