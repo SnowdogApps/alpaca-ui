@@ -14,6 +14,20 @@ export default {
     legendClass: {
       type: String,
       default: null
+    },
+    /**
+     * Visually hide legend
+     */
+    hideLegend: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * Disable content of fieldset
+     */
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
