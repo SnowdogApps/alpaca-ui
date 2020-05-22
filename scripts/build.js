@@ -3,7 +3,7 @@ const path = require('path')
 const glob = require('glob')
 
 const components = glob
-  .sync('src/*/*/*.vue', { cwd: path.resolve(__dirname, '../') })
+  .sync('src/{atoms,molecules,organisms,pages,templates}/*/*.vue', { cwd: path.resolve(__dirname, '../') })
   .map(file => ({
     src: file,
     name: path.basename(file)
