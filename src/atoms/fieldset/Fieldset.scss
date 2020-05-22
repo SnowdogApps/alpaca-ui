@@ -1,19 +1,26 @@
 @import '../../../assets/styles/_globals.scss';
 
-$fieldset__border            : none !default;
-$fieldset__legend-margin     : 0 0 25px !default;
-$fieldset__legend-font-size  : $font-size-large !default;
-$fieldset__legend-line-height: 1.2 !default;
+$fieldset__border               : none !default;
+$fieldset__padding              : 0 !default;
+$fieldset__margin               : 0 !default;
+$fieldset__legend-padding       : 0 !default;
+$fieldset__legend-margin        : 0 0 $spacer--semi-medium !default;
+$fieldset__legend-font-size     : $font-size-large !default;
+$fieldset__legend-line-height   : $font-line-height !default;
 
 .a-fieldset {
-  margin: 0;
-  padding: 0;
+  margin: $fieldset__margin;
+  padding: $fieldset__padding;
   border: $fieldset__border;
 
   &__legend {
     margin: $fieldset__legend-margin;
-    padding: 0;
+    padding: $fieldset__legend-padding;
     font-size: $fieldset__legend-font-size;
     line-height: $fieldset__legend-line-height;
+
+    &--hidden {
+      @include visually-hidden();
+    }
   }
 }

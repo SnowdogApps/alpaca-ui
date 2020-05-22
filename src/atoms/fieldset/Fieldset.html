@@ -1,15 +1,18 @@
 <fieldset
   class="a-fieldset"
   :aria-labelledby="`legend-${id}`"
+  :disabled="disabled"
 >
   <legend
     :id="`legend-${id}`"
     :class="[
       legendClass,
-      'a-fieldset__legend'
+      'a-fieldset__legend',
+      { 'a-fieldset__legend--hidden': hideLegend }
     ]"
   >
     {{ legendText }}
   </legend>
+  <!-- @slot Slot for fieldset content -->
   <slot />
 </fieldset>

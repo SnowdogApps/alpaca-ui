@@ -42,4 +42,15 @@ describe('Fieldset', () => {
     expect(wrapper.find('.a-fieldset').exists()).toBe(true)
     expect(wrapper.find('.a-fieldset > span').text()).toEqual('Fieldset content')
   })
+
+  it('content is disabled when disabled prop passed', () => {
+    const wrapper = mount(AFieldset, {
+      propsData: {
+        legendText: 'Legend text',
+        disabled: true
+      }
+    })
+
+    expect(wrapper.attributes('disabled')).toBe('disabled')
+  })
 })
