@@ -1,12 +1,12 @@
 @import '../../../assets/styles/_globals.scss';
 
-$headings-margin                          : 0 0 0.5em 0 !default;
+$headings-margin                          : 0 0 $spacer--medium 0 !default;
 $headings-font-family                     : $font-family-secondary !default;
 $headings-font-family--secondary          : $font-family-base !default;
 $headings-font-weight                     : $font-weight-medium !default;
 $headings-line-height                     : $font-line-height !default;
 $headings-color                           : $color-primary !default;
-$headings-text-transform                  : uppercase !default;
+$headings-text-transform                  : none !default;
 
 $heading-font-size--first-level\@screen-m : $font-size-super-extra-large !default;
 $heading-font-size--first-level           : $font-size-extra-large !default;

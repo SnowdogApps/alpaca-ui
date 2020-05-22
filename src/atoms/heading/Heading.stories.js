@@ -17,7 +17,7 @@ const levels = [1, 2, 3, 4, 5, 6]
 
 storiesOf('Atoms/Heading', module)
   .addParameters({ info })
-  .add('Default', () => ({
+  .add('First', () => ({
     components: { AHeading },
     props: {
       levelKnobs: {
@@ -34,7 +34,142 @@ storiesOf('Atoms/Heading', module)
       }
     },
     template: `
-      <a-heading 
+      <a-heading
+        :level="levelKnobs"
+        :tag="tagKnobs"
+        :class="classKnob"
+      >
+        {{ textKnobs }}
+      </a-heading>
+    `
+  }))
+  .add('Second', () => ({
+    components: { AHeading },
+    props: {
+      levelKnobs: {
+        default: select('Heading level', levels, 2)
+      },
+      tagKnobs: {
+        default: text('Tag', null)
+      },
+      textKnobs: {
+        default: text('Text', 'Heading level 2')
+      },
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      }
+
+    },
+    template: `
+      <a-heading
+        :level="levelKnobs"
+        :tag="tagKnobs"
+        :class="classKnob"
+      >
+        {{ textKnobs }}
+      </a-heading>
+    `
+  }))
+  .add('Third', () => ({
+    components: { AHeading },
+    props: {
+      levelKnobs: {
+        default: select('Heading level', levels, 3)
+      },
+      tagKnobs: {
+        default: text('Tag', null)
+      },
+      textKnobs: {
+        default: text('Text', 'Heading level 3')
+      },
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      }
+
+    },
+    template: `
+      <a-heading
+        :level="levelKnobs"
+        :tag="tagKnobs"
+        :class="classKnob"
+      >
+        {{ textKnobs }}
+      </a-heading>
+    `
+  }))
+  .add('Fourth', () => ({
+    components: { AHeading },
+    props: {
+      levelKnobs: {
+        default: select('Heading level', levels, 4)
+      },
+      tagKnobs: {
+        default: text('Tag', null)
+      },
+      textKnobs: {
+        default: text('Text', 'Heading level 4')
+      },
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      }
+
+    },
+    template: `
+      <a-heading
+        :level="levelKnobs"
+        :tag="tagKnobs"
+        :class="classKnob"
+      >
+        {{ textKnobs }}
+      </a-heading>
+    `
+  }))
+  .add('Fifth', () => ({
+    components: { AHeading },
+    props: {
+      levelKnobs: {
+        default: select('Heading level', levels, 5)
+      },
+      tagKnobs: {
+        default: text('Tag', null)
+      },
+      textKnobs: {
+        default: text('Text', 'Heading level 5')
+      },
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      }
+
+    },
+    template: `
+      <a-heading
+        :level="levelKnobs"
+        :tag="tagKnobs"
+        :class="classKnob"
+      >
+        {{ textKnobs }}
+      </a-heading>
+    `
+  }))
+  .add('Sixth', () => ({
+    components: { AHeading },
+    props: {
+      levelKnobs: {
+        default: select('Heading level', levels, 6)
+      },
+      tagKnobs: {
+        default: text('Tag', null)
+      },
+      textKnobs: {
+        default: text('Text', 'Heading level 6')
+      },
+      classKnob: {
+        default: select('BEM Modifier', classKnobsConfig)
+      }
+
+    },
+    template: `
+      <a-heading
         :level="levelKnobs"
         :tag="tagKnobs"
         :class="classKnob"
