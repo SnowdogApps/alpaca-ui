@@ -11,7 +11,7 @@ import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
 
 // Wrap every story in Alpaca App component
-import AApp from '../src/templates/app/App.vue'
+import AApp from '../src/test/app/App.vue'
 
 addDecorator(withInfo)
 addDecorator(withA11y)
@@ -38,7 +38,7 @@ addParameters({
 })
 
 function loadStories () {
-  const req = require.context('../src', true, /.stories.js$/)
+  const req = require.context('../src/test/', true, /.stories.js$/)
   req.keys().forEach(filename => req(filename))
 }
 

@@ -17,6 +17,24 @@ module.exports = ({ config }) => {
     ]
   })
 
+  /* PostCSS Support */
+  config.module.rules.push({
+    test: /\.scss$/,
+    use: [
+      {
+        loader: 'postcss-loader',
+        options: {
+          ident: 'postcss',
+          syntax: 'postcss-scss',
+          plugins: [
+            require('tailwindcss'),
+            require('autoprefixer')
+          ]
+        }
+      }
+    ]
+  })
+
   config.module.rules.push({
     enforce: 'pre',
     test: /\.(js|vue)$/,
