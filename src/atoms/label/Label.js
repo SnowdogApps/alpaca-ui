@@ -2,7 +2,7 @@
 export default {
   props: {
     /**
-     * Label tag
+     * To use another tag instead of `label`
      */
     tag: {
       type: String,

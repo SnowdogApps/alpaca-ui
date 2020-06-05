@@ -19,11 +19,11 @@ storiesOf('Atoms/Label', module)
   .add('Default', () => ({
     components: { ALabel },
     props: {
-      classKnobs: {
-        default: select('BEM Modifier', classKnobsConfig)
-      },
       textKnobs: {
         default: text('Text', 'Label')
+      },
+      classKnobs: {
+        default: select('BEM Modifier', classKnobsConfig)
       }
     },
     template: `
@@ -35,16 +35,19 @@ storiesOf('Atoms/Label', module)
   .add('Custom tag', () => ({
     components: { ALabel },
     props: {
+      textKnobs: {
+        default: text('Text', 'Custom tag label')
+      },
       classKnobs: {
         default: select('BEM Modifier', classKnobsConfig)
       },
-      textKnobs: {
-        default: text('Text', 'Custom tag label')
+      tagKnobs: {
+        default: text('Tag', 'span')
       }
     },
     template: `
       <a-label
-        tag="span"
+        :tag="tagKnobs"
         :class="classKnobs"
       >
         {{ textKnobs }}
