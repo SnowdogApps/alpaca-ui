@@ -34,7 +34,7 @@ storiesOf('Atoms/Button', module)
       </a-button>
     `
   }))
-  .add('With slot', () => ({
+  .add('With icon', () => ({
     components: { AButton, AIcon, AIconSearch },
     props: {
       classKnobs: {
@@ -44,7 +44,8 @@ storiesOf('Atoms/Button', module)
     template: `
       <a-button
         :class="classKnobs"
-        style="padding: 0;"
+        class="a-button--icon"
+        aria-label="action button text"
       >
         <a-icon title="Search icon">
           <a-icon-search />

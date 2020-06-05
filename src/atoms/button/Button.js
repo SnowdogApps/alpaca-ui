@@ -1,2 +1,8 @@
 // @vue/component
-export default {}
+export default {
+  methods: {
+    btnEvent (ev) {
+      this.$emit('btn-event', ev)
+    }
+  }
+}

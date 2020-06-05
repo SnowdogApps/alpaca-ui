@@ -1,14 +1,30 @@
 [
   {
+    "name": ".a-button--light",
+    "description": "Selector for applying light styles"
+  },
+  {
     "name": ".a-button--secondary",
     "description": "Selector for applying secondary styles"
   },
   {
-    "name": ".a-button--blank",
-    "description": "Selector for applying blank styles"
+    "name": ".a-button--secondary-light",
+    "description": "Selector for applying secondary light styles"
   },
   {
     "name": ".a-button--fluid",
     "description": "Selector for applying fluid styles (width: 100%)"
+  },
+  {
+    "name": ".a-button--link",
+    "description": "Selector for applying link styles"
+  },
+  {
+    "name": ".a-button--icon",
+    "description": "Selector for applying icon styles"
+  },
+  {
+    "name": ".a-button--icon-border",
+    "description": "Selector for applying icon with border styles"
   }
 ]
