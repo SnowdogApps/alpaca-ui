@@ -8,11 +8,8 @@ $headings-line-height                     : $font-line-height !default;
 $headings-color                           : $color-primary !default;
 $headings-text-transform                  : none !default;
 
-$heading-font-size--first-level\@screen-m : $font-size-super-extra-large !default;
 $heading-font-size--first-level           : $font-size-extra-large !default;
-$heading-font-size--second-level\@screen-m: $font-size-extra-large !default;
 $heading-font-size--second-level          : $font-size-large !default;
-$heading-font-size--third-level\@screen-m : $font-size-large !default;
 $heading-font-size--third-level           : $font-size-medium !default;
 $heading-font-size--fourth-level          : $font-size-medium !default;
 $heading-font-size--fifth-level           : $font-size-medium !default;
@@ -28,26 +25,14 @@ $heading-font-size--sixth-level           : $font-size-medium !default;
 
   &--first-level {
     font-size: $heading-font-size--first-level;
-
-    @include mq($screen-m) {
-      font-size: $heading-font-size--first-level\@screen-m;
-    }
   }
 
   &--second-level {
     font-size: $heading-font-size--second-level;
-
-    @include mq($screen-m) {
-      font-size: $heading-font-size--second-level\@screen-m;
-    }
   }
 
   &--third-level {
     font-size: $heading-font-size--third-level;
-
-    @include mq($screen-m) {
-      font-size: $heading-font-size--third-level\@screen-m;
-    }
   }
 
   &--fourth-level {
