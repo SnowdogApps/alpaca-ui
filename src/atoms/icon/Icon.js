@@ -2,6 +2,13 @@
 export default {
   props: {
     /**
+     * Icon id for aria-labelledby
+     */
+    id: {
+      type: String,
+      default: null
+    },
+    /**
      * Icon title
      */
     title: {
@@ -9,22 +16,29 @@ export default {
       default: null
     },
     /**
-     * Icon role
+     * Icon width
      */
-    role: {
+    width: {
       type: String,
-      default: 'img'
+      default: '24'
     },
     /**
-     * Icon viewBox
+     * Icon height
+     */
+    height: {
+      type: String,
+      default: '24'
+    },
+    /**
+     * Set custom viewBox for icon
      */
     viewBox: {
       type: [String, Boolean],
-      default: '0 0 24 24'
+      default: false
     }
   },
   computed: {
-    id () {
+    ariaId () {
       return this.title ? this.title.toLowerCase().replace(/ /g, '-') : ''
     }
   }
