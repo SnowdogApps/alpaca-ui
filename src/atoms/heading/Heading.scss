@@ -1,19 +1,19 @@
 @import '../../../assets/styles/_globals.scss';
 
-$headings-margin                          : 0 0 $spacer--medium 0 !default;
-$headings-font-family                     : $font-family-secondary !default;
-$headings-font-family--secondary          : $font-family-base !default;
-$headings-font-weight                     : $font-weight-medium !default;
-$headings-line-height                     : $font-line-height !default;
-$headings-color                           : $color-primary !default;
-$headings-text-transform                  : none !default;
+$headings-margin                : 0 0 $spacer--medium 0 !default;
+$headings-font-family           : $font-family-secondary !default;
+$headings-font-family--secondary: $font-family-base !default;
+$headings-font-weight           : $font-weight-medium !default;
+$headings-line-height           : $font-line-height !default;
+$headings-color                 : $color-primary !default;
+$headings-text-transform        : none !default;
 
-$heading-font-size--first-level           : $font-size-extra-large !default;
-$heading-font-size--second-level          : $font-size-large !default;
-$heading-font-size--third-level           : $font-size-medium !default;
-$heading-font-size--fourth-level          : $font-size-medium !default;
-$heading-font-size--fifth-level           : $font-size-medium !default;
-$heading-font-size--sixth-level           : $font-size-medium !default;
+$heading-font-size--first-level : $font-size-extra-large !default;
+$heading-font-size--second-level: $font-size-large !default;
+$heading-font-size--third-level : $font-size-medium !default;
+$heading-font-size--fourth-level: $font-size-medium !default;
+$heading-font-size--fifth-level : $font-size-medium !default;
+$heading-font-size--sixth-level : $font-size-medium !default;
 
 .a-heading {
   margin: $headings-margin;
