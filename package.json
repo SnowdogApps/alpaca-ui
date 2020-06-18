@@ -22,14 +22,20 @@
     "vue-slider-component": "^3.0.40"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
     "@storybook/addon-a11y": "^5.3.17",
     "@storybook/addon-actions": "^5.3.17",
     "@storybook/addon-knobs": "^5.3.17",
     "@storybook/vue": "^5.3.17",
+    "@vue/babel-preset-app": "^3.11.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.1.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
+    "codecov": "^3.5.0",
     "css-loader": "^3.2.0",
     "eslint": "^6.4.0",
     "eslint-config-standard": "^14.1.0",
@@ -39,6 +45,10 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.2.3",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
+    "jest": "^24.9.0",
+    "jest-vue-preprocessor": "^1.5.0",
     "node-sass": "^4.12.0",
     "postcss-scss": "^2.1.1",
     "sass-loader": "^8.0.0",
@@ -52,6 +62,7 @@
     "svgxuse": "^1.2.6",
     "vue-eslint-parser": "^6.0.4",
     "vue-loader": "^15.9.1",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11"
   }
 }
