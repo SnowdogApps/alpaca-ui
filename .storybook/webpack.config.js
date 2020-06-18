@@ -3,12 +3,6 @@ const path = require('path')
 
 module.exports = ({ config }) => {
   config.module.rules.push({
-    test: /\.vue$/,
-    loader: 'storybook-addon-vue-info/loader',
-    enforce: 'post'
-  })
-
-  config.module.rules.push({
     test: /\.scss$/,
     use: [
       'vue-style-loader',
@@ -17,7 +11,6 @@ module.exports = ({ config }) => {
     ]
   })
 
-  /* PostCSS Support */
   config.module.rules.push({
     test: /\.scss$/,
     use: [
