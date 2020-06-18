@@ -1,14 +1,14 @@
 [
   {
-    "name": ".a-btn--secondary",
+    "name": ".a-button--secondary",
     "description": "Selector for applying secondary styles"
   },
   {
-    "name": ".a-btn--blank",
+    "name": ".a-button--blank",
     "description": "Selector for applying blank styles"
   },
   {
-    "name": ".a-btn--fluid",
+    "name": ".a-button--fluid",
     "description": "Selector for applying fluid styles (width: 100%)"
   }
 ]

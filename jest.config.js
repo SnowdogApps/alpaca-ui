@@ -6,6 +6,7 @@ module.exports = {
     'js',
     'vue'
   ],
+  'testMatch': ['<rootDir>/src/**/?(*.)+(spec|test).(ts|tsx|mjs|js|jsx)'],
   'transform': {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
     '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
@@ -13,11 +14,11 @@ module.exports = {
   'collectCoverage': true,
   'coverageDirectory': './coverage/',
   'collectCoverageFrom': [
-    '**/atoms/*/*.vue',
+    '**/src/atoms/*/*.vue',
     '!**/atoms/transition-expand/*.vue',
-    '**/molecules/*/*.vue',
-    '**/organisms/*/*.vue',
-    '**/templates/*/*.vue',
-    '**/pages/*/*.vue'
+    '**/src/molecules/*/*.vue',
+    '**/src/organisms/*/*.vue',
+    '**/src/templates/*/*.vue',
+    '**/src/pages/*/*.vue'
   ]
 }
