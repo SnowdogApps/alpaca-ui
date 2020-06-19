@@ -24,8 +24,4 @@ describe('Button', () => {
     expect(wrapper.find('.a-button span').exists()).toBe(true)
     expect(wrapper.find('.a-button span').text()).toEqual('Alpaca UI')
   })
-
-  // it('should emit click event when clicked', () => {
-  //  TODO Should emit click event when clicked
-  // })
 })

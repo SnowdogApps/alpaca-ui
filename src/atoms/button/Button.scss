@@ -7,86 +7,73 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: $button__min-size;
-  min-height: $button__min-size;
-  padding: $button__padding;
-  color: $button__text-color;
-  font-weight: $button__font-weight;
-  font-size: $button__font-size;
-  font-family: $button__font-family;
-  line-height: $button__line-height;
+  min-width: $button-min-size;
+  min-height: $button-min-size;
+  padding: $button-padding;
+  color: $button-text-color;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+  font-family: $button-font-family;
+  line-height: $button-line-height;
   text-align: center;
-  text-transform: $button__text-transform;
-  text-decoration: $button__text-decoration;
-  background-color: $button__background;
-  border: $button__border;
-  border-radius: $button__border-radius;
-  outline: $button__outline;
-  transform: $button__transform;
+  text-transform: $button-text-transform;
+  text-decoration: $button-text-decoration;
+  background-color: $button-background;
+  border: $button-border;
+  border-radius: $button-border-radius;
+  outline: $button-outline;
+  transform: $button-transform;
   cursor: pointer;
-  transition: $button__transition;
+  transition: $button-transition;
 
   &:hover {
-    text-decoration: $button__text-decoration-hover;
-    background-color: $button__background-hover;
+    text-decoration: $button-text-decoration-hover;
+    background-color: $button-background-hover;
 
     &::before {
       z-index: -1;
-      display: $button__before-display-hover;
-      transform: $button__before-transform-hover;
+      display: $button-before-display-hover;
+      transform: $button-before-transform-hover;
     }
   }
 
   &:disabled,
   &[disabled] {
-    color: $button__text-color;
-    background-color: $button__background-disabled;
-    border-color: $button__background-disabled;
+    color: $button-text-color;
+    background-color: $button-background-disabled;
+    border-color: $button-background-disabled;
     cursor: not-allowed;
 
     .a-icon {
-      fill: $button__text-color;
+      fill: $button-text-color;
     }
 
     &:hover {
-      background-color: $button__background-disabled;
+      background-color: $button-background-disabled;
 
-      &::before,
-      &::after {
+      &::before {
         display: none;
       }
     }
   }
 
   &--light {
-    font-weight: $button__font-weight--light;
+    font-weight: $button-font-weight--light;
     text-transform: none;
-    text-transform: $button__text-transform--light;
+    text-transform: $button-text-transform--light;
   }
 
   &--secondary {
-    color: $button__color--secondary;
-    background-color: $button__background--secondary;
-    border: $button__border--secondary;
+    color: $button-color--secondary;
+    background-color: $button-background--secondary;
+    border: $button-border--secondary;
 
     &:hover {
-      color: $button__color-hover--secondary;
-      background-color: $button__background-hover--secondary;
+      color: $button-color-hover--secondary;
+      background-color: $button-background-hover--secondary;
 
       &::before {
-        z-index: $button__before-z-index-hover--secondary;
-      }
-
-      &::after {
-        display: $button__after-display-hover--secondary;
-      }
-    }
-
-    &.action {
-      &:hover {
-        &::after {
-          display: $button__after-display-hover--secondary;
-        }
+        z-index: $button-before-z-index-hover--secondary;
       }
     }
   }
@@ -101,94 +88,69 @@
   }
 
   &--link {
-    color: $button__color--link;
-    text-transform: $button__text-transform--link;
-    text-decoration: $button__text-decoration--link;
-    background: $button__background--link;
+    color: $button-color--link;
+    text-transform: $button-text-transform--link;
+    text-decoration: $button-text-decoration--link;
+    background: $button-background--link;
 
     &:hover {
-      color: $button__color-hover--link;
-      background: $button__background-hover--link;
+      color: $button-color-hover--link;
+      background: $button-background-hover--link;
 
       &::before {
-        display: $button__before-display-hover--link;
-      }
-
-      &::after {
-        display: $button__after-display-hover--link;
+        display: $button-before-display-hover--link;
       }
     }
   }
 
   &--icon {
-    min-width: $button__min-size;
-    min-height: $button__min-size;
-    padding: $button__padding--icon;
-    background-color: $button__bg--icon;
+    min-width: $button-min-size;
+    min-height: $button-min-size;
+    padding: $button-padding--icon;
+    background-color: $button-bg--icon;
 
     .a-icon {
-      z-index: $button__icon-z-index;
-      width: $button__icon-size;
-      height: $button__icon-size;
+      z-index: $button-icon-z-index;
+      width: $button-icon-size;
+      height: $button-icon-size;
       padding: 0;
-      transition: $button__icon-transition;
+      transition: $button-icon-transition;
       pointer-events: none;
-      fill: $button__icon-fill;
+      fill: $button-icon-fill;
     }
 
     .a-button__text {
-      z-index: $button__text-z-index;
-      margin: $button__text-margin--icon;
-      color: $button__text-color--icon;
-      font-weight: $button__font-weight--icon;
-      text-transform: $button__text-transform--icon;
-      transition: $button__transition;
+      z-index: $button-text-z-index;
+      margin: $button-text-margin--icon;
+      color: $button-text-color--icon;
+      font-weight: $button-font-weight--icon;
+      text-transform: $button-text-transform--icon;
+      transition: $button-transition;
       pointer-events: none;
     }
 
     &:hover {
-      background-color: $button__background-hover--icon;
-
-      &::after {
-        display: none;
-      }
+      color: $button-text-color-hover--icon;
+      background-color: $button-background-hover--icon;
 
       .a-icon,
       .a-button__icon {
-        fill: $button__icon-fill-hover--icon;
+        fill: $button-icon-fill-hover--icon;
       }
 
       .a-button__text {
-        color: $button__text-color-hover--icon;
-      }
-    }
-  }
-
-  &--icon-light {
-    &::before {
-      background-color: $button__before-background--icon-light;
-    }
-
-    &:hover {
-      background-color: $button__background-hover--icon-light;
-
-      .a-icon {
-        fill: $button__icon-fill-hover--icon-light;
-      }
-
-      .a-button__text {
-        color: $button__text-color-hover--icon-light;
+        color: $button-text-color-hover--icon;
       }
     }
   }
 
   &--icon-border {
-    background-color: $button__background--icon-border;
-    border: $button__border--icon-border;
+    background-color: $button-background--icon-border;
+    border: $button-border--icon-border;
 
     &:hover {
-      background-color: $button__background-hover--icon-border;
-      border: $button__border-hover--icon-border;
+      background-color: $button-background-hover--icon-border;
+      border: $button-border-hover--icon-border;
     }
   }
 }

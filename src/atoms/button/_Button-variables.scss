@@ -1,106 +1,106 @@
 @import '../../../assets/styles/globals';
-$button__min-size                               : 48px !default;
-$button__padding                                : 0 $spacer--large !default;
-$button__background                             : $color-primary !default;
-$button__background-hover                       : initial !default;
-$button__border                                 : none !default;
-$button__border-radius                          : 0 !default;
-$button__outline                                : $outline-base !default;
-$button__font-family                            : $font-family-base !default;
-$button__font-size                              : $font-size-base !default;
-$button__font-weight                            : $font-weight-bold !default;
-$button__line-height                            : 1 !default;
-$button__text-color                             : $white !default;
-$button__text-transform                         : uppercase !default;
-$button__text-decoration                        : none !default;
-$button__text-decoration-hover                  : none !default;
-$button__transform                              : perspective(1px) translateZ(0) !default;
-$button__transition                             : all 0.5s ease-in-out !default;
+$button-min-size                       : 48px !default;
+$button-padding                        : 0 $spacer--large !default;
+$button-background                     : $color-primary !default;
+$button-background-hover               : initial !default;
+$button-border                         : none !default;
+$button-border-radius                  : 0 !default;
+$button-outline                        : $outline-base !default;
+$button-font-family                    : $font-family-base !default;
+$button-font-size                      : $font-size-base !default;
+$button-font-weight                    : $font-weight-bold !default;
+$button-line-height                    : 1 !default;
+$button-text-color                     : $white !default;
+$button-text-transform                 : uppercase !default;
+$button-text-decoration                : none !default;
+$button-text-decoration-hover          : none !default;
+$button-transform                      : perspective(1px) translateZ(0) !default;
+$button-transition                     : all 0.5s ease-in-out !default;
 
 // before used in hover state
-$button__before-display                         : block !default;
-$button__before-content                         : '' !default;
-$button__before-width                           : 100% !default;
-$button__before-position-left                   : 0 !default;
-$button__before-position-top                    : 0 !default;
-$button__before-position-bottom                 : 0 !default;
-$button__before-background                      : $color-primary !default;
-$button__before-transform                       : scaleX(0) !default;
-$button__before-transform-origin                : 0 50% !default;
+$button-before-display                 : block !default;
+$button-before-content                 : '' !default;
+$button-before-width                   : 100% !default;
+$button-before-position-left           : 0 !default;
+$button-before-position-top            : 0 !default;
+$button-before-position-bottom         : 0 !default;
+$button-before-background              : $color-primary !default;
+$button-before-transform               : scaleX(0) !default;
+$button-before-transform-origin        : 0 50% !default;
 
 // before hover
-$button__before-transform-hover                 : scaleX(1) !default;
-$button__before-display-hover                   : block !default;
+$button-before-transform-hover         : scaleX(1) !default;
+$button-before-display-hover           : block !default;
 
 // disabled
-$button__background-disabled                    : $gray !default;
+$button-background-disabled            : $gray !default;
 
 // Secondary
-$button__color--secondary                       : $color-primary !default;
-$button__background--secondary                  : $white !default;
-$button__border--secondary                      : 2px solid $button__color--secondary !default;
+$button-color--secondary               : $color-primary !default;
+$button-background--secondary          : $white !default;
+$button-border--secondary              : 2px solid $button-color--secondary !default;
 
 // Secondary hover
-$button__color-hover--secondary                 : $white !default;
-$button__background-hover--secondary            : $white !default;
-$button__before-z-index-hover--secondary        : -1 !default;
-$button__after-display-hover--secondary         : none !default;
+$button-color-hover--secondary         : $white !default;
+$button-background-hover--secondary    : $white !default;
+$button-before-z-index-hover--secondary: -1 !default;
+$button-after-display-hover--secondary : none !default;
 
 // Secondary light
-$button__font-weight--light                     : $font-weight-normal !default;
-$button__text-transform--light                  : none !default;
+$button-font-weight--light             : $font-weight-normal !default;
+$button-text-transform--light          : none !default;
 
 // Button Link
-$button__color--link                            : $color-primary !default;
-$button__background--link                       : transparent !default;
-$button__text-transform--link                   : none !default;
-$button__text-decoration--link                  : underline !default;
+$button-color--link                    : $color-primary !default;
+$button-background--link               : transparent !default;
+$button-text-transform--link           : none !default;
+$button-text-decoration--link          : underline !default;
 
 // Button Link hover
-$button__color-hover--link                      : $blue !default;
-$button__background-hover--link                 : transparent !default;
-$button__before-display-hover--link             : none !default;
-$button__after-display-hover--link              : none !default;
+$button-color-hover--link              : $blue !default;
+$button-background-hover--link         : transparent !default;
+$button-before-display-hover--link     : none !default;
+$button-after-display-hover--link      : none !default;
 
 // Button icon
-$button__padding--icon                          : 0 $spacer !default;
-$button__icon-size                              : 24px !default;
-$button__icon-fill                              : $color-primary !default;
-$button__icon-transition                        : $transition-base !default;
-$button__icon-fill-hover--icon                  : $white !default;
-$button__bg--icon                               : $white !default;
-$button__icon-z-index                           : $z-index-low !default;
-$button__text-margin--icon                      : 0 $spacer !default;
-$button__text-z-index                           : $z-index-low !default;
-$button__text-color--icon                       : $color-primary !default;
-$button__text-color-hover--icon                 : $white !default;
-$button__font-weight--icon                      : $font-weight-normal !default;
-$button__text-transform--icon                   : none !default;
-$button__background-hover--icon                 : initial !default;
+$button-padding--icon                  : 0 $spacer !default;
+$button-icon-size                      : 24px !default;
+$button-icon-fill                      : $color-primary !default;
+$button-icon-transition                : $transition-base !default;
+$button-icon-fill-hover--icon          : $white !default;
+$button-bg--icon                       : $white !default;
+$button-icon-z-index                   : $z-index-low !default;
+$button-text-margin--icon              : 0 $spacer !default;
+$button-text-z-index                   : $z-index-low !default;
+$button-text-color--icon               : $color-primary !default;
+$button-text-color-hover--icon         : $white !default;
+$button-font-weight--icon              : $font-weight-normal !default;
+$button-text-transform--icon           : none !default;
+$button-background-hover--icon         : initial !default;
 
 // Button icon light
-$button__icon-fill-hover--icon-light            : $color-primary !default;
-$button__before-background--icon-light          : $gray-light !default;
-$button__text-color-hover--icon-light           : $color-primary !default;
-$button__background-hover--icon-light           : initial !default;
+$button-icon-fill-hover--icon-light    : $color-primary !default;
+$button-before-background--icon-light  : $gray-light !default;
+$button-text-color-hover--icon-light   : $color-primary !default;
+$button-background-hover--icon-light   : initial !default;
 
 // Button icon border
-$button__border--icon-border                    : $border-width-base $border-style-base $color-primary !default;
-$button__border-hover--icon-border              : $button__border--icon-border !default;
-$button__background--icon-border                : $button__bg--icon !default;
-$button__background-hover--icon-border          : $button__background-hover--icon !default;
+$button-border--icon-border            : $border-width-base $border-style-base $color-primary !default;
+$button-border-hover--icon-border      : $button-border--icon-border !default;
+$button-background--icon-border        : $button-bg--icon !default;
+$button-background-hover--icon-border  : $button-background-hover--icon !default;
 
 %button-before::before {
   position: absolute;
-  top: $button__before-position-top;
-  bottom: $button__before-position-bottom;
-  left: $button__before-position-left;
-  display: $button__before-display;
-  width: $button__before-width;
-  background-color: $button__before-background;
-  transform: $button__before-transform;
-  transform-origin: $button__before-transform-origin;
-  transition: $button__transition;
-  content: $button__before-content;
+  top: $button-before-position-top;
+  bottom: $button-before-position-bottom;
+  left: $button-before-position-left;
+  display: $button-before-display;
+  width: $button-before-width;
+  background-color: $button-before-background;
+  transform: $button-before-transform;
+  transform-origin: $button-before-transform-origin;
+  transition: $button-transition;
+  content: $button-before-content;
   pointer-events: none;
 }
