@@ -4,6 +4,11 @@
   v-bind="$attrs"
   v-on="$listeners"
 >
-  <!-- @slot Slot for button content -->
-  <slot />
+  <svg class="a-btn__bg" preserveAspectRatio="none" viewBox="0 0 100 100">
+    <polygon points="0,0 100,0 100,100 0,100"/>
+  </svg>
+  <span class="a-btn__content">
+    <!-- @slot Slot for button content -->
+    <slot />
+  </span>
 </button>

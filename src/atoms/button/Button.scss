@@ -1,15 +1,49 @@
+// primary
 .a-btn {
-  @apply bg-dark text-white px-4 h-12;
+  @apply relative bg-dark px-4 h-12;
 }
 
+.a-btn__bg {
+  @apply transition-all duration-200 ease-in-out absolute top-0 left-0 w-full origin-left transform scale-x-0 h-full fill-light;
+}
+
+.a-btn__content {
+  @apply relative text-white;
+}
+
+// primary:hover
 .a-btn:hover {
-  @apply text-gray-300;
+  @apply text-primary;
+
+  .a-btn__bg {
+    @apply scale-x-100;
+  }
+
+  .a-btn__content {
+    @apply text-primary;
+  }
 }
 
+// secondary
 .a-btn--secondary {
   @apply bg-primary text-primary border-2 border-dark;
+
+  .a-btn__content {
+    @apply text-primary;
+  }
+
+  .a-btn__bg {
+    @apply fill-dark;
+  }
 }
 
 .a-btn--secondary:hover {
-  @apply bg-dark text-white;
+  .a-btn__content {
+    @apply text-white;
+  }
+}
+
+// fluid
+.a-btn--fluid {
+  @apply w-full;
 }

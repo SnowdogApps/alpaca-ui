@@ -55,6 +55,11 @@ module.exports = {
       ...theme('colors'),
       default: theme('colors.gray.800'),
       primary: theme('colors.gray.800')
+    }),
+    fill: theme => ({
+      ...theme('colors'),
+      dark: theme('colors.gray.800'),
+      light: theme('colors.gray.200')
     })
   },
   variants: {},
