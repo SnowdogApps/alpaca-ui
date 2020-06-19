@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Badge.scss" />
+<style lang="css" src="./Badge.css" />

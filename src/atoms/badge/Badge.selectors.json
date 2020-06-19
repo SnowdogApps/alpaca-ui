@@ -1,6 +1,6 @@
 [
   {
-    "name": ".a-badge--new",
+    "name": ".a-badge--secondary",
     "description": "Selector for applying styles for new badge"
   }
 ]
