@@ -1,46 +1,27 @@
 // primary
 .a-btn {
-  @apply relative bg-dark px-4 h-12;
+  @apply px-4;
+  @apply h-12;
+  @apply font-medium text-white uppercase;
+  @apply bg-dark;
+  @apply transition-colors duration-200 ease-in;
 }
 
-.a-btn__bg {
-  @apply transition-all duration-200 ease-in-out absolute top-0 left-0 w-full origin-left transform scale-x-0 h-full fill-light;
-}
-
-.a-btn__content {
-  @apply relative text-white;
-}
-
-// primary:hover
 .a-btn:hover {
   @apply text-primary;
-
-  .a-btn__bg {
-    @apply scale-x-100;
-  }
-
-  .a-btn__content {
-    @apply text-primary;
-  }
+  @apply bg-secondary;
 }
 
 // secondary
 .a-btn--secondary {
-  @apply bg-primary text-primary border-2 border-dark;
-
-  .a-btn__content {
-    @apply text-primary;
-  }
-
-  .a-btn__bg {
-    @apply fill-dark;
-  }
+  @apply text-primary;
+  @apply bg-white;
+  @apply border-2 border-dark;
 }
 
 .a-btn--secondary:hover {
-  .a-btn__content {
-    @apply text-white;
-  }
+  @apply bg-dark;
+  @apply text-white;
 }
 
 // fluid
