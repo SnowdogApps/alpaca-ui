@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Paragraph.scss" />
+<style lang="css" src="./Paragraph.css" />
