@@ -1,0 +1,32 @@
+.a-heading {
+  @apply text-primary font-sans font-medium leading-relaxed;
+  @apply mt-0 mb-4;
+}
+
+.a-heading--first-level {
+  @apply text-3xl;
+}
+
+.a-heading--second-level {
+  @apply text-2xl;
+}
+
+.a-heading--third-level {
+  @apply text-xl;
+}
+
+.a-heading--fourth-level {
+  @apply text-base;
+}
+
+.a-heading--fifth-level {
+  @apply text-base;
+}
+
+.a-heading--sixth-level {
+  @apply text-base;
+}
+
+.a-heading--font-secondary {
+  @apply font-serif;
+}

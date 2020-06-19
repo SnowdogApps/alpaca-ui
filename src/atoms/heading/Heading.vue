@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Heading.scss" />
+<style lang="css" src="./Heading.css" />
