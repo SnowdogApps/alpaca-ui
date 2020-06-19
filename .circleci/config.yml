@@ -9,4 +9,4 @@ jobs:
       - run: yarn eslint
       - run: yarn stylelint
       - run: yarn test
-      - run: yarn codecov
+      # - run: yarn codecov
