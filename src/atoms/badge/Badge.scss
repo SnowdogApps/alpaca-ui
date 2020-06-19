@@ -1,0 +1,9 @@
+.a-badge {
+  @apply inline-flex justify-center mb-2 px-3
+    text-white font-bold text-xs leading-snug uppercase
+    bg-gray-800;
+
+  &--new {
+    @apply text-primary bg-white;
+  }
+}
