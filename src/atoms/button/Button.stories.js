@@ -5,6 +5,7 @@ import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Button.selectors.json'
 
 import AButton from './Button.vue'
+
 const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 export default {
