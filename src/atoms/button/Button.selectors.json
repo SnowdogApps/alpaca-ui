@@ -4,10 +4,6 @@
     "description": "Selector for applying secondary styles"
   },
   {
-    "name": ".a-btn--blank",
-    "description": "Selector for applying blank styles"
-  },
-  {
     "name": ".a-btn--fluid",
     "description": "Selector for applying fluid styles (width: 100%)"
   }

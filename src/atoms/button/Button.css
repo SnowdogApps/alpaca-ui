@@ -1,4 +1,4 @@
-// primary
+/* primary */
 .a-btn {
   @apply px-4;
   @apply h-12;
@@ -12,7 +12,7 @@
   @apply bg-secondary;
 }
 
-// secondary
+/* secondary */
 .a-btn--secondary {
   @apply text-primary;
   @apply bg-white;
@@ -24,7 +24,7 @@
   @apply text-white;
 }
 
-// fluid
+/* fluid */
 .a-btn--fluid {
   @apply w-full;
 }
