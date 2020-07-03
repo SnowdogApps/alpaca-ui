@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Blockquote.scss" />
+<style lang="css" src="./Blockquote.css" />
