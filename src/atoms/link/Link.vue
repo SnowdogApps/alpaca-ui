@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Link.scss" />
+<style lang="css" src="./Link.css" />
