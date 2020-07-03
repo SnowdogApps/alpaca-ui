@@ -1,0 +1,36 @@
+.a-link {
+  @apply text-blue font-normal font-sans leading-relaxed underline;
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.a-link:hover,
+.a-link:focus {
+  @apply text-secondary;
+}
+
+.a-link--inverted {
+  @apply text-secondary;
+}
+
+.a-link--inverted:hover,
+.a-link--inverted:focus {
+  @apply text-blue;
+}
+
+.a-link--secondary {
+  @apply text-gray-200;
+}
+
+.a-link--secondary:hover,
+.a-link--secondary:focus {
+  @apply text-primary;
+}
+
+.a-link--visually-hidden {
+  @apply sr-only;
+}
+
+.a-link--visually-hidden:hover,
+.a-link--visually-hidden:focus {
+  @apply not-sr-only;
+}
