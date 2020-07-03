@@ -53,6 +53,7 @@
     "jest-vue-preprocessor": "^1.5.0",
     "node-sass": "^4.12.0",
     "postcss-scss": "^2.1.1",
+    "storybook-addon-vue-info": "1.4.2",
     "sass-loader": "^8.0.0",
     "storybook-vue-router": "^1.0.7",
     "stylelint": "^11.0.0",
