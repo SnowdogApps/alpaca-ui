@@ -9,7 +9,7 @@ describe('Heading', () => {
       }
     })
 
-    expect(wrapper.is('h1')).toBe(true)
+    expect(wrapper.element.tagName).toBe('H1')
     expect(wrapper.classes()).toContain('a-heading')
     expect(wrapper.classes()).toContain('a-heading--first-level')
     expect(wrapper.classes().length).toBe(2)
@@ -38,7 +38,7 @@ describe('Heading', () => {
         tag: 'span'
       }
     })
-    expect(wrapper.is('span')).toBe(true)
+    expect(wrapper.element.tagName).toBe('SPAN')
     expect(wrapper.classes()).toContain('a-heading')
     expect(wrapper.classes()).toContain('a-heading--second-level')
     expect(wrapper.classes().length).toBe(2)
@@ -50,7 +50,7 @@ describe('Heading', () => {
         level: 5
       }
     })
-    expect(wrapper.is('h5')).toBe(true)
+    expect(wrapper.element.tagName).toBe('H5')
     expect(wrapper.classes()).toContain('a-heading')
     expect(wrapper.classes()).toContain('a-heading--fifth-level')
     expect(wrapper.classes().length).toBe(2)
