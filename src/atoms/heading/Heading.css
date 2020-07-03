@@ -1,5 +1,5 @@
 .a-heading {
-  @apply text-primary font-sans font-medium leading-relaxed;
+  @apply text-primary font-serif font-medium leading-relaxed;
   @apply mt-0 mb-4;
 }
 
@@ -28,5 +28,5 @@
 }
 
 .a-heading--font-secondary {
-  @apply font-serif;
+  @apply font-sans;
 }
