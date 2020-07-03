@@ -1,0 +1,11 @@
+.a-badge {
+  @apply inline-flex justify-center;
+  @apply mb-2 px-3;
+  @apply text-white font-bold text-xs leading-snug uppercase;
+  @apply bg-dark;
+}
+
+.a-badge--secondary {
+  @apply text-primary;
+  @apply bg-white;
+}
