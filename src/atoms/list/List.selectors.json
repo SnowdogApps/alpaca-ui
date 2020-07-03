@@ -1,0 +1,14 @@
+[
+  {
+    "name": ".a-list--horizontal",
+    "description": "Selector for applying horizontal styles"
+  },
+  {
+    "name": ".a-list--center",
+    "description": "Selector for applying center styles"
+  },
+  {
+    "name": ".a-list--native",
+    "description": "Selector for applying native styles"
+  }
+]

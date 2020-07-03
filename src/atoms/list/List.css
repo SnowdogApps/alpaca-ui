@@ -1,0 +1,29 @@
+.a-list {
+  @apply m-0 p-0;
+  @apply list-none;
+  @apply text-primary;
+}
+
+.a-list--horizontal {
+  @apply flex;
+  @apply flex-row flex-wrap;
+}
+
+@screen md {
+  .a-list--horizontal {
+    @apply flex-no-wrap;
+  }
+}
+
+.a-list--center {
+  @apply justify-center;
+  @apply text-center;
+}
+
+.a-list--divided {
+
+}
+
+.a-list--native {
+  
+}
