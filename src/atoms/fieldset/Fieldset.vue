@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Fieldset.scss" />
+<style lang="css" src="./Fieldset.css" />

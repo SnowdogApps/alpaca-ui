@@ -9,7 +9,7 @@ describe('Fieldset', () => {
       }
     })
 
-    expect(wrapper.is('fieldset')).toBe(true)
+    expect(wrapper.element.tagName).toBe('FIELDSET')
     expect(wrapper.classes()).toContain('a-fieldset')
     expect(wrapper.classes().length).toBe(1)
     expect(wrapper.contains('legend')).toBe(true)
