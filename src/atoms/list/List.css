@@ -20,10 +20,23 @@
   @apply text-center;
 }
 
-.a-list--divided {
-
+.a-list--native {
+  @apply list-disc;
 }
 
-.a-list--native {
-  
+.a-list--native.a-list--horizontal {
+  @apply list-none;
+}
+
+.a-list--divided > * {
+  @apply  border-solid border-dark;
+  @apply border-b border-r-0;
+}
+
+.a-list--divided.a-list--horizontal > * {
+  @apply border-r border-b-0;
+}
+
+.a-list--divided > *:last-child {
+  @apply border-0;
 }

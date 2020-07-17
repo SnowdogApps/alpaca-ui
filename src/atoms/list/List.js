@@ -2,7 +2,7 @@
 export default {
   props: {
     /**
-     *  To use another tag instead of `ul`
+     * To use another tag instead of `ul`
      */
     tag: {
       type: String,

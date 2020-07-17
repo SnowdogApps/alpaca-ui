@@ -10,5 +10,9 @@
   {
     "name": ".a-list--native",
     "description": "Selector for applying native styles"
+  },
+  {
+    "name": ".a-list--divided",
+    "description": "Selector for applying divided styles"
   }
 ]
