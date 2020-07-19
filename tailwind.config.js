@@ -60,7 +60,10 @@ module.exports = {
       ...theme('colors'),
       dark: theme('colors.gray.800'),
       light: theme('colors.gray.200')
-    })
+    }),
+    maxWidth: {
+      content: '1328px'
+    }
   },
   variants: {},
   plugins: [],

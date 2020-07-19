@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Container.scss" />
+<style lang="css" src="./Container.css" />
