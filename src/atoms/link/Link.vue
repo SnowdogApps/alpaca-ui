@@ -5,9 +5,8 @@ import ALink from './Link.js'
 
 export default {
   name: 'AlpacaLink',
-
   mixins: [ALink]
 }
 </script>
 
-<style lang="css" src="./Link.css" />
+<style src="./Link.css" />
