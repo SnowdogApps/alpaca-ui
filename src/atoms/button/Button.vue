@@ -12,4 +12,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Button.scss" />
+<style lang="css" src="./Button.css" />

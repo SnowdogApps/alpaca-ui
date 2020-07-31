@@ -5,7 +5,7 @@ describe('Badge', () => {
   it('has default structure', () => {
     const wrapper = mount(ABadge)
 
-    expect(wrapper.is('div')).toBe(true)
+    expect(wrapper.element.tagName).toBe('DIV')
     expect(wrapper.classes()).toContain('a-badge')
     expect(wrapper.classes().length).toBe(1)
   })
@@ -28,7 +28,7 @@ describe('Badge', () => {
       }
     })
 
-    expect(wrapper.is('span')).toBe(true)
+    expect(wrapper.element.tagName).toBe('SPAN')
     expect(wrapper.classes()).toContain('a-badge')
     expect(wrapper.classes().length).toBe(1)
   })
