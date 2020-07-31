@@ -72,21 +72,3 @@ export const WithSlots = () => ({
     </a-list>
   `
 })
-
-// <a-list :class="classKnobs">
-// <a-list-item>
-//   <a-icon title="Account icon">
-//     <a-icon-person />
-//   </a-icon>
-// </a-list-item>
-// <a-list-item>
-//   <a-icon title="Check icon">
-//     <a-icon-check />
-//   </a-icon>
-// </a-list-item>
-// <a-list-item>
-//   <a-icon title="Account icon">
-//     <a-icon-person />
-//   </a-icon>
-// </a-list-item>
-// </a-list>

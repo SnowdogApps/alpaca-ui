@@ -4,6 +4,7 @@
 
 .a-list-item--label {
   float: left;
+
   @apply clear-left;
   @apply table-cell;
   @apply pt-0 pr-2 pb-2 pl-0;

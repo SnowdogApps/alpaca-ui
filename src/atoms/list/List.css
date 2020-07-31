@@ -29,7 +29,7 @@
 }
 
 .a-list--divided > * {
-  @apply  border-solid border-dark;
+  @apply border-solid border-dark;
   @apply border-b border-r-0;
 }
 
