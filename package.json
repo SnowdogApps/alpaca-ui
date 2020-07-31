@@ -8,7 +8,7 @@
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",
     "eslint": "eslint --ext .js,.vue src",
-    "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.scss' 'assets/styles/**/*.scss'",
+    "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.css' 'assets/styles/**/*.css'",
     "test": "jest --clearCache && jest -w 1",
     "codcov": "./node_modules/codcov/bin/codcov"
   },

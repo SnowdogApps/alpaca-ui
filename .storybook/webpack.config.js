@@ -38,8 +38,8 @@ module.exports = ({ config }) => {
   config.plugins.push(new StyleLintPlugin({
     files: [
       'src/**/*.vue',
-      'src/**/*.scss',
-      'assets/styles/**/*.scss'
+      'src/**/*.css',
+      'assets/styles/**/*.css'
     ],
     fix: true
   }))
