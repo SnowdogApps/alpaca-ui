@@ -20,12 +20,12 @@ export const First = () => ({
       default: select('Heading level', levels, 1)
     },
     tagKnobs: {
-      default: text('Tag', null)
+      default: text('Tag', 'h1')
     },
     textKnobs: {
       default: text('Text', 'Heading level 1')
     },
-    classKnob: {
+    classKnobs: {
       default: select('BEM Modifier', classKnobsConfig)
     }
   },
@@ -33,7 +33,7 @@ export const First = () => ({
     <a-heading
       :level="levelKnobs"
       :tag="tagKnobs"
-      :class="classKnob"
+      :class="classKnobs"
     >
       {{ textKnobs }}
     </a-heading>
@@ -47,12 +47,12 @@ export const Second = () => ({
       default: select('Heading level', levels, 2)
     },
     tagKnobs: {
-      default: text('Tag', null)
+      default: text('Tag', 'h2')
     },
     textKnobs: {
       default: text('Text', 'Heading level 2')
     },
-    classKnob: {
+    classKnobs: {
       default: select('BEM Modifier', classKnobsConfig)
     }
 
@@ -61,7 +61,7 @@ export const Second = () => ({
     <a-heading
       :level="levelKnobs"
       :tag="tagKnobs"
-      :class="classKnob"
+      :class="classKnobs"
     >
       {{ textKnobs }}
     </a-heading>
@@ -75,12 +75,12 @@ export const Third = () => ({
       default: select('Heading level', levels, 3)
     },
     tagKnobs: {
-      default: text('Tag', null)
+      default: text('Tag', 'h3')
     },
     textKnobs: {
       default: text('Text', 'Heading level 3')
     },
-    classKnob: {
+    classKnobs: {
       default: select('BEM Modifier', classKnobsConfig)
     }
 
@@ -89,7 +89,7 @@ export const Third = () => ({
     <a-heading
       :level="levelKnobs"
       :tag="tagKnobs"
-      :class="classKnob"
+      :class="classKnobs"
     >
       {{ textKnobs }}
     </a-heading>
@@ -103,12 +103,12 @@ export const Fourth = () => ({
       default: select('Heading level', levels, 4)
     },
     tagKnobs: {
-      default: text('Tag', null)
+      default: text('Tag', 'h4')
     },
     textKnobs: {
       default: text('Text', 'Heading level 4')
     },
-    classKnob: {
+    classKnobs: {
       default: select('BEM Modifier', classKnobsConfig)
     }
 
@@ -117,7 +117,7 @@ export const Fourth = () => ({
     <a-heading
       :level="levelKnobs"
       :tag="tagKnobs"
-      :class="classKnob"
+      :class="classKnobs"
     >
       {{ textKnobs }}
     </a-heading>
@@ -131,12 +131,12 @@ export const Fifth = () => ({
       default: select('Heading level', levels, 5)
     },
     tagKnobs: {
-      default: text('Tag', null)
+      default: text('Tag', 'h5')
     },
     textKnobs: {
       default: text('Text', 'Heading level 5')
     },
-    classKnob: {
+    classKnobs: {
       default: select('BEM Modifier', classKnobsConfig)
     }
 
@@ -145,7 +145,7 @@ export const Fifth = () => ({
     <a-heading
       :level="levelKnobs"
       :tag="tagKnobs"
-      :class="classKnob"
+      :class="classKnobs"
     >
       {{ textKnobs }}
     </a-heading>
@@ -159,12 +159,12 @@ export const Sixth = () => ({
       default: select('Heading level', levels, 6)
     },
     tagKnobs: {
-      default: text('Tag', null)
+      default: text('Tag', 'h6')
     },
     textKnobs: {
       default: text('Text', 'Heading level 6')
     },
-    classKnob: {
+    classKnobs: {
       default: select('BEM Modifier', classKnobsConfig)
     }
 
@@ -173,7 +173,7 @@ export const Sixth = () => ({
     <a-heading
       :level="levelKnobs"
       :tag="tagKnobs"
-      :class="classKnob"
+      :class="classKnobs"
     >
       {{ textKnobs }}
     </a-heading>
