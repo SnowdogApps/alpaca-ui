@@ -5,9 +5,8 @@ import ABlockquote from './Blockquote.js'
 
 export default {
   name: 'AlpacaBlockquote',
-
   mixins: [ABlockquote]
 }
 </script>
 
-<style lang="css" src="./Blockquote.css" />
+<style src="./Blockquote.css" />
