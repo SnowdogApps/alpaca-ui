@@ -5,9 +5,8 @@ import AList from './List.js'
 
 export default {
   name: 'AlpacaList',
-
   mixins: [AList]
 }
 </script>
 
-<style lang="css" src="./List.css" />
+<style src="./List.css" />
