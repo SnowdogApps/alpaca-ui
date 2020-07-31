@@ -1,4 +1,4 @@
-import { text } from '@storybook/addon-knobs'
+import { text, object } from '@storybook/addon-knobs'
 
 import AImage from './Image.vue'
 
@@ -29,13 +29,22 @@ export const Picture = () => ({
       default: text('Default src', 'images/image/banner-480_480.png')
     },
     srcKnob1: {
-      default: text('Image src 1', 'images/image/banner-480_480.png')
+      default: object('Image src 1', {
+        src: 'images/image/banner-480_480.png',
+        width: '480px'
+      })
     },
     srcKnob2: {
-      default: text('Image src 2', 'images/image/banner-768_402.png')
+      default: object('Image src 2', {
+        src: 'images/image/banner-768_402.png',
+        width: '768px'
+      })
     },
     srcKnob3: {
-      default: text('Image src 3', 'images/image/banner-992_254.png')
+      default: object('Image src 3', {
+        src: 'images/image/banner-992_254.png',
+        width: '1024px'
+      })
     },
     tagKnob: {
       default: text('Html tag', 'picture')
@@ -47,16 +56,16 @@ export const Picture = () => ({
       alt="alt image text"
     >
       <source
-        :srcset="srcKnob1"
-        media="(max-width: 480px)"
+        :srcset="srcKnob1.src"
+        :media="'(max-width: ' + srcKnob1.width + ')'"
       />
       <source
-        :srcset="srcKnob2"
-        media="(max-width: 768px)"
+        :srcset="srcKnob2.src"
+        :media="'(max-width: ' + srcKnob2.width + ')'"
       />
       <source
-        :srcset="srcKnob3"
-        media="(max-width: 1024px)"
+        :srcset="srcKnob3.src"
+        :media="'(max-width: ' + srcKnob3.width + ')'"
       />
       <img :src="srcKnob" alt="alt text"/>
     </a-image>
