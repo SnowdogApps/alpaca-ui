@@ -5,9 +5,8 @@ import ABadge from './Badge.js'
 
 export default {
   name: 'AlpacaBadge',
-
   mixins: [ABadge]
 }
 </script>
 
-<style lang="scss" src="./Badge.scss" />
+<style src="./Badge.css" />

@@ -3,18 +3,6 @@ const path = require('path')
 
 module.exports = ({ config }) => {
   config.module.rules.push({
-    test: /\.stories\.jsx?$/,
-    loaders: [require.resolve('@storybook/addon-storysource/loader')],
-    enforce: 'pre'
-  })
-
-  config.module.rules.push({
-    test: /\.vue$/,
-    loader: 'storybook-addon-vue-info/loader',
-    enforce: 'post'
-  })
-
-  config.module.rules.push({
     test: /\.scss$/,
     use: [
       'vue-style-loader',
@@ -24,16 +12,34 @@ module.exports = ({ config }) => {
   })
 
   config.module.rules.push({
+    test: /\.scss$/,
+    use: [
+      {
+        loader: 'postcss-loader',
+        options: {
+          ident: 'postcss',
+          syntax: 'postcss-scss',
+          plugins: [
+            require('tailwindcss'),
+            require('autoprefixer')
+          ]
+        }
+      }
+    ]
+  })
+
+  config.module.rules.push({
     enforce: 'pre',
     test: /\.(js|vue)$/,
+    exclude: /node_modules/,
     loader: 'eslint-loader'
   })
 
   config.plugins.push(new StyleLintPlugin({
     files: [
       'src/**/*.vue',
-      'src/**/*.scss',
-      'assets/styles/**/*.scss'
+      'src/**/*.css',
+      'assets/styles/**/*.css'
     ],
     fix: true
   }))
