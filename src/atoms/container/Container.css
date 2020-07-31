@@ -1,5 +1,3 @@
-/* @tailwind components; */
-
 .a-container {
     @apply mx-2;
     @apply max-w-content;
