@@ -5,9 +5,8 @@ import AFieldset from './Fieldset.js'
 
 export default {
   name: 'AlpacaFieldset',
-
   mixins: [AFieldset]
 }
 </script>
 
-<style lang="css" src="./Fieldset.css" />
+<style src="./Fieldset.css" />
