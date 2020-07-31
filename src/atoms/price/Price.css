@@ -1,0 +1,18 @@
+.a-price {
+  @apply text-lg font-bold;
+}
+
+.a-price__old {
+  @apply mr-3;
+  @apply text-xs font-normal text-gray-600 line-through;
+}
+
+@screen md {
+  .a-price__old {
+    @apply text-sm;
+  }
+}
+
+.a-price__special {
+  @apply text-red no-underline;
+}
