@@ -28,26 +28,3 @@ export const Default = () => ({
     </a-label>
   `
 })
-
-export const CustomTag = () => ({
-  components: { ALabel },
-  props: {
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    },
-    textKnobs: {
-      default: text('Text', 'Custom tag label')
-    },
-    tagKnob: {
-      default: text('Html tag', 'span')
-    }
-  },
-  template: `
-    <a-label
-      :tag="tagKnob"
-      :class="classKnobs"
-    >
-      {{ textKnobs }}
-    </a-label>
-  `
-})
