@@ -1,7 +1,4 @@
 {
-  "plugins": [
-    "stylelint-scss"
-  ],
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-rational-order"
@@ -9,8 +6,6 @@
   "rules": {
     "at-rule-no-unknown": null,
     "no-descending-specificity": null,
-    "scss/at-rule-no-unknown": true,
-    "scss/dollar-variable-colon-space-after": "always",
     "block-no-empty": null,
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [ "always", {
