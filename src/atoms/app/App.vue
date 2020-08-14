@@ -9,4 +9,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./App.scss" />
+<style src="./App.css" />
