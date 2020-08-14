@@ -1,3 +1,20 @@
+.a-tabs {
+  @apply flex flex-row flex-wrap justify-center;
+
+  &__nav-button {
+    @apply relative;
+    @apply w-full h-18 p-2;
+    @apply border-b border-primary bg-primary;
+    @apply uppercase text-secondary font-medium;
+  }
+
+  &__content {
+    @apply relative;
+    @apply w-full p-4;
+  }
+}
+
+
 /* @import '../../../assets/styles/_globals.scss';
 
 // common

@@ -2,26 +2,18 @@ const StyleLintPlugin = require('stylelint-webpack-plugin')
 const path = require('path')
 
 module.exports = ({ config }) => {
-  config.module.rules.push({
-    test: /\.scss$/,
-    use: [
-      'vue-style-loader',
-      'css-loader',
-      'sass-loader'
-    ]
-  })
 
   config.module.rules.push({
-    test: /\.scss$/,
+    test: /\.css$/,
     use: [
       {
         loader: 'postcss-loader',
         options: {
           ident: 'postcss',
-          syntax: 'postcss-scss',
           plugins: [
             require('tailwindcss'),
-            require('autoprefixer')
+            require('autoprefixer'),
+            require('postcss-nested')
           ]
         }
       }

@@ -1,7 +1,13 @@
 module.exports = {
-  purge: [],
+  purge: [
+    'src/**/*.vue'
+  ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        18: '4.5rem'
+      }
+    },
     screens: {
       xs: '320px',
       sm: '480px',
@@ -55,7 +61,8 @@ module.exports = {
     textColor: theme => ({
       ...theme('colors'),
       default: theme('colors.gray.800'),
-      primary: theme('colors.gray.800')
+      primary: theme('colors.gray.800'),
+      secondary: theme('colors.gray.600')
     }),
     fill: theme => ({
       ...theme('colors'),
