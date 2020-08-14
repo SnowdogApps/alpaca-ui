@@ -77,3 +77,4 @@ typings/
 
 # Project
 /index.js
+dist/
