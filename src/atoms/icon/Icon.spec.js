@@ -5,7 +5,7 @@ describe('Icon', () => {
   it('has default structure', () => {
     const wrapper = mount(AIcon)
 
-    expect(wrapper.is('svg')).toBe(true)
+    expect(wrapper.element.tagName).toBe('svg')
     expect(wrapper.classes()).toContain('a-icon')
     expect(wrapper.classes().length).toBe(1)
     expect(wrapper.attributes().xmlns).toBeDefined()
