@@ -57,6 +57,7 @@ export const Picture = () => ({
   template: `
     <a-image
       :tag="tagKnob"
+      :src="srcKnob"
       alt="alt image text"
     >
       <source
@@ -71,7 +72,6 @@ export const Picture = () => ({
         :srcset="srcKnob3.src"
         :media="'(max-width: ' + srcKnob3.width + ')'"
       />
-      <img :src="srcKnob" alt="alt text"/>
     </a-image>
   `
 })

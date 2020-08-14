@@ -7,7 +7,8 @@ export default {
      */
     tag: {
       type: String,
-      default: 'img'
+      default: 'img',
+      validator: tag => tag === 'img' || tag === 'picture'
     },
     placeholderSrc: {
       type: String,

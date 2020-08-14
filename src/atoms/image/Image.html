@@ -1,7 +1,13 @@
-<component
-  :is="tag"
+<img
+  v-if="!usePicture"
+  v-bind="$attrs"
   class="a-image"
 >
-  <!-- @slot Slot for image content -->
+<picture v-else>
+  <!-- @slot List of sources inside picture -->
   <slot />
-</component>
+  <img
+    v-bind="$attrs"
+    class="a-image"
+  >
+</picture>
