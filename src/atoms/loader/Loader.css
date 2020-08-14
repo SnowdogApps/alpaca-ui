@@ -15,5 +15,5 @@
   @apply animate-spin;
 
   /* for now not supported in tailwindcss  */
-  border-top-color: theme('colors.gray.500');
+  border-top-color: theme('colors.gray.800');
 }
