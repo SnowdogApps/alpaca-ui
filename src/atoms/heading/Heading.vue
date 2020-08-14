@@ -5,9 +5,8 @@ import AHeading from './Heading.js'
 
 export default {
   name: 'AlpacaHeading',
-
   mixins: [AHeading]
 }
 </script>
 
-<style lang="scss" src="./Heading.scss" />
+<style src="./Heading.css" />
