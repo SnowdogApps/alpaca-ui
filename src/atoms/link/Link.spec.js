@@ -5,7 +5,7 @@ describe('Link', () => {
   it('has default structure', () => {
     const wrapper = mount(ALink)
 
-    expect(wrapper.is('a')).toBe(true)
+    expect(wrapper.element.tagName).toBe('A')
     expect(wrapper.classes()).toContain('a-link')
     expect(wrapper.classes().length).toBe(1)
   })
@@ -28,8 +28,6 @@ describe('Link', () => {
         href
       }
     })
-    expect(wrapper.is('a')).toBe(true)
-    expect(wrapper.classes()).toContain('a-link')
     expect(wrapper.attributes().href).toBeDefined()
     expect(wrapper.attributes().href).toEqual(href)
   })

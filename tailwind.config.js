@@ -57,7 +57,8 @@ module.exports = {
     textColor: theme => ({
       ...theme('colors'),
       default: theme('colors.gray.800'),
-      primary: theme('colors.gray.800')
+      primary: theme('colors.gray.800'),
+      secondary: theme('colors.gray.600')
     }),
     fill: theme => ({
       ...theme('colors'),
