@@ -9,7 +9,7 @@ describe('Image', () => {
       }
     })
 
-    expect(wrapper.is('img')).toBe(true)
+    expect(wrapper.element.tagName).toBe('IMG')
     expect(wrapper.classes()).toContain('a-image')
     expect(wrapper.classes().length).toBe(1)
   })
