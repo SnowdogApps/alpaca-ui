@@ -1,0 +1,38 @@
+.table tr {
+  @apply block;
+  @apply py-4;
+  @apply border-b border-solid border-light;
+}
+
+.table tr:last-child {
+  @apply border-b-0;
+}
+
+@screen md {
+  .table tr {
+    @apply table-row;
+    @apply py-0;
+    @apply border-b-0;
+  }
+}
+
+.table thead tr {
+  @apply p-0;
+  @apply border-b-0;
+}
+
+.table tfoot tr:first-child {
+  @apply border-t border-solid border-light;
+}
+
+.table tfoot tr:last-child {
+  @apply border-b-0;
+}
+
+.table--odd-even tbody tr:nth-child(odd) {
+  @apply bg-white;
+}
+
+.table--odd-even tbody tr:nth-child(even) {
+  @apply bg-gray-200;
+}

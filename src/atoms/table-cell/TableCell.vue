@@ -5,9 +5,8 @@ import ATableCell from './TableCell.js'
 
 export default {
   name: 'AlpacaTableCell',
-
   mixins: [ATableCell]
 }
 </script>
 
-<style lang="scss" src="./TableCell.scss" />
+<style src="./TableCell.css" />

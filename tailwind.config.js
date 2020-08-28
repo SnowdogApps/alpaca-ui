@@ -3,7 +3,13 @@ module.exports = {
     'src/**/*.vue'
   ],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%'
+      }
+    },
     screens: {
       xs: '320px',
       sm: '480px',
@@ -29,6 +35,7 @@ module.exports = {
       'seafoam-blue': '#77ccb9',
       teal: '#0194ab',
       pink: '#ff5b77',
+      transparent: 'transparent',
       gray: {
         100: '#f7f7f9',
         200: '#fbfbfb',
