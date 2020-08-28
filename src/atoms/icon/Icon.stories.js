@@ -338,7 +338,7 @@ export const Default = () => ({
           <a-icon-visibility-off />
         </a-icon>
         <span :style="labelStyles">
-          visibility
+          visibility Off
         </span>
       </div>
       <div :style="wrapperStyles">

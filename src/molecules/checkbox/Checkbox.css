@@ -1,0 +1,93 @@
+/* @import '../../../assets/styles/_variables';
+
+$checkbox__icon-size                             : 14px !default;
+$checkbox__icon-fill                             : $white !default;
+
+$checkbox__icon-wrapper-margin                   : 0 $spacer 0 0 !default;
+$checkbox__icon-wrapper-border                   : 2px solid $gray !default;
+$checkbox__icon-wrapper-border-radius            : 2px !default;
+
+$checkbox__icon-wrapper-border--checked          : 2px solid $color-primary !default;
+$checkbox__icon-wrapper-background-color--checked: $color-primary !default;
+
+.a-checkbox {
+  position: relative;
+  display: flex;
+
+  &__field {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + .a-checkbox__label {
+      .a-checkbox__icon-wrapper {
+        background-color: $checkbox__icon-wrapper-background-color--checked;
+        border: $checkbox__icon-wrapper-border--checked;
+      }
+
+      .a-checkbox__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon-wrapper {
+    margin: $checkbox__icon-wrapper-margin;
+    border: $checkbox__icon-wrapper-border;
+    border-radius: $checkbox__icon-wrapper-border-radius;
+  }
+
+  &__icon {
+    width: $checkbox__icon-size;
+    height: $checkbox__icon-size;
+    cursor: pointer;
+    opacity: 0;
+    fill: $checkbox__icon-fill;
+  }
+} */
+
+.a-checkbox {
+  @apply relative;
+  @apply flex;
+}
+
+.a-checkbox__field {
+  @apply absolute opacity-0;
+}
+
+.a-checkbox__field:checked + .a-checkbox__label {
+  @apply text-default;
+}
+
+.a-checkbox__field:checked + .a-checkbox__label .a-checkbox__icon-wrapper {
+  @apply bg-dark;
+  @apply border-dark;
+}
+
+.a-checkbox__field:checked + .a-checkbox__label .a-checkbox__icon {
+  @apply opacity-100;
+  @apply fill-white;
+}
+
+.a-checkbox__label {
+  @apply flex items-center;
+  @apply text-sm text-gray-600;
+  @apply cursor-pointer;
+}
+
+.a-checkbox__icon-wrapper {
+  @apply mr-4;
+  @apply border-2 border-solid border-secondary rounded-sm;
+}
+
+.a-checkbox__icon {
+  @apply w-5 h-5;
+  @apply opacity-0;
+  @apply cursor-pointer;
+  @apply fill-gray-600;
+}

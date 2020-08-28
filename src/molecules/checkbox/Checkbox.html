@@ -1,0 +1,28 @@
+<div class="a-checkbox">
+  <input
+    v-bind="$attrs"
+    :id="id"
+    type="checkbox"
+    :class="['a-checkbox__field', inputClass]"
+    :checked="checked"
+    @change="$emit('change', $event.target.checked)"
+  >
+  <!-- @slot Custom checkbox markup (Named slot) -->
+  <slot name="label">
+    <label
+      :for="id"
+      class="a-checkbox__label"
+    >
+      <div class="a-checkbox__icon-wrapper">
+        <a-icon
+          :title="iconTitle"
+          class="a-checkbox__icon"
+        >
+          <a-icon-check />
+        </a-icon>
+      </div>
+      <!-- @slot Custom label content (Default slot) -->
+      <slot />
+    </label>
+  </slot>
+</div>
