@@ -1,12 +1,12 @@
-import { select, text } from '@storybook/addon-knobs'
+import { text, optionsKnob } from '@storybook/addon-knobs'
 
-import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
+import getSelectKnobsConfig from '@utils/helpers/get-select-knobs-config.js'
 import selectorsConfig from './List.selectors.json'
 
 import AList from './List.vue'
 import AListItem from '../list-item/ListItem.vue'
 
-const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
+const classKnobsConfig = getSelectKnobsConfig(selectorsConfig)
 
 export default {
   title: 'Atoms/List',
@@ -17,7 +17,7 @@ export const Default = () => ({
   components: { AList, AListItem },
   props: {
     classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
+      default: optionsKnob('BEM Modifier', classKnobsConfig, 'null', { display: 'multi-select' })
     }
   },
   template: `
@@ -64,7 +64,7 @@ export const WithSlots = () => ({
   components: { AList, AListItem },
   props: {
     classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
+      default: optionsKnob('BEM Modifier', classKnobsConfig, 'null', { display: 'multi-select' })
     }
   },
   template: `
