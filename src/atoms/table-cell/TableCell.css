@@ -59,14 +59,54 @@
   @apply bg-white;
 }
 
-.table--odd-even tbody td {
-  @apply bg-transparent;
-}
-
 @screen md {
   .table tfoot td {
     @apply table-cell;
     @apply p-4;
     @apply border-t border-r border-b-0 border-solid border-light;
   }
+}
+
+.table--odd-even tbody td {
+  @apply bg-transparent;
+}
+
+.table--scope-row th {
+  @apply w-1/2;
+  @apply p-4;
+  @apply border-r-0;
+  @apply bg-white;
+  @apply font-normal;
+}
+
+.table--scope-row tr:nth-child(odd) th,
+.table--scope-row tr:nth-child(odd) td {
+  @apply bg-gray-200;
+}
+
+.table--scope-row th + td {
+  @apply flex-col flex-no-wrap;
+  @apply p-4;
+}
+
+@screen sm {
+  .table--scope-row th + td {
+    @apply flex-row;
+  }
+}
+
+.table--scope-row th + td::before {
+  @apply max-w-full w-full;
+  @apply mb-2;
+}
+
+@screen sm {
+  .table--scope-row th + td::before {
+    @apply max-w-1/2 w-1/2;
+    @apply mb-0;
+  }
+}
+
+.table--scope-row tr:last-child td {
+  @apply border-b;
 }

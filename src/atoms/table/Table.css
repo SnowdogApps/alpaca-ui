@@ -15,6 +15,10 @@
   }
 }
 
+.table--scope-row {
+  @apply border-t border-r-0 border-b-0 border-l-0;
+}
+
 .table__caption {
   @apply sr-only;
 }

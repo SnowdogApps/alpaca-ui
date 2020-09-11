@@ -1,0 +1,50 @@
+[
+  [
+    {
+      "tag": "th",
+      "role": "rowheader",
+      "scope": "row",
+      "text": "Example heading 1",
+      "id": "rowId1"
+    },
+    {
+      "tag": "td",
+      "role": "gridcell",
+      "text": "Example content 1",
+      "data-th": "Example heading 1:",
+      "id": "rowId2"
+    }
+  ],
+  [
+    {
+      "tag": "th",
+      "role": "rowheader",
+      "scope": "row",
+      "text": "Example heading 2",
+      "id": "rowId3"
+    },
+    {
+      "tag": "td",
+      "role": "gridcell",
+      "text": "Example content 2",
+      "data-th": "Example heading 2:",
+      "id": "rowId4"
+    }
+  ],
+  [
+    {
+      "tag": "th",
+      "role": "rowheader",
+      "scope": "row",
+      "text": "Example heading 3",
+      "id": "rowId5"
+    },
+    {
+      "tag": "td",
+      "role": "gridcell",
+      "text": "Example content 3",
+      "data-th": "Example heading 3:",
+      "id": "rowId6"
+    }
+  ]
+]

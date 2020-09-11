@@ -36,3 +36,7 @@
 .table--odd-even tbody tr:nth-child(even) {
   @apply bg-gray-100;
 }
+
+.table--scope-row tbody tr {
+  @apply p-0;
+}

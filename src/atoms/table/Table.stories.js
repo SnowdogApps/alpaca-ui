@@ -3,6 +3,7 @@ import { select } from '@storybook/addon-knobs'
 import bodyRows from './mocks/bodyRows.json'
 import headCells from './mocks/headCells.json'
 import footCells from './mocks/footCells.json'
+import scopeRow from './mocks/scopeRow.json'
 
 import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
 import selectorsConfig from './Table.selectors.json'
@@ -73,6 +74,37 @@ export const Default = () => ({
           </a-table-cell>
         </a-table-row>
       </tfoot>
+    </a-table>
+  `
+})
+
+export const ScopeRow = () => ({
+  components: { ATable, ATableRow, ATableCell },
+  data: () => ({
+    scopeRow
+  }),
+  template: `
+    <a-table
+      caption="This is a table"
+      class="table--scope-row"
+    >
+      <tbody>
+        <a-table-row
+          v-for="(row, i) in scopeRow"
+          :key="row.id"
+        >
+          <a-table-cell
+            v-for="bodyCell in row"
+            :tag="bodyCell.tag"
+            :role="bodyCell.role"
+            :scope="bodyCell.tag === 'th' ? bodyCell.scope : null"
+            :data-th="bodyCell.tag === 'td' ? bodyCell['data-th'] : null"
+            :key="bodyCell.id"
+          >
+            {{ bodyCell.text }}
+          </a-table-cell>
+        </a-table-row>
+      </tbody>
     </a-table>
   `
 })
