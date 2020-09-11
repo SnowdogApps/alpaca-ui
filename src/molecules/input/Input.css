@@ -23,7 +23,7 @@
 }
 
 .a-input--inline {
-  @apply flex .items-center;
+  @apply flex items-center;
 }
 
 .a-input--inline .a-label {

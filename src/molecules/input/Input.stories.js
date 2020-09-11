@@ -66,18 +66,7 @@ export const Password = () => ({
     return {
       value: '',
       passwordVisible: false,
-      inputType: 'password',
-      iconStyles: {
-        position: 'absolute',
-        bottom: 0,
-        right: 0,
-        display: 'flex',
-        'align-items': 'center',
-        'justify-content': 'center',
-        width: '48px',
-        height: '48px',
-        cursor: 'pointer'
-      }
+      inputType: 'password'
     }
   },
   methods: {
@@ -96,7 +85,10 @@ export const Password = () => ({
       id="input-id"
     >
       <template #icon>
-        <div :style="iconStyles" @click="toggle">
+        <div
+          class="absolute bottom-0 right-0 flex items-center justify-center w-12 h-12 cursor-pointer"
+          @click="toggle"
+        >
           <a-icon>
             <a-icon-visibility v-if="passwordVisible" />
             <a-icon-visibility-off v-else />
