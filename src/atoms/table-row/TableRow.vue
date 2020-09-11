@@ -9,4 +9,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./TableRow.scss" />
+<style src="./TableRow.css" />

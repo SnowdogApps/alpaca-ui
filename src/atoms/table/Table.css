@@ -1,0 +1,24 @@
+.table {
+  @apply w-full;
+  @apply my-2;
+  @apply bg-white;
+  @apply border border-solid border-light;
+  @apply border-separate;
+  @apply text-sm leading-relaxed;
+
+  border-spacing: 0;
+}
+
+@screen md {
+  .table {
+    @apply text-base;
+  }
+}
+
+.table--scope-row {
+  @apply border-t border-r-0 border-b-0 border-l-0;
+}
+
+.table__caption {
+  @apply sr-only;
+}
