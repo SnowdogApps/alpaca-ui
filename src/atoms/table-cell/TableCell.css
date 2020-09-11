@@ -6,7 +6,7 @@
   .table th {
     @apply table-cell;
     @apply p-4;
-    @apply bg-gray-100;
+    @apply bg-gray-200;
     @apply border-r border-b border-solid border-light;
     @apply text-left;
   }

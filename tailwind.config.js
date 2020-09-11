@@ -37,8 +37,8 @@ module.exports = {
       pink: '#ff5b77',
       transparent: 'transparent',
       gray: {
-        100: '#f7f7f9',
-        200: '#fbfbfb',
+        100: '#fbfbfb',
+        200: '#f7f7f9',
         300: '#eaeaea',
         400: '#bdbdbd',
         500: '#d8d8d8',
