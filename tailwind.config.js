@@ -57,13 +57,17 @@ module.exports = {
     textColor: theme => ({
       ...theme('colors'),
       default: theme('colors.gray.800'),
-      primary: theme('colors.gray.800')
+      primary: theme('colors.gray.800'),
+      secondary: theme('colors.gray.600')
     }),
     fill: theme => ({
       ...theme('colors'),
       dark: theme('colors.gray.800'),
       light: theme('colors.gray.200')
-    })
+    }),
+    maxWidth: {
+      content: '1328px'
+    }
   },
   variants: {},
   plugins: [],

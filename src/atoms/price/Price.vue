@@ -5,9 +5,8 @@ import APrice from './Price.js'
 
 export default {
   name: 'AlpacaPrice',
-
   mixins: [APrice]
 }
 </script>
 
-<style lang="scss" src="./Price.scss" />
+<style src="./Price.css" />

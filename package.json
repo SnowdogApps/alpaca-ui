@@ -15,7 +15,7 @@
   "dependencies": {
     "focus-visible": "^5.0.2",
     "normalize.css": "^8.0.1",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^1.6.2",
     "vue": "^2.6.11",
     "vue-carousel": "^0.18.0-alpha",
     "vue-router": "^3.1.3",

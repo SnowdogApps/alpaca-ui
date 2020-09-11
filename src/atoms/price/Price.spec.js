@@ -5,7 +5,7 @@ describe('Price', () => {
   it('has default structure', () => {
     const wrapper = mount(APrice)
 
-    expect(wrapper.is('div')).toBe(true)
+    expect(wrapper.element.tagName).toBe('DIV')
     expect(wrapper.classes()).toContain('a-price')
     expect(wrapper.classes().length).toBe(1)
   })
@@ -32,11 +32,11 @@ describe('Price', () => {
     const specialPrice = wrapper.find('.a-price__special')
 
     expect(oldPrice.exists()).toBe(true)
-    expect(oldPrice.is('del')).toBe(true)
+    expect(oldPrice.element.tagName).toBe('DEL')
     expect(oldPrice.text()).toEqual('$128,00')
 
     expect(specialPrice.exists()).toBe(true)
-    expect(specialPrice.is('ins')).toBe(true)
+    expect(specialPrice.element.tagName).toBe('INS')
     expect(specialPrice.text()).toEqual('$99,00')
   })
 
