@@ -8,7 +8,8 @@ import AIconCheck from './../../atoms/icon/templates/IconCheck.vue'
 const defaultData = {
   data: () => {
     return {
-      status: true
+      status: true,
+      status1: false
     }
   },
   methods: {
@@ -22,16 +23,28 @@ storiesOf('Molecules/Checkbox', module)
     ...defaultData,
     components: { ACheckbox },
     template: `
-      <a-checkbox
-        id="checkbox-default"
-        name="checkbox-default"
-        icon-title="Checked icon"
-        v-model="status"
-        value="some value"
-        @change="onChange"
-      >
-        Checkbox field
-      </a-checkbox>
+      <div>
+        <a-checkbox
+          class="mb-4"
+          id="checkbox-default"
+          name="checkbox-default1"
+          v-model="status"
+          value="some value"
+          @change="onChange"
+        >
+          Checkbox field
+        </a-checkbox>
+        <a-checkbox
+          class="mb-4"
+          id="checkbox-default1"
+          name="checkbox-default1"
+          v-model="status1"
+          value="some value"
+          @change="onChange"
+        >
+          Checkbox field
+        </a-checkbox>
+      </div>
     `
   }))
   .add('With slot', () => ({
@@ -57,10 +70,7 @@ storiesOf('Molecules/Checkbox', module)
             style="color: #0000ff;"
           >
             <div class="a-checkbox__icon-wrapper">
-              <a-icon
-                class="a-checkbox__icon"
-                title="Checked icon"
-              >
+              <a-icon class="a-checkbox__icon">
                 <a-icon-check />
               </a-icon>
             </div>
