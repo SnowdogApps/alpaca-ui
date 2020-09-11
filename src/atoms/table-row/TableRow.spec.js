@@ -11,7 +11,7 @@ describe('atoms/TableRow.vue', () => {
     expect(wrapper.attributes().role).toEqual('row')
   })
 
-  it('renders slot text when passed', () => {
+  it('renders slot when passed', () => {
     const wrapper = mount(TableRow, {
       slots: {
         default: '<td>Test table row</td>'
