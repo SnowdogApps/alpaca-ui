@@ -39,9 +39,10 @@ export const Default = () => ({
         <a-table-row>
           <a-table-cell
             tag="th"
+            role="columnheader"
+            scope="col"
             v-for="headCell in headCells"
             :key="headCell.id"
-            scope="col"
           >
             {{ headCell.text }}
           </a-table-cell>

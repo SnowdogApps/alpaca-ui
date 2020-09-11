@@ -7,6 +7,20 @@ export default {
     tag: {
       type: String,
       default: 'td'
+    },
+    /**
+     * Cell role
+     */
+    role: {
+      type: String,
+      default: 'gridcell'
+    },
+    /**
+     * Cell scope
+     */
+    scope: {
+      type: String,
+      default: null
     }
   }
 }
