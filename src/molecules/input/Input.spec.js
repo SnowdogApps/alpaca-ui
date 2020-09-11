@@ -10,11 +10,11 @@ describe('Input', () => {
     })
     const input = wrapper.find('.a-input__field')
 
-    expect(wrapper.is('div')).toBe(true)
+    expect(wrapper.element.tagName).toBe('DIV')
     expect(wrapper.classes()).toContain('a-input')
     expect(wrapper.classes().length).toBe(1)
 
-    expect(input.is('input')).toBe(true)
+    expect(input.element.tagName).toBe('INPUT')
     expect(input.classes()).toContain('a-input__field')
     expect(input.classes().length).toBe(1)
     expect(input.attributes().id).toBeDefined()
