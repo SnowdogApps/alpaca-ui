@@ -8,14 +8,14 @@
     "build": "build-storybook -o dist -s ./public",
     "now-build": "yarn build",
     "eslint": "eslint --ext .js,.vue src",
-    "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.scss' 'assets/styles/**/*.scss'",
+    "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.css' 'assets/styles/**/*.css'",
     "test": "jest --clearCache && jest -w 1",
     "codcov": "./node_modules/codcov/bin/codcov"
   },
   "dependencies": {
     "focus-visible": "^5.0.2",
     "normalize.css": "^8.0.1",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^1.6.2",
     "vue": "^2.6.11",
     "vue-carousel": "^0.18.0-alpha",
     "vue-router": "^3.1.3",

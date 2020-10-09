@@ -1,0 +1,19 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  :width="`${width}px`"
+  :height="`${height}px`"
+  class="a-icon"
+  :viewBox="viewBox ? viewBox : `0 0 ${width} ${height}`"
+  :aria-labelledby="ariaId"
+  :role="title ? 'img' : 'presentation'"
+  :focusable="title ? null : 'false'"
+>
+  <title
+    v-if="title"
+    :id="ariaId"
+  >
+    {{ title }}
+  </title>
+  <!-- @slot Slot for particular Icon template -->
+  <slot />
+</svg>
