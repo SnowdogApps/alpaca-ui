@@ -57,7 +57,7 @@ describe('Price', () => {
         regularPrice: '$128,00',
         specialPrice: '$99,00',
         oldPriceCustomClass: 'old-price-custom-class',
-        specialPriceCustomClass: 'special-price-custom-class',
+        specialPriceCustomClass: 'special-price-custom-class'
       }
     })
 
