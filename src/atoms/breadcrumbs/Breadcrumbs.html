@@ -10,7 +10,7 @@
     <li
       class="
         flex items-stretch
-        text-gray-600 text-sm
+        text-gray-600 text-sm leading-6
       "
       v-for="(breadcrumb, i) in breadcrumbs"
       :key="`breadcrumb-${i}`"
@@ -28,7 +28,7 @@
             class="
               cursor-default
               flex items-center
-              text-gray-800 leading-6
+              text-gray-800
             "
           >
             {{ breadcrumb.text }}
@@ -46,7 +46,7 @@
             :aria-label="breadcrumb.text"
             class="
               flex items-center
-              hover:text-gray-800 leading-6
+              hover:text-gray-800
             "
           >
             {{ breadcrumb.text }}
