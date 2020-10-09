@@ -6,8 +6,6 @@ describe('Price', () => {
     const wrapper = mount(APrice)
 
     expect(wrapper.element.tagName).toBe('DIV')
-    expect(wrapper.classes()).toContain('a-price')
-    expect(wrapper.classes().length).toBe(1)
   })
 
   it('renders regular price when props regularPrice passed', () => {
@@ -24,20 +22,22 @@ describe('Price', () => {
     const wrapper = mount(APrice, {
       propsData: {
         regularPrice: '$128,00',
-        specialPrice: '$99,00'
+        specialPrice: '$99,00',
+        ariaLabelOldPrice: 'Price reduced from:',
+        ariaLabelSpecialPrice: 'On sale at:'
       }
     })
 
-    const oldPrice = wrapper.find('.a-price__old')
-    const specialPrice = wrapper.find('.a-price__special')
+    const oldPrice = wrapper.find('del')
+    const specialPrice = wrapper.find('ins')
 
     expect(oldPrice.exists()).toBe(true)
-    expect(oldPrice.element.tagName).toBe('DEL')
     expect(oldPrice.text()).toEqual('$128,00')
+    expect(oldPrice.attributes('aria-label')).toEqual('Price reduced from: $128,00')
 
     expect(specialPrice.exists()).toBe(true)
-    expect(specialPrice.element.tagName).toBe('INS')
     expect(specialPrice.text()).toEqual('$99,00')
+    expect(specialPrice.attributes('aria-label')).toEqual('On sale at: $99,00')
   })
 
   it('renders named slot regularPrice when passed', () => {
@@ -57,11 +57,13 @@ describe('Price', () => {
         regularPrice: '$128,00',
         specialPrice: '$99,00',
         oldPriceCustomClass: 'old-price-custom-class',
-        specialPriceCustomClass: 'special-price-custom-class'
+        specialPriceCustomClass: 'special-price-custom-class',
       }
     })
 
-    expect(wrapper.find('.a-price__old').classes()).toContain('old-price-custom-class')
-    expect(wrapper.find('.a-price__special').classes()).toContain('special-price-custom-class')
+    expect(wrapper.find('del').text()).toEqual('$128,00')
+    expect(wrapper.find('ins').text()).toEqual('$99,00')
+    expect(wrapper.find('del').classes()).toContain('old-price-custom-class')
+    expect(wrapper.find('ins').classes()).toContain('special-price-custom-class')
   })
 })

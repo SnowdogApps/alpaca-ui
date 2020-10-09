@@ -1,10 +1,14 @@
-<div class="a-price">
+<div class="text-lg font-bold">
   <!-- @slot Custom old price (Named slots) -->
   <slot name="oldPrice">
     <del
       v-if="specialPrice && regularPrice"
       :aria-label="`${this.ariaLabelOldPrice} ${this.regularPrice}`"
-      :class="['a-price__old', oldPriceCustomClass]"
+      class="
+        mr-3
+        text-xs md:text-sm font-normal text-gray-600 line-through
+      "
+      :class="oldPriceCustomClass"
     >
       {{ regularPrice }}
     </del>
@@ -14,7 +18,8 @@
     <ins
       v-if="specialPrice"
       :aria-label="`${this.ariaLabelSpecialPrice} ${this.specialPrice}`"
-      :class="['a-price__special', specialPriceCustomClass]"
+      class="text-red no-underline"
+      :class="specialPriceCustomClass"
     >
       {{ specialPrice }}
     </ins>
