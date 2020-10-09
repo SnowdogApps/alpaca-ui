@@ -11,39 +11,37 @@ describe('Breadcrumbs', () => {
       },
       stubs: ['router-link']
     })
-    expect(wrapper.is('nav')).toBe(true)
+    expect(wrapper.element.tagName).toBe('NAV')
     expect(wrapper.attributes('aria-label')).toEqual('Breadcrumb')
-    expect(wrapper.classes()).toContain('a-breadcrumbs')
-    expect(wrapper.findAll('.a-breadcrumbs__separator').length).toBe(itemsCount - 1)
-    expect(wrapper.findAll('.a-breadcrumbs__link').length).toBe(itemsCount)
-    expect((wrapper.find('.a-breadcrumbs__link--current')).attributes('aria-current')).toEqual('page')
-    expect(wrapper.classes().length).toBe(1)
+    expect(wrapper.findAll('span').length).toBe(itemsCount - 1)
+    expect(wrapper.findAll('li').length).toBe(itemsCount)
+    expect((wrapper.find('[aria-current]')).attributes('aria-current')).toEqual('page')
   })
 
   it('renders slots when passed', () => {
-    const previousCount = breadcrumbs.length - 1
+    const itemsCount = breadcrumbs.length
     const wrapper = mount(ABreadcrumbs, {
       propsData: {
         breadcrumbs: breadcrumbs
       },
       slots: {
         previous: `
-          <span class="a-breadcrumbs__link">Previous breadcrumb</span>
+          <a>Previous breadcrumb</a>
         `,
         separator: `
-          <span class="a-breadcrumbs__separator">-</span>
+          <span>-</span>
         `,
         current: `
-          <span class="a-breadcrumbs__item">Current breadcrumb</span>
+          <a aria-current="page">Current breadcrumb</a>
         `
       }
     })
 
-    expect(wrapper.findAll('.a-breadcrumbs__link')).toHaveLength(previousCount)
-    expect(wrapper.find('.a-breadcrumbs__link').text()).toEqual('Previous breadcrumb')
-    expect(wrapper.find('.a-breadcrumbs__separator').exists()).toBe(true)
-    expect(wrapper.find('.a-breadcrumbs__separator').text()).toEqual('-')
-    expect(wrapper.find('.a-breadcrumbs__item').exists()).toBe(true)
-    expect(wrapper.find('.a-breadcrumbs__item').text()).toEqual('Current breadcrumb')
+    expect(wrapper.findAll('li')).toHaveLength(itemsCount)
+    expect(wrapper.find('a').text()).toEqual('Previous breadcrumb')
+    expect(wrapper.find('span').exists()).toBe(true)
+    expect(wrapper.find('span').text()).toEqual('-')
+    expect(wrapper.find('[aria-current]').exists()).toBe(true)
+    expect(wrapper.find('[aria-current]').text()).toEqual('Current breadcrumb')
   })
 })

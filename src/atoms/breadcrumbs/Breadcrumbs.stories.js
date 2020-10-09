@@ -1,4 +1,4 @@
-import { addDecorator, storiesOf } from '@storybook/vue'
+import { addDecorator } from '@storybook/vue'
 import { object } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-vue-router'
 
@@ -13,49 +13,61 @@ const defaultData = {
 
 addDecorator(StoryRouter())
 
-storiesOf('Atoms/Breadcrumbs', module)
-  .addParameters({ info: true })
-  .add('Default', () => ({
-    components: { ABreadcrumbs },
-    props: {
-      breadcrumbsKnob: {
-        default: object('Breadcrumbs links', breadcrumbs)
-      }
-    },
-    ...defaultData,
-    template: '<a-breadcrumbs :breadcrumbs="breadcrumbsKnob"/>'
-  }))
-  .add('With slots', () => ({
-    components: { ABreadcrumbs, ALink },
-    props: {
-      breadcrumbsKnob: {
-        default: object('Breadcrumbs links', breadcrumbs)
-      }
-    },
-    ...defaultData,
-    template: `
-      <a-breadcrumbs :breadcrumbs="breadcrumbsKnob">
-        <template #previous="data">
-          <a-link
-            :href="data.breadcrumb.href"
-            style="padding: 0 10px; color: #333"
-          >
-            {{ data.breadcrumb.text }}
-          </a-link>
-        </template>
-        <template #separator>
-          <span class="a-breadcrumbs__separator">
-            -
-          </span>
-        </template>
-        <template #current="data">
-          <span
-            aria-current="page"
-            style="padding: 0 10px; color: #2962ff;"
-          >
-            {{ data.breadcrumb.text }}
-          </span>
-        </template>
-      </a-breadcrumbs>
-    `
-  }))
+export default {
+  title: 'Atoms/Breadcrumbs',
+  component: ABreadcrumbs
+}
+
+export const Default = () => ({
+  components: {
+    ABreadcrumbs
+  },
+  props: {
+    breadcrumbsKnob: {
+      default: object('Breadcrumbs links', breadcrumbs)
+    }
+  },
+  ...defaultData,
+  template: '<a-breadcrumbs :breadcrumbs="breadcrumbsKnob"/>'
+})
+
+export const WithSlots = () => ({
+  components: {
+    ABreadcrumbs,
+    ALink
+  },
+  props: {
+    breadcrumbsKnob: {
+      default: object('Breadcrumbs links', breadcrumbs)
+    }
+  },
+  ...defaultData,
+  template: `
+    <a-breadcrumbs :breadcrumbs="breadcrumbsKnob">
+      <template #previous="data">
+        <a-link
+          :href="data.breadcrumb.href"
+          class="px-3"
+        >
+          {{ data.breadcrumb.text }}
+        </a-link>
+      </template>
+      <template #separator>
+        <span class="mx-2">
+          -
+        </span>
+      </template>
+      <template #current="data">
+        <span
+          aria-current="page"
+          class="
+            px-3
+            text-blue
+          "
+        >
+          {{ data.breadcrumb.text }}
+        </span>
+      </template>
+    </a-breadcrumbs>
+  `
+})

@@ -3,7 +3,11 @@ module.exports = {
     'src/**/*.vue'
   ],
   theme: {
-    extend: {},
+    extend: {
+      minHeight: {
+        24: '24px'
+      }
+    },
     screens: {
       xs: '320px',
       sm: '480px',

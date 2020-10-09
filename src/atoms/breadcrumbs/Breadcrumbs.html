@@ -1,10 +1,17 @@
 <nav
   :aria-label="breadcrumbsNavAriaLabel"
-  class="a-breadcrumbs"
+  class="
+    hidden lg:block
+    min-h-24
+    m-2 p-2
+  "
 >
-  <ol class="a-breadcrumbs__list">
+  <ol class="flex flex-wrap">
     <li
-      class="a-breadcrumbs__list-item"
+      class="
+        flex items-stretch
+        text-gray-600 text-sm
+      "
       v-for="(breadcrumb, i) in breadcrumbs"
       :key="`breadcrumb-${i}`"
     >
@@ -18,7 +25,11 @@
             :to="breadcrumb.href"
             :aria-label="breadcrumb.text"
             aria-current="page"
-            class="a-breadcrumbs__link a-breadcrumbs__link--current"
+            class="
+              cursor-default
+              flex items-center
+              text-gray-800 leading-6
+            "
           >
             {{ breadcrumb.text }}
           </router-link>
@@ -33,14 +44,17 @@
           <router-link
             :to="breadcrumb.href"
             :aria-label="breadcrumb.text"
-            class="a-breadcrumbs__link"
+            class="
+              flex items-center
+              text-gray-600 hover:text-gray-800 leading-6
+            "
           >
             {{ breadcrumb.text }}
           </router-link>
         </slot>
         <!-- @slot Separator (Named slot) -->
         <slot name="separator">
-          <span class="a-breadcrumbs__separator">
+          <span class="mx-2">
             /
           </span>
         </slot>
