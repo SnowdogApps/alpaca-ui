@@ -34,26 +34,19 @@ export default {
 
 export const Default = () => ({
   components: { AList, AListItem },
-  template: `
-      <a-list>
-        <a-list-item>
-          Lorem ipsum
-        </a-list-item>
-        <a-list-item>
-          Lorem ipsum
-        </a-list-item>
-        <a-list-item>
-          Lorem ipsum
-        </a-list-item>
-      </a-list>
-    `
+  props: {
+    classKnobs: {
+      default: optionsKnob('BEM Modifier', classKnobsConfig, [], { display: 'multi-select' })
+    }
+  },
+  template: basicTemplate
 })
 
 export const Native = () => ({
   components: { AList, AListItem },
   props: {
     classKnobs: {
-      default: optionsKnob('BEM Modifier', classKnobsConfig, 'a-list--native', { display: 'multi-select' })
+      default: optionsKnob('BEM Modifier', classKnobsConfig, ['a-list--native'], { display: 'multi-select' })
     }
   },
   template: basicTemplate
@@ -63,7 +56,7 @@ export const Horizontal = () => ({
   components: { AList, AListItem },
   props: {
     classKnobs: {
-      default: optionsKnob('BEM Modifier', classKnobsConfig, 'a-list--horizontal', { display: 'multi-select' })
+      default: optionsKnob('BEM Modifier', classKnobsConfig, ['a-list--horizontal'], { display: 'multi-select' })
     }
   },
   template: basicTemplate
@@ -73,7 +66,7 @@ export const Divided = () => ({
   components: { AList, AListItem },
   props: {
     classKnobs: {
-      default: optionsKnob('BEM Modifier', classKnobsConfig, 'a-list--divided', { display: 'multi-select' })
+      default: optionsKnob('BEM Modifier', classKnobsConfig, ['a-list--divided'], { display: 'multi-select' })
     }
   },
   template: basicTemplate
@@ -83,7 +76,7 @@ export const Centered = () => ({
   components: { AList, AListItem },
   props: {
     classKnobs: {
-      default: optionsKnob('BEM Modifier', classKnobsConfig, 'a-list--center', { display: 'multi-select' })
+      default: optionsKnob('BEM Modifier', classKnobsConfig, ['a-list--center'], { display: 'multi-select' })
     }
   },
   template: basicTemplate
@@ -133,7 +126,7 @@ export const WithLinks = () => ({
   components: { AList, AListItem, ALink },
   props: {
     classKnobs: {
-      default: optionsKnob('BEM Modifier', classKnobsConfig, 'null', { display: 'multi-select' })
+      default: optionsKnob('BEM Modifier', classKnobsConfig, [], { display: 'multi-select' })
     }
   },
   template: `
