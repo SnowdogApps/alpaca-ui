@@ -31,12 +31,12 @@ export default {
     },
     variant: {
       type: String,
-      default: ''
+      default: 'primary'
     },
     styles: {
       type: Object,
       default: () => ({
-        primary: {
+        base: {
           price: `
             text-lg font-bold
           `,
@@ -45,7 +45,12 @@ export default {
             text-xs md:text-sm font-normal text-gray-600 line-through
           `,
           price__special: `
-            text-red no-underline
+            no-underline
+          `
+        },
+        primary: {
+          price__special: `
+            text-red
           `
         },
         secondary: {
@@ -58,7 +63,7 @@ export default {
   },
   methods: {
     getClass (el) {
-      let classes = this.styles.primary[el]
+      let classes = this.styles.base[el]
 
       if (this.variant) {
         classes += this.styles[this.variant][el] || ''

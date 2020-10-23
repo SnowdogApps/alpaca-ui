@@ -1,5 +1,9 @@
 [
   {
+    "name": "primary",
+    "description": "Selector for applying styles for primary price"
+  },
+  {
     "name": "secondary",
     "description": "Selector for applying styles for secondary price"
   }
