@@ -1,4 +1,7 @@
-<div :class="getClass('price')">
+<div
+  :class="getClass('price')"
+  :variant="variant"
+>
   <!-- @slot Custom old price (Named slots) -->
   <slot name="oldPrice">
     <del

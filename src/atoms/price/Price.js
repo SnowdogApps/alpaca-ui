@@ -29,39 +29,42 @@ export default {
       type: String,
       default: null
     },
-    /**
-     * Special price item custom class
-     */
-    specialPriceCustomClass: {
+    variant: {
       type: String,
-      default: null
-    },
-    /**
-     * Old price item custom class
-     */
-    oldPriceCustomClass: {
-      type: String,
-      default: null
+      default: ''
     },
     styles: {
       type: Object,
       default: () => ({
-        price: `
-          text-lg font-bold
-        `,
-        price__old: `
-          mr-3
-          text-xs md:text-sm font-normal text-gray-600 line-through
-        `,
-        price__special: `
-          text-red no-underline
-        `
+        primary: {
+          price: `
+            text-lg font-bold
+          `,
+          price__old: `
+            mr-3
+            text-xs md:text-sm font-normal text-gray-600 line-through
+          `,
+          price__special: `
+            text-red no-underline
+          `
+        },
+        secondary: {
+          price__special: `
+            text-blue
+          `
+        }
       })
     }
   },
   methods: {
     getClass (el) {
-      return this.styles[el]
+      let classes = this.styles.primary[el]
+
+      if (this.variant) {
+        classes += this.styles[this.variant][el] || ''
+      }
+
+      return classes
     }
   }
 }
