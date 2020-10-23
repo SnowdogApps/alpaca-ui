@@ -31,7 +31,7 @@ export default {
     },
     variant: {
       type: String,
-      default: 'primary'
+      default: ''
     },
     styles: {
       type: Object,
@@ -45,17 +45,7 @@ export default {
             text-xs md:text-sm font-normal text-gray-600 line-through
           `,
           price__special: `
-            no-underline
-          `
-        },
-        primary: {
-          price__special: `
-            text-red
-          `
-        },
-        secondary: {
-          price__special: `
-            text-blue
+            text-red no-underline
           `
         }
       })
@@ -63,13 +53,19 @@ export default {
   },
   methods: {
     getClass (el) {
-      let classes = this.styles.base[el]
+      const classes = []
+      const baseStyles = this.styles.base
+      const variantStyles = this.styles[this.variant]
 
-      if (this.variant) {
-        classes += this.styles[this.variant][el] || ''
+      if (baseStyles) {
+        classes.push(baseStyles[el] || '')
       }
 
-      return classes
+      if (variantStyles) {
+        classes.push(variantStyles[el] || '')
+      }
+
+      return classes.join(' ')
     }
   }
 }

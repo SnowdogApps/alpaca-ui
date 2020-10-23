@@ -1,11 +1,6 @@
-import { text, select } from '@storybook/addon-knobs'
-
-import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-import selectorsConfig from './Price.selectors.json'
+import { text } from '@storybook/addon-knobs'
 
 import APrice from './Price.vue'
-
-const variantsKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 export default {
   title: 'Atoms/Price',
@@ -25,9 +20,6 @@ export const Default = () => ({
 export const SpecialPrice = () => ({
   components: { APrice },
   props: {
-    variantKnobs: {
-      default: select('Variant', variantsKnobsConfig)
-    },
     regularPriceKnobs: {
       default: text('Old price', '$36,00')
     },
@@ -37,7 +29,6 @@ export const SpecialPrice = () => ({
   },
   template: `
     <a-price
-      :variant="variantKnobs"
       :regular-price="regularPriceKnobs"
       :special-price="specialPriceKnobs"
       aria-label-special-price="On sale at:"
