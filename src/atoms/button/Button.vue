@@ -11,5 +11,3 @@ export default {
   mixins: [AButton]
 }
 </script>
-
-<style lang="css" src="./Button.css" />
