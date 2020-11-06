@@ -43,19 +43,18 @@ export default {
     getClass (el) {
       let classes = []
       const baseStyles = this.styles.base
-      const variantStyles = this.styles[this.variant]
-
       if (baseStyles) {
         classes = [...baseStyles[el]]
       }
-
-      if (variantStyles) {
-        if (typeof variantStyles[el] === 'string') {
-          classes = variantStyles[el]
-        } else {
-          classes.push(variantStyles[el])
-        }
+      console.log(this.variant)
+      if (typeof this.variant !== 'string') {
+        this.variant.forEach(item => {
+          classes.push(this.styles[item][el])
+        })
+      } else {
+        classes.push(this.styles[this.variant][el])
       }
+
       return classes
     }
   }
