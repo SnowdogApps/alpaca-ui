@@ -1,4 +1,3 @@
-// @vue/component
 export default {
   props: {
     /**
@@ -37,35 +36,38 @@ export default {
       type: Object,
       default: () => ({
         base: {
-          price: `
-            text-lg font-bold
-          `,
-          price__old: `
-            mr-3
-            text-xs md:text-sm font-normal text-gray-600 line-through
-          `,
-          price__special: `
-            text-red no-underline
-          `
+          price: [
+            'text-lg', 'font-bold'
+          ],
+          price__old: [
+            'mr-3',
+            'text-xs', 'md:text-sm', 'font-normal', 'text-gray-600', 'line-through'
+          ],
+          price__special: [
+            'text-red', 'no-underline'
+          ]
         }
       })
     }
   },
   methods: {
     getClass (el) {
-      const classes = []
+      let classes = []
       const baseStyles = this.styles.base
       const variantStyles = this.styles[this.variant]
 
       if (baseStyles) {
-        classes.push(baseStyles[el] || '')
+        classes = [...baseStyles[el]]
       }
 
       if (variantStyles) {
-        classes.push(variantStyles[el] || '')
+        if (typeof variantStyles[el] === 'string') {
+          classes = variantStyles[el]
+        } else {
+          classes.push(variantStyles[el])
+        }
       }
-
-      return classes.join(' ')
+      return classes || null
     }
   }
 }
