@@ -20,7 +20,7 @@ export const Default = () => ({
   },
   template: `
     <a-button
-      variant="primary"
+      class="btn btn--primary"
       @click="buttonClick"
     >
       {{ textKnobs }}
@@ -40,7 +40,7 @@ export const Secondary = () => ({
   },
   template: `
     <a-button
-      variant="secondary"
+      class="btn btn--secondary"
       @click="buttonClick"
     >
       {{ textKnobs }}
@@ -60,7 +60,7 @@ export const SecondaryFuild = () => ({
   },
   template: `
     <a-button
-      :variant="['secondary', 'fluid']"
+      class="btn btn--fluid btn--secondary"
       @click="buttonClick"
     >
       {{ textKnobs }}
