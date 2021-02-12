@@ -1,69 +1,58 @@
-import { text } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
-
 import AButton from './Button.vue'
 
 export default {
   title: 'Atoms/Button',
-  component: AButton
+  component: AButton,
+  argTypes: {
+    text: {
+      control: {
+        type: 'text'
+      }
+    },
+    componentClass: {
+      control: {
+        type: 'check',
+        options: [
+          'btn',
+          'btn--primary',
+          'btn--secondary',
+          'btn--fluid'
+        ]
+      }
+    },
+    onClick: { action: 'clicked' }
+  }
 }
 
-export const Default = () => ({
-  components: { AButton },
-  props: {
-    textKnobs: {
-      default: text('Text', 'Button text')
-    }
-  },
-  methods: {
-    buttonClick: action('Click')
-  },
-  template: `
-    <a-button
-      class="btn btn--primary"
-      @click="buttonClick"
-    >
-      {{ textKnobs }}
-    </a-button>
-  `
-})
+const Template = (args, { argTypes }) => {
+  return {
+    components: { AButton },
+    props: Object.keys(argTypes),
+    template: `
+      <AButton
+        :class="componentClass"
+        @click="onClick"
+      >
+        {{ text }}
+      </AButton>
+    `
+  }
+}
 
-export const Secondary = () => ({
-  components: { AButton },
-  props: {
-    textKnobs: {
-      default: text('Text', 'Button text')
-    }
-  },
-  methods: {
-    buttonClick: action('Click')
-  },
-  template: `
-    <a-button
-      class="btn btn--secondary"
-      @click="buttonClick"
-    >
-      {{ textKnobs }}
-    </a-button>
-  `
-})
+export const Default = Template.bind({})
+Default.args = {
+  text: 'Button default',
+  componentClass: 'btn'
+}
 
-export const SecondaryFuild = () => ({
-  components: { AButton },
-  props: {
-    textKnobs: {
-      default: text('Text', 'Button text')
-    }
-  },
-  methods: {
-    buttonClick: action('Click')
-  },
-  template: `
-    <a-button
-      class="btn btn--fluid btn--secondary"
-      @click="buttonClick"
-    >
-      {{ textKnobs }}
-    </a-button>
-  `
-})
+export const Primary = Template.bind({})
+Primary.args = {
+  text: 'Button primary',
+  componentClass: 'btn btn--primary'
+}
+
+export const Secondary = Template.bind({})
+Secondary.args = {
+  text: 'Button secondary',
+  componentClass: 'btn btn--secondary'
+}
