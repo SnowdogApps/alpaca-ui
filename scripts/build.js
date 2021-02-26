@@ -29,3 +29,6 @@ fs.writeFileSync(
   `module.exports = ${JSON.stringify(defaultConfig, null, 2)}`,
   'utf-8'
 )
+
+fs.symlink('@utils', path.resolve('../utils'))
+// /Users/ola/Projects/alpaca-ui/utils
