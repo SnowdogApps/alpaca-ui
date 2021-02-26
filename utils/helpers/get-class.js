@@ -1,4 +1,4 @@
-import alpaca from '../../default-config.js'
+import alpaca from '../../default.config.js'
 
 export default {
   props: {
@@ -20,12 +20,10 @@ export default {
 
       if (typeof this.variant === 'string') {
         variantStyles = styles[this.variant]
-
         variantStyles && classes.push(variantStyles[el])
       } else {
         this.variant.forEach(item => {
           variantStyles = styles[item]
-
           variantStyles && classes.push(variantStyles[el])
         })
       }

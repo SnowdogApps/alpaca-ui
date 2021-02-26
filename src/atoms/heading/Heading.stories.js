@@ -6,7 +6,8 @@ export default {
   argTypes: {
     tag: {
       control: {
-        type: 'text'
+        type: 'text',
+        required: true
       }
     },
     variant: {
