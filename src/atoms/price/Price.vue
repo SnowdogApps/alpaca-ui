@@ -2,7 +2,7 @@
 
 <script>
 import APrice from './Price.js'
-import getClass from '@utils/helpers/get-class.js'
+import getClass from '../../../utils/helpers/get-class.js'
 
 export default {
   name: 'AlpacaPrice',
