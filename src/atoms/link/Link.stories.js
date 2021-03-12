@@ -30,7 +30,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   template: `
     <a-link
-      :tag="tag
+      :tag="tag"
       :variant="variant"
     >
       {{ text }}
