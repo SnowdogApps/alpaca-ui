@@ -11,6 +11,7 @@ export default {
     getClass (el) {
       const styles = alpaca[this.$options.name]
       const baseStyles = styles.base
+      const primaryStyles = styles.primary
       let variantStyles
       let classes = []
 
@@ -18,7 +19,9 @@ export default {
         classes = [...baseStyles[el]]
       }
 
-      if (typeof this.variant === 'string') {
+      if (this.variant.length === 0) {
+        primaryStyles && classes.push(primaryStyles[el])
+      } else if (typeof this.variant === 'string') {
         variantStyles = styles[this.variant]
         variantStyles && classes.push(variantStyles[el])
       } else {
