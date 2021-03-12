@@ -66,8 +66,8 @@ Third.args = {
   text: 'Heading level 3'
 }
 
-export const Foruth = Template.bind({})
-Foruth.args = {
+export const Fourth = Template.bind({})
+Fourth.args = {
   tag: 'h4',
   variant: 'fourth-level',
   text: 'Heading level 4'
