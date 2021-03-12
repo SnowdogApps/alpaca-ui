@@ -2,12 +2,17 @@ module.exports = {
   AlpacaBadge: {
     base: {
       badge: [
-        'inline-flex justify-center mb-2 px-3 text-white font-bold text-xs leading-snug uppercase bg-dark'
+        'inline-flex', 'justify-center', 'px-3', 'font-bold', 'text-xs', 'leading-snug', 'uppercase'
+      ]
+    },
+    primary: {
+      badge: [
+        'text-white', 'bg-dark'
       ]
     },
     secondary: {
       badge: [
-        'text-primary bg-white'
+        'text-primary', 'bg-white'
       ]
     }
   }

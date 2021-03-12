@@ -11,7 +11,11 @@ export default {
     },
     variant: {
       control: {
-        type: 'text'
+        type: 'select',
+        options: [
+          'primary',
+          'secondary'
+        ]
       }
     },
     text: {
@@ -38,10 +42,4 @@ const Template = (args, { argTypes }) => ({
 export const Default = Template.bind({})
 Default.args = {
   text: 'Badge'
-}
-
-export const Secondary = Template.bind({})
-Secondary.args = {
-  ...Default.args,
-  variant: 'secondary'
 }

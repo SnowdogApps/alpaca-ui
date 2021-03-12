@@ -7,12 +7,12 @@ module.exports = {
     },
     'first-level': {
       heading: [
-        'text-3xl'
+        'text-3xl', 'bg-dark'
       ]
     },
     'second-level': {
       heading: [
-        'text-2xl'
+        'text-2xl', 'bg-white'
       ]
     },
     'third-level': {
