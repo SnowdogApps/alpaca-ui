@@ -1,181 +1,88 @@
 import AHeading from './Heading.vue'
-import { select, text } from '@storybook/addon-knobs'
-
-import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-import selectorsConfig from './Heading.selectors.json'
-
-const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
-
-const levels = [1, 2, 3, 4, 5, 6]
 
 export default {
   title: 'Atoms/Heading',
-  component: AHeading
+  component: AHeading,
+  argTypes: {
+    tag: {
+      control: {
+        type: 'text',
+        required: true
+      }
+    },
+    variant: {
+      control: {
+        type: 'multi-select',
+        options: [
+          'font-secondary',
+          'first-level',
+          'second-level',
+          'third-level',
+          'fourth-level',
+          'fifth-level',
+          'sixth-level'
+        ]
+      }
+    },
+    text: {
+      control: {
+        type: 'text'
+      }
+    }
+  }
 }
 
-export const First = () => ({
+const Template = (args, { argTypes }) => ({
   components: { AHeading },
-  props: {
-    levelKnobs: {
-      default: select('Heading level', levels, 1)
-    },
-    tagKnobs: {
-      default: text('Tag', 'h1')
-    },
-    textKnobs: {
-      default: text('Text', 'Heading level 1')
-    },
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
     <a-heading
-      :level="levelKnobs"
-      :tag="tagKnobs"
-      :class="classKnobs"
+      :tag="tag"
+      :variant="variant"
     >
-      {{ textKnobs }}
+      {{ text }}
     </a-heading>
   `
 })
 
-export const Second = () => ({
-  components: { AHeading },
-  props: {
-    levelKnobs: {
-      default: select('Heading level', levels, 2)
-    },
-    tagKnobs: {
-      default: text('Tag', 'h2')
-    },
-    textKnobs: {
-      default: text('Text', 'Heading level 2')
-    },
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
+export const First = Template.bind({})
+First.args = {
+  tag: 'h1',
+  variant: 'first-level',
+  text: 'Heading level 1'
+}
 
-  },
-  template: `
-    <a-heading
-      :level="levelKnobs"
-      :tag="tagKnobs"
-      :class="classKnobs"
-    >
-      {{ textKnobs }}
-    </a-heading>
-  `
-})
+export const Second = Template.bind({})
+Second.args = {
+  tag: 'h2',
+  variant: 'second-level',
+  text: 'Heading level 2'
+}
 
-export const Third = () => ({
-  components: { AHeading },
-  props: {
-    levelKnobs: {
-      default: select('Heading level', levels, 3)
-    },
-    tagKnobs: {
-      default: text('Tag', 'h3')
-    },
-    textKnobs: {
-      default: text('Text', 'Heading level 3')
-    },
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
+export const Third = Template.bind({})
+Third.args = {
+  tag: 'h3',
+  variant: 'third-level',
+  text: 'Heading level 3'
+}
 
-  },
-  template: `
-    <a-heading
-      :level="levelKnobs"
-      :tag="tagKnobs"
-      :class="classKnobs"
-    >
-      {{ textKnobs }}
-    </a-heading>
-  `
-})
+export const Fourth = Template.bind({})
+Fourth.args = {
+  tag: 'h4',
+  variant: 'fourth-level',
+  text: 'Heading level 4'
+}
 
-export const Fourth = () => ({
-  components: { AHeading },
-  props: {
-    levelKnobs: {
-      default: select('Heading level', levels, 4)
-    },
-    tagKnobs: {
-      default: text('Tag', 'h4')
-    },
-    textKnobs: {
-      default: text('Text', 'Heading level 4')
-    },
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
+export const Fifth = Template.bind({})
+Fifth.args = {
+  tag: 'h5',
+  variant: 'fifth-level',
+  text: 'Heading level 5'
+}
 
-  },
-  template: `
-    <a-heading
-      :level="levelKnobs"
-      :tag="tagKnobs"
-      :class="classKnobs"
-    >
-      {{ textKnobs }}
-    </a-heading>
-  `
-})
-
-export const Fifth = () => ({
-  components: { AHeading },
-  props: {
-    levelKnobs: {
-      default: select('Heading level', levels, 5)
-    },
-    tagKnobs: {
-      default: text('Tag', 'h5')
-    },
-    textKnobs: {
-      default: text('Text', 'Heading level 5')
-    },
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
-
-  },
-  template: `
-    <a-heading
-      :level="levelKnobs"
-      :tag="tagKnobs"
-      :class="classKnobs"
-    >
-      {{ textKnobs }}
-    </a-heading>
-  `
-})
-
-export const Sixth = () => ({
-  components: { AHeading },
-  props: {
-    levelKnobs: {
-      default: select('Heading level', levels, 6)
-    },
-    tagKnobs: {
-      default: text('Tag', 'h6')
-    },
-    textKnobs: {
-      default: text('Text', 'Heading level 6')
-    },
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
-
-  },
-  template: `
-    <a-heading
-      :level="levelKnobs"
-      :tag="tagKnobs"
-      :class="classKnobs"
-    >
-      {{ textKnobs }}
-    </a-heading>
-  `
-})
+export const Sixth = Template.bind({})
+Sixth.args = {
+  tag: 'h6',
+  variant: 'sixth-level',
+  text: 'Heading level 6'
+}
