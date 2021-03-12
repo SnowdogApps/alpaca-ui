@@ -2,11 +2,10 @@
 
 <script>
 import ALink from './Link.js'
+import getClass from '../../../utils/helpers/get-class.js'
 
 export default {
   name: 'AlpacaLink',
-  mixins: [ALink]
+  mixins: [ALink, getClass]
 }
 </script>
-
-<style src="./Link.css" />

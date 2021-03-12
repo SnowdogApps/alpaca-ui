@@ -1,33 +1,46 @@
-import { select, text } from '@storybook/addon-knobs'
-
-import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-import selectorsConfig from './Link.selectors.json'
-
 import ALink from './Link.vue'
-
-const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 export default {
   title: 'Atoms/Link',
-  component: ALink
+  component: ALink,
+  argTypes: {
+    tag: {
+      control: {
+        type: 'text'
+      }
+    },
+    variant: {
+      control: {
+        type: 'select',
+        options: [
+          'primary',
+          'inverted',
+          'secondary'
+        ]
+      }
+    },
+    text: {
+      control: 'text'
+    }
+  }
 }
 
-export const Default = () => ({
+const Template = (args, { argTypes }) => ({
   components: { ALink },
-  props: {
-    textKnob: {
-      default: text('Link text', 'Default link')
-    },
-    classKnob: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
     <a-link
-      href="#"
-      :class="classKnob"
+      :tag="tag
+      :variant="variant"
     >
-      {{ textKnob }}
+      {{ text }}
     </a-link>
   `
 })
+
+export const Default = Template.bind({})
+Default.args = {
+  tag: 'a',
+  variant: 'primary',
+  text: 'Link'
+}
