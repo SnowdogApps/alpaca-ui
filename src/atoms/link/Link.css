@@ -18,7 +18,9 @@
 }
 
 .a-link--secondary {
-  @apply text-secondary;
+
+  /* ERROR in nuxt playground: `@apply` cannot be used with `.text-secondary` */
+  /* @apply text-secondary; */
 }
 
 .a-link--secondary:hover,

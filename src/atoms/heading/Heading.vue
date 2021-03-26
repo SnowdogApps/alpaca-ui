@@ -8,5 +8,3 @@ export default {
   mixins: [AHeading]
 }
 </script>
-
-<style src="./Heading.css" />

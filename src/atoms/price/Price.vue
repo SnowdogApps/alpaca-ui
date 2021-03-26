@@ -8,5 +8,3 @@ export default {
   mixins: [APrice]
 }
 </script>
-
-<style src="./Price.css" />
