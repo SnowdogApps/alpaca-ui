@@ -1,19 +1,12 @@
 <nav
   :aria-label="breadcrumbsNavAriaLabel"
-  class="
-    hidden lg:block
-    min-h-24
-    m-2 p-2
-  "
+  :class="getClass('breadcrumbs')"
 >
-  <ol class="flex flex-wrap">
+  <ol :class="getClass('breadcrumbs__list')">
     <li
-      class="
-        flex items-stretch
-        text-gray-600 text-sm leading-6
-      "
       v-for="(breadcrumb, i) in breadcrumbs"
       :key="`breadcrumb-${i}`"
+      :class="getClass('breadcrumbs__list-item')"
     >
       <template v-if="breadcrumbs.length === i + 1">
         <!-- @slot Current page (Scoped slot) -->
@@ -21,17 +14,13 @@
           name="current"
           :breadcrumb="breadcrumb"
         >
-          <router-link
-            :to="breadcrumb.href"
+          <a
+            :href="breadcrumb.href"
             aria-current="page"
-            class="
-              cursor-default
-              flex items-center
-              text-gray-800
-            "
+            :class="getClass('breadcrumbs__link--current')"
           >
             {{ breadcrumb.text }}
-          </router-link>
+          </a>
         </slot>
       </template>
       <template v-else>
@@ -40,20 +29,17 @@
           name="previous"
           :breadcrumb="breadcrumb"
         >
-          <router-link
-            :to="breadcrumb.href"
+          <a
+            :href="breadcrumb.href"
             :aria-label="breadcrumb.text"
-            class="
-              flex items-center
-              hover:text-gray-800
-            "
+            :class="getClass('breadcrumbs__link')"
           >
             {{ breadcrumb.text }}
-          </router-link>
+          </a>
         </slot>
         <!-- @slot Separator (Named slot) -->
         <slot name="separator">
-          <span class="mx-2">
+          <span :class="getClass('breadcrumbs__separator')">
             /
           </span>
         </slot>

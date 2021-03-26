@@ -1,73 +1,59 @@
-import { addDecorator } from '@storybook/vue'
-import { object } from '@storybook/addon-knobs'
-import StoryRouter from 'storybook-vue-router'
-
 import ABreadcrumbs from './Breadcrumbs.vue'
-import ALink from '../link/Link.vue'
 
 import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
-const defaultData = {
-  data: () => ({ breadcrumbs })
-}
-
-addDecorator(StoryRouter())
-
 export default {
   title: 'Atoms/Breadcrumbs',
-  component: ABreadcrumbs
+  component: ABreadcrumbs,
+  args: {
+    breadcrumbs
+  },
+  argTypes: {
+    breadcrumbs: {
+      control: 'object'
+    }
+  }
 }
 
-export const Default = () => ({
-  components: {
-    ABreadcrumbs
-  },
-  props: {
-    breadcrumbsKnob: {
-      default: object('Breadcrumbs links', breadcrumbs)
-    }
-  },
-  ...defaultData,
-  template: '<a-breadcrumbs :breadcrumbs="breadcrumbsKnob"/>'
+const Template = (args, { argTypes }) => ({
+  components: { ABreadcrumbs },
+  props: Object.keys(argTypes),
+  template: `
+    <a-breadcrumbs :breadcrumbs="breadcrumbs"/>
+  `
 })
 
-export const WithSlots = () => ({
-  components: {
-    ABreadcrumbs,
-    ALink
-  },
-  props: {
-    breadcrumbsKnob: {
-      default: object('Breadcrumbs links', breadcrumbs)
-    }
-  },
-  ...defaultData,
+export const Default = Template.bind({})
+
+export const WithSlots = (args, { argTypes }) => ({
+  components: { ABreadcrumbs },
+  props: Object.keys(argTypes),
   template: `
-    <a-breadcrumbs :breadcrumbs="breadcrumbsKnob">
+    <a-breadcrumbs :breadcrumbs="breadcrumbs">
       <template #previous="data">
-        <a-link
+        <a
           :href="data.breadcrumb.href"
-          class="px-3"
+          class="text-gray-500 hover:text-blue-600"
         >
           {{ data.breadcrumb.text }}
-        </a-link>
+        </a>
       </template>
       <template #separator>
-        <span class="mx-2">
+        <span class="mx-4 text-gray-500">
           -
         </span>
       </template>
       <template #current="data">
-        <span
-          aria-current="page"
-          class="
-            px-3
-            text-blue
-          "
+        <a
+          :href="data.breadcrumb.href"
+          class="text-blue-800"
         >
           {{ data.breadcrumb.text }}
-        </span>
+        </a>
       </template>
     </a-breadcrumbs>
   `
 })
+WithSlots.args = {
+  breadcrumbs
+}

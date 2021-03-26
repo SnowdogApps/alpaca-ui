@@ -2,9 +2,10 @@
 
 <script>
 import ABreadcrumbs from './Breadcrumbs.js'
+import getClass from '../../../utils/helpers/get-class.js'
 
 export default {
   name: 'AlpacaBreadcrumbs',
-  mixins: [ABreadcrumbs]
+  mixins: [ABreadcrumbs, getClass]
 }
 </script>
