@@ -1,19 +1,19 @@
 module.exports = {
-  'moduleNameMapper': {
+  moduleNameMapper: {
     '^vue$': 'vue/dist/vue.common.js'
   },
-  'moduleFileExtensions': [
+  moduleFileExtensions: [
     'js',
     'vue'
   ],
-  'testMatch': ['<rootDir>/src/**/?(*.)+(spec|test).(ts|tsx|mjs|js|jsx)'],
-  'transform': {
+  testMatch: ['<rootDir>/src/**/?(*.)+(spec|test).(ts|tsx|mjs|js|jsx)'],
+  transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
     '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
   },
-  'collectCoverage': true,
-  'coverageDirectory': './coverage/',
-  'collectCoverageFrom': [
+  collectCoverage: true,
+  coverageDirectory: './coverage/',
+  collectCoverageFrom: [
     '**/src/atoms/*/*.vue',
     '!**/atoms/transition-expand/*.vue',
     '**/src/molecules/*/*.vue',

@@ -1,69 +1,58 @@
-import { text } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
-
 import AButton from './Button.vue'
 
 export default {
   title: 'Atoms/Button',
-  component: AButton
+  component: AButton,
+  argTypes: {
+    variant: {
+      control: {
+        type: 'multi-select',
+        options: [
+          'primary',
+          'secondary',
+          'fluid'
+        ]
+      }
+    },
+    onClick: {
+      action: 'clicked'
+    },
+    text: {
+      control: {
+        type: 'text'
+      }
+    }
+  }
 }
 
-export const Default = () => ({
+const Template = (args, { argTypes }) => ({
   components: { AButton },
-  props: {
-    textKnobs: {
-      default: text('Text', 'Button text')
-    }
-  },
-  methods: {
-    buttonClick: action('Click')
-  },
+  props: Object.keys(argTypes),
   template: `
     <a-button
-      variant="primary"
-      @click="buttonClick"
+      :variant="variant"
+      type="button"
+      v-bind="$props"
+      @click="onClick"
     >
-      {{ textKnobs }}
+      {{ text }}
     </a-button>
   `
 })
 
-export const Secondary = () => ({
-  components: { AButton },
-  props: {
-    textKnobs: {
-      default: text('Text', 'Button text')
-    }
-  },
-  methods: {
-    buttonClick: action('Click')
-  },
-  template: `
-    <a-button
-      variant="secondary"
-      @click="buttonClick"
-    >
-      {{ textKnobs }}
-    </a-button>
-  `
-})
+export const Primary = Template.bind({})
+Primary.args = {
+  variant: 'primary',
+  text: 'Button primary'
+}
+export const Secondary = Template.bind({})
+Secondary.args = {
+  variant: 'secondary',
+  text: 'Button secondary'
+}
 
-export const SecondaryFuild = () => ({
-  components: { AButton },
-  props: {
-    textKnobs: {
-      default: text('Text', 'Button text')
-    }
-  },
-  methods: {
-    buttonClick: action('Click')
-  },
-  template: `
-    <a-button
-      :variant="['secondary', 'fluid']"
-      @click="buttonClick"
-    >
-      {{ textKnobs }}
-    </a-button>
-  `
-})
+export const Fluid = Template.bind({})
+Fluid.args = {
+  variant: 'fluid',
+  text: 'Button fluid'
+}
