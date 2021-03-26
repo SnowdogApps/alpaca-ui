@@ -1,53 +1,45 @@
-import { select, text } from '@storybook/addon-knobs'
-
-import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-import selectorsConfig from './Badge.selectors.json'
-
 import ABadge from './Badge.vue'
-
-const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 export default {
   title: 'Atoms/Badge',
-  component: ABadge
+  component: ABadge,
+  argTypes: {
+    tag: {
+      control: {
+        type: 'text'
+      }
+    },
+    variant: {
+      control: {
+        type: 'select',
+        options: [
+          'primary',
+          'secondary'
+        ]
+      }
+    },
+    text: {
+      control: {
+        type: 'text'
+      }
+    }
+  }
 }
 
-export const Default = () => ({
+const Template = (args, { argTypes }) => ({
   components: { ABadge },
-  props: {
-    textKnob: {
-      default: text('Badge text', 'Default badge')
-    },
-    classKnob: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
-    <a-badge :class="classKnob">
-      {{ textKnob }}
+    <a-badge
+      :tag="tag"
+      :variant="variant"
+    >
+      {{ text }}
     </a-badge>
   `
 })
 
-export const CustomTag = () => ({
-  components: { ABadge },
-  props: {
-    textKnob: {
-      default: text('Badge text', 'Custom tag')
-    },
-    classKnob: {
-      default: select('BEM Modifier', classKnobsConfig)
-    },
-    tagKnob: {
-      default: text('Html tag', 'span')
-    }
-  },
-  template: `
-    <a-badge
-      :tag="tagKnob"
-      :class="classKnob"
-    >
-      {{ textKnob }}
-    </a-badge>
-  `
-})
+export const Default = Template.bind({})
+Default.args = {
+  text: 'Badge'
+}

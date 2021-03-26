@@ -46,7 +46,6 @@ export default {
       if (baseStyles) {
         classes = [...baseStyles[el]]
       }
-      console.log(this.variant)
       if (typeof this.variant !== 'string') {
         this.variant.forEach(item => {
           classes.push(this.styles[item][el])
