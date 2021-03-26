@@ -3,7 +3,6 @@
   "version": "0.5.0",
   "license": "MIT",
   "scripts": {
-    "watch": "watch 'yarn run postinstall' src",
     "postinstall": "node scripts/build.js",
     "dev": "start-storybook -p 6006 -s ./public",
     "build": "build-storybook -o dist -s ./public",
@@ -65,7 +64,6 @@
     "vue-eslint-parser": "^6.0.4",
     "vue-loader": "^15.9.1",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11",
-    "watch": "^1.0.2"
+    "vue-template-compiler": "^2.6.11"
   }
 }
