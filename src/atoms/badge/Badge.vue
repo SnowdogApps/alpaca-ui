@@ -8,5 +8,3 @@ export default {
   mixins: [ABadge]
 }
 </script>
-
-<style src="./Badge.css" />

@@ -1,5 +1,3 @@
-import alpaca from '../../default.config.js'
-
 export default {
   props: {
     variant: {
@@ -9,7 +7,7 @@ export default {
   },
   methods: {
     getClass (el) {
-      const styles = alpaca[this.$options.name]
+      const styles = this.config
       const baseStyles = styles.base
       const primaryStyles = styles.primary
       let variantStyles
