@@ -23,7 +23,7 @@ export default {
         },
         primary: {
           badge: [
-            'text-white', 'bg-dark'
+            'text-white', 'bg-black'
           ]
         },
         secondary: {
