@@ -1,4 +1,3 @@
-// @vue/component
 export default {
   props: {
     /**
@@ -26,20 +25,6 @@ export default {
      * Aria label for old price
      */
     ariaLabelOldPrice: {
-      type: String,
-      default: null
-    },
-    /**
-     * Special price item custom class
-     */
-    specialPriceCustomClass: {
-      type: String,
-      default: null
-    },
-    /**
-     * Old price item custom class
-     */
-    oldPriceCustomClass: {
       type: String,
       default: null
     }
