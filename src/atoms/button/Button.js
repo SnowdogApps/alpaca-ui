@@ -1,19 +1,17 @@
-// @vue/component
+import getClass from '../../../utils/helpers/get-class.js'
+
 export default {
-  props: {
-    variant: {
-      type: [String, Array],
-      default: ''
-    },
-    styles: {
-      type: Object,
-      default: () => ({
+  mixins: [getClass],
+  data () {
+    return {
+      config: {
         base: {
           button: [
             'px-4',
             'h-12',
             'font-medium', 'uppercase',
-            'transition-colors', 'duration-200', 'ease-in'
+            'transition-colors', 'duration-200', 'ease-in',
+            'focus:outline-focus'
           ]
         },
         primary: {
@@ -36,26 +34,7 @@ export default {
         fluid: {
           button: ['w-full']
         }
-      })
-    }
-  },
-  methods: {
-    getClass (el) {
-      let classes = []
-      const baseStyles = this.styles.base
-      if (baseStyles) {
-        classes = [...baseStyles[el]]
       }
-      console.log(this.variant)
-      if (typeof this.variant !== 'string') {
-        this.variant.forEach(item => {
-          classes.push(this.styles[item][el])
-        })
-      } else {
-        classes.push(this.styles[this.variant][el])
-      }
-
-      return classes
     }
   }
 }
