@@ -1,30 +1,39 @@
-import { select, text } from '@storybook/addon-knobs'
-
-import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-import selectorsConfig from './Label.selectors.json'
-
 import ALabel from './Label.vue'
-
-const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 export default {
   title: 'Atoms/Label',
-  component: ALabel
+  component: ALabel,
+  argTypes: {
+    variant: {
+      control: {
+        type: 'select',
+        options: [
+          'primary',
+          'hidden'
+        ]
+      }
+    },
+    text: {
+      control: {
+        type: 'text'
+      }
+    }
+  }
 }
 
-export const Default = () => ({
+const Template = (args, { argTypes }) => ({
   components: { ALabel },
-  props: {
-    classKnobs: {
-      default: select('BEM Modifier', classKnobsConfig)
-    },
-    textKnobs: {
-      default: text('Text', 'Label')
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
-    <a-label :class="classKnobs">
-      {{ textKnobs }}
+    <a-label
+      :variant="variant"
+    >
+      {{ text }}
     </a-label>
   `
 })
+
+export const Default = Template.bind({})
+Default.args = {
+  text: 'Label'
+}
