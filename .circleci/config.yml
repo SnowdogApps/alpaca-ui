@@ -2,11 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:dubnium
+      - image: circleci/node:lts
     steps:
       - checkout
       - run: yarn
       - run: yarn eslint
       - run: yarn stylelint
       - run: yarn test
-      - run: yarn codecov

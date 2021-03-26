@@ -30,7 +30,7 @@ export default {
       default: '24'
     },
     /**
-     * Set custom viewBox for icon
+     * Custom viewBox for icon
      */
     viewBox: {
       type: [String, Boolean],
@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     ariaId () {
-      return this.title ? this.title.toLowerCase().replace(/ /g, '-') : ''
+      return this.id || (this.title && this.title.toLowerCase().replace(/ /g, '-'))
     }
   }
 }
