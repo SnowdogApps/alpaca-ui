@@ -4,7 +4,7 @@
 import ABadge from './Badge.js'
 
 export default {
-  name: 'AlpacaPrice',
+  name: 'AlpacaBadge',
   mixins: [ABadge]
 }
 </script>
