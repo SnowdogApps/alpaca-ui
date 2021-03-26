@@ -12,4 +12,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Checkbox.scss" />
+<style src="./Checkbox.css" />

@@ -1,0 +1,40 @@
+.a-checkbox {
+  @apply relative;
+  @apply flex;
+}
+
+.a-checkbox__field {
+  @apply absolute opacity-0;
+}
+
+.a-checkbox__field:checked + .a-checkbox__label {
+  @apply text-default;
+}
+
+.a-checkbox__field:checked + .a-checkbox__label .a-checkbox__icon-wrapper {
+  @apply bg-dark;
+  @apply border-dark;
+}
+
+.a-checkbox__field:checked + .a-checkbox__label .a-checkbox__icon {
+  @apply opacity-100;
+  @apply fill-white;
+}
+
+.a-checkbox__label {
+  @apply flex items-center;
+  @apply text-sm text-gray-600;
+  @apply cursor-pointer;
+}
+
+.a-checkbox__icon-wrapper {
+  @apply mr-4;
+  @apply border-2 border-solid border-secondary rounded-sm;
+}
+
+.a-checkbox__icon {
+  @apply w-5 h-5;
+  @apply opacity-0;
+  @apply cursor-pointer;
+  @apply fill-gray-600;
+}

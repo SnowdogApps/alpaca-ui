@@ -11,7 +11,7 @@ describe('Checkbox', () => {
       }
     })
 
-    expect(wrapper.is('div')).toBe(true)
+    expect(wrapper.element.tagName).toBe('DIV')
     expect(wrapper.classes()).toContain('a-checkbox')
     expect(wrapper.classes().length).toBe(1)
   })

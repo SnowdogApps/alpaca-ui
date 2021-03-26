@@ -13,4 +13,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./Input.scss" />
+<style src="./Input.css" />

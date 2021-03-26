@@ -1,0 +1,32 @@
+.a-input {
+  @apply relative;
+  @apply mb-4;
+}
+
+.a-input__field {
+  @apply w-full h-12;
+  @apply px-4;
+  @apply border border-solid border-secondary;
+}
+
+.a-input__field::placeholder {
+  @apply text-gray-600;
+}
+
+.a-input__field[type='search'] {
+  -webkit-appearance: textfield;
+}
+
+.a-input__field[type='search']::-webkit-search-decoration,
+.a-input__field[type='search']::-webkit-search-cancel-button {
+  @apply appearance-none;
+}
+
+.a-input--inline {
+  @apply flex items-center;
+}
+
+.a-input--inline .a-label {
+  @apply flex-shrink-0;
+  @apply mr-4;
+}

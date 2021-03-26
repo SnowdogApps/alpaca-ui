@@ -1,7 +1,7 @@
 .a-label {
   @apply block;
   @apply mb-1;
-  @apply text-gray-600 leading-relaxed;
+  @apply text-gray-600 text-sm leading-relaxed;
 }
 
 .a-label--inline {
