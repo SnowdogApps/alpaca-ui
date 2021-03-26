@@ -14,13 +14,14 @@
           name="current"
           :breadcrumb="breadcrumb"
         >
-          <a
+          <a-link
             :href="breadcrumb.href"
             aria-current="page"
+            variant="none"
             :class="getClass('breadcrumbs__link--current')"
           >
             {{ breadcrumb.text }}
-          </a>
+          </a-link>
         </slot>
       </template>
       <template v-else>
@@ -29,13 +30,14 @@
           name="previous"
           :breadcrumb="breadcrumb"
         >
-          <a
+          <a-link
             :href="breadcrumb.href"
             :aria-label="breadcrumb.text"
+            variant="none"
             :class="getClass('breadcrumbs__link')"
           >
             {{ breadcrumb.text }}
-          </a>
+          </a-link>
         </slot>
         <!-- @slot Separator (Named slot) -->
         <slot name="separator">

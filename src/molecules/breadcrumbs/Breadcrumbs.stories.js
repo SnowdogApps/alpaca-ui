@@ -1,9 +1,10 @@
 import ABreadcrumbs from './Breadcrumbs.vue'
+import ALink from '../../atoms/link/Link.vue'
 
 import breadcrumbs from '../../../mocks/breadcrumbs.json'
 
 export default {
-  title: 'Atoms/Breadcrumbs',
+  title: 'Molecules/Breadcrumbs',
   component: ABreadcrumbs,
   args: {
     breadcrumbs
@@ -26,17 +27,18 @@ const Template = (args, { argTypes }) => ({
 export const Default = Template.bind({})
 
 export const WithSlots = (args, { argTypes }) => ({
-  components: { ABreadcrumbs },
+  components: { ABreadcrumbs, ALink },
   props: Object.keys(argTypes),
   template: `
     <a-breadcrumbs :breadcrumbs="breadcrumbs">
       <template #previous="data">
-        <a
+        <a-link
           :href="data.breadcrumb.href"
+          variant="none"
           class="text-gray-500 hover:text-blue-600"
         >
           {{ data.breadcrumb.text }}
-        </a>
+        </a-link>
       </template>
       <template #separator>
         <span class="mx-4 text-gray-500">
@@ -44,12 +46,13 @@ export const WithSlots = (args, { argTypes }) => ({
         </span>
       </template>
       <template #current="data">
-        <a
+        <a-link
           :href="data.breadcrumb.href"
+          variant="none"
           class="text-blue-800"
         >
           {{ data.breadcrumb.text }}
-        </a>
+        </a-link>
       </template>
     </a-breadcrumbs>
   `
