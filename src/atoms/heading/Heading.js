@@ -3,6 +3,9 @@ import getClass from '../../../utils/helpers/get-class.js'
 export default {
   mixins: [getClass],
   props: {
+    /**
+     * To define tag for component
+     */
     tag: {
       type: String,
       required: true
