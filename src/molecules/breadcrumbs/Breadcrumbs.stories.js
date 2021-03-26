@@ -57,6 +57,3 @@ export const WithSlots = (args, { argTypes }) => ({
     </a-breadcrumbs>
   `
 })
-WithSlots.args = {
-  breadcrumbs
-}
