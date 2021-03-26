@@ -1,12 +1,9 @@
 import { mount } from '@vue/test-utils'
-import getClass from '../../../utils/helpers/get-class'
 import AButton from './Button.vue'
 
 describe('atoms/Button', () => {
   it('has default structure', () => {
-    const wrapper = mount(AButton, {
-      mixins: [getClass]
-    })
+    const wrapper = mount(AButton)
 
     expect(wrapper.element.tagName).toBe('BUTTON')
     expect(wrapper.attributes().type).toBeDefined()
