@@ -1,7 +1,7 @@
 import ABreadcrumbs from './Breadcrumbs.vue'
-import ALink from '../../atoms/link/Link.vue'
+import ALink from '@atoms/link/Link.vue'
 
-import breadcrumbs from '../../../mocks/breadcrumbs.json'
+import breadcrumbs from '@mocks/breadcrumbs.json'
 
 export default {
   title: 'Molecules/Breadcrumbs',
