@@ -25,7 +25,7 @@ export default {
       config: {
         base: {
           image: [
-            'w-full',
+            'max-w-full',
             'object-contain'
           ]
         }
