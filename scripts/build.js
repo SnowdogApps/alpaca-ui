@@ -17,3 +17,15 @@ fs.writeFileSync(
     return `export { default as ${name} } from './${component.src}'`
   }).join('\n')
 )
+
+let defaultConfig = {}
+glob.sync('src/*/*/*.config.js', { cwd: path.resolve(__dirname, '../') })
+  .map(file => {
+    defaultConfig = { ...defaultConfig, ...require(`../${file}`) }
+  })
+
+fs.writeFileSync(
+  './default.config.js',
+  `module.exports = ${JSON.stringify(defaultConfig, null, 2)}`,
+  'utf-8'
+)

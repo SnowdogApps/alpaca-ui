@@ -1,7 +1,13 @@
 module.exports = {
-  purge: [],
+  purge: [
+    'src/**/*.vue'
+  ],
   theme: {
-    extend: {},
+    extend: {
+      minHeight: {
+        24: '24px'
+      }
+    },
     screens: {
       xs: '320px',
       sm: '480px',
@@ -55,13 +61,20 @@ module.exports = {
     textColor: theme => ({
       ...theme('colors'),
       default: theme('colors.gray.800'),
-      primary: theme('colors.gray.800')
+      primary: theme('colors.gray.800'),
+      secondary: theme('colors.gray.600')
     }),
     fill: theme => ({
       ...theme('colors'),
       dark: theme('colors.gray.800'),
       light: theme('colors.gray.200')
-    })
+    }),
+    outline: theme => ({
+      focus: [`2px solid ${theme('colors.bright-sky-blue')}`, '-1px']
+    }),
+    maxWidth: {
+      content: '1328px'
+    }
   },
   variants: {},
   plugins: [],

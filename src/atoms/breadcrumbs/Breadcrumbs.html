@@ -1,0 +1,63 @@
+<nav
+  :aria-label="breadcrumbsNavAriaLabel"
+  class="
+    hidden lg:block
+    min-h-24
+    m-2 p-2
+  "
+>
+  <ol class="flex flex-wrap">
+    <li
+      class="
+        flex items-stretch
+        text-gray-600 text-sm leading-6
+      "
+      v-for="(breadcrumb, i) in breadcrumbs"
+      :key="`breadcrumb-${i}`"
+    >
+      <template v-if="breadcrumbs.length === i + 1">
+        <!-- @slot Current page (Scoped slot) -->
+        <slot
+          name="current"
+          :breadcrumb="breadcrumb"
+        >
+          <router-link
+            :to="breadcrumb.href"
+            aria-current="page"
+            class="
+              cursor-default
+              flex items-center
+              text-gray-800
+            "
+          >
+            {{ breadcrumb.text }}
+          </router-link>
+        </slot>
+      </template>
+      <template v-else>
+        <!-- @slot Previous pages (Scoped slot) -->
+        <slot
+          name="previous"
+          :breadcrumb="breadcrumb"
+        >
+          <router-link
+            :to="breadcrumb.href"
+            :aria-label="breadcrumb.text"
+            class="
+              flex items-center
+              hover:text-gray-800
+            "
+          >
+            {{ breadcrumb.text }}
+          </router-link>
+        </slot>
+        <!-- @slot Separator (Named slot) -->
+        <slot name="separator">
+          <span class="mx-2">
+            /
+          </span>
+        </slot>
+      </template>
+    </li>
+  </ol>
+</nav>
