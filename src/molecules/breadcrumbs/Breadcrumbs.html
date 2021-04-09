@@ -32,7 +32,6 @@
         >
           <a-link
             :href="breadcrumb.href"
-            :aria-label="breadcrumb.text"
             variant="none"
             :class="getClass('breadcrumbs__link')"
           >
@@ -41,7 +40,10 @@
         </slot>
         <!-- @slot Separator (Named slot) -->
         <slot name="separator">
-          <span :class="getClass('breadcrumbs__separator')">
+          <span
+            role="presentation"
+            :class="getClass('breadcrumbs__separator')"
+          >
             /
           </span>
         </slot>

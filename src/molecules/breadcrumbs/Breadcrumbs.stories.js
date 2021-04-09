@@ -41,18 +41,20 @@ export const WithSlots = (args, { argTypes }) => ({
         </a-link>
       </template>
       <template #separator>
-        <span class="mx-4 text-gray-500">
+        <span
+          role="presentation"
+          class="mx-4 text-gray-500"
+        >
           -
         </span>
       </template>
       <template #current="data">
-        <a-link
-          :href="data.breadcrumb.href"
-          variant="none"
+        <span
+          aria-current="page"
           class="text-blue-800"
         >
           {{ data.breadcrumb.text }}
-        </a-link>
+        </span>
       </template>
     </a-breadcrumbs>
   `
