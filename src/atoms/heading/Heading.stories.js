@@ -23,11 +23,6 @@ export default {
           'sixth-level'
         ]
       }
-    },
-    text: {
-      control: {
-        type: 'text'
-      }
     }
   }
 }
