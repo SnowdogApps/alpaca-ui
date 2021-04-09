@@ -35,7 +35,7 @@ export const WithSlots = (args, { argTypes }) => ({
         <a-link
           :href="data.breadcrumb.href"
           variant="none"
-          class="text-gray-500 hover:text-blue-600"
+          class="text-blue-500 hover:text-blue-600"
         >
           {{ data.breadcrumb.text }}
         </a-link>
@@ -43,7 +43,7 @@ export const WithSlots = (args, { argTypes }) => ({
       <template #separator>
         <span
           role="presentation"
-          class="mx-4 text-gray-500"
+          class="mx-4 text-blue-500"
         >
           -
         </span>
