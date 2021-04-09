@@ -1,0 +1,7 @@
+<img
+  :class="getClass('image')"
+  :src="src"
+  :style="[ratioWidth && ratioHeight ? {aspectRatio: `${ratioWidth} / ${ratioHeight}`} : {}]"
+  :alt="alt"
+  loading="lazy"
+>
