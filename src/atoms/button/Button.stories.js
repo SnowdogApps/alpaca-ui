@@ -40,19 +40,8 @@ const Template = (args, { argTypes }) => ({
   `
 })
 
-export const Primary = Template.bind({})
-Primary.args = {
+export const Default = Template.bind({})
+Default.args = {
   variant: 'primary',
   text: 'Button primary'
-}
-export const Secondary = Template.bind({})
-Secondary.args = {
-  variant: 'secondary',
-  text: 'Button secondary'
-}
-
-export const Fluid = Template.bind({})
-Fluid.args = {
-  variant: 'fluid',
-  text: 'Button fluid'
 }
