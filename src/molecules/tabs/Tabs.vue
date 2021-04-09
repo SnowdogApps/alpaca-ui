@@ -10,5 +10,3 @@ export default {
   mixins: [ATabs]
 }
 </script>
-
-<style lang="scss" src="./Tabs.scss" />

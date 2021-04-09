@@ -1,12 +1,28 @@
 import KeyCodes from '../../utils/key-codes'
-
-// @vue/component
+import getClass from '../../../utils/helpers/get-class.js'
 
 export default {
+  mixins: [getClass],
   data () {
     return {
       tabs: null,
-      activeFocusedTab: 0
+      activeFocusedTab: 0,
+      config: {
+        base: {
+          tabs: [
+            'lg:flex', 'lg:flex-wrap', 'justify-center'
+          ],
+          'tabs__nav-button': [
+            'text-gray-600', 'py-4', 'px-6', 'block', 'hover:text-blue-500'
+          ],
+          'tabs__nav-button--active': [
+            'text-gray-600', 'py-4', 'px-6', 'block', 'hover:text-blue-500', 'text-blue-500', 'border-b-2', 'font-medium', 'border-blue-500'
+          ],
+          tabs__content: [
+            'py-4'
+          ]
+        }
+      }
     }
   },
   computed: {
@@ -50,7 +66,7 @@ export default {
           this.focus('button_0')
         } else {
           this.activeFocusedTab = this.activeFocusedTab - 1
-          this.focus('button_' + this.activeFocusedTab)
+          this.focus(`button_${this.activeFocusedTab}`)
         }
       } else if (
         (key === KeyCodes.RIGHT ||
@@ -59,10 +75,10 @@ export default {
         this.activeFocusedTab < this.tabs.length - 1
       ) {
         if (key === KeyCodes.END) {
-          this.focus('button_' + (this.tabs.length - 1))
+          this.focus(`button_${this.tabs.length - 1}`)
         } else {
           this.activeFocusedTab = this.activeFocusedTab + 1
-          this.focus('button_' + this.activeFocusedTab)
+          this.focus(`button_${this.activeFocusedTab}`)
         }
       }
       this.selectTab(this.activeFocusedTab)

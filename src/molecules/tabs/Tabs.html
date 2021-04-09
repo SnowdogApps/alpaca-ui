@@ -1,6 +1,6 @@
 <div
-  class="a-tabs"
   role="tablist"
+  :class="getClass('tabs')"
 >
   <button
     v-for="(tab, i) in tabs"
@@ -8,15 +8,11 @@
     :id="`${tab.id}-tab-trigger`"
     :aria-controls="`${tab.id}-tab`"
     :aria-selected="tab.isActive || 'false'"
-    :ref="'button_' + i"
-    :class="[
-      'a-tabs__nav-button',
-      {
-        'a-tabs__nav-button--active': tab.isActive
-      }
-    ]"
+    :aria-expanded="tab.isActive || 'false'"
     type="button"
     role="tab"
+    :ref="`button_${i}`"
+    :class="getClass(tab.isActive ? 'tabs__nav-button--active' : 'tabs__nav-button')""
     @click="selectTab(tab)"
     @keydown="onKeydown"
   >
@@ -27,10 +23,15 @@
     >
       {{ tab.name }}
     </slot>
+    <!-- @slot Custom accordion tab icon (Named slot) -->
+    <slot name="icon">
+
+    </slot>
   </button>
   <div
     ref="content"
     class="a-tabs__content"
+    :class="getClass('tabs__content')"
     tabindex="-1"
   >
     <!-- @slot Tab components -->
