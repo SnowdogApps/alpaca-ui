@@ -46,7 +46,11 @@ module.exports = ({ config }) => {
 
   config.resolve.alias = {
     ...config.resolve.alias,
-    '@utils': path.resolve(__dirname, '../utils')
+    '@utils': path.resolve(__dirname, '../utils'),
+    '@atoms': path.resolve(__dirname, '../src/atoms'),
+    '@molecules': path.resolve(__dirname, '../src/molecules'),
+    '@organisms': path.resolve(__dirname, '../src/organisms'),
+    '@mocks': path.resolve(__dirname, '../mocks')
   }
 
   return config

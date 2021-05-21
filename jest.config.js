@@ -1,10 +1,15 @@
 module.exports = {
   moduleNameMapper: {
-    '^vue$': 'vue/dist/vue.common.js'
+    '^vue$': 'vue/dist/vue.common.js',
+    '^@atoms/(.*)$': '<rootDir>/src/atoms/$1',
+    '^@molecules/(.*)$': '<rootDir>/src/molecules/$1',
+    '^@organisms/(.*)$': '<rootDir>/src/organisms/$1',
+    '^@mocks/(.*)$': '<rootDir>/mocks/$1'
   },
   moduleFileExtensions: [
     'js',
-    'vue'
+    'vue',
+    'json'
   ],
   testMatch: ['<rootDir>/src/**/?(*.)+(spec|test).(ts|tsx|mjs|js|jsx)'],
   transform: {
