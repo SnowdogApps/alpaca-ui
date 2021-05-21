@@ -19,10 +19,10 @@ export default {
 
       if (this.variant.length === 0) {
         primaryStyles && classes.push(primaryStyles[el])
-      } else if (typeof this.variant === 'string') {
+      } else if (typeof this.variant === 'string' && this.variant !== 'none') {
         variantStyles = styles[this.variant]
         variantStyles && classes.push(variantStyles[el])
-      } else {
+      } else if (typeof this.variant === 'object') {
         this.variant.forEach(item => {
           variantStyles = styles[item]
           variantStyles && classes.push(variantStyles[el])

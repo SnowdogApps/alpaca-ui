@@ -8,5 +8,3 @@ export default {
   mixins: [ALink]
 }
 </script>
-
-<style src="./Link.css" />
