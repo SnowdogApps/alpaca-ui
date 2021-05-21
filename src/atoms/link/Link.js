@@ -13,32 +13,24 @@ export default {
       config: {
         base: {
           link: [
-            'no-underline',
+            'no-underline', 'hover:underline', 'focus:underline',
             'leading-relaxed',
-            'cursor-pointer',
-            'hover:underline',
-            'focus:underline'
+            'cursor-pointer'
           ]
         },
         primary: {
           link: [
-            'text-primary',
-            'hover:text-blue',
-            'focus:text-blue'
+            'text-primary', 'hover:text-blue', 'focus:text-blue'
           ]
         },
         inverted: {
           link: [
-            'text-blue',
-            'hover:text-primary',
-            'focus:text-primary'
+            'text-blue', 'hover:text-primary', 'focus:text-primary'
           ]
         },
         secondary: {
           link: [
-            'text-secondary',
-            'hover:text-primary',
-            'focus:text-primary'
+            'text-secondary', 'hover:text-primary', 'focus:text-primary'
           ]
         }
       }
