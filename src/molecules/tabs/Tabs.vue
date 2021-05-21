@@ -2,11 +2,12 @@
 
 <script>
 import ATabs from './Tabs.js'
-
-import AButton from '../../atoms/button/Button.vue'
+import AButton from '@atoms/button/Button.vue'
 
 export default {
-  components: { AButton },
+  components: {
+    AButton
+  },
   mixins: [ATabs]
 }
 </script>
