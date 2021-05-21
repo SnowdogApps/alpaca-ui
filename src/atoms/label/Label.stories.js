@@ -12,11 +12,6 @@ export default {
           'hidden'
         ]
       }
-    },
-    text: {
-      control: {
-        type: 'text'
-      }
     }
   }
 }
@@ -25,9 +20,7 @@ const Template = (args, { argTypes }) => ({
   components: { ALabel },
   props: Object.keys(argTypes),
   template: `
-    <a-label
-      :variant="variant"
-    >
+    <a-label :variant="variant">
       {{ text }}
     </a-label>
   `
@@ -35,5 +28,6 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  text: 'Label'
+  text: 'Label',
+  variant: 'primary'
 }
