@@ -6,8 +6,6 @@ describe('List', () => {
     const wrapper = mount(AList)
 
     expect(wrapper.element.tagName).toBe('UL')
-    expect(wrapper.classes()).toContain('a-list')
-    expect(wrapper.classes().length).toBe(1)
   })
 
   it('renders slot text when passed', () => {

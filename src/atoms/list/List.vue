@@ -8,5 +8,3 @@ export default {
   mixins: [AList]
 }
 </script>
-
-<style src="./List.css" />
