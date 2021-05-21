@@ -20,12 +20,12 @@ export default {
         },
         primary: {
           link: [
-            'text-primary', 'hover:text-blue', 'focus:text-blue'
+            'text-primary', 'hover:text-blue-500', 'focus:text-blue-500'
           ]
         },
         inverted: {
           link: [
-            'text-blue', 'hover:text-primary', 'focus:text-primary'
+            'text-blue-500', 'hover:text-primary', 'focus:text-primary'
           ]
         },
         secondary: {
