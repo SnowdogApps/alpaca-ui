@@ -8,5 +8,3 @@ export default {
   mixins: [AListItem]
 }
 </script>
-
-<style src="./ListItem.css" />

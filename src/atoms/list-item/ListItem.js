@@ -1,4 +1,7 @@
+import getClass from '../../../utils/helpers/get-class.js'
+
 export default {
+  mixins: [getClass],
   props: {
     /**
      * To use another tag instead of `li`
@@ -8,15 +11,14 @@ export default {
       default: 'li'
     }
   },
-  computed: {
-    tagClassName () {
-      switch (this.tag) {
-        case 'dt':
-          return 'a-list-item--label'
-        case 'dd':
-          return 'a-list-item--value'
-        default:
-          return ''
+  data () {
+    return {
+      config: {
+        primary: {
+          'list-item': [
+            'p-2'
+          ]
+        }
       }
     }
   }

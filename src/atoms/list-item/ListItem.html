@@ -1,7 +1,6 @@
 <component
   :is="tag"
-  :class="tagClassName"
-  class="a-list-item"
+  :class="getClass('list-item')"
 >
   <!-- @slot for list item content -->
   <slot />
