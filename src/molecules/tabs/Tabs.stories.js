@@ -1,9 +1,9 @@
 import ATabs from './Tabs.vue'
-import ATab from './../../atoms/tab/Tab.vue'
-import AButton from './../../atoms/button/Button.vue'
-import AParagraph from './../../atoms/paragraph/Paragraph.vue'
-import AIcon from './../../atoms/icon/Icon.vue'
-import AIconStarBorder from './../../atoms/icon/templates/IconStarBorder.vue'
+import ATab from '@atoms/tab/Tab.vue'
+import AButton from '@atoms/button/Button.vue'
+import AParagraph from '@atoms/paragraph/Paragraph.vue'
+import AIcon from '@atoms/icon/Icon.vue'
+import AIconStarBorder from '@atoms/icon/templates/IconStarBorder.vue'
 
 export default {
   title: 'Molecules/Tabs',
