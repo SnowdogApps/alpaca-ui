@@ -8,5 +8,8 @@ export default {
   mixins: [ALazyImage]
 }
 </script>
-
-<style src="./Image.css" />
+<style>
+.image--loaded {
+  @apply opacity-100;
+}
+</style>

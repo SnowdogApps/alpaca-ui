@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       minHeight: {
         24: '24px'
+      },
+      maxWidth: {
+        content: '1328px'
       }
     },
     screens: {
@@ -71,10 +74,7 @@ module.exports = {
     }),
     outline: theme => ({
       focus: [`2px solid ${theme('colors.bright-sky-blue')}`, '-1px']
-    }),
-    maxWidth: {
-      content: '1328px'
-    }
+    })
   },
   variants: {},
   plugins: [],

@@ -1,5 +1,3 @@
-import { text, object } from '@storybook/addon-knobs'
-
 import AImage from './Image.vue'
 import ALazyImage from './LazyImage.vue'
 
@@ -8,138 +6,132 @@ export default {
   components: {
     AImage,
     ALazyImage
+  },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text'
+      }
+    },
+    tag: {
+      control: {
+        type: 'text'
+      }
+    },
+    alt: {
+      control: {
+        type: 'text'
+      }
+    }
   }
 }
 
-export const Default = () => ({
-  components: { AImage },
-  props: {
-    srcKnob: {
-      default: text('Image src', 'images/image/banner-480_480.png')
-    }
+const sources = [
+  {
+    src: 'images/image/banner-480_480.png',
+    width: '480px'
   },
+  {
+    src: 'images/image/banner-768_402.png',
+    width: '768px'
+  },
+  {
+    src: 'images/image/banner-992_254.png',
+    width: '992px'
+  }
+]
+
+const TemplateImage = (args, { argTypes }) => ({
+  components: { AImage },
+  props: Object.keys(argTypes),
   template: `
     <a-image
-      :src="srcKnob"
-      alt="alt image text"
+      v-bind="$props"
     />
   `
 })
 
-export const Picture = () => ({
+const TemplatePicture = (args, { argTypes }) => ({
   components: { AImage },
-  props: {
-    srcKnob: {
-      default: text('Default src', 'images/image/banner-480_480.png')
-    },
-    srcKnob1: {
-      default: object('Image src 1', {
-        src: 'images/image/banner-480_480.png',
-        width: '480px'
-      })
-    },
-    srcKnob2: {
-      default: object('Image src 2', {
-        src: 'images/image/banner-768_402.png',
-        width: '768px'
-      })
-    },
-    srcKnob3: {
-      default: object('Image src 3', {
-        src: 'images/image/banner-992_254.png',
-        width: '1024px'
-      })
-    },
-    tagKnob: {
-      default: text('Html tag', 'picture')
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
     <a-image
-      :tag="tagKnob"
-      :src="srcKnob"
-      alt="alt image text"
+      v-bind="$props"
     >
       <source
-        :srcset="srcKnob1.src"
-        :media="'(max-width: ' + srcKnob1.width + ')'"
-      />
+        srcset="${sources[0].src}"
+        media="(max-width: ${sources[0].width})"
+      >
       <source
-        :srcset="srcKnob2.src"
-        :media="'(max-width: ' + srcKnob2.width + ')'"
-      />
+        srcset="${sources[1].src}"
+        media="(max-width: ${sources[1].width})"
+      >
       <source
-        :srcset="srcKnob3.src"
-        :media="'(max-width: ' + srcKnob3.width + ')'"
-      />
+        srcset="${sources[2].src}"
+        media="(max-width: ${sources[2].width})"
+      >
     </a-image>
   `
 })
 
-export const LazyImage = () => ({
-  components: { ALazyImage },
-  props: {
-    srcKnob: {
-      default: text('Image src', 'images/image/banner-480_480.png')
-    }
-  },
-  template: `
-      <a-lazy-image
-        :src="srcKnob"
-        style="margin-top: 2000px;"
-        alt="alt text"
-      />
-    `
-})
+export const Image = TemplateImage.bind({})
+Image.args = {
+  tag: 'img',
+  src: 'images/image/banner.jpg',
+  alt: 'alt text goes here'
+}
 
-export const LazyPicture = () => ({
+export const Picture = TemplatePicture.bind({})
+Picture.args = {
+  tag: 'picture',
+  src: 'images/image/banner.jpg',
+  alt: 'alt text goes here'
+}
+
+const TemplateLazyImage = (args, { argTypes }) => ({
   components: { ALazyImage },
-  props: {
-    srcKnob: {
-      default: text('Image src', 'images/image/banner-480_480.png')
-    },
-    srcKnob1: {
-      default: object('Image src 1', {
-        src: 'images/image/banner-480_480.png',
-        width: '480px'
-      })
-    },
-    srcKnob2: {
-      default: object('Image src 2', {
-        src: 'images/image/banner-768_402.png',
-        width: '768px'
-      })
-    },
-    srcKnob3: {
-      default: object('Image src 3', {
-        src: 'images/image/banner-992_254.png',
-        width: '1024px'
-      })
-    },
-    tagKnob: {
-      default: text('Html tag', 'picture')
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
-    <div style="margin-top: 2000px;">
-      <a-lazy-image
-        :tag="tagKnob"
-        alt="alt text"
-        :src="srcKnob"
-      >
-        <source
-          :srcset="srcKnob1.src"
-          :media="'(max-width: ' + srcKnob1.width + ')'"
-        />
-        <source
-          :srcset="srcKnob2.src"
-          :media="'(max-width: ' + srcKnob2.width + ')'"
-        />
-        <source
-          :srcset="srcKnob3.src"
-          :media="'(max-width: ' + srcKnob3.width + ')'"
-        />
-      </a-lazy-image>
-    </div>
+    <a-lazy-image
+      v-bind="$props"
+      class="mt-80"
+    />
   `
 })
+
+export const LazyImage = TemplateLazyImage.bind({})
+LazyImage.args = {
+  tag: 'img',
+  src: 'images/image/banner.jpg',
+  alt: 'alt text goes here'
+}
+
+const TemplateLazyPicture = (args, { argTypes }) => ({
+  components: { ALazyImage },
+  props: Object.keys(argTypes),
+  template: `
+    <a-lazy-image
+      v-bind="$props"
+      class="mt-80"
+    >
+      <source
+        srcset="${sources[0].src}"
+        media="(max-width: ${sources[0].width})"
+      >
+      <source
+        srcset="${sources[1].src}"
+        media="(max-width: ${sources[1].width})"
+      >
+      <source
+        srcset="${sources[2].src}"
+        media="(max-width: ${sources[2].width})"
+      >
+    </a-lazy-image>
+  `
+})
+export const LazyPicture = TemplateLazyPicture.bind({})
+LazyPicture.args = {
+  tag: 'picture',
+  src: 'images/image/banner.jpg',
+  alt: 'alt text goes here'
+}

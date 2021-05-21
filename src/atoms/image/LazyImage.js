@@ -1,5 +1,7 @@
-// @vue/component
+import getClass from '../../../utils/helpers/get-class.js'
+
 export default {
+  mixins: [getClass],
   inheritAttrs: false,
   props: {
     /**
@@ -16,14 +18,26 @@ export default {
     },
     imgLoadedClass: {
       type: String,
-      default: 'a-image--loaded'
+      default: 'image--loaded'
     }
   },
-  data: () => ({
-    observer: null,
-    intersected: false,
-    loaded: false
-  }),
+  data () {
+    return {
+      observer: null,
+      intersected: false,
+      loaded: false,
+      config: {
+        base: {
+          image: [
+            'block',
+            'max-w-full',
+            'opacity-0',
+            'transition-opacity', 'duration-300', 'ease-linear'
+          ]
+        }
+      }
+    }
+  },
   computed: {
     usePicture () {
       return this.tag === 'picture'

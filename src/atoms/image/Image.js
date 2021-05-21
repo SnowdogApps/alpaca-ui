@@ -1,5 +1,7 @@
-// @vue/component
+import getClass from '../../../utils/helpers/get-class.js'
+
 export default {
+  mixins: [getClass],
   inheritAttrs: false,
   props: {
     /**
@@ -9,6 +11,18 @@ export default {
       type: String,
       default: 'img',
       validator: tag => tag === 'img' || tag === 'picture'
+    }
+  },
+  data () {
+    return {
+      config: {
+        base: {
+          image: [
+            'block',
+            'max-w-full'
+          ]
+        }
+      }
     }
   },
   computed: {

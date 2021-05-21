@@ -1,5 +1,0 @@
-.a-image {
-  @apply block;
-  @apply w-full max-w-full;
-  @apply transition-opacity duration-300 ease-linear;
-}

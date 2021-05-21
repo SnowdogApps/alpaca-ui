@@ -8,5 +8,3 @@ export default {
   mixins: [AImage]
 }
 </script>
-
-<style src="./Image.css" />

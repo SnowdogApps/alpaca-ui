@@ -5,13 +5,11 @@ describe('Image', () => {
   it('has default structure', () => {
     const wrapper = mount(AImage, {
       propsData: {
-        src: '/sample/link/to/image.jpg'
+        src: '/images/image/banner.jpg'
       }
     })
 
     expect(wrapper.element.tagName).toBe('IMG')
-    expect(wrapper.classes()).toContain('a-image')
-    expect(wrapper.classes().length).toBe(1)
   })
 
   it('should be generated with the `alt` passed as attributes', () => {
