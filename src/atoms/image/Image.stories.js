@@ -22,6 +22,11 @@ export default {
       control: {
         type: 'text'
       }
+    },
+    placeholderSrc: {
+      control: {
+        type: 'text'
+      }
     }
   }
 }
@@ -106,6 +111,14 @@ LazyImage.args = {
   alt: 'alt text goes here'
 }
 
+export const LazyImageWithPlaceholder = TemplateLazyImage.bind({})
+LazyImageWithPlaceholder.args = {
+  tag: 'img',
+  src: 'images/image/banner.jpg',
+  alt: 'alt text goes here',
+  placeholderSrc: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8c+bMfwZGRgbGs2fO/v/P8J8BAFA1CMsVPhxYAAAAAElFTkSuQmCC'
+}
+
 const TemplateLazyPicture = (args, { argTypes }) => ({
   components: { ALazyImage },
   props: Object.keys(argTypes),
@@ -126,6 +139,9 @@ const TemplateLazyPicture = (args, { argTypes }) => ({
         srcset="${sources[2].src}"
         media="(max-width: ${sources[2].width})"
       >
+      <template v-slot:placeholder>
+        <span>Placeholder slot</span>
+      </template>
     </a-lazy-image>
   `
 })
@@ -134,4 +150,11 @@ LazyPicture.args = {
   tag: 'picture',
   src: 'images/image/banner.jpg',
   alt: 'alt text goes here'
+}
+export const LazyPictureWithPlaceholder = TemplateLazyPicture.bind({})
+LazyPictureWithPlaceholder.args = {
+  tag: 'picture',
+  src: 'images/image/banner.jpg',
+  alt: 'alt text goes here',
+  placeholderSrc: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8c+bMfwZGRgbGs2fO/v/P8J8BAFA1CMsVPhxYAAAAAElFTkSuQmCC'
 }

@@ -6,6 +6,7 @@ const slotContent = 'This is a placeholder'
 const factory = (overrideData = {}) => {
   const defaultData = {
     propsData: {
+      tag: 'img',
       src: '/images/image/banner.jpg'
     }
   }
@@ -45,7 +46,7 @@ describe('atoms/LazyImage.vue', () => {
   it('placeholder slot data showed before standard image in picture tag', () => {
     const wrapper = factory({
       propsData: {
-        usePicture: true,
+        tag: 'picture',
         placeholderSrc: 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAQAAABN/Pf1AAAAC0lEQVR42mNkwAIAACoAAgu1Hc4AAAAASUVORK5CYII&#x3D;'
       },
       slots: {
@@ -61,7 +62,7 @@ describe('atoms/LazyImage.vue', () => {
   it('default slot data showed if intersected', async () => {
     const wrapper = factory({
       propsData: {
-        usePicture: true
+        tag: 'picture'
       },
       slots: {
         default: `<span class="default-slot">${slotContent}</span>`
@@ -77,7 +78,7 @@ describe('atoms/LazyImage.vue', () => {
   it('@load event emitted when picture tag loaded', async () => {
     const wrapper = factory({
       propsData: {
-        usePicture: true
+        tag: 'picture'
       }
     })
 
@@ -97,14 +98,14 @@ describe('atoms/LazyImage.vue', () => {
 
     wrapper.find('img').trigger('error')
 
-    expect(wrapper.emitted('image-error')).toBeDefined()
-    expect(wrapper.emitted('image-error').length).toBe(1)
+    expect(wrapper.emitted('imageError')).toBeDefined()
+    expect(wrapper.emitted('imageError').length).toBe(1)
   })
 
   it('@error event emitted when picture is broken', () => {
     const wrapper = factory({
       propsData: {
-        usePicture: true
+        tag: 'picture'
       }
     })
 
@@ -112,8 +113,8 @@ describe('atoms/LazyImage.vue', () => {
 
     wrapper.find('img').trigger('error')
 
-    expect(wrapper.emitted('image-error')).toBeDefined()
-    expect(wrapper.emitted('image-error').length).toBe(1)
+    expect(wrapper.emitted('imageError')).toBeDefined()
+    expect(wrapper.emitted('imageError').length).toBe(1)
   })
 
   it('should be generated with the `alt` passed as attributes', () => {
