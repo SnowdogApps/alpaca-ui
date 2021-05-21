@@ -4,11 +4,6 @@ export default {
   title: 'Atoms/Link',
   component: ALink,
   argTypes: {
-    tag: {
-      control: {
-        type: 'text'
-      }
-    },
     variant: {
       control: {
         type: 'select',
@@ -18,9 +13,6 @@ export default {
           'secondary'
         ]
       }
-    },
-    text: {
-      control: 'text'
     }
   }
 }

@@ -1,8 +1,7 @@
-// @vue/component
 import getClass from '../../../utils/helpers/get-class.js'
 
 export default {
-  mixins: [ getClass ],
+  mixins: [getClass],
   props: {
     tag: {
       type: String,
@@ -16,9 +15,9 @@ export default {
           link: [
             'no-underline',
             'leading-relaxed',
+            'cursor-pointer',
             'hover:underline',
-            'focus:underline',
-            'hover:cursor-pointer'
+            'focus:underline'
           ]
         },
         primary: {
