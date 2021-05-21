@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import breadcrumbs from '../../../mocks/breadcrumbs.json'
+import breadcrumbs from '@mocks/breadcrumbs.json'
 import ABreadcrumbs from './Breadcrumbs.vue'
 
 describe('Breadcrumbs', () => {

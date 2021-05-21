@@ -8,5 +8,3 @@ export default {
   mixins: [ALabel]
 }
 </script>
-
-<style src="./Label.css" />
