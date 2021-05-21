@@ -6,8 +6,6 @@ describe('Label', () => {
     const wrapper = mount(ALabel)
 
     expect(wrapper.element.tagName).toBe('LABEL')
-    expect(wrapper.classes()).toContain('a-label')
-    expect(wrapper.classes().length).toBe(1)
   })
 
   it('renders slot text when passed', () => {
