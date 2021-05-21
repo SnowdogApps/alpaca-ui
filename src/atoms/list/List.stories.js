@@ -1,10 +1,10 @@
 import AList from './List.vue'
-import AListItem from '../list-item/ListItem.vue'
-import ALink from '../link/Link.vue'
-import AIcon from '../icon/Icon.vue'
-import AIconPerson from '../icon/templates/IconPerson.vue'
-import AIconCheck from '../icon/templates/IconCheck.vue'
-import AIconPhone from '../icon/templates/IconPhone.vue'
+import AListItem from '@atoms/list-item/ListItem.vue'
+import ALink from '@atoms/link/Link.vue'
+import AIcon from '@atoms/icon/Icon.vue'
+import AIconPerson from '@atoms/icon/templates/IconPerson.vue'
+import AIconCheck from '@atoms/icon/templates/IconCheck.vue'
+import AIconPhone from '@atoms/icon/templates/IconPhone.vue'
 
 export default {
   title: 'Atoms/List',
