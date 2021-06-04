@@ -42,6 +42,9 @@ export default {
           input: [
             'relative'
           ],
+          input__label: [
+            'flex'
+          ],
           input__field: [
             'w-full', 'h-12',
             'px-4'
@@ -59,7 +62,7 @@ export default {
           ],
           input__label: [
             'flex-shrink-0',
-            'm-4', 'mb-4'
+            'mr-4'
           ]
         }
       }

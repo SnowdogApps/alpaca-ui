@@ -48,9 +48,6 @@ const Template = (args, { argTypes }) => ({
         :label="label"
         :variant="variant"
       />
-      <small class="flex mt-4">
-        Model: {{ inputValue }}
-      </small>
     </div>
   `
 })
@@ -83,7 +80,7 @@ export const WithSlots = (args, { argTypes }) => ({
       >
         <template #icon>
           <div
-            style="top: 29px;"
+            style="top: 25px;"
             class="h-12 w-12 absolute flex items-center justify-center top-0 right-0"
           >
             <a-icon
@@ -95,9 +92,6 @@ export const WithSlots = (args, { argTypes }) => ({
           </div>
         </template>
       </a-input>
-      <small class="flex mt-4">
-        Model: {{ inputValue }}
-      </small>
     </div>
   `
 })
