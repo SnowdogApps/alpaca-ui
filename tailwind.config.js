@@ -31,7 +31,7 @@ module.exports = {
       ...theme('colors'),
       primary: theme('colors.gray.500'),
       secondary: theme('colors.gray.600'),
-      form: theme('colors.gray.500'),
+      form: theme('colors.gray.300'),
       dark: theme('colors.gray.800'),
       light: theme('colors.gray.300'),
 
@@ -50,7 +50,8 @@ module.exports = {
       light: theme('colors.gray.200')
     }),
     outline: theme => ({
-      focus: [`2px solid ${theme('colors.bright-sky-blue')}`, '-1px']
+      ...theme('colors'),
+      focus: [`2px solid ${theme('colors.blue.200')}`, '-1px']
     })
   },
   variants: {},

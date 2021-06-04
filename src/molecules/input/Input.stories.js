@@ -6,12 +6,7 @@ export default {
   title: 'Molecules/Input',
   component: AInput,
   argTypes: {
-    type: {
-      control: {
-        type: 'text'
-      }
-    },
-    placeholder: {
+    id: {
       control: {
         type: 'text'
       }
@@ -20,14 +15,22 @@ export default {
       control: {
         type: 'text'
       }
+    },
+    variant: {
+      control: {
+        type: 'select',
+        options: [
+          'primary',
+          'inline'
+        ]
+      }
     }
   }
 }
-
-const args = {
-  type: 'text',
-  placeholder: 'Placeholder text...',
-  label: 'Label text'
+const defaultArgs = {
+  id: 'input-text',
+  label: 'input label',
+  variant: 'primary'
 }
 
 const Template = (args, { argTypes }) => ({
@@ -42,9 +45,7 @@ const Template = (args, { argTypes }) => ({
     <div>
       <a-input
         v-model="inputValue"
-        id="input-id"
-        :type="type"
-        :placeholder="placeholder"
+        :id="id"
         :label="label"
         :variant="variant"
       />
@@ -53,20 +54,14 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Default = Template.bind({})
-
-export const Inline = Template.bind({})
+Default.args = defaultArgs
 
 export const WithSlots = (args, { argTypes }) => ({
   components: { AInput, AIcon, AIconPerson },
   props: Object.keys(argTypes),
   data: () => {
     return {
-      inputValue: '',
-      iconStyles: {
-        top: '29px',
-        right: '8px',
-        cursor: 'pointer'
-      }
+      inputValue: ''
     }
   },
   template: `
@@ -74,14 +69,18 @@ export const WithSlots = (args, { argTypes }) => ({
       <a-input
         v-model="inputValue"
         :label="label"
-        :type="type"
-        :placeholder="placeholder"
-        id="input-id-slit"
+        :id="id"
+        :variant="variant"
       >
-        <template #icon>
+        <template #icon="{ variant   }">
           <div
-            style="top: 25px;"
-            class="h-12 w-12 absolute flex items-center justify-center top-0 right-0"
+            :class="[
+              'h-12 w-12',
+              'flex items-center justify-center',
+              'absolute right-0',
+              variant === 'primary' ? 'top-6' : 'top-0'
+            ]
+            "
           >
             <a-icon
               title="Person icon"
@@ -96,9 +95,4 @@ export const WithSlots = (args, { argTypes }) => ({
   `
 })
 
-Default.args = args
-Inline.args = {
-  ...args,
-  variant: ['primary', 'inline']
-}
-WithSlots.args = args
+WithSlots.args = defaultArgs

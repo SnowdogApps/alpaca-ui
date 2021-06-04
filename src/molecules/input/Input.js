@@ -24,26 +24,29 @@ export default {
      */
     label: {
       type: String,
-      default: null
+      required: true
     }
   },
   computed: {
     listeners () {
       return {
         ...this.$listeners,
-        input: event => this.$emit('input', event.target.value)
+        input: event => this.$emit('input', event.target.value),
+        focus: () => this.isFocused(true),
+        blur: () => this.isFocused(false)
       }
     }
   },
   data () {
     return {
+      hasFocus: false,
       config: {
         base: {
           input: [
             'relative'
           ],
           input__label: [
-            'flex'
+            'transition-all', 'ease-linear', 'transition-300'
           ],
           input__field: [
             'w-full', 'h-12',
@@ -53,7 +56,12 @@ export default {
         primary: {
           input__field: [
             'border', 'border-solid', 'border-form',
-            'placeholder-primary'
+            'placeholder-primary',
+            'focus:border-gray-500', 'focus:outline-focus'
+          ],
+          input__label: [
+            'inline-flex', 'transform translate-x-6 translate-y-9 scale-125',
+            'text-xs'
           ]
         },
         inline: {
@@ -63,9 +71,17 @@ export default {
           input__label: [
             'flex-shrink-0',
             'mr-4'
+          ],
+          input__field: [
+            'border', 'border-solid', 'border-form', 'placeholder-primary'
           ]
         }
       }
+    }
+  },
+  methods: {
+    isFocused (value) {
+      this.hasFocus = value
     }
   }
 }

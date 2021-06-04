@@ -2,7 +2,7 @@
 
 <script>
 import AInput from './Input.js'
-import ALabel from '../../atoms/label/Label.vue'
+import ALabel from '@atoms/label/Label.vue'
 
 export default {
   name: 'AlpacaInput',
@@ -12,3 +12,4 @@ export default {
   mixins: [AInput]
 }
 </script>
+<style src="./Input.css" />

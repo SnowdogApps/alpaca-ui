@@ -2,8 +2,10 @@
   <!-- @slot Label (Named slot) -->
   <slot name="label">
     <a-label
-      v-if="label"
-      :class="getClass('input__label')"
+      :class="[
+        getClass('input__label'),
+        { 'input__label--floating': variant !== 'inline' && (hasFocus || value) }
+      ]"
       :for="id"
     >
       {{ label }}
@@ -17,5 +19,5 @@
     :class="getClass('input__field')"
   >
   <!-- @slot Icon (Named slot) -->
-  <slot name="icon" />
+  <slot name="icon" v-bind:variant="variant" />
 </div>

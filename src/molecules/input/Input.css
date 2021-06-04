@@ -1,0 +1,5 @@
+.input__label--floating {
+  @apply transform translate-x-0;
+  @apply transform translate-y-0;
+  @apply transform scale-100;
+}
