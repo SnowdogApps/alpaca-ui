@@ -1,0 +1,21 @@
+<div :class="getClass('input')">
+  <!-- @slot Label (Named slot) -->
+  <slot name="label">
+    <a-label
+      v-if="label"
+      :class="getClass('input__label')"
+      :for="id"
+    >
+      {{ label }}
+    </a-label>
+  </slot>
+  <input
+    v-bind="$attrs"
+    v-on="listeners"
+    :value="value"
+    :id="id"
+    :class="getClass('input__field')"
+  >
+  <!-- @slot Icon (Named slot) -->
+  <slot name="icon" />
+</div>
