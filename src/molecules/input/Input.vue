@@ -12,4 +12,3 @@ export default {
   mixins: [AInput]
 }
 </script>
-<style src="./Input.css" />

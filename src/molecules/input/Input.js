@@ -45,32 +45,23 @@ export default {
           input: [
             'relative'
           ],
-          input__label: [
-            'transition-all', 'ease-linear', 'transition-300'
-          ],
           input__field: [
             'w-full', 'h-12',
             'px-4'
+          ],
+          input__field__filled: [
+            'border-formfilled'
           ]
         },
         primary: {
           input__field: [
             'border', 'border-solid', 'border-form',
-            'placeholder-primary',
-            'focus:border-gray-500', 'focus:outline-focus'
-          ],
-          input__label: [
-            'inline-flex', 'transform translate-x-6 translate-y-9 scale-125',
-            'text-xs'
+            'placeholder-primary'
           ]
         },
         inline: {
           input: [
             'flex', 'items-center'
-          ],
-          input__label: [
-            'flex-shrink-0',
-            'mr-4'
           ],
           input__field: [
             'border', 'border-solid', 'border-form', 'placeholder-primary'

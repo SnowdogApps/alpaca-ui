@@ -1,10 +1,18 @@
 <div :class="getClass('input')">
   <!-- @slot Label (Named slot) -->
-  <slot name="label">
+  <slot name="label" v-bind="{ label, id }">
     <a-label
       :class="[
-        getClass('input__label'),
-        { 'input__label--floating': variant !== 'inline' && (hasFocus || value) }
+        'transition-all ease-linear transition-300',
+        {
+          'text-xs inline-flex': variant ==='primary'
+        },
+        {
+          'flex-shrink-0 mr-4': variant !=='primary'
+        },
+        {
+          'transform translate-x-6 translate-y-9 scale-125': (variant === 'primary' && (!value && !hasFocus))
+        }
       ]"
       :for="id"
     >
@@ -16,7 +24,10 @@
     v-on="listeners"
     :value="value"
     :id="id"
-    :class="getClass('input__field')"
+    :class="[
+      getClass('input__field'),
+      value ? getClass('input__field__filled') : ''
+    ]"
   >
   <!-- @slot Icon (Named slot) -->
   <slot name="icon" v-bind:variant="variant" />

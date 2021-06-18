@@ -1,5 +1,6 @@
 import AInput from './Input.vue'
 import AIcon from '../../atoms/icon/Icon.vue'
+import ALabel from '../../atoms/label/Label.vue'
 import AIconPerson from '../../atoms/icon/templates/IconPerson.vue'
 
 export default {
@@ -56,7 +57,7 @@ const Template = (args, { argTypes }) => ({
 export const Default = Template.bind({})
 Default.args = defaultArgs
 
-export const WithSlots = (args, { argTypes }) => ({
+export const WithSlotsIcon = (args, { argTypes }) => ({
   components: { AInput, AIcon, AIconPerson },
   props: Object.keys(argTypes),
   data: () => {
@@ -68,11 +69,12 @@ export const WithSlots = (args, { argTypes }) => ({
     <div>
       <a-input
         v-model="inputValue"
+        type="text"
         :label="label"
         :id="id"
         :variant="variant"
       >
-        <template #icon="{ variant   }">
+        <template #icon="{ variant }">
           <div
             :class="[
               'h-12 w-12',
@@ -95,4 +97,34 @@ export const WithSlots = (args, { argTypes }) => ({
   `
 })
 
-WithSlots.args = defaultArgs
+WithSlotsIcon.args = defaultArgs
+
+export const WithSlotsLabel = (args, { argTypes }) => ({
+  components: { AInput, ALabel },
+  props: Object.keys(argTypes),
+  data: () => {
+    return {
+      inputValue: ''
+    }
+  },
+  template: `
+    <div>
+      <a-input
+        v-model="inputValue"
+        type="text"
+        label="Slots label input"
+        :id="id"
+        :variant="variant"
+      >
+        <template #label="{ label, id }">
+          <a-label
+            :for="id"
+          >
+            {{ label }}
+          </a-label>
+        </template>
+      </a-input>
+    </div>
+  `
+})
+WithSlotsLabel.args = defaultArgs

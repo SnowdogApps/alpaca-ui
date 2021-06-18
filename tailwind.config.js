@@ -6,7 +6,11 @@ module.exports = {
     extend: {
       maxWidth: {
         content: '1328px'
-      }
+      },
+      outline: theme => ({
+        ...theme('colors'),
+        focus: [`1px solid ${theme('colors.blue.400')}`, '-2px']
+      })
     },
     screens: {
       xs: '320px',
@@ -31,7 +35,8 @@ module.exports = {
       ...theme('colors'),
       primary: theme('colors.gray.500'),
       secondary: theme('colors.gray.600'),
-      form: theme('colors.gray.300'),
+      form: theme('colors.gray.400'),
+      formfilled: theme('colors.gray.900'),
       dark: theme('colors.gray.800'),
       light: theme('colors.gray.300'),
 
@@ -49,10 +54,6 @@ module.exports = {
       dark: theme('colors.gray.800'),
       light: theme('colors.gray.200')
     }),
-    outline: theme => ({
-      ...theme('colors'),
-      focus: [`2px solid ${theme('colors.blue.200')}`, '-1px']
-    })
   },
   variants: {},
   plugins: [],
