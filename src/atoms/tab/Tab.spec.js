@@ -1,26 +1,30 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import ATab from './Tab.vue'
 
 const factory = () => {
-  const defaultData = {
+  return mount(ATab, {
     slots: {
-      default: '<span>Tab default text</span>'
+      default: `
+        <span>
+          Tab text
+        </span>
+      `
     },
     propsData: {
       name: 'Tab'
     }
-  }
-
-  return shallowMount(ATab, defaultData)
+  })
 }
 
 describe('Tab', () => {
-  it('has default structure', () => {
+  it('has default structure', async () => {
     const wrapper = factory()
 
-    expect(wrapper).toBe('DIV')
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.element.tagName).toBe('DIV')
     expect(wrapper.attributes().role).toBeDefined()
-    expect(wrapper.attributes().role).toEqual('tab')
+    expect(wrapper.attributes().role).toEqual('tabpanel')
     expect(wrapper.attributes('data-tab')).toBeDefined()
   })
 
@@ -28,7 +32,7 @@ describe('Tab', () => {
     const wrapper = factory()
 
     expect(wrapper.find('div > span').exists()).toBe(true)
-    expect(wrapper.find('div > span').text()).toEqual('Tab default text')
+    expect(wrapper.find('div > span').text()).toEqual('Tab text')
   })
 
   it('has correct id attribute', () => {
