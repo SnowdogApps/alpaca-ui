@@ -13,7 +13,7 @@
     "codcov": "./node_modules/codcov/bin/codcov"
   },
   "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@tailwindcss/postcss7-compat": "^2.2.4",
     "focus-visible": "^5.0.2",
     "normalize.css": "^8.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
