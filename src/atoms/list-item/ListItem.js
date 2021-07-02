@@ -1,7 +1,7 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import { alpacaUIMixin } from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * To use another tag instead of `li`
@@ -11,15 +11,11 @@ export default {
       default: 'li'
     }
   },
-  data () {
-    return {
-      config: {
-        primary: {
-          'list-item': [
-            'p-2'
-          ]
-        }
-      }
+  config: {
+    base: {
+      'list-item': [
+        'p-2'
+      ]
     }
   }
 }

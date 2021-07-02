@@ -1,7 +1,7 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import { alpacaUIMixin } from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * To use another tag instead of `ul`
@@ -11,43 +11,39 @@ export default {
       default: 'ul'
     }
   },
-  data () {
-    return {
-      config: {
-        base: {
-          list: [
-            'list-none',
-            'text-primary'
-          ]
-        },
-        native: {
-          list: [
-            'list-disc'
-          ]
-        },
-        horizontal: {
-          list: [
-            'flex', 'flex-row', 'flex-wrap'
-          ]
-        },
-        centered: {
-          list: [
-            'justify-center',
-            'text-center'
-          ]
-        },
-        divided: {
-          list: [
-            'divide-y', 'divide-dark'
-          ]
-        },
-        'divided-horizontal': {
-          list: [
-            'flex', 'flex-row', 'flex-wrap',
-            'divide-x', 'divide-dark'
-          ]
-        }
-      }
+  config: {
+    base: {
+      list: [
+        'list-none',
+        'text-primary'
+      ]
+    },
+    native: {
+      list: [
+        'list-disc'
+      ]
+    },
+    horizontal: {
+      list: [
+        'flex', 'flex-row', 'flex-wrap'
+      ]
+    },
+    centered: {
+      list: [
+        'justify-center',
+        'text-center'
+      ]
+    },
+    divided: {
+      list: [
+        'divide-y', 'divide-dark'
+      ]
+    },
+    'divided-horizontal': {
+      list: [
+        'flex', 'flex-row', 'flex-wrap',
+        'divide-x', 'divide-dark'
+      ]
     }
   }
 }
