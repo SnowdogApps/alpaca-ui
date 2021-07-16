@@ -108,27 +108,3 @@ const WithIconsTemplate = (args, { argTypes }) => ({
 })
 
 export const WithIcons = WithIconsTemplate.bind({})
-
-// description list
-// const DescriptionTemplate = (args, { argTypes }) => ({
-//   components: { AList, AListItem },
-//   props: Object.keys(argTypes),
-//   template: `
-//     <a-list tag="dl">
-//       <a-list-item tag="dt">
-//         Lorem ipsum
-//       </a-list-item>
-//       <a-list-item tag="dd">
-//         Lorem ipsum value
-//       </a-list-item>
-//       <a-list-item tag="dt">
-//         Lorem ipsum
-//       </a-list-item>
-//       <a-list-item tag="dd">
-//         Lorem ipsum value
-//       </a-list-item>
-//     </a-list>
-//   `
-// })
-
-// export const Description = DescriptionTemplate.bind({})

@@ -1,7 +1,8 @@
-var alpacaUIMixin = {
+export default {
   computed: {
     alpacaConfig () {
       const config = this.$options.config
+
       return config
     }
   },
@@ -39,11 +40,3 @@ var alpacaUIMixin = {
     }
   }
 }
-exports.alpacaUIMixin = alpacaUIMixin
-
-function AlpacaUI (Vue) {
-  Vue.mixin(alpacaUIMixin)
-}
-
-var _default = AlpacaUI
-exports.default = _default

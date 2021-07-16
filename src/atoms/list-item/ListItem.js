@@ -1,4 +1,4 @@
-import { alpacaUIMixin } from '../../../utils/helpers/alpaca-ui.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
   mixins: [alpacaUIMixin],

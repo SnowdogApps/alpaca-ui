@@ -1,4 +1,4 @@
-import { alpacaUIMixin } from '../../../utils/helpers/alpaca-ui.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
   mixins: [alpacaUIMixin],
@@ -25,7 +25,7 @@ export default {
     },
     horizontal: {
       list: [
-        'flex', 'flex-row', 'flex-wrap'
+        'flex', 'flex-row', 'flex-wrap', 'space-x-6'
       ]
     },
     centered: {
@@ -36,13 +36,13 @@ export default {
     },
     divided: {
       list: [
-        'divide-y', 'divide-dark'
+        'divide-y', 'divide-gray-100'
       ]
     },
     'divided-horizontal': {
       list: [
         'flex', 'flex-row', 'flex-wrap',
-        'divide-x', 'divide-dark'
+        'divide-x', 'divide-gray-100'
       ]
     }
   }
