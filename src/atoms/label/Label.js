@@ -12,7 +12,7 @@ export default {
         },
         primary: {
           label: [
-            'text-gray-600'
+            'text-gray-400'
           ]
         },
         hidden: {

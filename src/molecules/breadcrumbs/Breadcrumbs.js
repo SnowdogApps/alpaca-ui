@@ -35,11 +35,11 @@ export default {
           ],
           breadcrumbs__link: [
             'flex', 'items-center',
-            'text-gray-600', 'hover:text-gray-800'
+            'text-gray-400', 'hover:text-gray-500'
           ],
           'breadcrumbs__link--current': [
             'flex', 'items-center',
-            'text-gray-800'
+            'text-gray-500'
           ],
           breadcrumbs__separator: [
             'mx-2'

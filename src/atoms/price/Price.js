@@ -41,7 +41,7 @@ export default {
           ],
           price__old: [
             'mr-3',
-            'text-xs', 'md:text-sm', 'font-normal', 'text-gray-600', 'line-through'
+            'text-xs', 'md:text-sm', 'font-normal', 'text-gray-500', 'line-through'
           ],
           price__special: [
             'text-red', 'no-underline'
