@@ -21,11 +21,11 @@ export default {
         'font-bold', 'leading-loose', 'uppercase', 'whitespace-nowrap'
       ],
       'tabs__nav-button--inactive': [
-        'border-b', 'border-gray-200', 'hover:border-primary',
-        'text-gray-400'
+        'border-b', 'border-gray-100', 'hover:border-primary',
+        'text-gray-200'
       ],
       'tabs__nav-button--active': [
-        'border-b', 'border-primary',
+        'border-b', 'border-secondary',
         'text-primary'
       ],
       tabs__content: [
