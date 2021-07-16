@@ -96,7 +96,5 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-  corePlugins: {
-    float: false
-  }
+  corePlugins: {}
 }
