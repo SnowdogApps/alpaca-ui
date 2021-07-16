@@ -15,8 +15,8 @@ describe('List', () => {
       }
     })
 
-    expect(wrapper.find('.a-list > li').exists()).toBe(true)
-    expect(wrapper.find('.a-list > li').text()).toEqual('List default text')
+    expect(wrapper.find('ul > li').exists()).toBe(true)
+    expect(wrapper.find('ul > li').text()).toEqual('List default text')
   })
 
   it('should be generated with the `ol` passed as tag', () => {
@@ -27,7 +27,6 @@ describe('List', () => {
     })
 
     expect(wrapper.element.tagName).toBe('OL')
-    expect(wrapper.classes()).toContain('a-list')
     expect(wrapper.props().tag).toBe('ol')
   })
 })

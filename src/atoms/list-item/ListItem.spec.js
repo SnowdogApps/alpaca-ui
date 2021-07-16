@@ -5,7 +5,7 @@ describe('ListItem', () => {
   it('has default structure', () => {
     const wrapper = mount(AListItem)
 
-    expect(wrapper.is('li')).toBe(true)
+    expect(wrapper.element.tagName).toBe('LI')
   })
 
   it('renders slot text when passed', () => {
@@ -26,8 +26,7 @@ describe('ListItem', () => {
       }
     })
 
-    expect(wrapper.is('dt')).toBe(true)
-    expect(wrapper.classes()).toContain('a-list-item')
+    expect(wrapper.element.tagName).toBe('DT')
     expect(wrapper.props().tag).toBe('dt')
   })
 })
