@@ -15,7 +15,6 @@
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "focus-visible": "^5.0.2",
-    "normalize.css": "^8.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^2.6.11",
     "vue-carousel": "^0.18.0-alpha",
