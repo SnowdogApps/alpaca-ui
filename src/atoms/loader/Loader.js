@@ -1,2 +1,1 @@
-// @vue/component
 export default {}
