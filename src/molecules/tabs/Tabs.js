@@ -1,37 +1,37 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
+  mixins: [alpacaUIMixin],
   data () {
     return {
       tabs: null,
-      activeFocusedTab: 0,
-      config: {
-        base: {
-          tabs: [],
-          tabs__tablist: [
-            'flex', 'w-full', 'no-wrap',
-            'overflow-x-scroll'
-          ],
-          'tabs__nav-button': [
-            'flex', 'items-center', 'justify-center', 'flex-grow',
-            'px-4', 'py-2',
-            'font-bold', 'leading-loose', 'uppercase', 'whitespace-nowrap'
-          ],
-          'tabs__nav-button--inactive': [
-            'border-b', 'border-gray-200', 'hover:border-primary',
-            'text-gray-400'
-          ],
-          'tabs__nav-button--active': [
-            'border-b', 'border-primary',
-            'text-primary'
-          ],
-          tabs__content: [
-            'w-full',
-            'px-6', 'py-10'
-          ]
-        }
-      }
+      activeFocusedTab: 0
+    }
+  },
+  config: {
+    base: {
+      tabs: [],
+      tabs__tablist: [
+        'flex', 'w-full', 'no-wrap',
+        'overflow-x-scroll'
+      ],
+      'tabs__nav-button': [
+        'flex', 'items-center', 'justify-center', 'flex-grow',
+        'px-4', 'py-2',
+        'font-bold', 'leading-loose', 'uppercase', 'whitespace-nowrap'
+      ],
+      'tabs__nav-button--inactive': [
+        'border-b', 'border-gray-200', 'hover:border-primary',
+        'text-gray-400'
+      ],
+      'tabs__nav-button--active': [
+        'border-b', 'border-primary',
+        'text-primary'
+      ],
+      tabs__content: [
+        'w-full',
+        'px-6', 'py-10'
+      ]
     }
   },
   computed: {
