@@ -5,9 +5,7 @@ describe('List', () => {
   it('has default structure', () => {
     const wrapper = mount(AList)
 
-    expect(wrapper.is('ul')).toBe(true)
-    expect(wrapper.classes()).toContain('a-list')
-    expect(wrapper.classes().length).toBe(1)
+    expect(wrapper.element.tagName).toBe('UL')
   })
 
   it('renders slot text when passed', () => {
@@ -17,8 +15,8 @@ describe('List', () => {
       }
     })
 
-    expect(wrapper.find('.a-list > li').exists()).toBe(true)
-    expect(wrapper.find('.a-list > li').text()).toEqual('List default text')
+    expect(wrapper.find('ul > li').exists()).toBe(true)
+    expect(wrapper.find('ul > li').text()).toEqual('List default text')
   })
 
   it('should be generated with the `ol` passed as tag', () => {
@@ -28,8 +26,7 @@ describe('List', () => {
       }
     })
 
-    expect(wrapper.is('ol')).toBe(true)
-    expect(wrapper.classes()).toContain('a-list')
+    expect(wrapper.element.tagName).toBe('OL')
     expect(wrapper.props().tag).toBe('ol')
   })
 })
