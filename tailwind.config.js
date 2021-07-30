@@ -1,9 +1,10 @@
 module.exports = {
   mode: 'jit',
-  purge: [
-    'src/**/*.vue',
-    'src/**/*.html'
-  ],
+  purge: {
+    content: [
+      './src/**/*{vue,html,js}'
+    ]
+  },
   theme: {
     extend: {
       maxWidth: {
