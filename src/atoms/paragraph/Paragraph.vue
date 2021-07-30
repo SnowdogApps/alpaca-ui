@@ -8,5 +8,3 @@ export default {
   mixins: [AParagraph]
 }
 </script>
-
-<style src="./Paragraph.css" />
