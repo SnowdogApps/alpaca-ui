@@ -1,7 +1,7 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * To use another tag instead of `div`
@@ -11,27 +11,23 @@ export default {
       default: 'div'
     }
   },
-  data () {
-    return {
-      config: {
-        base: {
-          badge: [
-            'inline-flex', 'justify-center',
-            'px-3',
-            'font-bold', 'text-xs', 'leading-snug', 'uppercase'
-          ]
-        },
-        primary: {
-          badge: [
-            'text-white', 'bg-black'
-          ]
-        },
-        secondary: {
-          badge: [
-            'text-primary', 'bg-white'
-          ]
-        }
-      }
+  config: {
+    base: {
+      badge: [
+        'inline-flex', 'justify-center',
+        'px-3',
+        'font-bold', 'text-xs', 'leading-snug', 'uppercase'
+      ]
+    },
+    primary: {
+      badge: [
+        'text-white', 'bg-black'
+      ]
+    },
+    secondary: {
+      badge: [
+        'text-primary', 'bg-white'
+      ]
     }
   }
 }

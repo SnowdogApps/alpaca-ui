@@ -1,7 +1,7 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * Text of legend
@@ -23,16 +23,12 @@ export default {
       return this.legendText.toLowerCase().replace(/ /g, '-')
     }
   },
-  data () {
-    return {
-      config: {
-        base: {
-          'fieldset-legend': [
-            'text-lg leading-relaxed',
-            { 'sr-only': this.legendHidden }
-          ]
-        }
-      }
+  config: {
+    base: {
+      'fieldset-legend': [
+        'text-lg leading-relaxed',
+        { 'sr-only': this.legendHidden }
+      ]
     }
   }
 }
