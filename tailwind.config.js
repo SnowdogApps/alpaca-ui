@@ -1,3 +1,6 @@
+var flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default
+var plugin = require('tailwindcss/plugin')
+
 module.exports = {
   mode: 'jit',
   purge: {
@@ -77,8 +80,7 @@ module.exports = {
       secondary: theme('colors.gray.500'),
       form: theme('colors.gray.200'),
       dark: theme('colors.gray.500'),
-      light: theme('colors.gray.200'),
-
+      light: theme('colors.gray.200')
     }),
     textColor: theme => ({
       ...theme('colors'),
@@ -98,6 +100,22 @@ module.exports = {
     })
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities, theme, variants }) {
+      let colors = flattenColorPalette(theme('borderColor'))
+
+      if (theme.extend && theme.extend.colors) {
+          colors = Object.assign(colors, theme.extend.colors)
+      }
+
+      const colorMap = Object.keys(colors)
+          .map(color => ({
+              [`.border-t-${color}`]: {borderTopColor: colors[color]}
+          }))
+      const utilities = Object.assign({}, ...colorMap)
+
+      addUtilities(utilities, variants('borderColor'))
+    })
+  ],
   corePlugins: {}
 }

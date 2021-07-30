@@ -1,27 +1,35 @@
-// import { select } from '@storybook/addon-knobs'
-// import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-// import selectorsConfig from './Loader.selectors.json'
+import ALoader from './Loader.vue'
 
-// import ALoader from './Loader.vue'
+export default {
+  title: 'Atoms/Loader',
+  component: ALoader,
+  argTypes: {
+    variant: {
+      control: {
+        type: 'multi-select',
+        options: [
+          'primary',
+          'small',
+          'medium',
+          'large',
+          'x-large'
+        ]
+      }
+    }
+  }
+}
 
-// const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
+const Template = (args, { argTypes }) => ({
+  components: { ALoader },
+  props: Object.keys(argTypes),
+  template: `
+    <a-loader
+      :variant="variant"
+    />
+  `
+})
 
-// export default {
-//   title: 'Atoms/Loader',
-//   component: ALoader
-// }
-
-// export const Default = () => ({
-//   components: { ALoader },
-//   props: {
-//     classKnobs: {
-//       default: select('BEM Modifier', classKnobsConfig, 'a-loader--visible')
-//     }
-//   },
-//   template: `
-//     <a-loader
-//       :class="classKnobs"
-//       aria-label="Do not refresh the page"
-//     />
-//   `
-// })
+export const Default = Template.bind({})
+Default.args = {
+  variant: ['primary', 'medium'],
+}
