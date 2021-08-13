@@ -12,13 +12,9 @@ export default {
       loader__circle: [
         'absolute', 'inset-0',
         'm-auto',
-        'border-4', 'border-transparent', 'rounded-full',
+        'border-4', 'rounded-full',
+        'border-transparent', 'border-t-secondary',
         'animate-spin'
-      ]
-    },
-    primary: {
-      loader__circle: [
-        'border-t-secondary'
       ]
     },
     small: {
