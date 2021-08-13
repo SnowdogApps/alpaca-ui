@@ -1,0 +1,29 @@
+@font-face {
+  font-weight: 700;
+  font-family: 'Frank Ruhl Libre';
+  font-style: normal;
+  src: url(/assets/fonts/FrankRuhlLibre-Bold.woff2) format('woff2'),
+    url(/assets/fonts/FrankRuhlLibre-Bold.woff) format('woff'),
+    url(/assets/fonts/FrankRuhlLibre-Bold.ttf) format('ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Public Sans';
+  font-style: normal;
+  src: url(/assets/fonts/PublicSans-Regular.woff2) format('woff2'),
+    url(/assets/fonts/PublicSans-Regular.woff) format('woff'),
+    url(/assets/fonts/PublicSans-Regular.ttf) format('ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Public Sans';
+  font-style: normal;
+  src: url(/assets/fonts/PublicSans-Bold.woff2) format('woff2'),
+    url(/assets/fonts/PublicSans-Bold.woff) format('woff'),
+    url(/assets/fonts/PublicSans-Bold.ttf) format('ttf');
+  font-display: swap;
+}
