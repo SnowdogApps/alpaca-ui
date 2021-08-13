@@ -61,8 +61,8 @@ module.exports = {
       xxl: '1600px'
     },
     fontFamily: {
-      serif: ['Playfair Display', 'serif'],
-      sans: ['Work Sans', 'sans-serif'],
+      serif: ['Frank Ruhl Libre', 'serif'],
+      sans: ['Public Sans', 'sans-serif'],
       mono: ['menlo', 'monaco', 'consolas', 'Liberation Mono', 'Courier New', 'monospace']
     },
     backgroundColor: theme => ({
