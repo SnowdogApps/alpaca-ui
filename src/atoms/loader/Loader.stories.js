@@ -31,5 +31,5 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  variant: ['primary', 'medium'],
+  variant: ['primary', 'medium']
 }
