@@ -3,24 +3,20 @@ import AButton from './Button.vue'
 export default {
   title: 'Atoms/Button',
   component: AButton,
+  args: {
+    className: ''
+  },
   argTypes: {
     variant: {
       control: {
         type: 'multi-select',
         options: [
-          'primary',
-          'secondary',
-          'fluid'
+          'secondary'
         ]
       }
     },
     onClick: {
       action: 'clicked'
-    },
-    text: {
-      control: {
-        type: 'text'
-      }
     }
   }
 }
@@ -31,6 +27,7 @@ const Template = (args, { argTypes }) => ({
   template: `
     <a-button
       :variant="variant"
+      :class="className"
       type="button"
       v-bind="$props"
       @click="onClick"
@@ -42,9 +39,10 @@ const Template = (args, { argTypes }) => ({
 
 export const Primary = Template.bind({})
 Primary.args = {
-  variant: 'primary',
+  variant: '',
   text: 'Button primary'
 }
+
 export const Secondary = Template.bind({})
 Secondary.args = {
   variant: 'secondary',
@@ -53,6 +51,7 @@ Secondary.args = {
 
 export const Fluid = Template.bind({})
 Fluid.args = {
-  variant: 'fluid',
+  variant: '',
+  className: 'w-full',
   text: 'Button fluid'
 }
