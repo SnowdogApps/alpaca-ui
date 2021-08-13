@@ -1,6 +1,15 @@
-// @vue/component
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
+
 export default {
+  mixins: [alpacaUIMixin],
   props: {
+    /**
+     * Icon id for aria-labelledby
+     */
+    id: {
+      type: String,
+      default: null
+    },
     /**
      * Icon title
      */
@@ -9,23 +18,39 @@ export default {
       default: null
     },
     /**
-     * Icon role
+     * Icon width
      */
-    role: {
+    width: {
       type: String,
-      default: 'img'
+      default: '24'
     },
     /**
-     * Icon viewBox
+     * Icon height
+     */
+    height: {
+      type: String,
+      default: '24'
+    },
+    /**
+     * Custom viewBox for icon
      */
     viewBox: {
       type: [String, Boolean],
-      default: '0 0 24 24'
+      default: false
+    }
+  },
+  config: {
+    base: {
+      icon: [
+        'block',
+        'pointer-events-none',
+        'transition-all', 'duration-200', 'ease-in-out'
+      ]
     }
   },
   computed: {
-    id () {
-      return this.title ? this.title.toLowerCase().replace(/ /g, '-') : ''
+    ariaId () {
+      return this.id || (this.title && this.title.toLowerCase().replace(/ /g, '-'))
     }
   }
 }

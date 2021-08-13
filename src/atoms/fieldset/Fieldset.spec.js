@@ -9,24 +9,18 @@ describe('Fieldset', () => {
       }
     })
 
-    expect(wrapper.is('fieldset')).toBe(true)
-    expect(wrapper.classes()).toContain('a-fieldset')
-    expect(wrapper.classes().length).toBe(1)
-    expect(wrapper.contains('legend')).toBe(true)
+    expect(wrapper.element.tagName).toBe('FIELDSET')
+    expect(wrapper.find('legend').exists()).toBe(true)
     expect(wrapper.find('legend').text()).toEqual('Legend text')
   })
 
   it('renders legend with custom class', () => {
     const wrapper = mount(AFieldset, {
       propsData: {
-        legendText: 'Legend text',
-        legendClass: 'custom-class'
+        legendText: 'Legend text'
       }
     })
-
-    expect(wrapper.props().legendClass).toBe('custom-class')
-    expect(wrapper.find('.a-fieldset > legend').classes()).toContain('custom-class')
-    expect(wrapper.find('.a-fieldset > legend').classes().length).toBe(2)
+    expect(wrapper.find('legend').text()).toEqual('Legend text')
   })
 
   it('renders slot text when passed', () => {
@@ -39,7 +33,7 @@ describe('Fieldset', () => {
       }
     })
 
-    expect(wrapper.find('.a-fieldset').exists()).toBe(true)
-    expect(wrapper.find('.a-fieldset > span').text()).toEqual('Fieldset content')
+    expect(wrapper.find('fieldset').exists()).toBe(true)
+    expect(wrapper.find('fieldset > span').text()).toEqual('Fieldset content')
   })
 })

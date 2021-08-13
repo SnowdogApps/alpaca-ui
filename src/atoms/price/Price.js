@@ -1,5 +1,7 @@
-// @vue/component
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
+
 export default {
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * Regular price value
@@ -28,20 +30,20 @@ export default {
     ariaLabelOldPrice: {
       type: String,
       default: null
-    },
-    /**
-     * Special price item custom class
-     */
-    specialPriceCustomClass: {
-      type: String,
-      default: null
-    },
-    /**
-     * Old price item custom class
-     */
-    oldPriceCustomClass: {
-      type: String,
-      default: null
+    }
+  },
+  config: {
+    base: {
+      price: [
+        'text-lg', 'font-bold'
+      ],
+      price__old: [
+        'mr-3',
+        'text-xs', 'md:text-sm', 'font-normal', 'text-gray-500', 'line-through'
+      ],
+      price__special: [
+        'text-red-300', 'no-underline'
+      ]
     }
   }
 }

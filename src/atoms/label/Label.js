@@ -1,12 +1,22 @@
-// @vue/component
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
+
 export default {
-  props: {
-    /**
-     * Label tag
-     */
-    tag: {
-      type: String,
-      default: 'label'
+  mixins: [alpacaUIMixin],
+  config: {
+    base: {
+      label: [
+        'leading-relaxed'
+      ]
+    },
+    primary: {
+      label: [
+        'text-gray-400'
+      ]
+    },
+    hidden: {
+      label: [
+        'sr-only'
+      ]
     }
   }
 }

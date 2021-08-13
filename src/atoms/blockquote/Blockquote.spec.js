@@ -5,9 +5,7 @@ describe('Blockquote', () => {
   it('has default structure', () => {
     const wrapper = mount(ABlockquote)
 
-    expect(wrapper.is('blockquote')).toBe(true)
-    expect(wrapper.classes()).toContain('a-blockquote')
-    expect(wrapper.classes().length).toBe(1)
+    expect(wrapper.element.tagName).toBe('BLOCKQUOTE')
   })
 
   it('renders slot text when passed', () => {
@@ -17,7 +15,7 @@ describe('Blockquote', () => {
       }
     })
 
-    expect(wrapper.find('.a-blockquote').exists()).toBe(true)
-    expect(wrapper.find('.a-blockquote').text()).toEqual('Blockquote content')
+    expect(wrapper.find('blockquote').exists()).toBe(true)
+    expect(wrapper.find('blockquote').text()).toEqual('Blockquote content')
   })
 })

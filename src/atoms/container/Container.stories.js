@@ -1,36 +1,32 @@
-import { storiesOf } from '@storybook/vue'
-import { text } from '@storybook/addon-knobs'
-
 import AContainer from './Container.vue'
 
-storiesOf('Atoms/Container', module)
-  .addParameters({ info: true })
-  .add('Default', () => ({
-    components: { AContainer },
-    props: {
-      contentKnob: {
-        default: text('Container content', 'Container')
+export default {
+  title: 'Atoms/Container',
+  component: AContainer,
+  argTypes: {
+    text: {
+      control: {
+        type: 'text'
       }
     },
-    template: `
-      <a-container>
-        {{ contentKnob }}
-      </a-container>
-    `
-  }))
-  .add('Custom tag', () => ({
-    components: { AContainer },
-    props: {
-      contentKnob: {
-        default: text('Container content', 'Container')
-      },
-      tagKnob: {
-        default: text('Html tag', 'div')
+    tag: {
+      control: {
+        type: 'text'
       }
-    },
-    template: `
-      <a-container :tag="tagKnob">
-        {{ contentKnob }}
-      </a-container>
-    `
-  }))
+    }
+  }
+}
+
+const Template = (args, { argTypes }) => ({
+  components: { AContainer },
+  props: Object.keys(argTypes),
+  template: `
+    <a-container :tag="tag">
+      {{ text }}
+    </a-container>
+  `
+})
+export const Default = Template.bind({})
+Default.args = {
+  text: 'Container content'
+}

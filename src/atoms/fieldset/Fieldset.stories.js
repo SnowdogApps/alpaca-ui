@@ -1,20 +1,32 @@
-import { storiesOf } from '@storybook/vue'
-import { text } from '@storybook/addon-knobs'
-
 import AFieldset from './Fieldset.vue'
 
-storiesOf('Atoms/Fieldset', module)
-  .addParameters({ info: 'Check **Knobs** tab to edit component properties dynamically.' })
-  .add('Default', () => ({
-    components: { AFieldset },
-    props: {
-      legendKnobs: {
-        default: text('Legend', 'Legend text')
+export default {
+  title: 'Atoms/Fieldset',
+  component: AFieldset,
+  argTypes: {
+    legendHidden: {
+      control: {
+        type: 'boolean',
+        default: false
       }
-    },
-    template: `
-      <a-fieldset :legend-text="legendKnobs">
-        <span>Fieldset content</span>
-      </a-fieldset>
-    `
-  }))
+    }
+  }
+}
+
+const Template = (args, { argTypes }) => ({
+  components: { AFieldset },
+  props: Object.keys(argTypes),
+  template: `
+    <a-fieldset
+      :legend-text="legendText"
+      :legend-hidden="legendHidden"
+    >
+      Fieldset content
+    </a-fieldset>
+  `
+})
+
+export const Default = Template.bind({})
+Default.args = {
+  legendText: 'Fieldset title'
+}

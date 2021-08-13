@@ -5,9 +5,7 @@ describe('Container', () => {
   it('has default structure', () => {
     const wrapper = mount(AContainer)
 
-    expect(wrapper.is('main')).toBe(true)
-    expect(wrapper.classes()).toContain('a-container')
-    expect(wrapper.classes().length).toBe(1)
+    expect(wrapper.element.tagName).toBe('MAIN')
   })
 
   it('renders custom root element', () => {
@@ -17,9 +15,7 @@ describe('Container', () => {
       }
     })
 
-    expect(wrapper.is('div')).toBe(true)
-    expect(wrapper.classes()).toContain('a-container')
-    expect(wrapper.classes().length).toBe(1)
+    expect(wrapper.element.tagName).toBe('DIV')
   })
 
   it('renders slot text when passed', () => {
@@ -29,7 +25,7 @@ describe('Container', () => {
       }
     })
 
-    expect(wrapper.find('.a-container').exists()).toBe(true)
-    expect(wrapper.find('.a-container').text()).toEqual('Container')
+    expect(wrapper.find('main').exists()).toBe(true)
+    expect(wrapper.find('main').text()).toEqual('Container')
   })
 })
