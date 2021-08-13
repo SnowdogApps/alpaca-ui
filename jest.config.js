@@ -14,7 +14,7 @@ module.exports = {
   testMatch: ['<rootDir>/src/**/?(*.)+(spec|test).(ts|tsx|mjs|js|jsx)'],
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
-    '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
+    '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
   },
   collectCoverage: true,
   coverageDirectory: './coverage/',
