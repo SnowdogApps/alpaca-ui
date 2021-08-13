@@ -1,7 +1,10 @@
-<div :class="getClass('tabs')">
+<div>
   <div
     role="tablist"
-    :class="getClass('tabs__tablist')"
+    class="
+      flex w-full no-wrap
+      overflow-x-scroll
+    "
   >
     <button
       v-for="(tab, i) in tabs"
@@ -14,8 +17,18 @@
       role="tab"
       :ref="`button_${i}`"
       :class="[
-        getClass('tabs__nav-button'),
-        tab.isActive ? getClass('tabs__nav-button--active') : getClass('tabs__nav-button--inactive')
+        'flex', 'items-center', 'justify-center', 'flex-grow',
+        'px-4', 'py-2',
+        'text-sm', 'font-bold', 'leading-loose', 'uppercase', 'whitespace-nowrap',
+        tab.isActive ?
+        [
+          'border-b', 'border-secondary',
+          'text-primary'
+        ] :
+        [
+          'border-b', 'border-gray-100',
+          'text-gray-400', 'hover:text-primary'
+        ]
       ]"
       :tabindex="!tab.isActive && -1"
       @click="selectTab(tab)"
@@ -31,7 +44,10 @@
     </button>
   </div>
   <div
-    :class="getClass('tabs__content')"
+    class="
+      w-full
+      px-6 py-10
+    "
     tabindex="0"
   >
     <!-- @slot Tab components -->

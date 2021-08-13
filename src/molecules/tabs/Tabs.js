@@ -1,37 +1,8 @@
-import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
-
 export default {
-  mixins: [alpacaUIMixin],
   data () {
     return {
       tabs: null,
       activeFocusedTab: 0
-    }
-  },
-  config: {
-    base: {
-      tabs: [],
-      tabs__tablist: [
-        'flex', 'w-full', 'no-wrap',
-        'overflow-x-scroll'
-      ],
-      'tabs__nav-button': [
-        'flex', 'items-center', 'justify-center', 'flex-grow',
-        'px-4', 'py-2',
-        'font-bold', 'leading-loose', 'uppercase', 'whitespace-nowrap'
-      ],
-      'tabs__nav-button--inactive': [
-        'border-b', 'border-gray-100', 'hover:border-primary',
-        'text-gray-200'
-      ],
-      'tabs__nav-button--active': [
-        'border-b', 'border-secondary',
-        'text-primary'
-      ],
-      tabs__content: [
-        'w-full',
-        'px-6', 'py-10'
-      ]
     }
   },
   computed: {
