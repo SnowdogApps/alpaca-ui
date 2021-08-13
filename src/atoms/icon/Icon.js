@@ -1,7 +1,4 @@
-import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
-
 export default {
-  mixins: [alpacaUIMixin],
   props: {
     /**
      * Icon id for aria-labelledby
@@ -37,15 +34,6 @@ export default {
     viewBox: {
       type: [String, Boolean],
       default: false
-    }
-  },
-  config: {
-    base: {
-      icon: [
-        'block',
-        'pointer-events-none',
-        'transition-all', 'duration-200', 'ease-in-out'
-      ]
     }
   },
   computed: {

@@ -6,7 +6,11 @@
   :aria-labelledby="ariaId"
   :role="title ? 'img' : 'presentation'"
   :focusable="title ? null : 'false'"
-  :class="getClass('icon')"
+  class="
+    block
+    pointer-events-none
+    transition-all duration-200 ease-in-out
+  "
 >
   <title
     v-if="title"

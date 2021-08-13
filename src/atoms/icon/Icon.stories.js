@@ -91,341 +91,725 @@ const Template = () => ({
     AIconOk,
     AIconError
   },
-  mixins: [alpacaUIMixin],
-  config: {
-    base: {
-      'icon-grid': [
-        'flex', 'flex-wrap'
-      ],
-      'icon-grid__item': [
-        'flex', 'flex-col', 'items-center',
-        'm-5', 'w-24'
-      ],
-      'icon-grid__item-label': [
-        'mt-5',
-        'text-center'
-      ]
-    }
-  },
   template: `
-    <div :class="getClass('icon-grid')">
-      <div :class="getClass('icon-grid__item')">
+    <div class="flex flex-wrap">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Arrow Left icon">
           <a-icon-arrow-left />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           arrow_left
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Arrow Right icon">
           <a-icon-arrow-right />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           arrow_right
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Add icon">
           <a-icon-add />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           add
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Remove icon">
           <a-icon-remove />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           remove
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Check icon">
           <a-icon-check />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           check
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Close icon">
           <a-icon-close />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           close
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Delete icon">
           <a-icon-delete />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           delete
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Equalizer icon">
           <a-icon-equalizer />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           equalizer
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Expand more icon">
           <a-icon-expand-more />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           expand_more
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Expand less icon">
           <a-icon-expand-less />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           expand_less
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Angle left">
           <a-icon-angle-left />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           angle_left
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Angle right">
           <a-icon-angle-right />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           angle_right
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Account icon">
           <a-icon-person />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           person
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Search icon">
           <a-icon-search />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           search
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Favorite icon">
           <a-icon-favorite />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           favorite
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Favorite border icon">
           <a-icon-favorite-border />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           favorite_border
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
       <a-icon title="Compare icon">
           <a-icon-compare />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           favorite_border
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Star icon">
           <a-icon-star />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           star
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Star border icon">
           <a-icon-star-border />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           star_border
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Grid icon">
           <a-icon-grid />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           grid
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="List icon">
           <a-icon-list />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           list
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Shopping cart icon">
           <a-icon-shopping-cart />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           shooping_cart
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Edit icon">
           <a-icon-edit />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           edit
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Share icon">
           <a-icon-share />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           share
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Phone icon">
           <a-icon-phone />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           phone
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Envelope icon">
           <a-icon-envelope />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           envelope
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Mobile menu icon">
           <a-icon-mobile-menu />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           mobile menu
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Visibility icon">
             <a-icon-visibility />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           visibility
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Visibility off icon">
           <a-icon-visibility-off />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           visibility
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Unchecked icon">
           <a-icon-unchecked />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           unchecked
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Checked icon">
           <a-icon-checked />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           checked
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Youtube icon">
           <a-icon-youtube />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           youtube
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Facebook icon">
           <a-icon-facebook />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           facebook
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Twitter icon">
           <a-icon-twitter />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           twitter
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Thumb up icon">
           <a-icon-thumb-up />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           thumb_up
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Thumb down icon">
           <a-icon-thumb-down />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           thumb_down
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="More icon">
           <a-icon-more />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           more
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Attention icon">
           <a-icon-attention />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           attention
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Ok icon">
           <a-icon-ok />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           ok
         </span>
       </div>
-      <div :class="getClass('icon-grid__item')">
+      <div
+        class="
+          flex flex-col items-center
+          m-5 w-24
+        "
+      >
         <a-icon title="Error icon">
           <a-icon-error />
         </a-icon>
-        <span :class="getClass('icon-grid__item-label')">
+        <span
+          class="
+            mt-5
+            text-center
+          "
+        >
           error
         </span>
       </div>
