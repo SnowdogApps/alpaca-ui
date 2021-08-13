@@ -1,13 +1,10 @@
 <fieldset
-  class="a-fieldset"
   :aria-labelledby="`legend-${id}`"
+  :class="getClass('fieldset')"
 >
   <legend
     :id="`legend-${id}`"
-    :class="[
-      legendClass,
-      'a-fieldset__legend'
-    ]"
+    :class="getClass('fieldset__legend')"
   >
     {{ legendText }}
   </legend>

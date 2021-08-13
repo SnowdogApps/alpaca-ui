@@ -1,8 +1,0 @@
-// Global styles to remove focus for mouse events
-.js-focus-visible :focus:not([data-focus-visible-added]) {
-  outline: none;
-}
-
-.js-focus-visible .focus-visible {
-  @include focus();
-}

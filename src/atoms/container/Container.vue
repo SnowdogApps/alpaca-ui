@@ -8,5 +8,3 @@ export default {
   mixins: [AContainer]
 }
 </script>
-
-<style src="./Container.css" />

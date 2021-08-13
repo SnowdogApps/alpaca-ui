@@ -8,5 +8,3 @@ export default {
   mixins: [ABlockquote]
 }
 </script>
-
-<style src="./Blockquote.css" />

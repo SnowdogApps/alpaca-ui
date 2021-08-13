@@ -8,5 +8,3 @@ export default {
   mixins: [ALoader]
 }
 </script>
-
-<style src="./Loader.css" />

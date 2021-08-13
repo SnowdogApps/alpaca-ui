@@ -1,53 +1,32 @@
-import { select, text } from '@storybook/addon-knobs'
-
-import getClassKnobsConfig from '@utils/helpers/get-class-knobs-config.js'
-import selectorsConfig from './Fieldset.selectors.json'
-
 import AFieldset from './Fieldset.vue'
-
-const classKnobsConfig = getClassKnobsConfig(selectorsConfig)
 
 export default {
   title: 'Atoms/Fieldset',
-  component: AFieldset
+  component: AFieldset,
+  argTypes: {
+    legendHidden: {
+      control: {
+        type: 'boolean',
+        default: false
+      }
+    }
+  }
 }
 
-export const Default = () => ({
+const Template = (args, { argTypes }) => ({
   components: { AFieldset },
-  props: {
-    legendKnobs: {
-      default: text('Legend', 'Legend text')
-    },
-    classKnob: {
-      default: select('BEM Modifier', classKnobsConfig)
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
     <a-fieldset
-      :legend-text="legendKnobs"
-      :legendClass="classKnob"
+      :legend-text="legendText"
+      :legend-hidden="legendHidden"
     >
-      <span>Fieldset content</span>
+      Fieldset content
     </a-fieldset>
   `
 })
 
-export const LegendHidden = () => ({
-  components: { AFieldset },
-  props: {
-    legendKnobs: {
-      default: text('Legend', 'Legend text')
-    },
-    classKnob: {
-      default: select('BEM Modifier', classKnobsConfig, 'a-fieldset__legend--hidden')
-    }
-  },
-  template: `
-    <a-fieldset
-      :legend-text="legendKnobs"
-      :legendClass="classKnob"
-    >
-      <span>Fieldset content</span>
-    </a-fieldset>
-  `
-})
+export const Default = Template.bind({})
+Default.args = {
+  legendText: 'Fieldset title'
+}

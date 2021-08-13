@@ -1,7 +1,7 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * Icon id for aria-labelledby
@@ -39,17 +39,13 @@ export default {
       default: false
     }
   },
-  data () {
-    return {
-      config: {
-        base: {
-          icon: [
-            'block',
-            'pointer-events-none',
-            'transition-all', 'duration-200', 'ease-in-out'
-          ]
-        }
-      }
+  config: {
+    base: {
+      icon: [
+        'block',
+        'pointer-events-none',
+        'transition-all', 'duration-200', 'ease-in-out'
+      ]
     }
   },
   computed: {

@@ -20,7 +20,7 @@ export default {
       let variantStyles
       let classes = []
 
-      if (baseStyles) {
+      if (baseStyles && baseStyles[el]) {
         classes = [...baseStyles[el]]
       }
 

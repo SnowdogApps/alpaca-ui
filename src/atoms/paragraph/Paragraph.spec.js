@@ -6,8 +6,6 @@ describe('Paragraph', () => {
     const wrapper = mount(AParagraph)
 
     expect(wrapper.element.tagName).toBe('P')
-    expect(wrapper.classes()).toContain('a-paragraph')
-    expect(wrapper.classes().length).toBe(1)
   })
 
   it('renders custom root element', () => {
@@ -18,8 +16,6 @@ describe('Paragraph', () => {
     })
 
     expect(wrapper.element.tagName).toBe('SPAN')
-    expect(wrapper.classes()).toContain('a-paragraph')
-    expect(wrapper.classes().length).toBe(1)
   })
 
   it('renders slot text when passed', () => {

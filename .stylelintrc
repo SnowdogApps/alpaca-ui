@@ -4,7 +4,19 @@
     "stylelint-config-rational-order"
   ],
   "rules": {
-    "at-rule-no-unknown": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: [
+          'tailwind',
+          'apply',
+          'variants',
+          'responsive',
+          'screen',
+        ]
+      }
+    ],
+    "declaration-block-trailing-semicolon": null,
     "no-descending-specificity": null,
     "block-no-empty": null,
     "color-no-invalid-hex": true,
