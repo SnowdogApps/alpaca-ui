@@ -26,8 +26,12 @@ export default {
   config: {
     base: {
       fieldset__legend: [
-        'text-lg leading-relaxed',
-        { 'sr-only': this.legendHidden }
+        'text-lg leading-relaxed'
+      ]
+    },
+    hidden: {
+      fieldset__legend: [
+        'sr-only' // should be added when legendHidden = true
       ]
     }
   }
