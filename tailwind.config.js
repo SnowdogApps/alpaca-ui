@@ -77,7 +77,7 @@ module.exports = {
       secondary: theme('colors.gray.500'),
       form: theme('colors.gray.200'),
       dark: theme('colors.gray.500'),
-      light: theme('colors.gray.200')
+      light: theme('colors.gray.100')
     }),
     textColor: theme => ({
       ...theme('colors'),

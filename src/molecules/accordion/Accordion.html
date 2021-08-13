@@ -1,4 +1,4 @@
-<div class="a-collapse">
+<div>
   <!-- @slot Custom button slots (Scoped slot) -->
   <slot
     name="button"
@@ -6,29 +6,38 @@
     :visibility="visibility"
     :ariaControls="ariaControls"
   >
-    <a-button
-      class="a-collapse__button a-button--blank"
+    <button
+      :class="[
+        'relative',
+        'w-full',
+        'hover:bg-gray-100',
+        'border-t', !visibility && 'border-b', 'border-light',
+        'py-4', 'pl-2', 'pr-16',
+        'text-lg', 'text-left', 'font-bold',
+      ]"
       :aria-controls="visibility && ariaControls"
-      @click.native="toggle"
+      @click="toggle"
       :aria-expanded="visibility"
     >
       {{ title }}
       <a-icon
-        :title="iconTitle"
-        class="a-collapse__icon"
+        :class="[
+          'absolute', 'top-0', 'right-3',
+          'h-full',
+          'm-auto',
+          visibility && ['transform', 'rotate-180']
+        ]"
       >
         <a-icon-expand-more />
       </a-icon>
-    </a-button>
+    </button>
   </slot>
-  <a-transition-expand>
-    <div
-      v-show="visibility"
-      :id="ariaControls"
-      class="a-collapse__content"
-    >
-      <!-- @slot Default content-->
-      <slot />
-    </div>
-  </a-transition-expand>
+  <div
+    v-show="visibility"
+    :id="ariaControls"
+    class="px-2 mt-10"
+  >
+    <!-- @slot Default content-->
+    <slot />
+  </div>
 </div>

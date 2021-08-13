@@ -1,17 +1,9 @@
-// @vue/component
 export default {
   props: {
     /**
      * Title
      */
     title: {
-      type: String,
-      default: null
-    },
-    /**
-     * Icon title
-     */
-    iconTitle: {
       type: String,
       default: null
     },
