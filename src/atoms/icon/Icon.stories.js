@@ -40,7 +40,7 @@ import AIconAttention from './templates/IconAttention.vue'
 import AIconOk from './templates/IconOk.vue'
 import AIconError from './templates/IconError.vue'
 
-import getClass from '@utils/helpers/get-class.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
   title: 'Atoms/Icon',
@@ -91,24 +91,22 @@ const Template = () => ({
     AIconOk,
     AIconError
   },
-  mixins: [getClass],
-  data: () => ({
-    config: {
-      base: {
-        'icon-grid': [
-          'flex', 'flex-wrap'
-        ],
-        'icon-grid__item': [
-          'flex', 'flex-col', 'items-center',
-          'm-5', 'w-24'
-        ],
-        'icon-grid__item-label': [
-          'mt-5',
-          'text-center'
-        ]
-      }
+  mixins: [alpacaUIMixin],
+  config: {
+    base: {
+      'icon-grid': [
+        'flex', 'flex-wrap'
+      ],
+      'icon-grid__item': [
+        'flex', 'flex-col', 'items-center',
+        'm-5', 'w-24'
+      ],
+      'icon-grid__item-label': [
+        'mt-5',
+        'text-center'
+      ]
     }
-  }),
+  },
   template: `
     <div :class="getClass('icon-grid')">
       <div :class="getClass('icon-grid__item')">

@@ -1,39 +1,32 @@
-import { text } from '@storybook/addon-knobs'
-
 import AContainer from './Container.vue'
 
 export default {
   title: 'Atoms/Container',
-  component: AContainer
+  component: AContainer,
+  argTypes: {
+    text: {
+      control: {
+        type: 'text'
+      }
+    },
+    tag: {
+      control: {
+        type: 'text'
+      }
+    }
+  }
 }
 
-export const Default = () => ({
+const Template = (args, { argTypes }) => ({
   components: { AContainer },
-  props: {
-    contentKnob: {
-      default: text('Container content', 'Container')
-    }
-  },
+  props: Object.keys(argTypes),
   template: `
-    <a-container>
-      {{ contentKnob }}
+    <a-container :tag="tag">
+      {{ text }}
     </a-container>
   `
 })
-
-export const CustomTag = () => ({
-  components: { AContainer },
-  props: {
-    contentKnob: {
-      default: text('Container content', 'Container')
-    },
-    tagKnob: {
-      default: text('Html tag', 'div')
-    }
-  },
-  template: `
-    <a-container :tag="tagKnob">
-      {{ contentKnob }}
-    </a-container>
-  `
-})
+export const Default = Template.bind({})
+Default.args = {
+  text: 'Container content'
+}

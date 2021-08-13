@@ -3,7 +3,7 @@
   <slot name="oldPrice">
     <del
       v-if="specialPrice && regularPrice"
-      :aria-label="`${this.ariaLabelOldPrice} ${this.regularPrice}`"
+      :aria-label="`${ariaLabelOldPrice} ${regularPrice}`"
       :class="getClass('price__old')"
     >
       {{ regularPrice }}
@@ -13,7 +13,7 @@
   <slot name="specialPrice">
     <ins
       v-if="specialPrice"
-      :aria-label="`${this.ariaLabelSpecialPrice} ${this.specialPrice}`"
+      :aria-label="`${ariaLabelSpecialPrice} ${specialPrice}`"
       :class="getClass('price__special')"
     >
       {{ specialPrice }}

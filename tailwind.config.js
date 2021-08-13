@@ -1,7 +1,10 @@
 module.exports = {
-  purge: [
-    'src/**/*.vue'
-  ],
+  mode: 'jit',
+  purge: {
+    content: [
+      './src/**/*{vue,html,js}'
+    ]
+  },
   theme: {
     extend: {
       maxWidth: {
@@ -74,8 +77,7 @@ module.exports = {
       secondary: theme('colors.gray.500'),
       form: theme('colors.gray.200'),
       dark: theme('colors.gray.500'),
-      light: theme('colors.gray.200'),
-
+      light: theme('colors.gray.200')
     }),
     textColor: theme => ({
       ...theme('colors'),
@@ -83,7 +85,7 @@ module.exports = {
       secondary: theme('colors.gray.400')
     }),
     placeholderColor: theme => ({
-      primary: theme('colors.gray.400'),
+      primary: theme('colors.gray.400')
     }),
     fill: theme => ({
       ...theme('colors'),

@@ -1,26 +1,22 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
-  data () {
-    return {
-      config: {
-        base: {
-          label: [
-            'leading-relaxed'
-          ]
-        },
-        primary: {
-          label: [
-            'text-gray-400'
-          ]
-        },
-        hidden: {
-          label: [
-            'sr-only'
-          ]
-        }
-      }
+  mixins: [alpacaUIMixin],
+  config: {
+    base: {
+      label: [
+        'leading-relaxed'
+      ]
+    },
+    primary: {
+      label: [
+        'text-gray-400'
+      ]
+    },
+    hidden: {
+      label: [
+        'sr-only'
+      ]
     }
   }
 }

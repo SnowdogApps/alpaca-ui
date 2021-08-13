@@ -1,7 +1,7 @@
-import getClass from '../../../utils/helpers/get-class.js'
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
 
 export default {
-  mixins: [getClass],
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * Regular price value
@@ -32,22 +32,18 @@ export default {
       default: null
     }
   },
-  data () {
-    return {
-      config: {
-        base: {
-          price: [
-            'text-lg', 'font-bold'
-          ],
-          price__old: [
-            'mr-3',
-            'text-xs', 'md:text-sm', 'font-normal', 'text-gray-500', 'line-through'
-          ],
-          price__special: [
-            'text-red', 'no-underline'
-          ]
-        }
-      }
+  config: {
+    base: {
+      price: [
+        'text-lg', 'font-bold'
+      ],
+      price__old: [
+        'mr-3',
+        'text-xs', 'md:text-sm', 'font-normal', 'text-gray-500', 'line-through'
+      ],
+      price__special: [
+        'text-red-300', 'no-underline'
+      ]
     }
   }
 }

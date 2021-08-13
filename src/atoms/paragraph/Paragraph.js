@@ -1,5 +1,7 @@
-// @vue/component
+import alpacaUIMixin from '../../../utils/helpers/alpaca-ui.js'
+
 export default {
+  mixins: [alpacaUIMixin],
   props: {
     /**
      * To use another tag instead of `p`
@@ -7,6 +9,18 @@ export default {
     tag: {
       type: String,
       default: 'p'
+    }
+  },
+  config: {
+    base: {
+      paragraph: [
+        'leading-loose'
+      ]
+    },
+    primary: {
+      paragraph: [
+        'text-primary'
+      ]
     }
   }
 }

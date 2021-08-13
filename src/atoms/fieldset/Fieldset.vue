@@ -8,5 +8,3 @@ export default {
   mixins: [AFieldset]
 }
 </script>
-
-<style src="./Fieldset.css" />
