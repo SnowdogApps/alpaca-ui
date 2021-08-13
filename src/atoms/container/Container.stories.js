@@ -30,9 +30,3 @@ export const Default = Template.bind({})
 Default.args = {
   text: 'Container content'
 }
-
-export const Custom = Template.bind({})
-Custom.args = {
-  text: 'Container content',
-  tag: 'div'
-}

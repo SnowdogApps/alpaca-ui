@@ -25,7 +25,7 @@ export default {
   },
   config: {
     base: {
-      'fieldset-legend': [
+      fieldset__legend: [
         'text-lg leading-relaxed',
         { 'sr-only': this.legendHidden }
       ]

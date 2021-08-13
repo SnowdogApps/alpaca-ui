@@ -21,7 +21,7 @@ const Template = (args, { argTypes }) => ({
       :legend-text="legendText"
       :legend-hidden="legendHidden"
     >
-      <div>Fieldset content</div>
+      Fieldset content
     </a-fieldset>
   `
 })
