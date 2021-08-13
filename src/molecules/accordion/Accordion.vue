@@ -1,4 +1,4 @@
-<template src="./Collapse.html" />
+<template src="./Accordion.html" />
 
 <script>
 import AIcon from '../../atoms/icon/Icon.vue'
@@ -6,18 +6,16 @@ import AIconExpandMore from '../../atoms/icon/templates/IconExpandMore.vue'
 import AButton from '../../atoms/button/Button.vue'
 import ATransitionExpand from '../../atoms/transition-expand/TransitionExpand.vue'
 
-import ACollapse from './Collapse.js'
+import AAccordion from './Accordion.js'
 
 export default {
-  name: 'AlpacaCollapse',
+  name: 'AlpacaAccordion',
   components: {
     AIcon,
     ATransitionExpand,
     AButton,
     AIconExpandMore
   },
-  mixins: [ACollapse]
+  mixins: [AAccordion]
 }
 </script>
-
-<style lang="scss" src="./Collapse.scss" />

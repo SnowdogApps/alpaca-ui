@@ -1,33 +1,33 @@
 import { storiesOf } from '@storybook/vue'
 import { text } from '@storybook/addon-knobs'
 
-import ACollapse from './Collapse.vue'
+import AAccordion from './Accordion.vue'
 
-storiesOf('Molecules/Collapse', module)
+storiesOf('Molecules/Accordion', module)
   .addParameters({ info: true })
   .add(
     'Default',
     () => ({
       components: {
-        ACollapse
+        AAccordion
       },
       props: {
         titleTextKnobs: {
-          default: text('Title', 'Collapse title text')
+          default: text('Title', 'Accordion title text')
         },
         contentTextKnobs: {
-          default: text('Content', 'Collapse content text')
+          default: text('Content', 'Accordion content text')
         }
       },
       template: `
-        <a-collapse
+        <a-accordion
           :title="titleTextKnobs"
           icon-title="Angle down icon"
         >
           <div style="padding: 16px 0;">
             {{ contentTextKnobs }}
           </div>
-        </a-collapse>
+        </a-accordion>
       `
     })
   )
@@ -35,13 +35,13 @@ storiesOf('Molecules/Collapse', module)
     'With slots',
     () => ({
       components: {
-        ACollapse
+        AAccordion
       },
       template: `
-        <a-collapse>
+        <a-accordion>
           <template #button="button">
             <button
-              :aria-expanded="!button.collapseLocal"
+              :aria-expanded="!button.AccordionLocal"
               :aria-controls="button.ariaControls"
               style="
                 width: 100%;
@@ -58,7 +58,7 @@ storiesOf('Molecules/Collapse', module)
             </button>
           </template>
           <div>Content</div>
-        </a-collapse>
+        </a-accordion>
       `
     })
   )
