@@ -1,0 +1,56 @@
+<div>
+  <div
+    role="tablist"
+    class="
+      flex w-full no-wrap
+      overflow-x-scroll
+    "
+  >
+    <button
+      v-for="(tab, i) in tabs"
+      :key="`${tab.id}-tab-trigger`"
+      :id="`${tab.id}-tab-trigger`"
+      :aria-controls="`${tab.id}-tab`"
+      :aria-selected="`${tab.isActive}`"
+      :aria-expanded="`${tab.isActive}`"
+      type="button"
+      role="tab"
+      :ref="`button_${i}`"
+      :class="[
+        'flex', 'items-center', 'justify-center', 'flex-grow',
+        'px-4', 'py-2',
+        'text-sm', 'font-bold', 'leading-loose', 'uppercase', 'whitespace-nowrap',
+        tab.isActive ?
+        [
+          'border-b', 'border-secondary',
+          'text-primary'
+        ] :
+        [
+          'border-b', 'border-gray-100',
+          'text-gray-400', 'hover:text-primary'
+        ]
+      ]"
+      :tabindex="!tab.isActive && -1"
+      @click="selectTab(tab)"
+      @keydown="onKeydown"
+    >
+      <!-- @slot Custom tab button content (Scoped slot) -->
+      <slot
+        name="button"
+        :tab="tab"
+      >
+        {{ tab.name }}
+      </slot>
+    </button>
+  </div>
+  <div
+    class="
+      w-full
+      px-6 py-10
+    "
+    tabindex="0"
+  >
+    <!-- @slot Tab components -->
+    <slot />
+  </div>
+</div>

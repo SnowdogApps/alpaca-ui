@@ -36,6 +36,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^7.14.0",
+    "lodash.merge": "^4.6.2",
     "postcss": "^8.3.6",
     "stylelint": "^13.13.1",
     "stylelint-config-rational-order": "^0.1.2",

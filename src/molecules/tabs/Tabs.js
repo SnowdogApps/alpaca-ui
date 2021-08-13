@@ -1,0 +1,58 @@
+export default {
+  data () {
+    return {
+      tabs: null,
+      activeFocusedTab: 0
+    }
+  },
+  computed: {
+    tabsChildren () {
+      return this.$children.filter(child => {
+        return child.$el.dataset.tab
+      })
+    }
+  },
+  mounted () {
+    this.tabs = this.tabsChildren
+  },
+  methods: {
+    selectTab (selectedTab) {
+      this.$emit('click', selectedTab.name)
+      this.tabs.forEach((tab, index) => {
+        if (selectedTab === this.activeFocusedTab) {
+          tab.isActive = tab.name === this.tabs[this.activeFocusedTab].name
+        } else if (tab.name === selectedTab.name) {
+          tab.isActive = true
+          this.activeFocusedTab = index
+        } else {
+          tab.isActive = false
+        }
+      })
+    },
+    focus (el) {
+      this.$refs[el][0].focus()
+    },
+    onKeydown (e) {
+      const key = e.key
+      const tabsCount = this.tabs.length
+
+      if (key === 'ArrowRight' || key === 'ArrowDown') {
+        this.activeFocusedTab = (this.activeFocusedTab + 1) % tabsCount
+        this.selectTab(this.activeFocusedTab)
+        this.focus(`button_${this.activeFocusedTab}`)
+      } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+        this.activeFocusedTab = (this.activeFocusedTab - 1 + tabsCount) % tabsCount
+        this.selectTab(this.activeFocusedTab)
+        this.focus(`button_${this.activeFocusedTab}`)
+      } else if (key === 'Home') {
+        this.activeFocusedTab = 0
+        this.selectTab(this.activeFocusedTab)
+        this.focus(`button_${this.activeFocusedTab}`)
+      } else if (key === 'End') {
+        this.activeFocusedTab = tabsCount - 1
+        this.selectTab(this.activeFocusedTab)
+        this.focus(`button_${this.activeFocusedTab}`)
+      }
+    }
+  }
+}
