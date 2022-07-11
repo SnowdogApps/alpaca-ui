@@ -1,5 +1,5 @@
-import { defineConfig } from "histoire";
+import { defineConfig } from 'histoire'
 
 export default defineConfig({
-  setupFile: "histoire.setup.ts",
-});
+  setupFile: 'histoire.setup.ts',
+})
