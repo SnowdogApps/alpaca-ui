@@ -1,15 +1,15 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   color: {
     type: String,
     default: null,
   },
-});
+})
 </script>
 
 <template>
   <button
-    class="px-6 py-3 rounded-md"
+    class="rounded-md px-6 py-3"
     :class="{
       'bg-gray-200': color == null,
       'bg-green-200': color === 'green',

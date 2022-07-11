@@ -1,6 +1,6 @@
-<script setup>
-import { hstEvent } from "histoire/client";
-import AButton from "./AButton.vue";
+<script setup lang="ts">
+import { hstEvent } from 'histoire/client'
+import AButton from './AButton.vue'
 </script>
 
 <template>
