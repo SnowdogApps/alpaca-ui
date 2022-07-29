@@ -1,3 +1,3 @@
 // Vitest Snapshot v1
 
-exports[`mount component 1`] = `"<button type=\\"button\\" class=\\"inline-flex h-14 items-center justify-center px-6 font-bold uppercase transition-colors duration-200 ease-in focus:outline-focus bg-coral-300 hover:bg-coral-400 hover:text-white\\" color=\\"red\\"></button>"`;
+exports[`mount component 1`] = `"<button type=\\"button\\" class=\\"inline-flex h-12 items-center justify-center px-6 font-bold uppercase transition-colors duration-200 ease-in focus:outline-focus bg-coral-300 hover:bg-coral-400 hover:text-white\\" color=\\"red\\"></button>"`;

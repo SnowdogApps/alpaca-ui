@@ -30,7 +30,7 @@ withDefaults(defineProps<ButtonProps>(), {
     :is="tag"
     :type="tag === 'button' ? type : undefined"
     :disabled="disabled"
-    class="inline-flex h-14 items-center justify-center px-6 font-bold uppercase transition-colors duration-200 ease-in focus:outline-focus"
+    class="inline-flex h-12 items-center justify-center px-6 font-bold uppercase transition-colors duration-200 ease-in focus:outline-focus"
     :class="[
       variant === 'primary' &&
         'bg-coral-300 hover:bg-coral-400 hover:text-white',
