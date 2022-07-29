@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Frank Ruhl Libre';
+  font-style: normal;
+  src: url(/assets/fonts/FrankRuhlLibre-Bold.woff2) format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Public Sans';
+  font-style: normal;
+  src: url(/assets/fonts/PublicSans-Regular.woff2) format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Public Sans';
+  font-style: normal;
+  src: url(/assets/fonts/PublicSans-Bold.woff2) format('woff2');
+  font-display: swap;
+}
